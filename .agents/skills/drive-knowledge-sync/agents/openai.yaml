@@ -1,0 +1,6 @@
+interface:
+  display_name: "Drive Knowledge Sync"
+  short_description: "Audit and refresh the curated Drive knowledge snapshot"
+  default_prompt: "Use $drive-knowledge-sync to audit Drive freshness and propose a reviewable knowledge update."
+policy:
+  allow_implicit_invocation: true

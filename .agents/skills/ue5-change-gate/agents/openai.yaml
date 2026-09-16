@@ -1,0 +1,6 @@
+interface:
+  display_name: "UE5 Change Gate"
+  short_description: "Safely plan, approve, execute, and verify UE changes"
+  default_prompt: "Use $ue5-change-gate to diagnose this UE task and wait for my approval before changing the project."
+policy:
+  allow_implicit_invocation: true
