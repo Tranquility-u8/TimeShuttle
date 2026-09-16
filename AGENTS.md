@@ -28,6 +28,7 @@ Do not treat the original request, silence, or approval of a different plan as e
 - Project facts, design questions, or task planning: use `$time-shuttler-context`.
 - Blueprint generation, Unreal Editor manipulation, gameplay implementation, asset mutation, or UE automation: use `$ue5-change-gate`.
 - Refreshing or checking Google Drive knowledge: use `$drive-knowledge-sync`.
+- New teammate onboarding and workflow maintenance: read `Docs/Agent/USER-GUIDE.zh-CN.md`.
 - Team setup and MCP operation: read `Docs/Agent/TEAM-SOP.md` and `Docs/MCP/SOP.md`.
 
 ## Verification

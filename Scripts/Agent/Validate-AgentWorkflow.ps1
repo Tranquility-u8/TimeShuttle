@@ -20,6 +20,7 @@ $required = @(
     "Docs/Knowledge/source-manifest.yaml",
     "Docs/Agent/approval-gate.md",
     "Docs/Agent/TEAM-SOP.md",
+    "Docs/Agent/USER-GUIDE.zh-CN.md",
     "Docs/MCP/SOP.md",
     ".agents/skills/time-shuttler-context/SKILL.md",
     ".agents/skills/ue5-change-gate/SKILL.md",
