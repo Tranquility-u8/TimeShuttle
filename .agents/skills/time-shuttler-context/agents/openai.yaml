@@ -1,0 +1,6 @@
+interface:
+  display_name: "Time Shuttler Context"
+  short_description: "Ground work in verified project and design context"
+  default_prompt: "Use $time-shuttler-context to ground this request in current project evidence."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,51 @@
+schema_version: 1
+root:
+  title: "TimeShuttler_Capstone"
+  id: "16cqGMA-sDEZBc_wOW-Y42VOai7t3OLwy"
+  url: "https://drive.google.com/drive/folders/16cqGMA-sDEZBc_wOW-Y42VOai7t3OLwy"
+snapshot:
+  observed_at: "2026-09-17T00:00:00+08:00"
+  policy: "Curated text synthesis; Drive remains authoritative for design intent."
+sources:
+  - id: "18qKHiu4OBeBPESe1i6NFVp_zcmH5ghWP"
+    title: "Time Shuttler Capstone Project Plan.docx"
+    kind: "project-plan"
+    canonical_for: ["backlog", "sprint-scope"]
+    modified_time: "2026-09-16T15:45:04.000Z"
+    url: "https://docs.google.com/document/d/18qKHiu4OBeBPESe1i6NFVp_zcmH5ghWP/edit"
+  - id: "1FrDZPk-I0-V4RK2eJxzkElyGi3sWRz0tN6vcvx60guY"
+    title: "Capstone Development Plan"
+    kind: "spreadsheet"
+    canonical_for: ["schedule-snapshot", "ownership-snapshot", "status-snapshot"]
+    modified_time: "2026-09-16T15:26:21.573Z"
+    url: "https://docs.google.com/spreadsheets/d/1FrDZPk-I0-V4RK2eJxzkElyGi3sWRz0tN6vcvx60guY/edit"
+  - id: "1YFLTTQ5HYMYQEfbJ95aMr3oHVzY0E6aiz3MxT25c-zM"
+    title: "Undingable - GameTitle GDD"
+    kind: "gdd-template"
+    canonical_for: ["documentation-structure"]
+    modified_time: "2026-09-14T21:54:24.829Z"
+    url: "https://docs.google.com/document/d/1YFLTTQ5HYMYQEfbJ95aMr3oHVzY0E6aiz3MxT25c-zM/edit"
+  - id: "1A_0GVALhScYeJBm2HatQsS9XZoYLvpjv8gcwR0nsXdc"
+    title: "Time Shuttler Team Info"
+    kind: "team-hub"
+    canonical_for: ["team-roles", "status-report-template"]
+    modified_time: "2026-09-14T21:39:59.963Z"
+    url: "https://docs.google.com/document/d/1A_0GVALhScYeJBm2HatQsS9XZoYLvpjv8gcwR0nsXdc/edit"
+  - id: "1s69QY7EeANvgvdUuvVIS5Q5Wi0u5ALyW-RQXQHEBGmk"
+    title: "Scene storyboard"
+    kind: "narrative"
+    canonical_for: ["chapter-outline", "omen-arc"]
+    modified_time: "2026-09-16T17:14:51.776Z"
+    url: "https://docs.google.com/document/d/1s69QY7EeANvgvdUuvVIS5Q5Wi0u5ALyW-RQXQHEBGmk/edit"
+  - id: "1VsdTtmTfVzGrJwvAcPB4Xunp0Hiim7EmiSF2WdrZjgw"
+    title: "问题讨论"
+    kind: "design-notes"
+    canonical_for: ["combat-concepts", "time-device-concepts"]
+    modified_time: "2026-09-15T17:38:09.149Z"
+    url: "https://docs.google.com/document/d/1VsdTtmTfVzGrJwvAcPB4Xunp0Hiim7EmiSF2WdrZjgw/edit"
+  - id: "1NLFCbHRtE8SA6CFFgk8kNdOu7HoVMmFVZpfxZjt28CM"
+    title: "Time Shuttler Project Plan & Sprint Review"
+    kind: "project-plan"
+    canonical_for: ["sprint-review"]
+    modified_time: "2026-09-16T21:00:23.849Z"
+    url: "https://docs.google.com/document/d/1NLFCbHRtE8SA6CFFgk8kNdOu7HoVMmFVZpfxZjt28CM/edit"
