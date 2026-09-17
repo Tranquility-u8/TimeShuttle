@@ -49,3 +49,13 @@ sources:
     canonical_for: ["sprint-review"]
     modified_time: "2026-09-16T21:00:23.849Z"
     url: "https://docs.google.com/document/d/1NLFCbHRtE8SA6CFFgk8kNdOu7HoVMmFVZpfxZjt28CM/edit"
+external_sources:
+  - id: "kinemation-tactical-shooter-pack-unreal-procedural-recoil"
+    title: "Procedural Recoil | Tactical Shooter Pack Unreal"
+    publisher: "KINEMATION"
+    kind: "vendor-documentation"
+    importance: "important"
+    canonical_for: ["tactical-shooter-pack-procedural-recoil-reference"]
+    observed_at: "2026-09-17"
+    authority: "Technical reference only; installed assets and editor/runtime verification remain authoritative for implementation."
+    url: "https://kinemation.gitbook.io/tactical-shooter-pack-unreal/blueprints/procedural-recoil"
