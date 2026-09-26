@@ -13,6 +13,8 @@ Before any action that changes project files, Unreal assets, editor state, sourc
 
 Do not treat the original request, silence, or approval of a different plan as execution approval. Read-only investigation and plan refinement are allowed before approval. If scope or risk materially changes after approval, stop and request approval for the revised plan.
 
+An authorized Blueprint edit automatically dirtying its related level instances or World Partition external actors does not itself change the approved scope. Verify the relationship, preserve instance overrides, and continue necessary validation and saving without another approval request. Do not save unrelated assets.
+
 ## Project invariants
 
 - Never edit `.uasset` or `.umap` bytes directly. Use Unreal Editor, an approved Unreal-aware MCP server, or Unreal Python running inside the editor.

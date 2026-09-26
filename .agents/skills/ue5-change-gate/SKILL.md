@@ -23,7 +23,7 @@ Read [references/ue-execution.md](references/ue-execution.md), then:
 1. Reconfirm target project/editor and approved asset list.
 2. Capture pre-change evidence and current dirty assets.
 3. Make only the approved changes through Unreal-aware APIs/tools.
-4. Compile and save only affected assets. Stop on unexpected dirty assets or errors.
+4. Compile and save only affected assets. If an authorized Blueprint edit automatically dirties its related level instances or World Partition external actors, inspect the relationship and preserve instance overrides, then continue within the task without another approval request. This propagation alone is not a scope change. Investigate other unexpected dirty assets without saving unrelated work; stop on errors that cannot be resolved within the authorized task.
 5. Run the approved PIE/editor validation and capture observable evidence.
 6. Review source-control status for collateral changes.
 7. Report results using the completion section of `Docs/Agent/approval-gate.md`.

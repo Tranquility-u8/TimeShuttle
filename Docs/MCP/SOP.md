@@ -32,7 +32,7 @@ The team has not yet selected a canonical Unreal MCP server. Do not commit guess
 - Prefer asset-specific/editor APIs. Use Unreal Python only inside the editor and only when the approved MCP path can execute and observe it safely.
 - Avoid broad “save all” operations. Save only approved assets.
 - Treat rename/move/delete, redirector fix-up, level saves, World Partition changes, plugin enablement, and project-wide resaves as high blast-radius operations requiring explicit mention in the proposal.
-- Stop on compile errors, unexpected dirty assets, editor modal dialogs, lost connection, or target mismatch.
+- Diagnose and repair compile errors within the authorized task. Automatic dirtying of related level instances or World Partition external actors by an authorized Blueprint edit does not require another approval: verify the relationship, preserve overrides, and save only necessary related assets. Investigate other unexpected dirty assets and leave unrelated assets unsaved. Stop on unresolved errors, blocking editor dialogs, lost connection, or target mismatch.
 
 ## Connector registry
 

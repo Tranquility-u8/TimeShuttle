@@ -29,6 +29,7 @@ If this matches your intent, reply “确认执行” / “Proceed”. I will no
 - A question, correction, or request for alternatives is not approval.
 - If investigation reveals a materially different solution, new asset set, destructive step, plugin install, migration, or external write, present the revision and wait again.
 - After approval, report deviations immediately. Do not hide compensating changes.
+- Automatic propagation of an authorized Blueprint edit to its related level instances or World Partition external actors does not require renewed approval by itself. Verify the relationship, preserve instance overrides, and save only necessary related assets. Unrelated assets remain outside scope.
 
 ## Completion report
 
