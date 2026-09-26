@@ -42,6 +42,8 @@
 
 玩家武器基类 `/Game/Blueprints/Interactables/BP_Item_Base` 的 `Fire_HitScan` 使用命中结果中的 `Hit Actor` 提交通用 Unreal Damage。命中骨骼名为 `head` 时选择 100 点，否则选择 25 点。训练靶 `BP_TrainingEnemy` 保留专用分支；正式敌人在该类型转换失败后进入通用分支，两条执行路径互斥。
 
+时间弹丸桥接同样位于 `BP_Item_Base.Fire_HitScan`。`UseTemporalProjectile=false` 时完整保留原射线伤害；启用后改为在枪口前生成 `/Game/Blueprints/Weapons/Player/Projectiles/BP_TimeBullet`，近距离遮挡仍回退射线结算。默认悬浮偏移为 40 uu，全局实例上限为 12。`BP_TimeBullet` 使用 `SM_GeneralBullet`，生成时移动组件不激活，并通过 `ReleaseProjectile(Speed)` 延迟恢复运动；命中后再按头部 100 / 身体 25 提交通用 Damage。时间能力状态机尚未接入该公开开关与释放接口。
+
 两种正式敌人不共享血量存储：`BP_MeleeNPC.Event AnyDamage` 将浮点伤害转交现有 `CAI_CombatComponent.Apply Damage`，`BP_ShooterNPC.Event AnyDamage` 继续更新自身 `Current HP`。新增敌人应复用通用伤害事件并适配真实血量所有者，不应再把训练靶类型转换作为通用伤害门。详细实现、证据与测试限制见 [EnemyDamagePipeline.md](../Implementation/EnemyDamagePipeline.md)。
 
 ## 敌人回溯边界
