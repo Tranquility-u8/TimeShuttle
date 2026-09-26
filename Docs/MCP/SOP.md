@@ -23,13 +23,13 @@ The team has not yet selected a canonical Unreal MCP server. Do not commit guess
 3. Start read-only: query asset metadata, references, graph structure, or logs.
 4. Map each proposed action to a real discovered tool. Never invent tool names.
 5. Classify tools as read-only, mutating, destructive, or external-write.
-6. Obtain approval through `Docs/Agent/approval-gate.md` before invoking mutating tools.
+6. Resolve existing task authorization under `AGENTS.md`. Use `Docs/Agent/approval-gate.md` only when implementation is not already authorized.
 7. Use the narrowest tool and target. Re-read/compile after writes and preserve evidence.
 
 ## Unreal mutation rules
 
 - Do not modify raw `.uasset`/`.umap` bytes or use filesystem copy tricks as an editing API.
-- Prefer asset-specific/editor APIs. Use Unreal Python only inside the editor and only when the approved MCP path can execute and observe it safely.
+- Prefer asset-specific/editor APIs. Unreal Python may run inside the verified interactive editor or an Unreal commandlet, with logs and separate editor/PIE checks. A missing UE MCP server does not forbid these verified alternatives.
 - Avoid broad “save all” operations. Save only approved assets.
 - Treat rename/move/delete, redirector fix-up, level saves, World Partition changes, plugin enablement, and project-wide resaves as high blast-radius operations requiring explicit mention in the proposal.
 - Diagnose and repair compile errors within the authorized task. Automatic dirtying of related level instances or World Partition external actors by an authorized Blueprint edit does not require another approval: verify the relationship, preserve overrides, and save only necessary related assets. Investigate other unexpected dirty assets and leave unrelated assets unsaved. Stop on unresolved errors, blocking editor dialogs, lost connection, or target mismatch.
@@ -40,6 +40,8 @@ The team has not yet selected a canonical Unreal MCP server. Do not commit guess
 |---|---|---|---|---|---|---|
 | Google Drive | Codex Google Drive connector | Managed | Read-first | Team producer | List root folder by ID | In use |
 | Unreal Editor | To be selected | Pin exact version | Least privilege | Tech owner | Read project + compile disposable/test asset | Blocked pending decision |
+
+The registry above concerns a canonical MCP service, not all UE automation. Verified local alternatives as of 2026-09-26 are AssetTools rename/move, editor Python, UE Python commandlets, and the available desktop UI tool. A temporary editor-only Blueprint graph helper was used for the enemy reverse implementation; its source/build live under ignored `Saved/Agent/`, it is not installed as a project runtime dependency, and it is not guaranteed to exist on another machine. Discover and probe capabilities each session rather than assuming that helper is available.
 
 ## Failure and recovery
 

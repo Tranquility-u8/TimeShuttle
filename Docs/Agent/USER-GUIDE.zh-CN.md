@@ -75,10 +75,12 @@ Agent 应先返回方案。检查目标、影响文件/资产和验证方式无�
 
 ### `$ue5-change-gate`
 
-用于任何 UE5、Blueprint、关卡、资产、编辑器或 gameplay 实现任务。它强制分为两阶段：
+用于 UE5、Blueprint、关卡、资产、编辑器或 gameplay 实现任务。先按 `AGENTS.md` 判断现有授权；尚未授权的任务分为两阶段：
 
 1. 只读调查并提交方案。
 2. 用户明确批准后，通过 Unreal-aware 工具执行、编译、保存和验证。
+
+懒人模式下的明确实施需求已经提供任务授权：Agent 说明范围后直接实施，无须再次询问“确认执行”。模式不降低验证或资产安全标准。
 
 示例：
 
@@ -118,7 +120,7 @@ Agent 应检查相关仓库文件、知识来源、UE 资产元数据或日志�
 
 ### 第三步：明确批准
 
-只有 `确认执行`、`批准`、`Proceed` 等明确表达才算批准。提问、沉默、修改要求或对另一套方案的批准都不算。
+此步适用于尚未取得实施授权的方案。`确认执行`、`批准`、`Proceed` 等可提供批准；懒人模式加明确实施需求同样构成授权。提问、沉默或另一任务的批准不能替代缺失的授权，也不要对本任务已有授权重复设门槛。
 
 ### 第四步：执行与验证
 
@@ -179,6 +181,8 @@ Agent 只能修改已批准目标。UE 任务至少应提供：
 - `project-overview.md`：稳定的项目身份、团队、目标与技术基线。
 - `design-snapshot.md`：玩法、叙事和表现层设计意图。
 - `implementation-status.md`：经过仓库或编辑器验证的实现事实。
+- `project-architecture.md`：当前目录职责、主关卡、玩家、两种 AI 和回溯系统的实际入口。
+- `asset-naming.md`：资产类型前缀、文件规则、历史例外与安全改名流程；资产改名清单单独保存在 CSV。
 - `open-questions.md`：仍需团队决定、Agent 不得猜测的问题。
 - `source-manifest.yaml`：Drive 来源 ID、链接、职责和观察时间。
 
@@ -253,7 +257,7 @@ MCP 提供工具，Skill 规定工具如何被安全使用。连接成功不代�
 
 ### Git 状态出现无关资产
 
-- 立即停止保存和提交。
+- 暂停对来源不明文件的保存和提交，先区分任务前已有改动、任务内关联实例和真正无关变更；已确认范围内的工作继续。
 - 不要 reset、revert 或删除他人的改动。
 - 记录意外文件，检查是否由关卡保存、World Partition 或“Save All”产生。
 - 只精确暂存本任务批准的文件，并向负责人报告其余改动。
@@ -274,6 +278,9 @@ MCP 提供工具，Skill 规定工具如何被安全使用。连接成功不代�
 
 ## 11. 需要进一步阅读时
 
+- 当前目录与功能入口：`Docs/Knowledge/project-architecture.md`
+- 资产命名与历史例外：`Docs/Knowledge/asset-naming.md`
+- 敌人回溯实现与验证边界：`Docs/Implementation/EnemyReverse.md`
 - 总规则：`AGENTS.md`
 - 审批模板：`Docs/Agent/approval-gate.md`
 - 团队简版 SOP：`Docs/Agent/TEAM-SOP.md`

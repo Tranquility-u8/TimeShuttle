@@ -24,12 +24,14 @@ The player operates from a laboratory safe hub and performs missions for Omen us
 ## Current technical baseline
 
 - `TimeShuttle.uproject` declares UE 5.6.
-- The project is Blueprint-first; no `Source/` directory was observed on 2026-09-17.
+- The project is Blueprint-first; runtime implementation remains Blueprint-based as observed on 2026-09-26.
 - Enabled project plugins observed: Modeling Tools Editor Mode and Gameplay State Tree.
-- Default map: `/Game/FirstPerson/Lvl_FirstPerson`.
-- Default game mode: `/Game/FirstPerson/Blueprints/BP_FirstPersonGameMode`.
+- Startup/default map: `/Game/Maps/Map_Test`.
+- Map_Test GameMode Override: `/Game/Blueprints/GameModes/GM_FP`; actual player: `/Game/Blueprints/Player/BP_FPCharacter`.
+- Configured global fallback game mode remains `/Game/FirstPerson/Blueprints/BP_FirstPersonGameMode`; it is not Map_Test's override.
 - Rendering targets desktop maximum quality with Lumen, Virtual Shadow Maps, DX12/SM6, and ray tracing enabled.
-- Important content roots include `FirstPerson`, `Variant_Shooter`, `TimeReverseSystem`, `Weapons`, `Characters`, `Input`, and `LevelPrototyping`.
+- Content is organized by purpose: `Blueprints`, `Animations`, `Maps`, `Data`, `Input`, `Weapons`, `Characters`, `Environment`, `Materials`, `Audio`, `VFX`, `UI`. `TimeReverseSystem`, `FirstPerson` and `LevelPrototyping` still contain retained framework/template resources.
+- See [project-architecture.md](project-architecture.md) for verified gameplay entry points and [asset-naming.md](asset-naming.md) before creating assets. This technical refresh does not change the dated Drive-derived design/production sections below.
 
 ## Production outline
 

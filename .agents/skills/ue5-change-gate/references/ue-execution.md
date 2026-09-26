@@ -26,6 +26,6 @@ Never use raw binary editing for Unreal assets.
 
 ## Stop conditions
 
-Stop without improvising if the editor/project target is wrong, the required tool is absent, an asset is locked, a required referenced asset is missing, source control conflicts exist, or recovery would require an unapproved destructive action. Diagnose and repair compile errors introduced by the authorized change within that task before saving or claiming success.
+Do not mutate an ambiguous/wrong editor target, overwrite conflicting user changes, or perform an unapproved destructive recovery. A missing operation or locked package is a reason to diagnose and choose a verified alternative, not to repeat a failed call blindly. Check available editor Python, Unreal-aware helper or GUI support; pause only when no safe authorized route remains. Diagnose and repair compile errors introduced by the task before claiming success.
 
 Do not pause for renewed approval merely because an authorized Blueprint edit automatically dirties related level instances or World Partition external actors. Verify their relationship, preserve instance overrides, and include only necessary related assets in validation and saving. Investigate unrelated dirty assets and leave them unsaved; request clarification only when completing the task would require changing unrelated work.

@@ -10,11 +10,11 @@
 
 ## Normal task flow
 
-1. Ask the agent to inspect and define the problem.
-2. Review its problem statement, technical plan, affected assets, risks, validation, and rollback.
-3. Reply `确认执行` only when the proposal is correct.
-4. Keep Unreal Editor available if the approved plan uses editor automation.
-5. Review the completion evidence and Git diff/status before committing.
+1. Choose lazy/autonomous mode or energy-saving/guided mode as defined in `AGENTS.md`; an ongoing task inherits its mode and authorization.
+2. The agent inspects current assets and relevant knowledge, then explains scope, acceptance criteria and recovery.
+3. For an explicitly authorized lazy-mode implementation request, proceed without another confirmation. For read-only proposals or work not yet authorized, use `approval-gate.md` and obtain the missing permission.
+4. Keep Unreal Editor available for verification. In guided mode, do not operate the same editor concurrently.
+5. Review completion evidence and Git diff/status before committing; consult `Docs/Knowledge/project-architecture.md` and `asset-naming.md` for the current entry points and conventions.
 
 Suggested prompt:
 
@@ -28,7 +28,7 @@ Use `$drive-knowledge-sync` when Drive has changed, before milestone planning, o
 
 ## Review checklist
 
-- Proposal was approved before mutation.
+- Mutation was covered by explicit task/mode authorization or a subsequently approved proposal.
 - Only approved files/assets changed.
 - Blueprint assets compile without new errors.
 - PIE validation covers the acceptance criteria.

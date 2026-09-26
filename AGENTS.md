@@ -72,6 +72,7 @@ An authorized Blueprint edit automatically dirtying its related level instances 
 
 ## Routing
 
+- Before creating, renaming or moving assets, read `Docs/Knowledge/asset-naming.md`; locate current gameplay entry points in `Docs/Knowledge/project-architecture.md`. Keep verified architecture/naming facts in those documents rather than duplicating them inside skills.
 - Project facts, design questions, or task planning: use `$time-shuttler-context`.
 - Blueprint generation, Unreal Editor manipulation, gameplay implementation, asset mutation, or UE automation: use `$ue5-change-gate`.
 - Refreshing or checking Google Drive knowledge: use `$drive-knowledge-sync`.

@@ -6,10 +6,12 @@ This directory is the fast, reviewable knowledge layer for agents and teammates.
 
 1. `project-overview.md` — stable identity, goals, team, and technical baseline.
 2. `design-snapshot.md` — current gameplay and narrative intent.
-3. `implementation-status.md` — facts verified from the repo versus planned work.
-4. `source-manifest.yaml` — exact Drive and external technical sources, ownership, and freshness.
-5. `technical-references.md` — important official vendor references and their verification boundaries.
-6. `open-questions.md` — unresolved decisions that must not be guessed.
+3. `project-architecture.md` — current folders, gameplay entry points, dependencies and extension boundaries.
+4. `asset-naming.md` — canonical naming rules, legacy exceptions and safe rename procedure; consult before creating/moving assets.
+5. `implementation-status.md` — facts verified from the repo versus planned work.
+6. `source-manifest.yaml` — exact Drive and external technical sources, ownership, and freshness.
+7. `technical-references.md` — important official vendor references and their verification boundaries.
+8. `open-questions.md` — unresolved decisions that must not be guessed.
 
 ## Authority and conflicts
 
@@ -21,3 +23,5 @@ This directory is the fast, reviewable knowledge layer for agents and teammates.
 - When sources conflict, surface the conflict. Do not silently merge incompatible claims.
 
 The snapshot records when it was observed. Use `$drive-knowledge-sync` before high-impact design work when the snapshot is stale or the user says Drive changed.
+
+Local architecture/naming observations were refreshed on 2026-09-26. This does not update the observation time of the separate Drive design snapshot. Keep project facts here, task evidence in `Docs/Implementation/`, and procedural routing in `.agents/skills/`; do not duplicate architecture tables inside skills.

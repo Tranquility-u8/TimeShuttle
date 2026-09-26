@@ -1,11 +1,11 @@
 ---
 name: ue5-change-gate
-description: Plan and execute Time Shuttler Unreal Engine 5.6 Blueprint, asset, editor, gameplay, or automation changes with a mandatory user approval gate and editor-visible verification. Use for UE implementation or mutation; read-only diagnosis may proceed before approval.
+description: Inspect, implement and verify Time Shuttler UE 5.6 Blueprint, asset, gameplay and editor changes under the collaboration mode and authorization in AGENTS.md. Use for Unreal mutation and automation; preserve asset integrity and editor-visible evidence.
 ---
 
 # UE5 change gate
 
-Every mutating task has two phases. Never collapse them.
+Resolve collaboration mode and existing authorization from `AGENTS.md` first. An explicitly authorized lazy-mode task proceeds through investigation, implementation and verification without another confirmation request. The proposal/approval template applies only when execution is not already authorized. Read-only diagnosis may always precede approval.
 
 ## Phase A: define and propose
 
@@ -13,8 +13,8 @@ Every mutating task has two phases. Never collapse them.
 2. Inspect the repo, Unreal asset metadata/graphs, references, and logs read-only. Discover actual MCP tools; do not assume names or capabilities.
 3. Define desired behavior and measurable acceptance criteria. Identify ambiguities that materially change the solution.
 4. Choose the least-coupled approach. Prefer Blueprint interfaces, actor components, event dispatchers, data assets/tables, and explicit subsystem boundaries when they fit; do not add abstraction without a concrete need.
-5. Send the exact proposal structure from `Docs/Agent/approval-gate.md`.
-6. Stop and wait for explicit approval.
+5. Read `Docs/Knowledge/project-architecture.md` and `asset-naming.md` when locating, adding or moving assets; consult task implementation notes for existing contracts.
+6. State scope, acceptance criteria and recovery path. If execution is not already authorized, use `Docs/Agent/approval-gate.md` and wait; otherwise continue.
 
 ## Phase B: execute after approval
 
@@ -28,4 +28,4 @@ Read [references/ue-execution.md](references/ue-execution.md), then:
 6. Review source-control status for collateral changes.
 7. Report results using the completion section of `Docs/Agent/approval-gate.md`.
 
-Re-enter Phase A if scope, asset set, plugin/config needs, data migration, or risk changes materially.
+Explain newly discovered dependencies and repair routine reversible issues within the authorized task. Seek additional authorization only for materially expanded functionality/risk or actions outside the user's permission; a directly related asset becoming dirty is not itself such an expansion. Update the knowledge documents when verified architecture or naming changes.
