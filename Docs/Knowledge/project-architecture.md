@@ -38,6 +38,12 @@
 - 玩家武器数据：`PDA_Item` / `PDA_ProceduralAnimValues` 是蓝图类；`Data/Weapons/Player/**/DA_*AnimationValues` 是实例，并非 DataTable。
 - 存档：`Blueprints/SaveSystem` 中的 `SG_Character` / `SG_SaveSlots`。本地 `Saved/SaveGames` 不进 Git，测试前后需保护真实存档。
 
+## 玩家武器对敌伤害入口
+
+玩家武器基类 `/Game/Blueprints/Interactables/BP_Item_Base` 的 `Fire_HitScan` 使用命中结果中的 `Hit Actor` 提交通用 Unreal Damage。命中骨骼名为 `head` 时选择 100 点，否则选择 25 点。训练靶 `BP_TrainingEnemy` 保留专用分支；正式敌人在该类型转换失败后进入通用分支，两条执行路径互斥。
+
+两种正式敌人不共享血量存储：`BP_MeleeNPC.Event AnyDamage` 将浮点伤害转交现有 `CAI_CombatComponent.Apply Damage`，`BP_ShooterNPC.Event AnyDamage` 继续更新自身 `Current HP`。新增敌人应复用通用伤害事件并适配真实血量所有者，不应再把训练靶类型转换作为通用伤害门。详细实现、证据与测试限制见 [EnemyDamagePipeline.md](../Implementation/EnemyDamagePipeline.md)。
+
 ## 敌人回溯边界
 
 两种敌人均添加 `EnemyReverse` 实例组件，类型为 `AC_EnemyReverse`，实现 `BPI_RewindableEnemy`。组件继续接入原全局 reverse manager，按同一采样索引记录 Transform、浮点血量、骨骼姿态、Mesh Transform 和速度。两种骨架分别使用 `Animations/TimeReverse/ABP_EnemyRewind_*`。

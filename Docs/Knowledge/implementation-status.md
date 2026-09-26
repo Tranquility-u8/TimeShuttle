@@ -11,6 +11,7 @@ Last repo/editor observation: **2026-09-26**. This file records verified impleme
 - Player input, weapon/inventory data, interaction and procedural animation assets are present in the migrated FPS system. Their presence does not establish completion of the planned production inventory/item design.
 - Both enemies implement `BPI_RewindableEnemy` and use `AC_EnemyReverse`. Q / `IA_Reverse` drives synchronized transform, floating-point health and skeletal pose history. Reversible death retains objects until living history is exhausted; living rewind exit restarts AI and normal animation.
 - Enemy reverse validation covered damage, death/revival, fractional health, repeated/short rewind, bone snapshot comparison, history trimming and eventual enemy/controller/weapon cleanup. Damage was scripted through real damage entry points; Q's action was injected through Enhanced Input. Player damage after revival was not asserted. See [EnemyReverse.md](../Implementation/EnemyReverse.md) for evidence and limitations.
+- Player hitscan damage now reaches both gameplay enemy types through generic Unreal Damage. The shared weapon graph preserves 100 damage for the `head` bone and 25 for other bones; melee adapts `AnyDamage` to `AC_Combat`, while shooter retains its existing `Current HP` handler. PIE directly observed a melee body hit from 100 to 75 and shooter damage/death handling. A clean physical-input single-shot body/head matrix was not completed; exact head/body routing was additionally verified from the saved graph. See [EnemyDamagePipeline.md](../Implementation/EnemyDamagePipeline.md).
 - The 2026-09-26 naming pass normalized 54 gameplay/data assets, preserving serialized compatibility through CoreRedirects. Imported/resource names have documented exceptions. See [asset-naming.md](asset-naming.md) and its per-file mapping.
 
 ## Historical planning snapshot, not current implementation evidence
@@ -23,7 +24,8 @@ Last repo/editor observation: **2026-09-26**. This file records verified impleme
 
 - No packaged-build, network replication or large-enemy-count certification is implied.
 - Pose rewind does not replay animation notifies, sound/VFX or curves, nor resume an interrupted montage at its exact historical time. Projectile history remains a separate system.
-- Area Stop/Bullet Time design readiness and the next damage-system feature are not established by this audit.
+- Area Stop/Bullet Time design readiness and any subsequent planned damage-system feature beyond the documented player-to-enemy path are not established by this audit.
+- The player-to-enemy damage pass did not certify packaged builds, networking, alternate player weapon families, post-revival damage, or a clean one-shot body/head PIE matrix for both enemies.
 - Local implementation observations and Drive source freshness are separate; preserve the source manifest's actual observation date.
 
 ## Important distinction
