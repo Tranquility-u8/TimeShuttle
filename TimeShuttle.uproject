@@ -15,6 +15,7 @@
 			"Name": "GameplayStateTree",
 			"Enabled": true
 		},
+		{
 			"Name": "GetTheMeaning",
 			"Enabled": false
 		}
