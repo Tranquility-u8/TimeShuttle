@@ -20,6 +20,8 @@
 
 能量消耗必须按现实时间观察。不能仅看到一个 Delta Seconds 节点就假设速率正确；最终 PIE 实测约为 10 点/现实秒。
 
+第一人称程序动画也必须使用同一条“补偿后时间”语义。`AC_ProceduralAnimation.SwaySpring` 原先用组件 Tick 的补偿后 `DeltaTime` 积分弹簧，却用全局 `Get World Delta Seconds` 归一化鼠标摆动；FullStop 的 `0.01 × 100` 补偿会令后者比前者小约 100 倍，从而把手臂/武器横向摆动放大并造成左右震荡。现已统一使用 `SwaySpring` 的 `DeltaTime` 输入；正常时间下数值不变，FullStop 下不再重复放大。后续相机抖动、后坐力、武器惯性等第一人称表现若混用全局与 Actor/组件 DeltaTime，也应按同样方式审计。
+
 ### 模式边沿只释放一次
 
 持续 Tick 中反复扫描并调用释放会产生重复激活和难以追踪的状态。组件用 `WasFullStop` 记录前一帧，只在 `FullStop → 其他模式` 的边沿释放现存弹丸并关闭武器桥接。
