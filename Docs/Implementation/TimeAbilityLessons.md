@@ -22,6 +22,8 @@
 
 第一人称程序动画也必须使用同一条“补偿后时间”语义。`AC_ProceduralAnimation.SwaySpring` 原先用组件 Tick 的补偿后 `DeltaTime` 积分弹簧，却用全局 `Get World Delta Seconds` 归一化鼠标摆动；FullStop 的 `0.01 × 100` 补偿会令后者比前者小约 100 倍，从而把手臂/武器横向摆动放大并造成左右震荡。现已统一使用 `SwaySpring` 的 `DeltaTime` 输入；正常时间下数值不变，FullStop 下不再重复放大。后续相机抖动、后坐力、武器惯性等第一人称表现若混用全局与 Actor/组件 DeltaTime，也应按同样方式审计。
 
+武器 Actor 的 `Custom Time Dilation` 不能补偿潜伏动作 `Delay` 或 TimerManager。手枪单发链原本用未经换算的 `WeaponFireRate` 延迟复位 `IsFire`；FullStop 世界倍率为 `0.01` 时，现实等待时间被放大约 100 倍，表现为第一枪后直到能量跌入 BulletTime 才能再次开火。现将单发 Delay、连发与自动射击 Timer 的间隔统一改为 `WeaponFireRate × Get Global Time Dilation`：在 Normal 中结果不变，在 FullStop/BulletTime 中抵消世界减速。凡是需要随被补偿玩家保持现实节奏的冷却、Timer、Timeline 或潜伏动作，都应单独审计，不能只看所属 Actor 的自定义倍率。
+
 ### 模式边沿只释放一次
 
 持续 Tick 中反复扫描并调用释放会产生重复激活和难以追踪的状态。组件用 `WasFullStop` 记录前一帧，只在 `FullStop → 其他模式` 的边沿释放现存弹丸并关闭武器桥接。
@@ -92,6 +94,7 @@
 | T 激活/取消、Q/T 双向互斥 | 通过 |
 | 70 阈值、低能量连续减速、零能量退出、恢复 | 通过 |
 | FullStop 世界 0.01、玩家/武器补偿 100 | 通过 |
+| FullStop 能量仍高于 70 时连续单发 3 次 | 通过，三次均生成弹丸且每次间隔前 `IsFire` 已复位 |
 | 3 发悬停后在 BulletTime 释放移动 | 通过 |
 | 12 发上限、第 13 发拒绝、HUD `LIMIT`、12 发全部释放 | 通过 |
 | Melee 身体 25 / 头部 100，悬停阶段不扣血 | 通过 |
