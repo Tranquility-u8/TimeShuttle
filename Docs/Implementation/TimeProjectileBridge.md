@@ -13,6 +13,7 @@
   - 生成时忽略 Owner，避免与玩家发生初始碰撞。
   - 忽略 `Projectile` 碰撞通道，并在命中保护中跳过其他 `BP_TimeBullet`，避免悬浮弹丸堆叠或释放时互相销毁、清零速度。
   - Actor Hit 对 Character 使用弹道直线到 `head` / `pelvis` 骨骼位置的距离补足胶囊 HitResult 不提供骨骼名的情况；头部为 100 点、身体为 25 点，提交通用 Damage 后销毁。非 Character 阻挡走身体伤害并销毁。
+  - 非 Character 阻挡同时使用命中的 `HitComponent`、`ImpactPoint` 和 `ImpactNormal` 生成 `M_Impact_Decal`，尺寸、附着方式和 15 秒寿命与普通射线武器的墙面弹孔一致；该表现与既有身体伤害链并行执行。
 - `/Game/Blueprints/Interactables/BP_Item_Base`
   - `UseTemporalProjectile`：时间系统的切换入口，默认 `false`。
   - `TemporalProjectileClass`：默认指向 `BP_TimeBullet`。
@@ -38,5 +39,6 @@
 - 2026-09-27 修复 FullStop 单发门控被世界减速拖慢的问题：单发 Delay 与 Burst/Auto Timer 使用全局时间倍率换算射击间隔。PIE 在能量仍为约 92、88 时成功生成第 2、3 枚悬浮弹丸，`IsFire` 均已按现实射速复位。
 - 阶段 5–7 回归：12 枚可悬停，第 13 发被拒绝，HUD 满额提示正确，12 枚在模式切换后全部释放。
 - 近战敌人身体/头部释放命中分别实测 25/100 点，悬停阶段均不提前扣血；ShooterNPC 身体释放命中实测 25 点。普通射线伤害保持即时，近距遮挡不生成时间弹丸。
+- 2026-09-27 命中反馈修复回归：FullStop 单发分别命中 `BP_MeleeNPC` 与 `BP_ShooterNPC`，释放后均从 100 降至 75；命中 Movable `BlockAll` 测试墙后弹丸销毁且 DecalComponent 数量增加 1。Normal 与 BulletTime 均继续走射线，身体命中各造成 25 点且不生成 `BP_TimeBullet`。
 - 输出日志仍有项目原有 Manny PoseAsset 版本警告，与本改动无关。
 - 未完成：所有武器家族、所有特殊碰撞体的完整命中矩阵，以及打包、联网和压力验证。

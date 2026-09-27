@@ -56,6 +56,13 @@ This section is the canonical workflow for both modes. It takes precedence over 
 - 物理测试体必须为 Movable、开启模拟并唤醒；交互测试应瞄准真实 InteractionArea。零位移或无法 Focus 时先验证夹具，而不是立即修改正式逻辑。
 - 时间系统回归至少覆盖输入互斥、真实时间能量、模式倍率、玩家/武器补偿、弹丸悬停/释放/命中、近距遮挡、数量上限、HUD、交互、物理恢复和最终全局倍率恢复。详细复盘见 `Docs/Implementation/TimeAbilityLessons.md`。
 
+### 蓝图整理与注释：两种模式共同执行
+
+- 任何修改了 Blueprint 图表的实施、修复或迁移任务，都必须在逻辑稳定后、最终编译和保存前完成一次可读性收尾。优先使用已验证的 Blueprint Assist；先刷新本次节点的尺寸，再整理本次修改的节点树。默认使用局部整理，只有新建图表、整张图均属于本任务或用户明确允许全图重排时才使用全图整理。
+- 新增功能必须在首次整理后添加结构化注释框，再对注释框内的节点做一次局部整理和目视复核。注释说明模块职责、关键分支、时序或边界条件，不逐节点翻译，也不覆盖仍然准确的第三方或用户注释。
+- 整理不得改变功能连接、默认值、接口、复制语义或公开行为。格式化器创建或调整 reroute 节点时，必须确认它们只影响走线；保留用户手工布局和无关图表，避免仅为整齐制造大范围二进制差异。
+- 整理和注释属于已授权 Blueprint 修改的收尾范围，不需要额外审批。完成后重新编译、检查 Output Log、定向保存，并提供编辑器可见的布局证据；不能以“已格式化”代替功能验证。
+
 ## Change gate outside explicit autonomous authorization
 
 Apply this gate when execution has not already been authorized under the collaboration modes above. Existing approvals remain valid across turns; do not request them again for the same scope.
