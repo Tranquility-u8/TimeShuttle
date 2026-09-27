@@ -17,6 +17,17 @@ Never use raw binary editing for Unreal assets.
 - For time manipulation, explicitly define actor eligibility, physics/velocity handling, timers, animation, AI/state trees, projectiles, audio/VFX, UI, and restoration order.
 - Make repeated activation/deactivation idempotent and test interrupted transitions.
 
+## Blueprint layout and comments
+
+Treat graph readability as a required final implementation pass, not optional polish.
+
+1. Finish functional edits and establish that the intended graph connections are stable.
+2. When Blueprint Assist is available and verified, refresh node sizes before formatting. Prefer selective formatting for the modified node tree; use full-graph formatting only for a new graph, a graph wholly owned by the task, or explicit user authorization to rearrange the whole graph. If the plugin is unavailable, arrange the same scope manually.
+3. For new functionality, add comment boxes after the initial layout. Group nodes by responsibility and document only useful intent: purpose, important branches, timing/order, invariants, or non-obvious edge cases. Do not narrate individual nodes or replace accurate existing comments.
+4. Selectively format the nodes inside the new or changed comment boxes, then inspect the graph at a readable zoom. Check comment bounds, execution flow, crossings, reroute nodes, and separation from unrelated sections.
+5. Confirm formatting did not change semantic connections, pin defaults, interfaces, replication, or public behavior. Reroute-node changes are acceptable only when they preserve connectivity.
+6. Compile after the layout/comment pass, save only the task assets, and capture editor-visible evidence of the final graph. Layout evidence supplements rather than replaces PIE and runtime validation.
+
 ## Evidence
 
 - Before/after asset paths and screenshots or structured graph summaries.
