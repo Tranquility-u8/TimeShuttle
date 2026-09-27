@@ -7,6 +7,8 @@ description: Inspect, implement and verify Time Shuttler UE 5.6 Blueprint, asset
 
 Resolve collaboration mode and existing authorization from `AGENTS.md` first. An explicitly authorized lazy-mode task proceeds through investigation, implementation and verification without another confirmation request. The proposal/approval template applies only when execution is not already authorized. Read-only diagnosis may always precede approval.
 
+For implementation tasks, include the standard Start/Finish metrics step in `Docs/Agent/workflow-metrics.md`; reuse an existing task record when continuing. Missing measurements never replace or block gameplay validation.
+
 ## Phase A: define and propose
 
 1. Read `Docs/Knowledge/README.md` and the relevant context.

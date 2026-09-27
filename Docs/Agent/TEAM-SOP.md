@@ -16,6 +16,8 @@
 4. Keep Unreal Editor available for verification. In guided mode, do not operate the same editor concurrently.
 5. Review completion evidence and Git diff/status before committing; consult `Docs/Knowledge/project-architecture.md` and `asset-naming.md` for the current entry points and conventions.
 
+Implementation tasks also use the lightweight Start/Pause/Resume/Finish record in [workflow-metrics.md](workflow-metrics.md). Include its compact result at completion; unavailable telemetry does not block work. Keep raw records local and compare similar tasks before adopting workflow changes.
+
 Suggested prompt:
 
 ```text
