@@ -32,17 +32,23 @@
 
 - 编辑器启动地图、游戏默认地图：`/Game/Maps/Map_Test`。
 - **Map_Test 自身的 GameMode Override 是 `/Game/Blueprints/GameModes/GM_FP`**；玩家为 `/Game/Blueprints/Player/BP_FPCharacter`。配置中的全局 fallback 仍是 `/Game/FirstPerson/Blueprints/BP_FirstPersonGameMode`，不能混为一谈。
-- 输入：`/Game/Input/IMC_Player`；Q 对应 `/Game/Input/Actions/IA_Reverse`。玩家负责输入和启动全局反转，AI 不实现玩家输入。
+- 输入：`/Game/Input/IMC_Player`；Q 对应 `/Game/Input/Actions/IA_Reverse`，T 对应 `/Game/Input/Actions/IA_TimeAbility`。玩家负责输入和启动全局反转，AI 不实现玩家输入。
 - 近战：`BP_MeleeNPC` → `BP_MeleeAIController` → `BT_Melee` / `BB_Melee`；战斗组件为 `AC_Combat`，接口为 `BPI_Combat`。蓝图内部某些组件变量仍叫 `CAI_CombatComponent`，这是保留的成员名，不代表资产改名失败。
 - 远程：`BP_ShooterNPC` 直接继承 Character → `BP_ShooterAIController` → `ST_Shooter` / 射击子树、`STT_Shooter_*`、EQS；武器在 AI/Shooter/Weapons，玩家武器来自独立 FPS 模板链。
 - 玩家武器数据：`PDA_Item` / `PDA_ProceduralAnimValues` 是蓝图类；`Data/Weapons/Player/**/DA_*AnimationValues` 是实例，并非 DataTable。
 - 存档：`Blueprints/SaveSystem` 中的 `SG_Character` / `SG_SaveSlots`。本地 `Saved/SaveGames` 不进 Git，测试前后需保护真实存档。
 
+## 时间能力核心入口
+
+`/Game/Blueprints/Components/Player/AC_TimeAbility` 挂载在 `BP_FPCharacter` 上，负责 0–100 能量、Normal / FullStop / BulletTime 三态、均匀消耗恢复及零能量退出。当前 `ModeIndex` 映射为 0 / 1 / 2，阈值 70 归入 FullStop。组件和玩家现有回溯输入共同形成双向互斥门禁。
+
+`AC_TimeAbility` 在 `FullStop` 使用全局时间倍率 0.01，并用倒数补偿玩家和当前武器；在 `BulletTime` 将能量 70→0 映射为世界倍率 0.2→1.0。`/Game/UI/Widgets/UI_Hud.SetTimeAbilityStatus` 接收能量百分比和模式索引，更新底部中央的进度条、百分比、模式文字与颜色。详细范围和验证见 [TimeAbilityCore.md](../Implementation/TimeAbilityCore.md)。
+
 ## 玩家武器对敌伤害入口
 
 玩家武器基类 `/Game/Blueprints/Interactables/BP_Item_Base` 的 `Fire_HitScan` 使用命中结果中的 `Hit Actor` 提交通用 Unreal Damage。命中骨骼名为 `head` 时选择 100 点，否则选择 25 点。训练靶 `BP_TrainingEnemy` 保留专用分支；正式敌人在该类型转换失败后进入通用分支，两条执行路径互斥。
 
-时间弹丸桥接同样位于 `BP_Item_Base.Fire_HitScan`。`UseTemporalProjectile=false` 时完整保留原射线伤害；启用后改为在枪口前生成 `/Game/Blueprints/Weapons/Player/Projectiles/BP_TimeBullet`，近距离遮挡仍回退射线结算。默认悬浮偏移为 40 uu，全局实例上限为 12。`BP_TimeBullet` 使用 `SM_GeneralBullet`，生成时移动组件不激活，并通过 `ReleaseProjectile(Speed)` 延迟恢复运动；命中后再按头部 100 / 身体 25 提交通用 Damage。时间能力状态机尚未接入该公开开关与释放接口。
+时间弹丸桥接同样位于 `BP_Item_Base.Fire_HitScan`。`UseTemporalProjectile=false` 时完整保留原射线伤害；启用后改为在枪口前生成 `/Game/Blueprints/Weapons/Player/Projectiles/BP_TimeBullet`，近距离遮挡仍回退射线结算。默认悬浮偏移为 40 uu，全局实例上限为 12。`BP_TimeBullet` 使用 `SM_GeneralBullet`，生成时移动组件不激活，并通过 `ReleaseProjectile(Speed)` 延迟恢复运动；它忽略玩家 Owner 及其他时间弹丸，命中有效目标后再按头部 100 / 身体 25 提交通用 Damage。`AC_TimeAbility` 只在 `FullStop` 开启该开关，并在进入 `BulletTime` 或退出能力时以默认 5000 uu/s 释放现存弹丸。
 
 两种正式敌人不共享血量存储：`BP_MeleeNPC.Event AnyDamage` 将浮点伤害转交现有 `CAI_CombatComponent.Apply Damage`，`BP_ShooterNPC.Event AnyDamage` 继续更新自身 `Current HP`。新增敌人应复用通用伤害事件并适配真实血量所有者，不应再把训练靶类型转换作为通用伤害门。详细实现、证据与测试限制见 [EnemyDamagePipeline.md](../Implementation/EnemyDamagePipeline.md)。
 

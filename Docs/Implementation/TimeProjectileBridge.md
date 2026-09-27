@@ -11,6 +11,7 @@
   - `Collision`：2 uu Sphere，`Projectile` 碰撞预设。
   - `ProjectileMovement`：默认不激活、无重力；`ReleaseProjectile(Speed)` 设置本地前向速度并激活移动。
   - 生成时忽略 Owner，避免与玩家发生初始碰撞。
+  - 忽略 `Projectile` 碰撞通道，并在命中保护中跳过其他 `BP_TimeBullet`，避免悬浮弹丸堆叠或释放时互相销毁、清零速度。
   - Actor Hit 时读取命中骨骼：`head` 为 100 点，其余为 25 点；提交通用 Damage 后销毁。
 - `/Game/Blueprints/Interactables/BP_Item_Base`
   - `UseTemporalProjectile`：时间系统的切换入口，默认 `false`。
@@ -19,16 +20,18 @@
   - `TemporalMuzzleOffset`：默认 40 uu。
   - 启用时间弹丸时，若射线在偏移距离内已命中遮挡，仍走原射线结算，避免把弹丸生成到墙后。
 
-## 当前边界
+## 时间能力集成
 
-- 本次只建立射线/实体弹丸的切换桥和弹丸生命周期接口，没有实现能量条、时停/子弹时间状态机或 UI。
-- 默认开关关闭，因此现有正常状态射击和其他玩家武器不改变。
-- 后续时间管理器应在高能量时停阶段开启 `UseTemporalProjectile`；退出完全时停或进入低能量子弹时间后，枚举现存 `BP_TimeBullet` 并调用 `ReleaseProjectile`，速度可由能量比例映射。
+- `/Game/Blueprints/Components/Player/AC_TimeAbility` 已接入该桥：只在 `FullStop` 开启当前武器的 `UseTemporalProjectile`。
+- 进入 `BulletTime`、主动退出能力或组件结束运行时关闭该开关；离开 `FullStop` 的边沿只触发一次全量释放，默认速度为 5000 uu/s。
+- 正常状态与 `BulletTime` 仍走原射线伤害；只有 `FullStop` 使用实体悬浮弹丸，因此不改变其他状态下已经可用的射击链。
+- 全局实例上限仍为 12，达到上限后不能继续生成时间弹丸。
 
 ## 验证记录（2026-09-26）
 
 - 冷启动重新加载并编译 `BP_TimeBullet`、`BP_Item_Base`、`BP_Weapon_Pistol`：0 error。
 - PIE 通过手枪 `BeginFire` 正式链路启用时间弹丸模式，观察到 4 枚实体弹头在枪口前持续悬浮。
 - PIE 读取 4 个实例的 `ProjectileMovement`，均为未激活状态；Owner 忽略碰撞修复后不再生成即销毁。
+- 2026-09-27 阶段 4 集成验证通过：正式武器链连续生成 3 枚悬浮弹丸；跨入 `BulletTime` 后 3 枚均自动激活移动，并在约 0.125 秒内各自前进约 138 uu。
 - 输出日志仍有项目原有 Manny PoseAsset 版本警告，与本改动无关。
-- 未完成：面向敌人的实际释放命中、12 发上限的手感测试，以及时间能力状态机集成。
+- 未完成：面向敌人的完整释放命中矩阵、12 发上限手感测试、打包与联网验证。
