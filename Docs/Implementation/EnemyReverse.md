@@ -1,6 +1,6 @@
 # Enemy reverse integration
 
-Implemented and verified in UE 5.6 on 2026-09-26, against recovery commit `63d0a5d`.
+Implemented and verified in UE 5.6 on 2026-09-26, against recovery commit `63d0a5d`. Animation playback stability was reverified and corrected on 2026-09-27.
 
 ## Runtime architecture
 
@@ -16,6 +16,10 @@ The existing player `IA_Reverse` action (Q), `BP_ReverseSystemController`, and g
 The component uses the existing global history settings. Map_Test tests observed 50 samples/second and 250 retained frames, approximately five seconds. Health history and current restored health use floating-point values.
 
 On rewind entry, the component stops AI logic, path movement and shooting; disables live skeletal physics, movement and actor collision; and switches the mesh to its pose playback AnimBP. It writes health directly through the interface rather than replaying damage events. Combat entry points ignore attacks/damage during rewind.
+
+Each automatic and seek-reverse playback path restores the actor transform before restoring the recorded mesh world transform and pose. Reversing that order makes the attached mesh inherit the actor's subsequent movement a second time, which produces relative transform drift, visible animation jitter and incorrect facing. Both gameplay enemy meshes use `Always Tick Pose and Refresh Bones` so a restored pose refreshes bones consistently even when visibility changes.
+
+`BeginEnemyRewind` also saves and disables the owner's `Use Controller Rotation Yaw` policy; `EndEnemyRewind` restores it before either the living or dead exit branch. This prevents an AI controller from writing a live facing direction between fixed-rate history samples. The guard is neutral for enemies such as the shooter whose original policy is already disabled.
 
 On a living rewind exit, it restores mesh attachment, normal AnimBP, collision profiles and movement velocity, then restarts AI decisions. The current enemies resume in Walking movement mode. Perception is refreshed after restart: the Shooter StateTree's sensing task binds perception events again, and a stale perception cache otherwise prevents reacquiring an already visible player.
 
@@ -40,12 +44,14 @@ Do not additionally attach the original `BP_ReverseStatusComponent` or `BP_Rever
 
 ## Validation evidence and boundaries
 
-Local evidence is in ignored `Saved/Agent/EnemyReverse/`:
+Local evidence is in ignored `Saved/Agent/EnemyReverse/` and `Saved/Agent/EnemyRewindAnimFix/`:
 
 - `pie_test.json`: actual Q-bound Enhanced Input action injected in PIE; both enemies restored health after damage and lethal damage; captured rendered bone poses were compared with recorded snapshots.
 - `pie_edge.json`: fractional health, short rewind that stays dead, a second rewind reaching life, history exhaustion, and eventual cleanup of both enemies, both controllers and the ranged weapon.
 - `pie_final.json`: 405 observations after the perception fix; no mismatched history lengths or living-frame counts. After revival, ranged `Is Shooting` was true in 140 observations and melee attack montages were active in 157 observations. Both AI brains stopped during rewind and resumed after living restoration.
 - `final_validation.log` / `final_validation.json`: all eight affected/new Blueprints loaded and compiled in a separate editor process without the local editing helper plugin; zero errors. One existing reverse-demo controller warning concerns its obsolete `PawnActionsComponent` reference.
+- `Saved/Agent/EnemyRewindAnimFix/pie_before.json` and `pie_after.json`: a 2026-09-27 seven-second PIE comparison let both enemies advance, then injected Q reverse for three seconds. During rewind, melee mesh-relative drift fell from 6.691 uu / 113.498 degrees yaw to zero; shooter drift fell from 20.073 uu / 5.104 degrees yaw to zero. Both used their correct rewind AnimBP for all 179 captured reverse samples, and the run produced no Blueprint runtime errors.
+- `Saved/Agent/EnemyRewindAnimFix/pie_yaw_gate_run1.json` through `run3.json`: the follow-up comparison found that melee `Use Controller Rotation Yaw=True` inserted its live controller facing between history samples. Before the guard, the three-second rewind contained 29 alternating actor-yaw steps over 20 degrees and a 51.356-degree maximum. Three saved-asset reruns captured 179 reverse samples each with controller yaw disabled, zero alternating steps and zero actor-yaw jumps; the original `True` policy was restored after every exit. Shooter remained `False` before, during and after rewind.
 
 The tests used scripted damage through each enemy's actual damage entry and injected the input action bound to Q. They did not simulate a physical keyboard hold. The player was temporarily invulnerable for these scenarios; actual damage to the player after revival was not asserted. Existing animation/weapon warnings were distinguished from new runtime errors; the final PIE test produced no new Blueprint runtime errors.
 
