@@ -12,13 +12,14 @@
   - `ProjectileMovement`：默认不激活、无重力；`ReleaseProjectile(Speed)` 设置本地前向速度并激活移动。
   - 生成时忽略 Owner，避免与玩家发生初始碰撞。
   - 忽略 `Projectile` 碰撞通道，并在命中保护中跳过其他 `BP_TimeBullet`，避免悬浮弹丸堆叠或释放时互相销毁、清零速度。
-  - Actor Hit 时读取命中骨骼：`head` 为 100 点，其余为 25 点；提交通用 Damage 后销毁。
+  - Actor Hit 对 Character 使用弹道直线到 `head` / `pelvis` 骨骼位置的距离补足胶囊 HitResult 不提供骨骼名的情况；头部为 100 点、身体为 25 点，提交通用 Damage 后销毁。非 Character 阻挡走身体伤害并销毁。
 - `/Game/Blueprints/Interactables/BP_Item_Base`
   - `UseTemporalProjectile`：时间系统的切换入口，默认 `false`。
   - `TemporalProjectileClass`：默认指向 `BP_TimeBullet`。
   - `TemporalProjectileLimit`：默认 12；达到上限后该次射击不再生成弹丸。
   - `TemporalMuzzleOffset`：默认 40 uu。
   - 启用时间弹丸时，若射线在偏移距离内已命中遮挡，仍走原射线结算，避免把弹丸生成到墙后。
+  - 弹丸的生成旋转和 40 uu 偏移沿瞄准射线的 `TraceStart → TraceEnd`，不依赖武器模型自身旋转。
 
 ## 时间能力集成
 
@@ -26,6 +27,7 @@
 - 进入 `BulletTime`、主动退出能力或组件结束运行时关闭该开关；离开 `FullStop` 的边沿只触发一次全量释放，默认速度为 5000 uu/s。
 - 正常状态与 `BulletTime` 仍走原射线伤害；只有 `FullStop` 使用实体悬浮弹丸，因此不改变其他状态下已经可用的射击链。
 - 全局实例上限仍为 12，达到上限后不能继续生成时间弹丸。
+- `UI_Hud.SetTemporalProjectileStatus` 在 `FullStop` 显示当前时间弹丸数与 12 发上限，满额时显示 `LIMIT`。
 
 ## 验证记录（2026-09-26）
 
@@ -33,5 +35,7 @@
 - PIE 通过手枪 `BeginFire` 正式链路启用时间弹丸模式，观察到 4 枚实体弹头在枪口前持续悬浮。
 - PIE 读取 4 个实例的 `ProjectileMovement`，均为未激活状态；Owner 忽略碰撞修复后不再生成即销毁。
 - 2026-09-27 阶段 4 集成验证通过：正式武器链连续生成 3 枚悬浮弹丸；跨入 `BulletTime` 后 3 枚均自动激活移动，并在约 0.125 秒内各自前进约 138 uu。
+- 阶段 5–7 回归：12 枚可悬停，第 13 发被拒绝，HUD 满额提示正确，12 枚在模式切换后全部释放。
+- 近战敌人身体/头部释放命中分别实测 25/100 点，悬停阶段均不提前扣血；ShooterNPC 身体释放命中实测 25 点。普通射线伤害保持即时，近距遮挡不生成时间弹丸。
 - 输出日志仍有项目原有 Manny PoseAsset 版本警告，与本改动无关。
-- 未完成：面向敌人的完整释放命中矩阵、12 发上限手感测试、打包与联网验证。
+- 未完成：所有武器家族、所有特殊碰撞体的完整命中矩阵，以及打包、联网和压力验证。

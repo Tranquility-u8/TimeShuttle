@@ -45,6 +45,17 @@ This section is the canonical workflow for both modes. It takes precedence over 
 - 按测试起止时间区分新错误、旧错误、观测脚本错误和原有警告。能修复的任务内错误继续修复；无法验证的结果明确列出，不称“全部正常”。
 - 不承诺固定 token 节省比例或 Pro 可工作分钟数。若用户需要量化，在明确阶段前后读取额度快照并记录活动时长；账户共享用量不能直接归因于单一任务。
 
+### 本次时停 / 子弹时间实现的经验：两种模式共同执行
+
+- 射线武器需要悬浮弹丸时，优先保留 Normal/BulletTime 原射线链，只在 FullStop 桥接实体弹丸；不要用冻结粒子冒充可碰撞弹丸，也不要无验证地把全部武器永久改为 Projectile。
+- 生成方向使用真实瞄准射线 `TraceStart → TraceEnd`。程序动画下枪口旋转不一定等于准星方向；枪口前移还必须先处理偏移距离内的遮挡。
+- Character 胶囊 HitResult 可能没有骨骼名。实体弹头部判定应使用已验证的弱点碰撞/接口，或当前人形敌人的弹道到 `head` / `pelvis` 距离方案；不能只判断 `HitBoneName`。
+- 近似时停使用非零世界倍率并补偿玩家/当前武器；按现实时间实测能量速率。离开 FullStop 的弹丸释放应由状态边沿触发一次，不在 Tick 中无条件重复释放。
+- 悬浮弹丸需同时检查 Owner、自身类别和 Projectile 通道碰撞。上限、满额策略与 UI 必须一起验证，不能只统计生成调用。
+- PIE 中 Summon AI 后应生成其默认 Controller，再把它作为伤害/死亡测试目标；否则 Blackboard、战斗组件或回溯组件的 `Accessed None` 可能只是测试夹具污染。
+- 物理测试体必须为 Movable、开启模拟并唤醒；交互测试应瞄准真实 InteractionArea。零位移或无法 Focus 时先验证夹具，而不是立即修改正式逻辑。
+- 时间系统回归至少覆盖输入互斥、真实时间能量、模式倍率、玩家/武器补偿、弹丸悬停/释放/命中、近距遮挡、数量上限、HUD、交互、物理恢复和最终全局倍率恢复。详细复盘见 `Docs/Implementation/TimeAbilityLessons.md`。
+
 ## Change gate outside explicit autonomous authorization
 
 Apply this gate when execution has not already been authorized under the collaboration modes above. Existing approvals remain valid across turns; do not request them again for the same scope.

@@ -281,6 +281,8 @@ MCP 提供工具，Skill 规定工具如何被安全使用。连接成功不代�
 - 当前目录与功能入口：`Docs/Knowledge/project-architecture.md`
 - 资产命名与历史例外：`Docs/Knowledge/asset-naming.md`
 - 敌人回溯实现与验证边界：`Docs/Implementation/EnemyReverse.md`
+- 时停/子弹时间实现：`Docs/Implementation/TimeAbilityCore.md`、`TimeProjectileBridge.md`
+- 时停/子弹时间的可复用经验与踩坑：`Docs/Implementation/TimeAbilityLessons.md`
 - 总规则：`AGENTS.md`
 - 审批模板：`Docs/Agent/approval-gate.md`
 - 团队简版 SOP：`Docs/Agent/TEAM-SOP.md`

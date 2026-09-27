@@ -13,7 +13,7 @@ This directory is the fast, reviewable knowledge layer for agents and teammates.
 7. `technical-references.md` — important official vendor references and their verification boundaries.
 8. `open-questions.md` — unresolved decisions that must not be guessed.
 
-Task-specific implementation evidence lives in `Docs/Implementation/`. Current enemy-related records are [EnemyReverse.md](../Implementation/EnemyReverse.md) and [EnemyDamagePipeline.md](../Implementation/EnemyDamagePipeline.md).
+Task-specific implementation evidence lives in `Docs/Implementation/`. Current records include [EnemyReverse.md](../Implementation/EnemyReverse.md), [EnemyDamagePipeline.md](../Implementation/EnemyDamagePipeline.md), [TimeAbilityCore.md](../Implementation/TimeAbilityCore.md), [TimeProjectileBridge.md](../Implementation/TimeProjectileBridge.md), and the reusable [TimeAbilityLessons.md](../Implementation/TimeAbilityLessons.md).
 
 ## Authority and conflicts
 
