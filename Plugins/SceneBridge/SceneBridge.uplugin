@@ -1,0 +1,17 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "0.1.0",
+  "FriendlyName": "SceneBridge",
+  "Description": "Editor-only Blender scene snapshots, incremental imports and collision policies.",
+  "Category": "Editor",
+  "CreatedBy": "SceneBridge contributors",
+  "CanContainContent": true,
+  "EnabledByDefault": false,
+  "IsBetaVersion": true,
+  "Installed": false,
+  "Plugins": [
+    { "Name": "PythonScriptPlugin", "Enabled": true, "TargetAllowList": ["Editor"] },
+    { "Name": "EditorScriptingUtilities", "Enabled": true, "TargetAllowList": ["Editor"] }
+  ]
+}
