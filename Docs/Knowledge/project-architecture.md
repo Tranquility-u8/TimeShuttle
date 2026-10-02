@@ -46,13 +46,15 @@
 
 ## 玩家武器对敌伤害入口
 
-玩家武器基类 `/Game/Blueprints/Interactables/BP_Item_Base` 的 `Fire_HitScan` 使用命中结果中的 `Hit Actor` 提交通用 Unreal Damage。命中骨骼名为 `head` 时选择 100 点，否则选择 25 点。训练靶 `BP_TrainingEnemy` 保留专用分支；正式敌人在该类型转换失败后进入通用分支，两条执行路径互斥。
+玩家武器基类 `/Game/Blueprints/Interactables/BP_Item_Base` 的 `Fire_HitScan` 使用命中结果中的 `Hit Actor` 提交通用 Unreal Damage。2026-10-02 两类正式敌人已挂载 `/Game/Blueprints/AI/WeakPoints/AC_EnemyWeakPoints`：`ResolveShotDamage` 将命中组件交给敌人结算，激活弱点直接读取对应 Tier 的 `WeakPointDamage`，再提交一次原有 Damage；不再传递武器 BreakPower，也没有护甲或击破门槛。激活球体附着主体 Mesh 骨骼、只阻挡 Camera 射线；未激活位置按身体处理，取消这些敌人的旧 100 点爆头。无弱点组件目标保留 head=100 / body=25 回退。训练靶 `BP_TrainingEnemy` 专用分支保持互斥。具体配置与普通时间射击证据见 [enemy-weakpoints-plan.md](../Implementation/enemy-weakpoints-plan.md)；括号视觉、时间弹和弱点回溯生命周期适配尚未接入。
 
 时间弹丸桥接同样位于 `BP_Item_Base.Fire_HitScan`。`UseTemporalProjectile=false` 时完整保留原射线伤害；启用后沿实际瞄准射线在枪口前生成 `/Game/Blueprints/Weapons/Player/Projectiles/BP_TimeBullet`，40 uu 内遮挡仍回退射线结算。全局实例上限为 12。`BP_TimeBullet` 使用 `SM_GeneralBullet`，生成时移动组件不激活，并通过 `ReleaseProjectile(Speed)` 延迟恢复运动；它忽略玩家 Owner 及其他时间弹丸。对 Character 胶囊命中时，以弹道到 `head` / `pelvis` 的距离判定头部 100 / 身体 25，再提交通用 Damage。`AC_TimeAbility` 只在 `FullStop` 开启该开关，并在进入 `BulletTime` 或退出能力时以默认 5000 uu/s 释放现存弹丸。
 
 两种正式敌人不共享血量存储：`BP_MeleeNPC.Event AnyDamage` 将浮点伤害转交现有 `CAI_CombatComponent.Apply Damage`，`BP_ShooterNPC.Event AnyDamage` 继续更新自身 `Current HP`。新增敌人应复用通用伤害事件并适配真实血量所有者，不应再把训练靶类型转换作为通用伤害门。详细实现、证据与测试限制见 [EnemyDamagePipeline.md](../Implementation/EnemyDamagePipeline.md)。
 
 ## 敌人回溯边界
+
+弱点伤害的 2026-10-02 修订：`PDA_WeakPointTier.WeakPointDamage` 是每档弱点的独立伤害值（当前黄 50、红 25），每次有效激活点命中立即生效。已删除护甲耐久、击破门槛、武器 BreakPower 和敌人统一弱点伤害字段；BodyDamage 与仅弱点开关仍在 `AC_EnemyWeakPoints`。当前 GetWeakPointState 只返回激活/未激活及无效状态；回溯后续不再需要恢复护甲历史。
 
 两种敌人均添加 `EnemyReverse` 实例组件，类型为 `AC_EnemyReverse`，实现 `BPI_RewindableEnemy`。组件继续接入原全局 reverse manager，按同一采样索引记录 Transform、浮点血量、骨骼姿态、Mesh Transform 和速度。两种骨架分别使用 `Animations/TimeReverse/ABP_EnemyRewind_*`。
 

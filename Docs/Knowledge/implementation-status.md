@@ -1,8 +1,10 @@
 # Implementation status
 
-Last repo/editor observation: **2026-09-27**. This file records verified implementation facts, not sprint status. Drive sources were not refreshed during this local audit.
+Last repo/editor observation: **2026-10-02** (targeted weakpoint update). This file records verified implementation facts, not sprint status. Drive sources were not refreshed during this local audit.
 
 ## Verified in the repository
+
+- Enemy weakpoints use five configurable bone-attached query spheres and constrained non-repeating initialization. Per the 2026-10-02 user revision, armor/durability/break power were removed: every active hit immediately returns its tier data asset's independent `WeakPointDamage` (yellow 50, red 25 initially), with no hit-count threshold or point consumption. BodyDamage and weakpoint-only gating remain enemy component settings. A fresh 24-shot PIE matrix on both enemy types passed repeated hits, body, weakpoint-only, inactive head, walls, and independent fractional red damage (12.5 while yellow remained 50). Fixtures paused AI/pose, aligned the actual camera and removed spread; damage was not injected. This supersedes historical head=100/body=25 routing for weakpoint enemies only. Precision brackets and temporal-projectile integration remain unimplemented; rewind lifecycle integration still needs verification. See [enemy-weakpoints-plan.md](../Implementation/enemy-weakpoints-plan.md).
 
 - UE 5.6 Blueprint project opens from `TimeShuttle.uproject`.
 - Content is organized by purpose at the root: Blueprints, Animations, Maps, Data, Input and presentation resources. ProceduralFPSKIT, CombatAI and Variant_Shooter assets were migrated into these categories; the original TimeReverseSystem framework remains in use.
