@@ -324,8 +324,14 @@ def _collision(mesh, obj):
         precision = max(10000, min(1000000, int(settings.get("hull_precision", 100000))))
         if not subsystem.set_convex_decomposition_collisions(mesh, hulls, verts, precision):
             raise BridgeError(f"Convex collision generation failed on {mesh.get_name()}")
-    elif mode == "custom" and subsystem.get_simple_collision_count(mesh) == 0:
-        raise BridgeError(f"Custom collision requested but no UCX/UBX collision was imported: {obj['name']}")
+    elif mode == "custom":
+        # UE counts box/sphere/capsule primitives separately from UCX convex hulls.
+        simple_count = subsystem.get_simple_collision_count(mesh)
+        convex_count = subsystem.get_convex_collision_count(mesh)
+        if simple_count < 0 or convex_count < 0:
+            raise BridgeError(f"Custom collision count query failed: {obj['name']}")
+        if simple_count + convex_count == 0:
+            raise BridgeError(f"Custom collision requested but no UCX/UBX collision was imported: {obj['name']}")
     actual = subsystem.get_collision_complexity(mesh)
     if actual != flag:
         raise BridgeError(f"Collision complexity readback failed: {mesh.get_name()}")

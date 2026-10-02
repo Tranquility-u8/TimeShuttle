@@ -62,6 +62,8 @@
 
 ## 维护入口
 
+- 实验室新版白盒：`/Game/Maps/Map_LabV39`，独立于旧 `Map_LabBridge`；建筑资源在 `Environment/LabV39`，桥接身份与旧图分离。使用 `GM_FP` 和现有角色，初始门禁为静态阻挡，尚未接入剧情解锁。2026-10-02 的构建、碰撞及角色通行证据见 [LabV39Whitebox.md](../Implementation/LabV39Whitebox.md)。默认启动地图仍为 `Map_Test`。
+
 - 命名：[asset-naming.md](asset-naming.md)。
 - 已验证行为及缺口：[implementation-status.md](implementation-status.md)。
 - 协作与授权：仓库根 `AGENTS.md` 为唯一规则源；skills 只路由工作流程。
