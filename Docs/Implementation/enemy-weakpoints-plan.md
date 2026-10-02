@@ -1,5 +1,65 @@
 # 敌人精密瞄准弱点实施方案
 
+## 任务 8：综合交接（2026-10-02）
+
+任务 1–8 已完成。本节汇总最终运行规则、配置入口和阶段 8 回归证据；下方阶段记录保留实施过程，其中护甲/耐久、“击破”以及阶段未开始等旧描述均由本节和“当前规则”覆盖。
+
+### 最终配置入口
+
+- 在 `BP_MeleeNPC` / `BP_ShooterNPC` 的 `WeakPoints` 组件配置 `ActiveWeakPointCount`、`bWeakPointOnly`、`BodyDamage`、五个 `Candidates`、`TierRules` 与随机种子。当前默认五选二且同次不重复；BeginPlay 或显式新遭遇重置时抽取，连续命中不会重抽。固定种子只建议用于 QA。
+- 每种颜色/等级在 `Data/Enemies/WeakPoints/DA_WeakPointTier_*` 独立配置 `WeakPointDamage`、括号/核心颜色、线宽和亮度。当前黄色 50、红色 25；颜色只是数据表现，不参与伤害分支，因此可继续增加等级资产并通过 `TierRules` 扩展。
+- `bWeakPointVisualsOnlyDuringTimeAbility` 默认开启：Normal 隐藏，FullStop 与 BulletTime 显示；只控制括号和核心，不控制弱点碰撞或伤害。`bShowWeakPointMarkers` 是视觉总开关。
+- `GM_FP.bDebugPrintEnemyDamage` 默认开启。普通部位输出 `Damage: <值>`，激活弱点输出 `CRITICAL Damage: <值>`；关闭后只停用调试文本。
+- 未激活候选点按普通身体处理；`bWeakPointOnly=true` 时身体伤害为 0。项目不存在弱点护甲、耐久或击破次数。
+
+### 阶段 8 最终验证
+
+- 相关 63 个蓝图在最终清理后重新编译：0 errors / 0 warnings；内容包和地图均无未保存修改。两类敌人蓝图及 `Map_Test` 的现有关卡实例与组件默认配置一致，没有意外实例覆盖。
+- 两类敌人的正式手枪/时间弹矩阵通过：26 项伤害与悬停、释放、遮挡、上限、近距回退等场景，加 14 项 Normal / FullStop / BulletTime 视觉门控；最终日志区间无 Error、Accessed None、Script Warning 或 Ensure。
+- 回溯矩阵通过 19 个事件、194 个同步样本：弱点分配与同帧 HP/姿态同步恢复和裁剪；死亡、短回溯、复活、复活后真实手枪命中、10 项模式视觉、seek 及最终清理均通过。测试夹具已针对后台低帧率和 Shooter AI 弹丸遮挡做隔离；这些修正不改变正式资产。
+- 综合闭环使用实际装备手枪命中旧 `BP_TrainingEnemy`，500→475 且仅消耗 1 发；T 进入 FullStop 后 Q 被阻止，退出 T 后全局时间倍率回到 1、武器时间弹标志清除；Normal 下 Q 可用且回溯期间 T 被阻止。退出 Q 后 Melee / Shooter 均恢复有效 Controller、运行中的 Brain、Walking、原动画类及非回溯状态。
+- 阶段 8 未发现需要修改正式运行资产的新缺陷；本阶段只补充回归夹具与交接文档。最终证据位于忽略目录 `Saved/Agent/WeakPoints/`：`stage8-preflight.json`、`stage8-compile.json`、`temporal-qa-results.json`、`stage8-rewind-results.json`、`stage8-closure-results.json`。
+
+### 验证边界
+
+本轮认证的是编辑器 PIE、当前两类敌人、旧训练靶和装备手枪链路；其他武器家族完成编译兼容检查，但未逐把做实弹矩阵。没有声明打包构建、网络复制、所有分辨率/姿态或大量敌人压力测试通过。
+
+## 全局伤害调试打印（2026-10-02）
+
+- `GM_FP` 新增默认开启的 `bDebugPrintEnemyDamage`，作为当前 FPS 游戏模式下的统一调试开关；关闭后只停用屏幕/Output Log 文本，不改变命中、弱点反馈或伤害结算。
+- `AC_EnemyWeakPoints.ResolveWeakPointDamage` 在返回正伤害时统一调用调试函数：身体及未激活候选点打印 `Damage: <数值>`，激活弱点打印 `CRITICAL Damage: <数值>`。仅弱点规则拦截、回溯拦截及其他 0 伤害不打印。
+- PIE 使用 ShooterNPC 与实际装备手枪验证：身体 25、黄色激活点 50、仅弱点身体 0、关闭总开关后红色激活点仍扣 25。日志分别出现 `Damage: 25.0`、`CRITICAL Damage: 50.0`，后两项对应区间无伤害调试文本。直接绕过弱点解析器的脚本 `ApplyDamage` 不会被猜测为普通或 Critical。
+- 组件、GameMode、武器基类、手枪、时间弹及两类敌人最终编译均为 0 errors / 0 warnings；Blueprint Assist 整理后功能连线与默认值签名未改变，定向保存后无脏内容包或地图。恢复点与本机证据位于忽略目录 `Saved/Agent/WeakPoints/DamagePrintBackup/`、`damageprint-pie.json` 和 `damageprint-finalize.json`。
+
+## 任务 7：弱点回溯与生命周期（2026-10-02）
+
+本节记录任务 7 完成时点；阶段 8 的最终综合交接见本文顶部。
+
+- 新增 `Blueprints/Types/Structs/S_WeakPointRewindFrame`，保存五个位置的等级索引及初始化状态。没有护甲、耐久或击破历史。`AC_EnemyReverse.WeakPointHistory` 与现有位置、HP、姿态共用采样时机和索引，不启动独立定时器。
+- `RecordEnemyState` 同步记录；`RestoreEnemyState` 同步恢复，自动 Q 回溯及 seek 两个方向都经过该入口。`TrimEnemyHistory` 同步处理滚动淘汰、自动回溯消耗和 seek 的未来历史裁剪。
+- 恢复只写入 `RuntimeTierIndices` / `bInitialized` 并恢复五个命中球的激活碰撞，不重新随机、不重建视觉组件、不调用伤害/奖励入口。记录期间候选位置及 `TierRules` 顺序应保持固定；设计师配置、等级资产伤害数值不属于历史快照。
+- 进入/退出回溯清除实时受击反馈与当前可见状态，后续按当前存活、遮挡和阶段 6 显示开关重新计算。不重放旧闪光。默认 `bWeakPointVisualsOnlyDuringTimeAbility=true` 保持不变，Q 回溯本身不会打开 T 能力的显示门控。
+- 回溯期间已有伤害保护继续生效；新增显式重置保护，回溯中 `ResetForNewEncounter` 不销毁组件或重新抽取。退出后恢复原重置行为。没有弱点组件的目标采用空帧/安全跳过。
+- 死亡对象仍由原有存活历史控制保留与清理；弱点球、括号、核心随敌人销毁，复活时沿用原组件，不叠加创建。
+
+### 本阶段验证与边界
+
+- `Saved/Agent/WeakPoints/rewind-qa-results.json`：Melee / Shooter 两类 PIE 测试通过。实际装备手枪黄点 100→50；显式重置产生另一组弱点后，Q 回溯恢复原种子分配；短回溯仍死亡、长回溯复活；复活后实际手枪红点 100→75。
+- 逐帧核查位置、HP、姿态及弱点四组历史长度一致，存活计数等于正 HP 历史数。回溯中伤害解析返回 0，重置请求不改变分配或命中球身份。复活后每敌人仍只有五个球、五个括号、五个核心，普通时间默认隐藏。
+- 保存后的 `rewind-finalqa-results.json` 再次通过完整链路，额外检查两类敌人复活后 Normal / FullStop / BulletTime、关闭门控及恢复默认门控共 10 项显示状态，括号/核心一致且不改变 HP；旧受击脉冲已衰减为 0。seek 恢复 75.5 小数血量与同帧分配，回到更早帧并裁掉未来后恢复 75。最终 PIE 区间 UTC 21:55:50–21:56:10 未出现 Error / Accessed None / Script Warning；既有手枪动画警告保留，早期测试夹具的后台低帧率退出等待已修正。
+- seek 使用正式组件事件，在暂停世界的夹具中检查前后移动、同索引 HP/弱点恢复及未来裁剪；不是物理键鼠的 seek 控制验收。存活历史耗尽后，两个敌人、两个 Controller 和 30 个弱点相关组件全部失效。
+- 死亡夹具使用 Unreal `ApplyDamage` 注入致死伤害；黄点及复活红点使用正式手枪 `BeginFire/StopFire`，Q 使用 Enhanced Input 注入。暂停 AI/姿态、清零散布与实际相机对齐仅用于隔离测试，不代表手感、敌人全姿态、大量敌人、打包或网络认证；未新增奖励计数器观测。
+- 蓝图关键新图使用 Blueprint Assist 刷新尺寸、局部整理；新函数和原图窄接入点均补充职责/边界注释，未全图重排旧逻辑。整理前后有效连线/默认值语义一致；九个相关蓝图编译 0 errors / 0 warnings。定向保存后无脏内容包/地图，见 `rewind-finalize-report.json`。
+- 本阶段前恢复点为本机忽略目录 `Saved/Agent/WeakPoints/RewindBackup/`，只备份弱点与敌人回溯组件；不回退用户已验收的阶段 5/6。临时编辑工具不是运行依赖。
+
+### 本阶段查收（Shooter）
+
+1. 保持默认显示开关开启；按 T 查看当前无遮挡弱点位置和颜色，然后退出 T。
+2. 使用手枪射击已确认的弱点，记住血量变化；按住 Q 回到受击前再松开，血量应恢复。Q 本身不应让括号显现。
+3. 再按 T 比较弱点：位置/等级应与对应历史一致，不因回溯重抽。退出 T 后再射击，伤害仍按相同等级结算。
+4. 击杀后立即用 Q 回到存活时刻，松开后敌人恢复；重复开关 T，括号不应重叠或重放旧受击闪光。再次射击，弱点仍可正常扣血。
+5. 另一次击杀后不回溯，等待存活历史耗尽：敌人及弱点表现应一起清理。完成后停止 PIE，无需保存试玩状态。
+
 ## 当前规则：按弱点等级直接伤害（2026-10-02 用户修订）
 
 用户明确取消护甲概念，要求红、黄等不同弱点独立配置 `WeakPointDamage`。**本节替代下方历史方案中的耐久、破甲、Armored/Exposed、“第三枪才扣血”及敌人统一 WeakPointDamage 规则。**下方旧阶段证据保留作历史记录，不再作为当前验收标准。
@@ -20,9 +80,66 @@
 
 普通时间下使用手枪，不开 T/Q。保持等级/候选规则不变时，固定种子 4、数量 2 的已验证组合为红头、黄胸。假设敌人初始 HP=100：红点四次有效命中的血量依次 75/50/25/0；重开 PIE 后，黄点两次有效命中为 50/0。仅弱点开关开启时，无激活点的腿部不得扣血；关闭时按 BodyDamage 扣血。颜色调试球保持显示，不再有“击破”的验收步骤。
 
-调伤害请打开对应 `Data/Enemies/WeakPoints/DA_WeakPointTier_*`，修改 `Weak Point Damage` 并保存，再重新 PIE。普通身体伤害仍在敌人 `WeakPoints` 组件中调整。正式括号视觉与 FullStop 实体时间弹接入尚未完成；不把这些路径算作本次已验证能力。取消耐久后后续回溯阶段应验证激活分配/等级的生命周期一致性，不再设计护甲历史。
+调伤害请打开对应 `Data/Enemies/WeakPoints/DA_WeakPointTier_*`，修改 `Weak Point Damage` 并保存，再重新 PIE。普通身体伤害仍在敌人 `WeakPoints` 组件中调整。括号视觉状态见下方任务 5；FullStop 实体时间弹接入尚未完成。取消耐久后后续回溯阶段应验证激活分配/等级的生命周期一致性，不再设计护甲历史。
 
-## 以下为历史方案与阶段记录（伤害规则以上文为准）
+## 任务 5：精密瞄准视觉（2026-10-02）
+
+### 实现与配置
+
+- 使用细线双侧括号、空心中心菱形、克制弧线/光晕以及骨骼附着的小发光核心，不包含耐久格、护甲值或击破状态。旧调试球默认关闭。
+- 新资产：`/Game/UI/Widgets/WBP_WeakPointMarker`、`/Game/Materials/WeakPoints/M_WeakPointBracketUI`、`/Game/Materials/WeakPoints/M_WeakPointCore`。组件拥有五组原生 Screen-space WidgetComponent 和无碰撞核心；不修改 UI_Hud，不依赖临时编辑器工具运行。
+- 等级资产的 `BracketColor`、`CoreColor`、`BracketLineWidth`、`CoreIntensity` 分别控制括号色、核心色、线宽及核心亮度；沿用红/黄独立配置和可扩展 TierRules，不按颜色硬编码伤害。
+- `AC_EnemyWeakPoints` 的视觉参数：`bShowWeakPointMarkers=true`、`MarkerScale=1.45`、`MarkerMinSize=12`、`MarkerMaxSize=96`（UI 尺寸），`MarkerFadeStartDistance=2200`、`MarkerMaxDistance=3500`（UE cm），`MarkerNormalOpacity=0.85`、`MarkerBulletTimeOpacity=0.6`、`MarkerGlow=0.12`、`CoreRadiusScale=0.18`。FullStop 透明度为 1。
+- 原生屏幕投影逐帧跟随骨骼；每次按距离、相机 FOV、视口宽度及 DPI 计算尺寸。`MarkerUpdateInterval=0.033` 按真实时间节流（下限 0.016），每敌人最多五条遮挡射线，不遍历全场敌人；尚未做大量敌人性能认证。
+- 只显示激活、存活、在相机前方且在距离范围内的点。Camera 射线首次阻挡必须是对应弱点球；墙、身体和手部均可遮挡，不穿透显示。超距/遮挡立即隐藏，恢复时淡入；远处渐隐。Melee 抬手挡住头部时红点隐藏是预期遮挡。
+- 显式重置前销毁旧表现组件，防止重复创建；初始化随机、命中球、伤害结算保持原规则。只读取时间模式/生命值，不写入其状态。任务 6 时间弹与命中反馈、任务 7 回溯生命周期未实施。
+
+### 验证与恢复
+
+- 恢复基线 `a7c3a03`；本机定向备份位于 `Saved/Agent/WeakPoints/VisualBackup/`。本次修改组件及直接关联的两个敌人/两份现有 World Partition 外部 Actor，新增一个控件和两个材质。临时绿色/青色测试已恢复原红/黄值；黄色数据资产发生定向重保存，不改变伤害规则。
+- 两类敌人共 **44 项视觉 PIE 检查通过**：正反面、墙体遮挡、相机背后、距离/FOV、移动、动画跟随、独立颜色、FullStop/BulletTime、重置、隐藏和生命值可见性。生命值测试为夹具写值，不冒充完整击杀/复活验证。证据 `visual-qa-results.json`。
+- 编辑器目视检查两种实际视口：1667×863（DPI 约 0.799）、2136×1296（DPI 1.2），红黄标记投影可见；证据 `visual-resolution-results.json`。尚未认证独立打包、多玩家或所有分辨率。
+- 新图表使用 Blueprint Assist 刷新节点尺寸并局部整理，补充职责/边界注释；连线及有效默认值语义核对不变。组件、控件和两类敌人最终编译均 0 errors / 0 warnings，定向保存后无脏内容包/地图；证据 `visual-finalize-report.json`。
+- 视觉开启后的真实手枪 **24 项 PIE 回归通过**（`visual-damage-results.json`），仍为黄 50 / 红 25，普通部位与仅弱点开关、未激活头部、墙遮挡、红 12.5 与黄 50 独立配置均通过。测试自动装备手枪、对齐相机并触发 BeginFire/StopFire，不注入伤害；测试后红值恢复 25。最新测试日志区间 UTC 20:16:17–20:16:42 未出现 Error / Accessed None / Script Warning；仍有既有动画重复 Slot、手枪 Additive 动画及 NavMesh 警告，不宣称打包验证通过。
+
+### 本阶段人工验收
+
+1. 打开 Map_Test，以 Shooter 为例：`WeakPoints` 保持 `bShowWeakPointMarkers=true`，`bDebugWeakPoints=false`；需要稳定样本时启用固定种子 4、数量 2（原规则下红头/黄胸）。编译、保存后 PIE。
+2. 近距离观察细线括号、中心菱形与小发光核心；移动/瞄准时随骨骼更新。退远应缩小并渐隐，墙体或自身部位遮挡时不透视。
+3. 切换 FullStop / BulletTime，检查标记仍跟随相机，透明度有区别。此步骤仅验收表现，不验收时间弹伤害。
+4. 停止 PIE，在 Red/Yellow 等级资产修改 `BracketColor` 或 `BracketLineWidth`，重新运行确认独立生效。伤害仍分别由 `WeakPointDamage` 控制；不存在击破次数。
+
+## 任务 6：时间弹与命中反馈、时间能力视觉开关（2026-10-02）
+
+用户已验收任务 5。本阶段不进入任务 7 回溯适配。
+
+### 当前行为与配置
+
+- 敌人的 `WeakPoints` 组件新增 `bWeakPointVisualsOnlyDuringTimeAbility=true`。默认 Normal 隐藏，能力开启后的 FullStop 和 BulletTime 均显示；能量恰好 70 也显示，能力耗尽或主动退出后隐藏。判定依据是能力模式，不是单独比较能量。
+- 关闭此开关可恢复普通时间显示。`bShowWeakPointMarkers` 仍是总开关；激活状态、存活、距离与遮挡规则仍生效。开关同时控制括号和发光核心，不修改命中球、随机分配、`bWeakPointOnly` 或伤害。没有显示不代表没有弱点伤害。
+- `BP_TimeBullet` 悬停时不结算；释放后逐帧用上一位置到当前位置的 Camera 通道线段检测首次阻挡，并将实际 HitComponent 交给 `ResolveWeakPointDamage`。一枚弹最多提交一次伤害并销毁；释放调用有幂等保护。时间弹模型/根碰撞不再抢先触发胶囊 ActorHit，避免旧头部近似判定覆盖正式弱点。
+- 两类正式敌人按等级 `WeakPointDamage` / `BodyDamage` / `bWeakPointOnly` 统一结算。无弱点组件的 Character 仍保留旧头/身体回退；非 Character 保留墙面弹孔。未修改敌人 AI 弹丸碰撞规则。
+- 验证发现旧桥接方向虽来自瞄准射线、生成起点仍来自动画枪口，造成平行偏移。本轮仅将 `BP_Item_Base.Fire_HitScan` 时间弹生成位置改为同一 `TraceStart + Direction * TemporalMuzzleOffset`。40 uu 内首次遮挡的射线回退、12 发上限及原时间模式切换保持不变。
+- 正伤害激活弱点命中触发短促亮度强调，不存在护甲/击破。可调 `HitFeedbackDuration=0.18` 秒、`HitFeedbackStrength=0.7`，按真实时间衰减；当前反馈突出最后命中的点。隐藏状态不会被命中强行点亮，退出能力后立即受显示门控约束。
+
+### 验证记录
+
+- `temporal-qa-results.json`：两类敌人共 26 项时间弹实际手枪开火测试通过；包含悬停不扣血、红/黄/身体、仅弱点、未激活头部、墙遮挡、三发/混色释放、12 发上限、第 13 发拒绝生成、近距墙/红点回退、目标移走后不预结算、独立红色 12.5。另有 14 项两类敌人的模式显示/总开关测试通过。
+- `temporal-edge-results.json`：18 项显示状态检查与 6 项实际开火检查通过，补充恰好 70、能量耗尽、重复 Release 不改变已释放速度，以及墙面弹孔数量增加一次。
+- `temporal-hitscan-results.json`：Normal 隐藏条件下 24 项真实手枪射线测试通过，黄 50、红 25/临时 12.5、身体及仅弱点规则不受视觉开关影响。命中脉冲即时值 0.7，并在等待后回到 0。
+- `temporal-bullettime-hitscan-results.json`：整理/保存后再跑 BulletTime 可见条件下的同一 24 项射线矩阵，全部通过。
+- 蓝图局部收尾完成：关键飞行、命中和视觉函数使用 Blueprint Assist 刷新尺寸并整理，其他本次新建图表采用编辑器定向布局及职责/边界注释，原武器图表未全图重排。有效连线/默认值语义比较一致；8 个相关蓝图 0 errors / 0 warnings；定向保存后无脏内容包/地图。见 `temporal-finalize-report.json`。最新实际测试区间 UTC 20:55:48–21:09:48 未出现 Error / Accessed None / Script Warning；早先失败记录包含旧枪口偏移问题及测试夹具修正，不计为最终通过证据。既有动画/导航警告不在本轮清理范围内。
+- 测试夹具暂停 AI/姿态、对齐实际相机、清零散布、提高目标初始 HP，调用正式装备手枪 BeginFire/StopFire；没有注入伤害。不是物理鼠标手感、大量敌人、打包或网络认证。移动后的失靶案例验证实际命中时机，但不能代替全姿态/所有武器矩阵。
+- 本机恢复点 `Saved/Agent/WeakPoints/TemporalBackup/` 保留本阶段前资产，任务 5 的既有工作不回退。临时数据资产伤害恢复红 25。主要改动为组件、时间弹、武器一处起点连线，以及直接关联敌人/关卡组件默认值；临时编辑器工具不成为运行依赖。
+
+### 本阶段查收（Shooter）
+
+1. 在 `BP_ShooterNPC` 的 `WeakPoints` 中搜索 `Weak Point Visuals Only During Time Ability`，保持勾选；`Show Weak Point Markers` 同样开启。关卡实例若有覆盖，以实例值为准。
+2. PIE 普通时间应无括号/核心。按 T 开启能力，高于/等于 70 和低于 70 均能看到无遮挡激活点；退出或耗尽后隐藏。
+3. FullStop 瞄准弱点开枪：悬停不扣血，释放命中后才按该档伤害扣血。同一弱点可重复受伤，不存在击破次数。
+4. 停止 PIE，关闭新增开关再编译保存：普通时间也能看到标记，红黄伤害及身体规则不应改变。测试完可恢复默认勾选。
+
+## 以下为历史方案与阶段记录（伤害规则及当前阶段以上文为准）
 
 2026-10-02：按用户“一次性执行任务 3 和 4，然后等我验收”的授权，补齐子任务 2 的初始化、随机与敌人挂载，实施子任务 3/4 并取得组件测试及 20 项 PIE 射击证据。当前等待用户验收；任务 5/6/7 尚未实施。下方核查和 2A 记录为阶段历史，最新状态以本文末尾交接为准。
 

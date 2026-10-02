@@ -6,6 +6,12 @@
 
 ## 已实现资产与接口
 
+### 2026-10-02 弱点接入更新（替代下方旧碰撞/伤害描述）
+
+`BP_TimeBullet` 现在在释放后使用上一位置到当前位置的 Camera 通道线段检测真实首次阻挡，根碰撞在初始化时关闭，悬停不检测/不扣血。命中带 `AC_EnemyWeakPoints` 的敌人时统一解析实际命中组件：激活弱点读对应等级的 `WeakPointDamage`，其他部位读 `BodyDamage` 并受 `bWeakPointOnly` 控制；弱点视觉显隐不参与伤害。无弱点组件的 Character 保留旧头/身体回退，非 Character 保留弹孔。每弹只处理一次命中，重复释放无效。
+
+本轮同时修正旧时间弹起点平行偏移：生成位置与方向均来自同一真实瞄准射线，即 `TraceStart + Direction * 40`，不再混用动画枪口位置。40 uu 内遮挡回退射线、12 发上限、FullStop 悬停及离开时释放保持不变。26 项两类敌人实际手枪时间弹测试与边界补测通过，详见 [弱点任务 6](enemy-weakpoints-plan.md)。下方 2026-09-26/27 记录仅作为历史证据。
+
 - `/Game/Blueprints/Weapons/Player/Projectiles/BP_TimeBullet`
   - 模型：`/Game/Weapons/Bullet/General/StaticMeshes/SM_GeneralBullet`
   - `Collision`：2 uu Sphere，`Projectile` 碰撞预设。
