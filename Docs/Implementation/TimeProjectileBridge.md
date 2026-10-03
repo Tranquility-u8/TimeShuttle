@@ -6,6 +6,14 @@
 
 ## 已实现资产与接口
 
+### 2026-10-03 瞄准承诺与命中反馈修复（当前规则）
+
+FullStop 开火时，`BP_Item_Base` 先用与普通射线相同的弱点选择规则确定目标 Actor、命中组件、位置、法线与骨骼，再交给 `BP_TimeBullet.InitializeLockedImpact` 缓存。悬停阶段仍不造成伤害；离开 FullStop 后，弹丸用飞行扫掠保留墙体和其他 Actor 的真实拦截，但到达原始目标或穿过锁定位置时按开火瞬间缓存的组件结算一次。这样敌人释放后的走位不会把玩家在时停中已经确认的弱点瞄准改判到其他肢体。
+
+弱点组件新增共享选择函数：直接命中弱点球时保持精确命中；首个阻挡是同一敌人的浅层肢体时，只有射线仍落在弱点扩展半径内且遮挡深度不超过容差才重定向到激活弱点；深层身体和外部遮挡继续阻挡。视觉显隐和普通/时间弹伤害共用这一规则，避免“标记显示可打、实际却算身体”的错误引导。当前默认参数为 `WeakPointAimAssistRadius=5`、`SelfOcclusionToleranceDepth=18`、`LockedImpactTolerance=8`（uu）。
+
+释放速度现为 `30000 uu/s`。普通射线和时间弹统一为 Character、弱点及世界表面生成 `M_Impact_Decal`；不再把 Character 命中排除在时间弹贴花之外。PIE 已覆盖静止与 300/600 uu/s 移动 Shooter、主动退出与能量跨入 BulletTime 两种释放边沿、浅/深自身遮挡、外部墙体以及贴花生成；悬停伤害均为 0，红色锁定弱点释放后均为一次 25 点 Critical 伤害。
+
 ### 2026-10-02 弱点接入更新（替代下方旧碰撞/伤害描述）
 
 `BP_TimeBullet` 现在在释放后使用上一位置到当前位置的 Camera 通道线段检测真实首次阻挡，根碰撞在初始化时关闭，悬停不检测/不扣血。命中带 `AC_EnemyWeakPoints` 的敌人时统一解析实际命中组件：激活弱点读对应等级的 `WeakPointDamage`，其他部位读 `BodyDamage` 并受 `bWeakPointOnly` 控制；弱点视觉显隐不参与伤害。无弱点组件的 Character 保留旧头/身体回退，非 Character 保留弹孔。每弹只处理一次命中，重复释放无效。
@@ -31,7 +39,7 @@
 ## 时间能力集成
 
 - `/Game/Blueprints/Components/Player/AC_TimeAbility` 已接入该桥：只在 `FullStop` 开启当前武器的 `UseTemporalProjectile`。
-- 进入 `BulletTime`、主动退出能力或组件结束运行时关闭该开关；离开 `FullStop` 的边沿只触发一次全量释放，默认速度为 5000 uu/s。
+- 进入 `BulletTime`、主动退出能力或组件结束运行时关闭该开关；离开 `FullStop` 的边沿只触发一次全量释放，当前默认速度为 30000 uu/s。
 - 正常状态与 `BulletTime` 仍走原射线伤害；只有 `FullStop` 使用实体悬浮弹丸，因此不改变其他状态下已经可用的射击链。
 - 全局实例上限仍为 12，达到上限后不能继续生成时间弹丸。
 - `UI_Hud.SetTemporalProjectileStatus` 在 `FullStop` 显示当前时间弹丸数与 12 发上限，满额时显示 `LIMIT`。
