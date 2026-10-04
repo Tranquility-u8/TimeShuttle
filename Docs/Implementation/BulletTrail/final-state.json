@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-03",
+  "engine": "5.6.1",
+  "editor": {
+    "game_world_present": false,
+    "dirty_content": [
+      "/Game/VFX/TimeStop/Outline/AC_TimeStopOutline"
+    ],
+    "dirty_maps": [],
+    "tool_loaded": false,
+    "opened": true
+  },
+  "original_bullet_graphs": {
+    "unchanged": true
+  },
+  "save_restored": true,
+  "save_sha256": "8CB890CD5D479CBA4F4CE40AA7AD2A6D00817705626A501903A692FAD370CCCF",
+  "asset_hashes": [
+    {
+      "path": "Content/VFX/BulletTrail/AC_BulletTrail.uasset",
+      "sha256": "699A99A2DF38EE27356556270AB8F8E6BB88EE1ABC7F1AD093D432F7F6F10A3B"
+    },
+    {
+      "path": "Content/VFX/BulletTrail/M_BulletTrail.uasset",
+      "sha256": "A71A18AC18F2D51A6DC1BD4C5DB0860B1250D63E5E48D8CF973DBE94A31F48BF"
+    },
+    {
+      "path": "Content/VFX/BulletTrail/SM_BulletTrailTaper.uasset",
+      "sha256": "8448722106B46641B0A7781C44F92EAC057736A944F4FCB33231AC2C6FEBED0B"
+    },
+    {
+      "path": "Content/Blueprints/Weapons/Player/Projectiles/BP_TimeBullet.uasset",
+      "sha256": "6799B642B1AE9BD27D4A9156D09B15E4EA384A35EE713057FC6ABA26783CFCFD"
+    }
+  ],
+  "task_bridge_callbacks_removed": 1
+}

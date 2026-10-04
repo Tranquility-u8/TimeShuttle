@@ -1,0 +1,293 @@
+{
+  "started": 1791067308.2403333,
+  "finished": 1791067365.5857923,
+  "events": [
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "InitializeTrail",
+      "op": "comments",
+      "t": 1791067308.390671,
+      "result": {
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "InitializeTrail",
+      "op": "focus",
+      "t": 1791067311.6938586,
+      "result": {
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "InitializeTrail",
+      "op": "ba_refresh",
+      "t": 1791067312.7396383,
+      "result": {
+        "handler_found": true,
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "InitializeTrail",
+      "op": "ba_format",
+      "t": 1791067314.8608296,
+      "result": {
+        "handler_found": true,
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "InitializeTrail",
+      "op": "comments",
+      "t": 1791067316.87935,
+      "result": {
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "InitializeTrail",
+      "op": "ba_refresh",
+      "t": 1791067318.2254539,
+      "result": {
+        "handler_found": true,
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "InitializeTrail",
+      "op": "ba_format",
+      "t": 1791067320.282032,
+      "result": {
+        "handler_found": true,
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "UpdateTrail",
+      "op": "comments",
+      "t": 1791067325.055692,
+      "result": {
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "UpdateTrail",
+      "op": "focus",
+      "t": 1791067325.0639224,
+      "result": {
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "UpdateTrail",
+      "op": "ba_refresh",
+      "t": 1791067326.417504,
+      "result": {
+        "handler_found": true,
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "UpdateTrail",
+      "op": "ba_format",
+      "t": 1791067329.4536152,
+      "result": {
+        "handler_found": true,
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "UpdateTrail",
+      "op": "comments",
+      "t": 1791067331.534625,
+      "result": {
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "UpdateTrail",
+      "op": "ba_refresh",
+      "t": 1791067332.8957691,
+      "result": {
+        "handler_found": true,
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "UpdateTrail",
+      "op": "ba_format",
+      "t": 1791067334.9406536,
+      "result": {
+        "handler_found": true,
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "RefreshTrail",
+      "op": "comments",
+      "t": 1791067339.712081,
+      "result": {
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "RefreshTrail",
+      "op": "focus",
+      "t": 1791067339.719894,
+      "result": {
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "RefreshTrail",
+      "op": "ba_refresh",
+      "t": 1791067341.090605,
+      "result": {
+        "handler_found": true,
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "RefreshTrail",
+      "op": "ba_format",
+      "t": 1791067343.1393266,
+      "result": {
+        "handler_found": true,
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "RefreshTrail",
+      "op": "comments",
+      "t": 1791067345.1600316,
+      "result": {
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "RefreshTrail",
+      "op": "ba_refresh",
+      "t": 1791067346.5267708,
+      "result": {
+        "handler_found": true,
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "RefreshTrail",
+      "op": "ba_format",
+      "t": 1791067348.5855114,
+      "result": {
+        "handler_found": true,
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "EventGraph",
+      "op": "comments",
+      "t": 1791067353.3384006,
+      "result": {
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "EventGraph",
+      "op": "focus",
+      "t": 1791067353.3597171,
+      "result": {
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "EventGraph",
+      "op": "ba_refresh",
+      "t": 1791067354.6920042,
+      "result": {
+        "handler_found": true,
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "EventGraph",
+      "op": "ba_format",
+      "t": 1791067356.7334642,
+      "result": {
+        "handler_found": true,
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "EventGraph",
+      "op": "comments",
+      "t": 1791067358.7785397,
+      "result": {
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "EventGraph",
+      "op": "ba_refresh",
+      "t": 1791067360.1405787,
+      "result": {
+        "handler_found": true,
+        "errors": []
+      }
+    },
+    {
+      "asset": "AC_BulletTrail",
+      "graph": "EventGraph",
+      "op": "ba_format",
+      "t": 1791067362.1929193,
+      "result": {
+        "handler_found": true,
+        "errors": []
+      }
+    }
+  ],
+  "assets": {
+    "AC_BulletTrail": {
+      "semantic_match": true,
+      "changed_graphs": [],
+      "compile_errors": 0,
+      "compile_warnings": 0,
+      "status": "BS_UpToDate",
+      "comments": {
+        "RefreshTrail": 1,
+        "InitializeTrail": 1,
+        "UpdateTrail": 1,
+        "EventGraph": 1
+      },
+      "before_sha256": "27b4eefc6e51c28d8fa96276588cae53ab35a8de337ec6f4afdeb42622de8a8e",
+      "after_sha256": "27b4eefc6e51c28d8fa96276588cae53ab35a8de337ec6f4afdeb42622de8a8e"
+    }
+  },
+  "passed": true,
+  "saved": true
+}

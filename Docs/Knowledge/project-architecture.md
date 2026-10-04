@@ -44,6 +44,16 @@
 
 `AC_TimeAbility` 在 `FullStop` 使用全局时间倍率 0.01，并用倒数补偿玩家和当前武器；在 `BulletTime` 将能量 70→0 映射为世界倍率 0.2→1.0。`/Game/UI/Widgets/UI_Hud.SetTimeAbilityStatus` 接收能量百分比和模式索引，更新画面左侧的竖向进度条、100% / 70% / 0% 阈值、当前百分比、模式文字与颜色区域；`SetTemporalProjectileStatus` 在 FullStop 显示时间弹丸数量、12 发上限及满额提示。详细范围和验证见 [TimeAbilityCore.md](../Implementation/TimeAbilityCore.md)。
 
+## 时间停止视觉层（2026-10-03）
+
+`/Game/VFX/TimeStop/BP_TimeStopVFXController` 由 BP_FPCharacter 的 TimeStopVFX ChildActorComponent 持有。它读取 AC_TimeAbility.ModeIndex==1 的边沿，以 GetRealTimeSeconds 驱动两条向量曲线，持有独立 PostProcessComponent、三个 MID 和 Niagara 网格。State 与 Facets 均在色调映射后，优先级10/20。第三轮Facets由场景深度重建世界表面、依世界法线主轴选择投影，固定世界三角格及共享正负高度与扫描Origin分离；世界距离波带内按Pulse投影虚拟位移取色。它模拟表面凸凹折射，不修改网格、碰撞、阴影或真实轮廓，也不提供运动物体的局部空间贴附。Niagara仍为单Mesh粒子、固定局部包围盒±1600cm；退出隐藏/暂停网格，EndPlay销毁组件。
+
+独立描边位于`/Game/VFX/TimeStop/Outline/`。目标Actor挂`AC_TimeStopOutline`后，自动登记到每世界单个`BP_TimeStopOutlineManager`；不需要修改玩家蓝图。组件负责Owner的Static/Skeletal Mesh筛选（可选Component Tag）、颜色选择器/Intensity/1–8px Thickness及`bEnabled`正式开关。Manager缓存Player0及AC_TimeAbility，Pawn变化/引用失效时重取，以ModeIndex==1门控；按帧检测，不依赖0.01倍率下的DeltaTime累计。一个后处理MID有32个float4样式参数，每组件独占Stencil 224–255之一，自己的多个Mesh共用一槽；RGB为颜色×强度，A为宽度。After Tonemapping优先级30在冷色与扫描之后绘制可见外缘和解析软光晕，后者不是引擎Bloom。
+
+所有权边界：Manager启动扫描已有CustomDepth使用者并预留冲突槽，目标Mesh原本启用CustomDepth则跳过；借用其余Mesh时保存原Stencil/Mask，退出只在flag/ID/mask仍归本组件时恢复。bEnabled关闭、Owner/组件销毁释放槽，Manager结束清理并允许存活组件重建登记。登记容量最多32组件，已有预留会减少容量；运行中新外部Stencil占用须遵守224–255预留协议，不自动重新协商。透明材质需支持深度写入，当前仅单人Player0；原生Activate/Deactivate不是正式开关。绿色Cube、淡红Manny只是可放置示例，没有给现有敌人/弱点自动挂接。
+
+15个视觉资产的冷加载确认无制作模块依赖、DebugWorldCells=0、CustomDepth=3、Manny默认网格和无脏包。第三轮指定冷PIE描边41项通过；补充27项验证32槽、第33组件安全拒绝、释放重试及切换Pawn时清理/重绑能力缓存；BA的16图及PlayerRef补图语义一致，对应蓝图编译0错误/0警告。表面冷PIE复测21张图、59项有效锚点比较在提案阈值内，实际启停与连续调试移动视频已归档。这不认证隐藏容量夹具的满载渲染性能、HDR、打包或最终艺术接受；现有AI空Controller日志错误单独记录，不能称全工程零错误。视觉层不写能量/倍率/输入/伤害，不改变既有弱点。详见[工程实现](../Implementation/time-stop-vfx.md)、[第三轮方案](../../../开发文档/时间停止特效/第三轮_表面扫描与独立描边方案.md)、[组件说明](../../../开发文档/时间停止特效/独立描边组件使用说明.md)和[第三轮验收记录](../../../开发文档/时间停止特效/实现验收/第三轮/验收记录.md)。
+
 ## 玩家武器对敌伤害入口
 
 玩家武器基类 `/Game/Blueprints/Interactables/BP_Item_Base` 的 `Fire_HitScan` 使用命中结果中的 `Hit Actor` 提交通用 Unreal Damage。2026-10-02 两类正式敌人已挂载 `/Game/Blueprints/AI/WeakPoints/AC_EnemyWeakPoints`：`ResolveShotDamage` 将命中组件交给敌人结算，激活弱点直接读取对应 Tier 的 `WeakPointDamage`，再提交一次原有 Damage；不再传递武器 BreakPower，也没有护甲或击破门槛。激活球体附着主体 Mesh 骨骼、只阻挡 Camera 射线；未激活位置按身体处理，取消这些敌人的旧 100 点爆头。无弱点组件目标保留 head=100 / body=25 回退。训练靶 `BP_TrainingEnemy` 专用分支保持互斥。任务 5 已由弱点组件拥有 Screen-space WidgetComponent（`WBP_WeakPointMarker`）和无碰撞发光核心，使用 `M_WeakPointBracketUI` / `M_WeakPointCore`；原生投影跟随骨骼，真实时间节流更新遮挡、距离/FOV/DPI 和等级颜色。不修改 UI_Hud，不依赖编辑器工具运行。任务 6 时间弹和任务 7 回溯接入见下文；具体配置与验证见 [enemy-weakpoints-plan.md](../Implementation/enemy-weakpoints-plan.md)。
@@ -67,6 +77,12 @@
 回溯期间停止 AI 与攻击；回到存活状态后恢复正常动画、移动与 AI，重新刷新远程感知。死亡对象保留到存活历史耗尽再清理。正常 AI 会重新决策，攻击蒙太奇不从历史帧继续执行。原示例 Status / Montage 组件硬依赖示例敌人，不要额外挂在当前两个敌人上。
 
 详细行为、扩展入口和验证边界见 [EnemyReverse.md](../Implementation/EnemyReverse.md)。新的伤害、状态或 AI 功能应优先复用接口/组件；不要让敌人重新继承玩家蓝图。
+
+## BP_TimeBullet 拖尾（2026-10-03）
+
+`BP_TimeBullet.Collision` 下的 `BulletTrail` 为 `/Game/VFX/BulletTrail/AC_BulletTrail`，父类原生 StaticMeshComponent。它在 BeginPlay 设置 `SM_BulletTrailTaper` 并创建 `M_BulletTrail` 的独立 MID；TG_PostUpdateWork + Owner Tick prerequisite 确保在弹丸飞行/命中之后读取位置。长度由实际累计位移和可配上限决定，静止保持；瞬移和明显转向清零历史。世界绝对变换使厘米粗细不继承弹头缩放；组件不碰撞、不投影，Owner 销毁即清理。公开颜色、粗细、长度、强度、最小方向短尾及视觉开关；不写伤害、时间能力或输入。现有 Normal/BulletTime hitscan 保持，FullStop 生成的实体弹和后续释放使用此组件。当前仅直线弹道，未接独立敌弹类；50 项指定 PIE 检查和可视证据见 [bullet-trail.md](../Implementation/bullet-trail.md)。
+
+同日普通射击扩展：`BP_Item_Base.Fire_HitScan` 的 UseTemporalProjectile=false 分支经 `SpawnHitscanTrail(ShotHit)` 生成 `/Game/VFX/BulletTrail/BP_HitscanTrail`，随后继续原即时伤害链。后者是独立原生 Actor 子类（不是 BP_TimeBullet），持有同一个 AC_BulletTrail；记录真实命中点/TraceEnd，按世界 DeltaSeconds 以默认5000cm/s推进、钳制终点、保持0.04游戏秒后清理。无碰撞/伤害、不计时停弹数量，FullStop 原路径保留。Normal/BulletTime 的样式入口是 BP_HitscanTrail.BulletTrail，FullStop 的是 BP_TimeBullet.BulletTrail；两模板可分别覆盖。新增42项指定PIE检查通过，旧图除单次视觉调用外语义保持；详见上述实现文档。
 
 ## 维护入口
 
