@@ -1,5 +1,14 @@
 # 敌人精密瞄准弱点实施方案
 
+## 精密瞄准标识美术升级（2026-10-04）
+
+- 弱点括号升级为参考图方向的精密瞄准标识：开放式左右箭括号、断开的六边形角线、分段内环、四向刻度和中空菱形核心。材质以像素稳定的程序化距离场绘制，96 px 左右仍保持清晰，不依赖原始生成图在缩小时的细线采样。
+- 标识保留现有数据驱动颜色：黄色等级为暖黄，红色等级为高饱和红；`BracketColor`、`CoreColor`、`BracketLineWidth` 与强度/脉冲参数继续来自等级资产。`Glow`、`GlowRadius`、`LineWidth`、`Pixels`、`Opacity`、`Emphasis`、`PulseAmount`、`PulseSpeed` 均可通过动态材质调整。
+- `M_WeakPointCore` 增加低幅实时呼吸与 Fresnel 边缘光；核心仍为无碰撞表现，不改变弱点碰撞、遮挡或伤害结算。
+- 动态屏幕空间 `WidgetComponent` 在当前运行时不会稳定加入玩家屏幕层，因此 `AC_EnemyWeakPoints` 现在把五个标识 Widget 直接加入拥有者玩家视口，并使用骨骼附着的隐藏组件作为世界锚点，每帧投影位置、中心对齐并更新尺寸；销毁弱点视觉时同步 `RemoveFromParent` 并清空引用。
+- PIE 以固定种子 4 验证 Shooter 与 Melee：两者均为五选二，索引 `[1,0,-1,-1,-1]`，红/黄标识颜色、材质、96 px 尺寸与可见性正确。Shooter 的 `shot showui` 实机截图确认红色头部和黄色躯干标识在 FullStop 中可见；四个相关蓝图最终编译 0 error / 0 warning，保存后无脏内容包或地图。
+- 本机源素材保存在忽略目录 `SourceArt/UI/WeakPoints/`，运行时纹理位于 `/Game/UI/Textures/WeakPoints/T_WeakPointReticle_Mask`。恢复点位于忽略目录 `Saved/Agent/WeakPoints/VisualArtBackup_20261004/`。
+
 ## 时停瞄准、遮挡承诺与贴花修复（2026-10-03）
 
 - FullStop 开火时立即缓存开火射线选中的目标、弱点组件、ImpactPoint/Normal 与 BoneName；悬停不伤害，释放后仍保留墙体/其他 Actor 的实际拦截，但敌人后续走位不会把已确认的弱点改判到另一肢体。
