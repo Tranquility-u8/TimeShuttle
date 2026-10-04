@@ -54,6 +54,12 @@
 
 两种正式敌人不共享血量存储：`BP_MeleeNPC.Event AnyDamage` 将浮点伤害转交现有 `CAI_CombatComponent.Apply Damage`，`BP_ShooterNPC.Event AnyDamage` 继续更新自身 `Current HP`。Shooter 的非致命受伤分支会通过 `ABP_TP_Rifle` 的专用 `HitReact` Slot 播放同骨架、无 Root Motion 的 `MM_HitReact_Front_Lgt_01` 动态 Montage；回溯/已死亡守卫仍在前，致命伤仍直接走原 `Die` 分支。该表现不参与伤害和回溯数据。新增敌人应复用通用伤害事件并适配真实血量所有者，不应再把训练靶类型转换作为通用伤害门。详细实现、证据与测试限制见 [EnemyDamagePipeline.md](../Implementation/EnemyDamagePipeline.md)。
 
+## 玩家近战入口
+
+`BP_FPCharacter` 挂载 `/Game/Blueprints/Components/Combat/AC_MeleeHitDetector` 并实现 `/Game/Blueprints/Interfaces/BPI_MeleeAttackSource.RequestMeleeAttack`。接口根据第一人称相机方向和 `S_MeleeAttackSpec.Range` 生成轨迹，共享组件对 Pawn / WorldStatic / WorldDynamic 做一次球形扫掠、忽略攻击者、以首个阻挡命中提交 `Apply Point Damage`。拳头从 `BP_Weapon_EmptyHands` 传入 20 伤害、150 距离、18 半径；匕首从 `BP_Weapon_MeleeBase` 传入 25 伤害、200 距离、12 半径，`BP_Weapon_Knife` 继承该实现。
+
+近战沿用武器原有攻击节奏：拳头即时判定，匕首在原 0.3 秒攻击时点判定；当前不是逐帧 NotifyState 扫掠。世界阻挡会先截断攻击，同一次单扫掠只解析一个 Actor。近战直接进入敌人现有 AnyDamage 链，不调用枪械弱点解析器；回溯守卫、受击和死亡仍由敌人负责。未来 `MeleeNPC -> 玩家` 应复用检测组件、规格结构和 Point Damage 协议，并在玩家侧适配真实生命系统；若改为多帧攻击窗口，必须增加攻击级命中去重。完整证据和扩展步骤见 [player-melee-combat.md](../Implementation/player-melee-combat.md)。
+
 ## 敌人回溯边界
 
 弱点伤害的 2026-10-02 修订：`PDA_WeakPointTier.WeakPointDamage` 是每档弱点的独立伤害值（当前黄 50、红 25），每次有效激活点命中立即生效。已删除护甲耐久、击破门槛、武器 BreakPower 和敌人统一弱点伤害字段；BodyDamage 与仅弱点开关仍在 `AC_EnemyWeakPoints`。当前 GetWeakPointState 只返回激活/未激活及无效状态，没有护甲历史。
