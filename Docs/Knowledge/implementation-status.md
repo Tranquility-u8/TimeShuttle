@@ -51,6 +51,10 @@ Last repo/editor observation: **2026-10-04** (player two-hit damage, death and c
 - FullStop first-person viewmodel sway now uses the compensated `SwaySpring` DeltaTime consistently instead of mixing it with global world DeltaSeconds. This removes the roughly 100× mouse-sway amplification caused by the 0.01 world scale while preserving the normal-time formula.
 - The 2026-09-26 naming pass normalized 54 gameplay/data assets, preserving serialized compatibility through CoreRedirects. Imported/resource names have documented exceptions. See [asset-naming.md](asset-naming.md) and its per-file mapping.
 
+## Additional local observation: 2026-10-02
+
+- The final matte graphite Omen v4 is placed in `/Game/Maps/Map_LabBridge` at the v32 layout's central platform: 12 m diameter, sphere center 7 m above the floor, facing the main entrance. Six static mesh parts and their materials are saved under `/Game/Characters/Omen`. Bounds, orientation, body collision and nine actual player traversal segments passed. This is a static visual placement, independent of the laboratory's SceneBridge ownership; see [OmenLabPlacement.md](../Implementation/OmenLabPlacement.md).
+
 ## Historical planning snapshot, not current implementation evidence
 
 - Time Rewind was marked completed in the development-plan spreadsheet.
