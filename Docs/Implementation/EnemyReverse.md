@@ -4,6 +4,16 @@ Implemented and verified in UE 5.6 on 2026-09-26, against recovery commit `63d0a
 
 ## Runtime architecture
 
+### Weakpoint lifecycle extension (2026-10-02)
+
+Weakpoint stage 7 adds `S_WeakPointRewindFrame` and `AC_EnemyReverse.WeakPointHistory`. Each existing health/pose sample appends one five-position tier-index/initialized snapshot. Automatic rewind and seek restore the same index; all existing trim paths remove the same weakpoint index. An optional missing weakpoint component produces an empty frame and is safely skipped on restoration.
+
+`AC_EnemyWeakPoints.ApplyWeakPointRewindFrame` validates the frame, restores activation/tier assignment and query-sphere collision without rerolling, recreating components, applying damage or replaying cosmetic hit feedback. Candidate definitions and TierRules ordering remain fixed during a recorded lifetime; designer configuration and tier damage values are not historical state. There is no armor/durability history. Reset is ignored while rewinding. Begin/end rewind clear transient cosmetics; the current ability-only visual gate still applies, independently of hit resolution. Existing owner collision/damage gating and reversible-death lifetime remain authoritative.
+
+Both enemies passed the stage-7 PIE sequence: actual pistol yellow hit, changed assignment, injected lethal damage, short dead rewind, revival with original assignment, actual pistol red hit after revival, seek in both directions, synchronized future trimming, and history-expiry cleanup of both enemies/controllers and all 30 weakpoint-owned components. Health/pose/transform/weakpoint lengths and living-frame counts were checked throughout. Q used Enhanced Input injection; seek called the formal component events in a paused-world fixture rather than testing physical seek controls. Normal-time markers stayed hidden after revival. These additions do not certify enemy damage to the player, rewards, packaging, networking or crowd performance.
+
+Local evidence: `Saved/Agent/WeakPoints/rewind-qa-results.json`, `rewind-finalqa-results.json` and `rewind-finalize-report.json`. The saved-asset rerun additionally passed 10 post-revival visual-gate states and same-index 75.5 fractional HP restoration; the UTC 21:55:50–21:56:10 PIE interval had no Error / Accessed None / Script Warning. Nine related Blueprints compiled with zero errors/warnings; layout-only semantic comparison passed, assets were saved through Unreal, and no dirty packages remained. See [the stage-7 acceptance checklist](enemy-weakpoints-plan.md) for user-facing steps. The following sections retain the original enemy-rewind implementation evidence and its historical limitations.
+
 The existing player `IA_Reverse` action (Q), `BP_ReverseSystemController`, and global manager remain the entry point. Both enemy Blueprints now own an `EnemyReverse` component. Their existing parents, controllers, normal animation Blueprints, and weapon assets remain in use.
 
 | Asset | Responsibility |

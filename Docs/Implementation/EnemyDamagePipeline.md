@@ -30,7 +30,26 @@ The repair added a generic `Apply Damage` node on the training-enemy cast-failur
 4. The generic node continues into the existing impact/effect flow.
 5. The training-enemy cast-success path keeps its original node and does not traverse the generic node.
 
-`BP_MeleeNPC` previously had no generic Unreal damage-event adapter even though its real health mutation belonged to `AC_Combat`. `Event AnyDamage` was added as that adapter. `BP_ShooterNPC` already had a compatible event and required no asset change.
+`BP_MeleeNPC` previously had no generic Unreal damage-event adapter even though its real health mutation belonged to `AC_Combat`. `Event AnyDamage` was added as that adapter. At the time of that repair, `BP_ShooterNPC` already had a compatible health/death event and required no asset change; that statement did not imply that Shooter had a hit-reaction animation.
+
+## Player melee extension (2026-10-04)
+
+Player fist and knife attacks now reach the same two AnyDamage receivers through `Apply Point Damage`. `BP_FPCharacter` supplies a camera-aligned segment through `BPI_MeleeAttackSource`, and `AC_MeleeHitDetector` performs a first-blocking sphere sweep over pawn and world objects. `BP_Weapon_EmptyHands` submits 20 damage; `BP_Weapon_MeleeBase` / `BP_Weapon_Knife` submit 25. This path does not call `AC_EnemyWeakPoints.ResolveShotDamage`, so firearm weakpoint multipliers remain isolated from melee.
+
+No receiver change was needed. PIE verified Shooter hit reaction, Melee health mutation, wall obstruction, rewind rejection/resumption and lethal cleanup. The shared trace-and-Point-Damage boundary is also the intended extension point for a later `MeleeNPC -> player` implementation; details and required multi-frame deduplication are recorded in [player-melee-combat.md](player-melee-combat.md).
+
+## Shooter hit reaction (2026-10-02)
+
+Repository history and the saved pre-change graph both show that `BP_ShooterNPC.Event AnyDamage` previously ended its surviving-damage branch after updating `Current HP`; it did not call a montage, animation sequence, hit state, or combat-component reaction. This was therefore an existing omission rather than a regression from the weakpoint work.
+
+Shooter now plays `/Game/Characters/Mannequins/Anims/Rifle/HitReact/MM_HitReact_Front_Lgt_01` as a dynamic montage on a dedicated `HitReact` slot in `/Game/Animations/Shooter/Blueprints/ABP_TP_Rifle`. The sequence uses Shooter's own `SK_Mannequin` skeleton, lasts 0.7 seconds, has no root motion, and blends back to the unchanged locomotion/rifle-aim output (`0.08` seconds in, `0.12` seconds out). The existing damage order is preserved:
+
+- rewind-active and already-dead guards still run before health mutation;
+- lethal damage follows the original `Die` branch and does not play the reaction;
+- only a surviving damage event plays the reaction;
+- the animation is presentation-only and does not alter weakpoint damage, body damage, health, AI state, or rewind data.
+
+Final editor verification compiled `BP_ShooterNPC`, `ABP_TP_Rifle`, and `BP_Weapon_Pistol` with zero errors and zero warnings. A controlled PIE run observed health `100 → 75`, an active transient montage immediately and at `0.25 s`, no montage after completion, unchanged `ABP_TP_Rifle` ownership, no damage/montage while rewind-active, and no hit montage on lethal damage. The run submitted Unreal Damage through the production `AnyDamage` entry; final visual feel under active combat movement remains a player acceptance item.
 
 ## Verification evidence
 

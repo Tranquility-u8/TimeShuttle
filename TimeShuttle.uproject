@@ -18,6 +18,13 @@
 		{
 			"Name": "GetTheMeaning",
 			"Enabled": true
+		},
+		{
+			"Name": "SceneBridge",
+			"Enabled": true,
+			"TargetAllowList": [
+				"Editor"
+			]
 		}
 	]
 }
