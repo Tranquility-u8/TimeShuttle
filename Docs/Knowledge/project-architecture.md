@@ -30,6 +30,8 @@
 
 ## 游戏入口与依赖
 
+**2026-10-05 存档策略更新：** 用户要求关闭游戏自动存档与启动自动读档。`BP_FPCharacter` 启动跳过 `Load`，缓存本轮实际出生变换；`BP_AutoSavePoint` 重叠不再调用 `Save`，因此自动存档点也不再更新复活缓存。显式 Save/Load 与设置持久化保留。此更新覆盖下文历史 checkpoint 启动/触发描述；编译保存通过，PIE 待用户验证。详见 [TECH-005](../Implementation/DisableAutoSave20261005.md)。
+
 - 编辑器启动地图、游戏默认地图：`/Game/Maps/Map_Test`。
 - **Map_Test 自身的 GameMode Override 是 `/Game/Blueprints/GameModes/GM_FP`**；玩家为 `/Game/Blueprints/Player/BP_FPCharacter`。配置中的全局 fallback 仍是 `/Game/FirstPerson/Blueprints/BP_FirstPersonGameMode`，不能混为一谈。
 - 输入：`/Game/Input/IMC_Player`；Q 对应 `/Game/Input/Actions/IA_Reverse`，T 对应 `/Game/Input/Actions/IA_TimeAbility`。玩家负责输入和启动全局反转，AI 不实现玩家输入。
