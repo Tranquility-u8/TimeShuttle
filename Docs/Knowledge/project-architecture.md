@@ -58,7 +58,13 @@
 
 `BP_FPCharacter` 挂载 `/Game/Blueprints/Components/Combat/AC_MeleeHitDetector` 并实现 `/Game/Blueprints/Interfaces/BPI_MeleeAttackSource.RequestMeleeAttack`。接口根据第一人称相机方向和 `S_MeleeAttackSpec.Range` 生成轨迹，共享组件对 Pawn / WorldStatic / WorldDynamic 做一次球形扫掠、忽略攻击者、以首个阻挡命中提交 `Apply Point Damage`。拳头从 `BP_Weapon_EmptyHands` 传入 20 伤害、150 距离、18 半径；匕首从 `BP_Weapon_MeleeBase` 传入 25 伤害、200 距离、12 半径，`BP_Weapon_Knife` 继承该实现。
 
-近战沿用武器原有攻击节奏：拳头即时判定，匕首在原 0.3 秒攻击时点判定；当前不是逐帧 NotifyState 扫掠。世界阻挡会先截断攻击，同一次单扫掠只解析一个 Actor。近战直接进入敌人现有 AnyDamage 链，不调用枪械弱点解析器；回溯守卫、受击和死亡仍由敌人负责。未来 `MeleeNPC -> 玩家` 应复用检测组件、规格结构和 Point Damage 协议，并在玩家侧适配真实生命系统；若改为多帧攻击窗口，必须增加攻击级命中去重。完整证据和扩展步骤见 [player-melee-combat.md](../Implementation/player-melee-combat.md)。
+近战沿用武器原有攻击节奏：拳头即时判定，匕首在原 0.3 秒攻击时点判定；当前不是逐帧 NotifyState 扫掠。世界阻挡会先截断攻击，同一次单扫掠只解析一个 Actor。近战直接进入敌人现有 AnyDamage 链，不调用枪械弱点解析器；回溯守卫、受击和死亡仍由敌人负责。完整证据和扩展步骤见 [player-melee-combat.md](../Implementation/player-melee-combat.md)。
+
+## 敌人对玩家伤害入口
+
+`BP_FPCharacter` 使用现有 `Health` 作为剩余受击次数，默认值为 2。`Event AnyDamage` 将任意正伤害统一折算为一次受击；它用 `Get Real Time Seconds` 和默认 0.9 秒的 `DamageInvulnerabilitySeconds` 去重，因此多帧近战检测和全局时间倍率 0.01 都不会在同一保护窗内连续扣除。第一次受击启用 `/Game/Characters/Player/Camera/Materials/M_PlayerDamageVignette`；该后处理以屏幕矩形边缘距离生成暗红遮罩，不再产生圆形镜片边界。`/Game/Input/Actions/IA_DebugPlayerInvincibility` 在 `IMC_Player` 映射 F6，切换玩家原生 `Can Be Damaged`：开启时所有 Unreal Damage 在进入 AnyDamage 前被拒绝，关闭时恢复，状态不写入存档。第二次独立受击把 Health 置为 0、设置 `IsPlayerDead`、退出时间能力并恢复世界时间，随后锁定输入与移动、清零速度并立刻回到缓存 checkpoint；0.65 秒淡出结束后再次确认 checkpoint 变换，再恢复控制器朝向、Health、伤害接收、Walking 和输入，并清除暗角及淡出状态。
+
+Shooter 沿用 `/Game/Blueprints/AI/Shooter/Projectiles/BP_ShooterProjectileBase` 的通用 `ApplyDamage`。Melee 沿用 `ANS_MeleeHitDetection -> AC_Combat.Detect Hit`：玩家已有 `AC_Combat`，目标组件通过玩家的 `BPI Set Health` 适配器转发到统一 AnyDamage 入口；手部单点采样未命中时，`AC_Combat` 还只对 150 uu 内且 Controller 可见的玩家提交一次通用 Damage。已有 `/Game/Blueprints/SaveSystem/BP_AutoSavePoint` 继续把 Arrow 世界变换保存到 `SG_Character.PlayerTransform`；玩家在启动加载完成后缓存实际生成变换，并在每次 checkpoint 保存时刷新该缓存，死亡重生直接复用它。checkpoint 资产和存档格式均未修改。
 
 ## 敌人回溯边界
 
