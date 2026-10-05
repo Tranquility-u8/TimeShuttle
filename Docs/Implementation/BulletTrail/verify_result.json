@@ -1,0 +1,189 @@
+{
+  "error": null,
+  "checks": [
+    {
+      "name": "component_present",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tick_enabled",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "suspended_no_motion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stationary_direction_30cm",
+      "passed": true,
+      "detail": "30.0"
+    },
+    {
+      "name": "no_collision",
+      "passed": true,
+      "detail": "<CollisionEnabled.NO_COLLISION: 0>"
+    },
+    {
+      "name": "no_shadow",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "private_material_instances",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_color",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "actual_release_moves",
+      "passed": true,
+      "detail": "<Struct 'Vector' (0x000001F849B60E20) {x: 668.726400, y: 0.000000, z: 10000.000000}>"
+    },
+    {
+      "name": "max_length_250",
+      "passed": true,
+      "detail": "250.0"
+    },
+    {
+      "name": "independent_max_length_120",
+      "passed": true,
+      "detail": "120.0"
+    },
+    {
+      "name": "world_width",
+      "passed": true,
+      "detail": "<Struct 'Vector' (0x000001F849B60E20) {x: 2.500000, y: 0.018000, z: 0.018000}>"
+    },
+    {
+      "name": "head_follows_bullet",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "direction_points_forward",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "slow_motion_moves_slowly",
+      "passed": true,
+      "detail": "3.166673894156702"
+    },
+    {
+      "name": "slow_motion_retains_length",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stopped_retains_length",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stopped_no_drift",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "disable_hides_visual",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "disable_preserves_owner",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "live_width",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "live_length",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "live_color",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "other_bullet_unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "teleport_resets_history",
+      "passed": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "teleport_uses_short_stub",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reenable_visible",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "direction_change_resets",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "direction_change_tracks",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "negative_values_clamped_hidden",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "strict_history_mode_no_stub",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "actual_world_impact_destroys_bullet",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "impact_removes_trail",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "twelve_independent_trails",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "destroy_owner_cleans_component",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "other_eleven_survive",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "passed": true,
+  "duration": 5.01500000001397,
+  "tool_loaded": false,
+  "restored_dilation": 1.0
+}

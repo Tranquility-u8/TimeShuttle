@@ -1,0 +1,18 @@
+{
+  "error": null,
+  "checks": {
+    "pistol_equipped": true,
+    "fullstop_entered": true,
+    "official_fire_spawns_one": true,
+    "official_bullet_has_trail": true,
+    "fullstop_suspends_bullet": true,
+    "fullstop_shows_direction": true,
+    "bullet_time_entered": true,
+    "automatic_release": true,
+    "released_has_moved": true,
+    "released_trail_grows": true,
+    "normal_restored": true
+  },
+  "passed": true,
+  "duration": 2.437999999965541
+}

@@ -1,0 +1,19 @@
+{
+  "BP_HitscanTrail": {
+    "semantic_match": true,
+    "compile_errors": 0,
+    "compile_warnings": 0,
+    "status": "BS_UpToDate"
+  },
+  "BP_Item_Base": {
+    "semantic_match": true,
+    "compile_errors": 0,
+    "compile_warnings": 0,
+    "status": "BS_UpToDate"
+  },
+  "existing_fire_nodes_not_moved": true,
+  "saved": {
+    "BP_HitscanTrail": true,
+    "BP_Item_Base": true
+  }
+}
