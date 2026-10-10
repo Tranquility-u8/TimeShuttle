@@ -9,6 +9,12 @@ On 2026-10-10, the melee and ranged enemy behavior dependency closure from `Enem
 
 Both now use `/Game/EnemyAITutorial/Enemies/AI/AIC_Enemy_Base` and the imported behavior trees. Melee uses `BT_Enemy_Melee`; ranged uses `BT_Enemy_Ranged`. Imported behavior includes patrol, perception, target selection, movement, combat decisions, attacks, animation, weapons and their required support assets.
 
+## Gunshot hearing
+
+Player firearm shots now bridge into the imported perception behavior from `/Game/Blueprints/Interactables/BP_Item_Base.Fire_HitScan`. Every non-melee trace reports one `Gunshot` stimulus at the weapon Actor location with the player as instigator; melee traces do not report it. The shared controller keeps the imported hearing-to-investigation logic, configured to 2000 uu hearing range and 5 seconds max stimulus age. A heard shot sets `PointOfInterest` and enters Investigating, but does not grant `AttackTarget`; visual confirmation remains necessary for combat targeting.
+
+Scripted PIE validation disabled sight on both formal enemies, reported a shot between them, and observed both switch from Passive to Investigating with zero PointOfInterest error. They moved from roughly 760 uu away to 41–56 uu from the sound while `AttackTarget` stayed null. A separate regression verified melee attack montage, ranged rifle montage plus TimeShuttle projectile spawning, and both enemies entering and leaving the rewind animation class.
+
 ## Compatibility bridges
 
 - The imported shared base owns `BPC_DamageSystem.Health`. Its generic Unreal `AnyDamage` adapter forwards Time Shuttler weapon/weakpoint damage into the imported damage interface.
