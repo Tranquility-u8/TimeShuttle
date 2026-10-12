@@ -1,0 +1,29 @@
+{
+  "seed": 20261011,
+  "points": 256,
+  "triangles": 512,
+  "resolution": 1024,
+  "tile_cells": 16.0,
+  "channels": "RG slope [-4,4]; B height [-1,1]; A facet ID",
+  "uncovered_pixels": 0,
+  "overlap_pixels": 0,
+  "area_min": 0.09706434438910991,
+  "area_max": 1.7961704005888384,
+  "area_cv": 0.572186010854435,
+  "edge_direction_histogram": [
+    122,
+    128,
+    110,
+    128,
+    146,
+    128,
+    100,
+    142,
+    134,
+    138,
+    114,
+    146
+  ],
+  "clipped_gradient_components": 3,
+  "source_is_periodic": true
+}

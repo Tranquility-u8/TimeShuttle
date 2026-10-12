@@ -1,0 +1,959 @@
+{
+  "source": "C:\\Users\\jason\\Desktop\\Capstone\u8ba1\u5212\\\u573a\u666f\u7248\u672c\u6d4b\u8bd5\\\u8bad\u7ec3\u5ba4_\u6781\u7b80\u7a7a\u573a_v5_\u6ed1\u95e8\\TimeShuttler_TrainingRoom_v5_SlidingDoor.blend",
+  "objects": [
+    {
+      "name": "SM_TR_Floor_top_Z_0",
+      "label": "Floor | top Z=0",
+      "location": [
+        0.0,
+        -0.0,
+        -20.000000298023224
+      ],
+      "dimensions": [
+        2079.9999237060547,
+        2479.9999237060547,
+        40.00000059604645
+      ],
+      "materials": [
+        {
+          "name": "M_Floor | smooth charcoal",
+          "color": [
+            0.09000000357627869,
+            0.10000000149011612,
+            0.11500000208616257,
+            1.0
+          ],
+          "roughness": 0.6399999856948853,
+          "metallic": 0.0,
+          "emission": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "strength": 0.0
+        }
+      ],
+      "collection": "01_ARCHITECTURE",
+      "door_leaf": null
+    },
+    {
+      "name": "SM_TR_Ceiling_underside_Z_8",
+      "label": "Ceiling | underside Z=8",
+      "location": [
+        0.0,
+        -0.0,
+        819.9999809265137
+      ],
+      "dimensions": [
+        2079.9999237060547,
+        2479.9999237060547,
+        40.00000059604645
+      ],
+      "materials": [
+        {
+          "name": "M_Ceiling | broad panel seams",
+          "color": [
+            0.12999999523162842,
+            0.14499999582767487,
+            0.1599999964237213,
+            1.0
+          ],
+          "roughness": 0.800000011920929,
+          "metallic": 0.0,
+          "emission": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "strength": 0.0
+        }
+      ],
+      "collection": "01_ARCHITECTURE",
+      "door_leaf": null
+    },
+    {
+      "name": "SM_TR_East_wall_inside_X_10",
+      "label": "East wall | inside X=10",
+      "location": [
+        1019.9999809265137,
+        -0.0,
+        400.0
+      ],
+      "dimensions": [
+        40.00000059604645,
+        2400.0,
+        800.0
+      ],
+      "materials": [
+        {
+          "name": "M_Wall | vertical 4m panel seams",
+          "color": [
+            0.5899999737739563,
+            0.6100000143051147,
+            0.6299999952316284,
+            1.0
+          ],
+          "roughness": 0.7799999713897705,
+          "metallic": 0.0,
+          "emission": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "strength": 0.0
+        }
+      ],
+      "collection": "01_ARCHITECTURE",
+      "door_leaf": null
+    },
+    {
+      "name": "SM_TR_West_wall_south_corner_pier",
+      "label": "West wall | south corner pier",
+      "location": [
+        -1019.9999809265137,
+        1100.0,
+        400.0
+      ],
+      "dimensions": [
+        40.00000059604645,
+        200.0,
+        800.0
+      ],
+      "materials": [
+        {
+          "name": "M_Wall | vertical 4m panel seams",
+          "color": [
+            0.5899999737739563,
+            0.6100000143051147,
+            0.6299999952316284,
+            1.0
+          ],
+          "roughness": 0.7799999713897705,
+          "metallic": 0.0,
+          "emission": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "strength": 0.0
+        },
+        {
+          "name": "M_Unassigned",
+          "color": [
+            0.59,
+            0.61,
+            0.63,
+            1
+          ],
+          "roughness": 0.78,
+          "metallic": 0,
+          "emission": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "strength": 0
+        }
+      ],
+      "collection": "01_ARCHITECTURE",
+      "door_leaf": null
+    },
+    {
+      "name": "SM_TR_West_wall_north_of_entrance",
+      "label": "West wall | north of entrance",
+      "location": [
+        -1019.9999809265137,
+        -160.0000023841858,
+        400.0
+      ],
+      "dimensions": [
+        40.00000059604645,
+        2079.9999237060547,
+        800.0
+      ],
+      "materials": [
+        {
+          "name": "M_Wall | vertical 4m panel seams",
+          "color": [
+            0.5899999737739563,
+            0.6100000143051147,
+            0.6299999952316284,
+            1.0
+          ],
+          "roughness": 0.7799999713897705,
+          "metallic": 0.0,
+          "emission": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "strength": 0.0
+        },
+        {
+          "name": "M_Unassigned",
+          "color": [
+            0.59,
+            0.61,
+            0.63,
+            1
+          ],
+          "roughness": 0.78,
+          "metallic": 0,
+          "emission": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "strength": 0
+        }
+      ],
+      "collection": "01_ARCHITECTURE",
+      "door_leaf": null
+    },
+    {
+      "name": "SM_TR_West_wall_entrance_lintel",
+      "label": "West wall | entrance lintel",
+      "location": [
+        -1019.9999809265137,
+        939.9999618530273,
+        509.99999046325684
+      ],
+      "dimensions": [
+        40.00000059604645,
+        120.00000476837158,
+        580.0000190734863
+      ],
+      "materials": [
+        {
+          "name": "M_Wall | vertical 4m panel seams",
+          "color": [
+            0.5899999737739563,
+            0.6100000143051147,
+            0.6299999952316284,
+            1.0
+          ],
+          "roughness": 0.7799999713897705,
+          "metallic": 0.0,
+          "emission": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "strength": 0.0
+        },
+        {
+          "name": "M_Unassigned",
+          "color": [
+            0.59,
+            0.61,
+            0.63,
+            1
+          ],
+          "roughness": 0.78,
+          "metallic": 0,
+          "emission": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "strength": 0
+        }
+      ],
+      "collection": "01_ARCHITECTURE",
+      "door_leaf": null
+    },
+    {
+      "name": "SM_TR_North_wall_inside_Y_12",
+      "label": "North wall | inside Y=12",
+      "location": [
+        0.0,
+        -1219.9999809265137,
+        400.0
+      ],
+      "dimensions": [
+        2079.9999237060547,
+        40.00000059604645,
+        800.0
+      ],
+      "materials": [
+        {
+          "name": "M_EndWall | vertical 4m panel seams",
+          "color": [
+            0.5899999737739563,
+            0.6100000143051147,
+            0.6299999952316284,
+            1.0
+          ],
+          "roughness": 0.7799999713897705,
+          "metallic": 0.0,
+          "emission": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "strength": 0.0
+        }
+      ],
+      "collection": "01_ARCHITECTURE",
+      "door_leaf": null
+    },
+    {
+      "name": "SM_TR_South_wall_former_entrance_sealed",
+      "label": "South wall | former entrance sealed",
+      "location": [
+        0.0,
+        1219.9999809265137,
+        400.0
+      ],
+      "dimensions": [
+        2079.9999237060547,
+        40.00000059604645,
+        800.0
+      ],
+      "materials": [
+        {
+          "name": "M_EndWall | vertical 4m panel seams",
+          "color": [
+            0.5899999737739563,
+            0.6100000143051147,
+            0.6299999952316284,
+            1.0
+          ],
+          "roughness": 0.7799999713897705,
+          "metallic": 0.0,
+          "emission": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "strength": 0.0
+        }
+      ],
+      "collection": "01_ARCHITECTURE",
+      "door_leaf": null
+    },
+    {
+      "name": "SM_TR_Entrance_return_south",
+      "label": "Entrance return south",
+      "location": [
+        -1139.9999618530273,
+        1019.9999809265137,
+        110.00000238418579
+      ],
+      "dimensions": [
+        200.0,
+        40.00000059604645,
+        220.00000476837158
+      ],
+      "materials": [
+        {
+          "name": "M_Entry recess",
+          "color": [
+            0.07500000298023224,
+            0.0949999988079071,
+            0.11999999731779099,
+            1.0
+          ],
+          "roughness": 0.75,
+          "metallic": 0.0,
+          "emission": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "strength": 0.0
+        }
+      ],
+      "collection": "01_ARCHITECTURE",
+      "door_leaf": null
+    },
+    {
+      "name": "SM_TR_Entrance_return_north",
+      "label": "Entrance return north",
+      "location": [
+        -1139.9999618530273,
+        860.0000381469727,
+        110.00000238418579
+      ],
+      "dimensions": [
+        200.0,
+        40.00000059604645,
+        220.00000476837158
+      ],
+      "materials": [
+        {
+          "name": "M_Entry recess",
+          "color": [
+            0.07500000298023224,
+            0.0949999988079071,
+            0.11999999731779099,
+            1.0
+          ],
+          "roughness": 0.75,
+          "metallic": 0.0,
+          "emission": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "strength": 0.0
+        }
+      ],
+      "collection": "01_ARCHITECTURE",
+      "door_leaf": null
+    },
+    {
+      "name": "SM_TR_Entrance_soffit",
+      "label": "Entrance soffit",
+      "location": [
+        -1139.9999618530273,
+        939.9999618530273,
+        240.00000953674316
+      ],
+      "dimensions": [
+        200.0,
+        200.0,
+        40.00000059604645
+      ],
+      "materials": [
+        {
+          "name": "M_Entry recess",
+          "color": [
+            0.07500000298023224,
+            0.0949999988079071,
+            0.11999999731779099,
+            1.0
+          ],
+          "roughness": 0.75,
+          "metallic": 0.0,
+          "emission": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "strength": 0.0
+        }
+      ],
+      "collection": "01_ARCHITECTURE",
+      "door_leaf": null
+    },
+    {
+      "name": "SM_TR_Entrance_threshold_flush_floor",
+      "label": "Entrance threshold | flush floor",
+      "location": [
+        -1139.9999618530273,
+        939.9999618530273,
+        -20.000000298023224
+      ],
+      "dimensions": [
+        200.0,
+        200.0,
+        40.00000059604645
+      ],
+      "materials": [
+        {
+          "name": "M_Floor | smooth charcoal",
+          "color": [
+            0.09000000357627869,
+            0.10000000149011612,
+            0.11500000208616257,
+            1.0
+          ],
+          "roughness": 0.6399999856948853,
+          "metallic": 0.0,
+          "emission": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "strength": 0.0
+        }
+      ],
+      "collection": "01_ARCHITECTURE",
+      "door_leaf": null
+    },
+    {
+      "name": "SM_TR_Ceiling_perimeter_light_X_9_9",
+      "label": "Ceiling perimeter light X-9.9",
+      "location": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "dimensions": [
+        9.000015258789062,
+        2379.9999237060547,
+        0.0
+      ],
+      "materials": [
+        {
+          "name": "M_Cove light | neutral white",
+          "color": [
+            1.0,
+            0.9599999785423279,
+            0.8999999761581421,
+            1.0
+          ],
+          "roughness": 0.6000000238418579,
+          "metallic": 0.0,
+          "emission": [
+            1.0,
+            0.9599999785423279,
+            0.8999999761581421,
+            1.0
+          ],
+          "strength": 9.0
+        }
+      ],
+      "collection": "02_FLUSH_LIGHT_SURFACES",
+      "door_leaf": null
+    },
+    {
+      "name": "SM_TR_Ceiling_perimeter_light_X9_9",
+      "label": "Ceiling perimeter light X9.9",
+      "location": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "dimensions": [
+        9.000015258789062,
+        2379.9999237060547,
+        0.0
+      ],
+      "materials": [
+        {
+          "name": "M_Cove light | neutral white",
+          "color": [
+            1.0,
+            0.9599999785423279,
+            0.8999999761581421,
+            1.0
+          ],
+          "roughness": 0.6000000238418579,
+          "metallic": 0.0,
+          "emission": [
+            1.0,
+            0.9599999785423279,
+            0.8999999761581421,
+            1.0
+          ],
+          "strength": 9.0
+        }
+      ],
+      "collection": "02_FLUSH_LIGHT_SURFACES",
+      "door_leaf": null
+    },
+    {
+      "name": "SM_TR_Ceiling_perimeter_light_Y_11_9",
+      "label": "Ceiling perimeter light Y-11.9",
+      "location": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "dimensions": [
+        1979.9999237060547,
+        9.000015258789062,
+        0.0
+      ],
+      "materials": [
+        {
+          "name": "M_Cove light | neutral white",
+          "color": [
+            1.0,
+            0.9599999785423279,
+            0.8999999761581421,
+            1.0
+          ],
+          "roughness": 0.6000000238418579,
+          "metallic": 0.0,
+          "emission": [
+            1.0,
+            0.9599999785423279,
+            0.8999999761581421,
+            1.0
+          ],
+          "strength": 9.0
+        }
+      ],
+      "collection": "02_FLUSH_LIGHT_SURFACES",
+      "door_leaf": null
+    },
+    {
+      "name": "SM_TR_Ceiling_perimeter_light_Y11_9",
+      "label": "Ceiling perimeter light Y11.9",
+      "location": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "dimensions": [
+        1979.9999237060547,
+        9.000015258789062,
+        0.0
+      ],
+      "materials": [
+        {
+          "name": "M_Cove light | neutral white",
+          "color": [
+            1.0,
+            0.9599999785423279,
+            0.8999999761581421,
+            1.0
+          ],
+          "roughness": 0.6000000238418579,
+          "metallic": 0.0,
+          "emission": [
+            1.0,
+            0.9599999785423279,
+            0.8999999761581421,
+            1.0
+          ],
+          "strength": 9.0
+        }
+      ],
+      "collection": "02_FLUSH_LIGHT_SURFACES",
+      "door_leaf": null
+    },
+    {
+      "name": "SM_TR_Frame_South_jamb",
+      "label": "Frame | South jamb",
+      "location": [
+        -1002.0000457763672,
+        1006.0000419616699,
+        115.99999666213989
+      ],
+      "dimensions": [
+        14.000000059604645,
+        11.999999731779099,
+        231.99999332427979
+      ],
+      "materials": [
+        {
+          "name": "M_Door | dark frame",
+          "color": [
+            0.07000000029802322,
+            0.08500000089406967,
+            0.10000000149011612,
+            1.0
+          ],
+          "roughness": 0.4000000059604645,
+          "metallic": 0.6499999761581421,
+          "emission": [
+            0.07000000029802322,
+            0.08500000089406967,
+            0.10000000149011612,
+            1.0
+          ],
+          "strength": 0.0
+        }
+      ],
+      "collection": "05_ENTRANCE_SLIDING_DOOR",
+      "door_leaf": null
+    },
+    {
+      "name": "SM_TR_Frame_South_blue_line",
+      "label": "Frame | South blue line",
+      "location": [
+        -994.4999694824219,
+        1006.0000419616699,
+        110.00000238418579
+      ],
+      "dimensions": [
+        0.6000000052154064,
+        2.199999988079071,
+        218.00000667572021
+      ],
+      "materials": [
+        {
+          "name": "M_Door | blue guide light",
+          "color": [
+            0.18000000715255737,
+            0.5799999833106995,
+            1.0,
+            1.0
+          ],
+          "roughness": 0.4000000059604645,
+          "metallic": 0.0,
+          "emission": [
+            0.18000000715255737,
+            0.5799999833106995,
+            1.0,
+            1.0
+          ],
+          "strength": 3.0
+        }
+      ],
+      "collection": "05_ENTRANCE_SLIDING_DOOR",
+      "door_leaf": null
+    },
+    {
+      "name": "SM_TR_Frame_North_jamb",
+      "label": "Frame | North jamb",
+      "location": [
+        -1002.0000457763672,
+        873.9999771118164,
+        115.99999666213989
+      ],
+      "dimensions": [
+        14.000000059604645,
+        11.999999731779099,
+        231.99999332427979
+      ],
+      "materials": [
+        {
+          "name": "M_Door | dark frame",
+          "color": [
+            0.07000000029802322,
+            0.08500000089406967,
+            0.10000000149011612,
+            1.0
+          ],
+          "roughness": 0.4000000059604645,
+          "metallic": 0.6499999761581421,
+          "emission": [
+            0.07000000029802322,
+            0.08500000089406967,
+            0.10000000149011612,
+            1.0
+          ],
+          "strength": 0.0
+        }
+      ],
+      "collection": "05_ENTRANCE_SLIDING_DOOR",
+      "door_leaf": null
+    },
+    {
+      "name": "SM_TR_Frame_North_blue_line",
+      "label": "Frame | North blue line",
+      "location": [
+        -994.4999694824219,
+        873.9999771118164,
+        110.00000238418579
+      ],
+      "dimensions": [
+        0.6000000052154064,
+        2.199999988079071,
+        218.00000667572021
+      ],
+      "materials": [
+        {
+          "name": "M_Door | blue guide light",
+          "color": [
+            0.18000000715255737,
+            0.5799999833106995,
+            1.0,
+            1.0
+          ],
+          "roughness": 0.4000000059604645,
+          "metallic": 0.0,
+          "emission": [
+            0.18000000715255737,
+            0.5799999833106995,
+            1.0,
+            1.0
+          ],
+          "strength": 3.0
+        }
+      ],
+      "collection": "05_ENTRANCE_SLIDING_DOOR",
+      "door_leaf": null
+    },
+    {
+      "name": "SM_TR_Frame_upper_rail_housing",
+      "label": "Frame | upper rail housing",
+      "location": [
+        -1002.0000457763672,
+        939.9999618530273,
+        225.99999904632568
+      ],
+      "dimensions": [
+        14.000000059604645,
+        144.0000057220459,
+        11.999999731779099
+      ],
+      "materials": [
+        {
+          "name": "M_Door | dark frame",
+          "color": [
+            0.07000000029802322,
+            0.08500000089406967,
+            0.10000000149011612,
+            1.0
+          ],
+          "roughness": 0.4000000059604645,
+          "metallic": 0.6499999761581421,
+          "emission": [
+            0.07000000029802322,
+            0.08500000089406967,
+            0.10000000149011612,
+            1.0
+          ],
+          "strength": 0.0
+        }
+      ],
+      "collection": "05_ENTRANCE_SLIDING_DOOR",
+      "door_leaf": null
+    },
+    {
+      "name": "SM_TR_Frame_upper_blue_line",
+      "label": "Frame | upper blue line",
+      "location": [
+        -994.4999694824219,
+        939.9999618530273,
+        225.99999904632568
+      ],
+      "dimensions": [
+        0.6000000052154064,
+        130.9999942779541,
+        2.199999988079071
+      ],
+      "materials": [
+        {
+          "name": "M_Door | blue guide light",
+          "color": [
+            0.18000000715255737,
+            0.5799999833106995,
+            1.0,
+            1.0
+          ],
+          "roughness": 0.4000000059604645,
+          "metallic": 0.0,
+          "emission": [
+            0.18000000715255737,
+            0.5799999833106995,
+            1.0,
+            1.0
+          ],
+          "strength": 3.0
+        }
+      ],
+      "collection": "05_ENTRANCE_SLIDING_DOOR",
+      "door_leaf": null
+    },
+    {
+      "name": "SM_TR_DOOR_LEAF_slides_Y_1_34m",
+      "label": "DOOR_LEAF | slides +Y 1.34m",
+      "location": [
+        -1019.9999809265137,
+        939.9999618530273,
+        113.49999904632568
+      ],
+      "dimensions": [
+        10.000000149011612,
+        126.99999809265137,
+        223.00000190734863
+      ],
+      "materials": [
+        {
+          "name": "M_Door | satin graphite",
+          "color": [
+            0.1899999976158142,
+            0.2199999988079071,
+            0.25,
+            1.0
+          ],
+          "roughness": 0.3799999952316284,
+          "metallic": 0.550000011920929,
+          "emission": [
+            0.1899999976158142,
+            0.2199999988079071,
+            0.25,
+            1.0
+          ],
+          "strength": 0.0
+        }
+      ],
+      "collection": "05_ENTRANCE_SLIDING_DOOR",
+      "door_leaf": true
+    },
+    {
+      "name": "SM_TR_Door_inset_front_panel",
+      "label": "Door | inset front panel",
+      "location": [
+        -1014.4000053405762,
+        939.9999618530273,
+        113.99999856948853
+      ],
+      "dimensions": [
+        0.9999999776482582,
+        108.00000429153442,
+        194.0000057220459
+      ],
+      "materials": [
+        {
+          "name": "M_Door | face panel",
+          "color": [
+            0.2549999952316284,
+            0.2800000011920929,
+            0.30000001192092896,
+            1.0
+          ],
+          "roughness": 0.41999998688697815,
+          "metallic": 0.44999998807907104,
+          "emission": [
+            0.2549999952316284,
+            0.2800000011920929,
+            0.30000001192092896,
+            1.0
+          ],
+          "strength": 0.0
+        }
+      ],
+      "collection": "05_ENTRANCE_SLIDING_DOOR",
+      "door_leaf": true
+    },
+    {
+      "name": "SM_TR_Door_narrow_status_light",
+      "label": "Door | narrow status light",
+      "location": [
+        -1013.599967956543,
+        989.0000343322754,
+        112.99999952316284
+      ],
+      "dimensions": [
+        0.4999999888241291,
+        1.7999999225139618,
+        31.999999284744263
+      ],
+      "materials": [
+        {
+          "name": "M_Door | blue guide light",
+          "color": [
+            0.18000000715255737,
+            0.5799999833106995,
+            1.0,
+            1.0
+          ],
+          "roughness": 0.4000000059604645,
+          "metallic": 0.0,
+          "emission": [
+            0.18000000715255737,
+            0.5799999833106995,
+            1.0,
+            1.0
+          ],
+          "strength": 3.0
+        }
+      ],
+      "collection": "05_ENTRANCE_SLIDING_DOOR",
+      "door_leaf": true
+    }
+  ]
+}

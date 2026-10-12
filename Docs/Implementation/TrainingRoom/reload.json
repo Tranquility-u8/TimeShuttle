@@ -1,0 +1,10 @@
+{
+  "id": "reload",
+  "ok": true,
+  "result": {
+    "reload": true,
+    "actor_count": 37,
+    "door_reference": "/Game/Maps/Map_TrainingRoom.Map_TrainingRoom:PersistentLevel.StaticMeshActor_22",
+    "game_mode": "/Game/Blueprints/GameModes/GM_FP.GM_FP_C"
+  }
+}

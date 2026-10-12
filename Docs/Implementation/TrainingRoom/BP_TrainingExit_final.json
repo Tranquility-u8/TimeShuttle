@@ -1,0 +1,875 @@
+{
+  "path": "/Game/Environment/TrainingRoom/Blueprints/BP_TrainingExit.BP_TrainingExit",
+  "status": "BS_UpToDate",
+  "properties": [
+    {
+      "name": "UberGraphFrame",
+      "type": "FPointerToUberGraphFrame",
+      "default": "()"
+    },
+    {
+      "name": "CollisionComponent",
+      "type": "TObjectPtr<UShapeComponent>",
+      "default": "/Script/Engine.BoxComponent'/Game/Environment/TrainingRoom/Blueprints/BP_TrainingExit.Default__BP_TrainingExit_C:CollisionComp'"
+    },
+    {
+      "name": "SpriteComponent",
+      "type": "TObjectPtr<UBillboardComponent>",
+      "default": "/Script/Engine.BillboardComponent'/Game/Environment/TrainingRoom/Blueprints/BP_TrainingExit.Default__BP_TrainingExit_C:Sprite'"
+    },
+    {
+      "name": "PrimaryActorTick",
+      "type": "FActorTickFunction",
+      "default": "(bStartWithTickEnabled=True,bAllowTickOnDedicatedServer=True)"
+    },
+    {
+      "name": "bNetTemporary",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bOnlyRelevantToOwner",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bAlwaysRelevant",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bReplicateMovement",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bCallPreReplication",
+      "type": "uint8",
+      "default": "True"
+    },
+    {
+      "name": "bCallPreReplicationForReplay",
+      "type": "uint8",
+      "default": "True"
+    },
+    {
+      "name": "bHidden",
+      "type": "uint8",
+      "default": "True"
+    },
+    {
+      "name": "bTearOff",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bForceNetAddressable",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "LevelInstanceType",
+      "type": "ELevelInstanceType",
+      "default": ""
+    },
+    {
+      "name": "LevelInstanceFlags",
+      "type": "ELevelInstanceFlags",
+      "default": ""
+    },
+    {
+      "name": "bIsMainWorldOnly",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bIgnoreInPIE",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bExchangedRoles",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bNetLoadOnClient",
+      "type": "uint8",
+      "default": "True"
+    },
+    {
+      "name": "bNetUseOwnerRelevancy",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bRelevantForNetworkReplays",
+      "type": "uint8",
+      "default": "True"
+    },
+    {
+      "name": "bRelevantForLevelBounds",
+      "type": "uint8",
+      "default": "True"
+    },
+    {
+      "name": "bReplayRewindable",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bAllowTickBeforeBeginPlay",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bAutoDestroyWhenFinished",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bCanBeDamaged",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bBlockInput",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bCollideWhenPlacing",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bFindCameraComponentWhenViewTarget",
+      "type": "uint8",
+      "default": "True"
+    },
+    {
+      "name": "bGenerateOverlapEventsDuringLevelStreaming",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bIgnoresOriginShifting",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bEnableAutoLODGeneration",
+      "type": "uint8",
+      "default": "True"
+    },
+    {
+      "name": "bIsEditorOnlyActor",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bReplicates",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bCanBeInCluster",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bAllowReceiveTickEventOnDedicatedServer",
+      "type": "uint8",
+      "default": "True"
+    },
+    {
+      "name": "bReplicateUsingRegisteredSubObjectList",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bActorEnableCollision",
+      "type": "uint8",
+      "default": "True"
+    },
+    {
+      "name": "bActorIsBeingDestroyed",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bAsyncPhysicsTickEnabled",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "UpdateOverlapsMethodDuringLevelStreaming",
+      "type": "EActorUpdateOverlapsMethod",
+      "default": ""
+    },
+    {
+      "name": "DefaultUpdateOverlapsMethodDuringLevelStreaming",
+      "type": "EActorUpdateOverlapsMethod",
+      "default": "OnlyUpdateMovable"
+    },
+    {
+      "name": "RemoteRole",
+      "type": "TEnumAsByte<ENetRole>",
+      "default": ""
+    },
+    {
+      "name": "InitialLifeSpan",
+      "type": "float",
+      "default": ""
+    },
+    {
+      "name": "CustomTimeDilation",
+      "type": "float",
+      "default": "1.000000"
+    },
+    {
+      "name": "RayTracingGroupId",
+      "type": "int32",
+      "default": "-1"
+    },
+    {
+      "name": "GridPlacement",
+      "type": "EActorGridPlacement",
+      "default": "None"
+    },
+    {
+      "name": "RuntimeGrid",
+      "type": "FName",
+      "default": ""
+    },
+    {
+      "name": "AttachmentReplication",
+      "type": "FRepAttachment",
+      "default": "(LocationOffset=(X=0.000000,Y=0.000000,Z=0.000000),RelativeScale3D=(X=0.000000,Y=0.000000,Z=0.000000),RotationOffset=(Pitch=0.000000,Yaw=0.000000,Roll=0.000000))"
+    },
+    {
+      "name": "ReplicatedMovement",
+      "type": "FRepMovement",
+      "default": "()"
+    },
+    {
+      "name": "Owner",
+      "type": "TObjectPtr<AActor>",
+      "default": ""
+    },
+    {
+      "name": "NetDriverName",
+      "type": "FName",
+      "default": "GameNetDriver"
+    },
+    {
+      "name": "Role",
+      "type": "TEnumAsByte<ENetRole>",
+      "default": "ROLE_Authority"
+    },
+    {
+      "name": "NetDormancy",
+      "type": "TEnumAsByte<ENetDormancy>",
+      "default": "DORM_Awake"
+    },
+    {
+      "name": "SpawnCollisionHandlingMethod",
+      "type": "ESpawnActorCollisionHandlingMethod",
+      "default": "AlwaysSpawn"
+    },
+    {
+      "name": "AutoReceiveInput",
+      "type": "TEnumAsByte<EAutoReceiveInput::Type>",
+      "default": ""
+    },
+    {
+      "name": "InputPriority",
+      "type": "int32",
+      "default": ""
+    },
+    {
+      "name": "InputComponent",
+      "type": "TObjectPtr<UInputComponent>",
+      "default": ""
+    },
+    {
+      "name": "NetTag",
+      "type": "int32",
+      "default": ""
+    },
+    {
+      "name": "NetCullDistanceSquared",
+      "type": "float",
+      "default": "225000000.000000"
+    },
+    {
+      "name": "NetUpdateFrequency",
+      "type": "float",
+      "default": "100.000000"
+    },
+    {
+      "name": "MinNetUpdateFrequency",
+      "type": "float",
+      "default": "2.000000"
+    },
+    {
+      "name": "NetPriority",
+      "type": "float",
+      "default": "1.000000"
+    },
+    {
+      "name": "PhysicsReplicationMode",
+      "type": "EPhysicsReplicationMode",
+      "default": ""
+    },
+    {
+      "name": "Instigator",
+      "type": "TObjectPtr<APawn>",
+      "default": ""
+    },
+    {
+      "name": "Children",
+      "type": "TArray",
+      "default": ""
+    },
+    {
+      "name": "RootComponent",
+      "type": "TObjectPtr<USceneComponent>",
+      "default": "/Script/Engine.BoxComponent'/Game/Environment/TrainingRoom/Blueprints/BP_TrainingExit.Default__BP_TrainingExit_C:CollisionComp'"
+    },
+    {
+      "name": "PivotOffset",
+      "type": "FVector",
+      "default": "(X=0.000000,Y=0.000000,Z=0.000000)"
+    },
+    {
+      "name": "HLODLayer",
+      "type": "TObjectPtr<UHLODLayer>",
+      "default": ""
+    },
+    {
+      "name": "ObjectsDetachedFromExternalPackage",
+      "type": "TArray",
+      "default": ""
+    },
+    {
+      "name": "Layers",
+      "type": "TArray",
+      "default": ""
+    },
+    {
+      "name": "ParentComponentActor",
+      "type": "TWeakObjectPtr<AActor>",
+      "default": ""
+    },
+    {
+      "name": "ParentComponent",
+      "type": "TWeakObjectPtr<UChildActorComponent>",
+      "default": ""
+    },
+    {
+      "name": "ActorGuid",
+      "type": "FGuid",
+      "default": "00000000000000000000000000000000"
+    },
+    {
+      "name": "ActorInstanceGuid",
+      "type": "FGuid",
+      "default": "00000000000000000000000000000000"
+    },
+    {
+      "name": "ContentBundleGuid",
+      "type": "FGuid",
+      "default": "00000000000000000000000000000000"
+    },
+    {
+      "name": "DataLayers",
+      "type": "TArray",
+      "default": ""
+    },
+    {
+      "name": "DataLayerAssets",
+      "type": "TArray",
+      "default": ""
+    },
+    {
+      "name": "ExternalDataLayerAsset",
+      "type": "TObjectPtr<UExternalDataLayerAsset>",
+      "default": ""
+    },
+    {
+      "name": "GroupActor",
+      "type": "TObjectPtr<AActor>",
+      "default": ""
+    },
+    {
+      "name": "SpriteScale",
+      "type": "float",
+      "default": "1.000000"
+    },
+    {
+      "name": "HiddenEditorViews",
+      "type": "uint64",
+      "default": ""
+    },
+    {
+      "name": "ActorLabel",
+      "type": "FString",
+      "default": ""
+    },
+    {
+      "name": "FolderPath",
+      "type": "FName",
+      "default": ""
+    },
+    {
+      "name": "FolderGuid",
+      "type": "FGuid",
+      "default": "00000000000000000000000000000000"
+    },
+    {
+      "name": "bHiddenEd",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bIsEditorPreviewActor",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bHiddenEdLayer",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bHiddenEdLevel",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bLockLocation",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bActorLabelEditable",
+      "type": "uint8",
+      "default": "True"
+    },
+    {
+      "name": "bEditable",
+      "type": "uint8",
+      "default": "True"
+    },
+    {
+      "name": "bListedInSceneOutliner",
+      "type": "uint8",
+      "default": "True"
+    },
+    {
+      "name": "bOptimizeBPComponentData",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bCanPlayFromHere",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bIsSpatiallyLoaded",
+      "type": "uint8",
+      "default": "True"
+    },
+    {
+      "name": "bHiddenEdTemporary",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "bForceExternalActorLevelReferenceForPIE",
+      "type": "uint8",
+      "default": ""
+    },
+    {
+      "name": "Tags",
+      "type": "TArray",
+      "default": ""
+    },
+    {
+      "name": "OnTakeAnyDamage",
+      "type": "FTakeAnyDamageSignature",
+      "default": "()"
+    },
+    {
+      "name": "OnTakePointDamage",
+      "type": "FTakePointDamageSignature",
+      "default": "()"
+    },
+    {
+      "name": "OnTakeRadialDamage",
+      "type": "FTakeRadialDamageSignature",
+      "default": "()"
+    },
+    {
+      "name": "OnActorBeginOverlap",
+      "type": "FActorBeginOverlapSignature",
+      "default": "()"
+    },
+    {
+      "name": "OnActorEndOverlap",
+      "type": "FActorEndOverlapSignature",
+      "default": "()"
+    },
+    {
+      "name": "OnBeginCursorOver",
+      "type": "FActorBeginCursorOverSignature",
+      "default": "()"
+    },
+    {
+      "name": "OnEndCursorOver",
+      "type": "FActorEndCursorOverSignature",
+      "default": "()"
+    },
+    {
+      "name": "OnClicked",
+      "type": "FActorOnClickedSignature",
+      "default": "()"
+    },
+    {
+      "name": "OnReleased",
+      "type": "FActorOnReleasedSignature",
+      "default": "()"
+    },
+    {
+      "name": "OnInputTouchBegin",
+      "type": "FActorOnInputTouchBeginSignature",
+      "default": "()"
+    },
+    {
+      "name": "OnInputTouchEnd",
+      "type": "FActorOnInputTouchEndSignature",
+      "default": "()"
+    },
+    {
+      "name": "OnInputTouchEnter",
+      "type": "FActorBeginTouchOverSignature",
+      "default": "()"
+    },
+    {
+      "name": "OnInputTouchLeave",
+      "type": "FActorEndTouchOverSignature",
+      "default": "()"
+    },
+    {
+      "name": "OnActorHit",
+      "type": "FActorHitSignature",
+      "default": "()"
+    },
+    {
+      "name": "OnDestroyed",
+      "type": "FActorDestroyedSignature",
+      "default": "()"
+    },
+    {
+      "name": "OnEndPlay",
+      "type": "FActorEndPlaySignature",
+      "default": "()"
+    },
+    {
+      "name": "InstanceComponents",
+      "type": "TArray",
+      "default": ""
+    },
+    {
+      "name": "BlueprintCreatedComponents",
+      "type": "TArray",
+      "default": ""
+    }
+  ],
+  "graphs": [
+    {
+      "name": "UserConstructionScript",
+      "nodes": [
+        {
+          "id": "K2Node_FunctionEntry_0",
+          "x": 0,
+          "y": 0,
+          "class": "K2Node_FunctionEntry",
+          "title": "Construction Script",
+          "pins": [
+            {
+              "name": "then",
+              "direction": 1,
+              "type": "exec",
+              "default": "",
+              "object": "None",
+              "links": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "EventGraph",
+      "nodes": [
+        {
+          "id": "K2Node_Event_3",
+          "x": 0,
+          "y": 0,
+          "class": "K2Node_Event",
+          "title": "Event ActorBeginOverlap",
+          "pins": [
+            {
+              "name": "OutputDelegate",
+              "direction": 1,
+              "type": "delegate",
+              "default": "",
+              "object": "None",
+              "links": []
+            },
+            {
+              "name": "then",
+              "direction": 1,
+              "type": "exec",
+              "default": "",
+              "object": "None",
+              "links": [
+                "K2Node_IfThenElse_0.execute"
+              ]
+            },
+            {
+              "name": "OtherActor",
+              "direction": 1,
+              "type": "object",
+              "default": "",
+              "object": "None",
+              "links": [
+                "K2Node_CallFunction_1.A"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "K2Node_CallFunction_0",
+          "x": 312,
+          "y": 206,
+          "class": "K2Node_CallFunction",
+          "title": "Get Player Pawn",
+          "function": "GetPlayerPawn",
+          "pins": [
+            {
+              "name": "self",
+              "direction": 0,
+              "type": "object",
+              "default": "",
+              "object": "/Script/Engine.Default__GameplayStatics",
+              "links": []
+            },
+            {
+              "name": "WorldContextObject",
+              "direction": 0,
+              "type": "object",
+              "default": "",
+              "object": "None",
+              "links": []
+            },
+            {
+              "name": "PlayerIndex",
+              "direction": 0,
+              "type": "int",
+              "default": "0",
+              "object": "None",
+              "links": []
+            },
+            {
+              "name": "ReturnValue",
+              "direction": 1,
+              "type": "object",
+              "default": "",
+              "object": "None",
+              "links": [
+                "K2Node_CallFunction_1.B"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "K2Node_CallFunction_1",
+          "x": 312,
+          "y": 120,
+          "class": "K2Node_CallFunction",
+          "title": "Equal (Object)",
+          "function": "EqualEqual_ObjectObject",
+          "pins": [
+            {
+              "name": "self",
+              "direction": 0,
+              "type": "object",
+              "default": "",
+              "object": "/Script/Engine.Default__KismetMathLibrary",
+              "links": []
+            },
+            {
+              "name": "A",
+              "direction": 0,
+              "type": "object",
+              "default": "",
+              "object": "None",
+              "links": [
+                "K2Node_Event_3.OtherActor"
+              ]
+            },
+            {
+              "name": "B",
+              "direction": 0,
+              "type": "object",
+              "default": "",
+              "object": "None",
+              "links": [
+                "K2Node_CallFunction_0.ReturnValue"
+              ]
+            },
+            {
+              "name": "ReturnValue",
+              "direction": 1,
+              "type": "bool",
+              "default": "false",
+              "object": "None",
+              "links": [
+                "K2Node_IfThenElse_0.Condition"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "K2Node_IfThenElse_0",
+          "x": 312,
+          "y": 0,
+          "class": "K2Node_IfThenElse",
+          "title": "Branch",
+          "pins": [
+            {
+              "name": "execute",
+              "direction": 0,
+              "type": "exec",
+              "default": "",
+              "object": "None",
+              "links": [
+                "K2Node_Event_3.then"
+              ]
+            },
+            {
+              "name": "Condition",
+              "direction": 0,
+              "type": "bool",
+              "default": "true",
+              "object": "None",
+              "links": [
+                "K2Node_CallFunction_1.ReturnValue"
+              ]
+            },
+            {
+              "name": "then",
+              "direction": 1,
+              "type": "exec",
+              "default": "",
+              "object": "None",
+              "links": [
+                "K2Node_CallFunction_2.execute"
+              ]
+            },
+            {
+              "name": "else",
+              "direction": 1,
+              "type": "exec",
+              "default": "",
+              "object": "None",
+              "links": []
+            }
+          ]
+        },
+        {
+          "id": "K2Node_CallFunction_2",
+          "x": 663,
+          "y": 0,
+          "class": "K2Node_CallFunction",
+          "title": "Open Level (by Object Reference)",
+          "function": "OpenLevelBySoftObjectPtr",
+          "pins": [
+            {
+              "name": "execute",
+              "direction": 0,
+              "type": "exec",
+              "default": "",
+              "object": "None",
+              "links": [
+                "K2Node_IfThenElse_0.then"
+              ]
+            },
+            {
+              "name": "then",
+              "direction": 1,
+              "type": "exec",
+              "default": "",
+              "object": "None",
+              "links": []
+            },
+            {
+              "name": "self",
+              "direction": 0,
+              "type": "object",
+              "default": "",
+              "object": "/Script/Engine.Default__GameplayStatics",
+              "links": []
+            },
+            {
+              "name": "WorldContextObject",
+              "direction": 0,
+              "type": "object",
+              "default": "",
+              "object": "None",
+              "links": []
+            },
+            {
+              "name": "Level",
+              "direction": 0,
+              "type": "softobject",
+              "default": "/Game/Maps/Map_LabBridge.Map_LabBridge",
+              "object": "None",
+              "links": []
+            },
+            {
+              "name": "bAbsolute",
+              "direction": 0,
+              "type": "bool",
+              "default": "true",
+              "object": "None",
+              "links": []
+            },
+            {
+              "name": "Options",
+              "direction": 0,
+              "type": "string",
+              "default": "",
+              "object": "None",
+              "links": []
+            }
+          ]
+        },
+        {
+          "id": "EdGraphNode_Comment_0",
+          "x": -60,
+          "y": -110,
+          "class": "EdGraphNode_Comment",
+          "title": "LEVEL TRANSITION | Player-only trigger beyond the sliding door.\nTravel to Map_LabBridge; its existing PlayerStart owns arrival.",
+          "pins": []
+        }
+      ]
+    }
+  ],
+  "compile_errors": 0,
+  "compile_warnings": 0,
+  "errors": []
+}

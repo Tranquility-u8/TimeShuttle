@@ -50,6 +50,8 @@
 
 ## 时间停止视觉层（2026-10-03）
 
+2026-10-11当前破碎层补充：`M_PP_TS_Facets`使用`T_TS_FacetNoise`周期随机Delaunay数据纹理（RG梯度、B高度、A诊断ID），替代下面第三轮历史的同向方格三角搜索；世界法线主轴投影、世界锚定与玩家Stencil排除保留。新增静态`NoiseSeed`偏移参数。第五轮控制器的共享线性波前与表面局部保留/淡出保持；第四轮网格已改为原生实例分块，下面Niagara描述属于第三轮历史。当前实现和第六轮证据见[时间停止特效](../Implementation/time-stop-vfx.md)。
+
 `/Game/VFX/TimeStop/BP_TimeStopVFXController` 由 BP_FPCharacter 的 TimeStopVFX ChildActorComponent 持有。它读取 AC_TimeAbility.ModeIndex==1 的边沿，以 GetRealTimeSeconds 驱动两条向量曲线，持有独立 PostProcessComponent、三个 MID 和 Niagara 网格。State 与 Facets 均在色调映射后，优先级10/20。第三轮Facets由场景深度重建世界表面、依世界法线主轴选择投影，固定世界三角格及共享正负高度与扫描Origin分离；世界距离波带内按Pulse投影虚拟位移取色。它模拟表面凸凹折射，不修改网格、碰撞、阴影或真实轮廓，也不提供运动物体的局部空间贴附。Niagara仍为单Mesh粒子、固定局部包围盒±1600cm；退出隐藏/暂停网格，EndPlay销毁组件。
 
 独立描边位于`/Game/VFX/TimeStop/Outline/`。目标Actor挂`AC_TimeStopOutline`后，自动登记到每世界单个`BP_TimeStopOutlineManager`；不需要修改玩家蓝图。组件负责Owner的Static/Skeletal Mesh筛选（可选Component Tag）、颜色选择器/Intensity/1–8px Thickness及`bEnabled`正式开关。Manager缓存Player0及AC_TimeAbility，Pawn变化/引用失效时重取，以ModeIndex==1门控；按帧检测，不依赖0.01倍率下的DeltaTime累计。一个后处理MID有32个float4样式参数，每组件独占Stencil 224–255之一，自己的多个Mesh共用一槽；RGB为颜色×强度，A为宽度。After Tonemapping优先级30在冷色与扫描之后绘制可见外缘和解析软光晕，后者不是引擎Bloom。
@@ -99,6 +101,14 @@ Shooter 的迁入步枪与行为树保留原有开火节奏，但射击终点生
 `BP_TimeBullet.Collision` 下的 `BulletTrail` 为 `/Game/VFX/BulletTrail/AC_BulletTrail`，父类原生 StaticMeshComponent。它在 BeginPlay 设置 `SM_BulletTrailTaper` 并创建 `M_BulletTrail` 的独立 MID；TG_PostUpdateWork + Owner Tick prerequisite 确保在弹丸飞行/命中之后读取位置。长度由实际累计位移和可配上限决定，静止保持；瞬移和明显转向清零历史。世界绝对变换使厘米粗细不继承弹头缩放；组件不碰撞、不投影，Owner 销毁即清理。公开颜色、粗细、长度、强度、最小方向短尾及视觉开关；不写伤害、时间能力或输入。现有 Normal/BulletTime hitscan 保持，FullStop 生成的实体弹和后续释放使用此组件。当前仅直线弹道，未接独立敌弹类；50 项指定 PIE 检查和可视证据见 [bullet-trail.md](../Implementation/bullet-trail.md)。
 
 同日普通射击扩展：`BP_Item_Base.Fire_HitScan` 的 UseTemporalProjectile=false 分支经 `SpawnHitscanTrail(ShotHit)` 生成 `/Game/VFX/BulletTrail/BP_HitscanTrail`，随后继续原即时伤害链。后者是独立原生 Actor 子类（不是 BP_TimeBullet），持有同一个 AC_BulletTrail；记录真实命中点/TraceEnd，按世界 DeltaSeconds 以默认5000cm/s推进、钳制终点、保持0.04游戏秒后清理。无碰撞/伤害、不计时停弹数量，FullStop 原路径保留。Normal/BulletTime 的样式入口是 BP_HitscanTrail.BulletTrail，FullStop 的是 BP_TimeBullet.BulletTrail；两模板可分别覆盖。新增42项指定PIE检查通过，旧图除单次视觉调用外语义保持；详见上述实现文档。
+
+## DialogSystem（2026-10-12）
+
+`/Game/DialogSystem` 保存逐句/整段 DataTable、可编辑 WBP_Dialogue、独立 Enhanced Input 与三个触发入口。`Plugins/TimeShuttleDialog` 为 UE5.6 原生 Runtime 模块，提供行结构、DialogueManager 状态机、2D语音完成回调、玩家控制锁和 GameInstance 级 DialogMemory；无需编辑器制作辅助工具运行。
+
+BP_FPCharacter 的 DialogueManager 使用 AC_DialogueManager 项目适配子类；按下/持续输入经过 AllowGameplayInput，释放路径保留，死亡与显式主存档接入静态通知。碰撞 Trigger、继承 BP_Interaction_Base 的 NPC（现有 F 互动）和 Story 请求共享该管理器。新加玩法输入也须接门禁，禁止 ClearAllMappings 或 ResetIgnoreMoveInput 破坏其他系统状态。
+
+跨关卡/磁盘记忆默认 false，侧车为原槽名加 `_Dialogue`，未开启自动存档/启动读档。正式台词表为空待填写，Tests 独立。84项指定运行检查、6个蓝图编译保存、插件三个目标构建及视觉证据见 [dialog-system.md](../Implementation/dialog-system.md)；不代表完整游戏已打包验收。
 
 ## 维护入口
 

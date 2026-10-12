@@ -1,0 +1,66 @@
+{
+  "east": {
+    "blocking": true,
+    "location": [
+      1000.0000298023224,
+      0.0,
+      400.0
+    ],
+    "actor": "East wall | inside X=10"
+  },
+  "west": {
+    "blocking": true,
+    "location": [
+      -999.9999403953552,
+      0.0,
+      400.0
+    ],
+    "actor": "West wall | north of entrance"
+  },
+  "south": {
+    "blocking": true,
+    "location": [
+      0.0,
+      1200.0000178813934,
+      400.0
+    ],
+    "actor": "South wall | former entrance sealed"
+  },
+  "north": {
+    "blocking": true,
+    "location": [
+      0.0,
+      -1200.0000178813934,
+      400.0
+    ],
+    "actor": "North wall | inside Y=12"
+  },
+  "ceiling": {
+    "blocking": true,
+    "location": [
+      0.0,
+      0.0,
+      799.9999761581421
+    ],
+    "actor": "Ceiling | underside Z=8"
+  },
+  "floor": {
+    "blocking": true,
+    "location": [
+      0.0,
+      0.0,
+      -5.9604644775390625e-06
+    ],
+    "actor": "Floor | top Z=0"
+  },
+  "clear_floor_samples": 30,
+  "closed_door": {
+    "blocking": true,
+    "location": [
+      -1014.9999871850014,
+      940.0,
+      110.0
+    ],
+    "actor": "DOOR_LEAF | slides +Y 1.34m"
+  }
+}
