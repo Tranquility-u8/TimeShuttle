@@ -1,6 +1,6 @@
 # 当前项目架构
 
-仓库与 Unreal 5.6 实际资产核对日期：2026-09-26。本文描述实现入口；设计目标仍以 `design-snapshot.md` 和对应 Drive 来源为准。本次未刷新 Drive。
+仓库与 Unreal 5.6 实际资产核对日期：2026-10-10。本文描述实现入口；设计目标仍以 `design-snapshot.md` 和对应 Drive 来源为准。本次未刷新 Drive。
 
 ## 目录职责
 
@@ -11,8 +11,9 @@
 | `Maps/` | `Map_Test` 主关卡、`Map_Menu` 菜单 |
 | `Blueprints/Player/` | FPS 玩家及相机；模板来源 ProceduralFPSKIT |
 | `Blueprints/Components/Player/` | 交互、翻越、后坐力、程序动画等玩家组件 |
-| `Blueprints/AI/Melee/` | 近战角色、Controller、BT / Blackboard / Tasks、Spawner |
-| `Blueprints/AI/Shooter/` | 远程角色、Controller、StateTree、EQS、接口、敌人武器和弹丸 |
+| `Blueprints/AI/Melee/` | 正式近战入口 `BP_MeleeNPC` 与 Spawner；实际 AI 行为依赖位于 `EnemyAITutorial/` |
+| `Blueprints/AI/Shooter/` | 正式远程入口 `BP_ShooterNPC` 与保留的 TimeShuttle 弹丸基类/子弹；实际 AI 行为依赖位于 `EnemyAITutorial/` |
+| `EnemyAITutorial/` | 迁入的敌人共享基类、Controller、接口、行为树/Blackboard/任务/装饰器/EQS、PatrolRoute、动画、武器与模型支持资源 |
 | `Blueprints/AI/Training/` | 模板训练/测试靶逻辑，不是第三种正式敌人 |
 | `Blueprints/AI/` | `AC_Combat`、`BPI_Combat`、命中检测 NotifyState、攻击点枚举等共享战斗支持 |
 | `Blueprints/TimeReverse/Enemies/` | 通用敌人回溯组件和适配接口 |
@@ -35,8 +36,9 @@
 - 编辑器启动地图、游戏默认地图：`/Game/Maps/Map_Test`。
 - **Map_Test 自身的 GameMode Override 是 `/Game/Blueprints/GameModes/GM_FP`**；玩家为 `/Game/Blueprints/Player/BP_FPCharacter`。配置中的全局 fallback 仍是 `/Game/FirstPerson/Blueprints/BP_FirstPersonGameMode`，不能混为一谈。
 - 输入：`/Game/Input/IMC_Player`；Q 对应 `/Game/Input/Actions/IA_Reverse`，T 对应 `/Game/Input/Actions/IA_TimeAbility`。玩家负责输入和启动全局反转，AI 不实现玩家输入。
-- 近战：`BP_MeleeNPC` → `BP_MeleeAIController` → `BT_Melee` / `BB_Melee`；战斗组件为 `AC_Combat`，接口为 `BPI_Combat`。蓝图内部某些组件变量仍叫 `CAI_CombatComponent`，这是保留的成员名，不代表资产改名失败。
-- 远程：`BP_ShooterNPC` 直接继承 Character → `BP_ShooterAIController` → `ST_Shooter` / 射击子树、`STT_Shooter_*`、EQS；武器在 AI/Shooter/Weapons，玩家武器来自独立 FPS 模板链。
+- 近战：`/Game/Blueprints/AI/Melee/BP_MeleeNPC` → `/Game/EnemyAITutorial/Enemies/AI/AIC_Enemy_Base` → `BT_Enemy_Melee`。巡逻读取关卡中的 `BP_PatrolRoute`，攻击、动画、剑与行为树依赖均来自迁入资源。
+- 远程：`/Game/Blueprints/AI/Shooter/BP_ShooterNPC` → 同一 `AIC_Enemy_Base` → `BT_Enemy_Ranged`。巡逻、感知、选位、枪械模型、动画与开火节奏来自迁入资源；开火终点改为生成 TimeShuttle 的 `BP_ShooterProjectile_Bullet`，继续沿用本项目命中与伤害判定。战术掩体复用 `EQS_FindCover` 和独立 `CoverLocation`；`BTT_ReserveAndMoveToCover` 以 275 uu 互斥半径管理分布式预约/占用并处理失败、Abort、死亡/回溯释放，`BTT_CoverPeekBurst` 依据目标方向选择左右 140 uu 侧身、短点射并归位后进入四秒冷却。Shooter 的 RVO 继续负责移动过程中的局部避让。
+- 听觉：玩家枪械在 `BP_Item_Base.Fire_HitScan` 起点以武器 Actor 位置上报 `Gunshot` 听觉事件（近战分支静音）。共享 `AIC_Enemy_Base` 的 Hearing 范围为 2000 uu、刺激保留 5 秒；仅听到枪声时把该位置写入 `PointOfInterest` 并进入 Investigating，不会绕过视线直接设置 `AttackTarget`。近战与远程行为树复用同一调查分支。
 - 玩家武器数据：`PDA_Item` / `PDA_ProceduralAnimValues` 是蓝图类；`Data/Weapons/Player/**/DA_*AnimationValues` 是实例，并非 DataTable。
 - 存档：`Blueprints/SaveSystem` 中的 `SG_Character` / `SG_SaveSlots`。本地 `Saved/SaveGames` 不进 Git，测试前后需保护真实存档。
 
@@ -64,7 +66,7 @@
 
 弱点视觉新增 `bWeakPointVisualsOnlyDuringTimeAbility=true`：Normal 隐藏，FullStop / BulletTime 显示；仍受总开关、存活、激活、距离和遮挡限制，只控制括号/核心、不关闭命中球。命中反馈按真实时间短暂强调最后命中的激活弱点，参数为 `HitFeedbackDuration` / `HitFeedbackStrength`，不会令隐藏点强制显现。进入/退出回溯清除瞬态反馈，之后按当前显示门控重新计算；Q 本身不会打开 T 能力的显示门控。
 
-两种正式敌人不共享血量存储：`BP_MeleeNPC.Event AnyDamage` 将浮点伤害转交现有 `CAI_CombatComponent.Apply Damage`，`BP_ShooterNPC.Event AnyDamage` 继续更新自身 `Current HP`。Shooter 的非致命受伤分支会通过 `ABP_TP_Rifle` 的专用 `HitReact` Slot 播放同骨架、无 Root Motion 的 `MM_HitReact_Front_Lgt_01` 动态 Montage；回溯/已死亡守卫仍在前，致命伤仍直接走原 `Die` 分支。该表现不参与伤害和回溯数据。新增敌人应复用通用伤害事件并适配真实血量所有者，不应再把训练靶类型转换作为通用伤害门。详细实现、证据与测试限制见 [EnemyDamagePipeline.md](../Implementation/EnemyDamagePipeline.md)。
+迁移后两种正式敌人都继承 `/Game/EnemyAITutorial/Enemies/BP_Enemy_Base`，真实血量统一由迁入的 `BPC_DamageSystem.Health` 持有。共享基类的 `Event AnyDamage` 将 TimeShuttle 的通用 Damage 适配到迁入的 `BPI_Damagable.TakeDamage`，并挂载原有 `AC_EnemyWeakPoints`、`AC_EnemyReverse` 与 `BPI_RewindableEnemy`；玩家武器、弱点和回溯调用方无需改写。旧实现细节仍见 [EnemyDamagePipeline.md](../Implementation/EnemyDamagePipeline.md)，当前迁移后的最终入口与验证见 [EnemyAIBehaviorMigration.md](../Implementation/EnemyAIBehaviorMigration.md)。
 
 ## 玩家近战入口
 
@@ -76,7 +78,7 @@
 
 `BP_FPCharacter` 使用现有 `Health` 作为剩余受击次数，默认值为 2。`Event AnyDamage` 将任意正伤害统一折算为一次受击；它用 `Get Real Time Seconds` 和默认 0.9 秒的 `DamageInvulnerabilitySeconds` 去重，因此多帧近战检测和全局时间倍率 0.01 都不会在同一保护窗内连续扣除。第一次受击启用 `/Game/Characters/Player/Camera/Materials/M_PlayerDamageVignette`；该后处理以屏幕矩形边缘距离生成暗红遮罩，不再产生圆形镜片边界。`/Game/Input/Actions/IA_DebugPlayerInvincibility` 在 `IMC_Player` 映射 F6，切换玩家原生 `Can Be Damaged`：开启时所有 Unreal Damage 在进入 AnyDamage 前被拒绝，关闭时恢复，状态不写入存档。第二次独立受击把 Health 置为 0、设置 `IsPlayerDead`、退出时间能力并恢复世界时间，随后锁定输入与移动、清零速度并立刻回到缓存 checkpoint；0.65 秒淡出结束后再次确认 checkpoint 变换，再恢复控制器朝向、Health、伤害接收、Walking 和输入，并清除暗角及淡出状态。
 
-Shooter 沿用 `/Game/Blueprints/AI/Shooter/Projectiles/BP_ShooterProjectileBase` 的通用 `ApplyDamage`。Melee 沿用 `ANS_MeleeHitDetection -> AC_Combat.Detect Hit`：玩家已有 `AC_Combat`，目标组件通过玩家的 `BPI Set Health` 适配器转发到统一 AnyDamage 入口；手部单点采样未命中时，`AC_Combat` 还只对 150 uu 内且 Controller 可见的玩家提交一次通用 Damage。已有 `/Game/Blueprints/SaveSystem/BP_AutoSavePoint` 继续把 Arrow 世界变换保存到 `SG_Character.PlayerTransform`；玩家在启动加载完成后缓存实际生成变换，并在每次 checkpoint 保存时刷新该缓存，死亡重生直接复用它。checkpoint 资产和存档格式均未修改。
+Shooter 的迁入步枪与行为树保留原有开火节奏，但射击终点生成 `/Game/Blueprints/AI/Shooter/Projectiles/BP_ShooterProjectile_Bullet`，由其父类的通用 `ApplyDamage` 进入玩家现有 AnyDamage 链。Melee 保留迁入的攻击选择、Montage/Notify 与队伍过滤，但四个最终伤害提交点已改为通用 `ApplyDamage`，同样进入玩家的两次受击、无敌帧、暗角、死亡和复活流程。checkpoint 资产和存档格式均未修改。
 
 ## 敌人回溯边界
 
@@ -86,7 +88,7 @@ Shooter 沿用 `/Game/Blueprints/AI/Shooter/Projectiles/BP_ShooterProjectileBase
 
 任务 7 使用 `/Game/Blueprints/Types/Structs/S_WeakPointRewindFrame` 保存五位置等级索引及初始化状态。`AC_EnemyReverse.WeakPointHistory` 与 HP/姿态同采样、同索引回放和裁剪，覆盖自动 Q 与 seek。恢复直接写入分配和命中球激活，不重新随机、不重建组件、不重放闪光或触发伤害/奖励。记录期间 Candidates / TierRules 顺序保持固定，设计师配置不属于快照。回溯中忽略显式重置；死亡保留期继续使用原存活历史，最终销毁敌人时清理其所有弱点组件。两类敌人的复活后手枪伤害、显示门控及历史清理已取得 PIE 证据；seek 仅验证正式组件事件，不代表物理 seek 输入验收。
 
-两种敌人均添加 `EnemyReverse` 实例组件，类型为 `AC_EnemyReverse`，实现 `BPI_RewindableEnemy`。组件继续接入原全局 reverse manager，按同一采样索引记录 Transform、浮点血量、骨骼姿态、Mesh Transform 和速度。两种骨架分别使用 `Animations/TimeReverse/ABP_EnemyRewind_*`。
+迁入的共享敌人基类挂载 `EnemyReverse` 实例组件（`AC_EnemyReverse`）并实现 `BPI_RewindableEnemy`；读写血量适配到 `BPC_DamageSystem.Health`。组件继续接入原全局 reverse manager，按同一采样索引记录 Transform、浮点血量、骨骼姿态、Mesh Transform 和速度。
 
 回溯期间停止 AI 与攻击；回到存活状态后恢复正常动画、移动与 AI，重新刷新远程感知。死亡对象保留到存活历史耗尽再清理。正常 AI 会重新决策，攻击蒙太奇不从历史帧继续执行。原示例 Status / Montage 组件硬依赖示例敌人，不要额外挂在当前两个敌人上。
 
