@@ -1,0 +1,718 @@
+{
+  "date": "2026-10-12",
+  "environment": "UE 5.6.1, Win64, single local player, PIE",
+  "status": "passed",
+  "checks": [
+    {
+      "suite": "runtime_tests",
+      "name": "persistent memory disabled by default",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "normal initial input unlocked",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "voice request accepted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "voice 2D/UI/time independent flags",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "auto Next does not skip playing voice",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "same priority busy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "auto waited for first voice completion",
+      "passed": true,
+      "detail": "{'actual': 2.827999999979511, 'wave': 2.5741043090820312}"
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "auto completed all voice/text once",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "UI and audio released",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "dialogue mapping removed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "P action switches to manual",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "manual key cannot cut voice",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "manual holds after voice",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "Next action advances after voice",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "double Next does not duplicate completion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "text manual ready immediately",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "text manual ignores reading duration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "text auto observes reading duration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "text auto total duration",
+      "passed": true,
+      "detail": "2.530999999959022"
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "pause accepted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "pause mirrored to voice",
+      "passed": true,
+      "detail": "<AudioComponentPlayState.PAUSED: 2>"
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "pause does not finish voice or advance",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "voice real-time at scale 0.01",
+      "passed": true,
+      "detail": "2.6399999998975545"
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "voice pitch remains 1 at scale 0.01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "voice real-time at scale 0.2",
+      "passed": true,
+      "detail": "2.672000000020489"
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "voice pitch remains 1 at scale 0.2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "locked move / look allowed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "locked gate IA_Move",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "locked gate IA_Shoot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "locked gate IA_Aim",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "locked gate IA_Reload",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "locked gate IA_Interact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "locked gate IA_TimeAbility",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "locked gate IA_Reverse",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "locked gate IA_Jump",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "look and pause gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "movement lock blocks ordinary movement",
+      "passed": true,
+      "detail": "0.0"
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "priority 2 interrupts 3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "interrupted emits once and unlocks",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "lower priority refused",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "story promotes priority to 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "equal priority refused",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "cancel clears controls",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "other systems movement lock retained",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "free dialogue allows move/combat",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "free reserves Space for next",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "leaving source continues",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "actual collision begins dialogue",
+      "passed": true,
+      "detail": "TEST_Collision"
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "leaving trigger continues",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "NPC interaction interface starts dialogue",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "once per player lifetime",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "disabled memory saves nothing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "enabled memory explicit save",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "reset removes completion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "enabled explicit load",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "death cancellation cleans audio/UI/lock",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "suite": "runtime_tests",
+      "name": "no runtime dialogue errors",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "suite": "memory_travel_tests",
+      "name": "once accepted before travel",
+      "passed": true
+    },
+    {
+      "suite": "memory_travel_tests",
+      "name": "natural completion remembered",
+      "passed": true
+    },
+    {
+      "suite": "memory_travel_tests",
+      "name": "explicit save before travel",
+      "passed": true
+    },
+    {
+      "suite": "memory_travel_tests",
+      "name": "new player after level travel",
+      "passed": true
+    },
+    {
+      "suite": "memory_travel_tests",
+      "name": "cross-level completion rejects replay",
+      "passed": true
+    },
+    {
+      "suite": "memory_travel_tests",
+      "name": "cross-level input lock released",
+      "passed": true
+    },
+    {
+      "suite": "memory_travel_tests",
+      "name": "save reload restores completion",
+      "passed": true
+    },
+    {
+      "suite": "memory_travel_tests",
+      "name": "old save without sidecar clears flags",
+      "passed": true
+    },
+    {
+      "suite": "memory_travel_tests",
+      "name": "persistence returned to disabled",
+      "passed": true
+    },
+    {
+      "suite": "extra_tests",
+      "name": "physical P mapping toggles once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "suite": "extra_tests",
+      "name": "physical Enter mapping advances text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "suite": "extra_tests",
+      "name": "physical Space mapping completes text",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "suite": "extra_tests",
+      "name": "physical Space cannot cut voice",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "suite": "extra_tests",
+      "name": "physical Enter advances completed voice",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "suite": "extra_tests",
+      "name": "project time ability enters FullStop",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "suite": "extra_tests",
+      "name": "real FullStop leaves voice real-time",
+      "passed": true,
+      "detail": "2.672000000020489"
+    },
+    {
+      "suite": "extra_tests",
+      "name": "locked dialogue ends existing time ability",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "suite": "extra_tests",
+      "name": "locked dialogue keeps move lock after cleanup",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "suite": "extra_tests",
+      "name": "physical W blocked",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "suite": "extra_tests",
+      "name": "look remains available",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "suite": "extra_tests",
+      "name": "physical T blocked",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "suite": "extra_tests",
+      "name": "existing pause menu pauses game",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "suite": "extra_tests",
+      "name": "game UI screenshot saved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "suite": "extra_tests",
+      "name": "invalid row rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "suite": "extra_tests",
+      "name": "death fixture request accepted",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "suite": "extra_tests",
+      "name": "lethal damage executes player death hookup",
+      "passed": true,
+      "detail": "<DialogEndReason.PLAYER_DIED: 2>"
+    },
+    {
+      "suite": "npc_physical_input",
+      "name": "F key through existing AC_Interaction starts TEST_NPC",
+      "passed": true
+    }
+  ],
+  "check_count": 84,
+  "final_editor": {
+    "status": "passed",
+    "blueprints": [
+      {
+        "path": "/Game/Blueprints/Player/BP_FPCharacter",
+        "status": "BS_UpToDate",
+        "saved": true,
+        "compile_errors": 0
+      },
+      {
+        "path": "/Game/DialogSystem/Blueprints/AC_DialogueManager",
+        "status": "BS_UpToDate",
+        "saved": true,
+        "compile_errors": 0
+      },
+      {
+        "path": "/Game/DialogSystem/Blueprints/AC_DialogueParticipant",
+        "status": "BS_UpToDate",
+        "saved": true,
+        "compile_errors": 0
+      },
+      {
+        "path": "/Game/DialogSystem/Blueprints/BP_DialogueTrigger",
+        "status": "BS_UpToDate",
+        "saved": true,
+        "compile_errors": 0
+      },
+      {
+        "path": "/Game/DialogSystem/Blueprints/BP_DialogueNPC",
+        "status": "BS_UpToDate",
+        "saved": true,
+        "compile_errors": 0
+      },
+      {
+        "path": "/Game/DialogSystem/UI/WBP_Dialogue",
+        "status": "BS_UpToDate",
+        "saved": true,
+        "compile_errors": 0
+      }
+    ],
+    "persistent_memory_default": false,
+    "formal_tables": {
+      "DT_DialogueLines": 0,
+      "DT_DialogueConversations": 0
+    },
+    "qa_sidecar_removed": true,
+    "dirty_content": [],
+    "dirty_maps": [],
+    "engine": "5.6.1-44394996+++UE5+Release-5.6"
+  },
+  "player_graph_audit": {
+    "graphs": [
+      {
+        "name": "UserConstructionScript",
+        "existing_nodes_moved": [],
+        "default_changes": [],
+        "semantic_edge_changes": [],
+        "added_nodes": 0
+      },
+      {
+        "name": "GetWeapon",
+        "existing_nodes_moved": [],
+        "default_changes": [],
+        "semantic_edge_changes": [],
+        "added_nodes": 0
+      },
+      {
+        "name": "CheckCanStand",
+        "existing_nodes_moved": [],
+        "default_changes": [],
+        "semantic_edge_changes": [],
+        "added_nodes": 0
+      },
+      {
+        "name": "AimDownSight",
+        "existing_nodes_moved": [],
+        "default_changes": [],
+        "semantic_edge_changes": [],
+        "added_nodes": 0
+      },
+      {
+        "name": "FindSlideDirection",
+        "existing_nodes_moved": [],
+        "default_changes": [],
+        "semantic_edge_changes": [],
+        "added_nodes": 0
+      },
+      {
+        "name": "CreateHUD",
+        "existing_nodes_moved": [],
+        "default_changes": [],
+        "semantic_edge_changes": [],
+        "added_nodes": 0
+      },
+      {
+        "name": "HudCrosshairTick",
+        "existing_nodes_moved": [],
+        "default_changes": [],
+        "semantic_edge_changes": [],
+        "added_nodes": 0
+      },
+      {
+        "name": "SocketOffset",
+        "existing_nodes_moved": [],
+        "default_changes": [],
+        "semantic_edge_changes": [],
+        "added_nodes": 0
+      },
+      {
+        "name": "ChangeWeaponSocket",
+        "existing_nodes_moved": [],
+        "default_changes": [],
+        "semantic_edge_changes": [],
+        "added_nodes": 0
+      },
+      {
+        "name": "BeginSetup",
+        "existing_nodes_moved": [],
+        "default_changes": [],
+        "semantic_edge_changes": [],
+        "added_nodes": 0
+      },
+      {
+        "name": "CheckBeforeSwap",
+        "existing_nodes_moved": [],
+        "default_changes": [],
+        "semantic_edge_changes": [],
+        "added_nodes": 0
+      },
+      {
+        "name": "RunSprintTapControl",
+        "existing_nodes_moved": [],
+        "default_changes": [],
+        "semantic_edge_changes": [],
+        "added_nodes": 0
+      },
+      {
+        "name": "AkimboSelector",
+        "existing_nodes_moved": [],
+        "default_changes": [],
+        "semantic_edge_changes": [],
+        "added_nodes": 0
+      },
+      {
+        "name": "EventGraph",
+        "existing_nodes_moved": [],
+        "default_changes": [],
+        "semantic_edge_changes": [],
+        "added_nodes": 124
+      },
+      {
+        "name": "LOADSAVE",
+        "existing_nodes_moved": [],
+        "default_changes": [],
+        "semantic_edge_changes": [],
+        "added_nodes": 16
+      },
+      {
+        "name": "GetEquippedAnimset",
+        "existing_nodes_moved": [],
+        "default_changes": [],
+        "semantic_edge_changes": [],
+        "added_nodes": 0
+      },
+      {
+        "name": "Get Health",
+        "existing_nodes_moved": [],
+        "default_changes": [],
+        "semantic_edge_changes": [],
+        "added_nodes": 0
+      },
+      {
+        "name": "Get Combat Component",
+        "existing_nodes_moved": [],
+        "default_changes": [],
+        "semantic_edge_changes": [],
+        "added_nodes": 0
+      },
+      {
+        "name": "Is Dead?",
+        "existing_nodes_moved": [],
+        "default_changes": [],
+        "semantic_edge_changes": [],
+        "added_nodes": 0
+      },
+      {
+        "name": "Set Health",
+        "existing_nodes_moved": [],
+        "default_changes": [],
+        "semantic_edge_changes": [],
+        "added_nodes": 0
+      },
+      {
+        "name": "RequestMeleeAttack",
+        "existing_nodes_moved": [],
+        "default_changes": [],
+        "semantic_edge_changes": [],
+        "added_nodes": 0
+      }
+    ],
+    "status": "passed",
+    "normalization_note": "Ignore empty-to-None serialization on unconnected output Key pins; actual input event keys are unchanged."
+  },
+  "native_builds": {
+    "UnrealEditor Development": "Succeeded (plugin target; not a full packaged game)",
+    "UnrealGame Development": "Succeeded (plugin target; not a full packaged game)",
+    "UnrealGame Shipping": "Succeeded (plugin target; not a full packaged game)"
+  },
+  "limits": [
+    "Formal story tables intentionally empty: no production script supplied.",
+    "No full-project cook/package or packaged executable test.",
+    "Existing pause-menu non-focusable widget log and duplicate animation DefaultSlot warnings are outside the dialogue changes.",
+    "Death test explicitly enabled damage on the PIE fixture and set remaining hit count to one before ApplyDamage.",
+    "Travel test re-opened the verification map through OpenLevel, producing a new world and player.",
+    "Key injections used PlayerController/Enhanced Input, not OS keyboard automation."
+  ]
+}

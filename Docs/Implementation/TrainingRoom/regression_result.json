@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "method": "PIE player actor placement and collision sweep; overlap-driven door and travel; no injected OpenLevel call",
+  "events": [
+    {
+      "step": "spawn",
+      "world": "/Game/Maps/UEDPIE_0_Map_TrainingRoom.Map_TrainingRoom",
+      "pawn": "BP_FPCharacter_C",
+      "location": "<Struct 'Vector' (0x000002095A6650A0) {x: -750.000000, y: 940.000000, z: 90.150001}>",
+      "control_rotation": "<Struct 'Rotator' (0x000002095A6650A0) {pitch: 0.000000, yaw: -45.000000, roll: 0.000000}>"
+    },
+    {
+      "step": "door_open",
+      "location": "<Struct 'Vector' (0x000002095A6650A0) {x: -1020.000000, y: 806.000000, z: 113.500000}>"
+    },
+    {
+      "step": "capsule_sweep_through_door",
+      "location": "<Struct 'Vector' (0x000002095A6650A0) {x: -1190.000000, y: 940.000000, z: 96.000000}>"
+    },
+    {
+      "step": "arrive",
+      "world": "/Game/Maps/UEDPIE_0_Map_LabBridge.Map_LabBridge",
+      "pawn": "BP_FPCharacter_C",
+      "location": "<Struct 'Vector' (0x000002095A665690) {x: 0.000000, y: -1040.000000, z: 90.150001}>"
+    }
+  ]
+}
