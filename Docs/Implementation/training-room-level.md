@@ -2,6 +2,8 @@
 
 Date: 2026-10-12. Engine verified: UE 5.6.1. Related records: LEVEL-002, ART-001, LD-053, DOC-001.
 
+**Current-state update (2026-10-13):** The team has extended the clear room to 20 × 34.7 × 8 m. The entrance is now centered on the short south wall, and 101 stage-layout objects have been added. See [Training Room stage delivery](training-room-stages.md) for the current layout, preview controls and validation. The measurements and actor counts below describe the original 2026-10-12 delivery.
+
 ## Delivered scope
 
 `/Game/Maps/Map_TrainingRoom` is an independent, enclosed indoor level built from the approved v5 Blender sliding-door model. Its clear interior is **20 × 24 × 8 m**, with a **1.2 × 2.2 m** doorway on the west wall near the south corner. The room contains only the architectural shell, flush light strips and entrance assembly. Tutorial props, enemies, stage logic and a permanent central marker are not included.
