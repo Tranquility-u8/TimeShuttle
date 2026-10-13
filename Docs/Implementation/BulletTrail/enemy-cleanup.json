@@ -1,0 +1,17 @@
+{
+  "pie_started": false,
+  "source": "Exact copy of UE-produced compiled package preserved after sharing violation",
+  "reviewed_graphs_and_defaults_match": true,
+  "compile_errors": 0,
+  "compile_warnings": 0,
+  "compile_status": "BS_UpToDate",
+  "saved": true,
+  "status": "saved_and_reload_verified",
+  "date": "2026-10-12",
+  "asset": "/Game/Blueprints/AI/Shooter/Projectiles/BP_ShooterProjectile_Bullet",
+  "fix": "On Projectile Hit calls StopFlightTrail before the original mobility branch. StopFlightTrail checks validity and destroys only the owned BulletTrail component.",
+  "original_nodes_and_defaults_preserved": true,
+  "runtime_verification": "Not performed per user instruction to stop tests.",
+  "before_sha256": "4999b083e25877c073d6da7cf563eec6b45e8eac9d4f75f113e838fe1101ae8a",
+  "after_sha256": "3b0297829eb5d69aa8cd97b34319663bbebbc87fe7dc85eb1007ec17f7fe32a7"
+}

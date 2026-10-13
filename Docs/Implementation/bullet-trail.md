@@ -1,4 +1,20 @@
-# 玩家子弹拖尾
+# 玩家与敌人子弹拖尾
+
+## 2026-10-12 敌弹命中后拖尾残留修复
+
+用户反馈弹头消失后拖尾仍显示。核查确认敌弹父类命中后默认延迟6秒销毁Actor；子类命中后晃动、延迟并让Sphere模拟物理，而拖尾按Actor位置保留静止长度。初次接入仅依赖Actor最终销毁清理，没有处理命中后延迟销毁阶段。
+
+现在 `BP_ShooterProjectile_Bullet` 的 `On Projectile Hit` 先调用新增 `StopFlightTrail`：检查本弹 `BulletTrail` 有效后立即销毁该组件，再继续原Mobility分支与弹头表现。重复调用时无效组件直接返回；没有按速度为零触发清理，因此没有新增“时停即清除拖尾”的逻辑。父类伤害、QTE、弹头物理、寿命及共享 `AC_BulletTrail` 均未修改。
+
+新增节点完成局部Blueprint Assist整理、注释及两张编辑器截图目视核对。原有节点、位置和属性保持，仅替换命中入口的一条执行边。原编辑器文件占用导致首次保存失败；用户关闭全部窗口后，确认原文件哈希未变，恢复UE生成的完整编译包，冷加载与已审查图表/属性逐项一致，重新编译0错误/0警告并定向保存成功。[保存与静态核对证据](BulletTrail/enemy-cleanup.json)。完整导出、布局截图和原文件备份在本地 `Saved/Agent/EnemyTrailCleanup20261012/`。未运行PIE，用户所述现象的实际消除仍待运行验收；未提交或推送。
+
+## 2026-10-12 敌弹接入
+
+按用户授权，在 `/Game/Blueprints/AI/Shooter/Projectiles/BP_ShooterProjectile_Bullet` 的 `CollisionComponent` 下新增 `BulletTrail`，复用现有 `AC_BulletTrail`。默认启用，红色、宽1.8 cm、最大长度650 cm；在敌弹蓝图的该组件中可独立调节。没有新增运行插件，也没有修改共享拖尾组件、玩家子弹、敌弹移动/伤害/QTE图表。
+
+UE 5.6 命令行编辑器编译状态为 `BS_UpToDate`，定向保存成功；前后全部图表及原有类属性一致，只新增 `BulletTrail` 属性，见[静态核对结果](BulletTrail/enemy-integration.json)。进程退出报告0错误；日志另有既有动画姿态资产警告和检查API弃用提示。本次未启动PIE或游戏测试，实际画面、时间能力与QTE运行表现仍待验收，不据此关闭TA-018整项。原始备份和完整导出保存在本地忽略目录 `Saved/Agent/EnemyBulletTrail20261012/`。
+
+以下为10/03玩家拖尾实现及历史验收记录；其中“敌弹未接入”描述的是当时范围。
 
 日期：2026-10-03。引擎：本机 UE 5.6.1。任务关联：TA-017、TA-003、P-052。首版接入 BP_TimeBullet；同日按用户补充要求扩展到 Normal / BulletTime 普通射击。不表示教学敌弹 TA-018 或整个计划项已完成。
 

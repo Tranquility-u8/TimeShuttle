@@ -98,6 +98,10 @@ Shooter 的迁入步枪与行为树保留原有开火节奏，但射击终点生
 
 ## BP_TimeBullet 拖尾（2026-10-03）
 
+2026-10-12命中清理补充：敌弹 `On Projectile Hit` 先执行 `StopFlightTrail`，有效性检查后销毁自身 `BulletTrail`，随后保持原命中表现。敌弹Actor延迟销毁（默认6秒）不再作为拖尾唯一清理时机。冷加载、编译和保存已核对；PIE未执行，详见[残留修复记录](../Implementation/bullet-trail.md)。
+
+2026-10-12追加：敌人 `BP_ShooterProjectile_Bullet.CollisionComponent` 下已接入同一个 `AC_BulletTrail`，组件名为 `BulletTrail`。编译与定向保存成功，原有图表及类默认属性核对不变；本轮未启动PIE，敌弹运行视觉仍待验收。下面“未接独立敌弹类”为10/03历史范围，见[最新接入说明](../Implementation/bullet-trail.md)。
+
 `BP_TimeBullet.Collision` 下的 `BulletTrail` 为 `/Game/VFX/BulletTrail/AC_BulletTrail`，父类原生 StaticMeshComponent。它在 BeginPlay 设置 `SM_BulletTrailTaper` 并创建 `M_BulletTrail` 的独立 MID；TG_PostUpdateWork + Owner Tick prerequisite 确保在弹丸飞行/命中之后读取位置。长度由实际累计位移和可配上限决定，静止保持；瞬移和明显转向清零历史。世界绝对变换使厘米粗细不继承弹头缩放；组件不碰撞、不投影，Owner 销毁即清理。公开颜色、粗细、长度、强度、最小方向短尾及视觉开关；不写伤害、时间能力或输入。现有 Normal/BulletTime hitscan 保持，FullStop 生成的实体弹和后续释放使用此组件。当前仅直线弹道，未接独立敌弹类；50 项指定 PIE 检查和可视证据见 [bullet-trail.md](../Implementation/bullet-trail.md)。
 
 同日普通射击扩展：`BP_Item_Base.Fire_HitScan` 的 UseTemporalProjectile=false 分支经 `SpawnHitscanTrail(ShotHit)` 生成 `/Game/VFX/BulletTrail/BP_HitscanTrail`，随后继续原即时伤害链。后者是独立原生 Actor 子类（不是 BP_TimeBullet），持有同一个 AC_BulletTrail；记录真实命中点/TraceEnd，按世界 DeltaSeconds 以默认5000cm/s推进、钳制终点、保持0.04游戏秒后清理。无碰撞/伤害、不计时停弹数量，FullStop 原路径保留。Normal/BulletTime 的样式入口是 BP_HitscanTrail.BulletTrail，FullStop 的是 BP_TimeBullet.BulletTrail；两模板可分别覆盖。新增42项指定PIE检查通过，旧图除单次视觉调用外语义保持；详见上述实现文档。

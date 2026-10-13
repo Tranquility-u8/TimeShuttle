@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-12",
+  "asset": "/Game/Blueprints/AI/Shooter/Projectiles/BP_ShooterProjectile_Bullet",
+  "component": "BulletTrail",
+  "component_class": "/Game/VFX/BulletTrail/AC_BulletTrail.AC_BulletTrail_C",
+  "attachment_parent": "CollisionComponent",
+  "compile_status": "BS_UpToDate",
+  "saved": true,
+  "graphs_unchanged": true,
+  "original_properties_unchanged": true,
+  "added_properties": [
+    "BulletTrail"
+  ],
+  "defaults": {
+    "TrailColor": [
+      1,
+      0.002,
+      0.002,
+      1
+    ],
+    "TrailWidth": 1.8,
+    "TrailLength": 650,
+    "bTrailEnabled": true
+  },
+  "before_sha256": "dd26e012e49a853b024a272d1bcc5a6a83dda64fbe865fff850611fe0367ef2c",
+  "after_sha256": "4999b083e25877c073d6da7cf563eec6b45e8eac9d4f75f113e838fe1101ae8a",
+  "pie_performed": false,
+  "runtime_visual_verification": "Pending; user previously requested stopping tests."
+}
