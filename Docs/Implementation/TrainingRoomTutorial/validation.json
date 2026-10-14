@@ -1,0 +1,111 @@
+{
+  "date": "2026-10-14",
+  "engine": "5.6.1",
+  "map": "/Game/Maps/Map_TrainingRoom",
+  "task_id": "20261014-tutorial-flow",
+  "scope": "Single-player PIE; not packaged or multiplayer validation",
+  "cold_end_to_end": {
+    "passed": true,
+    "exercise_ids_in_completion_order": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      14,
+      11,
+      12
+    ],
+    "completion_utc": "2026-10-14T16:03:41Z",
+    "final_health": 2.0,
+    "method": "Actual movement, F/R/T, mouse fire; test driver sets aim. No goal/progress/health writes to obtain completion.",
+    "temporary_authoring_plugin_loaded": false,
+    "combat_seconds": 24.66
+  },
+  "checks": {
+    "s1": true,
+    "s2": true,
+    "s3_s6_optional": true,
+    "s7": true,
+    "retained_table_and_mirrored_layout": true,
+    "exit_to_lab_bridge": {
+      "passed": true,
+      "unlocked": true,
+      "world": "Map_LabBridge",
+      "seconds": 9.375
+    },
+    "home_reset": true,
+    "backspace_retry": {
+      "step": 1,
+      "retry_delta": 1,
+      "moved_distance": 151.13487988801225,
+      "checkpoint_distance": 0.0,
+      "passed": true
+    },
+    "graph_semantics": {
+      "passed": true,
+      "graphs_checked": 62,
+      "failures": []
+    },
+    "final_editor_state": {
+      "world": "Map_TrainingRoom",
+      "pie_running": false,
+      "temporary_authoring_helper_loaded": false,
+      "stage_actor_count": 101,
+      "all_stage_actors_start_hidden": true,
+      "all_stage_actor_collision_disabled": true,
+      "material_pairs_instance": 16,
+      "background_throttle_restored": true,
+      "dirty_content": [],
+      "dirty_maps": [],
+      "passed": true
+    }
+  },
+  "visual_review": {
+    "dissolve_reveal": "Only lower geometry visible during bottom-up generation",
+    "dissolve_remove": "Upper target geometry gone while shared table stays complete",
+    "s1": "Existing red threat outline visible",
+    "blueprints": "Scoped BA formatting; structured comment details; final visible review"
+  },
+  "runtime_errors_matching_audit": [],
+  "separate_targeted_tests": [
+    "Repeated real S7B death and same-step respawn with four enemies, no duplicates",
+    "Exit through actual trigger into Map_LabBridge; no tutorial adapter effect and time dilation 1 outside room",
+    "Explicit stage-entry/position fixtures only for isolated boundary/visual checks; excluded from cold end-to-end completion claim"
+  ],
+  "warnings_not_resolved": [
+    "Existing missing recoil curves",
+    "Existing additive pistol animation warnings for cooked builds",
+    "Existing Manny pose and duplicate slot warnings",
+    "Virtual shadow page pool capacity"
+  ],
+  "rework_count_basis": {
+    "count": 10,
+    "recorded_implementation_areas": [
+      "BeginPlay execution wiring",
+      "S1 time-lock and dialogue timing",
+      "Actual spawned pistol inventory resolution",
+      "Pistol pickup physics during reveal",
+      "Mirrored weakpoint offsets",
+      "NPC falling during non-colliding reveal",
+      "Duplicate combat actors on retry",
+      "Shared visible objects during group removal",
+      "Occupied incoming cover gating",
+      "Placed actor material-pair overrides"
+    ],
+    "excludes": "Test-driver API/aim/fixture corrections and editor authoring helper API corrections"
+  },
+  "raw_evidence_directory": "Saved/Agent/TutorialFlow",
+  "build": "Final Win64 Development Editor build succeeded; raw log: Saved/Agent/TutorialFlow/final_build_log.txt",
+  "stage_2a_update": {
+    "task_id": "20261014-tutorial-s2a-clear",
+    "passed": true,
+    "evidence": "validation_s2a.json",
+    "supersedes": "The original manual-stop/displacement/manual-resume S2A contract. Existing cold_end_to_end evidence describes the earlier rule."
+  }
+}

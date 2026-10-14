@@ -1,0 +1,222 @@
+{
+  "task": "20261014-tutorial-blueprint-migration",
+  "engine": "5.6.1",
+  "outcome": "passed",
+  "plugin_removed": true,
+  "runtime_assets": [
+    "BP_TrainingController",
+    "AC_TrainingVisual",
+    "BPI_TrainingShot",
+    "BFL_TrainingImpact",
+    "WBP_TrainingObjective"
+  ],
+  "full_cold": {
+    "passed": true,
+    "utc": "2026-10-14T18:25:27.615784+00:00",
+    "step": 13,
+    "health": 2.0,
+    "records": {
+      "1": "Guided; gun=0; rock=0; temporal=false",
+      "2": "Guided; gun=0; rock=0; temporal=false",
+      "3": "Independent; gun=0; rock=0; temporal=false",
+      "4": "Independent; gun=0; rock=0; temporal=false",
+      "5": "Guided; gun=4; rock=0; temporal=false",
+      "6": "Guided; gun=1; rock=0; temporal=true",
+      "7": "Independent; gun=1; rock=0; temporal=true",
+      "8": "Independent; gun=1; rock=0; temporal=true",
+      "9": "Guided; gun=0; rock=3; temporal=true",
+      "10": "Independent; gun=5; rock=0; temporal=false",
+      "14": "Independent; gun=0; rock=1; temporal=true",
+      "11": "Independent; gun=0; rock=0; temporal=false",
+      "12": "Independent; gun=0; rock=0; temporal=false"
+    },
+    "removed_native_class_available": false,
+    "method": "One cold-start PIE from S1; actual movement, interaction, reload, time and fire inputs; aim set by fixture; no health/goal/progression writes for completion; two actual 2B injury retries are included."
+  },
+  "normal_cold": {
+    "passed": true,
+    "removed_native_class_available": false,
+    "temporary_helper_available": false,
+    "world": "Map_TrainingRoom",
+    "step": 1,
+    "health": 2.0,
+    "controller_class": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController.BP_TrainingController_C",
+    "records": {}
+  },
+  "post_exit": {
+    "world": "Map_LabBridge",
+    "controller_count": 0,
+    "unregistered_shot_consumed": false,
+    "time_dilation": 1.0,
+    "removed_native_class_available": false
+  },
+  "death_retry": {
+    "passed": true,
+    "error": "",
+    "fixture": "Enter S7B; apply actual fatal damage through GameplayStatics; do not set health/death/progress fields",
+    "deaths": 2,
+    "checks": [
+      {
+        "name": "Actual death returns to same S7B checkpoint",
+        "passed": true,
+        "distance": 0.0,
+        "retry": 4,
+        "health": 2.0
+      },
+      {
+        "name": "Actual death returns to same S7B checkpoint",
+        "passed": true,
+        "distance": 0.0,
+        "retry": 5,
+        "health": 2.0
+      },
+      {
+        "name": "Retry does not duplicate combat enemies",
+        "passed": true,
+        "tracked": 4,
+        "world_characters": 4
+      }
+    ]
+  },
+  "format_graphs": 90,
+  "semantic_graphs": 105,
+  "raw_evidence_root": "Saved/Agent/TutorialBlueprint",
+  "limitations": [
+    "Packaging unverified",
+    "Multiplayer unverified",
+    "All weapons and long-duration performance unverified",
+    "Player pacing and voice recording review outstanding"
+  ],
+  "final_editor": {
+    "passed": true,
+    "stage_actors": 101,
+    "world": "Map_TrainingRoom",
+    "pie": false,
+    "dirty_content": [],
+    "dirty_maps": []
+  },
+  "cold_load": {
+    "/Script/TimeShuttleTraining": [],
+    "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingRoomSupport": [],
+    "passed": true,
+    "native_class_available": false,
+    "old_asset_exists": false,
+    "compile": [
+      {
+        "path": "/Game/Environment/TrainingRoom/Tutorial/AC_TrainingVisual",
+        "compile_errors": 0
+      },
+      {
+        "path": "/Game/Environment/TrainingRoom/Tutorial/BPI_TrainingShot",
+        "compile_errors": 0
+      },
+      {
+        "path": "/Game/Environment/TrainingRoom/Tutorial/BFL_TrainingImpact",
+        "compile_errors": 0
+      },
+      {
+        "path": "/Game/Environment/TrainingRoom/Tutorial/WBP_TrainingObjective",
+        "compile_errors": 0
+      },
+      {
+        "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+        "compile_errors": 0
+      },
+      {
+        "path": "/Game/Blueprints/Interactables/BP_Item_Base",
+        "compile_errors": 0
+      },
+      {
+        "path": "/Game/Blueprints/Weapons/Player/Projectiles/BP_TimeBullet",
+        "compile_errors": 0
+      },
+      {
+        "path": "/Game/Maps/Map_TrainingRoom.Map_TrainingRoom:PersistentLevel.Map_TrainingRoom",
+        "compile_errors": 0
+      }
+    ],
+    "stage_count": 101,
+    "hidden_all": true,
+    "noncolliding_all": true
+  },
+  "s2ab_checks": [
+    {
+      "name": "2A still passes on its single first shot",
+      "passed": true,
+      "shots": [
+        "BP_ShooterProjectile_Bullet_C_0"
+      ]
+    },
+    {
+      "name": "2B disables QTE",
+      "passed": true
+    },
+    {
+      "name": "No pass before first 2B shot",
+      "passed": true
+    },
+    {
+      "name": "Retry fully restores player and same 2B checkpoint",
+      "passed": true,
+      "health": 2.0,
+      "energy": 100.0,
+      "weight": 0.0,
+      "distance": 0.0,
+      "yaw_error": 0.0,
+      "retry": 1
+    },
+    {
+      "name": "S1 and 2A completion retained",
+      "passed": true
+    },
+    {
+      "name": "Retry fully restores player and same 2B checkpoint",
+      "passed": true,
+      "health": 2.0,
+      "energy": 100.0,
+      "weight": 0.0,
+      "distance": 0.0,
+      "yaw_error": 0.0,
+      "retry": 2
+    },
+    {
+      "name": "S1 and 2A completion retained",
+      "passed": true
+    },
+    {
+      "name": "Frozen first bullet remains a completion blocker",
+      "passed": true
+    },
+    {
+      "name": "Retry fully restores player and same 2B checkpoint",
+      "passed": true,
+      "health": 2.0,
+      "energy": 100.0,
+      "weight": 0.0,
+      "distance": 0.0,
+      "yaw_error": 0.0,
+      "retry": 3
+    },
+    {
+      "name": "S1 and 2A completion retained",
+      "passed": true
+    },
+    {
+      "name": "Backspace retry occurs immediately, before thaw or damage",
+      "passed": true,
+      "latency": 0.3119999999180436
+    },
+    {
+      "name": "First single bullet naturally disappears and passes 2B without T",
+      "passed": true,
+      "shots": [
+        "BP_ShooterProjectile_Bullet_C_4"
+      ],
+      "modes": [
+        0
+      ]
+    }
+  ],
+  "full_cold_gameplay_log_errors": 0,
+  "editor_shutdown_note": "One post-save BlueprintEditor PreviewScene assertion occurred at 18:20 UTC; subsequent plugin-free full cold gameplay and ordinary cold initial PIE passed. Not a gameplay crash."
+}

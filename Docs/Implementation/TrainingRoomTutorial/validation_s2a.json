@@ -1,0 +1,576 @@
+{
+  "task_id": "20261014-tutorial-s2a-clear",
+  "date": "2026-10-14",
+  "engine": "5.6.1",
+  "rule": "Only the first single projectile fired in each S2A attempt is tracked. Its disappearance with Health == 2 passes. Injury has priority and immediately retries S2A, arming a new first shot.",
+  "s2a_contract_passed": true,
+  "combined_s1_s2c_run_completed": false,
+  "s2b_passed": true,
+  "s2c_extra_regression": "Interrupted when PIE ended; not counted as passing in this update.",
+  "current_health_is_authoritative": true,
+  "time_stop_displacement_manual_resume_required": false,
+  "single_player_cold_loaded_pie": true,
+  "temporary_authoring_plugin_loaded": false,
+  "test": {
+    "passed": false,
+    "error": "PIE session ended before test completion",
+    "checks": [
+      {
+        "name": "No completion before the first shot",
+        "passed": true
+      },
+      {
+        "name": "Checkpoint facing restored",
+        "passed": true,
+        "yaw_error": 0.0
+      },
+      {
+        "name": "Retry restores health, checkpoint, time and injury presentation",
+        "passed": true,
+        "retry": 1,
+        "health": 2.0,
+        "mode": 0,
+        "damage_weight": 0.0,
+        "distance": 0.0
+      },
+      {
+        "name": "Earlier progress retained; 2A not marked complete",
+        "passed": true
+      },
+      {
+        "name": "Checkpoint facing restored",
+        "passed": true,
+        "yaw_error": 0.0
+      },
+      {
+        "name": "Retry restores health, checkpoint, time and injury presentation",
+        "passed": true,
+        "retry": 2,
+        "health": 2.0,
+        "mode": 0,
+        "damage_weight": 0.0,
+        "distance": 0.0
+      },
+      {
+        "name": "Earlier progress retained; 2A not marked complete",
+        "passed": true
+      },
+      {
+        "name": "Frozen live bullet cannot complete 2A",
+        "passed": true,
+        "mode": 1,
+        "bullets": 1
+      },
+      {
+        "name": "Checkpoint facing restored",
+        "passed": true,
+        "yaw_error": 0.0
+      },
+      {
+        "name": "Retry restores health, checkpoint, time and injury presentation",
+        "passed": true,
+        "retry": 3,
+        "health": 2.0,
+        "mode": 0,
+        "damage_weight": 0.0,
+        "distance": 0.0
+      },
+      {
+        "name": "Earlier progress retained; 2A not marked complete",
+        "passed": true
+      },
+      {
+        "name": "Unhurt projectile disappearance passes without time stop or manual resume",
+        "passed": true,
+        "modes": [
+          0
+        ],
+        "shots": [
+          "BP_ShooterProjectile_Bullet_C_3"
+        ]
+      },
+      {
+        "name": "2B/C do not pass just because a shot exists",
+        "passed": true,
+        "step": 3
+      }
+    ],
+    "samples": [
+      {
+        "time": 0.02,
+        "step": 2,
+        "phase": 0,
+        "mode": 0,
+        "retry": 0,
+        "health": 2.0,
+        "state": "initial_wait",
+        "bullets": 0,
+        "gone": false,
+        "hurt": false,
+        "energy": 100.0,
+        "loc": [
+          0.5688911098927609,
+          -476.4953657661365,
+          90.1500015258789
+        ]
+      },
+      {
+        "time": 2.08,
+        "step": 2,
+        "phase": 0,
+        "mode": 0,
+        "retry": 0,
+        "health": 2.0,
+        "state": "take_hit",
+        "bullets": 0,
+        "gone": false,
+        "hurt": false,
+        "energy": 100.0,
+        "loc": [
+          0.5688911098927609,
+          -476.4953657661365,
+          90.1500015258789
+        ]
+      },
+      {
+        "time": 3.95,
+        "step": 2,
+        "phase": 0,
+        "mode": 0,
+        "retry": 0,
+        "health": 2.0,
+        "state": "take_hit",
+        "bullets": 1,
+        "gone": false,
+        "hurt": false,
+        "energy": 100.0,
+        "loc": [
+          0.5688911098927609,
+          -476.4953657661365,
+          90.1500015258789
+        ]
+      },
+      {
+        "time": 5.31,
+        "step": 2,
+        "phase": 0,
+        "mode": 0,
+        "retry": 0,
+        "health": 1.0,
+        "state": "take_hit",
+        "bullets": 1,
+        "gone": false,
+        "hurt": true,
+        "energy": 100.0,
+        "loc": [
+          0.5688911098927609,
+          -476.4953657661365,
+          90.1500015258789
+        ]
+      },
+      {
+        "time": 5.33,
+        "step": 2,
+        "phase": 0,
+        "mode": 0,
+        "retry": 1,
+        "health": 2.0,
+        "state": "take_hit",
+        "bullets": 0,
+        "gone": false,
+        "hurt": false,
+        "energy": 100.0,
+        "loc": [
+          0.5688911098927609,
+          -476.4953657661365,
+          90.1500015258789
+        ]
+      },
+      {
+        "time": 9.33,
+        "step": 2,
+        "phase": 0,
+        "mode": 0,
+        "retry": 1,
+        "health": 2.0,
+        "state": "take_hit",
+        "bullets": 1,
+        "gone": false,
+        "hurt": false,
+        "energy": 100.0,
+        "loc": [
+          0.5688911098927609,
+          -476.4953657661365,
+          90.1500015258789
+        ]
+      },
+      {
+        "time": 10.67,
+        "step": 2,
+        "phase": 0,
+        "mode": 0,
+        "retry": 1,
+        "health": 1.0,
+        "state": "take_hit",
+        "bullets": 1,
+        "gone": false,
+        "hurt": true,
+        "energy": 100.0,
+        "loc": [
+          0.5688911098927609,
+          -476.4953657661365,
+          90.1500015258789
+        ]
+      },
+      {
+        "time": 10.69,
+        "step": 2,
+        "phase": 0,
+        "mode": 0,
+        "retry": 2,
+        "health": 2.0,
+        "state": "take_hit",
+        "bullets": 0,
+        "gone": false,
+        "hurt": false,
+        "energy": 100.0,
+        "loc": [
+          0.5688911098927609,
+          -476.4953657661365,
+          90.1500015258789
+        ]
+      },
+      {
+        "time": 10.75,
+        "step": 2,
+        "phase": 0,
+        "mode": 0,
+        "retry": 2,
+        "health": 2.0,
+        "state": "freeze_wait",
+        "bullets": 0,
+        "gone": false,
+        "hurt": false,
+        "energy": 100.0,
+        "loc": [
+          0.5688911098927609,
+          -476.4953657661365,
+          90.1500015258789
+        ]
+      },
+      {
+        "time": 14.7,
+        "step": 2,
+        "phase": 0,
+        "mode": 0,
+        "retry": 2,
+        "health": 2.0,
+        "state": "freeze_wait",
+        "bullets": 1,
+        "gone": false,
+        "hurt": false,
+        "energy": 100.0,
+        "loc": [
+          0.5688911098927609,
+          -476.4953657661365,
+          90.1500015258789
+        ]
+      },
+      {
+        "time": 14.72,
+        "step": 2,
+        "phase": 0,
+        "mode": 1,
+        "retry": 2,
+        "health": 2.0,
+        "state": "frozen",
+        "bullets": 1,
+        "gone": false,
+        "hurt": false,
+        "energy": 99.99666595458984,
+        "loc": [
+          0.5688911098927609,
+          -476.4953657661365,
+          90.1500015258789
+        ]
+      },
+      {
+        "time": 16.78,
+        "step": 2,
+        "phase": 0,
+        "mode": 1,
+        "retry": 2,
+        "health": 2.0,
+        "state": "manual_retry",
+        "bullets": 1,
+        "gone": false,
+        "hurt": false,
+        "energy": 79.3870620727539,
+        "loc": [
+          0.5688911098927609,
+          -476.4953657661365,
+          90.1500015258789
+        ]
+      },
+      {
+        "time": 16.8,
+        "step": 2,
+        "phase": 0,
+        "mode": 0,
+        "retry": 3,
+        "health": 2.0,
+        "state": "manual_retry",
+        "bullets": 0,
+        "gone": false,
+        "hurt": false,
+        "energy": 100.0,
+        "loc": [
+          0.5688911098927609,
+          -476.4953657661365,
+          90.1500015258789
+        ]
+      },
+      {
+        "time": 16.81,
+        "step": 2,
+        "phase": 0,
+        "mode": 0,
+        "retry": 3,
+        "health": 2.0,
+        "state": "normal_wait",
+        "bullets": 0,
+        "gone": false,
+        "hurt": false,
+        "energy": 100.0,
+        "loc": [
+          0.5688911098927609,
+          -476.4953657661365,
+          90.1500015258789
+        ]
+      },
+      {
+        "time": 20.8,
+        "step": 2,
+        "phase": 0,
+        "mode": 0,
+        "retry": 3,
+        "health": 2.0,
+        "state": "normal_wait",
+        "bullets": 1,
+        "gone": false,
+        "hurt": false,
+        "energy": 100.0,
+        "loc": [
+          0.5688911098927609,
+          -476.4953657661365,
+          90.1500015258789
+        ]
+      },
+      {
+        "time": 20.81,
+        "step": 2,
+        "phase": 0,
+        "mode": 0,
+        "retry": 3,
+        "health": 2.0,
+        "state": "normal_move",
+        "bullets": 1,
+        "gone": false,
+        "hurt": false,
+        "energy": 100.0,
+        "loc": [
+          0.568486749440821,
+          -476.49536576614145,
+          90.1500015258789
+        ]
+      },
+      {
+        "time": 22.17,
+        "step": 2,
+        "phase": 0,
+        "mode": 0,
+        "retry": 3,
+        "health": 2.0,
+        "state": "normal_clear",
+        "bullets": 1,
+        "gone": false,
+        "hurt": false,
+        "energy": 100.0,
+        "loc": [
+          -255.9696343707486,
+          -476.4953688877332,
+          90.27154284255045
+        ]
+      },
+      {
+        "time": 27.36,
+        "step": 2,
+        "phase": 0,
+        "mode": 0,
+        "retry": 3,
+        "health": 2.0,
+        "state": "normal_clear",
+        "bullets": 0,
+        "gone": true,
+        "hurt": false,
+        "energy": 100.0,
+        "loc": [
+          -276.52243684229063,
+          -476.49536913781895,
+          90.27154284255045
+        ]
+      },
+      {
+        "time": 27.38,
+        "step": 3,
+        "phase": 0,
+        "mode": 0,
+        "retry": 3,
+        "health": 2.0,
+        "state": "normal_clear",
+        "bullets": 0,
+        "gone": false,
+        "hurt": false,
+        "energy": 100.0,
+        "loc": [
+          -276.52243684229063,
+          -476.49536913781895,
+          90.27154284255045
+        ]
+      },
+      {
+        "time": 27.44,
+        "step": 3,
+        "phase": 0,
+        "mode": 0,
+        "retry": 3,
+        "health": 2.0,
+        "state": "regression_wait",
+        "bullets": 0,
+        "gone": false,
+        "hurt": false,
+        "energy": 100.0,
+        "loc": [
+          -276.52243684229063,
+          -476.49536913781895,
+          90.27154284255045
+        ]
+      },
+      {
+        "time": 31.38,
+        "step": 3,
+        "phase": 0,
+        "mode": 0,
+        "retry": 3,
+        "health": 2.0,
+        "state": "regression_wait",
+        "bullets": 1,
+        "gone": false,
+        "hurt": false,
+        "energy": 100.0,
+        "loc": [
+          -276.52243684229063,
+          -476.49536913781895,
+          90.27154284255045
+        ]
+      },
+      {
+        "time": 31.39,
+        "step": 3,
+        "phase": 0,
+        "mode": 1,
+        "retry": 3,
+        "health": 2.0,
+        "state": "regression_stopping",
+        "bullets": 1,
+        "gone": false,
+        "hurt": false,
+        "energy": 99.83333587646484,
+        "loc": [
+          -276.52243684229063,
+          -476.49536913781895,
+          90.27154284255045
+        ]
+      },
+      {
+        "time": 31.42,
+        "step": 3,
+        "phase": 0,
+        "mode": 1,
+        "retry": 3,
+        "health": 2.0,
+        "state": "regression_move",
+        "bullets": 1,
+        "gone": false,
+        "hurt": false,
+        "energy": 99.66666412353516,
+        "loc": [
+          -275.9535457323981,
+          -476.49536913089673,
+          90.27154284255045
+        ]
+      },
+      {
+        "time": 32.05,
+        "step": 3,
+        "phase": 0,
+        "mode": 0,
+        "retry": 3,
+        "health": 2.0,
+        "state": "regression_resumed",
+        "bullets": 1,
+        "gone": false,
+        "hurt": false,
+        "energy": 93.66655731201172,
+        "loc": [
+          -80.55684162811468,
+          -476.4953667533158,
+          90.27154284255045
+        ]
+      },
+      {
+        "time": 33.56,
+        "step": 4,
+        "phase": 0,
+        "mode": 0,
+        "retry": 3,
+        "health": 2.0,
+        "state": "regression_resumed",
+        "bullets": 0,
+        "gone": false,
+        "hurt": false,
+        "energy": 100.0,
+        "loc": [
+          -60.004038137286585,
+          -476.49536650322995,
+          90.27154284255045
+        ]
+      }
+    ],
+    "elapsed": 34.51600000006147
+  },
+  "blueprint": {
+    "passed": true,
+    "changed_graphs": [
+      "Enter_S2A",
+      "Check_S2A"
+    ],
+    "compile_errors": 0,
+    "compile_warnings": 0
+  },
+  "editor_state": {
+    "world": "Map_TrainingRoom",
+    "pie_running": false,
+    "temporary_authoring_helper_loaded": false,
+    "stage_actor_count": 101,
+    "all_stage_actors_start_hidden": true,
+    "all_stage_actor_collision_disabled": true,
+    "material_pairs_instance": 16,
+    "background_throttle_restored": true,
+    "dirty_content": [],
+    "dirty_maps": [],
+    "passed": true
+  },
+  "fixture_note": "First script-started PIE lacked the gameplay viewport and the S1 input fixture timed out. Restarting through the editor Play button provided the proper player viewport. No gameplay fix was needed for that attempt.",
+  "scope": "S1 and all requested S2A checks passed, including normal-time completion into S2B. S2B completed into S2C; extra S2C regression was interrupted when PIE ended. Previous full-flow evidence remains historical."
+}
