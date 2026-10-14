@@ -49,8 +49,8 @@ The map's Level Blueprint owns progression through 31 graphs: EventGraph, EnterE
 | 5 | S3 supplies / aiming | Separate pistol and ammo interactions, real manual reload, four actual target kills |
 | 6–8 | S4 moving armor | Three sequential weakpoint-only targets; first requires a temporal hit and manual resume |
 | 9 | S5 environment kill | Temporal link hit, manual resume, rock landing and three footprint kills; body shots rejected |
-| 10 | S6 free solution | Five targets; guns, temporal shots and rock kills allowed; Enter continues, O starts optional practice |
-| 14 | Optional moving rock | Moving link/rock, visible landing result; Enter can always leave, success never blocks the main line |
+| 10 | S6 free solution | Five targets; guns, temporal shots and rock kills allowed; automatically continues after three seconds, Enter continues immediately, O starts optional practice during that interval |
+| 14 | Optional moving rock | Moving link/rock; landing automatically continues to S7A, Enter can leave early |
 | 11 | S7A melee preview | One real melee NPC on the player side; existing damage/death system determines completion |
 | 12 | S7B combat | Table removed, five covers, one melee plus three ranged NPCs with staggered AI activation; all four dead while player survives |
 | 13 | Complete | Stop training threats, unlock Training Exit to Map_LabBridge |
@@ -61,7 +61,7 @@ S7A's one-enemy completion contract fills an underspecified section of the guide
 
 - Existing WASD, mouse, T, F, R and firing/aiming controls are retained.
 - Backspace retries the current exercise; hold Home for 2 real seconds to reset the entire tutorial. Legacy F8/F9 aliases remain, but the HUD uses Backspace/Home to avoid PIE shortcut conflicts.
-- H supplies an extra hint and marks that exercise as guided. S6 uses Enter to continue and O for optional practice.
+- H supplies an extra hint and marks that exercise as guided. S6 automatically continues three seconds after completion; Enter skips the wait and O selects optional practice during it.
 - A fresh stage caches the current player transform. Ordinary transitions do not teleport the player. Death uses the existing player respawn chain and `RespawnFallbackTransform`, then resets only the current step. S4 checkpoints each target.
 - Full reset clears completion records, cancels old dialogue/threats, restores entrance, initial equipment and layout orientation, and locks the exit again. Holding reset does not repeatedly restart.
 - `CurrentStep`, `Phase`, checkpoint and `CompletedExercises` are level-local memory only. No tutorial SaveGame or local progress file is written. Leaving the map or ending PIE discards this session.
@@ -105,3 +105,56 @@ The final completion log contained no Blueprint Runtime Error, Accessed None or 
 Changed assets are the training map, new Tutorial assets/materials/arrival table, the three shared Blueprint adapters, conversation table, project plugin descriptor and training plugin source. No other map or original Dissolve source was saved as part of this change. Original task backups are retained in `Saved/Agent/TutorialFlow/Backups`; no commit or push was made.
 
 Next validation is user playtesting of pacing, difficulty and final VFX/audio quality. Packaging, all-weapon coverage, multiplayer and long-duration performance are unverified. The two arrival lines still require recorded audio if voiced delivery is desired. Update stage tags, material pairs, checkpoint logic and tests together when changing the room layout.
+
+## S7 enemy repair — 2026-10-14
+
+This repair targets S7A (one melee enemy) and S7B (one melee plus three ranged enemies) in `Map_TrainingRoom`.
+
+- `AC_EnemyWeakPoints.CreateWeakPointVisuals` now assigns the `NoCollision` profile to cosmetic cores and markers. Calling only `SetCollisionEnabled(NoCollision)` while the tutorial has disabled the entire Actor can early-out against the Actor override, leaving the underlying blocking profile intact. On reveal, those decorations then obstruct navigation. The profile assignment fixes the underlying component state.
+- `ABP_Manny` and `ABP_Manny_Ranged` derive `ShouldMove` from ground speed above 3, without requiring nonzero acceleration. AI path following can move a character while reporting zero acceleration; the previous condition repeatedly selected idle during movement.
+- `BP_TrainingController.UpdateCombat` faces newly spawned enemies toward the player's current location using yaw only. The shared controller's sight/lose-sight radii are 3500/4000 uu (previously 1500/2000); its 60-degree half-angle and physical line-of-sight checks remain. The shared radius change also affects enemies outside the tutorial.
+- Enemy activation waits for both the reveal deadline and enabled Actor collision. Characters are frozen immediately after spawning. Extra activation delay is 0.1 seconds plus 0.25 seconds per enemy, replacing 1 second plus 2.5 seconds per enemy.
+- `StopThreats` snapshots each combatant's attached Actors into a local array and destroys those attachments before dissolving/removing the combatant. Snapshotting avoids reevaluating a shrinking attachment array during iteration. Repeated retries no longer leave swords in the room.
+- `AC_TrainingVisual.UpdateVisual` caches whether visibility was below one before interpolation. It restores walking only when reveal completes, rather than overriding `MOVE_None` every visible frame. This preserves the movement freeze owned by enemy rewind.
+
+Validation is scoped PIE automation, using explicit stage-entry/position fixtures rather than a new complete tutorial playthrough. The player was invulnerable during observation, except for the dedicated natural-damage interval. No attack target was injected for the training combat observations.
+
+- A 78-second S7A/S7B run observed melee attack and ranged fire montages, 22 distinct enemy projectiles, and repeated cover reservation, occupancy and release. With real enemy damage enabled, player health changed `2 -> 1 -> 0` and S7B retried with four enemies.
+- The final 65-second regression includes S7A spawning at a 10 FPS cap, S7B, time-stop/slow-time activation and release, enemy rewind component begin/end, and two retries. No enemy fell through the level. Cosmetic cores stayed `NoCollision`; there were no sampled moving-melee/idle mismatches or orphan swords. Rewind samples kept all four enemies in `MOVE_None` with their brains stopped and `ABP_EnemyRewind`; end-rewind restored their normal animation classes, walking and brains.
+- After the ranged animation change, a final saved S7B smoke run observed all four enemies, melee attacks and ranged fire, with zero orphan swords. Two isolated melee movement/idle samples occurred during transitions; subjective pose smoothness still requires playtesting.
+- A separate death fixture applied 1000 damage through `GameplayStatics.ApplyDamage` to each enemy. The tutorial advanced to step 13 with zero remaining enemies and zero swords. This checks the damage/death/cleanup path, not player aiming or weapon-hit accuracy.
+- A 35-second `Map_Test` regression placed the player on verified navigation points in front of the existing enemies. Both acquired the player naturally, melee played sword attacks, ranged fired eight projectiles and used cover. After the matching ranged animation fix, ranged movement/idle mismatches were zero; one isolated melee sample remained at a transition boundary, without repeated idle switching. No new Blueprint runtime errors occurred in this final run.
+- Independent cold loading compiled all six changed Blueprints plus both enemy classes with zero errors and zero warnings. It confirmed saved sight settings of 3500/4000/60.
+
+New logic received local layout and explanatory comments; pin/default comparison verified layout preserved the functional changes. Blueprint Assist's size refresh attempted to rearrange the connected legacy graph, so that transaction was fully undone and local positions were set explicitly. Unrelated graph positions were preserved. Editor-visible layout review and compile/save checks followed.
+
+Raw evidence and reversible backups are local under `Saved/Agent/TrainingEnemyFix/`: `regression1.json`, `final-runtime2.json`, `map-test-final2.json`, `cold-verify.json`, graph snapshots and scripts. An earlier inspection-tool null-asset crash, a navigation diagnostic CDO ensure, and a failed Map_Test player-placement fixture (outside the walkable floor, followed by missing-player warnings) were separated from the final gameplay runs; the helper was guarded, changes recovered from scripts, and the saved assets reverified. Existing imported animation warnings remain. No map, project descriptor or runtime plugin dependency was changed.
+
+Remaining acceptance: hands-on S7 movement/aiming/occlusion and animation feel, actual rewind key input, and a fresh complete tutorial playthrough. Packaged builds and multiplayer are not covered by this repair.
+
+## Progression, hit reactions and target markers — 2026-10-14 follow-up
+
+The Level Blueprint now routes successful exercise checks through `CompleteExercise(ExpectedStep, NextStep, Reposition)`. It verifies the expected current step, records completion and enters the destination synchronously. Retry/reset retain their separate paths. S6 automatically advances after a three-second real-time choice window; Enter advances immediately and O selects the optional exercise during that window. Optional rock landing also advances automatically. Other exercises retain their mechanic-specific completion requirements, including manual time resume where that is the lesson.
+
+Both formal enemy classes now auto-possess when placed **or spawned**. Their shared BeginPlay previously cast to the controller before binding damage/death delegates; training spawns with placed-only possession skipped those bindings. The shared base also explicitly makes its skeletal mesh block Camera, the player's firearm trace channel, while retaining the capsule's ignore response. Spawned defaults had ignored body shots. Death now enables physics collision before enabling ragdoll simulation.
+
+S4 moving targets reuse `WBP_WeakPointMarker` and the existing yellow tier colors. The controller owns paired widget/real-hit-sphere references, projects the marker after target movement, accounts for distance/FOV/DPI and hides it outside the time ability, behind the camera, behind an obstruction or when the target disables collision. The occlusion trace ignores the player. Layout changes, retry and tutorial cleanup remove the viewport widgets. Cosmetic target cores use the `NoCollision` profile. `AC_EnemyWeakPoints` now invokes its existing visual cleanup on EndPlay as well; previously destroyed enemies left hidden widgets in the viewport.
+
+Verification of this follow-up:
+
+- A scoped training run observed all four enemies play their correct hit montages after 10 damage, resume combat and complete S7B after lethal damage. Damage for this particular run was submitted through the production AnyDamage entry.
+- S6 target hits submitted through `ResolveTrainingShot` caused automatic advancement about three seconds after completion, with no continue/optional input. Optional link/rock completion automatically returned to S7A. These are controlled stage fixtures, not a complete input-driven tutorial playthrough.
+- Actual equipped-pistol `BeginFire`/`StopFire` tests in both `Map_Test` and the saved training map hit each enemy's body, changed health `100 → 75` and played `Montage_Sword_Hit` / `Montage_Rifle_Hit`. The fixture obtained the pistol through the pickup interaction, aligned the camera, set zero spread and froze/repositioned enemies; it did not inject health damage for these shots.
+- A further training shot aimed at an active head weakpoint changed health `75 → 25` and resolved to `SphereComponent_0`, even though the first physical trace hit the body mesh. The existing `SelectWeakPointHitComponent` correction therefore still preserves weakpoint damage after enabling body collision.
+- The S4 marker was visible in PIE during time stop, hidden in Normal and behind the camera, and restored when facing the target. Two retries retained exactly one owned/viewport marker; leaving S4 left zero. Enemy cleanup no longer left the previous 20 hidden viewport widgets.
+- All five changed Blueprints and the Level Blueprint compiled with zero errors/warnings, saved successfully and passed a separate cold-load compile. The final training weapon run produced no new Blueprint runtime errors. Existing player-arm slot and pistol additive-animation warnings remain. Earlier malformed weapon/pickup fixtures and inspection-script errors are kept separate from passing results.
+
+Local evidence and backups: `Saved/Agent/TrainingFollowup/`, including `runtime3.json`, `markers-lifecycle-final.json`, `map-test-weapon-hit-final.json`, `training-weapon-hit-final.json`, `cold.json`, `saved.json` and graph snapshots. Local graph layout/comments were reviewed in the editor; unrelated layouts were preserved. Only the training map and the five related Blueprints were saved for this follow-up. `Map_Test` was exercised without saving. A new complete hands-on tutorial run, animation feel, packaging and multiplayer remain unverified.
+
+### 2026-10-14 late-fire teardown repair and energy tuning
+
+The subsequent user play session reported `WeaponActor` pending-kill access at `BP_ShooterNPC`'s projectile spawn node. `StopThreats` now stops the brain and active attack montage before destroying attached weapons. The shooter's Fire notify also validates both weapon and attack target before evaluating the spawn transform, covering delayed callbacks outside tutorial cleanup.
+
+PIE regression exercised normal fire (three projectiles), weapon destruction during an attack (zero later projectiles), three consecutive attack-time retries (all three shooter montages stopped on each retry), and leaving combat. No Blueprint runtime errors occurred in this test window. Existing first-person animation duplicate-slot and end-PIE crowd/nav warnings remain separate from this repair.
+
+`AC_TimeAbility.Class Defaults.DrainPerSecond` changed from 10 to 15; the player's inherited component template was updated and saved. Tutorial `SavedDrain` and the restored runtime rate both read 15. FullStop/BulletTime measured 14.96/15.02 energy per real second; recovery remained 10 per second, depletion returned to Normal, and world time returned to 1. Local evidence/backups are under `Saved/Agent/TrainingErrorsEnergy/`. Subjective full-run feel and packaged builds were not tested for this follow-up.
