@@ -1,0 +1,439 @@
+{
+  "schema_version": 1,
+  "title": "Time Shuttler Training Stage Props",
+  "units": "centimeters",
+  "geometry_axes": {
+    "width": "X",
+    "depth": "Y",
+    "up": "Z",
+    "front": "-Y"
+  },
+  "fbx_export": {
+    "axis_forward": "-Y",
+    "axis_up": "Z",
+    "apply_unit_scale": true,
+    "apply_scale_options": "FBX_SCALE_UNITS",
+    "scene_scale_length": 0.01,
+    "global_scale": 1
+  },
+  "source_blend": "TrainingStageProps.blend",
+  "generator": "build_training_props.py",
+  "provenance": "Original geometric models created for the Time Shuttler project; no third-party or generated-provider assets.",
+  "notes": [
+    "Static layout mesh assets only. No AI, pickups, timers, stage sequencing, damage, melting, or time-system logic.",
+    "Gantry collision must retain its central opening.",
+    "Each FBX contains one mesh at origin with bottom-center pivot."
+  ],
+  "materials": {
+    "M_TS_TrainingWhite": {
+      "base_color": [
+        0.72,
+        0.78,
+        0.81,
+        1
+      ],
+      "roughness": 0.4,
+      "metallic": 0.25,
+      "emission": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "emission_strength": 0
+    },
+    "M_TS_TrainingDarkMetal": {
+      "base_color": [
+        0.035,
+        0.053,
+        0.07,
+        1
+      ],
+      "roughness": 0.32,
+      "metallic": 0.65,
+      "emission": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "emission_strength": 0
+    },
+    "M_TS_TrainingCyan": {
+      "base_color": [
+        0.015,
+        0.58,
+        0.72,
+        1
+      ],
+      "roughness": 0.25,
+      "metallic": 0.15,
+      "emission": [
+        0.015,
+        0.58,
+        0.72,
+        1
+      ],
+      "emission_strength": 1.1
+    },
+    "M_TS_TrainingAmber": {
+      "base_color": [
+        0.96,
+        0.29,
+        0.025,
+        1
+      ],
+      "roughness": 0.4,
+      "metallic": 0.18,
+      "emission": [
+        0.96,
+        0.15,
+        0.01,
+        1
+      ],
+      "emission_strength": 0.16
+    },
+    "M_TS_TrainingWeakpoint": {
+      "base_color": [
+        1,
+        0.69,
+        0.025,
+        1
+      ],
+      "roughness": 0.27,
+      "metallic": 0.2,
+      "emission": [
+        1,
+        0.42,
+        0.005,
+        1
+      ],
+      "emission_strength": 0.6
+    },
+    "M_TS_TrainingRock": {
+      "base_color": [
+        0.22,
+        0.255,
+        0.28,
+        1
+      ],
+      "roughness": 0.92,
+      "metallic": 0.03,
+      "emission": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "emission_strength": 0
+    },
+    "M_TS_TrainingRubber": {
+      "base_color": [
+        0.016,
+        0.023,
+        0.03,
+        1
+      ],
+      "roughness": 0.82,
+      "metallic": 0,
+      "emission": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "emission_strength": 0
+    }
+  },
+  "assets": [
+    {
+      "name": "SM_TS_SupplyTableSegment",
+      "file": "FBX/SM_TS_SupplyTableSegment.fbx",
+      "dimensions_cm": [
+        200.0,
+        100.0,
+        105.0
+      ],
+      "pivot": "bottom_center",
+      "front_axis": "-Y",
+      "vertices": 144,
+      "polygons": 156,
+      "triangles": 264,
+      "material_slots": [
+        "M_TS_TrainingWhite",
+        "M_TS_TrainingDarkMetal",
+        "M_TS_TrainingRubber",
+        "M_TS_TrainingCyan"
+      ],
+      "purpose": "Solid modular supply barrier; two ends must seal against room walls.",
+      "collision": "single box",
+      "sha256": "bbee48838c25e645e88572422e25ef1bfcbe60522af2b2df34d45dfa177aeb14"
+    },
+    {
+      "name": "SM_TS_AmmoPack",
+      "file": "FBX/SM_TS_AmmoPack.fbx",
+      "dimensions_cm": [
+        28.0,
+        18.0,
+        12.0
+      ],
+      "pivot": "bottom_center",
+      "front_axis": "-Y",
+      "vertices": 152,
+      "polygons": 128,
+      "triangles": 272,
+      "material_slots": [
+        "M_TS_TrainingDarkMetal",
+        "M_TS_TrainingAmber",
+        "M_TS_TrainingWhite",
+        "M_TS_TrainingWeakpoint"
+      ],
+      "purpose": "Static ammo pickup placeholder; refill/reload logic must be implemented separately.",
+      "collision": "single box",
+      "sha256": "75c7b0287487ffed461fe251284eea80d4fe3f375c712238b5172e78349e9e72"
+    },
+    {
+      "name": "SM_TS_TrainingTarget",
+      "file": "FBX/SM_TS_TrainingTarget.fbx",
+      "dimensions_cm": [
+        60.0,
+        38.0,
+        185.0
+      ],
+      "pivot": "bottom_center",
+      "front_axis": "-Y",
+      "vertices": 304,
+      "polygons": 270,
+      "triangles": 564,
+      "material_slots": [
+        "M_TS_TrainingDarkMetal",
+        "M_TS_TrainingCyan",
+        "M_TS_TrainingWhite",
+        "M_TS_TrainingAmber"
+      ],
+      "purpose": "Stationary training target; static placement mesh, not damage/AI logic.",
+      "collision": "convex decomposition recommended",
+      "sha256": "1cc130c6dca20647eaed3d18f9f0697142100513a85c62e98d15217d235d45f8"
+    },
+    {
+      "name": "SM_TS_ArmoredTarget",
+      "file": "FBX/SM_TS_ArmoredTarget.fbx",
+      "dimensions_cm": [
+        60.0,
+        38.0,
+        185.0
+      ],
+      "pivot": "bottom_center",
+      "front_axis": "-Y",
+      "vertices": 376,
+      "polygons": 374,
+      "triangles": 692,
+      "material_slots": [
+        "M_TS_TrainingDarkMetal",
+        "M_TS_TrainingCyan",
+        "M_TS_TrainingWhite",
+        "M_TS_TrainingAmber",
+        "M_TS_TrainingWeakpoint"
+      ],
+      "purpose": "Armored training target with a visible yellow chest weakpoint; static placement only.",
+      "collision": "convex decomposition recommended",
+      "sha256": "f9e028f80da5d11d0dd36d9119eb5455c09d1ca51b6456a39ed60fb597b00b3d"
+    },
+    {
+      "name": "SM_TS_Rock_A",
+      "file": "FBX/SM_TS_Rock_A.fbx",
+      "dimensions_cm": [
+        130.0,
+        120.0,
+        135.0
+      ],
+      "pivot": "bottom_center",
+      "front_axis": "-Y",
+      "vertices": 42,
+      "polygons": 80,
+      "triangles": 80,
+      "material_slots": [
+        "M_TS_TrainingRock"
+      ],
+      "purpose": "Low-poly suspended/falling rock; physics and time behavior are external.",
+      "collision": "convex hull",
+      "sha256": "b42919de85a319c74c76bedbd1057be77e8e841d343516731e5b986c53ba6eac"
+    },
+    {
+      "name": "SM_TS_Rock_B",
+      "file": "FBX/SM_TS_Rock_B.fbx",
+      "dimensions_cm": [
+        118.0,
+        130.0,
+        122.0
+      ],
+      "pivot": "bottom_center",
+      "front_axis": "-Y",
+      "vertices": 42,
+      "polygons": 80,
+      "triangles": 80,
+      "material_slots": [
+        "M_TS_TrainingRock"
+      ],
+      "purpose": "Low-poly suspended/falling rock; physics and time behavior are external.",
+      "collision": "convex hull",
+      "sha256": "71d2c67475547b974e4a9c3f03665b08fa1d3d0bad31d6045fc787bc06056c6f"
+    },
+    {
+      "name": "SM_TS_SuspendedRock",
+      "file": "FBX/SM_TS_SuspendedRock.fbx",
+      "dimensions_cm": [
+        340.0,
+        240.0,
+        150.0
+      ],
+      "pivot": "bottom_center",
+      "front_axis": "-Y",
+      "vertices": 42,
+      "polygons": 80,
+      "triangles": 80,
+      "material_slots": [
+        "M_TS_TrainingRock"
+      ],
+      "purpose": "Low-poly suspended/falling rock; physics and time behavior are external.",
+      "collision": "convex hull",
+      "sha256": "9e9bb6e17fa8a05d09d2bf971cd0b26c8d9037f68d2e053245496d8017d502b7"
+    },
+    {
+      "name": "SM_TS_Gantry",
+      "file": "FBX/SM_TS_Gantry.fbx",
+      "dimensions_cm": [
+        600.0,
+        60.0,
+        600.0
+      ],
+      "pivot": "bottom_center",
+      "front_axis": "-Y",
+      "vertices": 312,
+      "polygons": 338,
+      "triangles": 572,
+      "material_slots": [
+        "M_TS_TrainingDarkMetal",
+        "M_TS_TrainingWhite",
+        "M_TS_TrainingCyan",
+        "M_TS_TrainingAmber"
+      ],
+      "purpose": "Six-meter overhead support frame; keep central opening free. Link is separate.",
+      "collision": "convex decomposition; do not use one bounding box",
+      "sha256": "5a13627495aa85e0272668cf3af331790d6a6c24d84550f40026d06df6f03ea9"
+    },
+    {
+      "name": "SM_TS_BreakableLink",
+      "file": "FBX/SM_TS_BreakableLink.fbx",
+      "dimensions_cm": [
+        18.0,
+        18.0,
+        70.0
+      ],
+      "pivot": "bottom_center",
+      "front_axis": "-Y",
+      "vertices": 120,
+      "polygons": 130,
+      "triangles": 220,
+      "material_slots": [
+        "M_TS_TrainingDarkMetal",
+        "M_TS_TrainingAmber",
+        "M_TS_TrainingWeakpoint"
+      ],
+      "purpose": "Independent orange breakable connection; attach above suspended rock.",
+      "collision": "single box",
+      "sha256": "42a5984d86e4e84725290e59359003b363148a7e518044185d5c7df9b339bed4"
+    },
+    {
+      "name": "SM_TS_LowCover",
+      "file": "FBX/SM_TS_LowCover.fbx",
+      "dimensions_cm": [
+        300.0,
+        100.0,
+        120.0
+      ],
+      "pivot": "bottom_center",
+      "front_axis": "-Y",
+      "vertices": 168,
+      "polygons": 182,
+      "triangles": 308,
+      "material_slots": [
+        "M_TS_TrainingWhite",
+        "M_TS_TrainingRubber",
+        "M_TS_TrainingDarkMetal",
+        "M_TS_TrainingCyan"
+      ],
+      "purpose": "Closed solid cover; collision and gameplay height must be verified in Unreal.",
+      "collision": "single box",
+      "sha256": "9a4baa5fade12ac751ad1807fe3d080eedfe51f7d884f7cd7b1ef574129d8196"
+    },
+    {
+      "name": "SM_TS_HighCover",
+      "file": "FBX/SM_TS_HighCover.fbx",
+      "dimensions_cm": [
+        100.0,
+        300.0,
+        220.0
+      ],
+      "pivot": "bottom_center",
+      "front_axis": "-Y",
+      "vertices": 168,
+      "polygons": 182,
+      "triangles": 308,
+      "material_slots": [
+        "M_TS_TrainingWhite",
+        "M_TS_TrainingRubber",
+        "M_TS_TrainingDarkMetal",
+        "M_TS_TrainingCyan"
+      ],
+      "purpose": "Closed solid cover; collision and gameplay height must be verified in Unreal.",
+      "collision": "single box",
+      "sha256": "f744c4ac36955aefcfb10c8903f28aa6516a1d57862df740515b0024cf73aabe"
+    },
+    {
+      "name": "SM_TS_ShooterProxy",
+      "file": "FBX/SM_TS_ShooterProxy.fbx",
+      "dimensions_cm": [
+        92.5891,
+        117.0,
+        183.0
+      ],
+      "pivot": "bottom_center",
+      "front_axis": "-Y",
+      "vertices": 504,
+      "polygons": 546,
+      "triangles": 924,
+      "material_slots": [
+        "M_TS_TrainingDarkMetal",
+        "M_TS_TrainingWhite",
+        "M_TS_TrainingAmber",
+        "M_TS_TrainingCyan"
+      ],
+      "purpose": "Static ranged-enemy layout proxy with rifle silhouette; no AI, animation or damage.",
+      "collision": "convex decomposition recommended",
+      "sha256": "a384789c819920ce0de9e427613d07276c641b5af296ffcf20a8a21e8a172a79"
+    },
+    {
+      "name": "SM_TS_MeleeProxy",
+      "file": "FBX/SM_TS_MeleeProxy.fbx",
+      "dimensions_cm": [
+        106.8226,
+        73.338,
+        183.0
+      ],
+      "pivot": "bottom_center",
+      "front_axis": "-Y",
+      "vertices": 432,
+      "polygons": 468,
+      "triangles": 792,
+      "material_slots": [
+        "M_TS_TrainingDarkMetal",
+        "M_TS_TrainingWhite",
+        "M_TS_TrainingAmber"
+      ],
+      "purpose": "Static melee-enemy layout proxy with short training baton; no AI or attacks.",
+      "collision": "convex decomposition recommended",
+      "sha256": "ef454d502519b09d3477fb51364f57dcaaa7f0dcf958bd9e1806432a258e1c7b"
+    }
+  ]
+}

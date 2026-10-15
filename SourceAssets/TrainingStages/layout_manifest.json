@@ -1,0 +1,1979 @@
+{
+  "version": 1,
+  "room_clear_cm": [
+    2000,
+    3470,
+    800
+  ],
+  "entrance_center_cm": [
+    0,
+    1200,
+    0
+  ],
+  "diagram_to_ue": "X=(x-10)*100; Y=1200-y*3470/24; Z=cm. Prop dimensions are not stretched.",
+  "default_stage": "S1",
+  "stages": [
+    "S1",
+    "S2",
+    "S2C",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7A",
+    "S7B"
+  ],
+  "shared_active_in": [
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7A"
+  ],
+  "actors": [
+    {
+      "id": "S1_FallingRockArea_Near",
+      "stage": "S1",
+      "label": "FallingRockArea_Near",
+      "mesh": "/Engine/BasicShapes/Cube",
+      "location_cm": [
+        0.0,
+        910.8333333333333,
+        1
+      ],
+      "scale": [
+        20.0,
+        0.03,
+        0.01
+      ],
+      "yaw": 0,
+      "collision": "none",
+      "folder": "S1/FloorGuides",
+      "material": "M_TS_TrainingAmber"
+    },
+    {
+      "id": "S1_FallingRockArea_Far",
+      "stage": "S1",
+      "label": "FallingRockArea_Far",
+      "mesh": "/Engine/BasicShapes/Cube",
+      "location_cm": [
+        0.0,
+        -245.83333333333326,
+        1
+      ],
+      "scale": [
+        20.0,
+        0.03,
+        0.01
+      ],
+      "yaw": 0,
+      "collision": "none",
+      "folder": "S1/FloorGuides",
+      "material": "M_TS_TrainingAmber"
+    },
+    {
+      "id": "S1_FallingRockArea_Left",
+      "stage": "S1",
+      "label": "FallingRockArea_Left",
+      "mesh": "/Engine/BasicShapes/Cube",
+      "location_cm": [
+        -998,
+        332.5,
+        1
+      ],
+      "scale": [
+        0.03,
+        11.566666666666665,
+        0.01
+      ],
+      "yaw": 0,
+      "collision": "none",
+      "folder": "S1/FloorGuides",
+      "material": "M_TS_TrainingAmber"
+    },
+    {
+      "id": "S1_FallingRockArea_Right",
+      "stage": "S1",
+      "label": "FallingRockArea_Right",
+      "mesh": "/Engine/BasicShapes/Cube",
+      "location_cm": [
+        998,
+        332.5,
+        1
+      ],
+      "scale": [
+        0.03,
+        11.566666666666665,
+        0.01
+      ],
+      "yaw": 0,
+      "collision": "none",
+      "folder": "S1/FloorGuides",
+      "material": "M_TS_TrainingAmber"
+    },
+    {
+      "id": "S1_CentralCompletionArea_Near",
+      "stage": "S1",
+      "label": "CentralCompletionArea_Near",
+      "mesh": "/Engine/BasicShapes/Cube",
+      "location_cm": [
+        0.0,
+        -390.41666666666674,
+        1
+      ],
+      "scale": [
+        10.0,
+        0.03,
+        0.01
+      ],
+      "yaw": 0,
+      "collision": "none",
+      "folder": "S1/FloorGuides",
+      "material": "M_TS_TrainingCyan"
+    },
+    {
+      "id": "S1_CentralCompletionArea_Far",
+      "stage": "S1",
+      "label": "CentralCompletionArea_Far",
+      "mesh": "/Engine/BasicShapes/Cube",
+      "location_cm": [
+        0.0,
+        -824.1666666666667,
+        1
+      ],
+      "scale": [
+        10.0,
+        0.03,
+        0.01
+      ],
+      "yaw": 0,
+      "collision": "none",
+      "folder": "S1/FloorGuides",
+      "material": "M_TS_TrainingCyan"
+    },
+    {
+      "id": "S1_CentralCompletionArea_Left",
+      "stage": "S1",
+      "label": "CentralCompletionArea_Left",
+      "mesh": "/Engine/BasicShapes/Cube",
+      "location_cm": [
+        -498,
+        -607.2916666666667,
+        1
+      ],
+      "scale": [
+        0.03,
+        4.3375,
+        0.01
+      ],
+      "yaw": 0,
+      "collision": "none",
+      "folder": "S1/FloorGuides",
+      "material": "M_TS_TrainingCyan"
+    },
+    {
+      "id": "S1_CentralCompletionArea_Right",
+      "stage": "S1",
+      "label": "CentralCompletionArea_Right",
+      "mesh": "/Engine/BasicShapes/Cube",
+      "location_cm": [
+        498,
+        -607.2916666666667,
+        1
+      ],
+      "scale": [
+        0.03,
+        4.3375,
+        0.01
+      ],
+      "yaw": 0,
+      "collision": "none",
+      "folder": "S1/FloorGuides",
+      "material": "M_TS_TrainingCyan"
+    },
+    {
+      "id": "S1_FullWidthTriggerBand",
+      "stage": "S1",
+      "label": "FullWidthTriggerBand",
+      "mesh": "/Engine/BasicShapes/Cube",
+      "location_cm": [
+        0,
+        621.6666666666666,
+        1
+      ],
+      "scale": [
+        19.98,
+        0.06,
+        0.01
+      ],
+      "yaw": 0,
+      "collision": "none",
+      "folder": "S1/FloorGuides",
+      "material": "M_TS_TrainingWeakpoint"
+    },
+    {
+      "id": "S1_FrozenFallingRock_11",
+      "stage": "S1",
+      "label": "FrozenFallingRock_11",
+      "mesh": "SM_TS_Rock_A",
+      "location_cm": [
+        -850.0,
+        795.1666666666667,
+        270
+      ],
+      "scale": [
+        1,
+        1,
+        0.9
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_12",
+      "stage": "S1",
+      "label": "FrozenFallingRock_12",
+      "mesh": "SM_TS_Rock_B",
+      "location_cm": [
+        -570.0,
+        795.1666666666667,
+        90
+      ],
+      "scale": [
+        1,
+        1,
+        0.9
+      ],
+      "yaw": 31,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_13",
+      "stage": "S1",
+      "label": "FrozenFallingRock_13",
+      "mesh": "SM_TS_Rock_A",
+      "location_cm": [
+        -290.00000000000006,
+        795.1666666666667,
+        360
+      ],
+      "scale": [
+        1,
+        1,
+        0.9
+      ],
+      "yaw": 62,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_14",
+      "stage": "S1",
+      "label": "FrozenFallingRock_14",
+      "mesh": "SM_TS_Rock_B",
+      "location_cm": [
+        0,
+        795.1666666666667,
+        220
+      ],
+      "scale": [
+        1,
+        1,
+        0.9
+      ],
+      "yaw": 93,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_15",
+      "stage": "S1",
+      "label": "FrozenFallingRock_15",
+      "mesh": "SM_TS_Rock_A",
+      "location_cm": [
+        290.00000000000006,
+        795.1666666666667,
+        140
+      ],
+      "scale": [
+        1,
+        1,
+        0.9
+      ],
+      "yaw": 124,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_16",
+      "stage": "S1",
+      "label": "FrozenFallingRock_16",
+      "mesh": "SM_TS_Rock_B",
+      "location_cm": [
+        569.9999999999999,
+        795.1666666666667,
+        410
+      ],
+      "scale": [
+        1,
+        1,
+        0.9
+      ],
+      "yaw": 155,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_17",
+      "stage": "S1",
+      "label": "FrozenFallingRock_17",
+      "mesh": "SM_TS_Rock_A",
+      "location_cm": [
+        850.0,
+        795.1666666666667,
+        300
+      ],
+      "scale": [
+        1,
+        1,
+        0.9
+      ],
+      "yaw": 6,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_21",
+      "stage": "S1",
+      "label": "FrozenFallingRock_21",
+      "mesh": "SM_TS_Rock_B",
+      "location_cm": [
+        -850.0,
+        506.0,
+        360
+      ],
+      "scale": [
+        1,
+        1,
+        1.1
+      ],
+      "yaw": 19,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_22",
+      "stage": "S1",
+      "label": "FrozenFallingRock_22",
+      "mesh": "SM_TS_Rock_A",
+      "location_cm": [
+        -570.0,
+        506.0,
+        220
+      ],
+      "scale": [
+        1,
+        1,
+        1.1
+      ],
+      "yaw": 50,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_23",
+      "stage": "S1",
+      "label": "FrozenFallingRock_23",
+      "mesh": "SM_TS_Rock_B",
+      "location_cm": [
+        -290.00000000000006,
+        506.0,
+        140
+      ],
+      "scale": [
+        1,
+        1,
+        1.1
+      ],
+      "yaw": 81,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_24",
+      "stage": "S1",
+      "label": "FrozenFallingRock_24",
+      "mesh": "SM_TS_Rock_A",
+      "location_cm": [
+        0,
+        506.0,
+        410
+      ],
+      "scale": [
+        1,
+        1,
+        1.1
+      ],
+      "yaw": 112,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_25",
+      "stage": "S1",
+      "label": "FrozenFallingRock_25",
+      "mesh": "SM_TS_Rock_B",
+      "location_cm": [
+        290.00000000000006,
+        506.0,
+        300
+      ],
+      "scale": [
+        1,
+        1,
+        1.1
+      ],
+      "yaw": 143,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_26",
+      "stage": "S1",
+      "label": "FrozenFallingRock_26",
+      "mesh": "SM_TS_Rock_A",
+      "location_cm": [
+        569.9999999999999,
+        506.0,
+        270
+      ],
+      "scale": [
+        1,
+        1,
+        1.1
+      ],
+      "yaw": 174,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_27",
+      "stage": "S1",
+      "label": "FrozenFallingRock_27",
+      "mesh": "SM_TS_Rock_B",
+      "location_cm": [
+        850.0,
+        506.0,
+        90
+      ],
+      "scale": [
+        1,
+        1,
+        1.1
+      ],
+      "yaw": 25,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_31",
+      "stage": "S1",
+      "label": "FrozenFallingRock_31",
+      "mesh": "SM_TS_Rock_A",
+      "location_cm": [
+        -850.0,
+        216.83333333333337,
+        140
+      ],
+      "scale": [
+        1,
+        1,
+        0.9
+      ],
+      "yaw": 38,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_32",
+      "stage": "S1",
+      "label": "FrozenFallingRock_32",
+      "mesh": "SM_TS_Rock_B",
+      "location_cm": [
+        -570.0,
+        216.83333333333337,
+        410
+      ],
+      "scale": [
+        1,
+        1,
+        0.9
+      ],
+      "yaw": 69,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_33",
+      "stage": "S1",
+      "label": "FrozenFallingRock_33",
+      "mesh": "SM_TS_Rock_A",
+      "location_cm": [
+        -290.00000000000006,
+        216.83333333333337,
+        300
+      ],
+      "scale": [
+        1,
+        1,
+        0.9
+      ],
+      "yaw": 100,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_34",
+      "stage": "S1",
+      "label": "FrozenFallingRock_34",
+      "mesh": "SM_TS_Rock_B",
+      "location_cm": [
+        0,
+        216.83333333333337,
+        270
+      ],
+      "scale": [
+        1,
+        1,
+        0.9
+      ],
+      "yaw": 131,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_35",
+      "stage": "S1",
+      "label": "FrozenFallingRock_35",
+      "mesh": "SM_TS_Rock_A",
+      "location_cm": [
+        290.00000000000006,
+        216.83333333333337,
+        90
+      ],
+      "scale": [
+        1,
+        1,
+        0.9
+      ],
+      "yaw": 162,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_36",
+      "stage": "S1",
+      "label": "FrozenFallingRock_36",
+      "mesh": "SM_TS_Rock_B",
+      "location_cm": [
+        569.9999999999999,
+        216.83333333333337,
+        360
+      ],
+      "scale": [
+        1,
+        1,
+        0.9
+      ],
+      "yaw": 13,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_37",
+      "stage": "S1",
+      "label": "FrozenFallingRock_37",
+      "mesh": "SM_TS_Rock_A",
+      "location_cm": [
+        850.0,
+        216.83333333333337,
+        220
+      ],
+      "scale": [
+        1,
+        1,
+        0.9
+      ],
+      "yaw": 44,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_41",
+      "stage": "S1",
+      "label": "FrozenFallingRock_41",
+      "mesh": "SM_TS_Rock_B",
+      "location_cm": [
+        -850.0,
+        -72.33333333333348,
+        300
+      ],
+      "scale": [
+        1,
+        1,
+        1.1
+      ],
+      "yaw": 57,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_42",
+      "stage": "S1",
+      "label": "FrozenFallingRock_42",
+      "mesh": "SM_TS_Rock_A",
+      "location_cm": [
+        -570.0,
+        -72.33333333333348,
+        270
+      ],
+      "scale": [
+        1,
+        1,
+        1.1
+      ],
+      "yaw": 88,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_43",
+      "stage": "S1",
+      "label": "FrozenFallingRock_43",
+      "mesh": "SM_TS_Rock_B",
+      "location_cm": [
+        -290.00000000000006,
+        -72.33333333333348,
+        90
+      ],
+      "scale": [
+        1,
+        1,
+        1.1
+      ],
+      "yaw": 119,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_44",
+      "stage": "S1",
+      "label": "FrozenFallingRock_44",
+      "mesh": "SM_TS_Rock_A",
+      "location_cm": [
+        0,
+        -72.33333333333348,
+        360
+      ],
+      "scale": [
+        1,
+        1,
+        1.1
+      ],
+      "yaw": 150,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_45",
+      "stage": "S1",
+      "label": "FrozenFallingRock_45",
+      "mesh": "SM_TS_Rock_B",
+      "location_cm": [
+        290.00000000000006,
+        -72.33333333333348,
+        220
+      ],
+      "scale": [
+        1,
+        1,
+        1.1
+      ],
+      "yaw": 1,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_46",
+      "stage": "S1",
+      "label": "FrozenFallingRock_46",
+      "mesh": "SM_TS_Rock_A",
+      "location_cm": [
+        569.9999999999999,
+        -72.33333333333348,
+        140
+      ],
+      "scale": [
+        1,
+        1,
+        1.1
+      ],
+      "yaw": 32,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S1_FrozenFallingRock_47",
+      "stage": "S1",
+      "label": "FrozenFallingRock_47",
+      "mesh": "SM_TS_Rock_B",
+      "location_cm": [
+        850.0,
+        -72.33333333333348,
+        410
+      ],
+      "scale": [
+        1,
+        1,
+        1.1
+      ],
+      "yaw": 63,
+      "collision": "solid",
+      "folder": "S1"
+    },
+    {
+      "id": "S2_FrontShooter_2A_2B",
+      "stage": "S2",
+      "label": "FrontShooter_2A_2B",
+      "mesh": "SM_TS_ShooterProxy",
+      "location_cm": [
+        0,
+        -1836.25,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S2/Front_2A_2B"
+    },
+    {
+      "id": "S2C_SideShooter_2C",
+      "stage": "S2C",
+      "label": "SideShooter_2C",
+      "mesh": "SM_TS_ShooterProxy",
+      "location_cm": [
+        600,
+        -824.1666666666667,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 45,
+      "collision": "solid",
+      "folder": "S2/Side_2C"
+    },
+    {
+      "id": "SharedShooting_SealedTable_01",
+      "stage": "SharedShooting",
+      "label": "SealedTable_01",
+      "mesh": "SM_TS_SupplyTableSegment",
+      "location_cm": [
+        -900,
+        -896.4583333333335,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "00_SHARED_S3_to_S7A/Tables"
+    },
+    {
+      "id": "SharedShooting_SealedTable_02",
+      "stage": "SharedShooting",
+      "label": "SealedTable_02",
+      "mesh": "SM_TS_SupplyTableSegment",
+      "location_cm": [
+        -700,
+        -896.4583333333335,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "00_SHARED_S3_to_S7A/Tables"
+    },
+    {
+      "id": "SharedShooting_SealedTable_03",
+      "stage": "SharedShooting",
+      "label": "SealedTable_03",
+      "mesh": "SM_TS_SupplyTableSegment",
+      "location_cm": [
+        -500,
+        -896.4583333333335,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "00_SHARED_S3_to_S7A/Tables"
+    },
+    {
+      "id": "SharedShooting_SealedTable_04",
+      "stage": "SharedShooting",
+      "label": "SealedTable_04",
+      "mesh": "SM_TS_SupplyTableSegment",
+      "location_cm": [
+        -300,
+        -896.4583333333335,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "00_SHARED_S3_to_S7A/Tables"
+    },
+    {
+      "id": "SharedShooting_SealedTable_05",
+      "stage": "SharedShooting",
+      "label": "SealedTable_05",
+      "mesh": "SM_TS_SupplyTableSegment",
+      "location_cm": [
+        -100,
+        -896.4583333333335,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "00_SHARED_S3_to_S7A/Tables"
+    },
+    {
+      "id": "SharedShooting_SealedTable_06",
+      "stage": "SharedShooting",
+      "label": "SealedTable_06",
+      "mesh": "SM_TS_SupplyTableSegment",
+      "location_cm": [
+        100,
+        -896.4583333333335,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "00_SHARED_S3_to_S7A/Tables"
+    },
+    {
+      "id": "SharedShooting_SealedTable_07",
+      "stage": "SharedShooting",
+      "label": "SealedTable_07",
+      "mesh": "SM_TS_SupplyTableSegment",
+      "location_cm": [
+        300,
+        -896.4583333333335,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "00_SHARED_S3_to_S7A/Tables"
+    },
+    {
+      "id": "SharedShooting_SealedTable_08",
+      "stage": "SharedShooting",
+      "label": "SealedTable_08",
+      "mesh": "SM_TS_SupplyTableSegment",
+      "location_cm": [
+        500,
+        -896.4583333333335,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "00_SHARED_S3_to_S7A/Tables"
+    },
+    {
+      "id": "SharedShooting_SealedTable_09",
+      "stage": "SharedShooting",
+      "label": "SealedTable_09",
+      "mesh": "SM_TS_SupplyTableSegment",
+      "location_cm": [
+        700,
+        -896.4583333333335,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "00_SHARED_S3_to_S7A/Tables"
+    },
+    {
+      "id": "SharedShooting_SealedTable_10",
+      "stage": "SharedShooting",
+      "label": "SealedTable_10",
+      "mesh": "SM_TS_SupplyTableSegment",
+      "location_cm": [
+        900,
+        -896.4583333333335,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "00_SHARED_S3_to_S7A/Tables"
+    },
+    {
+      "id": "SharedShooting_AmmoRefreshSlot_1_StaticDisplay",
+      "stage": "SharedShooting",
+      "label": "AmmoRefreshSlot_1_StaticDisplay",
+      "mesh": "SM_TS_AmmoPack",
+      "location_cm": [
+        -700,
+        -871.4583333333335,
+        105
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "00_SHARED_S3_to_S7A/Ammo_Refresh_Positions"
+    },
+    {
+      "id": "SharedShooting_AmmoRefreshSlot_2_StaticDisplay",
+      "stage": "SharedShooting",
+      "label": "AmmoRefreshSlot_2_StaticDisplay",
+      "mesh": "SM_TS_AmmoPack",
+      "location_cm": [
+        -300,
+        -871.4583333333335,
+        105
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "00_SHARED_S3_to_S7A/Ammo_Refresh_Positions"
+    },
+    {
+      "id": "SharedShooting_AmmoRefreshSlot_3_StaticDisplay",
+      "stage": "SharedShooting",
+      "label": "AmmoRefreshSlot_3_StaticDisplay",
+      "mesh": "SM_TS_AmmoPack",
+      "location_cm": [
+        300,
+        -871.4583333333335,
+        105
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "00_SHARED_S3_to_S7A/Ammo_Refresh_Positions"
+    },
+    {
+      "id": "SharedShooting_AmmoRefreshSlot_4_StaticDisplay",
+      "stage": "SharedShooting",
+      "label": "AmmoRefreshSlot_4_StaticDisplay",
+      "mesh": "SM_TS_AmmoPack",
+      "location_cm": [
+        700,
+        -871.4583333333335,
+        105
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "00_SHARED_S3_to_S7A/Ammo_Refresh_Positions"
+    },
+    {
+      "id": "SharedShooting_Pistol_StaticDisplay",
+      "stage": "SharedShooting",
+      "label": "Pistol_StaticDisplay",
+      "mesh": "/Game/Weapons/Pistol/Meshes/SM_Pistol",
+      "location_cm": [
+        -75,
+        -871.4583333333335,
+        109
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "00_SHARED_S3_to_S7A/Equipment"
+    },
+    {
+      "id": "SharedShooting_PawnBarrier_NoCross_NoVault",
+      "stage": "SharedShooting",
+      "label": "PawnBarrier_NoCross_NoVault",
+      "mesh": "/Engine/BasicShapes/Cube",
+      "location_cm": [
+        0,
+        -896.4583333333335,
+        400
+      ],
+      "scale": [
+        20,
+        0.6,
+        8
+      ],
+      "yaw": 0,
+      "collision": "pawn_barrier",
+      "folder": "00_SHARED_S3_to_S7A/Collision"
+    },
+    {
+      "id": "S3_StaticTarget_1",
+      "stage": "S3",
+      "label": "StaticTarget_1",
+      "mesh": "SM_TS_TrainingTarget",
+      "location_cm": [
+        -500,
+        -1691.6666666666665,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S3"
+    },
+    {
+      "id": "S3_StaticTarget_2",
+      "stage": "S3",
+      "label": "StaticTarget_2",
+      "mesh": "SM_TS_TrainingTarget",
+      "location_cm": [
+        -150.0,
+        -1691.6666666666665,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S3"
+    },
+    {
+      "id": "S3_StaticTarget_3",
+      "stage": "S3",
+      "label": "StaticTarget_3",
+      "mesh": "SM_TS_TrainingTarget",
+      "location_cm": [
+        200,
+        -1691.6666666666665,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S3"
+    },
+    {
+      "id": "S3_StaticTarget_4",
+      "stage": "S3",
+      "label": "StaticTarget_4",
+      "mesh": "SM_TS_TrainingTarget",
+      "location_cm": [
+        550.0,
+        -1691.6666666666665,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S3"
+    },
+    {
+      "id": "S4_MovingArmorTarget_1_Layout",
+      "stage": "S4",
+      "label": "MovingArmorTarget_1_Layout",
+      "mesh": "SM_TS_ArmoredTarget",
+      "location_cm": [
+        -400,
+        -1691.6666666666665,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S4"
+    },
+    {
+      "id": "S4_MovementRail_1",
+      "stage": "S4",
+      "label": "MovementRail_1",
+      "mesh": "/Engine/BasicShapes/Cube",
+      "location_cm": [
+        -400.0,
+        -1691.6666666666665,
+        2
+      ],
+      "scale": [
+        4.0,
+        0.1,
+        0.03
+      ],
+      "yaw": 0,
+      "collision": "none",
+      "folder": "S4/FloorGuides",
+      "material": "M_TS_TrainingDarkMetal"
+    },
+    {
+      "id": "S4_MovingArmorTarget_2_Layout",
+      "stage": "S4",
+      "label": "MovingArmorTarget_2_Layout",
+      "mesh": "SM_TS_ArmoredTarget",
+      "location_cm": [
+        0,
+        -1691.6666666666665,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S4"
+    },
+    {
+      "id": "S4_MovementRail_2",
+      "stage": "S4",
+      "label": "MovementRail_2",
+      "mesh": "/Engine/BasicShapes/Cube",
+      "location_cm": [
+        0.0,
+        -1691.6666666666665,
+        2
+      ],
+      "scale": [
+        2.600000000000001,
+        0.1,
+        0.03
+      ],
+      "yaw": 0,
+      "collision": "none",
+      "folder": "S4/FloorGuides",
+      "material": "M_TS_TrainingDarkMetal"
+    },
+    {
+      "id": "S4_MovingArmorTarget_3_Layout",
+      "stage": "S4",
+      "label": "MovingArmorTarget_3_Layout",
+      "mesh": "SM_TS_ArmoredTarget",
+      "location_cm": [
+        400,
+        -1691.6666666666665,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S4"
+    },
+    {
+      "id": "S4_MovementRail_3",
+      "stage": "S4",
+      "label": "MovementRail_3",
+      "mesh": "/Engine/BasicShapes/Cube",
+      "location_cm": [
+        400.0,
+        -1691.6666666666665,
+        2
+      ],
+      "scale": [
+        4.0,
+        0.1,
+        0.03
+      ],
+      "yaw": 0,
+      "collision": "none",
+      "folder": "S4/FloorGuides",
+      "material": "M_TS_TrainingDarkMetal"
+    },
+    {
+      "id": "S5_SuspensionGantry",
+      "stage": "S5",
+      "label": "SuspensionGantry",
+      "mesh": "SM_TS_Gantry",
+      "location_cm": [
+        0,
+        -1402.5,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S5"
+    },
+    {
+      "id": "S5_ShootableLink_Layout",
+      "stage": "S5",
+      "label": "ShootableLink_Layout",
+      "mesh": "SM_TS_BreakableLink",
+      "location_cm": [
+        0,
+        -1402.5,
+        507
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S5"
+    },
+    {
+      "id": "S5_SuspendedRock_Layout",
+      "stage": "S5",
+      "label": "SuspendedRock_Layout",
+      "mesh": "SM_TS_SuspendedRock",
+      "location_cm": [
+        0,
+        -1402.5,
+        350
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S5"
+    },
+    {
+      "id": "S5_LinkToRockStem",
+      "stage": "S5",
+      "label": "LinkToRockStem",
+      "mesh": "/Engine/BasicShapes/Cube",
+      "location_cm": [
+        0,
+        -1402.5,
+        503.5
+      ],
+      "scale": [
+        0.1,
+        0.1,
+        0.07
+      ],
+      "yaw": 0,
+      "collision": "none",
+      "folder": "S5/FloorGuides",
+      "material": "M_TS_TrainingDarkMetal"
+    },
+    {
+      "id": "S5_RockImpactFootprint_Near",
+      "stage": "S5",
+      "label": "RockImpactFootprint_Near",
+      "mesh": "/Engine/BasicShapes/Cube",
+      "location_cm": [
+        0.0,
+        -1282.4958333333338,
+        1
+      ],
+      "scale": [
+        3.399999999999999,
+        0.03,
+        0.01
+      ],
+      "yaw": 0,
+      "collision": "none",
+      "folder": "S5/FloorGuides",
+      "material": "M_TS_TrainingAmber"
+    },
+    {
+      "id": "S5_RockImpactFootprint_Far",
+      "stage": "S5",
+      "label": "RockImpactFootprint_Far",
+      "mesh": "/Engine/BasicShapes/Cube",
+      "location_cm": [
+        0.0,
+        -1522.5041666666662,
+        1
+      ],
+      "scale": [
+        3.399999999999999,
+        0.03,
+        0.01
+      ],
+      "yaw": 0,
+      "collision": "none",
+      "folder": "S5/FloorGuides",
+      "material": "M_TS_TrainingAmber"
+    },
+    {
+      "id": "S5_RockImpactFootprint_Left",
+      "stage": "S5",
+      "label": "RockImpactFootprint_Left",
+      "mesh": "/Engine/BasicShapes/Cube",
+      "location_cm": [
+        -167.99999999999994,
+        -1402.5,
+        1
+      ],
+      "scale": [
+        0.03,
+        2.400083333333323,
+        0.01
+      ],
+      "yaw": 0,
+      "collision": "none",
+      "folder": "S5/FloorGuides",
+      "material": "M_TS_TrainingAmber"
+    },
+    {
+      "id": "S5_RockImpactFootprint_Right",
+      "stage": "S5",
+      "label": "RockImpactFootprint_Right",
+      "mesh": "/Engine/BasicShapes/Cube",
+      "location_cm": [
+        167.99999999999994,
+        -1402.5,
+        1
+      ],
+      "scale": [
+        0.03,
+        2.400083333333323,
+        0.01
+      ],
+      "yaw": 0,
+      "collision": "none",
+      "folder": "S5/FloorGuides",
+      "material": "M_TS_TrainingAmber"
+    },
+    {
+      "id": "S5_ResistantTarget_1_Layout",
+      "stage": "S5",
+      "label": "ResistantTarget_1_Layout",
+      "mesh": "SM_TS_ArmoredTarget",
+      "location_cm": [
+        -100,
+        -1402.5,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S5"
+    },
+    {
+      "id": "S5_ResistantTarget_2_Layout",
+      "stage": "S5",
+      "label": "ResistantTarget_2_Layout",
+      "mesh": "SM_TS_ArmoredTarget",
+      "location_cm": [
+        0,
+        -1445.875,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S5"
+    },
+    {
+      "id": "S5_ResistantTarget_3_Layout",
+      "stage": "S5",
+      "label": "ResistantTarget_3_Layout",
+      "mesh": "SM_TS_ArmoredTarget",
+      "location_cm": [
+        100,
+        -1402.5,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S5"
+    },
+    {
+      "id": "S6_SuspensionGantry",
+      "stage": "S6",
+      "label": "SuspensionGantry",
+      "mesh": "SM_TS_Gantry",
+      "location_cm": [
+        0,
+        -1402.5,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S6"
+    },
+    {
+      "id": "S6_ShootableLink_Layout",
+      "stage": "S6",
+      "label": "ShootableLink_Layout",
+      "mesh": "SM_TS_BreakableLink",
+      "location_cm": [
+        0,
+        -1402.5,
+        507
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S6"
+    },
+    {
+      "id": "S6_SuspendedRock_Layout",
+      "stage": "S6",
+      "label": "SuspendedRock_Layout",
+      "mesh": "SM_TS_SuspendedRock",
+      "location_cm": [
+        0,
+        -1402.5,
+        350
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S6"
+    },
+    {
+      "id": "S6_LinkToRockStem",
+      "stage": "S6",
+      "label": "LinkToRockStem",
+      "mesh": "/Engine/BasicShapes/Cube",
+      "location_cm": [
+        0,
+        -1402.5,
+        503.5
+      ],
+      "scale": [
+        0.1,
+        0.1,
+        0.07
+      ],
+      "yaw": 0,
+      "collision": "none",
+      "folder": "S6/FloorGuides",
+      "material": "M_TS_TrainingDarkMetal"
+    },
+    {
+      "id": "S6_RockImpactFootprint_Near",
+      "stage": "S6",
+      "label": "RockImpactFootprint_Near",
+      "mesh": "/Engine/BasicShapes/Cube",
+      "location_cm": [
+        0.0,
+        -1282.4958333333338,
+        1
+      ],
+      "scale": [
+        3.399999999999999,
+        0.03,
+        0.01
+      ],
+      "yaw": 0,
+      "collision": "none",
+      "folder": "S6/FloorGuides",
+      "material": "M_TS_TrainingAmber"
+    },
+    {
+      "id": "S6_RockImpactFootprint_Far",
+      "stage": "S6",
+      "label": "RockImpactFootprint_Far",
+      "mesh": "/Engine/BasicShapes/Cube",
+      "location_cm": [
+        0.0,
+        -1522.5041666666662,
+        1
+      ],
+      "scale": [
+        3.399999999999999,
+        0.03,
+        0.01
+      ],
+      "yaw": 0,
+      "collision": "none",
+      "folder": "S6/FloorGuides",
+      "material": "M_TS_TrainingAmber"
+    },
+    {
+      "id": "S6_RockImpactFootprint_Left",
+      "stage": "S6",
+      "label": "RockImpactFootprint_Left",
+      "mesh": "/Engine/BasicShapes/Cube",
+      "location_cm": [
+        -167.99999999999994,
+        -1402.5,
+        1
+      ],
+      "scale": [
+        0.03,
+        2.400083333333323,
+        0.01
+      ],
+      "yaw": 0,
+      "collision": "none",
+      "folder": "S6/FloorGuides",
+      "material": "M_TS_TrainingAmber"
+    },
+    {
+      "id": "S6_RockImpactFootprint_Right",
+      "stage": "S6",
+      "label": "RockImpactFootprint_Right",
+      "mesh": "/Engine/BasicShapes/Cube",
+      "location_cm": [
+        167.99999999999994,
+        -1402.5,
+        1
+      ],
+      "scale": [
+        0.03,
+        2.400083333333323,
+        0.01
+      ],
+      "yaw": 0,
+      "collision": "none",
+      "folder": "S6/FloorGuides",
+      "material": "M_TS_TrainingAmber"
+    },
+    {
+      "id": "S6_RockTarget_1",
+      "stage": "S6",
+      "label": "RockTarget_1",
+      "mesh": "SM_TS_TrainingTarget",
+      "location_cm": [
+        -100,
+        -1330.2083333333335,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S6"
+    },
+    {
+      "id": "S6_RockTarget_2",
+      "stage": "S6",
+      "label": "RockTarget_2",
+      "mesh": "SM_TS_TrainingTarget",
+      "location_cm": [
+        0,
+        -1474.7916666666665,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S6"
+    },
+    {
+      "id": "S6_RockTarget_3",
+      "stage": "S6",
+      "label": "RockTarget_3",
+      "mesh": "SM_TS_TrainingTarget",
+      "location_cm": [
+        100,
+        -1330.2083333333335,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S6"
+    },
+    {
+      "id": "S6_MovingTarget_1_Layout",
+      "stage": "S6",
+      "label": "MovingTarget_1_Layout",
+      "mesh": "SM_TS_TrainingTarget",
+      "location_cm": [
+        -500,
+        -1836.25,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S6"
+    },
+    {
+      "id": "S6_MovementRail_1",
+      "stage": "S6",
+      "label": "MovementRail_1",
+      "mesh": "/Engine/BasicShapes/Cube",
+      "location_cm": [
+        -500,
+        -1836.25,
+        2
+      ],
+      "scale": [
+        3.0,
+        0.1,
+        0.03
+      ],
+      "yaw": 0,
+      "collision": "none",
+      "folder": "S6/FloorGuides",
+      "material": "M_TS_TrainingDarkMetal"
+    },
+    {
+      "id": "S6_MovingTarget_2_Layout",
+      "stage": "S6",
+      "label": "MovingTarget_2_Layout",
+      "mesh": "SM_TS_TrainingTarget",
+      "location_cm": [
+        500,
+        -1836.25,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S6"
+    },
+    {
+      "id": "S6_MovementRail_2",
+      "stage": "S6",
+      "label": "MovementRail_2",
+      "mesh": "/Engine/BasicShapes/Cube",
+      "location_cm": [
+        500,
+        -1836.25,
+        2
+      ],
+      "scale": [
+        3.0,
+        0.1,
+        0.03
+      ],
+      "yaw": 0,
+      "collision": "none",
+      "folder": "S6/FloorGuides",
+      "material": "M_TS_TrainingDarkMetal"
+    },
+    {
+      "id": "S7A_MeleePreview_PlayerSideOfTable",
+      "stage": "S7A",
+      "label": "MeleePreview_PlayerSideOfTable",
+      "mesh": "SM_TS_MeleeProxy",
+      "location_cm": [
+        -450.0,
+        -592.8333333333333,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": -45,
+      "collision": "solid",
+      "folder": "S7A"
+    },
+    {
+      "id": "S7B_L1_LowCover",
+      "stage": "S7B",
+      "label": "L1_LowCover",
+      "mesh": "SM_TS_LowCover",
+      "location_cm": [
+        -200,
+        -751.875,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S7B/Cover_Near_Mid_Far"
+    },
+    {
+      "id": "S7B_H1_HighCover",
+      "stage": "S7B",
+      "label": "H1_HighCover",
+      "mesh": "SM_TS_HighCover",
+      "location_cm": [
+        -500,
+        -1257.9166666666665,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S7B/Cover_Near_Mid_Far"
+    },
+    {
+      "id": "S7B_H2_HighCover",
+      "stage": "S7B",
+      "label": "H2_HighCover",
+      "mesh": "SM_TS_HighCover",
+      "location_cm": [
+        300,
+        -1113.3333333333335,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S7B/Cover_Near_Mid_Far"
+    },
+    {
+      "id": "S7B_L2_LowCover",
+      "stage": "S7B",
+      "label": "L2_LowCover",
+      "mesh": "SM_TS_LowCover",
+      "location_cm": [
+        600,
+        -1474.7916666666665,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S7B/Cover_Near_Mid_Far"
+    },
+    {
+      "id": "S7B_L3_LowCover",
+      "stage": "S7B",
+      "label": "L3_LowCover",
+      "mesh": "SM_TS_LowCover",
+      "location_cm": [
+        -50.0,
+        -1763.9583333333335,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S7B/Cover_Near_Mid_Far"
+    },
+    {
+      "id": "S7B_M_EnemyLayoutProxy",
+      "stage": "S7B",
+      "label": "M_EnemyLayoutProxy",
+      "mesh": "SM_TS_MeleeProxy",
+      "location_cm": [
+        50.0,
+        -1185.625,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 0,
+      "collision": "solid",
+      "folder": "S7B/Enemy_Layout_Proxies"
+    },
+    {
+      "id": "S7B_R1_EnemyLayoutProxy",
+      "stage": "S7B",
+      "label": "R1_EnemyLayoutProxy",
+      "mesh": "SM_TS_ShooterProxy",
+      "location_cm": [
+        -750.0,
+        -1547.0833333333335,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": -20,
+      "collision": "solid",
+      "folder": "S7B/Enemy_Layout_Proxies"
+    },
+    {
+      "id": "S7B_R2_EnemyLayoutProxy",
+      "stage": "S7B",
+      "label": "R2_EnemyLayoutProxy",
+      "mesh": "SM_TS_ShooterProxy",
+      "location_cm": [
+        700,
+        -1691.6666666666665,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 25,
+      "collision": "solid",
+      "folder": "S7B/Enemy_Layout_Proxies"
+    },
+    {
+      "id": "S7B_R3_EnemyLayoutProxy",
+      "stage": "S7B",
+      "label": "R3_EnemyLayoutProxy",
+      "mesh": "SM_TS_ShooterProxy",
+      "location_cm": [
+        200,
+        -2053.125,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "yaw": 8,
+      "collision": "solid",
+      "folder": "S7B/Enemy_Layout_Proxies"
+    }
+  ],
+  "scope": "Static mesh staging and editor/PIE preview states. Gameplay triggers, AI, moving targets, time/fall/damage, pickups, ammo respawn and melt transitions remain integration work."
+}

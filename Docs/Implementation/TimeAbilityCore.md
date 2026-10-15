@@ -10,7 +10,7 @@
 
 - 玩家按 `T` 切换时间能力；再次按下退出。
 - 能量范围为 0–100，初始 100。
-- 激活时以每秒 10 点均匀消耗；未激活时以每秒 10 点均匀恢复。
+- 激活时以每秒 15 点均匀消耗（2026-10-14 按用户要求从 10 提高至 1.5 倍）；未激活时仍以每秒 10 点均匀恢复。
 - 能量 `>= 70` 时为 `FullStop`，能量 `< 70` 时为 `BulletTime`；耗尽后自动退出并回到 `Normal`。
 - 时间能力与现有回溯双向互斥：只有玩家处于正常状态时才能启动其中一项。时间能力激活时 `Q` 不启动回溯；回溯激活时 `T` 不启动时间能力。
 - 现有 HUD 左侧增加竖向能量进度条、100% / 70% / 0% 阈值、当前百分比和模式文字。`FullStop` 与 `BulletTime` 使用不同颜色区域区分。
@@ -57,11 +57,13 @@
 | `MaxEnergy` | 100 |
 | `Energy` | 100 |
 | `FullStopThreshold` | 70 |
-| `DrainPerSecond` | 10 |
+| `DrainPerSecond` | 15 |
 | `RecoveryPerSecond` | 10 |
 | `FullStopTimeScale` | 0.01 |
 | `MinimumBulletTimeScale` | 0.2 |
 | `ReleaseProjectileSpeed` | 5000 |
+
+调整消耗速度：打开 `/Game/Blueprints/Components/Player/AC_TimeAbility`，在 Class Defaults 中修改 `DrainPerSecond`。FullStop 与 BulletTime 共用此速率。教程控制器会缓存该值，并在教学临时覆写结束后恢复；恢复速度由独立的 `RecoveryPerSecond` 控制。下方早期验证记录中的 10 点/秒为当时参数。
 
 ## 验证证据
 

@@ -114,6 +114,14 @@ BP_FPCharacter 的 DialogueManager 使用 AC_DialogueManager 项目适配子类�
 
 跨关卡/磁盘记忆默认 false，侧车为原槽名加 `_Dialogue`，未开启自动存档/启动读档。正式台词表为空待填写，Tests 独立。84项指定运行检查、6个蓝图编译保存、插件三个目标构建及视觉证据见 [dialog-system.md](../Implementation/dialog-system.md)；不代表完整游戏已打包验收。
 
+## Training Room tutorial（2026-10-14）
+
+`/Game/Maps/Map_TrainingRoom` 的 Level Blueprint 拥有 S1～S7 的 Enter/Check 图表、CurrentStep/Phase 和阶段调度。原 `TimeShuttleTraining` 插件已移除。普通 `BP_TrainingController` 提供供弹、时间/位置观察及真实目标/战斗机制，不自行选择下一阶段；`AC_TrainingVisual` 处理独立Dissolve和碰撞，`WBP_TrainingObjective` 显示提示，`BPI_TrainingShot` / `BFL_TrainingImpact` 接入真实武器。资产均在 `/Game/Environment/TrainingRoom/Tutorial`；控制器的16组并行材质数组必须同时检查 CDO 与已放置实例覆盖。
+
+每对象独立 MID 的 TS_PlanePosition 驱动原 MF_PlaneMask；S3～S7A 公共桌与供弹连续保留，S7B 才撤除。共享接入点仅为 BP_Item_Base.ResolveShotDamage、BP_TimeBullet 的两种实际命中处理，以及 AC_TimeAbility 的 S1 演示锁。未登记目标走原伤害链；阶段/检查点记录仅在关卡实例内，不写教学存档。Backspace 重试当前小段，长按 Home 重置全教程。
+
+S7 使用原有近战/远程 NPC 及伤害系统，动态导航支持变动掩体。完整冷启动真实输入通关、死亡重试、原地换场、实际离场和重置证据见 [training-room-tutorial.md](../Implementation/training-room-tutorial.md)。本次不改变默认启动地图或其他实验室的完成状态。
+
 ## 维护入口
 
 - 实验室新版白盒：`/Game/Maps/Map_LabV39`，独立于旧 `Map_LabBridge`；建筑资源在 `Environment/LabV39`，桥接身份与旧图分离。使用 `GM_FP` 和现有角色，初始门禁为静态阻挡，尚未接入剧情解锁。2026-10-02 的构建、碰撞及角色通行证据见 [LabV39Whitebox.md](../Implementation/LabV39Whitebox.md)。默认启动地图仍为 `Map_Test`。
