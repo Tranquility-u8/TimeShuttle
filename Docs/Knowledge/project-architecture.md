@@ -35,19 +35,20 @@
 
 - 编辑器启动地图、游戏默认地图：`/Game/Maps/Map_Test`。
 - **Map_Test 自身的 GameMode Override 是 `/Game/Blueprints/GameModes/GM_FP`**；玩家为 `/Game/Blueprints/Player/BP_FPCharacter`。配置中的全局 fallback 仍是 `/Game/FirstPerson/Blueprints/BP_FirstPersonGameMode`，不能混为一谈。
-- 输入：`/Game/Input/IMC_Player`；Q 对应 `/Game/Input/Actions/IA_Reverse`，T 对应 `/Game/Input/Actions/IA_TimeAbility`。玩家负责输入和启动全局反转，AI 不实现玩家输入。
+- 输入（2026-10-15）：`/Game/Input/IMC_Player` 的 Q 对应 `/Game/Input/Actions/IA_TimeAbility`；用户已移除该映射上下文中的 `IA_Reverse` 绑定。右键对应 `IA_Aim`。玩家负责输入，AI 不实现玩家输入。
 - 蹲起（2026-10-15）：`BP_FPCharacter.IA_Crouch` 的 Started 调用 `ToggleCrouch`，C 键按一次下蹲、再按一次站起，释放不改变姿态；切换读取原生 `bWantsToCrouch`，与冲刺/复活保持同步。CharacterMovement 管理碰撞与低顶重试，`UpdateCrouchView` 在 Mesh 更新后、SpringArm 更新前按实际时间平滑并校正视点。站立/蹲姿视点为胶囊底部上方 160/95 cm，蹲姿胶囊高 110 cm、速度 205 cm/s。快跑/冲刺先检查完整站立空间，复活恢复站起请求；Shooter 用 `GetActorEyesViewPoint` 瞄准。参数、教程低掩体验证与边界见 [FPS 蹲起](../Implementation/fps-crouch.md)。
 - 近战：`/Game/Blueprints/AI/Melee/BP_MeleeNPC` → `/Game/EnemyAITutorial/Enemies/AI/AIC_Enemy_Base` → `BT_Enemy_Melee`。巡逻读取关卡中的 `BP_PatrolRoute`，攻击、动画、剑与行为树依赖均来自迁入资源。
 - 远程：`/Game/Blueprints/AI/Shooter/BP_ShooterNPC` → 同一 `AIC_Enemy_Base` → `BT_Enemy_Ranged`。巡逻、感知、选位、枪械模型、动画与开火节奏来自迁入资源；开火终点改为生成 TimeShuttle 的 `BP_ShooterProjectile_Bullet`，继续沿用本项目命中与伤害判定。战术掩体复用 `EQS_FindCover` 和独立 `CoverLocation`；`BTT_ReserveAndMoveToCover` 以 275 uu 互斥半径管理分布式预约/占用并处理失败、Abort、死亡/回溯释放，`BTT_CoverPeekBurst` 依据目标方向选择左右 140 uu 侧身、短点射并归位后进入四秒冷却。Shooter 的 RVO 继续负责移动过程中的局部避让。
 - 听觉：玩家枪械在 `BP_Item_Base.Fire_HitScan` 起点以武器 Actor 位置上报 `Gunshot` 听觉事件（近战分支静音）。共享 `AIC_Enemy_Base` 的 Hearing 范围为 2000 uu、刺激保留 5 秒；仅听到枪声时把该位置写入 `PointOfInterest` 并进入 Investigating，不会绕过视线直接设置 `AttackTarget`。近战与远程行为树复用同一调查分支。
 - 玩家武器数据：`PDA_Item` / `PDA_ProceduralAnimValues` 是蓝图类；`Data/Weapons/Player/**/DA_*AnimationValues` 是实例，并非 DataTable。
+- 敌人血条（2026-10-15）：`GM_FP` 的 `bShowEnemyHealthBars`（编辑器显示 `Show Enemy Health Bars`）默认开启。共享 `BP_Enemy_Base.RefreshHealthBarVisibility` 在血条初始化后及 Tick 读取当前 GameMode，仅在可见性变化时更新组件；同时要求敌人未死亡。现有及后来生成的近战/远程敌人均遵循该设置，时停中可切换。详见 [本次参数与修复记录](../Implementation/time-controls-health-bars.md)。
 - 存档：`Blueprints/SaveSystem` 中的 `SG_Character` / `SG_SaveSlots`。本地 `Saved/SaveGames` 不进 Git，测试前后需保护真实存档。
 
 ## 时间能力核心入口
 
-`/Game/Blueprints/Components/Player/AC_TimeAbility` 挂载在 `BP_FPCharacter` 上，负责 0–100 能量、Normal / FullStop / BulletTime 三态、均匀消耗恢复及零能量退出。当前 `ModeIndex` 映射为 0 / 1 / 2，阈值 70 归入 FullStop。组件和玩家现有回溯输入共同形成双向互斥门禁。
+`/Game/Blueprints/Components/Player/AC_TimeAbility` 挂载在 `BP_FPCharacter` 上，负责 0–100 能量、Normal / FullStop / BulletTime 三态、均匀消耗恢复及零能量退出。当前 `ModeIndex` 映射为 0 / 1 / 2，阈值 **30** 归入 FullStop；`RecoveryPerSecond=20`，`DrainPerSecond=15`，按现实时间计量。组件和玩家现有回溯逻辑共同形成双向互斥门禁。
 
-`AC_TimeAbility` 在 `FullStop` 使用全局时间倍率 0.01，并用倒数补偿玩家和当前武器；在 `BulletTime` 将能量 70→0 映射为世界倍率 0.2→1.0。`/Game/UI/Widgets/UI_Hud.SetTimeAbilityStatus` 接收能量百分比和模式索引，更新画面左侧的竖向进度条、100% / 70% / 0% 阈值、当前百分比、模式文字与颜色区域；`SetTemporalProjectileStatus` 在 FullStop 显示时间弹丸数量、12 发上限及满额提示。详细范围和验证见 [TimeAbilityCore.md](../Implementation/TimeAbilityCore.md)。
+`AC_TimeAbility` 在 `FullStop` 使用全局时间倍率 0.01，并用倒数补偿玩家和当前武器；在 `BulletTime` 将能量 30→0 映射为世界倍率 0.2→1.0。`/Game/UI/Widgets/UI_Hud.SetTimeAbilityStatus` 接收能量百分比和模式索引，更新画面左侧的竖向进度条、100% / 30% / 0% 阈值、当前百分比、模式文字与颜色区域；`SetTemporalProjectileStatus` 在 FullStop 显示时间弹丸数量、12 发上限及满额提示。`AC_ProceduralAnimation` 的手部姿态过渡速率乘玩家 CustomTimeDilation，位置/旋转弹簧读取组件 Tick 的 DeltaSeconds，使时停中的瞄准进入/退出保持响应。详细范围和验证见 [TimeAbilityCore.md](../Implementation/TimeAbilityCore.md)。
 
 ## 时间停止视觉层（2026-10-03）
 

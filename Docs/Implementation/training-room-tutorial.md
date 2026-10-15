@@ -1,5 +1,9 @@
 # Training Room tutorial implementation
 
+## Controls and recovery update — 2026-10-15
+
+Current tutorial prompts and control help use **Q** for the time ability. The FullStop boundary is **30**, with recovery at **20 energy per real second**. `BP_TrainingController.RequireEnergyRecovery` and `UpdateObservations` now read the ability's live `FullStopThreshold` instead of literal 70; level prompts, the recovery comment, and the HUD threshold/colored regions were updated accordingly. Older T/70 descriptions below are historical. The focused recovery and aim tests passed; this update did not repeat the entire S1–S7 playthrough. See [change and validation details](time-controls-health-bars.md).
+
 ## Current implementation: ordinary Blueprints — 2026-10-14
 
 `TimeShuttleTraining` has been removed from the active Plugins directory and project descriptor. Its unused native-derived `BP_TrainingRoomSupport` asset was deleted after a reference audit. Runtime mechanics now live in ordinary `/Game/Environment/TrainingRoom/Tutorial/` assets: `BP_TrainingController` (Actor; 45 gameplay functions, Construction Script and EventGraph), `AC_TrainingVisual` (ActorComponent; four functions), `BPI_TrainingShot`, `BFL_TrainingImpact`, and `WBP_TrainingObjective`. The original 31 Level Blueprint graphs retain stage ownership. Both weapon impact adapters call the Blueprint function library, which routes via the interface and returns false outside registered training targets. No game graph calls the temporary authoring tool.
