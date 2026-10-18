@@ -1,0 +1,13 @@
+{
+  "asset_path": "/Game/Environment/LabR17/Blueprints/BP_LabOmenDoor",
+  "parent_class": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor.BP_LabRoomDoor_C",
+  "defaults": {
+    "bAutomatic": "true",
+    "DoorWidth": "420",
+    "DoorHeight": "420",
+    "AutoDistance": "360"
+  },
+  "graphs": [],
+  "compile": true,
+  "save": false
+}

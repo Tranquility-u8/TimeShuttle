@@ -1,0 +1,3121 @@
+{
+  "asset_path": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+  "parent_class": "/Game/Blueprints/Interactables/Interaction/BP_Interaction_Base.BP_Interaction_Base_C",
+  "variables": [
+    {
+      "name": "DoorWidth",
+      "type": "float",
+      "default": "240",
+      "instance_editable": true,
+      "category": "Lab Door",
+      "tooltip": "Centimetres, except OpenSeconds. Keep actor scale at 1."
+    },
+    {
+      "name": "DoorHeight",
+      "type": "float",
+      "default": "300",
+      "instance_editable": true,
+      "category": "Lab Door",
+      "tooltip": "Centimetres, except OpenSeconds. Keep actor scale at 1."
+    },
+    {
+      "name": "DoorThickness",
+      "type": "float",
+      "default": "16",
+      "instance_editable": true,
+      "category": "Lab Door",
+      "tooltip": "Centimetres, except OpenSeconds. Keep actor scale at 1."
+    },
+    {
+      "name": "OpenSeconds",
+      "type": "float",
+      "default": "0.8",
+      "instance_editable": true,
+      "category": "Lab Door",
+      "tooltip": "Centimetres, except OpenSeconds. Keep actor scale at 1."
+    },
+    {
+      "name": "AutoDistance",
+      "type": "float",
+      "default": "260",
+      "instance_editable": true,
+      "category": "Lab Door",
+      "tooltip": "Centimetres, except OpenSeconds. Keep actor scale at 1."
+    },
+    {
+      "name": "LeafClearance",
+      "type": "float",
+      "default": "4",
+      "instance_editable": true,
+      "category": "Lab Door",
+      "tooltip": "Centimetres, except OpenSeconds. Keep actor scale at 1."
+    },
+    {
+      "name": "bLocked",
+      "type": "bool",
+      "default": "false",
+      "instance_editable": true,
+      "category": "Lab Door",
+      "tooltip": "Locked doors reject F. Set per instance; no new campaign unlock mechanism."
+    },
+    {
+      "name": "bAutomatic",
+      "type": "bool",
+      "default": "false",
+      "instance_editable": true,
+      "category": "Lab Door",
+      "tooltip": "Omen variant opens when the player is near; ordinary doors use existing F interaction."
+    },
+    {
+      "name": "bDoorOpen",
+      "type": "bool",
+      "default": "false",
+      "instance_editable": false,
+      "category": "Lab Door",
+      "tooltip": ""
+    },
+    {
+      "name": "OpenAlpha",
+      "type": "float",
+      "default": "0",
+      "instance_editable": false,
+      "category": "Lab Door",
+      "tooltip": ""
+    },
+    {
+      "name": "LastRealTime",
+      "type": "float",
+      "default": "0",
+      "instance_editable": false,
+      "category": "Lab Door",
+      "tooltip": ""
+    },
+    {
+      "name": "PromptUntil",
+      "type": "float",
+      "default": "0",
+      "instance_editable": false,
+      "category": "Lab Door",
+      "tooltip": ""
+    }
+  ],
+  "components": [
+    {
+      "name": "LeafLeft",
+      "class": "/Script/Engine.StaticMeshComponent",
+      "parent": "__BASE_ROOT__",
+      "properties": {
+        "StaticMesh": {
+          "object": "/Engine/BasicShapes/Cube.Cube"
+        },
+        "Mobility": "Movable",
+        "BodyInstance": "(CollisionProfileName=\"BlockAllDynamic\")",
+        "bGenerateOverlapEvents": "false"
+      }
+    },
+    {
+      "name": "LeafRight",
+      "class": "/Script/Engine.StaticMeshComponent",
+      "parent": "__BASE_ROOT__",
+      "properties": {
+        "StaticMesh": {
+          "object": "/Engine/BasicShapes/Cube.Cube"
+        },
+        "Mobility": "Movable",
+        "BodyInstance": "(CollisionProfileName=\"BlockAllDynamic\")",
+        "bGenerateOverlapEvents": "false"
+      }
+    },
+    {
+      "name": "AutoBounds",
+      "class": "/Script/Engine.BoxComponent",
+      "parent": "__BASE_ROOT__",
+      "properties": {
+        "Mobility": "Movable",
+        "BoxExtent": "(X=260,Y=180,Z=200)",
+        "BodyInstance": "(CollisionProfileName=\"Trigger\")",
+        "bGenerateOverlapEvents": "true",
+        "bHiddenInGame": "true"
+      }
+    },
+    {
+      "name": "SafetyBounds",
+      "class": "/Script/Engine.BoxComponent",
+      "parent": "__BASE_ROOT__",
+      "properties": {
+        "Mobility": "Movable",
+        "BoxExtent": "(X=260,Y=180,Z=200)",
+        "BodyInstance": "(CollisionProfileName=\"Trigger\")",
+        "bGenerateOverlapEvents": "true",
+        "bHiddenInGame": "true"
+      }
+    },
+    {
+      "name": "PromptFront",
+      "class": "/Script/Engine.TextRenderComponent",
+      "parent": "__BASE_ROOT__",
+      "properties": {
+        "Mobility": "Movable",
+        "Text": "LOCKED",
+        "WorldSize": "18",
+        "HorizontalAlignment": "EHTA_Center",
+        "VerticalAlignment": "EVRTA_TextCenter",
+        "RelativeRotation": "(Pitch=0,Yaw=0,Roll=0)",
+        "bVisible": "false",
+        "TextRenderColor": "(B=45,G=160,R=255,A=255)"
+      }
+    },
+    {
+      "name": "PromptBack",
+      "class": "/Script/Engine.TextRenderComponent",
+      "parent": "__BASE_ROOT__",
+      "properties": {
+        "Mobility": "Movable",
+        "Text": "LOCKED",
+        "WorldSize": "18",
+        "HorizontalAlignment": "EHTA_Center",
+        "VerticalAlignment": "EVRTA_TextCenter",
+        "RelativeRotation": "(Pitch=0,Yaw=180,Roll=0)",
+        "bVisible": "false",
+        "TextRenderColor": "(B=45,G=160,R=255,A=255)"
+      }
+    }
+  ],
+  "defaults": {
+    "PrimaryActorTick.bCanEverTick": "true",
+    "PrimaryActorTick.bStartWithTickEnabled": "true"
+  },
+  "graphs": [
+    {
+      "name": "ConfigureDoor",
+      "kind": "function",
+      "clear": true,
+      "nodes": [
+        {
+          "id": "entry",
+          "kind": "entry",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "id": "get_DoorWidth",
+          "kind": "get",
+          "variable": "DoorWidth",
+          "x": 520,
+          "y": 828
+        },
+        {
+          "id": "get_DoorHeight",
+          "kind": "get",
+          "variable": "DoorHeight",
+          "x": 520,
+          "y": 928
+        },
+        {
+          "id": "get_DoorThickness",
+          "kind": "get",
+          "variable": "DoorThickness",
+          "x": 520,
+          "y": 1048
+        },
+        {
+          "id": "get_AutoDistance",
+          "kind": "get",
+          "variable": "AutoDistance",
+          "x": 6060,
+          "y": 458
+        },
+        {
+          "id": "halfWidth",
+          "kind": "call",
+          "function": "Multiply_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "B": "0.5"
+          },
+          "x": 5360,
+          "y": 260
+        },
+        {
+          "id": "halfHeight",
+          "kind": "call",
+          "function": "Multiply_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "B": "0.5"
+          },
+          "x": 3020,
+          "y": 320
+        },
+        {
+          "id": "scaleX",
+          "kind": "call",
+          "function": "Multiply_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "B": "0.01"
+          },
+          "x": 500,
+          "y": 260
+        },
+        {
+          "id": "scaleY",
+          "kind": "call",
+          "function": "Multiply_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "B": "0.005"
+          },
+          "x": 500,
+          "y": 440
+        },
+        {
+          "id": "scaleZ",
+          "kind": "call",
+          "function": "Multiply_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "B": "0.01"
+          },
+          "x": 500,
+          "y": 620
+        },
+        {
+          "id": "scale",
+          "kind": "call",
+          "function": "MakeVector",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "x": 840,
+          "y": 260
+        },
+        {
+          "id": "scale_LeafLeft",
+          "kind": "call",
+          "function": "SetRelativeScale3D",
+          "class": "/Script/Engine.SceneComponent",
+          "x": 840,
+          "y": 0
+        },
+        {
+          "id": "v_scale_LeafLeft_LeafLeft",
+          "kind": "get",
+          "variable": "LeafLeft",
+          "x": 860,
+          "y": 458
+        },
+        {
+          "id": "scale_LeafRight",
+          "kind": "call",
+          "function": "SetRelativeScale3D",
+          "class": "/Script/Engine.SceneComponent",
+          "x": 1340,
+          "y": 0
+        },
+        {
+          "id": "v_scale_LeafRight_LeafRight",
+          "kind": "get",
+          "variable": "LeafRight",
+          "x": 1360,
+          "y": 218
+        },
+        {
+          "id": "halfWidthSafety",
+          "kind": "call",
+          "function": "Add_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "B": "50"
+          },
+          "x": 5700,
+          "y": 260
+        },
+        {
+          "id": "areaXbase",
+          "kind": "call",
+          "function": "Multiply_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "B": "0.041666666666666664"
+          },
+          "x": 1840,
+          "y": 260
+        },
+        {
+          "id": "areaX",
+          "kind": "call",
+          "function": "Add_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "B": "0.6666666666666666"
+          },
+          "x": 2180,
+          "y": 260
+        },
+        {
+          "id": "areaYbase",
+          "kind": "call",
+          "function": "Multiply_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "B": "0.041666666666666664"
+          },
+          "x": 1840,
+          "y": 440
+        },
+        {
+          "id": "areaY",
+          "kind": "call",
+          "function": "Add_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "B": "0.3333333333333333"
+          },
+          "x": 2180,
+          "y": 440
+        },
+        {
+          "id": "areaZbase",
+          "kind": "call",
+          "function": "Multiply_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "B": "0.041666666666666664"
+          },
+          "x": 1840,
+          "y": 620
+        },
+        {
+          "id": "areaZ",
+          "kind": "call",
+          "function": "Add_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "B": "0.16666666666666666"
+          },
+          "x": 2180,
+          "y": 620
+        },
+        {
+          "id": "areaScale",
+          "kind": "call",
+          "function": "MakeVector",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "x": 2520,
+          "y": 260
+        },
+        {
+          "id": "scaleInteraction",
+          "kind": "call",
+          "function": "SetRelativeScale3D",
+          "class": "/Script/Engine.SceneComponent",
+          "x": 2520,
+          "y": 0
+        },
+        {
+          "id": "v_scaleInteraction_InteractionArea",
+          "kind": "get",
+          "variable": "InteractionArea",
+          "x": 2540,
+          "y": 458
+        },
+        {
+          "id": "areaCenter",
+          "kind": "call",
+          "function": "MakeVector",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "x": 3360,
+          "y": 320
+        },
+        {
+          "id": "centreInteraction",
+          "kind": "call",
+          "function": "K2_SetRelativeLocation",
+          "class": "/Script/Engine.SceneComponent",
+          "defaults": {
+            "bSweep": "false",
+            "bTeleport": "true"
+          },
+          "x": 3360,
+          "y": 0
+        },
+        {
+          "id": "v_centreInteraction_InteractionArea",
+          "kind": "get",
+          "variable": "InteractionArea",
+          "x": 3380,
+          "y": 518
+        },
+        {
+          "id": "centreWidget",
+          "kind": "call",
+          "function": "K2_SetRelativeLocation",
+          "class": "/Script/Engine.SceneComponent",
+          "defaults": {
+            "bSweep": "false",
+            "bTeleport": "true"
+          },
+          "x": 3860,
+          "y": 0
+        },
+        {
+          "id": "v_centreWidget_Widget",
+          "kind": "get",
+          "variable": "Widget",
+          "x": 3880,
+          "y": 278
+        },
+        {
+          "id": "ignore_AutoBounds",
+          "kind": "call",
+          "function": "SetCollisionResponseToAllChannels",
+          "class": "/Script/Engine.PrimitiveComponent",
+          "defaults": {
+            "NewResponse": "ECR_Ignore"
+          },
+          "x": 4360,
+          "y": 0
+        },
+        {
+          "id": "v_ignore_AutoBounds_AutoBounds",
+          "kind": "get",
+          "variable": "AutoBounds",
+          "x": 4380,
+          "y": 218
+        },
+        {
+          "id": "pawn_AutoBounds",
+          "kind": "call",
+          "function": "SetCollisionResponseToChannel",
+          "class": "/Script/Engine.PrimitiveComponent",
+          "defaults": {
+            "Channel": "ECC_Pawn",
+            "NewResponse": "ECR_Overlap"
+          },
+          "x": 4860,
+          "y": 0
+        },
+        {
+          "id": "v_pawn_AutoBounds_AutoBounds",
+          "kind": "get",
+          "variable": "AutoBounds",
+          "x": 4880,
+          "y": 218
+        },
+        {
+          "id": "extent_AutoBounds",
+          "kind": "call",
+          "function": "MakeVector",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "x": 6040,
+          "y": 260
+        },
+        {
+          "id": "setextent_AutoBounds",
+          "kind": "call",
+          "function": "SetBoxExtent",
+          "class": "/Script/Engine.BoxComponent",
+          "defaults": {
+            "bUpdateOverlaps": "true"
+          },
+          "x": 6040,
+          "y": 0
+        },
+        {
+          "id": "v_setextent_AutoBounds_AutoBounds",
+          "kind": "get",
+          "variable": "AutoBounds",
+          "x": 6060,
+          "y": 538
+        },
+        {
+          "id": "loc_AutoBounds",
+          "kind": "call",
+          "function": "MakeVector",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "x": 6540,
+          "y": 320
+        },
+        {
+          "id": "setloc_AutoBounds",
+          "kind": "call",
+          "function": "K2_SetRelativeLocation",
+          "class": "/Script/Engine.SceneComponent",
+          "defaults": {
+            "bSweep": "false",
+            "bTeleport": "true"
+          },
+          "x": 6540,
+          "y": 0
+        },
+        {
+          "id": "v_setloc_AutoBounds_AutoBounds",
+          "kind": "get",
+          "variable": "AutoBounds",
+          "x": 6560,
+          "y": 518
+        },
+        {
+          "id": "ignore_SafetyBounds",
+          "kind": "call",
+          "function": "SetCollisionResponseToAllChannels",
+          "class": "/Script/Engine.PrimitiveComponent",
+          "defaults": {
+            "NewResponse": "ECR_Ignore"
+          },
+          "x": 7040,
+          "y": 0
+        },
+        {
+          "id": "v_ignore_SafetyBounds_SafetyBounds",
+          "kind": "get",
+          "variable": "SafetyBounds",
+          "x": 7060,
+          "y": 218
+        },
+        {
+          "id": "pawn_SafetyBounds",
+          "kind": "call",
+          "function": "SetCollisionResponseToChannel",
+          "class": "/Script/Engine.PrimitiveComponent",
+          "defaults": {
+            "Channel": "ECC_Pawn",
+            "NewResponse": "ECR_Overlap"
+          },
+          "x": 7540,
+          "y": 0
+        },
+        {
+          "id": "v_pawn_SafetyBounds_SafetyBounds",
+          "kind": "get",
+          "variable": "SafetyBounds",
+          "x": 7560,
+          "y": 218
+        },
+        {
+          "id": "extent_SafetyBounds",
+          "kind": "call",
+          "function": "MakeVector",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "X": "95"
+          },
+          "x": 8040,
+          "y": 260
+        },
+        {
+          "id": "setextent_SafetyBounds",
+          "kind": "call",
+          "function": "SetBoxExtent",
+          "class": "/Script/Engine.BoxComponent",
+          "defaults": {
+            "bUpdateOverlaps": "true"
+          },
+          "x": 8040,
+          "y": 0
+        },
+        {
+          "id": "v_setextent_SafetyBounds_SafetyBounds",
+          "kind": "get",
+          "variable": "SafetyBounds",
+          "x": 8060,
+          "y": 458
+        },
+        {
+          "id": "loc_SafetyBounds",
+          "kind": "call",
+          "function": "MakeVector",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "x": 8540,
+          "y": 320
+        },
+        {
+          "id": "setloc_SafetyBounds",
+          "kind": "call",
+          "function": "K2_SetRelativeLocation",
+          "class": "/Script/Engine.SceneComponent",
+          "defaults": {
+            "bSweep": "false",
+            "bTeleport": "true"
+          },
+          "x": 8540,
+          "y": 0
+        },
+        {
+          "id": "v_setloc_SafetyBounds_SafetyBounds",
+          "kind": "get",
+          "variable": "SafetyBounds",
+          "x": 8560,
+          "y": 518
+        },
+        {
+          "id": "textZ",
+          "kind": "call",
+          "function": "Multiply_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "B": ".65"
+          },
+          "x": 9040,
+          "y": 320
+        },
+        {
+          "id": "textX",
+          "kind": "call",
+          "function": "Multiply_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "B": ".5"
+          },
+          "x": 9040,
+          "y": 500
+        },
+        {
+          "id": "textOffset",
+          "kind": "call",
+          "function": "Add_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "B": "5"
+          },
+          "x": 9380,
+          "y": 320
+        },
+        {
+          "id": "PromptFrontX",
+          "kind": "call",
+          "function": "Multiply_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "B": "1"
+          },
+          "x": 9720,
+          "y": 320
+        },
+        {
+          "id": "PromptFrontLoc",
+          "kind": "call",
+          "function": "MakeVector",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "x": 10060,
+          "y": 320
+        },
+        {
+          "id": "loc_PromptFront",
+          "kind": "call",
+          "function": "K2_SetRelativeLocation",
+          "class": "/Script/Engine.SceneComponent",
+          "defaults": {
+            "bSweep": "false",
+            "bTeleport": "true"
+          },
+          "x": 10060,
+          "y": 0
+        },
+        {
+          "id": "v_loc_PromptFront_PromptFront",
+          "kind": "get",
+          "variable": "PromptFront",
+          "x": 10080,
+          "y": 518
+        },
+        {
+          "id": "PromptBackX",
+          "kind": "call",
+          "function": "Multiply_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "B": "-1"
+          },
+          "x": 10560,
+          "y": 320
+        },
+        {
+          "id": "PromptBackLoc",
+          "kind": "call",
+          "function": "MakeVector",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "x": 10900,
+          "y": 320
+        },
+        {
+          "id": "loc_PromptBack",
+          "kind": "call",
+          "function": "K2_SetRelativeLocation",
+          "class": "/Script/Engine.SceneComponent",
+          "defaults": {
+            "bSweep": "false",
+            "bTeleport": "true"
+          },
+          "x": 10900,
+          "y": 0
+        },
+        {
+          "id": "v_loc_PromptBack_PromptBack",
+          "kind": "get",
+          "variable": "PromptBack",
+          "x": 10920,
+          "y": 518
+        },
+        {
+          "id": "section_0",
+          "kind": "comment",
+          "text": "DIMENSIONS | Width/height in cm; two sliding leaves span the aperture. X wall normal, Y aperture width. Safety box is wider than the collision plane.",
+          "x": -100,
+          "y": -100,
+          "width": 11480,
+          "height": 1296,
+          "color": "(R=0.04,G=0.12,B=0.20,A=1)"
+        }
+      ],
+      "links": [
+        [
+          "get_DoorWidth",
+          "DoorWidth",
+          "halfWidth",
+          "A"
+        ],
+        [
+          "get_DoorHeight",
+          "DoorHeight",
+          "halfHeight",
+          "A"
+        ],
+        [
+          "get_DoorThickness",
+          "DoorThickness",
+          "scaleX",
+          "A"
+        ],
+        [
+          "get_DoorWidth",
+          "DoorWidth",
+          "scaleY",
+          "A"
+        ],
+        [
+          "get_DoorHeight",
+          "DoorHeight",
+          "scaleZ",
+          "A"
+        ],
+        [
+          "scaleX",
+          "ReturnValue",
+          "scale",
+          "X"
+        ],
+        [
+          "scaleY",
+          "ReturnValue",
+          "scale",
+          "Y"
+        ],
+        [
+          "scaleZ",
+          "ReturnValue",
+          "scale",
+          "Z"
+        ],
+        [
+          "v_scale_LeafLeft_LeafLeft",
+          "LeafLeft",
+          "scale_LeafLeft",
+          "self"
+        ],
+        [
+          "scale",
+          "ReturnValue",
+          "scale_LeafLeft",
+          "NewScale3D"
+        ],
+        [
+          "v_scale_LeafRight_LeafRight",
+          "LeafRight",
+          "scale_LeafRight",
+          "self"
+        ],
+        [
+          "scale",
+          "ReturnValue",
+          "scale_LeafRight",
+          "NewScale3D"
+        ],
+        [
+          "halfWidth",
+          "ReturnValue",
+          "halfWidthSafety",
+          "A"
+        ],
+        [
+          "get_DoorThickness",
+          "DoorThickness",
+          "areaXbase",
+          "A"
+        ],
+        [
+          "areaXbase",
+          "ReturnValue",
+          "areaX",
+          "A"
+        ],
+        [
+          "get_DoorWidth",
+          "DoorWidth",
+          "areaYbase",
+          "A"
+        ],
+        [
+          "areaYbase",
+          "ReturnValue",
+          "areaY",
+          "A"
+        ],
+        [
+          "get_DoorHeight",
+          "DoorHeight",
+          "areaZbase",
+          "A"
+        ],
+        [
+          "areaZbase",
+          "ReturnValue",
+          "areaZ",
+          "A"
+        ],
+        [
+          "areaX",
+          "ReturnValue",
+          "areaScale",
+          "X"
+        ],
+        [
+          "areaY",
+          "ReturnValue",
+          "areaScale",
+          "Y"
+        ],
+        [
+          "areaZ",
+          "ReturnValue",
+          "areaScale",
+          "Z"
+        ],
+        [
+          "v_scaleInteraction_InteractionArea",
+          "InteractionArea",
+          "scaleInteraction",
+          "self"
+        ],
+        [
+          "areaScale",
+          "ReturnValue",
+          "scaleInteraction",
+          "NewScale3D"
+        ],
+        [
+          "halfHeight",
+          "ReturnValue",
+          "areaCenter",
+          "Z"
+        ],
+        [
+          "v_centreInteraction_InteractionArea",
+          "InteractionArea",
+          "centreInteraction",
+          "self"
+        ],
+        [
+          "areaCenter",
+          "ReturnValue",
+          "centreInteraction",
+          "NewLocation"
+        ],
+        [
+          "v_centreWidget_Widget",
+          "Widget",
+          "centreWidget",
+          "self"
+        ],
+        [
+          "areaCenter",
+          "ReturnValue",
+          "centreWidget",
+          "NewLocation"
+        ],
+        [
+          "v_ignore_AutoBounds_AutoBounds",
+          "AutoBounds",
+          "ignore_AutoBounds",
+          "self"
+        ],
+        [
+          "v_pawn_AutoBounds_AutoBounds",
+          "AutoBounds",
+          "pawn_AutoBounds",
+          "self"
+        ],
+        [
+          "get_AutoDistance",
+          "AutoDistance",
+          "extent_AutoBounds",
+          "X"
+        ],
+        [
+          "halfWidthSafety",
+          "ReturnValue",
+          "extent_AutoBounds",
+          "Y"
+        ],
+        [
+          "halfHeight",
+          "ReturnValue",
+          "extent_AutoBounds",
+          "Z"
+        ],
+        [
+          "v_setextent_AutoBounds_AutoBounds",
+          "AutoBounds",
+          "setextent_AutoBounds",
+          "self"
+        ],
+        [
+          "extent_AutoBounds",
+          "ReturnValue",
+          "setextent_AutoBounds",
+          "InBoxExtent"
+        ],
+        [
+          "halfHeight",
+          "ReturnValue",
+          "loc_AutoBounds",
+          "Z"
+        ],
+        [
+          "v_setloc_AutoBounds_AutoBounds",
+          "AutoBounds",
+          "setloc_AutoBounds",
+          "self"
+        ],
+        [
+          "loc_AutoBounds",
+          "ReturnValue",
+          "setloc_AutoBounds",
+          "NewLocation"
+        ],
+        [
+          "v_ignore_SafetyBounds_SafetyBounds",
+          "SafetyBounds",
+          "ignore_SafetyBounds",
+          "self"
+        ],
+        [
+          "v_pawn_SafetyBounds_SafetyBounds",
+          "SafetyBounds",
+          "pawn_SafetyBounds",
+          "self"
+        ],
+        [
+          "halfWidthSafety",
+          "ReturnValue",
+          "extent_SafetyBounds",
+          "Y"
+        ],
+        [
+          "halfHeight",
+          "ReturnValue",
+          "extent_SafetyBounds",
+          "Z"
+        ],
+        [
+          "v_setextent_SafetyBounds_SafetyBounds",
+          "SafetyBounds",
+          "setextent_SafetyBounds",
+          "self"
+        ],
+        [
+          "extent_SafetyBounds",
+          "ReturnValue",
+          "setextent_SafetyBounds",
+          "InBoxExtent"
+        ],
+        [
+          "halfHeight",
+          "ReturnValue",
+          "loc_SafetyBounds",
+          "Z"
+        ],
+        [
+          "v_setloc_SafetyBounds_SafetyBounds",
+          "SafetyBounds",
+          "setloc_SafetyBounds",
+          "self"
+        ],
+        [
+          "loc_SafetyBounds",
+          "ReturnValue",
+          "setloc_SafetyBounds",
+          "NewLocation"
+        ],
+        [
+          "get_DoorHeight",
+          "DoorHeight",
+          "textZ",
+          "A"
+        ],
+        [
+          "get_DoorThickness",
+          "DoorThickness",
+          "textX",
+          "A"
+        ],
+        [
+          "textX",
+          "ReturnValue",
+          "textOffset",
+          "A"
+        ],
+        [
+          "textOffset",
+          "ReturnValue",
+          "PromptFrontX",
+          "A"
+        ],
+        [
+          "PromptFrontX",
+          "ReturnValue",
+          "PromptFrontLoc",
+          "X"
+        ],
+        [
+          "textZ",
+          "ReturnValue",
+          "PromptFrontLoc",
+          "Z"
+        ],
+        [
+          "v_loc_PromptFront_PromptFront",
+          "PromptFront",
+          "loc_PromptFront",
+          "self"
+        ],
+        [
+          "PromptFrontLoc",
+          "ReturnValue",
+          "loc_PromptFront",
+          "NewLocation"
+        ],
+        [
+          "textOffset",
+          "ReturnValue",
+          "PromptBackX",
+          "A"
+        ],
+        [
+          "PromptBackX",
+          "ReturnValue",
+          "PromptBackLoc",
+          "X"
+        ],
+        [
+          "textZ",
+          "ReturnValue",
+          "PromptBackLoc",
+          "Z"
+        ],
+        [
+          "v_loc_PromptBack_PromptBack",
+          "PromptBack",
+          "loc_PromptBack",
+          "self"
+        ],
+        [
+          "PromptBackLoc",
+          "ReturnValue",
+          "loc_PromptBack",
+          "NewLocation"
+        ],
+        [
+          "entry",
+          "then",
+          "scale_LeafLeft",
+          "execute"
+        ],
+        [
+          "scale_LeafLeft",
+          "then",
+          "scale_LeafRight",
+          "execute"
+        ],
+        [
+          "scale_LeafRight",
+          "then",
+          "scaleInteraction",
+          "execute"
+        ],
+        [
+          "scaleInteraction",
+          "then",
+          "centreInteraction",
+          "execute"
+        ],
+        [
+          "centreInteraction",
+          "then",
+          "centreWidget",
+          "execute"
+        ],
+        [
+          "centreWidget",
+          "then",
+          "ignore_AutoBounds",
+          "execute"
+        ],
+        [
+          "ignore_AutoBounds",
+          "then",
+          "pawn_AutoBounds",
+          "execute"
+        ],
+        [
+          "pawn_AutoBounds",
+          "then",
+          "setextent_AutoBounds",
+          "execute"
+        ],
+        [
+          "setextent_AutoBounds",
+          "then",
+          "setloc_AutoBounds",
+          "execute"
+        ],
+        [
+          "setloc_AutoBounds",
+          "then",
+          "ignore_SafetyBounds",
+          "execute"
+        ],
+        [
+          "ignore_SafetyBounds",
+          "then",
+          "pawn_SafetyBounds",
+          "execute"
+        ],
+        [
+          "pawn_SafetyBounds",
+          "then",
+          "setextent_SafetyBounds",
+          "execute"
+        ],
+        [
+          "setextent_SafetyBounds",
+          "then",
+          "setloc_SafetyBounds",
+          "execute"
+        ],
+        [
+          "setloc_SafetyBounds",
+          "then",
+          "loc_PromptFront",
+          "execute"
+        ],
+        [
+          "loc_PromptFront",
+          "then",
+          "loc_PromptBack",
+          "execute"
+        ]
+      ]
+    },
+    {
+      "name": "ApplyDoorPose",
+      "kind": "function",
+      "clear": true,
+      "nodes": [
+        {
+          "id": "entry",
+          "kind": "entry",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "id": "get_DoorWidth",
+          "kind": "get",
+          "variable": "DoorWidth",
+          "x": 520,
+          "y": 888
+        },
+        {
+          "id": "get_DoorHeight",
+          "kind": "get",
+          "variable": "DoorHeight",
+          "x": 520,
+          "y": 1028
+        },
+        {
+          "id": "get_LeafClearance",
+          "kind": "get",
+          "variable": "LeafClearance",
+          "x": 860,
+          "y": 468
+        },
+        {
+          "id": "get_OpenAlpha",
+          "kind": "get",
+          "variable": "OpenAlpha",
+          "x": 1200,
+          "y": 468
+        },
+        {
+          "id": "get_PromptUntil",
+          "kind": "get",
+          "variable": "PromptUntil",
+          "x": 3900,
+          "y": 408
+        },
+        {
+          "id": "halfHeight",
+          "kind": "call",
+          "function": "Multiply_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "B": "0.5"
+          },
+          "x": 500,
+          "y": 320
+        },
+        {
+          "id": "halfWidth",
+          "kind": "call",
+          "function": "Multiply_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "B": "0.5"
+          },
+          "x": 500,
+          "y": 500
+        },
+        {
+          "id": "quarterWidth",
+          "kind": "call",
+          "function": "Multiply_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "B": "0.25"
+          },
+          "x": 500,
+          "y": 680
+        },
+        {
+          "id": "travel",
+          "kind": "call",
+          "function": "Add_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "x": 840,
+          "y": 320
+        },
+        {
+          "id": "travelAlpha",
+          "kind": "call",
+          "function": "Multiply_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "x": 1180,
+          "y": 320
+        },
+        {
+          "id": "leafOffset",
+          "kind": "call",
+          "function": "Add_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "x": 1520,
+          "y": 320
+        },
+        {
+          "id": "LeafLeftY",
+          "kind": "call",
+          "function": "Multiply_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "B": "-1"
+          },
+          "x": 1860,
+          "y": 320
+        },
+        {
+          "id": "LeafLeftLoc",
+          "kind": "call",
+          "function": "MakeVector",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "x": 2200,
+          "y": 320
+        },
+        {
+          "id": "pose_LeafLeft",
+          "kind": "call",
+          "function": "K2_SetRelativeLocation",
+          "class": "/Script/Engine.SceneComponent",
+          "defaults": {
+            "bSweep": "false",
+            "bTeleport": "true"
+          },
+          "x": 2200,
+          "y": 0
+        },
+        {
+          "id": "v_pose_LeafLeft_LeafLeft",
+          "kind": "get",
+          "variable": "LeafLeft",
+          "x": 2220,
+          "y": 518
+        },
+        {
+          "id": "LeafRightY",
+          "kind": "call",
+          "function": "Multiply_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "B": "1"
+          },
+          "x": 2700,
+          "y": 320
+        },
+        {
+          "id": "LeafRightLoc",
+          "kind": "call",
+          "function": "MakeVector",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "x": 3040,
+          "y": 320
+        },
+        {
+          "id": "pose_LeafRight",
+          "kind": "call",
+          "function": "K2_SetRelativeLocation",
+          "class": "/Script/Engine.SceneComponent",
+          "defaults": {
+            "bSweep": "false",
+            "bTeleport": "true"
+          },
+          "x": 3040,
+          "y": 0
+        },
+        {
+          "id": "v_pose_LeafRight_LeafRight",
+          "kind": "get",
+          "variable": "LeafRight",
+          "x": 3060,
+          "y": 518
+        },
+        {
+          "id": "now",
+          "kind": "call",
+          "function": "GetRealTimeSeconds",
+          "class": "/Script/Engine.GameplayStatics",
+          "x": 3540,
+          "y": 260
+        },
+        {
+          "id": "show",
+          "kind": "call",
+          "function": "Less_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "x": 3880,
+          "y": 260
+        },
+        {
+          "id": "show_PromptFront",
+          "kind": "call",
+          "function": "SetVisibility",
+          "class": "/Script/Engine.SceneComponent",
+          "defaults": {
+            "bPropagateToChildren": "false"
+          },
+          "x": 3880,
+          "y": 0
+        },
+        {
+          "id": "v_show_PromptFront_PromptFront",
+          "kind": "get",
+          "variable": "PromptFront",
+          "x": 3900,
+          "y": 538
+        },
+        {
+          "id": "show_PromptBack",
+          "kind": "call",
+          "function": "SetVisibility",
+          "class": "/Script/Engine.SceneComponent",
+          "defaults": {
+            "bPropagateToChildren": "false"
+          },
+          "x": 4380,
+          "y": 0
+        },
+        {
+          "id": "v_show_PromptBack_PromptBack",
+          "kind": "get",
+          "variable": "PromptBack",
+          "x": 4400,
+          "y": 218
+        },
+        {
+          "id": "section_0",
+          "kind": "comment",
+          "text": "POSE | Smooth horizontal double opening. Collision stays enabled. Doorway occupancy is checked before every closing step. Prompts are visible from both sides.",
+          "x": -100,
+          "y": -100,
+          "width": 4960,
+          "height": 1276,
+          "color": "(R=0.04,G=0.12,B=0.20,A=1)"
+        }
+      ],
+      "links": [
+        [
+          "get_DoorHeight",
+          "DoorHeight",
+          "halfHeight",
+          "A"
+        ],
+        [
+          "get_DoorWidth",
+          "DoorWidth",
+          "halfWidth",
+          "A"
+        ],
+        [
+          "get_DoorWidth",
+          "DoorWidth",
+          "quarterWidth",
+          "A"
+        ],
+        [
+          "halfWidth",
+          "ReturnValue",
+          "travel",
+          "A"
+        ],
+        [
+          "get_LeafClearance",
+          "LeafClearance",
+          "travel",
+          "B"
+        ],
+        [
+          "travel",
+          "ReturnValue",
+          "travelAlpha",
+          "A"
+        ],
+        [
+          "get_OpenAlpha",
+          "OpenAlpha",
+          "travelAlpha",
+          "B"
+        ],
+        [
+          "quarterWidth",
+          "ReturnValue",
+          "leafOffset",
+          "A"
+        ],
+        [
+          "travelAlpha",
+          "ReturnValue",
+          "leafOffset",
+          "B"
+        ],
+        [
+          "leafOffset",
+          "ReturnValue",
+          "LeafLeftY",
+          "A"
+        ],
+        [
+          "LeafLeftY",
+          "ReturnValue",
+          "LeafLeftLoc",
+          "Y"
+        ],
+        [
+          "halfHeight",
+          "ReturnValue",
+          "LeafLeftLoc",
+          "Z"
+        ],
+        [
+          "v_pose_LeafLeft_LeafLeft",
+          "LeafLeft",
+          "pose_LeafLeft",
+          "self"
+        ],
+        [
+          "LeafLeftLoc",
+          "ReturnValue",
+          "pose_LeafLeft",
+          "NewLocation"
+        ],
+        [
+          "leafOffset",
+          "ReturnValue",
+          "LeafRightY",
+          "A"
+        ],
+        [
+          "LeafRightY",
+          "ReturnValue",
+          "LeafRightLoc",
+          "Y"
+        ],
+        [
+          "halfHeight",
+          "ReturnValue",
+          "LeafRightLoc",
+          "Z"
+        ],
+        [
+          "v_pose_LeafRight_LeafRight",
+          "LeafRight",
+          "pose_LeafRight",
+          "self"
+        ],
+        [
+          "LeafRightLoc",
+          "ReturnValue",
+          "pose_LeafRight",
+          "NewLocation"
+        ],
+        [
+          "now",
+          "ReturnValue",
+          "show",
+          "A"
+        ],
+        [
+          "get_PromptUntil",
+          "PromptUntil",
+          "show",
+          "B"
+        ],
+        [
+          "v_show_PromptFront_PromptFront",
+          "PromptFront",
+          "show_PromptFront",
+          "self"
+        ],
+        [
+          "show",
+          "ReturnValue",
+          "show_PromptFront",
+          "bNewVisibility"
+        ],
+        [
+          "v_show_PromptBack_PromptBack",
+          "PromptBack",
+          "show_PromptBack",
+          "self"
+        ],
+        [
+          "show",
+          "ReturnValue",
+          "show_PromptBack",
+          "bNewVisibility"
+        ],
+        [
+          "entry",
+          "then",
+          "pose_LeafLeft",
+          "execute"
+        ],
+        [
+          "pose_LeafLeft",
+          "then",
+          "pose_LeafRight",
+          "execute"
+        ],
+        [
+          "pose_LeafRight",
+          "then",
+          "show_PromptFront",
+          "execute"
+        ],
+        [
+          "show_PromptFront",
+          "then",
+          "show_PromptBack",
+          "execute"
+        ]
+      ]
+    },
+    {
+      "name": "WakeDoor",
+      "kind": "function",
+      "clear": true,
+      "nodes": [
+        {
+          "id": "entry",
+          "kind": "entry",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "id": "now",
+          "kind": "call",
+          "function": "GetRealTimeSeconds",
+          "class": "/Script/Engine.GameplayStatics",
+          "x": 500,
+          "y": 200
+        },
+        {
+          "id": "set_LastRealTime",
+          "kind": "set",
+          "variable": "LastRealTime",
+          "x": 500,
+          "y": 0
+        },
+        {
+          "id": "tickOn",
+          "kind": "call",
+          "function": "SetActorTickEnabled",
+          "class": "/Script/Engine.Actor",
+          "defaults": {
+            "bEnabled": "true"
+          },
+          "x": 1000,
+          "y": 0
+        },
+        {
+          "id": "section_0",
+          "kind": "comment",
+          "text": "WAKE | Reset real-time delta before movement. Tick runs only during animation or transient feedback.",
+          "x": -100,
+          "y": -100,
+          "width": 1580,
+          "height": 500,
+          "color": "(R=0.04,G=0.12,B=0.20,A=1)"
+        }
+      ],
+      "links": [
+        [
+          "now",
+          "ReturnValue",
+          "set_LastRealTime",
+          "LastRealTime"
+        ],
+        [
+          "entry",
+          "then",
+          "set_LastRealTime",
+          "execute"
+        ],
+        [
+          "set_LastRealTime",
+          "then",
+          "tickOn",
+          "execute"
+        ]
+      ]
+    },
+    {
+      "name": "SetDoorOpen",
+      "kind": "function",
+      "clear": true,
+      "nodes": [
+        {
+          "id": "entry",
+          "kind": "entry",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "id": "set_bDoorOpen",
+          "kind": "set",
+          "variable": "bDoorOpen",
+          "x": 500,
+          "y": 0
+        },
+        {
+          "id": "wake",
+          "kind": "call",
+          "function": "WakeDoor",
+          "x": 1000,
+          "y": 0
+        },
+        {
+          "id": "section_0",
+          "kind": "comment",
+          "text": "TARGET | Set desired open state. Runtime scripts may call this after changing bLocked; story permissions remain outside the door.",
+          "x": -100,
+          "y": -100,
+          "width": 1580,
+          "height": 370,
+          "color": "(R=0.04,G=0.12,B=0.20,A=1)"
+        }
+      ],
+      "links": [
+        [
+          "entry",
+          "WantsOpen",
+          "set_bDoorOpen",
+          "bDoorOpen"
+        ],
+        [
+          "entry",
+          "then",
+          "set_bDoorOpen",
+          "execute"
+        ],
+        [
+          "set_bDoorOpen",
+          "then",
+          "wake",
+          "execute"
+        ]
+      ],
+      "inputs": [
+        {
+          "name": "WantsOpen",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "ShowDoorPrompt",
+      "kind": "function",
+      "clear": true,
+      "nodes": [
+        {
+          "id": "entry",
+          "kind": "entry",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "id": "asText",
+          "kind": "call",
+          "function": "Conv_StringToText",
+          "class": "/Script/Engine.KismetTextLibrary",
+          "x": 500,
+          "y": 260
+        },
+        {
+          "id": "text_PromptFront",
+          "kind": "call",
+          "function": "K2_SetText",
+          "class": "/Script/Engine.TextRenderComponent",
+          "x": 500,
+          "y": 0
+        },
+        {
+          "id": "v_text_PromptFront_PromptFront",
+          "kind": "get",
+          "variable": "PromptFront",
+          "x": 520,
+          "y": 458
+        },
+        {
+          "id": "text_PromptBack",
+          "kind": "call",
+          "function": "K2_SetText",
+          "class": "/Script/Engine.TextRenderComponent",
+          "x": 1000,
+          "y": 0
+        },
+        {
+          "id": "v_text_PromptBack_PromptBack",
+          "kind": "get",
+          "variable": "PromptBack",
+          "x": 1020,
+          "y": 218
+        },
+        {
+          "id": "now",
+          "kind": "call",
+          "function": "GetRealTimeSeconds",
+          "class": "/Script/Engine.GameplayStatics",
+          "x": 1500,
+          "y": 200
+        },
+        {
+          "id": "expiry",
+          "kind": "call",
+          "function": "Add_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "B": "2"
+          },
+          "x": 1840,
+          "y": 200
+        },
+        {
+          "id": "set_PromptUntil",
+          "kind": "set",
+          "variable": "PromptUntil",
+          "x": 1840,
+          "y": 0
+        },
+        {
+          "id": "wake",
+          "kind": "call",
+          "function": "WakeDoor",
+          "x": 2340,
+          "y": 0
+        },
+        {
+          "id": "section_0",
+          "kind": "comment",
+          "text": "FEEDBACK | Runtime text, shown for two real seconds. LOCKED or DOORWAY BLOCKED. No debug-only PrintString.",
+          "x": -100,
+          "y": -100,
+          "width": 2920,
+          "height": 706,
+          "color": "(R=0.04,G=0.12,B=0.20,A=1)"
+        }
+      ],
+      "links": [
+        [
+          "entry",
+          "Message",
+          "asText",
+          "InString"
+        ],
+        [
+          "v_text_PromptFront_PromptFront",
+          "PromptFront",
+          "text_PromptFront",
+          "self"
+        ],
+        [
+          "asText",
+          "ReturnValue",
+          "text_PromptFront",
+          "Value"
+        ],
+        [
+          "v_text_PromptBack_PromptBack",
+          "PromptBack",
+          "text_PromptBack",
+          "self"
+        ],
+        [
+          "asText",
+          "ReturnValue",
+          "text_PromptBack",
+          "Value"
+        ],
+        [
+          "now",
+          "ReturnValue",
+          "expiry",
+          "A"
+        ],
+        [
+          "expiry",
+          "ReturnValue",
+          "set_PromptUntil",
+          "PromptUntil"
+        ],
+        [
+          "entry",
+          "then",
+          "text_PromptFront",
+          "execute"
+        ],
+        [
+          "text_PromptFront",
+          "then",
+          "text_PromptBack",
+          "execute"
+        ],
+        [
+          "text_PromptBack",
+          "then",
+          "set_PromptUntil",
+          "execute"
+        ],
+        [
+          "set_PromptUntil",
+          "then",
+          "wake",
+          "execute"
+        ]
+      ],
+      "inputs": [
+        {
+          "name": "Message",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "DoorwayOccupied",
+      "kind": "function",
+      "clear": true,
+      "nodes": [
+        {
+          "id": "entry",
+          "kind": "entry",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "id": "result",
+          "kind": "result",
+          "x": 840,
+          "y": 0
+        },
+        {
+          "id": "player",
+          "kind": "call",
+          "function": "GetPlayerPawn",
+          "class": "/Script/Engine.GameplayStatics",
+          "defaults": {
+            "PlayerIndex": "0"
+          },
+          "x": 500,
+          "y": 190
+        },
+        {
+          "id": "overlap",
+          "kind": "call",
+          "function": "IsOverlappingActor",
+          "class": "/Script/Engine.PrimitiveComponent",
+          "x": 840,
+          "y": 190
+        },
+        {
+          "id": "v_overlap_SafetyBounds",
+          "kind": "get",
+          "variable": "SafetyBounds",
+          "x": 860,
+          "y": 358
+        },
+        {
+          "id": "section_0",
+          "kind": "comment",
+          "text": "SAFETY | Uses the pawn overlap of the sill box; null/unpossessed pawn safely returns false in native IsOverlappingActor.",
+          "x": -100,
+          "y": -100,
+          "width": 1420,
+          "height": 606,
+          "color": "(R=0.04,G=0.12,B=0.20,A=1)"
+        }
+      ],
+      "links": [
+        [
+          "v_overlap_SafetyBounds",
+          "SafetyBounds",
+          "overlap",
+          "self"
+        ],
+        [
+          "player",
+          "ReturnValue",
+          "overlap",
+          "Other"
+        ],
+        [
+          "overlap",
+          "ReturnValue",
+          "result",
+          "Occupied"
+        ],
+        [
+          "entry",
+          "then",
+          "result",
+          "execute"
+        ]
+      ],
+      "outputs": [
+        {
+          "name": "Occupied",
+          "type": "bool"
+        }
+      ],
+      "pure": true
+    },
+    {
+      "name": "CheckAutomaticDoor",
+      "kind": "function",
+      "clear": true,
+      "nodes": [
+        {
+          "id": "entry",
+          "kind": "entry",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "id": "player",
+          "kind": "call",
+          "function": "GetPlayerPawn",
+          "class": "/Script/Engine.GameplayStatics",
+          "defaults": {
+            "PlayerIndex": "0"
+          },
+          "x": 500,
+          "y": 200
+        },
+        {
+          "id": "near",
+          "kind": "call",
+          "function": "IsOverlappingActor",
+          "class": "/Script/Engine.PrimitiveComponent",
+          "x": 840,
+          "y": 200
+        },
+        {
+          "id": "v_near_AutoBounds",
+          "kind": "get",
+          "variable": "AutoBounds",
+          "x": 860,
+          "y": 368
+        },
+        {
+          "id": "get_bLocked",
+          "kind": "get",
+          "variable": "bLocked",
+          "x": 520,
+          "y": 548
+        },
+        {
+          "id": "get_bDoorOpen",
+          "kind": "get",
+          "variable": "bDoorOpen",
+          "x": 1540,
+          "y": 348
+        },
+        {
+          "id": "unlocked",
+          "kind": "call",
+          "function": "Not_PreBool",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "x": 500,
+          "y": 400
+        },
+        {
+          "id": "want",
+          "kind": "call",
+          "function": "BooleanAND",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "x": 1180,
+          "y": 200
+        },
+        {
+          "id": "changed",
+          "kind": "call",
+          "function": "NotEqual_BoolBool",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "x": 1520,
+          "y": 200
+        },
+        {
+          "id": "branch",
+          "kind": "branch",
+          "x": 1520,
+          "y": 0
+        },
+        {
+          "id": "change",
+          "kind": "call",
+          "function": "SetDoorOpen",
+          "x": 2020,
+          "y": 0
+        },
+        {
+          "id": "section_0",
+          "kind": "comment",
+          "text": "OMEN AUTO | Near-player check at 10 Hz. Opens both leaves; waits until the player leaves before closing. Lock state remains instance-editable.",
+          "x": -100,
+          "y": -100,
+          "width": 2600,
+          "height": 796,
+          "color": "(R=0.04,G=0.12,B=0.20,A=1)"
+        }
+      ],
+      "links": [
+        [
+          "v_near_AutoBounds",
+          "AutoBounds",
+          "near",
+          "self"
+        ],
+        [
+          "player",
+          "ReturnValue",
+          "near",
+          "Other"
+        ],
+        [
+          "get_bLocked",
+          "bLocked",
+          "unlocked",
+          "A"
+        ],
+        [
+          "near",
+          "ReturnValue",
+          "want",
+          "A"
+        ],
+        [
+          "unlocked",
+          "ReturnValue",
+          "want",
+          "B"
+        ],
+        [
+          "want",
+          "ReturnValue",
+          "changed",
+          "A"
+        ],
+        [
+          "get_bDoorOpen",
+          "bDoorOpen",
+          "changed",
+          "B"
+        ],
+        [
+          "changed",
+          "ReturnValue",
+          "branch",
+          "Condition"
+        ],
+        [
+          "want",
+          "ReturnValue",
+          "change",
+          "WantsOpen"
+        ],
+        [
+          "entry",
+          "then",
+          "branch",
+          "execute"
+        ],
+        [
+          "branch",
+          "then",
+          "change",
+          "execute"
+        ]
+      ]
+    },
+    {
+      "name": "UserConstructionScript",
+      "kind": "function",
+      "clear": true,
+      "nodes": [
+        {
+          "id": "entry",
+          "kind": "entry",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "id": "config",
+          "kind": "call",
+          "function": "ConfigureDoor",
+          "x": 500,
+          "y": 0
+        },
+        {
+          "id": "pose",
+          "kind": "call",
+          "function": "ApplyDoorPose",
+          "x": 1000,
+          "y": 0
+        },
+        {
+          "id": "section_0",
+          "kind": "comment",
+          "text": "CONSTRUCTION | Size the door from instance parameters. Actor transform sets placement/orientation; keep scale at one.",
+          "x": -100,
+          "y": -100,
+          "width": 1580,
+          "height": 370,
+          "color": "(R=0.04,G=0.12,B=0.20,A=1)"
+        }
+      ],
+      "links": [
+        [
+          "entry",
+          "then",
+          "config",
+          "execute"
+        ],
+        [
+          "config",
+          "then",
+          "pose",
+          "execute"
+        ]
+      ]
+    },
+    {
+      "name": "EventGraph",
+      "kind": "event",
+      "clear": true,
+      "nodes": [
+        {
+          "id": "begin",
+          "kind": "event",
+          "class": "/Script/Engine.Actor",
+          "function": "ReceiveBeginPlay",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "id": "parentBegin",
+          "kind": "call_parent",
+          "class": "/Game/Blueprints/Interactables/Interaction/BP_Interaction_Base.BP_Interaction_Base_C",
+          "function": "ReceiveBeginPlay",
+          "x": 500,
+          "y": 0
+        },
+        {
+          "id": "config",
+          "kind": "call",
+          "function": "ConfigureDoor",
+          "x": 1000,
+          "y": 0
+        },
+        {
+          "id": "poseBegin",
+          "kind": "call",
+          "function": "ApplyDoorPose",
+          "x": 1500,
+          "y": 0
+        },
+        {
+          "id": "tickOffStart",
+          "kind": "call",
+          "function": "SetActorTickEnabled",
+          "class": "/Script/Engine.Actor",
+          "defaults": {
+            "bEnabled": "false"
+          },
+          "x": 2000,
+          "y": 0
+        },
+        {
+          "id": "get_bAutomatic",
+          "kind": "get",
+          "variable": "bAutomatic",
+          "x": 2520,
+          "y": 158
+        },
+        {
+          "id": "isAuto",
+          "kind": "branch",
+          "x": 2500,
+          "y": 0
+        },
+        {
+          "id": "self",
+          "kind": "self",
+          "x": 3020,
+          "y": 348
+        },
+        {
+          "id": "autoTimer",
+          "kind": "call",
+          "function": "K2_SetTimer",
+          "class": "/Script/Engine.KismetSystemLibrary",
+          "defaults": {
+            "FunctionName": "CheckAutomaticDoor",
+            "Time": ".1",
+            "bLooping": "true"
+          },
+          "x": 3000,
+          "y": 0
+        },
+        {
+          "id": "autoEnter",
+          "kind": "event",
+          "class": "/Script/Engine.Actor",
+          "function": "ReceiveActorBeginOverlap",
+          "x": 0,
+          "y": 756
+        },
+        {
+          "id": "autoGateEnter",
+          "kind": "branch",
+          "x": 500,
+          "y": 756
+        },
+        {
+          "id": "autoCheckEnter",
+          "kind": "call",
+          "function": "CheckAutomaticDoor",
+          "x": 1000,
+          "y": 756
+        },
+        {
+          "id": "autoLeave",
+          "kind": "event",
+          "class": "/Script/Engine.Actor",
+          "function": "ReceiveActorEndOverlap",
+          "x": 0,
+          "y": 1176
+        },
+        {
+          "id": "autoGateLeave",
+          "kind": "branch",
+          "x": 500,
+          "y": 1190
+        },
+        {
+          "id": "autoCheckLeave",
+          "kind": "call",
+          "function": "CheckAutomaticDoor",
+          "x": 1000,
+          "y": 1176
+        },
+        {
+          "id": "interact",
+          "kind": "event",
+          "class": "/Game/Blueprints/Interfaces/BPI_Interaction.BPI_Interaction_C",
+          "function": "Interface_Interact",
+          "x": 0,
+          "y": 1706
+        },
+        {
+          "id": "manualOnly",
+          "kind": "branch",
+          "x": 500,
+          "y": 1706
+        },
+        {
+          "id": "get_bLocked",
+          "kind": "get",
+          "variable": "bLocked",
+          "x": 1020,
+          "y": 1864
+        },
+        {
+          "id": "locked",
+          "kind": "branch",
+          "x": 1000,
+          "y": 1706
+        },
+        {
+          "id": "lockPrompt",
+          "kind": "call",
+          "function": "ShowDoorPrompt",
+          "defaults": {
+            "Message": "LOCKED"
+          },
+          "x": 1500,
+          "y": 1706
+        },
+        {
+          "id": "get_bDoorOpen",
+          "kind": "get",
+          "variable": "bDoorOpen",
+          "x": 1520,
+          "y": 2284
+        },
+        {
+          "id": "currentlyOpen",
+          "kind": "branch",
+          "x": 1500,
+          "y": 2126
+        },
+        {
+          "id": "open",
+          "kind": "call",
+          "function": "SetDoorOpen",
+          "defaults": {
+            "WantsOpen": "true"
+          },
+          "x": 2000,
+          "y": 1706
+        },
+        {
+          "id": "occupied",
+          "kind": "call",
+          "function": "DoorwayOccupied",
+          "x": 2000,
+          "y": 2326
+        },
+        {
+          "id": "safeToClose",
+          "kind": "branch",
+          "x": 2000,
+          "y": 2126
+        },
+        {
+          "id": "blockedPrompt",
+          "kind": "call",
+          "function": "ShowDoorPrompt",
+          "defaults": {
+            "Message": "DOORWAY BLOCKED"
+          },
+          "x": 2500,
+          "y": 1706
+        },
+        {
+          "id": "close",
+          "kind": "call",
+          "function": "SetDoorOpen",
+          "defaults": {
+            "WantsOpen": "false"
+          },
+          "x": 2500,
+          "y": 2126
+        },
+        {
+          "id": "tick",
+          "kind": "event",
+          "class": "/Script/Engine.Actor",
+          "function": "ReceiveTick",
+          "x": 0,
+          "y": 2786
+        },
+        {
+          "id": "notOpen",
+          "kind": "call",
+          "function": "Not_PreBool",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "x": 500,
+          "y": 2986
+        },
+        {
+          "id": "nearClosing",
+          "kind": "call",
+          "function": "BooleanAND",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "x": 840,
+          "y": 2986
+        },
+        {
+          "id": "stillOpen",
+          "kind": "call",
+          "function": "Greater_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "B": ".001"
+          },
+          "x": 500,
+          "y": 3166
+        },
+        {
+          "id": "isUnsafe",
+          "kind": "call",
+          "function": "BooleanAND",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "x": 1180,
+          "y": 2986
+        },
+        {
+          "id": "safety",
+          "kind": "branch",
+          "x": 1180,
+          "y": 2786
+        },
+        {
+          "id": "reopen",
+          "kind": "set",
+          "variable": "bDoorOpen",
+          "defaults": {
+            "bDoorOpen": "true"
+          },
+          "x": 1680,
+          "y": 2786
+        },
+        {
+          "id": "now",
+          "kind": "call",
+          "function": "GetRealTimeSeconds",
+          "class": "/Script/Engine.GameplayStatics",
+          "x": 2180,
+          "y": 2986
+        },
+        {
+          "id": "get_LastRealTime",
+          "kind": "get",
+          "variable": "LastRealTime",
+          "x": 2540,
+          "y": 3374
+        },
+        {
+          "id": "get_OpenSeconds",
+          "kind": "get",
+          "variable": "OpenSeconds",
+          "x": 2200,
+          "y": 3554
+        },
+        {
+          "id": "get_OpenAlpha",
+          "kind": "get",
+          "variable": "OpenAlpha",
+          "x": 520,
+          "y": 3554
+        },
+        {
+          "id": "get_PromptUntil",
+          "kind": "get",
+          "variable": "PromptUntil",
+          "x": 4720,
+          "y": 3314
+        },
+        {
+          "id": "elapsed",
+          "kind": "call",
+          "function": "Subtract_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "x": 2520,
+          "y": 2986
+        },
+        {
+          "id": "delta",
+          "kind": "call",
+          "function": "FClamp",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "Min": "0",
+            "Max": ".05"
+          },
+          "x": 2860,
+          "y": 2986
+        },
+        {
+          "id": "duration",
+          "kind": "call",
+          "function": "FMax",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "B": ".05"
+          },
+          "x": 2180,
+          "y": 3166
+        },
+        {
+          "id": "rate",
+          "kind": "call",
+          "function": "Divide_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "A": "1"
+          },
+          "x": 2520,
+          "y": 3166
+        },
+        {
+          "id": "target",
+          "kind": "call",
+          "function": "Conv_BoolToDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "x": 2180,
+          "y": 3346
+        },
+        {
+          "id": "interp",
+          "kind": "call",
+          "function": "FInterpTo_Constant",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "x": 3200,
+          "y": 2986
+        },
+        {
+          "id": "set_OpenAlpha",
+          "kind": "set",
+          "variable": "OpenAlpha",
+          "x": 3200,
+          "y": 2786
+        },
+        {
+          "id": "set_LastRealTime",
+          "kind": "set",
+          "variable": "LastRealTime",
+          "x": 3700,
+          "y": 2786
+        },
+        {
+          "id": "poseTick",
+          "kind": "call",
+          "function": "ApplyDoorPose",
+          "x": 4200,
+          "y": 2786
+        },
+        {
+          "id": "atRest",
+          "kind": "call",
+          "function": "NearlyEqual_FloatFloat",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "defaults": {
+            "ErrorTolerance": ".001"
+          },
+          "x": 4700,
+          "y": 2986
+        },
+        {
+          "id": "expired",
+          "kind": "call",
+          "function": "GreaterEqual_DoubleDouble",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "x": 4700,
+          "y": 3166
+        },
+        {
+          "id": "canSleep",
+          "kind": "call",
+          "function": "BooleanAND",
+          "class": "/Script/Engine.KismetMathLibrary",
+          "x": 5040,
+          "y": 2986
+        },
+        {
+          "id": "sleepBranch",
+          "kind": "branch",
+          "x": 5040,
+          "y": 2786
+        },
+        {
+          "id": "sleep",
+          "kind": "call",
+          "function": "SetActorTickEnabled",
+          "class": "/Script/Engine.Actor",
+          "defaults": {
+            "bEnabled": "false"
+          },
+          "x": 5540,
+          "y": 2786
+        },
+        {
+          "id": "manualMode",
+          "kind": "get",
+          "variable": "bAutomatic",
+          "x": 520,
+          "y": 1864
+        },
+        {
+          "id": "automaticMode",
+          "kind": "get",
+          "variable": "bAutomatic",
+          "x": 520,
+          "y": 914
+        },
+        {
+          "id": "tickTargetOpen",
+          "kind": "get",
+          "variable": "bDoorOpen",
+          "x": 520,
+          "y": 3694
+        },
+        {
+          "id": "tickDoorwayOccupied",
+          "kind": "call",
+          "function": "DoorwayOccupied",
+          "x": 500,
+          "y": 3346
+        },
+        {
+          "id": "section_0",
+          "kind": "comment",
+          "text": "BEGIN PLAY | Preserve existing parent setup, configure dimensions, initialise motion and automatic polling.",
+          "x": -100,
+          "y": -100,
+          "width": 3580,
+          "height": 596,
+          "color": "(R=0.04,G=0.12,B=0.20,A=1)"
+        },
+        {
+          "id": "section_1",
+          "kind": "comment",
+          "text": "AUTOMATIC DOOR | Overlap enter/leave immediately reevaluate proximity. Timer also notices lock changes.",
+          "x": -100,
+          "y": 656,
+          "width": 1580,
+          "height": 790,
+          "color": "(R=0.04,G=0.12,B=0.20,A=1)"
+        },
+        {
+          "id": "section_2",
+          "kind": "comment",
+          "text": "F INTERACTION | Existing interface only. Locked -> feedback. Open -> check sill. Clear -> toggle.",
+          "x": -100,
+          "y": 1606,
+          "width": 3080,
+          "height": 920,
+          "color": "(R=0.04,G=0.12,B=0.20,A=1)"
+        },
+        {
+          "id": "section_3",
+          "kind": "comment",
+          "text": "MOTION AND SAFETY | Bounded real delta, reverse a closing leaf if occupied, sleep when settled and message expired.",
+          "x": -100,
+          "y": 2686,
+          "width": 6120,
+          "height": 1156,
+          "color": "(R=0.04,G=0.12,B=0.20,A=1)"
+        }
+      ],
+      "links": [
+        [
+          "get_bAutomatic",
+          "bAutomatic",
+          "isAuto",
+          "Condition"
+        ],
+        [
+          "begin",
+          "then",
+          "parentBegin",
+          "execute"
+        ],
+        [
+          "parentBegin",
+          "then",
+          "config",
+          "execute"
+        ],
+        [
+          "config",
+          "then",
+          "poseBegin",
+          "execute"
+        ],
+        [
+          "poseBegin",
+          "then",
+          "tickOffStart",
+          "execute"
+        ],
+        [
+          "tickOffStart",
+          "then",
+          "isAuto",
+          "execute"
+        ],
+        [
+          "self",
+          "self",
+          "autoTimer",
+          "Object"
+        ],
+        [
+          "isAuto",
+          "then",
+          "autoTimer",
+          "execute"
+        ],
+        [
+          "automaticMode",
+          "bAutomatic",
+          "autoGateEnter",
+          "Condition"
+        ],
+        [
+          "autoEnter",
+          "then",
+          "autoGateEnter",
+          "execute"
+        ],
+        [
+          "autoGateEnter",
+          "then",
+          "autoCheckEnter",
+          "execute"
+        ],
+        [
+          "automaticMode",
+          "bAutomatic",
+          "autoGateLeave",
+          "Condition"
+        ],
+        [
+          "autoLeave",
+          "then",
+          "autoGateLeave",
+          "execute"
+        ],
+        [
+          "autoGateLeave",
+          "then",
+          "autoCheckLeave",
+          "execute"
+        ],
+        [
+          "manualMode",
+          "bAutomatic",
+          "manualOnly",
+          "Condition"
+        ],
+        [
+          "interact",
+          "then",
+          "manualOnly",
+          "execute"
+        ],
+        [
+          "get_bLocked",
+          "bLocked",
+          "locked",
+          "Condition"
+        ],
+        [
+          "manualOnly",
+          "else",
+          "locked",
+          "execute"
+        ],
+        [
+          "locked",
+          "then",
+          "lockPrompt",
+          "execute"
+        ],
+        [
+          "get_bDoorOpen",
+          "bDoorOpen",
+          "currentlyOpen",
+          "Condition"
+        ],
+        [
+          "locked",
+          "else",
+          "currentlyOpen",
+          "execute"
+        ],
+        [
+          "currentlyOpen",
+          "else",
+          "open",
+          "execute"
+        ],
+        [
+          "occupied",
+          "Occupied",
+          "safeToClose",
+          "Condition"
+        ],
+        [
+          "currentlyOpen",
+          "then",
+          "safeToClose",
+          "execute"
+        ],
+        [
+          "safeToClose",
+          "then",
+          "blockedPrompt",
+          "execute"
+        ],
+        [
+          "safeToClose",
+          "else",
+          "close",
+          "execute"
+        ],
+        [
+          "tickTargetOpen",
+          "bDoorOpen",
+          "notOpen",
+          "A"
+        ],
+        [
+          "notOpen",
+          "ReturnValue",
+          "nearClosing",
+          "A"
+        ],
+        [
+          "tickDoorwayOccupied",
+          "Occupied",
+          "nearClosing",
+          "B"
+        ],
+        [
+          "get_OpenAlpha",
+          "OpenAlpha",
+          "stillOpen",
+          "A"
+        ],
+        [
+          "nearClosing",
+          "ReturnValue",
+          "isUnsafe",
+          "A"
+        ],
+        [
+          "stillOpen",
+          "ReturnValue",
+          "isUnsafe",
+          "B"
+        ],
+        [
+          "isUnsafe",
+          "ReturnValue",
+          "safety",
+          "Condition"
+        ],
+        [
+          "tick",
+          "then",
+          "safety",
+          "execute"
+        ],
+        [
+          "safety",
+          "then",
+          "reopen",
+          "execute"
+        ],
+        [
+          "now",
+          "ReturnValue",
+          "elapsed",
+          "A"
+        ],
+        [
+          "get_LastRealTime",
+          "LastRealTime",
+          "elapsed",
+          "B"
+        ],
+        [
+          "elapsed",
+          "ReturnValue",
+          "delta",
+          "Value"
+        ],
+        [
+          "get_OpenSeconds",
+          "OpenSeconds",
+          "duration",
+          "A"
+        ],
+        [
+          "duration",
+          "ReturnValue",
+          "rate",
+          "B"
+        ],
+        [
+          "tickTargetOpen",
+          "bDoorOpen",
+          "target",
+          "InBool"
+        ],
+        [
+          "get_OpenAlpha",
+          "OpenAlpha",
+          "interp",
+          "Current"
+        ],
+        [
+          "target",
+          "ReturnValue",
+          "interp",
+          "Target"
+        ],
+        [
+          "delta",
+          "ReturnValue",
+          "interp",
+          "DeltaTime"
+        ],
+        [
+          "rate",
+          "ReturnValue",
+          "interp",
+          "InterpSpeed"
+        ],
+        [
+          "interp",
+          "ReturnValue",
+          "set_OpenAlpha",
+          "OpenAlpha"
+        ],
+        [
+          "safety",
+          "else",
+          "set_OpenAlpha",
+          "execute"
+        ],
+        [
+          "reopen",
+          "then",
+          "set_OpenAlpha",
+          "execute"
+        ],
+        [
+          "now",
+          "ReturnValue",
+          "set_LastRealTime",
+          "LastRealTime"
+        ],
+        [
+          "set_OpenAlpha",
+          "then",
+          "set_LastRealTime",
+          "execute"
+        ],
+        [
+          "set_LastRealTime",
+          "then",
+          "poseTick",
+          "execute"
+        ],
+        [
+          "get_OpenAlpha",
+          "OpenAlpha",
+          "atRest",
+          "A"
+        ],
+        [
+          "target",
+          "ReturnValue",
+          "atRest",
+          "B"
+        ],
+        [
+          "now",
+          "ReturnValue",
+          "expired",
+          "A"
+        ],
+        [
+          "get_PromptUntil",
+          "PromptUntil",
+          "expired",
+          "B"
+        ],
+        [
+          "atRest",
+          "ReturnValue",
+          "canSleep",
+          "A"
+        ],
+        [
+          "expired",
+          "ReturnValue",
+          "canSleep",
+          "B"
+        ],
+        [
+          "canSleep",
+          "ReturnValue",
+          "sleepBranch",
+          "Condition"
+        ],
+        [
+          "poseTick",
+          "then",
+          "sleepBranch",
+          "execute"
+        ],
+        [
+          "sleepBranch",
+          "then",
+          "sleep",
+          "execute"
+        ]
+      ]
+    }
+  ],
+  "compile": true,
+  "save": false
+}

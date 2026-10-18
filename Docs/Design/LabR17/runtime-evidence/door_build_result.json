@@ -1,0 +1,18 @@
+{
+  "created": [
+    "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor.BP_LabRoomDoor",
+    "/Game/Environment/LabR17/Blueprints/BP_LabOmenDoor.BP_LabOmenDoor"
+  ],
+  "compile": [
+    {
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "map_modified": false,
+  "runtime_playtest": "not yet performed"
+}

@@ -1,0 +1,443 @@
+{
+  "done": true,
+  "error": null,
+  "rows": [
+    {
+      "name": "focus_R10-UP-NORTH",
+      "passed": true,
+      "detail": {
+        "FocusedActor": "/Game/Maps/UEDPIE_0_Map_LabV39.Map_LabV39:PersistentLevel.InteractionArea_GEN_VARIABLE_InteractionArea_Box_C_CAT_67",
+        "FocusedInteractionArea": "/Game/Maps/UEDPIE_0_Map_LabV39.Map_LabV39:PersistentLevel.InteractionArea_GEN_VARIABLE_InteractionArea_Box_C_CAT_67",
+        "CurrentInteractionWidgetRef": null
+      }
+    },
+    {
+      "name": "normal_closed_collision",
+      "passed": true,
+      "detail": {
+        "clear": false,
+        "blocking_actor": "LabR17_Door_R10-UP-NORTH",
+        "initial_overlap": false
+      }
+    },
+    {
+      "name": "normal_F_open",
+      "passed": true,
+      "detail": {
+        "door": "R10-UP-NORTH",
+        "open": true,
+        "alpha": 1.0,
+        "locked": false,
+        "prompt_until": 0.0,
+        "real_time": 2.825790613889694,
+        "front_text": "LOCKED",
+        "back_text": "LOCKED",
+        "front_visible": false,
+        "back_visible": false,
+        "occupied": false,
+        "global_time_dilation": 1.0
+      }
+    },
+    {
+      "name": "normal_open_collision",
+      "passed": true,
+      "detail": {
+        "clear": true
+      }
+    },
+    {
+      "name": "normal_F_close",
+      "passed": true,
+      "detail": {
+        "door": "R10-UP-NORTH",
+        "open": false,
+        "alpha": 0.0,
+        "locked": false,
+        "prompt_until": 0.0,
+        "real_time": 4.245600614696741,
+        "front_text": "LOCKED",
+        "back_text": "LOCKED",
+        "front_visible": false,
+        "back_visible": false,
+        "occupied": false,
+        "global_time_dilation": 1.0
+      }
+    },
+    {
+      "name": "focus_R9-TIME-EXIT",
+      "passed": true,
+      "detail": {
+        "FocusedActor": "/Game/Maps/UEDPIE_0_Map_LabV39.Map_LabV39:PersistentLevel.InteractionArea_GEN_VARIABLE_InteractionArea_Box_C_CAT_65",
+        "FocusedInteractionArea": "/Game/Maps/UEDPIE_0_Map_LabV39.Map_LabV39:PersistentLevel.InteractionArea_GEN_VARIABLE_InteractionArea_Box_C_CAT_65",
+        "CurrentInteractionWidgetRef": null
+      }
+    },
+    {
+      "name": "locked_F_feedback",
+      "passed": true,
+      "detail": {
+        "door": "R9-TIME-EXIT",
+        "open": false,
+        "alpha": 0.0,
+        "locked": true,
+        "prompt_until": 7.111673813313246,
+        "real_time": 5.976386912167072,
+        "front_text": "LOCKED",
+        "back_text": "LOCKED",
+        "front_visible": true,
+        "back_visible": true,
+        "occupied": false,
+        "global_time_dilation": 1.0
+      }
+    },
+    {
+      "name": "focus_TR-CONNECT-PREP",
+      "passed": true,
+      "detail": {
+        "FocusedActor": "/Game/Maps/UEDPIE_0_Map_LabV39.Map_LabV39:PersistentLevel.InteractionArea_GEN_VARIABLE_InteractionArea_Box_C_CAT_63",
+        "FocusedInteractionArea": "/Game/Maps/UEDPIE_0_Map_LabV39.Map_LabV39:PersistentLevel.InteractionArea_GEN_VARIABLE_InteractionArea_Box_C_CAT_63",
+        "CurrentInteractionWidgetRef": null
+      }
+    },
+    {
+      "name": "small_F_open",
+      "passed": true,
+      "detail": {
+        "door": "TR-CONNECT-PREP",
+        "open": true,
+        "alpha": 1.0,
+        "locked": false,
+        "prompt_until": 0.0,
+        "real_time": 8.217634312808514,
+        "front_text": "LOCKED",
+        "back_text": "LOCKED",
+        "front_visible": false,
+        "back_visible": false,
+        "occupied": false,
+        "global_time_dilation": 1.0
+      }
+    },
+    {
+      "name": "small_capsule_clearance",
+      "passed": true,
+      "detail": {
+        "clear": true
+      }
+    },
+    {
+      "name": "small_F_close",
+      "passed": true,
+      "detail": {
+        "door": "TR-CONNECT-PREP",
+        "open": false,
+        "alpha": 0.0,
+        "locked": false,
+        "prompt_until": 0.0,
+        "real_time": 9.618732314556837,
+        "front_text": "LOCKED",
+        "back_text": "LOCKED",
+        "front_visible": false,
+        "back_visible": false,
+        "occupied": false,
+        "global_time_dilation": 1.0
+      }
+    },
+    {
+      "name": "focus_R10-UP-NORTH",
+      "passed": true,
+      "detail": {
+        "FocusedActor": "/Game/Maps/UEDPIE_0_Map_LabV39.Map_LabV39:PersistentLevel.InteractionArea_GEN_VARIABLE_InteractionArea_Box_C_CAT_67",
+        "FocusedInteractionArea": "/Game/Maps/UEDPIE_0_Map_LabV39.Map_LabV39:PersistentLevel.InteractionArea_GEN_VARIABLE_InteractionArea_Box_C_CAT_67",
+        "CurrentInteractionWidgetRef": null
+      }
+    },
+    {
+      "name": "safety_setup_open",
+      "passed": true,
+      "detail": {
+        "door": "R10-UP-NORTH",
+        "open": true,
+        "alpha": 0.9991862485185266,
+        "locked": false,
+        "prompt_until": 0.0,
+        "real_time": 11.85217521339655,
+        "front_text": "LOCKED",
+        "back_text": "LOCKED",
+        "front_visible": false,
+        "back_visible": false,
+        "occupied": false,
+        "global_time_dilation": 1.0
+      }
+    },
+    {
+      "name": "focus_R10-UP-NORTH",
+      "passed": true,
+      "detail": {
+        "FocusedActor": "/Game/Maps/UEDPIE_0_Map_LabV39.Map_LabV39:PersistentLevel.InteractionArea_GEN_VARIABLE_InteractionArea_Box_C_CAT_67",
+        "FocusedInteractionArea": "/Game/Maps/UEDPIE_0_Map_LabV39.Map_LabV39:PersistentLevel.InteractionArea_GEN_VARIABLE_InteractionArea_Box_C_CAT_67",
+        "CurrentInteractionWidgetRef": null
+      }
+    },
+    {
+      "name": "occupied_F_rejected",
+      "passed": true,
+      "detail": {
+        "door": "R10-UP-NORTH",
+        "open": true,
+        "alpha": 1.0,
+        "locked": false,
+        "prompt_until": 14.713487014174461,
+        "real_time": 13.415667414665222,
+        "front_text": "DOORWAY BLOCKED",
+        "back_text": "DOORWAY BLOCKED",
+        "front_visible": true,
+        "back_visible": true,
+        "occupied": true,
+        "global_time_dilation": 1.0
+      }
+    },
+    {
+      "name": "focus_R10-UP-NORTH",
+      "passed": true,
+      "detail": {
+        "FocusedActor": "/Game/Maps/UEDPIE_0_Map_LabV39.Map_LabV39:PersistentLevel.InteractionArea_GEN_VARIABLE_InteractionArea_Box_C_CAT_67",
+        "FocusedInteractionArea": "/Game/Maps/UEDPIE_0_Map_LabV39.Map_LabV39:PersistentLevel.InteractionArea_GEN_VARIABLE_InteractionArea_Box_C_CAT_67",
+        "CurrentInteractionWidgetRef": null
+      }
+    },
+    {
+      "name": "closing_started",
+      "passed": true,
+      "detail": {
+        "door": "R10-UP-NORTH",
+        "open": false,
+        "alpha": 0.678040249273181,
+        "locked": false,
+        "prompt_until": 14.713487014174461,
+        "real_time": 14.533739514648914,
+        "front_text": "DOORWAY BLOCKED",
+        "back_text": "DOORWAY BLOCKED",
+        "front_visible": true,
+        "back_visible": true,
+        "occupied": false,
+        "global_time_dilation": 1.0
+      }
+    },
+    {
+      "name": "closing_reverses_for_player",
+      "passed": true,
+      "detail": {
+        "door": "R10-UP-NORTH",
+        "open": true,
+        "alpha": 1.0,
+        "locked": false,
+        "prompt_until": 14.713487014174461,
+        "real_time": 15.806666415184736,
+        "front_text": "DOORWAY BLOCKED",
+        "back_text": "DOORWAY BLOCKED",
+        "front_visible": false,
+        "back_visible": false,
+        "occupied": true,
+        "global_time_dilation": 1.0
+      }
+    },
+    {
+      "name": "focus_R10-UP-NORTH",
+      "passed": true,
+      "detail": {
+        "FocusedActor": "/Game/Maps/UEDPIE_0_Map_LabV39.Map_LabV39:PersistentLevel.InteractionArea_GEN_VARIABLE_InteractionArea_Box_C_CAT_67",
+        "FocusedInteractionArea": "/Game/Maps/UEDPIE_0_Map_LabV39.Map_LabV39:PersistentLevel.InteractionArea_GEN_VARIABLE_InteractionArea_Box_C_CAT_67",
+        "CurrentInteractionWidgetRef": null
+      }
+    },
+    {
+      "name": "safety_cleanup_close",
+      "passed": true,
+      "detail": {
+        "door": "R10-UP-NORTH",
+        "open": false,
+        "alpha": 0.0,
+        "locked": false,
+        "prompt_until": 14.713487014174461,
+        "real_time": 18.01342971250415,
+        "front_text": "DOORWAY BLOCKED",
+        "back_text": "DOORWAY BLOCKED",
+        "front_visible": false,
+        "back_visible": false,
+        "occupied": false,
+        "global_time_dilation": 1.0
+      }
+    },
+    {
+      "name": "C0_far_1",
+      "passed": true,
+      "detail": {
+        "door": "C0",
+        "open": false,
+        "alpha": 0.0,
+        "locked": false,
+        "prompt_until": 0.0,
+        "real_time": 19.232228312641382,
+        "front_text": "LOCKED",
+        "back_text": "LOCKED",
+        "front_visible": false,
+        "back_visible": false,
+        "occupied": false,
+        "global_time_dilation": 1.0
+      }
+    },
+    {
+      "name": "C0_near_1",
+      "passed": true,
+      "detail": {
+        "door": "C0",
+        "open": true,
+        "alpha": 1.0,
+        "locked": false,
+        "prompt_until": 0.0,
+        "real_time": 20.44850731268525,
+        "front_text": "LOCKED",
+        "back_text": "LOCKED",
+        "front_visible": false,
+        "back_visible": false,
+        "occupied": false,
+        "global_time_dilation": 1.0
+      }
+    },
+    {
+      "name": "C0_open_clear_1",
+      "passed": true,
+      "detail": {
+        "clear": true
+      }
+    },
+    {
+      "name": "C0_leave_1",
+      "passed": true,
+      "detail": {
+        "door": "C0",
+        "open": false,
+        "alpha": 0.0,
+        "locked": false,
+        "prompt_until": 0.0,
+        "real_time": 21.683278813958168,
+        "front_text": "LOCKED",
+        "back_text": "LOCKED",
+        "front_visible": false,
+        "back_visible": false,
+        "occupied": false,
+        "global_time_dilation": 1.0
+      }
+    },
+    {
+      "name": "C0_far_-1",
+      "passed": true,
+      "detail": {
+        "door": "C0",
+        "open": false,
+        "alpha": 0.0,
+        "locked": false,
+        "prompt_until": 0.0,
+        "real_time": 22.899305514991283,
+        "front_text": "LOCKED",
+        "back_text": "LOCKED",
+        "front_visible": false,
+        "back_visible": false,
+        "occupied": false,
+        "global_time_dilation": 1.0
+      }
+    },
+    {
+      "name": "C0_near_-1",
+      "passed": true,
+      "detail": {
+        "door": "C0",
+        "open": true,
+        "alpha": 1.0,
+        "locked": false,
+        "prompt_until": 0.0,
+        "real_time": 24.109722815454006,
+        "front_text": "LOCKED",
+        "back_text": "LOCKED",
+        "front_visible": false,
+        "back_visible": false,
+        "occupied": false,
+        "global_time_dilation": 1.0
+      }
+    },
+    {
+      "name": "C0_open_clear_-1",
+      "passed": true,
+      "detail": {
+        "clear": true
+      }
+    },
+    {
+      "name": "C0_leave_-1",
+      "passed": true,
+      "detail": {
+        "door": "C0",
+        "open": false,
+        "alpha": 0.0,
+        "locked": false,
+        "prompt_until": 0.0,
+        "real_time": 25.346988014876842,
+        "front_text": "LOCKED",
+        "back_text": "LOCKED",
+        "front_visible": false,
+        "back_visible": false,
+        "occupied": false,
+        "global_time_dilation": 1.0
+      }
+    },
+    {
+      "name": "focus_R10-UP-NORTH",
+      "passed": true,
+      "detail": {
+        "FocusedActor": "/Game/Maps/UEDPIE_0_Map_LabV39.Map_LabV39:PersistentLevel.InteractionArea_GEN_VARIABLE_InteractionArea_Box_C_CAT_67",
+        "FocusedInteractionArea": "/Game/Maps/UEDPIE_0_Map_LabV39.Map_LabV39:PersistentLevel.InteractionArea_GEN_VARIABLE_InteractionArea_Box_C_CAT_67",
+        "CurrentInteractionWidgetRef": null
+      }
+    },
+    {
+      "name": "time_ability_active",
+      "passed": true,
+      "detail": {
+        "global_time_dilation": 0.009999999776482582
+      }
+    },
+    {
+      "name": "F_open_during_time_ability",
+      "passed": true,
+      "detail": {
+        "door": "R10-UP-NORTH",
+        "open": true,
+        "alpha": 1.0,
+        "locked": false,
+        "prompt_until": 14.713487014174461,
+        "real_time": 28.135602414608,
+        "front_text": "DOORWAY BLOCKED",
+        "back_text": "DOORWAY BLOCKED",
+        "front_visible": false,
+        "back_visible": false,
+        "occupied": false,
+        "global_time_dilation": 0.009999999776482582
+      }
+    },
+    {
+      "name": "time_ability_restored",
+      "passed": true,
+      "detail": {
+        "global_time_dilation": 1.0
+      }
+    }
+  ],
+  "passed": true,
+  "frame_based": true,
+  "input_evidence": "EnhancedInput IA_Interact and IA_TimeAbility. No direct door Interface/SetDoorOpen calls.",
+  "initial_dilation": 1.0,
+  "capsule_radius_cm": 48.0,
+  "capsule_half_height_cm": 88.0,
+  "elapsed_seconds": 28.20299999997951,
+  "current_step": null
+}

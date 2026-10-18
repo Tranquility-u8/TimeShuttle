@@ -1,0 +1,5319 @@
+{
+  "ok": true,
+  "error": null,
+  "restore_error": null,
+  "checks": {
+    "outside_initial_recorded": true,
+    "outside_initial_state": true,
+    "inside_left_recorded": true,
+    "inside_left_state": true,
+    "inside_left_aligned_under_3_degrees": true,
+    "inside_right_recorded": true,
+    "inside_right_state": true,
+    "inside_right_aligned_under_3_degrees": true,
+    "short_exit_recorded": true,
+    "short_exit_state": true,
+    "reenter_during_return_recorded": true,
+    "reenter_during_return_state": true,
+    "reenter_during_return_aligned_under_3_degrees": true,
+    "outside_final_recorded": true,
+    "outside_final_state": true,
+    "returns_home_under_1_degree": true,
+    "inside_left_smooth_intermediate_samples": true,
+    "inside_right_smooth_intermediate_samples": true,
+    "outside_final_smooth_intermediate_samples": true,
+    "all_parts_keep_location_scale": true,
+    "child_parts_follow_parent": true
+  },
+  "samples": [
+    {
+      "phase": "outside_initial",
+      "seconds": 0.016,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        200.0
+      ],
+      "aim_error": 8.09463187629464,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 0.078,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        197.21368174893507
+      ],
+      "aim_error": 8.146602463513448,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 0.141,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        187.69636702539222
+      ],
+      "aim_error": 8.324018787636184,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 0.203,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        170.90341838213294
+      ],
+      "aim_error": 8.63667314699953,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 0.266,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        147.3749897991197
+      ],
+      "aim_error": 9.073862536315971,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 0.328,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        116.08343023472084
+      ],
+      "aim_error": 9.653656904987667,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 0.391,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.133408317004617,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 0.453,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132685383237057,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 0.516,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.129675186609758,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 0.578,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.13025612161322,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 0.641,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132250564448881,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 0.703,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 0.766,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 0.828,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 0.891,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 0.953,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 1.016,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 1.078,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 1.141,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 1.203,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 1.266,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 1.328,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 1.391,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 1.453,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 1.516,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 1.578,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 1.641,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 1.703,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 1.766,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 1.828,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 1.891,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 1.953,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 2.016,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 2.078,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 2.141,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 2.203,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 2.266,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 2.328,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 2.391,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_initial",
+      "seconds": 2.453,
+      "rotation": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000441852054
+      ],
+      "aim_error": 10.132676591730478,
+      "rest_error": 0.0,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 0.016,
+      "rotation": [
+        -2.741330717979984e-09,
+        179.99627645732485,
+        0.22963873382246974
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        200.0
+      ],
+      "aim_error": 31.80494265512588,
+      "rest_error": 0.22963873382246902,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 0.078,
+      "rotation": [
+        -2.0916729688108858e-08,
+        176.80161056124055,
+        1.3705978068477822
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        196.47034944989784
+      ],
+      "aim_error": 28.440877676775735,
+      "rest_error": 3.198389438759449,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 0.141,
+      "rotation": [
+        -3.874737330627028e-08,
+        173.72048613555742,
+        2.491036947463475
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        184.65524340420893
+      ],
+      "aim_error": 25.257995980784347,
+      "rest_error": 6.279513864442578,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 0.203,
+      "rotation": [
+        -5.26080157467107e-08,
+        171.41067093057492,
+        3.363929348043841
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        168.34682037467698
+      ],
+      "aim_error": 22.926272994800524,
+      "rest_error": 8.589329069425077,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 0.266,
+      "rotation": [
+        -6.814894967317524e-08,
+        168.96699339828507,
+        4.346327588204221
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        141.53146424987713
+      ],
+      "aim_error": 20.532882514090428,
+      "rest_error": 11.03300660171493,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 0.328,
+      "rotation": [
+        -8.092939635416403e-08,
+        167.11057462055624,
+        5.158684192844553
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        112.35704412541068
+      ],
+      "aim_error": 18.78882614290878,
+      "rest_error": 12.889425379443765,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 0.391,
+      "rotation": [
+        -9.5899736087181e-08,
+        165.12857904030125,
+        6.1169446946051425
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 16.823237377991383,
+      "rest_error": 14.871420959698753,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 0.453,
+      "rotation": [
+        -1.0916630774069089e-07,
+        163.41388009829208,
+        6.967718761152663
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 14.923885279812017,
+      "rest_error": 16.586119901707917,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 0.516,
+      "rotation": [
+        -1.1904148792953439e-07,
+        162.1372678711466,
+        7.600978023652732
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 13.50724204284492,
+      "rest_error": 17.862732128853395,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 0.578,
+      "rotation": [
+        -1.2975118543503963e-07,
+        160.75224195918693,
+        8.287740972422377
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 11.969945589325995,
+      "rest_error": 19.247758040813068,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 0.641,
+      "rotation": [
+        -1.3908646666548936e-07,
+        159.54506067635572,
+        8.886399124153922
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 10.633566313428924,
+      "rest_error": 20.454939323644282,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 0.703,
+      "rotation": [
+        -1.4752629333821184e-07,
+        158.45402381432066,
+        9.427661466944553
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 9.428287609164686,
+      "rest_error": 21.545976185679336,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 0.766,
+      "rotation": [
+        -1.5381004922586966e-07,
+        157.641725785812,
+        9.830652690452679
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 8.531877874214508,
+      "rest_error": 22.358274214187986,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 0.828,
+      "rotation": [
+        -1.6050228136585185e-07,
+        156.7766269120485,
+        10.2598390744619
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 7.578138999312547,
+      "rest_error": 23.2233730879515,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 0.891,
+      "rotation": [
+        -1.663364058163152e-07,
+        156.0224534235572,
+        10.63399398583416
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 6.747514407088567,
+      "rest_error": 23.97754657644279,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 0.953,
+      "rotation": [
+        -1.71566909889265e-07,
+        155.34631048641452,
+        10.969436963586768
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 6.003507038018915,
+      "rest_error": 24.653689513585476,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 1.016,
+      "rotation": [
+        -1.7625546891323753e-07,
+        154.74022809377934,
+        11.2701220279138
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 5.337153658107623,
+      "rest_error": 25.259771906220664,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 1.078,
+      "rotation": [
+        -1.804600628097985e-07,
+        154.19670509205696,
+        11.539770595042638
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 4.740045078433238,
+      "rest_error": 25.80329490794304,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 1.141,
+      "rotation": [
+        -1.834597465027752e-07,
+        153.80894037094149,
+        11.732145528763107
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 4.3143254931504496,
+      "rest_error": 26.191059629058515,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 1.203,
+      "rotation": [
+        -1.8692605851716416e-07,
+        153.36086034336617,
+        11.95444364128428
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 3.8226775351352176,
+      "rest_error": 26.63913965663383,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 1.266,
+      "rotation": [
+        -1.8990510836164487e-07,
+        152.97576061847133,
+        12.145496437008742
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 3.400387091078308,
+      "rest_error": 27.024239381528673,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 1.328,
+      "rotation": [
+        -1.9257743107861595e-07,
+        152.63032179286395,
+        12.316872963964412
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 3.0217905342822675,
+      "rest_error": 27.369678207136047,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 1.391,
+      "rotation": [
+        -1.9496980017981662e-07,
+        152.32106932164504,
+        12.47029698738385
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 2.683018856172648,
+      "rest_error": 27.67893067835496,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 1.453,
+      "rotation": [
+        -1.967033535575616e-07,
+        152.09697968577254,
+        12.581470661782086
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 2.4376377629490915,
+      "rest_error": 27.90302031422746,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 1.516,
+      "rotation": [
+        -1.986477967940157e-07,
+        151.84561805038845,
+        12.706174316636998
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 2.1624932146552767,
+      "rest_error": 28.154381949611547,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 1.578,
+      "rotation": [
+        -2.003799288613874e-07,
+        151.621714552711,
+        12.81725564554587
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 1.9174944648382035,
+      "rest_error": 28.378285447288988,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 1.641,
+      "rotation": [
+        -2.0187366086233267e-07,
+        151.42862437686426,
+        12.913050099651276
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 1.7062806136726942,
+      "rest_error": 28.571375623135737,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 1.703,
+      "rotation": [
+        -2.029902359304713e-07,
+        151.28427840397234,
+        12.984661944297724
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 1.5484278946460435,
+      "rest_error": 28.715721596027663,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 1.766,
+      "rotation": [
+        -2.042481246333847e-07,
+        151.12166180394837,
+        13.065338075848494
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 1.3706379956545902,
+      "rest_error": 28.87833819605163,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 1.828,
+      "rotation": [
+        -2.052971125169729e-07,
+        150.9860600637169,
+        13.132611797177173
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 1.2224187351524187,
+      "rest_error": 29.013939936283094,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 1.891,
+      "rotation": [
+        -2.0625361702667214e-07,
+        150.8624091986089,
+        13.193956539708726
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 1.0872903398089375,
+      "rest_error": 29.1375908013911,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 1.953,
+      "rotation": [
+        -2.0711019089369584e-07,
+        150.75169089940832,
+        13.248885274352464
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 0.9663176996083448,
+      "rest_error": 29.248309100591683,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 2.016,
+      "rotation": [
+        -2.0775411247714756e-07,
+        150.66845846640442,
+        13.290177926599126
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 0.8753907903236448,
+      "rest_error": 29.331541533595583,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 2.078,
+      "rotation": [
+        -2.0845504868381919e-07,
+        150.57784122853613,
+        13.335134273011203
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 0.7764103128149833,
+      "rest_error": 29.42215877146387,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 2.141,
+      "rotation": [
+        -2.0906065929342466e-07,
+        150.49955450541626,
+        13.373973296654382
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 0.6909100880287724,
+      "rest_error": 29.500445494583744,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 2.203,
+      "rotation": [
+        -2.0960260354726327e-07,
+        150.42949760830024,
+        13.408729400563441
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 0.6144072515746553,
+      "rest_error": 29.570502391699762,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 2.266,
+      "rotation": [
+        -2.1001386596548858e-07,
+        150.37633532876512,
+        13.435103873136844
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 0.556359352842203,
+      "rest_error": 29.623664671234877,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 2.328,
+      "rotation": [
+        -2.1045224181723468e-07,
+        150.31967033769945,
+        13.463216084761438
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 0.49449240950112267,
+      "rest_error": 29.68032966230055,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 2.391,
+      "rotation": [
+        -2.1085594365941282e-07,
+        150.26748544118652,
+        13.489105665378785
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 0.437521933353183,
+      "rest_error": 29.732514558813477,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 2.453,
+      "rotation": [
+        -2.11153178819045e-07,
+        150.22906667931437,
+        13.508165694221834
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 0.39558313177252974,
+      "rest_error": 29.77093332068563,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 2.516,
+      "rotation": [
+        -2.1146922735718734e-07,
+        150.18820633387259,
+        13.528437023247237
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 0.35098195581552494,
+      "rest_error": 29.811793666127414,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 2.578,
+      "rotation": [
+        -2.1174673790939304e-07,
+        150.15234587461515,
+        13.54622784612809
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 0.31184089251499264,
+      "rest_error": 29.84765412538485,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 2.641,
+      "rotation": [
+        -2.1199815638370005e-07,
+        150.11984136233346,
+        13.562353741691334
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 0.2763647915729956,
+      "rest_error": 29.88015863766654,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 2.703,
+      "rotation": [
+        -2.1218045226068414e-07,
+        150.09627460972877,
+        13.574045502760493
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 0.25064474119170915,
+      "rest_error": 29.903725390271234,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 2.766,
+      "rotation": [
+        -2.1238207676603684e-07,
+        150.07020882230103,
+        13.58697706629823
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 0.22219848874113388,
+      "rest_error": 29.929791177698974,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 2.828,
+      "rotation": [
+        -2.1255789345556545e-07,
+        150.0474841846795,
+        13.59825104357933
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 0.19739952109358547,
+      "rest_error": 29.95251581532051,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 2.891,
+      "rotation": [
+        -2.126912485473885e-07,
+        150.0302449460592,
+        13.606803645727965
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 0.17858728988395736,
+      "rest_error": 29.969755053940787,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 2.953,
+      "rotation": [
+        -2.128354032126325e-07,
+        150.01161118811436,
+        13.616048086375606
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 0.158253902623533,
+      "rest_error": 29.988388811885642,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 3.016,
+      "rotation": [
+        -2.129602304422159e-07,
+        149.99546905801392,
+        13.624056399249515
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 0.1406399198076053,
+      "rest_error": 30.004530941986076,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 3.078,
+      "rotation": [
+        -2.1307181463724436e-07,
+        149.98104950764818,
+        13.631210118747035
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 0.12490598301417823,
+      "rest_error": 30.01895049235182,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 3.141,
+      "rotation": [
+        -2.1315412421184596e-07,
+        149.9704084074411,
+        13.636489301807224
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 0.11329515599995924,
+      "rest_error": 30.029591592558887,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 3.203,
+      "rotation": [
+        -2.1324518667293092e-07,
+        149.95863385098806,
+        13.642330806704157
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 0.100447820340713,
+      "rest_error": 30.041366149011935,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 3.266,
+      "rotation": [
+        -2.1332544995816433e-07,
+        149.948258224303,
+        13.647478285025786
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 0.08912707982502156,
+      "rest_error": 30.051741775696996,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 3.328,
+      "rotation": [
+        -2.133934915644649e-07,
+        149.93946418211854,
+        13.651841119472136
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 0.07953214335078092,
+      "rest_error": 30.06053581788146,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 3.391,
+      "rotation": [
+        -2.1344789057902864e-07,
+        149.9324343212474,
+        13.655328721477977
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 0.07186215753404895,
+      "rest_error": 30.0675656787526,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_left",
+      "seconds": 3.453,
+      "rotation": [
+        -2.1350518787404588e-07,
+        149.92502791782533,
+        13.65900313095837
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000398586096
+      ],
+      "aim_error": 0.06378143937660849,
+      "rest_error": 30.074972082174668,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 0.016,
+      "rotation": [
+        -2.1122241392848975e-07,
+        151.02322227681697,
+        13.612819076526906
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        199.90220013771037
+      ],
+      "aim_error": 57.29713169492496,
+      "rest_error": 28.976777723183034,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 0.078,
+      "rotation": [
+        -1.9758351720108837e-07,
+        157.51186364291297,
+        13.329463824088458
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        194.83084403820388
+      ],
+      "aim_error": 51.00364760977279,
+      "rest_error": 22.48813635708703,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 0.141,
+      "rotation": [
+        -1.8654770847878263e-07,
+        162.83345500022233,
+        13.116975018406029
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        183.38958262845318
+      ],
+      "aim_error": 45.80675936695103,
+      "rest_error": 17.16654499977767,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 0.203,
+      "rotation": [
+        -1.768337935442307e-07,
+        167.64919877640122,
+        12.961042731608462
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        165.2859537656612
+      ],
+      "aim_error": 41.078746589272924,
+      "rest_error": 12.961042731608472,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 0.266,
+      "rotation": [
+        -1.6693581981087018e-07,
+        172.82330863783267,
+        12.865807217794034
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        134.53863801890822
+      ],
+      "aim_error": 35.979295241336644,
+      "rest_error": 12.865807217794043,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 0.328,
+      "rotation": [
+        -1.6024620203714e-07,
+        176.6285668343117,
+        12.875757684377842
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        101.70069977807123
+      ],
+      "aim_error": 32.226642624358696,
+      "rest_error": 12.875757684377845,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 0.391,
+      "rotation": [
+        -1.546422936386422e-07,
+        -179.87636628696492,
+        12.95907836792872
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 28.8129419992941,
+      "rest_error": 12.959078367928726,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 0.453,
+      "rotation": [
+        -1.4968497918527484e-07,
+        -176.74990122303893,
+        13.041285429048807
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 25.769012980202895,
+      "rest_error": 13.041285429048799,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 0.516,
+      "rotation": [
+        -1.45198725951407e-07,
+        -173.91932635454762,
+        13.115966313757093
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 23.014939803706675,
+      "rest_error": 13.115966313757099,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 0.578,
+      "rotation": [
+        -1.4139402528218544e-07,
+        -171.51810709296987,
+        13.179473385155404
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 20.679500814002957,
+      "rest_error": 13.179473385155404,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 0.641,
+      "rotation": [
+        -1.378780326061027e-07,
+        -169.29968024021633,
+        13.238020272579542
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 18.521078834330396,
+      "rest_error": 13.238020272579547,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 0.703,
+      "rotation": [
+        -1.3407134259932023e-07,
+        -166.89837241734267,
+        13.301265273018792
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 16.1845160733554,
+      "rest_error": 13.3012652730188,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 0.766,
+      "rotation": [
+        -1.3144972408629639e-07,
+        -165.2446708987318,
+        13.344817782927581
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 14.57557512226056,
+      "rest_error": 14.755329101268217,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 0.828,
+      "rotation": [
+        -1.29024670412481e-07,
+        -163.7149175169325,
+        13.385105947731823
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 13.087337723442193,
+      "rest_error": 16.285082483067526,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 0.891,
+      "rotation": [
+        -1.2681078926917207e-07,
+        -162.31837065990547,
+        13.421885935017473
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 11.728797407166988,
+      "rest_error": 17.68162934009456,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 0.953,
+      "rotation": [
+        -1.2448811049430497e-07,
+        -160.8532119078849,
+        13.460472911172001
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 10.30363370172213,
+      "rest_error": 19.146788092115116,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 1.016,
+      "rotation": [
+        -1.226288759080446e-07,
+        -159.68037993501167,
+        13.491361058485829
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 9.16291521099019,
+      "rest_error": 20.319620064988328,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 1.078,
+      "rotation": [
+        -1.2120187870299514e-07,
+        -158.7802104368997,
+        13.515068263531553
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 8.287457234395392,
+      "rest_error": 21.219789563100335,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 1.141,
+      "rotation": [
+        -1.1955620484623765e-07,
+        -157.74209172292677,
+        13.542408551405758
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 7.277910275284911,
+      "rest_error": 22.257908277073227,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 1.203,
+      "rotation": [
+        -1.1829842984815413e-07,
+        -156.94868420584092,
+        13.563304032458866
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 6.506395101887168,
+      "rest_error": 23.05131579415911,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 1.266,
+      "rotation": [
+        -1.1725421716985082e-07,
+        -156.29001421566363,
+        13.580651014940912
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 5.865937997389201,
+      "rest_error": 23.709985784336368,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 1.328,
+      "rotation": [
+        -1.1625058995956033e-07,
+        -155.65689246921767,
+        13.597325149193852
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 5.250356682853142,
+      "rest_error": 24.343107530782333,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 1.391,
+      "rotation": [
+        -1.1538168110634325e-07,
+        -155.1087598877049,
+        13.611760976590176
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 4.717437681949454,
+      "rest_error": 24.891240112295122,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 1.453,
+      "rotation": [
+        -1.1443290733236662e-07,
+        -154.51023293737217,
+        13.627524009182027
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 4.135553299676486,
+      "rest_error": 25.489767062627834,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 1.516,
+      "rotation": [
+        -1.1374118002420584e-07,
+        -154.07390260251816,
+        13.639015370239866
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 3.7113759422955837,
+      "rest_error": 25.92609739748184,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 1.578,
+      "rotation": [
+        -1.131080011617601e-07,
+        -153.67453646782175,
+        13.649533228113786
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 3.3231486736283817,
+      "rest_error": 26.32546353217822,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 1.641,
+      "rotation": [
+        -1.1255781291018714e-07,
+        -153.3274476801731,
+        13.65867428996394
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 2.985752871610286,
+      "rest_error": 26.672552319826877,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 1.703,
+      "rotation": [
+        -1.1204298288500801e-07,
+        -153.00268541798073,
+        13.66722735197845
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 2.6700705396074764,
+      "rest_error": 26.99731458201927,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 1.766,
+      "rotation": [
+        -1.1150723355655022e-07,
+        -152.66472370255354,
+        13.676128039795643
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 2.3415686801364233,
+      "rest_error": 27.335276297446455,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 1.828,
+      "rotation": [
+        -1.111112048025411e-07,
+        -152.41492107407439,
+        13.682706936488689
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 2.0987654872740897,
+      "rest_error": 27.585078925925586,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 1.891,
+      "rotation": [
+        -1.1075758238409995e-07,
+        -152.19185716990603,
+        13.688581632004956
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 1.8819570609208907,
+      "rest_error": 27.80814283009397,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 1.953,
+      "rotation": [
+        -1.1044460308122522e-07,
+        -151.99446308948094,
+        13.693780277314843
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 1.6901027653621508,
+      "rest_error": 28.005536910519027,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 2.016,
+      "rotation": [
+        -1.1015492849764023e-07,
+        -151.81171370533275,
+        13.698593234353574
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 1.5124856952446866,
+      "rest_error": 28.18828629466725,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 2.078,
+      "rotation": [
+        -1.0985797839522141e-07,
+        -151.6243879861645,
+        13.703526715485715
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 1.3304243590527611,
+      "rest_error": 28.375612013835507,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 2.141,
+      "rotation": [
+        -1.0963259435125952e-07,
+        -151.48222162814602,
+        13.707270862568258
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 1.1922556926463275,
+      "rest_error": 28.51777837185398,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 2.203,
+      "rotation": [
+        -1.0943819010260309e-07,
+        -151.3596288282393,
+        13.710499513006441
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 1.073111863198387,
+      "rest_error": 28.640371171760705,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 2.266,
+      "rotation": [
+        -1.0922309396032774e-07,
+        -151.22394198895734,
+        13.714073013027948
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 0.941244204231391,
+      "rest_error": 28.776058011042664,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 2.328,
+      "rotation": [
+        -1.0906762804992847e-07,
+        -151.12591528655645,
+        13.71665468141222
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 0.8459778624820717,
+      "rest_error": 28.87408471344355,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 2.391,
+      "rotation": [
+        -1.0892568983372813e-07,
+        -151.03639321334728,
+        13.719012368659051
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 0.7589775498430588,
+      "rest_error": 28.96360678665269,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 2.453,
+      "rotation": [
+        -1.0880160049283084e-07,
+        -150.9581050581383,
+        13.721074195184032
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 0.6828953996183995,
+      "rest_error": 29.0418949418617,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 2.516,
+      "rotation": [
+        -1.0866779097925765e-07,
+        -150.8736855975096,
+        13.723297498092187
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 0.6008554404543214,
+      "rest_error": 29.12631440249038,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 2.578,
+      "rotation": [
+        -1.0856626926410267e-07,
+        -150.80964307888578,
+        13.724984146133307
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 0.5386185714474014,
+      "rest_error": 29.190356921114244,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 2.641,
+      "rotation": [
+        -1.0847929818904605e-07,
+        -150.7547347498239,
+        13.726430232696474
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 0.4852587061186219,
+      "rest_error": 29.24526525017609,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 2.703,
+      "rotation": [
+        -1.0838135738089307e-07,
+        -150.6929491742835,
+        13.728057441029222
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 0.42521592435687505,
+      "rest_error": 29.307050825716487,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 2.766,
+      "rotation": [
+        -1.0831234888596936e-07,
+        -150.64942026129282,
+        13.729203834978195
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 0.3829150827826462,
+      "rest_error": 29.35057973870721,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 2.828,
+      "rotation": [
+        -1.08248286948714e-07,
+        -150.609011367742,
+        13.730268058912797
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 0.34364641838200394,
+      "rest_error": 29.390988632257972,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 2.891,
+      "rotation": [
+        -1.0819070499405278e-07,
+        -150.57267680501872,
+        13.73122497972663
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 0.30833726825489083,
+      "rest_error": 29.427323194981284,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 2.953,
+      "rotation": [
+        -1.0812982480418687e-07,
+        -150.53427274128083,
+        13.732236403703489
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 0.2710171759782887,
+      "rest_error": 29.4657272587192,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 3.016,
+      "rotation": [
+        -1.0808372504949507e-07,
+        -150.50520586394643,
+        13.73300192000065
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 0.2427708297455314,
+      "rest_error": 29.494794136053542,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 3.078,
+      "rotation": [
+        -1.0804228639768896e-07,
+        -150.47910570206147,
+        13.733689303755419
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 0.2174075291047384,
+      "rest_error": 29.520894297938526,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 3.141,
+      "rotation": [
+        -1.0799936878795596e-07,
+        -150.45203265046678,
+        13.734402309902272
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 0.19109888329169464,
+      "rest_error": 29.547967349533224,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 3.203,
+      "rotation": [
+        -1.0796685397744735e-07,
+        -150.43149467444314,
+        13.73494320582226
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 0.17114084853638567,
+      "rest_error": 29.568505325556885,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 3.266,
+      "rotation": [
+        -1.0793888736013325e-07,
+        -150.4138728811338,
+        13.735407300049111
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 0.1540166871944391,
+      "rest_error": 29.586127118866216,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 3.328,
+      "rotation": [
+        -1.0791279647494253e-07,
+        -150.3973837146919,
+        13.735841564985536
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 0.13799319832229637,
+      "rest_error": 29.602616285308102,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 3.391,
+      "rotation": [
+        -1.0788994577983356e-07,
+        -150.3829825080344,
+        13.73622084062179
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 0.12399872642618735,
+      "rest_error": 29.617017491965612,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "inside_right",
+      "seconds": 3.453,
+      "rotation": [
+        -1.0786521895503185e-07,
+        -150.3673613164264,
+        13.73663224624404
+      ],
+      "tracking": true,
+      "pawn": [
+        1100.0,
+        1800.0,
+        90.1499986800081
+      ],
+      "aim_error": 0.10881875117845058,
+      "rest_error": 29.63263868357359,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "short_exit",
+      "seconds": 0.016,
+      "rotation": [
+        -1.0517049956713258e-07,
+        -151.0947441685952,
+        13.395508491582193
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        200.0
+      ],
+      "aim_error": 29.02609191884466,
+      "rest_error": 28.905255831404816,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "short_exit",
+      "seconds": 0.078,
+      "rotation": [
+        -9.223862265236978e-08,
+        -154.6489488461125,
+        11.748390084597677
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        196.09806252770497
+      ],
+      "aim_error": 25.374373917658588,
+      "rest_error": 25.35105115388751,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "short_exit",
+      "seconds": 0.141,
+      "rotation": [
+        -8.13485028153725e-08,
+        -157.64200451078347,
+        10.361323912074184
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        185.03918495161392
+      ],
+      "aim_error": 22.305820218357383,
+      "rest_error": 22.357995489216535,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "short_exit",
+      "seconds": 0.203,
+      "rotation": [
+        -7.192636520861936e-08,
+        -160.23158631270138,
+        9.161238874959592
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        167.2481967655643
+      ],
+      "aim_error": 19.693814372544924,
+      "rest_error": 19.76841368729862,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "short_exit",
+      "seconds": 0.266,
+      "rotation": [
+        -6.344782820365344e-08,
+        -162.5618431323407,
+        8.081332327959519
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        142.0493840794988
+      ],
+      "aim_error": 17.435572903163425,
+      "rest_error": 17.438156867659302,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "short_exit",
+      "seconds": 0.328,
+      "rotation": [
+        -5.5860596126478804e-08,
+        -164.64712833743877,
+        7.114952516786453
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        109.16091671106868
+      ],
+      "aim_error": 15.576037959092405,
+      "rest_error": 15.352871662561256,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 0.031,
+      "rotation": [
+        -5.617454241736904e-08,
+        -167.0845784073142,
+        6.781051184521133
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        199.8639782639306
+      ],
+      "aim_error": 42.7020756983598,
+      "rest_error": 12.915421592685789,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 0.093,
+      "rotation": [
+        -6.863547251320851e-08,
+        -171.61930479133494,
+        7.226625011152422
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        195.00532951616398
+      ],
+      "aim_error": 38.18748075977413,
+      "rest_error": 8.380695208665088,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 0.156,
+      "rotation": [
+        -7.946022146561051e-08,
+        -175.4574606705308,
+        7.622242471144802
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        184.0324495362796
+      ],
+      "aim_error": 34.38155128620022,
+      "rest_error": 7.622242471144801,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 0.218,
+      "rotation": [
+        -9.141297141142356e-08,
+        -179.4663335900918,
+        8.078634011001736
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        163.3086689534029
+      ],
+      "aim_error": 30.422978913485696,
+      "rest_error": 8.078634011001725,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 0.281,
+      "rotation": [
+        -1.0305797107261883e-07,
+        176.97686991896325,
+        8.553538734387754
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        133.97392182428783
+      ],
+      "aim_error": 26.94111866295188,
+      "rest_error": 8.553538734387757,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 0.343,
+      "rotation": [
+        -1.1227143671089533e-07,
+        174.46135213751376,
+        8.955858391411157
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        104.73917235341715
+      ],
+      "aim_error": 24.51114300313311,
+      "rest_error": 8.95585839141117,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 0.406,
+      "rotation": [
+        -1.237754646780042e-07,
+        171.64149506122556,
+        9.487721790123118
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 21.732209986887163,
+      "rest_error": 9.487721790123118,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 0.468,
+      "rotation": [
+        -1.3248262561883674e-07,
+        169.53915644850213,
+        9.893260922098671
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 19.623172162331194,
+      "rest_error": 10.460843551497874,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 0.531,
+      "rotation": [
+        -1.4183154914284626e-07,
+        167.28330599505645,
+        10.328826414817263
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 17.361818457884077,
+      "rest_error": 12.716694004943548,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 0.593,
+      "rotation": [
+        -1.4980088272264923e-07,
+        165.3602773114186,
+        10.700110553213339
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 15.434126263594893,
+      "rest_error": 14.6397226885814,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 0.656,
+      "rotation": [
+        -1.5596862111962198e-07,
+        163.87114390752944,
+        10.987380575520367
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 13.942508257960483,
+      "rest_error": 16.128856092470556,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 0.718,
+      "rotation": [
+        -1.6240124982660905e-07,
+        162.31763315556486,
+        11.286959343259491
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 12.3892600087068,
+      "rest_error": 17.682366844435137,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 0.781,
+      "rotation": [
+        -1.6834724154146752e-07,
+        160.88164032551276,
+        11.563874342256995
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 10.955105845474817,
+      "rest_error": 19.118359674487237,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 0.843,
+      "rotation": [
+        -1.7338635454375225e-07,
+        159.66467163484765,
+        11.798553009659054
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 9.740703484124058,
+      "rest_error": 20.33532836515235,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 0.906,
+      "rotation": [
+        -1.771664986472399e-07,
+        158.7517483168882,
+        11.974599960860333
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 8.830327671727177,
+      "rest_error": 21.24825168311179,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 0.968,
+      "rotation": [
+        -1.8127184413010447e-07,
+        157.76029368662506,
+        12.165790788697178
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 7.842257130966468,
+      "rest_error": 22.23970631337494,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 1.031,
+      "rotation": [
+        -1.8497593123192494e-07,
+        156.8657665116755,
+        12.338290251487287
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 6.951345569709607,
+      "rest_error": 23.134233488324497,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 1.093,
+      "rotation": [
+        -1.8815205738856384e-07,
+        156.0987003163496,
+        12.48621030391681
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 6.187812389534497,
+      "rest_error": 23.901299683650393,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 1.156,
+      "rotation": [
+        -1.9062451882018378e-07,
+        155.50158870198186,
+        12.601356534896304
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 5.593731723552194,
+      "rest_error": 24.49841129801814,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 1.218,
+      "rotation": [
+        -1.9320322071739799e-07,
+        154.87882191566763,
+        12.721450076033046
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 4.974391454301862,
+      "rest_error": 25.12117808433237,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 1.281,
+      "rotation": [
+        -1.9553516524319086e-07,
+        154.31566245575704,
+        12.83004901748525
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 4.414566622699916,
+      "rest_error": 25.684337544242965,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 1.343,
+      "rotation": [
+        -1.9753252893385116e-07,
+        153.83328524118866,
+        12.923070015287736
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 3.9352259767034865,
+      "rest_error": 26.166714758811338,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 1.406,
+      "rotation": [
+        -1.9935100709728456e-07,
+        153.39410070150421,
+        13.007761793562194
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 3.4989522181549093,
+      "rest_error": 26.605899298495785,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 1.468,
+      "rotation": [
+        -2.0072712894478802e-07,
+        153.06176058843351,
+        13.071849830878147
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 3.168908093808335,
+      "rest_error": 26.938239411566485,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 1.531,
+      "rotation": [
+        -2.0219073393665178e-07,
+        152.708279947196,
+        13.140014580287385
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 2.817958402726183,
+      "rest_error": 27.29172005280401,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 1.593,
+      "rotation": [
+        -2.0352450749371023e-07,
+        152.38616748180317,
+        13.202130331260951
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 2.49823263661955,
+      "rest_error": 27.61383251819683,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 1.656,
+      "rotation": [
+        -2.0465881773232203e-07,
+        152.11222435207,
+        13.254957169882937
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 2.2263799621756,
+      "rest_error": 27.88777564793,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 1.718,
+      "rotation": [
+        -2.0567779270922792e-07,
+        151.8661252965823,
+        13.302414593261028
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 1.9822067006567023,
+      "rest_error": 28.13387470341769,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 1.781,
+      "rotation": [
+        -2.0660854705065672e-07,
+        151.6413483908153,
+        13.34576028088042
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 1.7592284764415418,
+      "rest_error": 28.358651609184705,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 1.843,
+      "rotation": [
+        -2.0729680715664537e-07,
+        151.47512842842522,
+        13.37781392331885
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 1.5943631229369915,
+      "rest_error": 28.524871571574778,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 1.906,
+      "rotation": [
+        -2.0804077388274118e-07,
+        151.29546884148382,
+        13.412459245563232
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 1.4161911887409246,
+      "rest_error": 28.704531158516176,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 1.968,
+      "rotation": [
+        -2.0869458699125226e-07,
+        151.13758727779364,
+        13.442904921987276
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 1.2596371827765116,
+      "rest_error": 28.862412722206358,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 2.031,
+      "rotation": [
+        -2.0919503653600847e-07,
+        151.01671005164695,
+        13.466214729847554
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 1.1397891943036023,
+      "rest_error": 28.983289948353047,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 2.093,
+      "rotation": [
+        -2.0971458491405757e-07,
+        150.8912398904932,
+        13.49041023335078
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 1.0153991819566515,
+      "rest_error": 29.10876010950679,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 2.156,
+      "rotation": [
+        -2.1018303211517825e-07,
+        150.77810745831434,
+        13.51222654516499
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 0.9032510180317255,
+      "rest_error": 29.221892541685662,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 2.218,
+      "rotation": [
+        -2.1060839114932115e-07,
+        150.67536465025117,
+        13.532039335310184
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 0.8014105959560498,
+      "rest_error": 29.32463534974883,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 2.281,
+      "rotation": [
+        -2.10977929858527e-07,
+        150.58611250322596,
+        13.549250603839383
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 0.7129489341603178,
+      "rest_error": 29.413887496774038,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 2.343,
+      "rotation": [
+        -2.1131069141638178e-07,
+        150.50574869897068,
+        13.564747855851445
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 0.6333021423830452,
+      "rest_error": 29.494251301029323,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 2.406,
+      "rotation": [
+        -2.1159365781257423e-07,
+        150.43741726550513,
+        13.57792480105175
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 0.5655842864761671,
+      "rest_error": 29.562582734494868,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 2.468,
+      "rotation": [
+        -2.118135283649958e-07,
+        150.3843361561619,
+        13.588160893484071
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 0.5129823044027625,
+      "rest_error": 29.615663843838092,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 2.531,
+      "rotation": [
+        -2.1205249854584887e-07,
+        150.32662881572764,
+        13.599289102333074
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 0.45579832113096547,
+      "rest_error": 29.673371184272355,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 2.593,
+      "rotation": [
+        -2.1226463796497848e-07,
+        150.27538007989068,
+        13.609171842229818
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 0.40501652967503854,
+      "rest_error": 29.72461992010932,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 2.656,
+      "rotation": [
+        -2.1245085705616216e-07,
+        150.23042759325966,
+        13.617840421577746
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 0.3604752957602921,
+      "rest_error": 29.769572406740338,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 2.718,
+      "rotation": [
+        -2.1261973894377717e-07,
+        150.18963482883413,
+        13.625706845478733
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 0.3200570848490399,
+      "rest_error": 29.81036517116587,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 2.781,
+      "rotation": [
+        -2.127421235073652e-07,
+        150.16007228963755,
+        13.631407647279872
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 0.29076679199298483,
+      "rest_error": 29.839927710362446,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 2.843,
+      "rotation": [
+        -2.128781490724127e-07,
+        150.1272169182491,
+        13.637743434579578
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 0.25821478762893907,
+      "rest_error": 29.872783081750896,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 2.906,
+      "rotation": [
+        -2.129958152831308e-07,
+        150.0987886450669,
+        13.643225505990399
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 0.2300496812729759,
+      "rest_error": 29.90121135493311,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "reenter_during_return",
+      "seconds": 2.968,
+      "rotation": [
+        -2.1310211260113998e-07,
+        150.073114547443,
+        13.6481764657508
+      ],
+      "tracking": true,
+      "pawn": [
+        -1100.0,
+        1800.0,
+        90.15000006455611
+      ],
+      "aim_error": 0.20461379454691794,
+      "rest_error": 29.926885452557002,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 0.031,
+      "rotation": [
+        -1.9938227075709536e-07,
+        151.99536124861677,
+        12.768705273108338
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        199.59871349414865
+      ],
+      "aim_error": 27.75787929939409,
+      "rest_error": 28.004638751383226,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 0.093,
+      "rotation": [
+        -1.7540423877564802e-07,
+        155.36323788806288,
+        11.233123093775676
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        193.43067597492356
+      ],
+      "aim_error": 24.300579656764572,
+      "rest_error": 24.636762111937117,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 0.156,
+      "rotation": [
+        -1.5519771092089614e-07,
+        158.20138441662925,
+        9.939071173774785
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        180.5730236780274
+      ],
+      "aim_error": 21.40378655050608,
+      "rest_error": 21.798615583370747,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 0.218,
+      "rotation": [
+        -1.368433118956769e-07,
+        160.77938672986306,
+        8.763631918039033
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        160.26245145244994
+      ],
+      "aim_error": 18.83017070859023,
+      "rest_error": 19.220613270136937,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 0.281,
+      "rotation": [
+        -1.2052225897136802e-07,
+        163.0718009917326,
+        7.718406434734525
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        132.48331640958438
+      ],
+      "aim_error": 16.65638807676586,
+      "rest_error": 16.9281990082674,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 0.343,
+      "rotation": [
+        -1.0643321953260712e-07,
+        165.0507073160524,
+        6.816124786231464
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        98.19171154542953
+      ],
+      "aim_error": 14.96253470725661,
+      "rest_error": 14.94929268394759,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 0.406,
+      "rotation": [
+        -9.365635370892414e-08,
+        166.84531222980021,
+        5.997875301610429
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 13.50602050227235,
+      "rest_error": 13.154687770199786,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 0.468,
+      "rotation": [
+        -8.248014188501355e-08,
+        168.41508967670484,
+        5.282135822096249
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 12.309622502837136,
+      "rest_error": 11.584910323295162,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 0.531,
+      "rotation": [
+        -7.246580934769367e-08,
+        169.82167662477764,
+        4.640802993617783
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 11.346140168698602,
+      "rest_error": 10.178323375222362,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 0.593,
+      "rotation": [
+        -6.388592048907125e-08,
+        171.02678857851203,
+        4.091332618550941
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.622786257109366,
+      "rest_error": 8.973211421487974,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 0.656,
+      "rotation": [
+        -5.604186990239831e-08,
+        172.12853630087733,
+        3.588991128732355
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.064199110630431,
+      "rest_error": 7.871463699122671,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 0.718,
+      "rotation": [
+        -4.9322693494647444e-08,
+        173.07229508063244,
+        3.1586846422040824
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.67940550412909,
+      "rest_error": 6.927704919367557,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 0.781,
+      "rotation": [
+        -4.34910134495453e-08,
+        173.89139224017188,
+        2.7852175779419786
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.423573997345034,
+      "rest_error": 6.108607759828118,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 0.843,
+      "rotation": [
+        -3.8268979094319905e-08,
+        174.6248577022881,
+        2.450794256259133
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.261547033147563,
+      "rest_error": 5.375142297711903,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 0.906,
+      "rotation": [
+        -3.38872041496643e-08,
+        175.24031109717646,
+        2.1701784954764425
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.177192273285264,
+      "rest_error": 4.759688902823541,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 0.968,
+      "rotation": [
+        -2.9893783454508016e-08,
+        175.80121405047157,
+        1.9144349895157553
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.14260842295931,
+      "rest_error": 4.198785949528428,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 1.031,
+      "rotation": [
+        -2.632390306287466e-08,
+        176.30263651836464,
+        1.6858115901325301
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.146286067722468,
+      "rest_error": 3.6973634816353638,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 1.093,
+      "rotation": [
+        -2.3250606773591972e-08,
+        176.73430352798687,
+        1.4889931676232226
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.175623222954847,
+      "rest_error": 3.2656964720131327,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 1.156,
+      "rotation": [
+        -2.046607506274614e-08,
+        177.12541054879338,
+        1.310668057870636
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.222936631039326,
+      "rest_error": 2.8745894512066172,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 1.218,
+      "rotation": [
+        -1.8039600041285358e-08,
+        177.46622643966586,
+        1.1552731712742967
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.280011410076494,
+      "rest_error": 2.53377356033414,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 1.281,
+      "rotation": [
+        -1.592042053481908e-08,
+        177.76387864385694,
+        1.0195587525686294
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.34171764447701,
+      "rest_error": 2.236121356143059,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 1.343,
+      "rotation": [
+        -1.4052261576133422e-08,
+        178.0262707611344,
+        0.8999211581955304
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.40510955535208,
+      "rest_error": 1.9737292388655874,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 1.406,
+      "rotation": [
+        -1.237009428188866e-08,
+        178.26254180158188,
+        0.7921934596943346
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.469260766913996,
+      "rest_error": 1.7374581984181248,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 1.468,
+      "rotation": [
+        -1.0885855772319e-08,
+        178.47101486218875,
+        0.6971402404079518
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.53131874723538,
+      "rest_error": 1.5289851378112473,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 1.531,
+      "rotation": [
+        -9.60147872203707e-09,
+        178.651416255207,
+        0.6148862881696064
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.589069081756456,
+      "rest_error": 1.3485837447929896,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 1.593,
+      "rotation": [
+        -8.459892342612831e-09,
+        178.81175959488803,
+        0.5417777983558472
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.643495225227282,
+      "rest_error": 1.1882404051119693,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 1.656,
+      "rotation": [
+        -7.450694283640394e-09,
+        178.9535100477017,
+        0.4771467288256898
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.693997201259323,
+      "rest_error": 1.0464899522982876,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 1.718,
+      "rotation": [
+        -6.558877885228917e-09,
+        179.07876795643895,
+        0.42003542901602525
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.74045889174458,
+      "rest_error": 0.9212320435610479,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 1.781,
+      "rotation": [
+        -5.786318979670629e-09,
+        179.1872754877568,
+        0.37056145794965534
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.782080023168213,
+      "rest_error": 0.812724512243193,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 1.843,
+      "rotation": [
+        -5.1099391383952445e-09,
+        179.2822732769284,
+        0.32724724910383296
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.819552045806851,
+      "rest_error": 0.7177267230715927,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 1.906,
+      "rotation": [
+        -4.505920969660894e-09,
+        179.36711497689376,
+        0.28856370559004263
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.853823931588472,
+      "rest_error": 0.6328850231062404,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 1.968,
+      "rotation": [
+        -3.9693759389859675e-09,
+        179.44247631485607,
+        0.25420272982561437
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.884897376958516,
+      "rest_error": 0.5575236851439342,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 2.031,
+      "rotation": [
+        -3.510535861856013e-09,
+        179.50692083561339,
+        0.22481927305897428
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.91193620192037,
+      "rest_error": 0.49307916438661437,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 2.093,
+      "rotation": [
+        -3.0979663279633686e-09,
+        179.56487182571922,
+        0.1983965393284793
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.936614910042701,
+      "rest_error": 0.4351281742807771,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 2.156,
+      "rotation": [
+        -2.7263240553334685e-09,
+        179.61708060766185,
+        0.1745919634076219
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.95914153112424,
+      "rest_error": 0.3829193923381524,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 2.218,
+      "rotation": [
+        -2.3936763682859946e-09,
+        179.6637989251075,
+        0.15329076285959028
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.979533253216916,
+      "rest_error": 0.3362010748925002,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 2.281,
+      "rotation": [
+        -2.1080950319090677e-09,
+        179.70390537274199,
+        0.13500424204628084
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 9.99721432212413,
+      "rest_error": 0.2960946272580145,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 2.343,
+      "rotation": [
+        -1.8646915123519884e-09,
+        179.73808323418118,
+        0.11942085804134063
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.012408898534769,
+      "rest_error": 0.2619167658188246,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 2.406,
+      "rotation": [
+        -1.643854830047367e-09,
+        179.76909715267416,
+        0.10528007271940955
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.026297655155393,
+      "rest_error": 0.23090284732583655,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 2.468,
+      "rotation": [
+        -1.4471766008080391e-09,
+        179.79672159561844,
+        0.09268471759197194
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.038748941712885,
+      "rest_error": 0.20327840438156386,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 2.531,
+      "rotation": [
+        -1.2753389455337222e-09,
+        179.82085743513076,
+        0.08167998998282458
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.049689586366982,
+      "rest_error": 0.17914256486923819,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 2.593,
+      "rotation": [
+        -1.122771209352671e-09,
+        179.84228166564515,
+        0.07191161955070713
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.05944919517964,
+      "rest_error": 0.15771833435485405,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 2.656,
+      "rotation": [
+        -9.866880645742226e-10,
+        179.86139400100677,
+        0.06319735690731115
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.068193726645086,
+      "rest_error": 0.13860599899322779,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 2.718,
+      "rotation": [
+        -8.705001164128015e-10,
+        179.87770695298343,
+        0.05575947214209409
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.075685782093572,
+      "rest_error": 0.12229304701656929,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 2.781,
+      "rotation": [
+        -7.642029231596728e-10,
+        179.89263803575116,
+        0.04895165016081047
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.082566007985287,
+      "rest_error": 0.10736196424883815,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 2.843,
+      "rotation": [
+        -6.764366844450813e-10,
+        179.90497583500996,
+        0.043326234891131736
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.088267678277521,
+      "rest_error": 0.0950241649900363,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 2.906,
+      "rotation": [
+        -5.933884494897217e-10,
+        179.9166344970798,
+        0.03801047198593322
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.093669134159153,
+      "rest_error": 0.08336550292020206,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 2.968,
+      "rotation": [
+        -5.225047061673407e-10,
+        179.92659481720148,
+        0.03346906749974187
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.098294227341228,
+      "rest_error": 0.07340518279852404,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 3.031,
+      "rotation": [
+        -4.605453796128052e-10,
+        179.93529476196838,
+        0.029502330717047134
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.102341952170892,
+      "rest_error": 0.06470523803162109,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 3.093,
+      "rotation": [
+        -4.0637360143798957e-10,
+        179.94289797521952,
+        0.02603564828651072
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.105885429760757,
+      "rest_error": 0.05710202478047677,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 3.156,
+      "rotation": [
+        -3.5805669540446476e-10,
+        179.94968820476907,
+        0.022939645491239644
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.109054755161404,
+      "rest_error": 0.05031179523092533,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 3.218,
+      "rotation": [
+        -3.165041562160581e-10,
+        179.95552747004638,
+        0.02027723452426835
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.111783792450275,
+      "rest_error": 0.04447252995362305,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 3.281,
+      "rotation": [
+        -2.7887381293051314e-10,
+        179.9608124571294,
+        0.017867546506696346
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.114256628106062,
+      "rest_error": 0.039187542870593006,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 3.343,
+      "rotation": [
+        -2.46814124694915e-10,
+        179.96532603688541,
+        0.015809581390885077
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.116370662852548,
+      "rest_error": 0.03467396311458515,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 3.406,
+      "rotation": [
+        -2.1793766791209603e-10,
+        179.96938632970893,
+        0.013958292293862985
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.118274073389705,
+      "rest_error": 0.030613670291074868,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 3.468,
+      "rotation": [
+        -1.9196022549260802e-10,
+        179.9730304675183,
+        0.012296748930431404
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.119983752421435,
+      "rest_error": 0.026969532481700753,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 3.531,
+      "rotation": [
+        -1.6922285794849045e-10,
+        179.97622303774438,
+        0.01084109764915701
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.121482628505102,
+      "rest_error": 0.023776962255624312,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 3.593,
+      "rotation": [
+        -1.4574652595902978e-10,
+        179.97951454052043,
+        0.009340338106223504
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.123028982373082,
+      "rest_error": 0.020485459479573365,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 3.656,
+      "rotation": [
+        -1.287503437199308e-10,
+        179.98190296127711,
+        0.008251338495076546
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.12415172117752,
+      "rest_error": 0.018097038722885372,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 3.718,
+      "rotation": [
+        -1.1351630746494737e-10,
+        179.98404437407143,
+        0.007274962078262799
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.125158815324468,
+      "rest_error": 0.01595562592856936,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 3.781,
+      "rotation": [
+        -1.0010126061392178e-10,
+        179.98592814547237,
+        0.00641605716488115
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.126045107773617,
+      "rest_error": 0.014071854527628602,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 3.843,
+      "rotation": [
+        -8.816414265310838e-11,
+        179.98760697597262,
+        0.005650594983713457
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.126835266204454,
+      "rest_error": 0.012393024027375077,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 3.906,
+      "rotation": [
+        -7.793232725817964e-11,
+        179.98903807232801,
+        0.004998087099506558
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.127509040540826,
+      "rest_error": 0.01096192767198545,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 3.968,
+      "rotation": [
+        -6.861000656504024e-11,
+        179.99034682759617,
+        0.004401360591366798
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.128125388240669,
+      "rest_error": 0.009653172403830013,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 4.031,
+      "rotation": [
+        -6.053824108672494e-11,
+        179.99148514946478,
+        0.003882343132310524
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.128661605891766,
+      "rest_error": 0.00851485053522083,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 4.093,
+      "rotation": [
+        -5.331912689139936e-11,
+        179.9925014189161,
+        0.003418975430369323
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.129140435016422,
+      "rest_error": 0.007498581083893896,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 4.156,
+      "rotation": [
+        -4.69526639790161e-11,
+        179.99339605938368,
+        0.00301106442115426
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.129562039322895,
+      "rest_error": 0.00660394061631564,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 4.218,
+      "rotation": [
+        -4.126832209293931e-11,
+        179.99419187950784,
+        0.0026482105130497435
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.129937138767788,
+      "rest_error": 0.005808120492162061,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 4.281,
+      "rotation": [
+        -3.64366314897693e-11,
+        179.99488255445164,
+        0.002333297513282756
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.13026272883133,
+      "rest_error": 0.005117445548364685,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 4.343,
+      "rotation": [
+        -3.211653165635283e-11,
+        179.99549204552028,
+        0.0020554002730890785
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.130550086271091,
+      "rest_error": 0.004507954479720411,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 4.406,
+      "rotation": [
+        -2.8933300200149354e-11,
+        179.99592932169992,
+        0.0018560243514550564
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.13075627139621,
+      "rest_error": 0.004070678300081454,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    },
+    {
+      "phase": "outside_final",
+      "seconds": 4.468,
+      "rotation": [
+        -2.739852789091241e-11,
+        179.99614348796896,
+        0.0017583753157527928
+      ],
+      "tracking": false,
+      "pawn": [
+        0.0,
+        700.0,
+        90.15000576533106
+      ],
+      "aim_error": 10.130857262114436,
+      "rest_error": 0.0038565120310352086,
+      "art_transform_preserved": true,
+      "child_rotation_error": 0.0
+    }
+  ],
+  "scope": "PIE only, no editor assets/map saved; teleport setup tests activation/rotation, not navigation",
+  "still_required": [
+    "Visual review of Omen and graph layout",
+    "Real walking collision check",
+    "Output Log review",
+    "Saved map reload check"
+  ]
+}

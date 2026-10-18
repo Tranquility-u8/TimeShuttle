@@ -1,0 +1,918 @@
+{
+  "asset_path": "/Game/Characters/Omen/Blueprints/BP_OmenObserver",
+  "parent_class": "/Script/Engine.Actor",
+  "variables": [
+    {
+      "name": "OmenRoot",
+      "type": "object",
+      "class": "/Script/Engine.Actor",
+      "instance_editable": true,
+      "category": "Omen|Settings",
+      "tooltip": "Existing ShellUpper actor; five original Omen parts must remain attached to it."
+    },
+    {
+      "name": "TrackingEnabled",
+      "type": "bool",
+      "default": "True",
+      "instance_editable": true,
+      "category": "Omen|Settings",
+      "tooltip": "Follow the local player inside RoomBounds. False smoothly returns to the initial pose."
+    },
+    {
+      "name": "FollowSpeed",
+      "type": "float",
+      "default": "1.8",
+      "instance_editable": true,
+      "category": "Omen|Settings",
+      "tooltip": "Positive RInterpTo speed for looking at the player. Default 1.8."
+    },
+    {
+      "name": "ReturnSpeed",
+      "type": "float",
+      "default": "2.0",
+      "instance_editable": true,
+      "category": "Omen|Settings",
+      "tooltip": "Positive RInterpTo speed for returning to the original pose. Default 2.0."
+    },
+    {
+      "name": "ModelForwardOffset",
+      "type": "rotator",
+      "default": "(Pitch=0,Yaw=-90,Roll=0)",
+      "instance_editable": true,
+      "category": "Omen|Settings",
+      "tooltip": "Existing Omen artwork faces local +Y; yaw -90 converts it to look-at +X."
+    },
+    {
+      "name": "RestRotation",
+      "type": "rotator",
+      "default": "(Pitch=0,Yaw=0,Roll=0)",
+      "category": "Omen|Runtime",
+      "tooltip": "Placed Omen rotation cached once at BeginPlay."
+    },
+    {
+      "name": "TargetRotation",
+      "type": "rotator",
+      "default": "(Pitch=0,Yaw=0,Roll=0)",
+      "category": "Omen|Runtime",
+      "tooltip": "Current desired world rotation, selected by follow/return path."
+    },
+    {
+      "name": "ActiveSpeed",
+      "type": "float",
+      "default": "2.0",
+      "category": "Omen|Runtime",
+      "tooltip": "Current positive smoothing speed selected by follow/return path."
+    },
+    {
+      "name": "Initialized",
+      "type": "bool",
+      "default": "False",
+      "category": "Omen|Runtime",
+      "tooltip": "True only after the original Omen pose has been cached successfully."
+    },
+    {
+      "name": "IsTrackingPlayer",
+      "type": "bool",
+      "default": "False",
+      "category": "Omen|Runtime",
+      "tooltip": "Debug state: true when the local pawn is in the room and its camera is valid."
+    }
+  ],
+  "components": [
+    {
+      "name": "SceneRoot",
+      "class": "/Script/Engine.SceneComponent",
+      "properties": {
+        "Mobility": "Movable"
+      }
+    },
+    {
+      "name": "RoomBounds",
+      "class": "/Script/Engine.BoxComponent",
+      "parent": "SceneRoot",
+      "properties": {
+        "BoxExtent": "(X=2000,Y=2100,Z=1150)",
+        "bGenerateOverlapEvents": "False",
+        "bHiddenInGame": "True",
+        "BodyInstance": "(CollisionEnabled=NoCollision)",
+        "Mobility": "Movable"
+      }
+    }
+  ],
+  "defaults": {
+    "PrimaryActorTick": "(bCanEverTick=True,bStartWithTickEnabled=True,TickInterval=0.0)"
+  },
+  "graphs": [
+    {
+      "name": "EventGraph",
+      "kind": "event",
+      "replace": true,
+      "nodes": [
+        {
+          "id": "begin",
+          "kind": "event",
+          "x": 0,
+          "y": 0,
+          "class": "/Script/Engine.Actor",
+          "function": "ReceiveBeginPlay"
+        },
+        {
+          "id": "initRoot",
+          "kind": "get",
+          "x": 0,
+          "y": 160,
+          "variable": "OmenRoot"
+        },
+        {
+          "id": "initValid",
+          "kind": "call",
+          "x": 220,
+          "y": 160,
+          "class": "/Script/Engine.KismetSystemLibrary",
+          "function": "IsValid",
+          "defaults": {}
+        },
+        {
+          "id": "initBranch",
+          "kind": "branch",
+          "x": 440,
+          "y": 0
+        },
+        {
+          "id": "restRead",
+          "kind": "call",
+          "x": 440,
+          "y": 180,
+          "class": "/Script/Engine.Actor",
+          "function": "K2_GetActorRotation",
+          "defaults": {}
+        },
+        {
+          "id": "cacheRest",
+          "kind": "set",
+          "x": 710,
+          "y": 0,
+          "variable": "RestRotation",
+          "defaults": {}
+        },
+        {
+          "id": "initializedSet",
+          "kind": "set",
+          "x": 960,
+          "y": 0,
+          "variable": "Initialized",
+          "defaults": {
+            "Initialized": "true"
+          }
+        },
+        {
+          "id": "cInit",
+          "kind": "comment",
+          "x": -80,
+          "y": -160,
+          "text": "01 | Remember the placed pose\nInput: OmenRoot references the existing ShellUpper. Invalid reference: do nothing.\nCache RestRotation once so entering/leaving never changes the home pose.",
+          "width": 1330,
+          "height": 530,
+          "color": "(R=0.04,G=0.12,B=0.20,A=1)"
+        },
+        {
+          "id": "tick",
+          "kind": "event",
+          "x": 0,
+          "y": 700,
+          "class": "/Script/Engine.Actor",
+          "function": "ReceiveTick"
+        },
+        {
+          "id": "initializedRead",
+          "kind": "get",
+          "x": 0,
+          "y": 870,
+          "variable": "Initialized"
+        },
+        {
+          "id": "tickInit",
+          "kind": "branch",
+          "x": 240,
+          "y": 700
+        },
+        {
+          "id": "tickRoot",
+          "kind": "get",
+          "x": 250,
+          "y": 1010,
+          "variable": "OmenRoot"
+        },
+        {
+          "id": "tickValid",
+          "kind": "call",
+          "x": 490,
+          "y": 1010,
+          "class": "/Script/Engine.KismetSystemLibrary",
+          "function": "IsValid",
+          "defaults": {}
+        },
+        {
+          "id": "tickRootBranch",
+          "kind": "branch",
+          "x": 710,
+          "y": 700
+        },
+        {
+          "id": "enabledRead",
+          "kind": "get",
+          "x": 740,
+          "y": 880,
+          "variable": "TrackingEnabled"
+        },
+        {
+          "id": "enabledBranch",
+          "kind": "branch",
+          "x": 980,
+          "y": 700
+        },
+        {
+          "id": "cGuards",
+          "kind": "comment",
+          "x": -80,
+          "y": 530,
+          "text": "02 | Safe tick and enable switch\nMissing art reference: no rotation writes. Tracking disabled: smoothly return home.\nOnly local player 0 is considered; no per-frame actor searches or collision queries.",
+          "width": 1330,
+          "height": 690,
+          "color": "(R=0.04,G=0.12,B=0.20,A=1)"
+        },
+        {
+          "id": "pawn",
+          "kind": "call",
+          "x": 1400,
+          "y": 1010,
+          "class": "/Script/Engine.GameplayStatics",
+          "function": "GetPlayerPawn",
+          "defaults": {
+            "PlayerIndex": "0"
+          }
+        },
+        {
+          "id": "pawnValid",
+          "kind": "call",
+          "x": 1680,
+          "y": 1010,
+          "class": "/Script/Engine.KismetSystemLibrary",
+          "function": "IsValid",
+          "defaults": {}
+        },
+        {
+          "id": "pawnBranch",
+          "kind": "branch",
+          "x": 1920,
+          "y": 700
+        },
+        {
+          "id": "pawnLocation",
+          "kind": "call",
+          "x": 1940,
+          "y": 1010,
+          "class": "/Script/Engine.Actor",
+          "function": "K2_GetActorLocation",
+          "defaults": {}
+        },
+        {
+          "id": "bounds",
+          "kind": "get",
+          "x": 1400,
+          "y": 1260,
+          "variable": "RoomBounds"
+        },
+        {
+          "id": "boundsTransform",
+          "kind": "call",
+          "x": 1680,
+          "y": 1230,
+          "class": "/Script/Engine.SceneComponent",
+          "function": "K2_GetComponentToWorld",
+          "defaults": {}
+        },
+        {
+          "id": "boundsExtent",
+          "kind": "call",
+          "x": 1680,
+          "y": 1410,
+          "class": "/Script/Engine.BoxComponent",
+          "function": "GetUnscaledBoxExtent",
+          "defaults": {}
+        },
+        {
+          "id": "inside",
+          "kind": "call",
+          "x": 2240,
+          "y": 1150,
+          "class": "/Script/Engine.KismetMathLibrary",
+          "function": "IsPointInBoxWithTransform",
+          "defaults": {}
+        },
+        {
+          "id": "insideBranch",
+          "kind": "branch",
+          "x": 2610,
+          "y": 700
+        },
+        {
+          "id": "cRoom",
+          "kind": "comment",
+          "x": 1320,
+          "y": 530,
+          "text": "03 | Room membership\nPawn center inside RoomBounds activates tracking. Camera location is used only for aiming.\nThe box uses world transform + unscaled extents, so rotating/scaling the volume stays correct.",
+          "width": 1570,
+          "height": 1120,
+          "color": "(R=0.04,G=0.12,B=0.20,A=1)"
+        },
+        {
+          "id": "camera",
+          "kind": "call",
+          "x": 3050,
+          "y": 1010,
+          "class": "/Script/Engine.GameplayStatics",
+          "function": "GetPlayerCameraManager",
+          "defaults": {
+            "PlayerIndex": "0"
+          }
+        },
+        {
+          "id": "cameraValid",
+          "kind": "call",
+          "x": 3340,
+          "y": 1010,
+          "class": "/Script/Engine.KismetSystemLibrary",
+          "function": "IsValid",
+          "defaults": {}
+        },
+        {
+          "id": "cameraBranch",
+          "kind": "branch",
+          "x": 3580,
+          "y": 700
+        },
+        {
+          "id": "cameraLocation",
+          "kind": "call",
+          "x": 3350,
+          "y": 1250,
+          "class": "/Script/Engine.PlayerCameraManager",
+          "function": "GetCameraLocation",
+          "defaults": {}
+        },
+        {
+          "id": "aimRoot",
+          "kind": "get",
+          "x": 3050,
+          "y": 1450,
+          "variable": "OmenRoot"
+        },
+        {
+          "id": "rootLocation",
+          "kind": "call",
+          "x": 3350,
+          "y": 1450,
+          "class": "/Script/Engine.Actor",
+          "function": "K2_GetActorLocation",
+          "defaults": {}
+        },
+        {
+          "id": "lookAt",
+          "kind": "call",
+          "x": 3700,
+          "y": 1230,
+          "class": "/Script/Engine.KismetMathLibrary",
+          "function": "FindLookAtRotation",
+          "defaults": {}
+        },
+        {
+          "id": "modelOffset",
+          "kind": "get",
+          "x": 3700,
+          "y": 1490,
+          "variable": "ModelForwardOffset"
+        },
+        {
+          "id": "compose",
+          "kind": "call",
+          "x": 4020,
+          "y": 1230,
+          "class": "/Script/Engine.KismetMathLibrary",
+          "function": "ComposeRotators",
+          "defaults": {}
+        },
+        {
+          "id": "followTarget",
+          "kind": "set",
+          "x": 4320,
+          "y": 700,
+          "variable": "TargetRotation",
+          "defaults": {}
+        },
+        {
+          "id": "followSpeed",
+          "kind": "get",
+          "x": 4320,
+          "y": 1020,
+          "variable": "FollowSpeed"
+        },
+        {
+          "id": "followSpeedSet",
+          "kind": "set",
+          "x": 4600,
+          "y": 700,
+          "variable": "ActiveSpeed",
+          "defaults": {}
+        },
+        {
+          "id": "trackingTrue",
+          "kind": "set",
+          "x": 4880,
+          "y": 700,
+          "variable": "IsTrackingPlayer",
+          "defaults": {
+            "IsTrackingPlayer": "true"
+          }
+        },
+        {
+          "id": "cFollow",
+          "kind": "comment",
+          "x": 2970,
+          "y": 530,
+          "text": "04 | Aim the existing model at the player camera\nOmen artwork faces local +Y; apply yaw -90 before the +X look-at rotation.\nComposeRotators(A=offset, B=look-at) is B * A. Preserve location, scale, meshes and materials.",
+          "width": 2230,
+          "height": 1120,
+          "color": "(R=0.04,G=0.12,B=0.20,A=1)"
+        },
+        {
+          "id": "restReadBack",
+          "kind": "get",
+          "x": 1400,
+          "y": 2150,
+          "variable": "RestRotation"
+        },
+        {
+          "id": "returnTarget",
+          "kind": "set",
+          "x": 1680,
+          "y": 1900,
+          "variable": "TargetRotation",
+          "defaults": {}
+        },
+        {
+          "id": "returnSpeed",
+          "kind": "get",
+          "x": 1950,
+          "y": 2150,
+          "variable": "ReturnSpeed"
+        },
+        {
+          "id": "returnSpeedSet",
+          "kind": "set",
+          "x": 2210,
+          "y": 1900,
+          "variable": "ActiveSpeed",
+          "defaults": {}
+        },
+        {
+          "id": "trackingFalse",
+          "kind": "set",
+          "x": 2490,
+          "y": 1900,
+          "variable": "IsTrackingPlayer",
+          "defaults": {
+            "IsTrackingPlayer": "false"
+          }
+        },
+        {
+          "id": "cReturn",
+          "kind": "comment",
+          "x": 1320,
+          "y": 1730,
+          "text": "05 | Leave the room / disable / no player\nChoose the original pose and ReturnSpeed. The shared interpolation continues from the current pose.\nRe-entry during the return is continuous; no snapping or timers.",
+          "width": 1570,
+          "height": 630,
+          "color": "(R=0.04,G=0.12,B=0.20,A=1)"
+        },
+        {
+          "id": "applyRoot",
+          "kind": "get",
+          "x": 5470,
+          "y": 1110,
+          "variable": "OmenRoot"
+        },
+        {
+          "id": "currentRotation",
+          "kind": "call",
+          "x": 5720,
+          "y": 1110,
+          "class": "/Script/Engine.Actor",
+          "function": "K2_GetActorRotation",
+          "defaults": {}
+        },
+        {
+          "id": "targetRead",
+          "kind": "get",
+          "x": 5730,
+          "y": 1320,
+          "variable": "TargetRotation"
+        },
+        {
+          "id": "speedRead",
+          "kind": "get",
+          "x": 5450,
+          "y": 1530,
+          "variable": "ActiveSpeed"
+        },
+        {
+          "id": "positiveSpeed",
+          "kind": "call",
+          "x": 5720,
+          "y": 1530,
+          "class": "/Script/Engine.KismetMathLibrary",
+          "function": "FMax",
+          "defaults": {
+            "B": "0.01"
+          }
+        },
+        {
+          "id": "interpolate",
+          "kind": "call",
+          "x": 6050,
+          "y": 1110,
+          "class": "/Script/Engine.KismetMathLibrary",
+          "function": "RInterpTo",
+          "defaults": {}
+        },
+        {
+          "id": "applyRotation",
+          "kind": "call",
+          "x": 6430,
+          "y": 700,
+          "class": "/Script/Engine.Actor",
+          "function": "K2_SetActorRotation",
+          "defaults": {
+            "bTeleportPhysics": "false"
+          }
+        },
+        {
+          "id": "cApply",
+          "kind": "comment",
+          "x": 5370,
+          "y": 530,
+          "text": "06 | One smooth rotation write\nRInterpTo uses Tick DeltaSeconds, following world time dilation. Speed stays > 0 (zero would snap).\nThe ShellUpper parent rotates; its five existing attached parts follow. No position/scale changes.",
+          "width": 1580,
+          "height": 1120,
+          "color": "(R=0.04,G=0.12,B=0.20,A=1)"
+        }
+      ],
+      "links": [
+        [
+          "initRoot",
+          "OmenRoot",
+          "initValid",
+          "Object"
+        ],
+        [
+          "initRoot",
+          "OmenRoot",
+          "restRead",
+          "self"
+        ],
+        [
+          "initValid",
+          "ReturnValue",
+          "initBranch",
+          "Condition"
+        ],
+        [
+          "begin",
+          "then",
+          "initBranch",
+          "execute"
+        ],
+        [
+          "initBranch",
+          "then",
+          "cacheRest",
+          "execute"
+        ],
+        [
+          "restRead",
+          "ReturnValue",
+          "cacheRest",
+          "RestRotation"
+        ],
+        [
+          "cacheRest",
+          "then",
+          "initializedSet",
+          "execute"
+        ],
+        [
+          "tick",
+          "then",
+          "tickInit",
+          "execute"
+        ],
+        [
+          "initializedRead",
+          "Initialized",
+          "tickInit",
+          "Condition"
+        ],
+        [
+          "tickInit",
+          "then",
+          "tickRootBranch",
+          "execute"
+        ],
+        [
+          "tickRoot",
+          "OmenRoot",
+          "tickValid",
+          "Object"
+        ],
+        [
+          "tickValid",
+          "ReturnValue",
+          "tickRootBranch",
+          "Condition"
+        ],
+        [
+          "tickRootBranch",
+          "then",
+          "enabledBranch",
+          "execute"
+        ],
+        [
+          "enabledRead",
+          "TrackingEnabled",
+          "enabledBranch",
+          "Condition"
+        ],
+        [
+          "enabledBranch",
+          "then",
+          "pawnBranch",
+          "execute"
+        ],
+        [
+          "pawn",
+          "ReturnValue",
+          "pawnValid",
+          "Object"
+        ],
+        [
+          "pawnValid",
+          "ReturnValue",
+          "pawnBranch",
+          "Condition"
+        ],
+        [
+          "pawnBranch",
+          "then",
+          "insideBranch",
+          "execute"
+        ],
+        [
+          "pawn",
+          "ReturnValue",
+          "pawnLocation",
+          "self"
+        ],
+        [
+          "bounds",
+          "RoomBounds",
+          "boundsTransform",
+          "self"
+        ],
+        [
+          "bounds",
+          "RoomBounds",
+          "boundsExtent",
+          "self"
+        ],
+        [
+          "pawnLocation",
+          "ReturnValue",
+          "inside",
+          "Point"
+        ],
+        [
+          "boundsTransform",
+          "ReturnValue",
+          "inside",
+          "BoxWorldTransform"
+        ],
+        [
+          "boundsExtent",
+          "ReturnValue",
+          "inside",
+          "BoxExtent"
+        ],
+        [
+          "inside",
+          "ReturnValue",
+          "insideBranch",
+          "Condition"
+        ],
+        [
+          "insideBranch",
+          "then",
+          "cameraBranch",
+          "execute"
+        ],
+        [
+          "camera",
+          "ReturnValue",
+          "cameraValid",
+          "Object"
+        ],
+        [
+          "cameraValid",
+          "ReturnValue",
+          "cameraBranch",
+          "Condition"
+        ],
+        [
+          "cameraBranch",
+          "then",
+          "followTarget",
+          "execute"
+        ],
+        [
+          "camera",
+          "ReturnValue",
+          "cameraLocation",
+          "self"
+        ],
+        [
+          "aimRoot",
+          "OmenRoot",
+          "rootLocation",
+          "self"
+        ],
+        [
+          "rootLocation",
+          "ReturnValue",
+          "lookAt",
+          "Start"
+        ],
+        [
+          "cameraLocation",
+          "ReturnValue",
+          "lookAt",
+          "Target"
+        ],
+        [
+          "modelOffset",
+          "ModelForwardOffset",
+          "compose",
+          "A"
+        ],
+        [
+          "lookAt",
+          "ReturnValue",
+          "compose",
+          "B"
+        ],
+        [
+          "compose",
+          "ReturnValue",
+          "followTarget",
+          "TargetRotation"
+        ],
+        [
+          "followTarget",
+          "then",
+          "followSpeedSet",
+          "execute"
+        ],
+        [
+          "followSpeed",
+          "FollowSpeed",
+          "followSpeedSet",
+          "ActiveSpeed"
+        ],
+        [
+          "followSpeedSet",
+          "then",
+          "trackingTrue",
+          "execute"
+        ],
+        [
+          "enabledBranch",
+          "else",
+          "returnTarget",
+          "execute"
+        ],
+        [
+          "pawnBranch",
+          "else",
+          "returnTarget",
+          "execute"
+        ],
+        [
+          "insideBranch",
+          "else",
+          "returnTarget",
+          "execute"
+        ],
+        [
+          "cameraBranch",
+          "else",
+          "returnTarget",
+          "execute"
+        ],
+        [
+          "restReadBack",
+          "RestRotation",
+          "returnTarget",
+          "TargetRotation"
+        ],
+        [
+          "returnTarget",
+          "then",
+          "returnSpeedSet",
+          "execute"
+        ],
+        [
+          "returnSpeed",
+          "ReturnSpeed",
+          "returnSpeedSet",
+          "ActiveSpeed"
+        ],
+        [
+          "returnSpeedSet",
+          "then",
+          "trackingFalse",
+          "execute"
+        ],
+        [
+          "applyRoot",
+          "OmenRoot",
+          "currentRotation",
+          "self"
+        ],
+        [
+          "applyRoot",
+          "OmenRoot",
+          "applyRotation",
+          "self"
+        ],
+        [
+          "currentRotation",
+          "ReturnValue",
+          "interpolate",
+          "Current"
+        ],
+        [
+          "targetRead",
+          "TargetRotation",
+          "interpolate",
+          "Target"
+        ],
+        [
+          "tick",
+          "DeltaSeconds",
+          "interpolate",
+          "DeltaTime"
+        ],
+        [
+          "speedRead",
+          "ActiveSpeed",
+          "positiveSpeed",
+          "A"
+        ],
+        [
+          "positiveSpeed",
+          "ReturnValue",
+          "interpolate",
+          "InterpSpeed"
+        ],
+        [
+          "interpolate",
+          "ReturnValue",
+          "applyRotation",
+          "NewRotation"
+        ],
+        [
+          "trackingTrue",
+          "then",
+          "applyRotation",
+          "execute"
+        ],
+        [
+          "trackingFalse",
+          "then",
+          "applyRotation",
+          "execute"
+        ]
+      ]
+    }
+  ],
+  "compile": true,
+  "save": false
+}

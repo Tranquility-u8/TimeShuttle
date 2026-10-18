@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="870" viewBox="0 0 1800 870"><rect width="100%" height="100%" fill="white"/>
+<text x="30" y="54" font-family="Microsoft YaHei, sans-serif" font-size="40" font-weight="700" fill="#18283A">S6  高悬挂板：以两处连接点的破坏时间差通关</text>
+<rect x="35" y="100" width="835" height="520" fill="#F1F8F4" stroke="#BEDACC" stroke-width="3"/>
+<rect x="930" y="100" width="835" height="520" fill="#FFF8F2" stroke="#E6D7C9" stroke-width="3"/>
+<text x="208.6640625" y="160" font-family="Microsoft YaHei, sans-serif" font-size="35" font-weight="700" fill="#147C57">通过：两处破坏间隔 ≤ 0.10 秒</text>
+<text x="1092.0" y="159" font-family="Microsoft YaHei, sans-serif" font-size="34" font-weight="700" fill="#A66800">失败：超过窗口，另一处仍未破坏</text>
+<line x1="120" y1="210" x2="785" y2="210" stroke="#576979" stroke-width="12"/>
+<line x1="300" y1="210" x2="300" y2="248" stroke="#A66800" stroke-width="7"/>
+<line x1="287" y1="263" x2="313" y2="289" stroke="#C43E50" stroke-width="5"/>
+<line x1="313" y1="263" x2="287" y2="289" stroke="#C43E50" stroke-width="5"/>
+<text x="288.71875" y="330" font-family="Microsoft YaHei, sans-serif" font-size="30" font-weight="700" fill="#576979">A</text>
+<line x1="600" y1="210" x2="600" y2="248" stroke="#A66800" stroke-width="7"/>
+<line x1="587" y1="263" x2="613" y2="289" stroke="#C43E50" stroke-width="5"/>
+<line x1="613" y1="263" x2="587" y2="289" stroke="#C43E50" stroke-width="5"/>
+<text x="589.7421875" y="330" font-family="Microsoft YaHei, sans-serif" font-size="30" font-weight="700" fill="#576979">B</text>
+<rect x="300" y="350" width="300" height="40" fill="#ADBECB" stroke="#576979" stroke-width="4"/>
+<text x="376.0" y="382" font-family="Microsoft YaHei, sans-serif" font-size="30" font-weight="700" fill="#18283A">近水平落板</text>
+<line x1="451" y1="410" x2="451" y2="520" stroke="#147C57" stroke-width="7"/>
+<polygon points="451,520 442.3006893177754,501.99105795294645 459.6993106822246,501.99105795294645" fill="#147C57"/>
+<circle cx="330" cy="588" r="25" fill="white" stroke="#C43E50" stroke-width="4"/>
+<text x="316.0" y="596" font-family="Microsoft YaHei, sans-serif" font-size="28" font-weight="700" fill="#C43E50">敌</text>
+<circle cx="450" cy="588" r="25" fill="white" stroke="#C43E50" stroke-width="4"/>
+<text x="436.0" y="596" font-family="Microsoft YaHei, sans-serif" font-size="28" font-weight="700" fill="#C43E50">敌</text>
+<circle cx="570" cy="588" r="25" fill="white" stroke="#C43E50" stroke-width="4"/>
+<text x="556.0" y="596" font-family="Microsoft YaHei, sans-serif" font-size="28" font-weight="700" fill="#C43E50">敌</text>
+<line x1="1025" y1="210" x2="1660" y2="210" stroke="#576979" stroke-width="12"/>
+<line x1="1285" y1="210" x2="1285" y2="236" stroke="#A66800" stroke-width="7"/>
+<line x1="1272" y1="242" x2="1298" y2="268" stroke="#C43E50" stroke-width="5"/>
+<line x1="1298" y1="242" x2="1272" y2="268" stroke="#C43E50" stroke-width="5"/>
+<text x="1130.0078125" y="314" font-family="Microsoft YaHei, sans-serif" font-size="30" font-weight="400" fill="#576979">A 已断</text>
+<line x1="1585" y1="210" x2="1585" y2="260" stroke="#A66800" stroke-width="7"/>
+<circle cx="1585" cy="235" r="25" fill="white" stroke="#A66800" stroke-width="4"/>
+<text x="1575.4296875" y="243" font-family="Microsoft YaHei, sans-serif" font-size="28" font-weight="700" fill="#A66800">B</text>
+<line x1="1285" y1="260" x2="1585" y2="260" stroke="#576979" stroke-width="3" stroke-dasharray="11 9"/>
+<rect x="1565" y="260" width="40" height="300" fill="#ADBECB" stroke="#576979" stroke-width="4"/>
+<text x="1150" y="405" font-family="Microsoft YaHei, sans-serif" font-size="33" font-weight="700" fill="#A66800">单侧仍承重</text>
+<text x="1150" y="457" font-family="Microsoft YaHei, sans-serif" font-size="33" font-weight="700" fill="#A66800">板子竖着悬挂</text>
+<circle cx="1315" cy="588" r="25" fill="white" stroke="#C43E50" stroke-width="4"/>
+<text x="1301.0" y="596" font-family="Microsoft YaHei, sans-serif" font-size="28" font-weight="700" fill="#C43E50">敌</text>
+<circle cx="1435" cy="588" r="25" fill="white" stroke="#C43E50" stroke-width="4"/>
+<text x="1421.0" y="596" font-family="Microsoft YaHei, sans-serif" font-size="28" font-weight="700" fill="#C43E50">敌</text>
+<circle cx="1555" cy="588" r="25" fill="white" stroke="#C43E50" stroke-width="4"/>
+<text x="1541.0" y="596" font-family="Microsoft YaHei, sans-serif" font-size="28" font-weight="700" fill="#C43E50">敌</text>
+<text x="65" y="677" font-family="Microsoft YaHei, sans-serif" font-size="32" font-weight="700" fill="#007D95">Q 时停 → 分别射击 → 恢复 → 记录实际破坏</text>
+<text x="65" y="740" font-family="Microsoft YaHei, sans-serif" font-size="32" font-weight="400" fill="#576979">通关后展示落板；敌人死亡数量不再作为S6门槛。</text>
+<text x="960" y="677" font-family="Microsoft YaHei, sans-serif" font-size="32" font-weight="700" fill="#A66800">超时后局部重试，玩家位置不变</text>
+<text x="960" y="740" font-family="Microsoft YaHei, sans-serif" font-size="32" font-weight="400" fill="#576979">翻转全程避开敌人；图示不按实际房间比例。</text>
+<text x="35" y="850" font-family="Microsoft YaHei, sans-serif" font-size="28" font-weight="400" fill="#576979">计时使用世界时间，随时停与减速变化。0.10秒仅为首轮测试值，最终需结合实际射速和命中间隔调整。</text>
+</svg>
