@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="870" viewBox="0 0 1800 870"><rect width="100%" height="100%" fill="white"/>
+<text x="30" y="54" font-family="Microsoft YaHei, sans-serif" font-size="40" font-weight="700" fill="#18283A">S2C  自行进入指定区域，再处理两方向来弹</text>
+<rect x="110" y="107" width="391.9308357348703" height="680" fill="#FBFCFD" stroke="#18283A" stroke-width="4"/>
+<line x1="149.19308357348703" y1="787.0" x2="149.19308357348703" y2="107.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="188.38616714697406" y1="787.0" x2="188.38616714697406" y2="107.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="227.5792507204611" y1="787.0" x2="227.5792507204611" y2="107.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="266.7723342939481" y1="787.0" x2="266.7723342939481" y2="107.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="305.9654178674351" y1="787.0" x2="305.9654178674351" y2="107.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="345.1585014409222" y1="787.0" x2="345.1585014409222" y2="107.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="384.35158501440924" y1="787.0" x2="384.35158501440924" y2="107.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="423.54466858789624" y1="787.0" x2="423.54466858789624" y2="107.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="462.73775216138324" y1="787.0" x2="462.73775216138324" y2="107.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="110.0" y1="747.806916426513" x2="501.9308357348703" y2="747.806916426513" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="110.0" y1="708.613832853026" x2="501.9308357348703" y2="708.613832853026" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="110.0" y1="669.4207492795389" x2="501.9308357348703" y2="669.4207492795389" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="110.0" y1="630.2276657060519" x2="501.9308357348703" y2="630.2276657060519" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="110.0" y1="591.0345821325649" x2="501.9308357348703" y2="591.0345821325649" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="110.0" y1="551.8414985590778" x2="501.9308357348703" y2="551.8414985590778" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="110.0" y1="512.6484149855908" x2="501.9308357348703" y2="512.6484149855908" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="110.0" y1="473.45533141210376" x2="501.9308357348703" y2="473.45533141210376" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="110.0" y1="434.26224783861676" x2="501.9308357348703" y2="434.26224783861676" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="110.0" y1="395.0691642651297" x2="501.9308357348703" y2="395.0691642651297" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="110.0" y1="355.8760806916427" x2="501.9308357348703" y2="355.8760806916427" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="110.0" y1="316.68299711815564" x2="501.9308357348703" y2="316.68299711815564" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="110.0" y1="277.48991354466864" x2="501.9308357348703" y2="277.48991354466864" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="110.0" y1="238.2968299711816" x2="501.9308357348703" y2="238.2968299711816" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="110.0" y1="199.10374639769458" x2="501.9308357348703" y2="199.10374639769458" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="110.0" y1="159.91066282420755" x2="501.9308357348703" y2="159.91066282420755" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="294.20749279538904" y1="787.0" x2="317.72334293948126" y2="787.0" stroke="#007D95" stroke-width="10"/>
+<text x="269.8794803674351" y="95" font-family="Microsoft YaHei, sans-serif" font-size="30" font-weight="400" fill="#576979">20 m</text>
+<text x="215.96541786743512" y="826" font-family="Microsoft YaHei, sans-serif" font-size="30" font-weight="400" fill="#007D95">短边中央入口</text>
+<text x="38" y="796.0" font-family="Microsoft YaHei, sans-serif" font-size="27" font-weight="400" fill="#576979">0</text>
+<text x="38" y="600.0345821325649" font-family="Microsoft YaHei, sans-serif" font-size="27" font-weight="400" fill="#576979">10</text>
+<text x="38" y="404.0691642651297" font-family="Microsoft YaHei, sans-serif" font-size="27" font-weight="400" fill="#576979">20</text>
+<text x="38" y="208.10374639769458" font-family="Microsoft YaHei, sans-serif" font-size="27" font-weight="400" fill="#576979">30</text>
+<text x="33" y="136" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="400" fill="#576979">d/m</text>
+<rect x="227.5792507204611" y="404.8674351585015" width="156.77233429394815" height="117.57925072046112" fill="#E3F3F7" stroke="#007D95" stroke-width="4"/>
+<circle cx="149.19308357348703" cy="179.50720461095108" r="25" fill="white" stroke="#C43E50" stroke-width="4"/>
+<text x="138.66183357348703" y="187.50720461095108" font-family="Microsoft YaHei, sans-serif" font-size="28" font-weight="700" fill="#C43E50">A</text>
+<line x1="149.19308357348703" y1="212.82132564841504" x2="282.44956772334297" y2="418.5850144092219" stroke="#C43E50" stroke-width="4"/>
+<polygon points="282.44956772334297,418.5850144092219 265.3584032544671,408.19790234196114 279.96203391573806,398.7403129613285" fill="#C43E50"/>
+<circle cx="462.73775216138324" cy="218.70028818443808" r="25" fill="white" stroke="#C43E50" stroke-width="4"/>
+<text x="453.16743966138324" y="226.70028818443808" font-family="Microsoft YaHei, sans-serif" font-size="28" font-weight="700" fill="#C43E50">B</text>
+<line x1="462.73775216138324" y1="252.01440922190204" x2="329.4812680115274" y2="418.5850144092219" stroke="#C43E50" stroke-width="4"/>
+<polygon points="329.4812680115274,418.5850144092219 333.9383445446126,399.08797697328765 347.52438529542013,409.9568095739337" fill="#C43E50"/>
+<circle cx="305.9654178674351" cy="463.657060518732" r="22" fill="white" stroke="#007D95" stroke-width="4"/>
+<text x="296.7622928674351" y="471.657060518732" font-family="Microsoft YaHei, sans-serif" font-size="28" font-weight="700" fill="#007D95">P</text>
+<text x="247.91073036743512" y="577.9221902017291" font-family="Microsoft YaHei, sans-serif" font-size="30" font-weight="700" fill="#007D95">8 × 6 m</text>
+<line x1="188.38616714697406" y1="567.5187319884726" x2="221.70028818443802" y2="510.68876080691643" stroke="#007D95" stroke-width="5"/>
+<polygon points="221.70028818443802,510.68876080691643 220.09769268885617,530.6244496005734 205.0879373552481,521.8256275084583" fill="#007D95"/>
+<rect x="660" y="120" width="12" height="40" fill="#007D95" stroke="#007D95" stroke-width="2"/>
+<text x="695" y="151" font-family="Microsoft YaHei, sans-serif" font-size="36" font-weight="700" fill="#007D95">① 看见边界 → 自行走入</text>
+<text x="695" y="205" font-family="Microsoft YaHei, sans-serif" font-size="32" font-weight="400" fill="#576979">角色整体进入后合拢边界；未就位时不攻击。边界对玩家生效，敌方子</text>
+<text x="695" y="253" font-family="Microsoft YaHei, sans-serif" font-size="32" font-weight="400" fill="#576979">弹可以穿过。</text>
+<rect x="660" y="315" width="12" height="40" fill="#C43E50" stroke="#C43E50" stroke-width="2"/>
+<text x="695" y="346" font-family="Microsoft YaHei, sans-serif" font-size="36" font-weight="700" fill="#C43E50">② 固定敌位，先后展示两个方向</text>
+<text x="695" y="400" font-family="Microsoft YaHei, sans-serif" font-size="32" font-weight="400" fill="#576979">两名正常敌人是本版建议，重新生成于远端左右。先采用错峰射击，避</text>
+<text x="695" y="448" font-family="Microsoft YaHei, sans-serif" font-size="32" font-weight="400" fill="#576979">免第一次就同时夹击。</text>
+<rect x="660" y="510" width="12" height="40" fill="#147C57" stroke="#147C57" stroke-width="2"/>
+<text x="695" y="541" font-family="Microsoft YaHei, sans-serif" font-size="36" font-weight="700" fill="#147C57">③ 近弹 QTE 始终可用，统一提示 Q</text>
+<text x="695" y="595" font-family="Microsoft YaHei, sans-serif" font-size="32" font-weight="400" fill="#576979">真实躲过两侧有效攻击才通过。冻结或异常销毁的弹丸不能直接算作完</text>
+<text x="695" y="643" font-family="Microsoft YaHei, sans-serif" font-size="32" font-weight="400" fill="#576979">成；通过后撤边界。</text>
+<text x="695" y="785" font-family="Microsoft YaHei, sans-serif" font-size="30" font-weight="700" fill="#18283A">删除 S2B；S2A 完成后直接进入 S2C。</text>
+</svg>

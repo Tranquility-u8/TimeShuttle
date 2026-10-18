@@ -1,0 +1,171 @@
+{
+  "index": 2,
+  "phase": "next",
+  "rows": [
+    {
+      "id": "wall_duct_forward",
+      "passed": true,
+      "feet_waypoints": [
+        [
+          -3730,
+          -2670,
+          780
+        ],
+        [
+          -4175,
+          -2670,
+          780
+        ]
+      ],
+      "actual_center_cm": [
+        -4163.213591692239,
+        -2670.0,
+        837.1499876976013
+      ],
+      "target_center_z_cm": 835.0,
+      "remaining_xy_cm": 11.786408307761121,
+      "waypoints_reached": 1,
+      "elapsed_seconds": 2.8589999999967404,
+      "actual_half_height_cm": 55.0,
+      "movement_mode": "<MovementMode.MOVE_WALKING: 1>",
+      "samples": [
+        [
+          -3730.0,
+          -2670.0,
+          837.1499876976013
+        ],
+        [
+          -3794.0529130820332,
+          -2670.0,
+          837.1499876976013
+        ],
+        [
+          -3867.525261757165,
+          -2670.0,
+          837.1499876976013
+        ],
+        [
+          -3942.7977973457573,
+          -2670.0,
+          837.1499876976013
+        ],
+        [
+          -4016.294909254849,
+          -2670.0,
+          837.1499876976013
+        ],
+        [
+          -4089.754240163803,
+          -2670.0,
+          837.1499876976013
+        ]
+      ]
+    },
+    {
+      "id": "wall_duct_reverse",
+      "passed": true,
+      "feet_waypoints": [
+        [
+          -4175,
+          -2670,
+          780
+        ],
+        [
+          -3730,
+          -2670,
+          780
+        ]
+      ],
+      "actual_center_cm": [
+        -3741.9362216502823,
+        -2670.0,
+        837.1499786376953
+      ],
+      "target_center_z_cm": 835.0,
+      "remaining_xy_cm": 11.936221650282278,
+      "waypoints_reached": 1,
+      "elapsed_seconds": 2.85999999998603,
+      "actual_half_height_cm": 55.0,
+      "movement_mode": "<MovementMode.MOVE_WALKING: 1>",
+      "samples": [
+        [
+          -4175.0,
+          -2670.0,
+          837.1499786376953
+        ],
+        [
+          -4110.947291410009,
+          -2670.0,
+          837.1499786376953
+        ],
+        [
+          -4037.487939881573,
+          -2670.0,
+          837.1499786376953
+        ],
+        [
+          -3962.320241375307,
+          -2670.0,
+          837.1499786376953
+        ],
+        [
+          -3888.8609715611137,
+          -2670.0,
+          837.1499786376953
+        ],
+        [
+          -3815.4015795573987,
+          -2670.0,
+          837.1499786376953
+        ]
+      ]
+    }
+  ],
+  "test_count": 2,
+  "filter": "duct",
+  "radius_cm": 48.0,
+  "standing_half_height_cm": 88.0,
+  "player_class": "/Game/Blueprints/Player/BP_FPCharacter.BP_FPCharacter_C",
+  "started": 358833.39,
+  "last_sample": 358838.765,
+  "test_started": 358836.265,
+  "waypoint": 1,
+  "samples": [
+    [
+      -4175.0,
+      -2670.0,
+      837.1499786376953
+    ],
+    [
+      -4110.947291410009,
+      -2670.0,
+      837.1499786376953
+    ],
+    [
+      -4037.487939881573,
+      -2670.0,
+      837.1499786376953
+    ],
+    [
+      -3962.320241375307,
+      -2670.0,
+      837.1499786376953
+    ],
+    [
+      -3888.8609715611137,
+      -2670.0,
+      837.1499786376953
+    ],
+    [
+      -3815.4015795573987,
+      -2670.0,
+      837.1499786376953
+    ]
+  ],
+  "timeout": 12.45,
+  "done": true,
+  "error": null,
+  "all_passed": true,
+  "scope": "Real project CharacterMovement input in PIE. Teleport only between independent test routes; crawl turns are continuous walking.",
+  "map": "/Game/Maps/UEDPIE_0_Map_LabV39.Map_LabV39"
+}

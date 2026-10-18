@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "scope": "AST compile and isolated pure/data helper execution only; no bpy import, Blender process, UE call or export.",
+  "script_sha256": "14ef2185bf2a91d6a8d6dbcab225b175f3a78b9aa55027403a4ea7b270404d2d",
+  "checks": [
+    "Python syntax compiles",
+    "current audited mesh passes preflight",
+    "POD1 shifted south1.5m without mutating plan",
+    "POD1 unexpected-source guard rejects changed source",
+    "non-POD1 props unchanged",
+    "UV dominant-axis mapping matches final refresh for3 axes",
+    "existing scene/scope IDs and734unique object IDs retained",
+    "final blend manifest and plan unchanged",
+    "prebuild geometry validation excludes post-export manifest checks to avoid circular dependencies"
+  ],
+  "protected_file_hashes": {
+    "E:\\Capstone\\Test\\TimeShuttle\\Saved\\Agent\\LabR17\\TimeShuttler_LabV39_R17_Patch.blend": "c9ba36f48a2fc7fdc6a9e1652dbb3fe082244510f9f0d8f9b95dd5619c18662c",
+    "E:\\Capstone\\Test\\TimeShuttle\\Saved\\Agent\\LabR17\\patch_bundle\\manifest.json": "c3584cab697229d3dc118eb403ff3918beca4ce4b42c3a51fdcd7199a1b9d3db",
+    "E:\\Capstone\\Test\\tmp\\v39-training-direct\\revised-layout-geometry.json": "ae19133c9448e61e2afea88d99c67afe8946a9990ec590634bba19bcdf23a2d9"
+  }
+}

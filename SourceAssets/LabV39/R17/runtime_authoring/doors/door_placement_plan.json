@@ -1,0 +1,2336 @@
+{
+  "source_geometry": "SourceAssets/LabV39/R17/revised-layout-geometry.json",
+  "source_sha256": "ae19133c9448e61e2afea88d99c67afe8946a9990ec590634bba19bcdf23a2d9",
+  "scene_id": "97e4c34e52bd4d88a6fff48f872064a4",
+  "manifest_revision": 2,
+  "manifest_snapshot_hash": "440a37a218fdbdbd75fa04183f516ce89a9f8cea6259c51f86ca063783ad75da",
+  "target_map": "/Game/Maps/Map_LabV39.Map_LabV39",
+  "coordinate_rule": "plan m (x,y,z) -> UE cm (100x,-100y, floor + sill); B floor is 5.4m, not the legacy z=4.5 level marker",
+  "door_count": 78,
+  "locked_count": 43,
+  "fit_note": "Width/height match each clear aperture. 16cm leaf thickness is the new whitebox-door setting; no new frame is added.",
+  "doors": [
+    {
+      "id": "RES-I15.35",
+      "label": "LabR17_Door_RES-I15.35",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        3790.0,
+        -2446.666666666667,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 220.00000000000003,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P1",
+      "connects": [],
+      "destination": "Adjacent room / circulation",
+      "level": "A"
+    },
+    {
+      "id": "RES-I5.35",
+      "label": "LabR17_Door_RES-I5.35",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        3790.0,
+        -1113.3333333333333,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 220.00000000000003,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P1",
+      "connects": [],
+      "destination": "Adjacent room / circulation",
+      "level": "A"
+    },
+    {
+      "id": "RES-U-3.65",
+      "label": "LabR17_Door_RES-U-3.65",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        3752.5,
+        86.66666666666667,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 180.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P1",
+      "connects": [],
+      "destination": "Adjacent room / circulation",
+      "level": "A"
+    },
+    {
+      "id": "RES-U-9.65",
+      "label": "LabR17_Door_RES-U-9.65",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        3752.5,
+        947.5000000000001,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 180.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P1",
+      "connects": [],
+      "destination": "Adjacent room / circulation",
+      "level": "A"
+    },
+    {
+      "id": "RES-SERV",
+      "label": "LabR17_Door_RES-SERV",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        4277.5,
+        1420.0000000000002,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 180.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P1",
+      "connects": [],
+      "destination": "Adjacent room / circulation",
+      "level": "A"
+    },
+    {
+      "id": "RES-ACT",
+      "label": "LabR17_Door_RES-ACT",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        4277.5,
+        2679.9999999999995,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 220.00000000000003,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P1",
+      "connects": [],
+      "destination": "Adjacent room / circulation",
+      "level": "A"
+    },
+    {
+      "id": "RES-STORE",
+      "label": "LabR17_Door_RES-STORE",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        4902.5,
+        3849.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 220.00000000000003,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P1",
+      "connects": [],
+      "destination": "Adjacent room / circulation",
+      "level": "A"
+    },
+    {
+      "id": "RES-QUIET",
+      "label": "LabR17_Door_RES-QUIET",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        5777.5,
+        179.99999999999994,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 220.00000000000003,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "P2",
+      "connects": [],
+      "destination": "Adjacent room / circulation",
+      "level": "A"
+    },
+    {
+      "id": "LS39-DOOR-1",
+      "label": "LabR17_Door_LS39-DOOR-1",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        5990.000000000001,
+        550.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 180.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "BG",
+      "connects": [],
+      "destination": "Adjacent room / circulation",
+      "level": "A"
+    },
+    {
+      "id": "LS39-DOOR-2",
+      "label": "LabR17_Door_LS39-DOOR-2",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        5990.000000000001,
+        1322.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 180.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "BG",
+      "connects": [],
+      "destination": "Adjacent room / circulation",
+      "level": "A"
+    },
+    {
+      "id": "LS39-DOOR-3",
+      "label": "LabR17_Door_LS39-DOOR-3",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        5990.000000000001,
+        2064.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 180.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "BG",
+      "connects": [],
+      "destination": "Adjacent room / circulation",
+      "level": "A"
+    },
+    {
+      "id": "LS39-DOOR-4",
+      "label": "LabR17_Door_LS39-DOOR-4",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        5990.000000000001,
+        2806.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 180.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "BG",
+      "connects": [],
+      "destination": "Adjacent room / circulation",
+      "level": "A"
+    },
+    {
+      "id": "L01-HALL",
+      "label": "LabR17_Door_L01-HALL",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -2895.272727272727,
+        -3266.6666666666665,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 200.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "P3",
+      "connects": [],
+      "destination": "Adjacent room / circulation",
+      "level": "A"
+    },
+    {
+      "id": "R02-N",
+      "label": "LabR17_Door_R02-N",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -3465.0,
+        1496.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 220.00000000000003,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P1",
+      "connects": [],
+      "destination": "Adjacent room / circulation",
+      "level": "A"
+    },
+    {
+      "id": "RES-N",
+      "label": "LabR17_Door_RES-N",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        2940.0,
+        -2933.3333333333335,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 240.0,
+      "height_cm": 380.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "P2",
+      "connects": [],
+      "destination": "Adjacent room / circulation",
+      "level": "A"
+    },
+    {
+      "id": "RES-M",
+      "label": "LabR17_Door_RES-M",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        2940.0,
+        -400.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 320.0,
+      "height_cm": 380.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "P2",
+      "connects": [],
+      "destination": "Adjacent room / circulation",
+      "level": "A"
+    },
+    {
+      "id": "RES-EXT-DINING",
+      "label": "LabR17_Door_RES-EXT-DINING",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        5402.5,
+        -2446.666666666667,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 450.0,
+      "height_cm": 380.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P1",
+      "connects": [],
+      "destination": "Adjacent room / circulation",
+      "level": "A"
+    },
+    {
+      "id": "RES-EXT-LOUNGE",
+      "label": "LabR17_Door_RES-EXT-LOUNGE",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        5777.5,
+        -1113.3333333333333,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 450.0,
+      "height_cm": 380.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P1",
+      "connects": [],
+      "destination": "Adjacent room / circulation",
+      "level": "A"
+    },
+    {
+      "id": "QW1",
+      "label": "LabR17_Door_QW1",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -1914.9999999999998,
+        66.66666666666666,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 250.0,
+      "height_cm": 380.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "P3",
+      "connects": [],
+      "destination": "Adjacent room / circulation",
+      "level": "B"
+    },
+    {
+      "id": "QW2",
+      "label": "LabR17_Door_QW2",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -1914.9999999999998,
+        700.0,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 300.0,
+      "height_cm": 380.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "P3",
+      "connects": [],
+      "destination": "Adjacent room / circulation",
+      "level": "B"
+    },
+    {
+      "id": "upper_E4_upper",
+      "label": "LabR17_Door_upper_E4_upper",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -3777.5,
+        625.0,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 200.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "BG",
+      "connects": [],
+      "destination": "E4 lift shaft to lower floor",
+      "level": "B"
+    },
+    {
+      "id": "C0",
+      "label": "LabR17_Door_C0",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabOmenDoor",
+      "location_cm": [
+        0,
+        962.5,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 800.0,
+      "height_cm": 480.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": true,
+      "phase": "P1",
+      "connects": [],
+      "destination": "Tall control room / future OMEN room",
+      "level": "A"
+    },
+    {
+      "id": "N-KITCHEN",
+      "label": "LabR17_Door_N-KITCHEN",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        5900,
+        -2860.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 240.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "BG",
+      "connects": [
+        "RG01",
+        "RG01K"
+      ],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "N-PANTRY",
+      "label": "LabR17_Door_N-PANTRY",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        6520.0,
+        -3150.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 180.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "BG",
+      "connects": [
+        "RG01K",
+        "RG01S"
+      ],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "N-QUIET-READ",
+      "label": "LabR17_Door_N-QUIET-READ",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        6050.0,
+        -1600,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 240.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P1",
+      "connects": [
+        "RG02",
+        "RG02Q"
+      ],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "N-H01-N",
+      "label": "LabR17_Door_N-H01-N",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -2220.0,
+        -2207.5,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 240.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P1",
+      "connects": [
+        "H01",
+        "HALL"
+      ],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "N-H01-S",
+      "label": "LabR17_Door_N-H01-S",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -2220.0,
+        -1092.5,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 240.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P1",
+      "connects": [
+        "H01",
+        "HALL"
+      ],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "N-H02-N",
+      "label": "LabR17_Door_N-H02-N",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        2220.0,
+        -2207.5,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 240.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P1",
+      "connects": [
+        "H02",
+        "HALL"
+      ],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "N-H02-S",
+      "label": "LabR17_Door_N-H02-S",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        2220.0,
+        -1092.5,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 240.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P1",
+      "connects": [
+        "H02",
+        "HALL"
+      ],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "WG-ASSEMBLY",
+      "label": "LabR17_Door_WG-ASSEMBLY",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -8100,
+        -515.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 320.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P1",
+      "connects": [],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "EG-ENTRY",
+      "label": "LabR17_Door_EG-ENTRY",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        7015.000000000001,
+        -400,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 320.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P1",
+      "connects": [],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "EG-WORK",
+      "label": "LabR17_Door_EG-WORK",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        8100,
+        -615.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 320.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "P2",
+      "connects": [],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "WU-NORTH",
+      "label": "LabR17_Door_WU-NORTH",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -8000,
+        -1380.0,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 280.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "P3",
+      "connects": [],
+      "destination": "",
+      "level": "B"
+    },
+    {
+      "id": "WU-PREP",
+      "label": "LabR17_Door_WU-PREP",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -7200,
+        -943.3333333300001,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 240.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "BG",
+      "connects": [],
+      "destination": "",
+      "level": "B"
+    },
+    {
+      "id": "WU-DISCUSS",
+      "label": "LabR17_Door_WU-DISCUSS",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -8400,
+        -943.3333333300001,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 240.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "BG",
+      "connects": [],
+      "destination": "",
+      "level": "B"
+    },
+    {
+      "id": "GW38-OVERHAUL",
+      "label": "LabR17_Door_GW38-OVERHAUL",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -6759.999999999999,
+        1100.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 360.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P1",
+      "connects": [],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "GW38-STORAGE",
+      "label": "LabR17_Door_GW38-STORAGE",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -6759.999999999999,
+        3400.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 360.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "BG",
+      "connects": [],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "GW38-EXISTING-STORE",
+      "label": "LabR17_Door_GW38-EXISTING-STORE",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -6300.0,
+        2500.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 300.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P1",
+      "connects": [],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "GW38-EXISTING-REPAIR",
+      "label": "LabR17_Door_GW38-EXISTING-REPAIR",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -4900.0,
+        3885.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 320.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P1",
+      "connects": [],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "RW38-RING-ENTRY",
+      "label": "LabR17_Door_RW38-RING-ENTRY",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -5200.0,
+        1372.5,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 360.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "P3",
+      "connects": [],
+      "destination": "",
+      "level": "B"
+    },
+    {
+      "id": "RW38-PREP-N",
+      "label": "LabR17_Door_RW38-PREP-N",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -3300.0,
+        1372.5,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 300.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "P3",
+      "connects": [],
+      "destination": "",
+      "level": "B"
+    },
+    {
+      "id": "RW38-ARCHIVE",
+      "label": "LabR17_Door_RW38-ARCHIVE",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -5500.0,
+        3847.5,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 300.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "P3",
+      "connects": [],
+      "destination": "",
+      "level": "B"
+    },
+    {
+      "id": "RW39-CONTROL-CHAMBER",
+      "label": "LabR17_Door_RW39-CONTROL-CHAMBER",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -6700.0,
+        2315.0,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 240.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "P3",
+      "connects": [],
+      "destination": "",
+      "level": "B"
+    },
+    {
+      "id": "RW39-ANALYSIS",
+      "label": "LabR17_Door_RW39-ANALYSIS",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -8300,
+        3847.5,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 240.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "P3",
+      "connects": [],
+      "destination": "",
+      "level": "B"
+    },
+    {
+      "id": "RW39-CALIBRATION",
+      "label": "LabR17_Door_RW39-CALIBRATION",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -6950.0,
+        3847.5,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 240.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "BG",
+      "connects": [],
+      "destination": "",
+      "level": "B"
+    },
+    {
+      "id": "RW39-RECORDS",
+      "label": "LabR17_Door_RW39-RECORDS",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -3000,
+        2415.0,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 240.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "P3",
+      "connects": [],
+      "destination": "",
+      "level": "B"
+    },
+    {
+      "id": "RW39-REVIEW",
+      "label": "LabR17_Door_RW39-REVIEW",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -4400,
+        4415.0,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 220.00000000000003,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "BG",
+      "connects": [],
+      "destination": "",
+      "level": "B"
+    },
+    {
+      "id": "RW39-SEALED-RECORDS",
+      "label": "LabR17_Door_RW39-SEALED-RECORDS",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -3100,
+        4415.0,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 220.00000000000003,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "P3",
+      "connects": [],
+      "destination": "",
+      "level": "B"
+    },
+    {
+      "id": "RW39-RECORDS-FORWARD",
+      "label": "LabR17_Door_RW39-RECORDS-FORWARD",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -3300,
+        3847.5,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 240.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "P3",
+      "connects": [],
+      "destination": "",
+      "level": "B"
+    },
+    {
+      "id": "RW39-ARCHIVE-LINK",
+      "label": "LabR17_Door_RW39-ARCHIVE-LINK",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -4800.0,
+        4140.0,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 200.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "P3",
+      "connects": [],
+      "destination": "",
+      "level": "B"
+    },
+    {
+      "id": "E39-A-ENTRY",
+      "label": "LabR17_Door_E39-A-ENTRY",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        8150.0,
+        -185.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 320.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "P2",
+      "connects": [],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "E39-A-END",
+      "label": "LabR17_Door_E39-A-END",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        8150.0,
+        4315.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 320.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P2",
+      "connects": [],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "E39-POD1",
+      "label": "LabR17_Door_E39-POD1",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        8365.0,
+        840.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 180.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P2",
+      "connects": [],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "E39-POD2",
+      "label": "LabR17_Door_E39-POD2",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        8365.0,
+        1720.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 180.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "BG",
+      "connects": [],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "E39-POD3",
+      "label": "LabR17_Door_E39-POD3",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        8365.0,
+        2600.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 180.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "BG",
+      "connects": [],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "E39-POD4",
+      "label": "LabR17_Door_E39-POD4",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        8365.0,
+        3480.0000000000005,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 180.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "BG",
+      "connects": [],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "E39-EG02",
+      "label": "LabR17_Door_E39-EG02",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        7934.999999999999,
+        80.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 240.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P2",
+      "connects": [],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "E39-EG04",
+      "label": "LabR17_Door_E39-EG04",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        7934.999999999999,
+        1220.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 200.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "BG",
+      "connects": [],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "E39-EG05",
+      "label": "LabR17_Door_E39-EG05",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        7934.999999999999,
+        2120.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 240.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P2",
+      "connects": [],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "E39-EG06",
+      "label": "LabR17_Door_E39-EG06",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        7934.999999999999,
+        3040.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 240.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P2",
+      "connects": [],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "E39-EG09",
+      "label": "LabR17_Door_E39-EG09",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        7934.999999999999,
+        3950.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 200.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "BG",
+      "connects": [],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "E39-EG03",
+      "label": "LabR17_Door_E39-EG03",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        8365.0,
+        80.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 280.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P2",
+      "connects": [],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "TR-ENTRY",
+      "label": "LabR17_Door_TR-ENTRY",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        1900.0,
+        66.66666667,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 320.0,
+      "height_cm": 380.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "AFTER_OMEN",
+      "connects": [
+        "EAST-GALLERY",
+        "TR01"
+      ],
+      "destination": "",
+      "level": "B"
+    },
+    {
+      "id": "TR-CONNECT-PREP",
+      "label": "LabR17_Door_TR-CONNECT-PREP",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        3610.0,
+        476.66666667,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 120.0,
+      "height_cm": 220.00000000000003,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P1",
+      "connects": [
+        "TR01",
+        "TR-LINK"
+      ],
+      "destination": "",
+      "level": "B"
+    },
+    {
+      "id": "TR-CONNECT-TRAIN",
+      "label": "LabR17_Door_TR-CONNECT-TRAIN",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        3610.0,
+        736.6666666699999,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 120.0,
+      "height_cm": 220.00000000000003,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P1",
+      "connects": [
+        "TR-LINK",
+        "TR02"
+      ],
+      "destination": "",
+      "level": "B"
+    },
+    {
+      "id": "R9-TIME-EXIT",
+      "label": "LabR17_Door_R9-TIME-EXIT",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -1914.9999999999998,
+        -1160.0,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 320.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "AFTER_TUTORIAL",
+      "connects": [
+        "TIME",
+        "WEST-GALLERY"
+      ],
+      "destination": "",
+      "level": "B"
+    },
+    {
+      "id": "R9-WEST-SHARED",
+      "label": "LabR17_Door_R9-WEST-SHARED",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -6273.75,
+        -1160.0,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 240.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "LATER",
+      "connects": [
+        "WEST-CROSS",
+        "UP"
+      ],
+      "destination": "",
+      "level": "B"
+    },
+    {
+      "id": "R10-UP-NORTH",
+      "label": "LabR17_Door_R10-UP-NORTH",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -4480.0,
+        -3015.0,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 320.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P1",
+      "connects": [
+        "UP",
+        "NORTH-VIEW"
+      ],
+      "destination": "",
+      "level": "B"
+    },
+    {
+      "id": "R10-COMMONS-NORTH",
+      "label": "LabR17_Door_R10-COMMONS-NORTH",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        2450.0,
+        -3325.0,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 320.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "AFTER_TUTORIAL",
+      "connects": [
+        "NORTH-APRON",
+        "EP01"
+      ],
+      "destination": "",
+      "level": "B"
+    },
+    {
+      "id": "R10-COMMONS-WEST",
+      "label": "LabR17_Door_R10-COMMONS-WEST",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        1914.9999999999998,
+        -1600,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 320.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "AFTER_TUTORIAL",
+      "connects": [
+        "EAST-GALLERY",
+        "EP01"
+      ],
+      "destination": "",
+      "level": "B"
+    },
+    {
+      "id": "R10-EQUIPMENT",
+      "label": "LabR17_Door_R10-EQUIPMENT",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        3545.0000000000005,
+        -1350.0,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 240.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "BACKGROUND",
+      "connects": [
+        "EP01",
+        "EP02"
+      ],
+      "destination": "",
+      "level": "B"
+    },
+    {
+      "id": "R13-U01",
+      "label": "LabR17_Door_R13-U01",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -5450.0,
+        -100.0,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 180.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P3",
+      "connects": [
+        "WEST-RESEARCH-FOYER",
+        "U01"
+      ],
+      "destination": "",
+      "level": "B"
+    },
+    {
+      "id": "R13-U02",
+      "label": "LabR17_Door_R13-U02",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -2950.0,
+        -100.0,
+        540.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 240.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P3",
+      "connects": [
+        "WEST-RESEARCH-FOYER",
+        "U02"
+      ],
+      "destination": "",
+      "level": "B"
+    },
+    {
+      "id": "R16-CORE-E",
+      "label": "LabR17_Door_R16-CORE-E",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -4815.0,
+        -1800.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 320.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P3",
+      "connects": [],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "R16-CORE-S",
+      "label": "LabR17_Door_R16-CORE-S",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -5777.5,
+        -538.3333333333334,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 320.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P3",
+      "connects": [],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "R16-PREP-N",
+      "label": "LabR17_Door_R16-PREP-N",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -5550.0,
+        358.33333333333337,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 300.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": false,
+      "automatic": false,
+      "phase": "P3",
+      "connects": [],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "G-WEST-MAIN",
+      "label": "LabR17_Door_G-WEST-MAIN",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -2895.2727272727275,
+        -270.0,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 320.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "P3",
+      "connects": [
+        "HALL",
+        "R16_PUBLIC"
+      ],
+      "destination": "",
+      "level": "A"
+    },
+    {
+      "id": "R17-L01-S",
+      "label": "LabR17_Door_R17-L01-S",
+      "blueprint": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "location_cm": [
+        -3600.0,
+        -2071.6666666666665,
+        0.0
+      ],
+      "rotation_degrees": {
+        "pitch": 0,
+        "yaw": 90,
+        "roll": 0
+      },
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "width_cm": 240.0,
+      "height_cm": 340.0,
+      "leaf_thickness_cm": 16.0,
+      "locked": true,
+      "automatic": false,
+      "phase": "P3",
+      "connects": [
+        "L01",
+        "R16_PUBLIC"
+      ],
+      "destination": "",
+      "level": "A"
+    }
+  ]
+}

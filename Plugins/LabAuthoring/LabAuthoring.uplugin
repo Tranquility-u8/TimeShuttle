@@ -1,0 +1,11 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "0.1",
+  "FriendlyName": "Lab Authoring (Editor Only)",
+  "Description": "Local editor-only JSON Blueprint authoring and inspection. Generated assets use only standard runtime nodes.",
+  "Category": "Editor",
+  "CanContainContent": false,
+  "EnabledByDefault": false,
+  "Modules": [{ "Name": "LabAuthoring", "Type": "Editor", "LoadingPhase": "Default" }]
+}

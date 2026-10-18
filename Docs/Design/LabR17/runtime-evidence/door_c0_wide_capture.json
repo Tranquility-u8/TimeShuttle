@@ -1,0 +1,44 @@
+{
+  "done": true,
+  "error": null,
+  "passed": true,
+  "captures": [
+    {
+      "path": "images/04_Omen_double_leaves_opening_wide.png",
+      "name": "04_Omen_double_leaves_opening_wide",
+      "state": {
+        "open": true,
+        "alpha": 0.17743925098329782,
+        "effective_fov": 120.0,
+        "component_fov": 120.0,
+        "player_offset_cm": 390.0000000000001,
+        "left_relative_location": "<Struct 'Vector' (0x0000024B2DD6A980) {x: 0.000000, y: -271.685457, z: 240.000000}>",
+        "right_relative_location": "<Struct 'Vector' (0x0000024B2DD6B180) {x: -0.000000, y: 271.685457, z: 240.000000}>"
+      },
+      "file_verified": true,
+      "bytes": 1512952
+    },
+    {
+      "path": "images/05_Omen_full_open_frame_wide.png",
+      "name": "05_Omen_full_open_frame_wide",
+      "state": {
+        "open": true,
+        "alpha": 1.0,
+        "effective_fov": 120.0,
+        "component_fov": 120.0,
+        "player_offset_cm": 390.0000000000001,
+        "left_relative_location": "<Struct 'Vector' (0x0000024B2DD6A980) {x: 0.000000, y: -604.000000, z: 240.000000}>",
+        "right_relative_location": "<Struct 'Vector' (0x0000024B2DD6B180) {x: 0.000000, y: 604.000000, z: 240.000000}>"
+      },
+      "file_verified": true,
+      "bytes": 1526611
+    }
+  ],
+  "original_component_fov": 90.0,
+  "original_effective_fov": 90.0,
+  "restored_component_fov": 90.0,
+  "phase": "finished",
+  "elapsed_seconds": 4.670999999972992,
+  "method": "Live PIE player camera with temporary CameraComponent FOV 120, actual C0 player proximity. No door interface/state calls; no saved assets changed.",
+  "archive_note": "Only screenshot paths normalized to this evidence folder; original capture measurements unchanged."
+}

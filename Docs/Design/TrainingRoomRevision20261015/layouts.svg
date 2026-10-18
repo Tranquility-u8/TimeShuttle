@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1400" viewBox="0 0 2400 1400"><rect width="100%" height="100%" fill="white"/>
+<text x="40" y="71" font-family="Microsoft YaHei, sans-serif" font-size="43" font-weight="700" fill="#18283A">Time Shuttler 教程场景修改建议</text>
+<text x="2040" y="66" font-family="Microsoft YaHei, sans-serif" font-size="27" font-weight="400" fill="#5D6B79">R2  |  2026.10.15</text>
+<text x="175.984375" y="148" font-family="Microsoft YaHei, sans-serif" font-size="33" font-weight="700" fill="#18283A">S1 扩大危险覆盖</text>
+<text x="117.78125" y="187" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="400" fill="#5D6B79">主动按键进入时停  →  中央安全区</text>
+<rect x="75" y="218" width="449.5677233429394" height="780" fill="#FBFCFD" stroke="#18283A" stroke-width="4"/>
+<line x1="119.95677233429394" y1="998.0" x2="119.95677233429394" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="164.9135446685879" y1="998.0" x2="164.9135446685879" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="209.87031700288185" y1="998.0" x2="209.87031700288185" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="254.82708933717578" y1="998.0" x2="254.82708933717578" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="299.7838616714697" y1="998.0" x2="299.7838616714697" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="344.7406340057637" y1="998.0" x2="344.7406340057637" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="389.6974063400576" y1="998.0" x2="389.6974063400576" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="434.65417867435156" y1="998.0" x2="434.65417867435156" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="479.6109510086455" y1="998.0" x2="479.6109510086455" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="75.0" y1="953.043227665706" x2="524.5677233429394" y2="953.043227665706" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="75.0" y1="908.0864553314121" x2="524.5677233429394" y2="908.0864553314121" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="75.0" y1="863.1296829971182" x2="524.5677233429394" y2="863.1296829971182" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="75.0" y1="818.1729106628243" x2="524.5677233429394" y2="818.1729106628243" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="75.0" y1="773.2161383285303" x2="524.5677233429394" y2="773.2161383285303" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="75.0" y1="728.2593659942363" x2="524.5677233429394" y2="728.2593659942363" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="75.0" y1="683.3025936599424" x2="524.5677233429394" y2="683.3025936599424" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="75.0" y1="638.3458213256484" x2="524.5677233429394" y2="638.3458213256484" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="75.0" y1="593.3890489913545" x2="524.5677233429394" y2="593.3890489913545" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="75.0" y1="548.4322766570606" x2="524.5677233429394" y2="548.4322766570606" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="75.0" y1="503.4755043227666" x2="524.5677233429394" y2="503.4755043227666" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="75.0" y1="458.51873198847267" x2="524.5677233429394" y2="458.51873198847267" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="75.0" y1="413.56195965417874" x2="524.5677233429394" y2="413.56195965417874" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="75.0" y1="368.60518731988475" x2="524.5677233429394" y2="368.60518731988475" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="75.0" y1="323.6484149855908" x2="524.5677233429394" y2="323.6484149855908" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="75.0" y1="278.6916426512969" x2="524.5677233429394" y2="278.6916426512969" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="286.2968299711815" y1="998.0" x2="313.2708933717579" y2="998.0" stroke="#007D95" stroke-width="9"/>
+<text x="243.015625" y="1035" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#007D95">入口  d=0</text>
+<rect x="75.0" y="654.0806916426513" width="449.5677233429394" height="287.7233429394812" fill="#FBE8EC" stroke="#C43E50" stroke-width="3"/>
+<rect x="75.0" y="539.4409221902017" width="85.41786743515848" height="114.63976945244963" fill="#FBE8EC" stroke="#C43E50" stroke-width="3"/>
+<rect x="439.14985590778093" y="539.4409221902017" width="85.41786743515848" height="114.63976945244963" fill="#FBE8EC" stroke="#C43E50" stroke-width="3"/>
+<rect x="187.39193083573485" y="542.992507204611" width="224.7838616714697" height="97.51123919308361" fill="#DCF2E7" stroke="#147C57" stroke-width="3"/>
+<text x="237.2838616714697" y="599.7481268011527" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="700" fill="#147C57">中央安全区</text>
+<line x1="299.7838616714697" y1="948.5475504322766" x2="299.7838616714697" y2="656.3285302593661" stroke="#007D95" stroke-width="4"/>
+<polygon points="299.7838616714697,656.3285302593661 307.6132412854719,672.5365781017142 291.95448205746754,672.5365781017142" fill="#007D95"/>
+<circle cx="299.7838616714697" cy="973.2737752161383" r="20" fill="white" stroke="#007D95" stroke-width="4"/>
+<text x="291.8932366714697" y="980.2737752161383" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700" fill="#007D95">P</text>
+<text x="347.6974063400576" y="792.2247838616715" font-family="Microsoft YaHei, sans-serif" font-size="28" font-weight="700" fill="#C43E50">危险区</text>
+<text x="35" y="1097" font-family="Microsoft YaHei, sans-serif" font-size="27" font-weight="400" fill="#5D6B79">前方加深，危险延伸到中央两侧。</text>
+<text x="35" y="1152" font-family="Microsoft YaHei, sans-serif" font-size="27" font-weight="400" fill="#5D6B79">危险面积约增加27%，保留可走间隙。</text>
+<text x="35" y="1207" font-family="Microsoft YaHei, sans-serif" font-size="27" font-weight="400" fill="#5D6B79">中央终点不变；落石不能侵入安全区。</text>
+<text x="797.703125" y="148" font-family="Microsoft YaHei, sans-serif" font-size="33" font-weight="700" fill="#18283A">S2B 两角双敌</text>
+<text x="714.5546875" y="187" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="400" fill="#5D6B79">已确认两名固定敌人  |  坐标为建议</text>
+<rect x="675" y="218" width="449.5677233429394" height="780" fill="#FBFCFD" stroke="#18283A" stroke-width="4"/>
+<line x1="719.956772334294" y1="998.0" x2="719.956772334294" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="764.9135446685879" y1="998.0" x2="764.9135446685879" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="809.8703170028818" y1="998.0" x2="809.8703170028818" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="854.8270893371757" y1="998.0" x2="854.8270893371757" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="899.7838616714697" y1="998.0" x2="899.7838616714697" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="944.7406340057637" y1="998.0" x2="944.7406340057637" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="989.6974063400576" y1="998.0" x2="989.6974063400576" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1034.6541786743514" y1="998.0" x2="1034.6541786743514" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1079.6109510086455" y1="998.0" x2="1079.6109510086455" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="675.0" y1="953.043227665706" x2="1124.5677233429394" y2="953.043227665706" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="675.0" y1="908.0864553314121" x2="1124.5677233429394" y2="908.0864553314121" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="675.0" y1="863.1296829971182" x2="1124.5677233429394" y2="863.1296829971182" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="675.0" y1="818.1729106628243" x2="1124.5677233429394" y2="818.1729106628243" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="675.0" y1="773.2161383285303" x2="1124.5677233429394" y2="773.2161383285303" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="675.0" y1="728.2593659942363" x2="1124.5677233429394" y2="728.2593659942363" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="675.0" y1="683.3025936599424" x2="1124.5677233429394" y2="683.3025936599424" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="675.0" y1="638.3458213256484" x2="1124.5677233429394" y2="638.3458213256484" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="675.0" y1="593.3890489913545" x2="1124.5677233429394" y2="593.3890489913545" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="675.0" y1="548.4322766570606" x2="1124.5677233429394" y2="548.4322766570606" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="675.0" y1="503.4755043227666" x2="1124.5677233429394" y2="503.4755043227666" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="675.0" y1="458.51873198847267" x2="1124.5677233429394" y2="458.51873198847267" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="675.0" y1="413.56195965417874" x2="1124.5677233429394" y2="413.56195965417874" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="675.0" y1="368.60518731988475" x2="1124.5677233429394" y2="368.60518731988475" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="675.0" y1="323.6484149855908" x2="1124.5677233429394" y2="323.6484149855908" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="675.0" y1="278.6916426512969" x2="1124.5677233429394" y2="278.6916426512969" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="886.2968299711815" y1="998.0" x2="913.2708933717579" y2="998.0" stroke="#007D95" stroke-width="9"/>
+<text x="843.015625" y="1035" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#007D95">入口  d=0</text>
+<circle cx="719.956772334294" cy="278.6916426512969" r="24" fill="white" stroke="#C43E50" stroke-width="4"/>
+<text x="707.956772334294" y="285.6916426512969" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700" fill="#C43E50">敌</text>
+<line x1="719.956772334294" y1="312.40922190201735" x2="867.4149855907781" y2="541.6887608069164" stroke="#C43E50" stroke-width="3"/>
+<polygon points="867.4149855907781,541.6887608069164 852.0625924998233,532.2917385987485 865.232725374656,523.8215354949344" fill="#C43E50"/>
+<circle cx="1079.6109510086455" cy="278.6916426512969" r="24" fill="white" stroke="#C43E50" stroke-width="4"/>
+<text x="1067.6109510086455" y="285.6916426512969" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700" fill="#C43E50">敌</text>
+<line x1="1079.6109510086455" y1="312.40922190201735" x2="932.1527377521613" y2="541.6887608069164" stroke="#C43E50" stroke-width="3"/>
+<polygon points="932.1527377521613,541.6887608069164 934.3349979682835,523.8215354949344 947.5051308431161,532.2917385987485" fill="#C43E50"/>
+<circle cx="899.7838616714697" cy="591.7481268011527" r="22" fill="white" stroke="#007D95" stroke-width="4"/>
+<text x="891.8932366714697" y="598.7481268011527" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700" fill="#007D95">P</text>
+<text x="635" y="1097" font-family="Microsoft YaHei, sans-serif" font-size="27" font-weight="400" fill="#5D6B79">清除S2A敌人，再生成两名新敌人。</text>
+<text x="635" y="1152" font-family="Microsoft YaHei, sans-serif" font-size="27" font-weight="400" fill="#5D6B79">左右各一发，错峰攻击，固定站位。</text>
+<text x="635" y="1207" font-family="Microsoft YaHei, sans-serif" font-size="27" font-weight="400" fill="#5D6B79">近弹QTE常开；两侧躲过后进入S3。</text>
+<text x="1342.984375" y="148" font-family="Microsoft YaHei, sans-serif" font-size="33" font-weight="700" fill="#18283A">S6 石下目标前后移动</text>
+<text x="1326.5546875" y="187" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="400" fill="#5D6B79">吊石固定  |  时停择机或弱点射击</text>
+<rect x="1275" y="218" width="449.5677233429394" height="780" fill="#FBFCFD" stroke="#18283A" stroke-width="4"/>
+<line x1="1319.9567723342939" y1="998.0" x2="1319.9567723342939" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1364.913544668588" y1="998.0" x2="1364.913544668588" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1409.8703170028818" y1="998.0" x2="1409.8703170028818" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1454.8270893371757" y1="998.0" x2="1454.8270893371757" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1499.7838616714698" y1="998.0" x2="1499.7838616714698" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1544.7406340057637" y1="998.0" x2="1544.7406340057637" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1589.6974063400576" y1="998.0" x2="1589.6974063400576" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1634.6541786743514" y1="998.0" x2="1634.6541786743514" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1679.6109510086455" y1="998.0" x2="1679.6109510086455" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1275.0" y1="953.043227665706" x2="1724.5677233429394" y2="953.043227665706" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1275.0" y1="908.0864553314121" x2="1724.5677233429394" y2="908.0864553314121" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1275.0" y1="863.1296829971182" x2="1724.5677233429394" y2="863.1296829971182" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1275.0" y1="818.1729106628243" x2="1724.5677233429394" y2="818.1729106628243" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1275.0" y1="773.2161383285303" x2="1724.5677233429394" y2="773.2161383285303" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1275.0" y1="728.2593659942363" x2="1724.5677233429394" y2="728.2593659942363" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1275.0" y1="683.3025936599424" x2="1724.5677233429394" y2="683.3025936599424" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1275.0" y1="638.3458213256484" x2="1724.5677233429394" y2="638.3458213256484" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1275.0" y1="593.3890489913545" x2="1724.5677233429394" y2="593.3890489913545" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1275.0" y1="548.4322766570606" x2="1724.5677233429394" y2="548.4322766570606" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1275.0" y1="503.4755043227666" x2="1724.5677233429394" y2="503.4755043227666" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1275.0" y1="458.51873198847267" x2="1724.5677233429394" y2="458.51873198847267" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1275.0" y1="413.56195965417874" x2="1724.5677233429394" y2="413.56195965417874" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1275.0" y1="368.60518731988475" x2="1724.5677233429394" y2="368.60518731988475" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1275.0" y1="323.6484149855908" x2="1724.5677233429394" y2="323.6484149855908" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1275.0" y1="278.6916426512969" x2="1724.5677233429394" y2="278.6916426512969" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1486.2968299711815" y1="998.0" x2="1513.270893371758" y2="998.0" stroke="#007D95" stroke-width="9"/>
+<text x="1443.015625" y="1035" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#007D95">入口  d=0</text>
+<rect x="1275.0" y="515.5014409221902" width="449.5677233429394" height="22.47838616714705" fill="#D5E5ED" stroke="#007D95" stroke-width="3"/>
+<rect x="1461.5706051873199" y="386.02593659942363" width="76.42651296829968" height="53.948126801152796" fill="#FBE8EC" stroke="#C43E50" stroke-width="3"/>
+<line x1="1477.3054755043227" y1="467.5100864553314" x2="1477.3054755043227" y2="359.613832853026" stroke="#147C57" stroke-width="3"/>
+<polygon points="1477.3054755043227,359.613832853026 1485.1348551183248,375.8218806953742 1469.4760958903205,375.8218806953742" fill="#147C57"/>
+<line x1="1477.3054755043227" y1="359.613832853026" x2="1477.3054755043227" y2="467.5100864553314" stroke="#147C57" stroke-width="3"/>
+<polygon points="1477.3054755043227,467.5100864553314 1469.4760958903205,451.3020386129832 1485.1348551183248,451.3020386129832" fill="#147C57"/>
+<circle cx="1477.3054755043227" cy="458.51873198847267" r="8" fill="white" stroke="#147C57" stroke-width="4"/>
+<line x1="1499.7838616714698" y1="467.5100864553314" x2="1499.7838616714698" y2="359.613832853026" stroke="#147C57" stroke-width="3"/>
+<polygon points="1499.7838616714698,359.613832853026 1507.613241285472,375.8218806953742 1491.9544820574677,375.8218806953742" fill="#147C57"/>
+<line x1="1499.7838616714698" y1="359.613832853026" x2="1499.7838616714698" y2="467.5100864553314" stroke="#147C57" stroke-width="3"/>
+<polygon points="1499.7838616714698,467.5100864553314 1491.9544820574677,451.3020386129832 1507.613241285472,451.3020386129832" fill="#147C57"/>
+<circle cx="1499.7838616714698" cy="395.5792507204611" r="8" fill="white" stroke="#147C57" stroke-width="4"/>
+<line x1="1522.2622478386168" y1="467.5100864553314" x2="1522.2622478386168" y2="359.613832853026" stroke="#147C57" stroke-width="3"/>
+<polygon points="1522.2622478386168,359.613832853026 1530.091627452619,375.8218806953742 1514.4328682246146,375.8218806953742" fill="#147C57"/>
+<line x1="1522.2622478386168" y1="359.613832853026" x2="1522.2622478386168" y2="467.5100864553314" stroke="#147C57" stroke-width="3"/>
+<polygon points="1522.2622478386168,467.5100864553314 1514.4328682246146,451.3020386129832 1530.091627452619,451.3020386129832" fill="#147C57"/>
+<circle cx="1522.2622478386168" cy="368.60518731988475" r="8" fill="white" stroke="#147C57" stroke-width="4"/>
+<circle cx="1387.391930835735" cy="315.55619596541794" r="21" fill="white" stroke="#C43E50" stroke-width="4"/>
+<text x="1375.391930835735" y="322.55619596541794" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700" fill="#C43E50">靶</text>
+<circle cx="1612.1757925072045" cy="315.55619596541794" r="21" fill="white" stroke="#C43E50" stroke-width="4"/>
+<text x="1600.1757925072045" y="322.55619596541794" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700" fill="#C43E50">靶</text>
+<circle cx="1499.7838616714698" cy="591.7481268011527" r="22" fill="white" stroke="#007D95" stroke-width="4"/>
+<text x="1491.8932366714698" y="598.7481268011527" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700" fill="#007D95">P</text>
+<text x="1408.7838616714698" y="743.0201729106628" font-family="Microsoft YaHei, sans-serif" font-size="26" font-weight="400" fill="#007D95">全宽桌持续保留</text>
+<text x="1235" y="1097" font-family="Microsoft YaHei, sans-serif" font-size="27" font-weight="400" fill="#5D6B79">石下三目标前后走动；另两靶保留。</text>
+<text x="1235" y="1152" font-family="Microsoft YaHei, sans-serif" font-size="27" font-weight="400" fill="#5D6B79">绿箭头为移动轨迹，红框为落点。</text>
+<text x="1235" y="1207" font-family="Microsoft YaHei, sans-serif" font-size="27" font-weight="400" fill="#5D6B79">五目标全灭即过关；砸空可打弱点。</text>
+<text x="1964.703125" y="148" font-family="Microsoft YaHei, sans-serif" font-size="33" font-weight="700" fill="#18283A">S7B 增至八件掩体</text>
+<text x="1926.5546875" y="187" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="400" fill="#5D6B79">新增两低一高  |  敌人数暂不增加</text>
+<rect x="1875" y="218" width="449.56772334293964" height="780" fill="#FBFCFD" stroke="#18283A" stroke-width="4"/>
+<line x1="1919.9567723342939" y1="998.0" x2="1919.9567723342939" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1964.913544668588" y1="998.0" x2="1964.913544668588" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="2009.8703170028818" y1="998.0" x2="2009.8703170028818" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="2054.827089337176" y1="998.0" x2="2054.827089337176" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="2099.78386167147" y1="998.0" x2="2099.78386167147" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="2144.7406340057637" y1="998.0" x2="2144.7406340057637" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="2189.6974063400576" y1="998.0" x2="2189.6974063400576" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="2234.6541786743514" y1="998.0" x2="2234.6541786743514" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="2279.6109510086453" y1="998.0" x2="2279.6109510086453" y2="218.0" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1875.0" y1="953.043227665706" x2="2324.5677233429396" y2="953.043227665706" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1875.0" y1="908.0864553314121" x2="2324.5677233429396" y2="908.0864553314121" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1875.0" y1="863.1296829971182" x2="2324.5677233429396" y2="863.1296829971182" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1875.0" y1="818.1729106628243" x2="2324.5677233429396" y2="818.1729106628243" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1875.0" y1="773.2161383285303" x2="2324.5677233429396" y2="773.2161383285303" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1875.0" y1="728.2593659942363" x2="2324.5677233429396" y2="728.2593659942363" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1875.0" y1="683.3025936599424" x2="2324.5677233429396" y2="683.3025936599424" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1875.0" y1="638.3458213256484" x2="2324.5677233429396" y2="638.3458213256484" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1875.0" y1="593.3890489913545" x2="2324.5677233429396" y2="593.3890489913545" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1875.0" y1="548.4322766570606" x2="2324.5677233429396" y2="548.4322766570606" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1875.0" y1="503.4755043227666" x2="2324.5677233429396" y2="503.4755043227666" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1875.0" y1="458.51873198847267" x2="2324.5677233429396" y2="458.51873198847267" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1875.0" y1="413.56195965417874" x2="2324.5677233429396" y2="413.56195965417874" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1875.0" y1="368.60518731988475" x2="2324.5677233429396" y2="368.60518731988475" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1875.0" y1="323.6484149855908" x2="2324.5677233429396" y2="323.6484149855908" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="1875.0" y1="278.6916426512969" x2="2324.5677233429396" y2="278.6916426512969" stroke="#E5EBF0" stroke-width="1"/>
+<line x1="2086.2968299711815" y1="998.0" x2="2113.2708933717577" y2="998.0" stroke="#007D95" stroke-width="9"/>
+<text x="2043.015625" y="1035" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#007D95">入口  d=0</text>
+<rect x="2021.1095100864554" y="548.0051873198847" width="67.43515850144058" height="22.47838616714705" fill="#D5E0E8" stroke="#5D6B79" stroke-width="3"/>
+<text x="2049.358339337176" y="566.2443804034583" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#18283A">L</text>
+<rect x="1976.1527377521613" y="411.7861671469741" width="22.478386167146937" height="67.43515850144092" fill="#94A8B7" stroke="#5D6B79" stroke-width="3"/>
+<text x="1979.180993335735" y="452.50374639769456" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#18283A">H</text>
+<rect x="2155.979827089337" y="444.28991354466865" width="22.478386167147164" height="67.43515850144092" fill="#94A8B7" stroke="#5D6B79" stroke-width="3"/>
+<text x="2159.008082672911" y="485.0074927953891" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#18283A">H</text>
+<rect x="2200.936599423631" y="385.5089337175793" width="67.43515850144104" height="22.478386167146994" fill="#D5E0E8" stroke="#5D6B79" stroke-width="3"/>
+<text x="2229.1854286743514" y="403.74812680115275" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#18283A">L</text>
+<rect x="2054.827089337176" y="320.5014409221902" width="67.43515850144058" height="22.478386167146994" fill="#D5E0E8" stroke="#5D6B79" stroke-width="3"/>
+<text x="2083.075918587896" y="338.7406340057637" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#18283A">L</text>
+<rect x="1922.2046109510086" y="728.2593659942363" width="67.43515850144104" height="22.47838616714705" fill="#B9DDE4" stroke="#007D95" stroke-width="3"/>
+<text x="1950.453440201729" y="746.4985590778098" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#18283A">L</text>
+<rect x="2196.4409221902015" y="638.3458213256484" width="67.43515850144104" height="22.47838616714705" fill="#B9DDE4" stroke="#007D95" stroke-width="3"/>
+<text x="2224.689751440922" y="656.5850144092219" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#18283A">L</text>
+<rect x="1964.913544668588" y="559.671469740634" width="22.478386167146937" height="67.43515850144092" fill="#B9DDE4" stroke="#007D95" stroke-width="3"/>
+<text x="1967.9418002521613" y="600.3890489913545" font-family="Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#18283A">H</text>
+<circle cx="2111.023054755043" cy="461.7556195965418" r="22" fill="white" stroke="#147C57" stroke-width="4"/>
+<text x="2098.679304755043" y="468.7556195965418" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700" fill="#147C57">M</text>
+<circle cx="1931.1959654178675" cy="380.4962536023055" r="22" fill="white" stroke="#C43E50" stroke-width="4"/>
+<text x="1915.4147154178675" y="387.4962536023055" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700" fill="#C43E50">R1</text>
+<circle cx="2257.1325648414986" cy="347.992507204611" r="22" fill="white" stroke="#C43E50" stroke-width="4"/>
+<text x="2241.3513148414986" y="354.992507204611" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700" fill="#C43E50">R2</text>
+<circle cx="2144.7406340057637" cy="266.75561959654186" r="22" fill="white" stroke="#C43E50" stroke-width="4"/>
+<text x="2128.9593840057637" y="273.75561959654186" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700" fill="#C43E50">R3</text>
+<line x1="1875.0" y1="526.7406340057637" x2="2324.5677233429396" y2="526.7406340057637" stroke="#A66800" stroke-width="3" stroke-dasharray="8 7"/>
+<circle cx="2099.78386167147" cy="591.7481268011527" r="20" fill="white" stroke="#007D95" stroke-width="4"/>
+<text x="2091.89323667147" y="598.7481268011527" font-family="Microsoft YaHei, sans-serif" font-size="24" font-weight="700" fill="#007D95">P</text>
+<text x="1835" y="1097" font-family="Microsoft YaHei, sans-serif" font-size="27" font-weight="400" fill="#5D6B79">蓝边为新增掩体；L低、H高。</text>
+<text x="1835" y="1152" font-family="Microsoft YaHei, sans-serif" font-size="27" font-weight="400" fill="#5D6B79">虚线为已撤桌线；M近战、R远程。</text>
+<text x="1835" y="1207" font-family="Microsoft YaHei, sans-serif" font-size="27" font-weight="400" fill="#5D6B79">保留通路，生成完毕再启用攻击。</text>
+<text x="40" y="1355" font-family="Microsoft YaHei, sans-serif" font-size="25" font-weight="400" fill="#5D6B79">图示为下一轮白盒建议，未修改UE。P只表示可能位置；正常换场不回位。所有房间净宽20 m、深34.7 m；镜像布局另行验证。</text>
+</svg>

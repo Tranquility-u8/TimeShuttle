@@ -1,0 +1,213 @@
+{
+  "revision": "R17_final_delivery",
+  "scope": "geometry evidence and current layout packages; no UE call or runtime mutation in this collection step",
+  "date": "2026-10-17",
+  "geometry_version": "single_west_entry_R17",
+  "source_files": {
+    "revised-layout-geometry.json": {
+      "bytes": 389889,
+      "sha256": "ae19133c9448e61e2afea88d99c67afe8946a9990ec590634bba19bcdf23a2d9"
+    },
+    "architecture_meshes.json": {
+      "bytes": 1371166,
+      "sha256": "35a35a39cd5bd9e4d6c8ed22a6c453b7eb73c390577cdda3968c24c7c053d37d"
+    },
+    "TimeShuttler_LabV39_R17_Patch.blend": {
+      "bytes": 858126,
+      "sha256": "c9ba36f48a2fc7fdc6a9e1652dbb3fe082244510f9f0d8f9b95dd5619c18662c"
+    },
+    "patch_bundle/manifest.json": {
+      "bytes": 1215956,
+      "sha256": "c3584cab697229d3dc118eb403ff3918beca4ce4b42c3a51fdcd7199a1b9d3db"
+    },
+    "prepare_architecture.py": {
+      "bytes": 7248,
+      "sha256": "ef9361eaf1a0247124908c745f6d804b36e7f6139bf4f7d8bd8bac41a8958adb"
+    },
+    "build_patch_blender.py": {
+      "bytes": 8064,
+      "sha256": "9063ec19244cefa56f2b25c3593d326987db4d15f4f347637670f418efced631"
+    },
+    "README.md": {
+      "bytes": 7260,
+      "sha256": "f588312ef5a49a8e53a2b27978257681cc14122272188aa594eb527ad62bd348"
+    }
+  },
+  "layout_packages": [
+    {
+      "file": "output/TimeShuttler_V39_训练室接入布局_2026-10-17.zip",
+      "bytes": 5180735,
+      "entries": 27,
+      "sha256": "97c7cd2e246ce88d1d749941a173a4ada235a405b8932dc186355e3fa685b088",
+      "archive_matches_directory": true
+    },
+    {
+      "file": "output/TimeShuttler_实验室上下层平面图_R17.zip",
+      "bytes": 2379936,
+      "entries": 15,
+      "sha256": "f299bb68b76b3fb25226ecedec76d0f7d34b89d596407f9b84f721390108b9b8",
+      "archive_matches_directory": true
+    }
+  ],
+  "copied_evidence_and_notes": [
+    {
+      "file": "qa/r17_local_check.json",
+      "source": "tmp/v39-training-direct/qa/r17_local_check.json",
+      "bytes": 10082,
+      "sha256": "4017e8487380306a3f3f2d0929e70fbdbcd679ebcb99ddcdf722638219c52a81"
+    },
+    {
+      "file": "qa/independent_3d_qa.json",
+      "source": "TimeShuttle/Saved/Agent/LabR17/independent_3d_qa.json",
+      "bytes": 7750,
+      "sha256": "05f2a5ef61c870efa7156653c6ae69dde403112811f3cc4a548ea5beda4d5286"
+    },
+    {
+      "file": "qa/collision_audit.json",
+      "source": "TimeShuttle/Saved/Agent/LabR17/collision_audit.json",
+      "bytes": 13991,
+      "sha256": "ed42bc6533eba70777137873c7df289874b7cad73516fb169ab298359d7436cd"
+    },
+    {
+      "file": "qa/ue-pie-r17-stairs.json",
+      "source": "1002/LabWhitebox_v39/ue-pie-r17-stairs.json",
+      "bytes": 14086,
+      "sha256": "3ccb8ae3b42346357c379d6abe1bc1bdbed6a597af85fb8f946ea4ba841355b5"
+    },
+    {
+      "file": "qa/ue-pie-r17-duct.json",
+      "source": "1002/LabWhitebox_v39/ue-pie-r17-duct.json",
+      "bytes": 3645,
+      "sha256": "1322131dfe76169d1182d597377b7882ec2381a5ee895f58d38081f168568057"
+    },
+    {
+      "file": "qa/pie_jump_duct_result.json",
+      "source": "TimeShuttle/Saved/Agent/LabR17/pie_jump_duct_result.json",
+      "bytes": 76353,
+      "sha256": "d6b9bf478a31ee3b20450f0a464503d1deb2c05686c6ee860f8376d086dc8b20"
+    },
+    {
+      "file": "qa/build_repeatability_static_check.json",
+      "source": "TimeShuttle/Saved/Agent/LabR17/build_repeatability_static_check.json",
+      "bytes": 1273,
+      "sha256": "1f11c4f3f8879368dc5c6feebb55f6baca643f27b43ef4f5a7d3b02c42f84b1a"
+    },
+    {
+      "file": "qa/r17_final_text_sync.json",
+      "source": "tmp/v39-training-direct/qa/r17_final_text_sync.json",
+      "bytes": 674,
+      "sha256": "50a37514834bdbed34a9877c5065708100d2cdd3b0a6b12cf893457206209d58"
+    },
+    {
+      "file": "qa/drawio_render_check.json",
+      "source": "tmp/v39-training-direct/render-check.json",
+      "bytes": 3669,
+      "sha256": "513945e31ee6cffbca3a934ffc89ea5922834390436e8af3fb87f3d47a9fdfd6"
+    },
+    {
+      "file": "qa/architecture_report.json",
+      "source": "TimeShuttle/Saved/Agent/LabR17/architecture_report.json",
+      "bytes": 11445,
+      "sha256": "447b0b0774af720b11bccedeffb3eafe3997176fc797b166c6c4d0374cca113a"
+    },
+    {
+      "file": "qa/cleanup_result.json",
+      "source": "TimeShuttle/Saved/Agent/LabR17/cleanup_result.json",
+      "bytes": 25624,
+      "sha256": "3cc235e692cfb5e208213a3c32c69cfedffab0f9d69077cca6dfcc6fd81ec18f"
+    },
+    {
+      "file": "images/01_Lower_A_R17.png",
+      "source": "output/time-shuttler-lab-plans-r17-2026-10-17/01_实验室下层A_R17.png",
+      "bytes": 318835,
+      "sha256": "d98035f67f98f66be3384ed608348659a9d3ce46d7f77897c9ead7ae5e74a9a5"
+    },
+    {
+      "file": "images/02_Upper_B_R17.png",
+      "source": "output/time-shuttler-lab-plans-r17-2026-10-17/02_实验室上层B_R17.png",
+      "bytes": 339220,
+      "sha256": "64425fe4a2224578ac9a077cd4ab09c980a4474d7be5eaae5860e436e20bc730"
+    },
+    {
+      "file": "images/03_UE_floor_after_union.png",
+      "source": "TimeShuttle/Saved/Agent/LabR17/Previews/01_Seam_Fixed.png",
+      "bytes": 1387728,
+      "sha256": "294bbab1879b1632b99838836a5d483729c9c8094f9f6114876b3603dc2996f7"
+    },
+    {
+      "file": "images/04_UE_TIME.png",
+      "source": "TimeShuttle/Saved/Agent/LabR17/Previews/TIME.png",
+      "bytes": 1430243,
+      "sha256": "9a7a34436b0cbdcce2354f124156833434e755b20b49e2e17405c4d43acd2f75"
+    },
+    {
+      "file": "images/05_UE_Hall.png",
+      "source": "TimeShuttle/Saved/Agent/LabR17/Previews/Hall.png",
+      "bytes": 1587140,
+      "sha256": "fcdcaebf394506c43a7eb62646b51d1df76d0035f4766dc14b4f67d5d8f13f29"
+    },
+    {
+      "file": "README.md",
+      "source": "written from verified R17 evidence and source README",
+      "bytes": 6200,
+      "sha256": "38a791c4def325fcea713db00faabb62412c29dd3a6c6ae467394c16b8db214e"
+    },
+    {
+      "file": "SOURCE_MAINTENANCE.md",
+      "source": "written from verified R17 evidence and source README",
+      "bytes": 2309,
+      "sha256": "90f7e0e0f32b37d3fd550104ad1d6cb2e2acc6329cfcdfcac7c74388c8d26b7a"
+    }
+  ],
+  "backup_directory": "tmp/v39-training-direct/superseded-r17-pre-final-docs",
+  "unchanged_plan_and_graphics": true,
+  "all_zip_bytes_match_delivery_directories": true,
+  "final_document_sync": {
+    "scene_bridge_config": {
+      "manifest_path": "E:\\Capstone\\Test\\TimeShuttle\\SourceAssets\\LabV39\\R17\\patch_bundle\\manifest.json",
+      "target_map": "/Game/Maps/Map_LabV39",
+      "asset_root": "/Game/Environment/LabV39/R17",
+      "options": {
+        "conflict_policy": "keep_ue",
+        "create_map": false
+      },
+      "poll_seconds": 1.0,
+      "auto_start": false
+    },
+    "scene_bridge_config_sha256": "756fabb6e571c160ffdc6a33efdb4f61fe995d60f2cb99cae99c8b2d5a26cfbc",
+    "save_reload_evidence": "TimeShuttle/Saved/Agent/LabR17/final_save_reload_result.json",
+    "save_reload_evidence_sha256": "bd50d1e7accc57db1ded5650069d693e20497141fa2081f0cb984679d1fc1c32",
+    "map_saved_reloaded_helper_disabled": true,
+    "after_reload_doors_passed": 32,
+    "after_reload_omen_passed": 21,
+    "design_snapshot_unchanged": true,
+    "geometry_and_all_graphic_html_bytes_unchanged": true,
+    "backup_directory": "tmp/v39-training-direct/superseded-r17-before-final-config",
+    "documents": [
+      {
+        "file": "tmp/v39-training-direct/readme_r17.md",
+        "sha256": "1d9c1d823a7be4c3d26219ab4e9dcf01e7a20e88d1c59bdb48c6f584277195ca"
+      },
+      {
+        "file": "output/time-shuttler-lab-v39-training-link-2026-10-17/README_修订说明.md",
+        "sha256": "1d9c1d823a7be4c3d26219ab4e9dcf01e7a20e88d1c59bdb48c6f584277195ca"
+      },
+      {
+        "file": "output/time-shuttler-lab-plans-r17-2026-10-17/README.md",
+        "sha256": "3861e5e78d49eb20e99dcb36be2349f88105a7e0de76df4698e4b73b77e8bf28"
+      },
+      {
+        "file": "TimeShuttle/Docs/Design/training-room-v39-connection-2026-10-17.md",
+        "sha256": "de1b152d430146020ae4a54747f6686c561d92c91ff6fa0a591104b0ffa9faa6"
+      },
+      {
+        "file": "TimeShuttle/Docs/Knowledge/README.md",
+        "sha256": "aa7291bd43d8e7662a08534e319b15ec0537f69b0c372363daaf47b9625e3169"
+      },
+      {
+        "file": "TimeShuttle/SourceAssets/LabV39/R17/README.md",
+        "sha256": "f588312ef5a49a8e53a2b27978257681cc14122272188aa594eb527ad62bd348"
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "map_saved": true,
+  "map_reloaded_before_final_tests": true,
+  "helper_disabled_and_not_loaded": true,
+  "doors_after_restart": {
+    "passed": true,
+    "checks": 32
+  },
+  "omen_after_restart": {
+    "passed": true,
+    "checks": 21,
+    "samples": 278
+  },
+  "background_throttle_restored": true,
+  "editor_left_in_original_map": true,
+  "PIE_stopped": true,
+  "final_audit": {
+    "map": "/Game/Maps/Map_LabV39.Map_LabV39",
+    "actor_count": 1955,
+    "door_count": 78,
+    "locked_count": 43,
+    "automatic_count": 1,
+    "door_instances_match_plan": true,
+    "omen_parts_preserved": true,
+    "omen_offset": "<Struct 'Rotator' (0x000001EEA6709590) {pitch: 0.000000, yaw: -90.000000, roll: 0.000000}>",
+    "blueprint_dependencies": {
+      "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor": [
+        "/Script/NavigationSystem",
+        "/Script/UMG",
+        "/Engine/BasicShapes/Cube",
+        "/Game/Blueprints/Interactables/Interaction/BP_Interaction_Base",
+        "/Game/Blueprints/Interfaces/BPI_Interaction"
+      ],
+      "/Game/Environment/LabR17/Blueprints/BP_LabOmenDoor": [
+        "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor"
+      ],
+      "/Game/Characters/Omen/Blueprints/BP_OmenObserver": [
+        "/Script/NavigationSystem"
+      ]
+    },
+    "no_runtime_authoring_dependency": true,
+    "backup_exists": true,
+    "dirty_content": [],
+    "dirty_maps": []
+  },
+  "task_driver_handles_in_main": [],
+  "hashes": {
+    "Map_LabV39.umap": "8508c62b4009072cc2b99e524f7f8bb0a54a37059d3d74f26f4f859d5e1e28ff",
+    "Map_LabV39_1.umap": "f00649fd8de831c2fd446626150760df6c379169ddb2b73c673913f1d0497d97"
+  }
+}
