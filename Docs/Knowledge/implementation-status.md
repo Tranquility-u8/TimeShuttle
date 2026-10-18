@@ -1,5 +1,7 @@
 # Implementation status
 
+- Tutorial fixed layout (2026-10-18): removed player-side automatic mirroring, its retry inverse and mirrored-state variable/function. All stages retain editor-authored Initial transforms; S7 native spawns use placed proxy rotation while normal AI turning remains. The map's 140 actor transforms are unchanged. Two clean compiles and 86 cold PIE layout/ragdoll/world-Z checks pass. See [tutorial implementation](../Implementation/training-room-tutorial.md).
+
 - Tutorial combat ragdoll/world-Z reveal (2026-10-18): S7A/S7B native enemies retain mesh physics and floor collision for 2.2 game seconds before fading; pending corpses delay final completion and hidden bodies stop simulating. Tutorial visuals share stage world-height bounds, and thirteen tutorial material parents use the dedicated absolute-world-Z function. Native NPCs and original Dissolve assets are unchanged. See [tutorial implementation](../Implementation/training-room-tutorial.md).
 
 - Tutorial native ammo and death (2026-10-18): four supply slots now use a native pickup child with the original F/ADD AMMO prompt, existing magazine mesh, +24 pistol reserve and five-second consumed-slot refresh. Passive targets use the formal enemy base physics-death behavior; retry restores live attachment/collision. Fifteen cold PIE checks pass; five related Blueprints compile cleanly. See [tutorial implementation](../Implementation/training-room-tutorial.md).

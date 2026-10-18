@@ -1,5 +1,15 @@
 # Training Room tutorial implementation
 
+## Fixed editor-authored layout — 2026-10-18
+
+`BP_TrainingController.SetLayout` no longer selects orientation from the player's side of the room. The automatic reflection branch, `MirrorShootingLayout` function and `bLayoutMirrored` variable are removed. `PrepareRetry` no longer performs an inverse reflection. Every stage retains the transforms captured from its editor-placed actors; normal visual reset restores that same cache without rewriting it. Historical mirrored-layout validation below describes the superseded behavior.
+
+Native S7A/S7B combat spawning also takes rotation directly from the placed spawn proxy, replacing the player-dependent look-at calculation. The existing capsule-height offset, reveal safety, AI activation and later AI movement/turning remain. Scripted falling objects and moving targets retain their gameplay motion.
+
+Only the controller asset changed; the training map's 140 authored actor transforms are unchanged. Recovery copies, exports and fixtures are under ignored `Saved/Agent/TutorialFixedLayout`. Two related Blueprints compile with zero errors/warnings. The local layout pass preserves all 84 remaining controller graph signatures, and a separate scope audit confirms 81 unrelated controller graphs and all 32 level graphs are unchanged.
+
+Cold PIE without the authoring helper passed 64 fixed-layout checks: both player sides, entry/retry flags across eight layout groups, retry reset, all thirteen existing exercise indices, and actual melee/final-combat spawn orientation and reveal. A further 22 native ragdoll/world-Z reveal checks pass. The saved map was reloaded and all 140 placed actor transforms rechecked; PIE is stopped and no dirty packages remain. No Blueprint runtime, script or Python errors were found in the cold-editor log. These are scoped API-driven fixtures, not a full hands-on tutorial playthrough or packaged/network certification. [Portable evidence](TrainingRoomTutorial/validation_fixed_layout.json).
+
 ## Combat ragdoll and shared world-Z reveal — 2026-10-18
 
 S7A melee preview and S7B combat now retain the native enemy ragdoll before tutorial cleanup. `AC_TrainingVisual.HandleNativeDeath` disables capsule/movement, preserves the normal mesh physics death, and holds the body for 2.2 game seconds before fading. Pending bodies delay the stage's completion count so the last enemy can finish falling. Fully hidden bodies stop simulating. `PreserveRagdollCollision` prevents the generic visual collision gate from disabling floor contact while a corpse is still visible. Retries create fresh native enemies; production NPC/death assets are unchanged.
