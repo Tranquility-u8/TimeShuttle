@@ -1,0 +1,506 @@
+{
+  "date": "2026-10-18",
+  "scope": "Fixed editor-authored tutorial layout on all entries and retries",
+  "changed_asset": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+  "removed": [
+    "Player-side reflection branch in SetLayout",
+    "Inverse reflection in PrepareRetry",
+    "MirrorShootingLayout function",
+    "bLayoutMirrored variable",
+    "Player-facing calculation at combat spawn; placed proxy rotation now drives spawn"
+  ],
+  "runtime": {
+    "cold_editor_without_authoring_helper": true,
+    "layout_checks": [
+      {
+        "name": "PIE cache matches editor-authored transforms",
+        "passed": true,
+        "actors": 140,
+        "mismatches": []
+      },
+      {
+        "name": "S1 entrance entry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S1 entrance retry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S1 far entry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S1 far retry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S2 entrance entry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S2 entrance retry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S2 far entry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S2 far retry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S3 entrance entry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S3 entrance retry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S3 far entry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S3 far retry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S4 entrance entry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S4 entrance retry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S4 far entry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S4 far retry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S5 entrance entry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S5 entrance retry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S5 far entry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S5 far retry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S6 entrance entry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S6 entrance retry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S6 far entry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S6 far retry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S7A entrance entry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S7A entrance retry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S7A far entry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S7A far retry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S7B entrance entry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S7B entrance retry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S7B far entry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "S7B far retry retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "PrepareRetry False never rewrites authored transforms",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "PrepareRetry True never rewrites authored transforms",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "PrepareRetry False never rewrites authored transforms",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "EnterExercise 0 retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "EnterExercise 1 retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "EnterExercise 2 retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "EnterExercise 3 retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "EnterExercise 4 retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "EnterExercise 5 retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "EnterExercise 6 retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "EnterExercise 7 retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "EnterExercise 8 retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "EnterExercise 9 retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "EnterExercise 10 retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "EnterExercise 11 retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "EnterExercise 12 retains authored layout",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "native spawn (11, False, -300.0) uses authored position and rotation",
+        "passed": true,
+        "actors": 1,
+        "mismatches": []
+      },
+      {
+        "name": "native entry cache (11, False, -300.0) remains authored",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "native reveal (11, False, -300.0) enables live actor collision",
+        "passed": true
+      },
+      {
+        "name": "native spawn (11, True, -1400.0) uses authored position and rotation",
+        "passed": true,
+        "actors": 1,
+        "mismatches": []
+      },
+      {
+        "name": "native entry cache (11, True, -1400.0) remains authored",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "native reveal (11, True, -1400.0) enables live actor collision",
+        "passed": true
+      },
+      {
+        "name": "native spawn (12, False, -300.0) uses authored position and rotation",
+        "passed": true,
+        "actors": 4,
+        "mismatches": []
+      },
+      {
+        "name": "native entry cache (12, False, -300.0) remains authored",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "native reveal (12, False, -300.0) enables live actor collision",
+        "passed": true
+      },
+      {
+        "name": "native spawn (12, False, -1400.0) uses authored position and rotation",
+        "passed": true,
+        "actors": 4,
+        "mismatches": []
+      },
+      {
+        "name": "native entry cache (12, False, -1400.0) remains authored",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "native reveal (12, False, -1400.0) enables live actor collision",
+        "passed": true
+      },
+      {
+        "name": "native spawn (12, True, -1400.0) uses authored position and rotation",
+        "passed": true,
+        "actors": 4,
+        "mismatches": []
+      },
+      {
+        "name": "native entry cache (12, True, -1400.0) remains authored",
+        "passed": true,
+        "mismatches": []
+      },
+      {
+        "name": "native reveal (12, True, -1400.0) enables live actor collision",
+        "passed": true
+      }
+    ],
+    "ragdoll_worldz_checks": [
+      {
+        "name": "preview spawns one native melee",
+        "passed": true
+      },
+      {
+        "name": "preview one shared world range",
+        "passed": true,
+        "range": [
+          0.0,
+          800.0
+        ],
+        "actors": 1
+      },
+      {
+        "name": "preview world-space plane follows shared range",
+        "passed": true,
+        "plane": 818.0
+      },
+      {
+        "name": "preview native death ragdoll",
+        "passed": true
+      },
+      {
+        "name": "preview corpse collision kept and capsule disabled",
+        "passed": true
+      },
+      {
+        "name": "preview holds corpse before fade or stage advance",
+        "passed": true
+      },
+      {
+        "name": "preview body physically falls",
+        "passed": true,
+        "fromZ": 83.73850118230219,
+        "toZ": 13.87798500736477
+      },
+      {
+        "name": "preview body stays above floor",
+        "passed": true
+      },
+      {
+        "name": "preview retry fresh live enemy",
+        "passed": true,
+        "enemies": [
+          [
+            "BP_MeleeNPC_C_9",
+            false,
+            true
+          ]
+        ]
+      },
+      {
+        "name": "final spawns four native enemies on entry",
+        "passed": true
+      },
+      {
+        "name": "final one shared world range",
+        "passed": true,
+        "range": [
+          0.0,
+          800.0
+        ],
+        "actors": 19
+      },
+      {
+        "name": "final world-space plane follows shared range",
+        "passed": true,
+        "plane": 818.0
+      },
+      {
+        "name": "final ranged native death ragdoll",
+        "passed": true
+      },
+      {
+        "name": "final visible corpse keeps floor collision",
+        "passed": true
+      },
+      {
+        "name": "final delays corpse fade",
+        "passed": true
+      },
+      {
+        "name": "final corpse fades after hold",
+        "passed": true
+      },
+      {
+        "name": "final hidden corpse physics stopped",
+        "passed": true
+      },
+      {
+        "name": "death counted once",
+        "passed": true
+      },
+      {
+        "name": "final melee native death ragdoll",
+        "passed": true
+      },
+      {
+        "name": "final retry four live enemies without duplicates",
+        "passed": true
+      },
+      {
+        "name": "final retry one shared world range",
+        "passed": true,
+        "range": [
+          0.0,
+          800.0
+        ],
+        "actors": 19
+      },
+      {
+        "name": "final retry world-space plane follows shared range",
+        "passed": true,
+        "plane": 818.0
+      }
+    ],
+    "passed": 86,
+    "method": "Production SetLayout at two player sides with entry/retry flags, production PrepareRetry and EnterExercise, native NPC spawn Initial compared to editor proxy before AI activation; native death regression uses production ApplyDamage fixtures."
+  },
+  "compile": {
+    "training": "errors=0 warnings=0 status=3",
+    "level": "errors=0 warnings=0 status=3"
+  },
+  "format_audit": {
+    "graphs": 84,
+    "semantics_unchanged": true
+  },
+  "scope_audit": {
+    "unrelated_controller_graphs_unchanged": 81,
+    "level_graphs_unchanged": 32,
+    "edited_graphs": [
+      "SetLayout",
+      "PrepareRetry",
+      "UpdateCombat"
+    ],
+    "removed_graph": "MirrorShootingLayout",
+    "removed_variable": "bLayoutMirrored"
+  },
+  "saved": {
+    "packages": [
+      "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController"
+    ],
+    "dirty_after": []
+  },
+  "final_editor": {
+    "helper_loaded": false,
+    "pie_stopped": true,
+    "saved_map_reloaded": true,
+    "editor_authored_actors_unchanged": 140,
+    "dirty_content": [],
+    "dirty_maps": [],
+    "performance_restored": true,
+    "visual_review": "SetLayout direct entry -> ClearTrainingMarkers -> StopThreats chain and fixed-authored-layout comment reviewed in editor at 1:1 zoom"
+  },
+  "log": {
+    "blueprint_runtime_script_python_errors": 0,
+    "scope": "Final cold-editor process"
+  },
+  "fixture_corrections": [
+    "Construct baseline Rotator with named pitch/yaw/roll fields",
+    "Compare native spawns to placed visual proxies; SpawnProxies is a function-local array"
+  ],
+  "limitations": [
+    "Scoped API-driven PIE verification, not a full hands-on tutorial playthrough",
+    "No packaged/network verification",
+    "NPC gameplay movement and turning remain active after reveal; only the initial stage layout is fixed"
+  ],
+  "product_rework_count": 0
+}
