@@ -118,11 +118,13 @@ BP_FPCharacter 的 DialogueManager 使用 AC_DialogueManager 项目适配子类�
 
 ## Training Room tutorial（2026-10-14）
 
+2026-10-17（体验修复）：S1 开场自由行走，进入落石区域才触发对话并锁移动；落石预演中显示能量条与 Q 引导，玩家成功按 Q 后才播放 “In this state / Now, move” 的后续对话；结束后解锁移动，不耗能到安全区并自动恢复时间。S2 为单段（内部 step 2 → S3 的 step 5）：原 `BP_ShooterNPC` 真实动画开一枪 → Q 图标 → 第一次 Q 时停 → 玩家移出实际弹道 → 系统锁移动并提示再次 Q → 第二次 Q 恢复 → 确认真实弹丸经过且未受伤后进入 S3。`AC_TimeAbility.PollGuidedQInput` 在教学窗口单独处理物理 Q 边沿，普通 QTE 保留原 T 显示/超时；`SetTutorialMovement` 按拥有状态边沿管理锁，重试不叠加。旧静态射手保留在隐藏的 `LegacyS2` 分组。细节与验证见 [教程实施记录](../Implementation/training-room-tutorial.md)。
+
 `/Game/Maps/Map_TrainingRoom` 的 Level Blueprint 拥有 S1～S7 的 Enter/Check 图表、CurrentStep/Phase 和阶段调度。原 `TimeShuttleTraining` 插件已移除。普通 `BP_TrainingController` 提供供弹、时间/位置观察及真实目标/战斗机制，不自行选择下一阶段；`AC_TrainingVisual` 处理独立Dissolve和碰撞，`WBP_TrainingObjective` 显示提示，`BPI_TrainingShot` / `BFL_TrainingImpact` 接入真实武器。资产均在 `/Game/Environment/TrainingRoom/Tutorial`；控制器的16组并行材质数组必须同时检查 CDO 与已放置实例覆盖。
 
-每对象独立 MID 的 TS_PlanePosition 驱动原 MF_PlaneMask；S3～S7A 公共桌与供弹连续保留，S7B 才撤除。共享接入点仅为 BP_Item_Base.ResolveShotDamage、BP_TimeBullet 的两种实际命中处理，以及 AC_TimeAbility 的 S1 演示锁。未登记目标走原伤害链；阶段/检查点记录仅在关卡实例内，不写教学存档。Backspace 重试当前小段，长按 Home 重置全教程。
+每对象独立 MID 的 TS_PlanePosition 驱动原 MF_PlaneMask；S3～S5 公共桌与供弹连续保留，进入 S7A 近战预览时撤除。S5 常态射击连接体即可完成落石击杀，随后直接进入 S7A；旧 S6/可选入口重定向 S7A。S7A 出生点固定在实验室正前方且不参与射击布局镜像。S7 敌人定位代理仅保留出生变换，已移除废弃静态机器人网格。共享接入点为 BP_Item_Base.ResolveShotDamage、BP_TimeBullet 的两种实际命中处理，以及 AC_TimeAbility / UI_Hud 的教学输入门控、能量条显隐与 T 提示等待模式。未登记目标走原伤害链；阶段/检查点记录仅在关卡实例内，不写教学存档。Backspace 重试当前小段，长按 Home 重置全教程。
 
-S7 使用原有近战/远程 NPC 及伤害系统，动态导航支持变动掩体。完整冷启动真实输入通关、死亡重试、原地换场、实际离场和重置证据见 [training-room-tutorial.md](../Implementation/training-room-tutorial.md)。本次不改变默认启动地图或其他实验室的完成状态。
+S3 为四个固定的敌人骨骼模型，每人一个胸部弱点；S4 收为一个有左右行走动画的弱点敌人（step 6 → 9）。S7 使用原有近战/远程 NPC 及伤害系统，动态导航支持变动掩体。S7B 按提供的平面图布置四高四低掩体和中央悬石机关；首次自行到 P 后才补满生命/能量、12 发弹匣及 24 发备弹并生成敌人，死亡重试回 P 面向场内。机关落点下方可通行，真实连接体命中后落石可伤害范围内的真实敌人。完整冷启动真实输入通关、死亡重试、原地换场、实际离场和重置证据见 [training-room-tutorial.md](../Implementation/training-room-tutorial.md)。本次不改变默认启动地图或其他实验室的完成状态。
 
 ## 维护入口
 
@@ -133,3 +135,13 @@ S7 使用原有近战/远程 NPC 及伤害系统，动态导航支持变动掩�
 - 协作与授权：仓库根 `AGENTS.md` 为唯一规则源；skills 只路由工作流程。
 - 工具状态：[../MCP/SOP.md](../MCP/SOP.md)。没有已选定的 UE MCP 服务；发现本次实际工具后再选择编辑器 Python、Unreal-aware helper 或 GUI。
 - 改动落地后更新受影响事实及证据日期，不能用本地架构核对冒充 Drive 来源刷新。
+
+2026-10-17 tutorial target follow-up: `Environment/TrainingRoom/Tutorial/BP_TrainingTarget` is a passive Character with ShooterNPC mesh/materials, the original `AC_EnemyWeakPoints`, and the standard health-read interface backed by tutorial visual life state. Internal steps 5 → 6 → 7 → 9 teach ordinary static kills, static native weak-point hits, moving native weak-point stop-shot/resume, then the rock. `BP_TrainingController.StartTargets` selects actors and enables native presentation; `ResolveTrainingShot` asks the original resolver instead of checking a synthetic tutorial sphere tag. Production NPC and weapon defaults are unchanged. See [tutorial implementation](../Implementation/training-room-tutorial.md).
+
+2026-10-17 range/plank revision: `BP_TrainingTarget` is the no-weakpoint body/rock-victim base with 100 health and hit/death animation state. `BP_TrainingWeakTarget` adds native weak points; both use controller-owned visual references. `BS_TrainingStrafe` blends local signed velocity through idle while keeping facing stable. `BP_TrainingController` owns support timing and slab geometry; it sets `PlankRetryRequested` and the Level Blueprint alone calls `EnterExercise` for retries, avoiding a private map reference. Final combat begins directly in `Enter_S7B`. Original production NPC, weapon and time-ability assets remain unchanged by this follow-up.
+
+2026-10-17 visibility/contact repair: `BP_TrainingTarget.UpdateRangeTarget` applies the FullStop marker gate to both stationary and walking weak-point lessons. The final-arena rock footprint is unchanged; link base Z615 overlaps rock top Z620, stem bottom Z682 overlaps link top Z685, with link/stem aligned at Y−998. Native damage resolution remains unchanged.
+
+2026-10-17 container/health follow-up: `Map_TrainingRoom.EnterExercise` invokes controller `RestoreStageHealth` before either routing branch, restoring Health/LastPlayerHealth to the current native full value 2. The final falling actor keeps its stable ID but uses `Stages/Meshes/SM_TS_SuspendedContainer`; user-adjusted root `(0,-1100,490)` is retained. Link/stem share Y−958 and overlap the container top at Z640. Final landing damage uses the revised 450×300 cm footprint plus capsule allowance.
+
+2026-10-17 energy teaching: S1 phase 8 introduces the gauge before the falling-rock/Q preview. S2 adds protected cost dialogue, a bounded real-drain demonstration, the existing second-Q wait, then a safe-pass recovery explanation before Stage3. `DT_TutorialEnergy` supplies three replayable text-only conversations through the existing registry. Controller `EnergyDrainDemoActive` narrowly exempts the demonstration from the existing forced-stop top-up; cleanup clears it and restores gauge scale and saved rates. `UI_Hud.SetTutorialEnergyFocus` implements the short gauge-size pulse. Native time-ability input and rates are unchanged; see [tutorial implementation](../Implementation/training-room-tutorial.md).

@@ -1,0 +1,357 @@
+{
+  "task": "20261017-tutorial-models-layout",
+  "date": "2026-10-17",
+  "engine": "UE 5.6.1",
+  "cold_editor_without_authoring_helper": true,
+  "methods": {
+    "s1": "Q-mapped IA_TimeAbility and movement injected through Enhanced Input; actual conversations, ability mode, rock motion and energy observed. Native short keypress was not a reliable automation stimulus.",
+    "targets": "Production equipped pistol BeginFire; unchanged default spread 0.5 in cold tests. Explicit stage entry and aim/position fixtures. Body rejection, weakpoint hits, movement, animation and FullStop observed.",
+    "rock": "Actual link shot and falling-rock landing; one real NPC placed beneath footprint and another outside, AI stopped for deterministic damage observation.",
+    "death": "Two actual player damage events (player health accepts one point per event), separated by 1.5 real seconds, after spending energy and reducing pistol ammunition. No health/energy setter used.",
+    "completion": "Remaining real NPCs killed with injected damage to verify the stage completion transition."
+  },
+  "checks": {
+    "s1": [
+      {
+        "name": "S1 spawn freely walkable with energy hidden",
+        "passed": true
+      },
+      {
+        "name": "rock-area entry owns movement lock",
+        "passed": true
+      },
+      {
+        "name": "activation line names Q while rocks fall",
+        "passed": true
+      },
+      {
+        "name": "rocks visibly fall while the Q instruction is displayed",
+        "passed": true
+      },
+      {
+        "name": "stopped-state dialogue never starts before Q",
+        "passed": true
+      },
+      {
+        "name": "mapped Q action activates actual FullStop before follow-up",
+        "passed": true
+      },
+      {
+        "name": "accepted Q immediately freezes the current falling pose",
+        "passed": true
+      },
+      {
+        "name": "Q precedes In this state and Now move dialogue",
+        "passed": true
+      },
+      {
+        "name": "movement unlocks after follow-up with no energy drain",
+        "passed": true
+      },
+      {
+        "name": "safe zone automatically restores normal time",
+        "passed": true
+      }
+    ],
+    "late_stages": [
+      {
+        "name": "four stationary skeletal enemies each own one weak point",
+        "passed": true
+      },
+      {
+        "name": "stationary enemy body shots are rejected",
+        "passed": true
+      },
+      {
+        "name": "production pistol weak-point hit defeats stationary enemy",
+        "passed": true,
+        "ammo": 58
+      },
+      {
+        "name": "stationary enemy positions do not change",
+        "passed": true
+      },
+      {
+        "name": "moving-target stage contains one skeletal enemy",
+        "passed": true
+      },
+      {
+        "name": "enemy walks left and right with animation",
+        "passed": true
+      },
+      {
+        "name": "FullStop freezes walking position and animation",
+        "passed": true
+      },
+      {
+        "name": "single walking-enemy weak-point lesson advances directly to S5",
+        "passed": true,
+        "step": 9
+      },
+      {
+        "name": "first final-stage entry does not teleport, turn or spawn enemies before P",
+        "passed": true
+      },
+      {
+        "name": "walking to P starts combat and refills exact resources",
+        "passed": true
+      },
+      {
+        "name": "diagram arena spawns one melee and three ranged enemies",
+        "passed": true
+      },
+      {
+        "name": "normal-time production shot releases final suspended rock",
+        "passed": true
+      },
+      {
+        "name": "falling rock damages only real enemies under its footprint",
+        "passed": true,
+        "rock_kills": 1,
+        "remaining": 3
+      },
+      {
+        "name": "rock impact fires once",
+        "passed": true
+      },
+      {
+        "name": "final retry returns to P facing room with full resources",
+        "passed": true
+      },
+      {
+        "name": "retry rebuilds four enemies and resets intact rock",
+        "passed": true
+      }
+    ],
+    "passage_death_completion": [
+      {
+        "name": "player can walk beneath hanging rock and floor projection",
+        "passed": true,
+        "from_y": -900.0,
+        "to_y": -1272.579249341822
+      },
+      {
+        "name": "energy was spent before death retry",
+        "passed": true
+      },
+      {
+        "name": "actual lethal damage automatically retries final arena at P",
+        "passed": true,
+        "health": 2.0,
+        "position": [
+          0.0,
+          300.0,
+          90.1500015258789
+        ],
+        "retry": 3
+      },
+      {
+        "name": "death retry restores health, energy, magazine and 24 reserve",
+        "passed": true
+      },
+      {
+        "name": "all four defeated advances to tutorial completion",
+        "passed": true,
+        "step": 13
+      }
+    ]
+  },
+  "geometry": [
+    {
+      "id": "H1",
+      "position_cm": [
+        -590.0,
+        -1280.0,
+        110.00000000000001
+      ],
+      "size_cm": [
+        400.0,
+        120.0,
+        220.00000000000003
+      ],
+      "passed": true
+    },
+    {
+      "id": "H2",
+      "position_cm": [
+        480.0,
+        -1370.0,
+        110.00000000000001
+      ],
+      "size_cm": [
+        100.0,
+        640.0,
+        220.00000000000003
+      ],
+      "passed": true
+    },
+    {
+      "id": "H3",
+      "position_cm": [
+        -500.0,
+        -270.0,
+        110.00000000000001
+      ],
+      "size_cm": [
+        100.0,
+        640.0,
+        220.00000000000003
+      ],
+      "passed": true
+    },
+    {
+      "id": "H4",
+      "position_cm": [
+        600.0,
+        -360.0,
+        110.00000000000001
+      ],
+      "size_cm": [
+        100.0,
+        640.0,
+        220.00000000000003
+      ],
+      "passed": true
+    },
+    {
+      "id": "L1",
+      "position_cm": [
+        -210.0,
+        -1630.0,
+        47.5
+      ],
+      "size_cm": [
+        270.0,
+        120.0,
+        95.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "L2",
+      "position_cm": [
+        -550.0,
+        -880.0,
+        47.5
+      ],
+      "size_cm": [
+        220.0,
+        100.0,
+        95.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "L3",
+      "position_cm": [
+        230.0,
+        -739.9999999999998,
+        47.5
+      ],
+      "size_cm": [
+        270.0,
+        120.0,
+        95.0
+      ],
+      "passed": true
+    },
+    {
+      "id": "L4",
+      "position_cm": [
+        0.0,
+        -360.0,
+        47.5
+      ],
+      "size_cm": [
+        550.0,
+        120.0,
+        95.0
+      ],
+      "passed": true
+    }
+  ],
+  "static_animation_after_reload": [
+    {
+      "animation": "MM_Idle",
+      "rate": 0.0,
+      "position": 0.0
+    },
+    {
+      "animation": "MM_Idle",
+      "rate": 0.0,
+      "position": 0.0
+    },
+    {
+      "animation": "MM_Idle",
+      "rate": 0.0,
+      "position": 0.0
+    },
+    {
+      "animation": "MM_Idle",
+      "rate": 0.0,
+      "position": 0.0
+    }
+  ],
+  "mirrored_shooting_layout": {
+    "mirrored": true,
+    "weak_point_hit": true,
+    "location": [
+      -500.0,
+      -101.2499333333335,
+      0.0
+    ],
+    "yaw": 180.0,
+    "weapon": "BP_Weapon_Pistol_C",
+    "remaining_enemies_after_hit": 3
+  },
+  "resources": {
+    "health": 2,
+    "energy": 100,
+    "pistol_magazine": 12,
+    "reserve": 24
+  },
+  "P": {
+    "diagram_m": [
+      0,
+      9.0
+    ],
+    "spawn_world_cm": [
+      0,
+      300,
+      100
+    ],
+    "retry_yaw": -90
+  },
+  "rock": {
+    "footprint_center_cm": [
+      0,
+      -1190
+    ],
+    "footprint_size_cm": [
+      450,
+      400
+    ],
+    "underside_cm": 470,
+    "shootable_front_link_cm": [
+      0,
+      -970,
+      627
+    ]
+  },
+  "compile": {
+    "level": "0 errors, 0 warnings",
+    "controller": "0 errors, 0 warnings"
+  },
+  "formatting": "Initial 121 graphs and follow-up 62 controller graphs compared; no functional changes caused by formatting.",
+  "voice": "New activation/Q instruction is text-only; existing follow-up voice retained.",
+  "scope_limit": "Scoped cold tests, not a continuous full S1-to-finish playthrough; original engine animation/navigation warnings are not represented as Blueprint compiler errors.",
+  "arena_ai_smoke": {
+    "methods": "Invulnerable player placed in the arena; production NPC brains restarted after deterministic fixture tests. Health damage was not asserted in this observation.",
+    "all_four_moved_over_cm": 300,
+    "montages": [
+      "Montage_Sword_Slash",
+      "Montage_Rifle_Fire"
+    ],
+    "distinct_shooter_bullets": 9
+  }
+}

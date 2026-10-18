@@ -1,0 +1,186 @@
+{
+  "task": "20261017-tutorial-experience-fix",
+  "verified_date": "2026-10-17",
+  "engine": "UE 5.6.1",
+  "map": "/Game/Maps/Map_TrainingRoom",
+  "outcome": "passed",
+  "checks": [
+    {
+      "name": "spawn allows movement and has no active conversation",
+      "passed": true
+    },
+    {
+      "name": "energy UI hidden and early Q rejected",
+      "passed": true
+    },
+    {
+      "name": "walked from spawn before rock-area dialogue",
+      "passed": true
+    },
+    {
+      "name": "rock-area entry triggers dialogue and movement lock",
+      "passed": true
+    },
+    {
+      "name": "Q reveal remains movement-locked in normal time",
+      "passed": true
+    },
+    {
+      "name": "S1 Q unlocks FullStop crossing",
+      "passed": true
+    },
+    {
+      "name": "S1 crossing remains at full energy",
+      "passed": true
+    },
+    {
+      "name": "safety restores normal time",
+      "passed": true
+    },
+    {
+      "name": "single real shot displays Q icon",
+      "passed": true
+    },
+    {
+      "name": "first Q keeps Stage2 in FullStop and unlocks movement",
+      "passed": true
+    },
+    {
+      "name": "moving along trajectory does not count as dodging",
+      "passed": true
+    },
+    {
+      "name": "premature Q cannot resume inside bullet path",
+      "passed": true
+    },
+    {
+      "name": "lateral clearance locks player before second Q",
+      "passed": true
+    },
+    {
+      "name": "resume instruction names Q",
+      "passed": true
+    },
+    {
+      "name": "safe position stays locked while waiting second Q",
+      "passed": true
+    },
+    {
+      "name": "second Q restores normal time before completion",
+      "passed": true
+    },
+    {
+      "name": "real bullet pass without damage advances to Stage3",
+      "passed": true
+    },
+    {
+      "name": "Stage3 releases movement and teaching flags",
+      "passed": true
+    },
+    {
+      "name": "Backspace restarts the sole Stage2 with one active enemy",
+      "passed": true
+    },
+    {
+      "name": "first Q after retry releases movement without stacked locks",
+      "passed": true
+    },
+    {
+      "name": "injury retries with full health and energy",
+      "passed": true
+    },
+    {
+      "name": "injury retry clears old FullStop hold",
+      "passed": true
+    },
+    {
+      "name": "whole reset permits free walk before the rock trigger",
+      "passed": true
+    },
+    {
+      "name": "ordinary QTE still expires and uses T",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "opening_freely_walkable_before_trigger": true,
+    "first_Q_keeps_stage2_in_FullStop": true,
+    "safe_position_waits_locked_in_FullStop": true,
+    "second_Q_returns_normal_time_before_completion": true,
+    "guided_prompt_uses_Q": true
+  },
+  "cold_without_authoring_helper": true,
+  "cold_final_stage": 3,
+  "cold_stage3_ready": true,
+  "cold_final_time_scale": 1.0,
+  "compile": {
+    "level": "errors=0 warnings=0 status=3",
+    "training": "errors=0 warnings=0 status=3",
+    "time": "errors=0 warnings=0 status=3",
+    "hud": "errors=0 warnings=0 status=3"
+  },
+  "formatting_semantics": {
+    "level": {
+      "graphs_compared": 32,
+      "functional_differences": [],
+      "new_graphs": []
+    },
+    "training": {
+      "graphs_compared": 59,
+      "functional_differences": [],
+      "new_graphs": []
+    },
+    "time": {
+      "graphs_compared": 15,
+      "functional_differences": [],
+      "new_graphs": []
+    },
+    "hud": {
+      "graphs_compared": 12,
+      "functional_differences": [],
+      "new_graphs": []
+    }
+  },
+  "legacy_comment_cleanup": {
+    "updated": [
+      "/Game/Blueprints/Components/Player/AC_TimeAbility.AC_TimeAbility:ToggleTimeAbility.EdGraphNode_Comment_2",
+      "/Game/Blueprints/Components/Player/AC_TimeAbility.AC_TimeAbility:MaintainProjectileThreatWindow.EdGraphNode_Comment_2",
+      "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController.BP_TrainingController:EnsureGuidedPrompt.EdGraphNode_Comment_1",
+      "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController.BP_TrainingController:SetTutorialFlags.EdGraphNode_Comment_1"
+    ],
+    "compile": {
+      "time": "errors=0 warnings=0 status=3",
+      "training": "errors=0 warnings=0 status=3"
+    },
+    "graph_nodes_pins_positions_unchanged": true,
+    "saved": {
+      "time": true,
+      "training": true
+    }
+  },
+  "manual_keyboard_checks": [
+    {
+      "name": "physical T does not advance the guided Q prompt",
+      "passed": true
+    },
+    {
+      "name": "physical first Q enters FullStop without completing stage2",
+      "passed": true
+    },
+    {
+      "name": "physical second Q resumes the real bullet before completion",
+      "passed": true
+    }
+  ],
+  "fixture_limits": [
+    "Main progression injects Enhanced Input movement and Stage1 Q; Stage2 Q presses use the physical keyboard. It never writes completion/progression/damage counters.",
+    "Backspace uses the physical key. Injury retry uses explicit ApplyDamage; retry/reset/ordinary-expiry fixtures use stage entry and an expired QTE window.",
+    "No new full S3-S7 completion, packaged-build or long-duration validation."
+  ],
+  "final_editor": {
+    "dirty": [],
+    "map": "/Game/Maps/Map_TrainingRoom.Map_TrainingRoom",
+    "pie_stopped": true,
+    "helper_loaded": false
+  }
+}

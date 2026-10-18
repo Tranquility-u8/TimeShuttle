@@ -1,0 +1,242 @@
+{
+  "task": "20261017-tutorial-plank-enemy-polish",
+  "engine": "UE 5.6.1",
+  "helper_loaded_for_cold_tests": false,
+  "checks": [
+    {
+      "name": "body wave uses Characters with zero active native weakpoints",
+      "passed": true
+    },
+    {
+      "name": "actual body hit subtracts health and plays normal reaction",
+      "passed": true,
+      "health": 75.0
+    },
+    {
+      "name": "lethal hit plays death before target count/dissolve",
+      "passed": true
+    },
+    {
+      "name": "death animation settles then counts once",
+      "passed": true
+    },
+    {
+      "name": "stationary weakpoint lesson uses native component",
+      "passed": true
+    },
+    {
+      "name": "native weakpoint-only target rejects body damage",
+      "passed": true
+    },
+    {
+      "name": "stationary native weakpoint hit plays reaction and applies tier damage",
+      "passed": true
+    },
+    {
+      "name": "stationary weakpoint death advances naturally to moving lesson",
+      "passed": true
+    },
+    {
+      "name": "moving weakpoint hidden in normal time",
+      "passed": true
+    },
+    {
+      "name": "continuous lateral path reverses with stable facing",
+      "passed": true
+    },
+    {
+      "name": "moving weakpoint visible only in FullStop",
+      "passed": true
+    },
+    {
+      "name": "stopped walker holds exact position and animation",
+      "passed": true
+    },
+    {
+      "name": "moving enemy takes no damage before stopped bullets release",
+      "passed": true
+    },
+    {
+      "name": "moving native weakpoint shots and death advance naturally to paired plank",
+      "passed": true
+    },
+    {
+      "name": "plank status omits irrelevant ammo and reload flags",
+      "passed": true
+    },
+    {
+      "name": "single ordinary support shot tilts slab and cannot kill all three",
+      "passed": true,
+      "kills": 2,
+      "state": 3
+    },
+    {
+      "name": "failed strike auto resets this stage and restores all three living victims",
+      "passed": true
+    },
+    {
+      "name": "supports remain intact while time bullets are suspended",
+      "passed": true
+    },
+    {
+      "name": "released actual bullets break both supports together and one horizontal strike kills three",
+      "passed": true,
+      "confirmed_deaths": 3,
+      "step": 11,
+      "gap": 0.0
+    },
+    {
+      "name": "final stage generates four real enemies immediately without P arrival",
+      "passed": true,
+      "spawned": 4
+    },
+    {
+      "name": "final entry preserves player position and facing",
+      "passed": true
+    },
+    {
+      "name": "stage cleanup clears stale T threat prompt",
+      "passed": true
+    },
+    {
+      "name": "two queued shots at one support cannot substitute for both supports",
+      "passed": true,
+      "kills": 2
+    },
+    {
+      "name": "separate stopped-time releases cannot repair an already tilting slab",
+      "passed": true,
+      "kills": 2
+    },
+    {
+      "name": "retry discards queued bullets and restores intact supports",
+      "passed": true
+    },
+    {
+      "name": "opposite-side stage selects mirrored layout",
+      "passed": true
+    },
+    {
+      "name": "mirrored single B break pivots around surviving A and cannot kill all three",
+      "passed": true,
+      "hinge_x": -250.00000000000003,
+      "expected_x": -250.0,
+      "pitch": 48.499999999999964
+    },
+    {
+      "name": "mirrored B-then-A queued release produces three animated deaths and advances",
+      "passed": true,
+      "confirmed_deaths": 3,
+      "step": 11
+    }
+  ],
+  "compile": {
+    "level": "errors=0 warnings=0 status=3",
+    "training": "errors=0 warnings=0 status=3",
+    "target": "errors=0 warnings=0 status=3",
+    "weakTarget": "errors=0 warnings=0 status=3"
+  },
+  "formatting": {
+    "level": {
+      "graphs_compared": 32,
+      "functional_differences": [],
+      "new_graphs": []
+    },
+    "training": {
+      "graphs_compared": 72,
+      "functional_differences": [],
+      "new_graphs": []
+    },
+    "target": {
+      "graphs_compared": 9,
+      "functional_differences": [],
+      "new_graphs": []
+    }
+  },
+  "initial_formatting": {
+    "level": {
+      "graphs_compared": 32,
+      "functional_differences": [],
+      "new_graphs": []
+    },
+    "training": {
+      "graphs_compared": 72,
+      "functional_differences": [],
+      "new_graphs": []
+    },
+    "target": {
+      "graphs_compared": 9,
+      "functional_differences": [],
+      "new_graphs": []
+    }
+  },
+  "save": {
+    "saved": [
+      "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingTarget",
+      "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingWeakTarget",
+      "/Game/Environment/TrainingRoom/Tutorial/BS_TrainingStrafe",
+      "/Game/Maps/Map_TrainingRoom"
+    ],
+    "preserved": {
+      "Blueprints/Components/Player/AC_TimeAbility.uasset": true,
+      "UI/Widgets/UI_Hud.uasset": true,
+      "Environment/TrainingRoom/Tutorial/AC_TrainingVisual.uasset": true
+    },
+    "dirty": []
+  },
+  "mechanism": {
+    "support_impact_window_real_seconds": 0.12,
+    "failed_landing_reset_real_seconds": 5,
+    "slab_dimensions_cm": [
+      600,
+      170,
+      28
+    ],
+    "victim_x_cm": [
+      -210,
+      0,
+      210
+    ],
+    "hinge_x_cm": [
+      -250,
+      250
+    ],
+    "partial_floor_contact_pitch_degrees": 48.5,
+    "strike_clock_seconds": 0.85,
+    "fall_duration_game_seconds": 1,
+    "impact_extents_with_capsule_allowance_cm": [
+      342,
+      127,
+      110
+    ]
+  },
+  "animations": {
+    "hit_seconds": 0.7,
+    "death_clip_seconds": 1.1,
+    "death_settlement_game_seconds": 2.2,
+    "lateral_amplitude_cm": 220,
+    "maximum_lateral_speed_cm_per_second": 143,
+    "sample_weight_interpolation_speed": 6
+  },
+  "methods": [
+    "Actual equipped production-pistol BeginFire/StopFire, original spread, scripted aim and pawn-position fixtures; test ammo is refilled through SetAmmo without saving weapon defaults.",
+    "Explicit body/weak lesson entry isolates unchanged pickup/ammo/reload prerequisites. Static-weakpoint -> moving-weakpoint -> paired-plank -> melee-preview progression is automatic.",
+    "Native time-ability ToggleTimeAbility freezes/releases actual BP_TimeBullet instances; no simulated support-hit injection or injected enemy damage in the final matrix.",
+    "Reverse-side entry and reversed support order check both surviving-hinge geometry and actual three confirmed animated deaths.",
+    "Threat HUD visibility is deliberately shown as a fixture, then normal StopThreats must hide it."
+  ],
+  "limits": [
+    "Scoped editor PIE, not a continuous full-tutorial playthrough, physical mouse/keyboard feel acceptance, packaging or networking.",
+    "Slab motion is a controlled kinematic pivot/fall with one pose-based capsule-overlap strike, not a free rigid-body constraint simulation.",
+    "Original pistol additive-animation warnings remain; scoped runtime error count is checked separately."
+  ],
+  "fixture_correction": "An early cold fixture held FullStop beyond its normal energy threshold; final retest uses normal input timing. No production energy defaults were changed.",
+  "final_editor": {
+    "dirty": [],
+    "map": "/Game/Maps/Map_TrainingRoom.Map_TrainingRoom",
+    "pie_stopped": true,
+    "helper_loaded": false
+  },
+  "scoped_runtime_errors": 0
+}
