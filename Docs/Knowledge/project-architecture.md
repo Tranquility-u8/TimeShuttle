@@ -108,13 +108,15 @@ Shooter 的迁入步枪与行为树保留原有开火节奏，但射击终点生
 
 同日普通射击扩展：`BP_Item_Base.Fire_HitScan` 的 UseTemporalProjectile=false 分支经 `SpawnHitscanTrail(ShotHit)` 生成 `/Game/VFX/BulletTrail/BP_HitscanTrail`，随后继续原即时伤害链。后者是独立原生 Actor 子类（不是 BP_TimeBullet），持有同一个 AC_BulletTrail；记录真实命中点/TraceEnd，按世界 DeltaSeconds 以默认5000cm/s推进、钳制终点、保持0.04游戏秒后清理。无碰撞/伤害、不计时停弹数量，FullStop 原路径保留。Normal/BulletTime 的样式入口是 BP_HitscanTrail.BulletTrail，FullStop 的是 BP_TimeBullet.BulletTrail；两模板可分别覆盖。新增42项指定PIE检查通过，旧图除单次视觉调用外语义保持；详见上述实现文档。
 
-## DialogSystem（2026-10-12）
+## DialogSystem（2026-10-18）
 
-`/Game/DialogSystem` 保存逐句/整段 DataTable、可编辑 WBP_Dialogue、独立 Enhanced Input 与三个触发入口。`Plugins/TimeShuttleDialog` 为 UE5.6 原生 Runtime 模块，提供行结构、DialogueManager 状态机、2D语音完成回调、玩家控制锁和 GameInstance 级 DialogMemory；无需编辑器制作辅助工具运行。
+`/Game/DialogSystem` 现为完整普通蓝图运行系统。AC_DialogueManager（ActorComponent）负责状态、优先级、语音完成和锁定清理；BP_DialogueSession 负责异步预加载及输入；BFL_Dialogue 提供查找、数据校验、输入门禁、死亡及存档接口；WBP_Dialogue 为可编辑 UMG。Types 中的两种 S_ 结构体与四种 ENUM_ 替代原生类型。TimeShuttleDialog 插件已从工程移除，无运行时制作工具依赖。
 
-BP_FPCharacter 的 DialogueManager 使用 AC_DialogueManager 项目适配子类；按下/持续输入经过 AllowGameplayInput，释放路径保留，死亡与显式主存档接入静态通知。碰撞 Trigger、继承 BP_Interaction_Base 的 NPC（现有 F 互动）和 Story 请求共享该管理器。新加玩法输入也须接门禁，禁止 ClearAllMappings 或 ResetIgnoreMoveInput 破坏其他系统状态。
+BP_FPCharacter 的 DialogueManager 组件及全部既有调用已迁移；原七张对白表内容逐字段保持，现有对白位于 Data_Dialog 与 Tutorial/Dialogue。碰撞、NPC 互动及 Story 仍共享唯一管理器。任务/Cutscene 通过开始、句事件及带结束原因的结束事件接入；仅 Completed 表示成功。训练关卡的阶段编排未在本轮重构。
 
-跨关卡/磁盘记忆默认 false，侧车为原槽名加 `_Dialogue`，未开启自动存档/启动读档。正式台词表为空待填写，Tests 独立。84项指定运行检查、6个蓝图编译保存、插件三个目标构建及视觉证据见 [dialog-system.md](../Implementation/dialog-system.md)；不代表完整游戏已打包验收。
+最新解耦：对话管理器和函数库通过 `/Game/DialogSystem/Blueprints/BPI_DialogueMemory` 访问可选记忆，具体 GI 类直接引用为零。服务缺失或关闭时正常播放并保留局部一次性记录，显式存读失败安全返回；持久化仍关闭。本轮 基础 59/59、跨关卡/训练接入 15/15、默认原生 GI 无记忆服务 21/21、接口开关 11/11 通过，独立冷加载12蓝图通过，见 [记忆解耦](../Implementation/DialogSystem/MemoryDecouple20261018/README.md)。
+
+GameInstanceClass 为 `/Game/Blueprints/Core/BP_TimeShuttleGameInstance`，直接继承 Engine.GameInstance，是项目通用入口；对话记忆作为 `Dialogue|Memory` 分类的一项功能，未来其他项目级服务另行加入。改名后冷进程59项基础＋15项跨关卡/训练接入回归通过，旧类路径引用为零；持久化默认 false，SG_DialogueMemory 侧车槽为原槽名加 `_Dialogue`，自动保存/读档仍未开启。旧原生存档需一次性转换，本机已备份并转换 QA 旧槽。验证：57 基础＋28 边界＋15 跨关卡/训练接入均通过；无辅助插件进程冷加载/编译 11 个运行蓝图，旧模块和两种制作模块引用为零。证据、恢复点及范围见 [dialog-system.md](../Implementation/dialog-system.md)，不代表全游戏打包或 S1–S7 完整通关复测。
 
 ## Training Room tutorial（2026-10-14）
 

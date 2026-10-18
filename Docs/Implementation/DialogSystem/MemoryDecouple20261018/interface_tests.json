@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "project GameInstance retained",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fresh runtime memory disabled",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interface discovers project service",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "disabled service ignores write",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interface explicit enable works",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interface write works",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interface query works",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "disabled service hides stored history",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "disabled service cannot save",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "disabled call created no save",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "player component memory remains disabled",
+      "passed": true,
+      "detail": null
+    }
+  ]
+}

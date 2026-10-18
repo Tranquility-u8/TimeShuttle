@@ -5,10 +5,6 @@
 	"Description": "",
 	"Plugins": [
 		{
-			"Name": "TimeShuttleDialog",
-			"Enabled": true
-		},
-		{
 			"Name": "ModelingToolsEditorMode",
 			"Enabled": true,
 			"TargetAllowList": [

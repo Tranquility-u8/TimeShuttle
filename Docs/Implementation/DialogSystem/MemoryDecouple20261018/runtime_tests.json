@@ -1,0 +1,303 @@
+{
+  "started": 1792366019.012937,
+  "checks": [
+    {
+      "name": "actual project GameInstance class",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "player component persistence remains disabled",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "persistent memory disabled by default",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "normal initial input unlocked",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "voice request accepted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "voice 2D/UI/time independent flags",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "auto Next does not skip playing voice",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "same priority busy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "auto waited for first voice completion",
+      "passed": true,
+      "detail": "{'actual': 2.8590000000112923, 'wave': 2.5741043090820312}"
+    },
+    {
+      "name": "auto completed all voice/text once",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "UI and audio released",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "dialogue mapping removed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "P action switches to manual",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "manual key cannot cut voice",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "manual holds after voice",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Next action advances after voice",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "double Next does not duplicate completion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "text manual ready immediately",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "text manual ignores reading duration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "text auto observes reading duration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "text auto total duration",
+      "passed": true,
+      "detail": "2.5"
+    },
+    {
+      "name": "pause accepted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pause mirrored to voice",
+      "passed": true,
+      "detail": "<AudioComponentPlayState.PAUSED: 2>"
+    },
+    {
+      "name": "pause does not finish voice or advance",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "voice real-time at scale 0.01",
+      "passed": true,
+      "detail": "2.672000000005937"
+    },
+    {
+      "name": "voice pitch remains 1 at scale 0.01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "voice real-time at scale 0.2",
+      "passed": true,
+      "detail": "2.6560000000026776"
+    },
+    {
+      "name": "voice pitch remains 1 at scale 0.2",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "locked move / look allowed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "locked gate IA_Move",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "locked gate IA_Shoot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "locked gate IA_Aim",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "locked gate IA_Reload",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "locked gate IA_Interact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "locked gate IA_TimeAbility",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "locked gate IA_Reverse",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "locked gate IA_Jump",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "look and pause gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "movement lock blocks ordinary movement",
+      "passed": true,
+      "detail": "0.0"
+    },
+    {
+      "name": "priority 2 interrupts 3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interrupted emits once and unlocks",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "lower priority refused",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "story promotes priority to 1",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "equal priority refused",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "cancel clears controls",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "other systems movement lock retained",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "free dialogue allows move/combat",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "free reserves Space for next",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "leaving source continues",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "actual collision begins dialogue",
+      "passed": true,
+      "detail": "TEST_Collision"
+    },
+    {
+      "name": "leaving trigger continues",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "NPC interaction interface starts dialogue",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "once per player lifetime",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "disabled memory saves nothing",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "enabled memory explicit save",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reset removes completion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "enabled explicit load",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "death cancellation cleans audio/UI/lock",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no runtime dialogue errors",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "samples": [],
+  "status": "passed",
+  "ended": 1792366050.1755078
+}

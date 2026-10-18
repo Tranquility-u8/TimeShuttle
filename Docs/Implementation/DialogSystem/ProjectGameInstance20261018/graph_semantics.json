@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "graphs_compared": 48,
+  "normalization": "Only renamed class path and display names; ignore layout/reroute/comment nodes",
+  "changes": []
+}

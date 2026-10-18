@@ -1,0 +1,60 @@
+{
+  "passed": true,
+  "blueprints": {
+    "/Game/DialogSystem/Blueprints/AC_DialogueManager": {
+      "class": "/Game/DialogSystem/Blueprints/AC_DialogueManager.AC_DialogueManager_C",
+      "compiled": true
+    },
+    "/Game/DialogSystem/Blueprints/AC_DialogueParticipant": {
+      "class": "/Game/DialogSystem/Blueprints/AC_DialogueParticipant.AC_DialogueParticipant_C",
+      "compiled": true
+    },
+    "/Game/DialogSystem/Blueprints/BP_DialogueTrigger": {
+      "class": "/Game/DialogSystem/Blueprints/BP_DialogueTrigger.BP_DialogueTrigger_C",
+      "compiled": true
+    },
+    "/Game/DialogSystem/Blueprints/BP_DialogueNPC": {
+      "class": "/Game/DialogSystem/Blueprints/BP_DialogueNPC.BP_DialogueNPC_C",
+      "compiled": true
+    },
+    "/Game/DialogSystem/Blueprints/BFL_Dialogue": {
+      "class": "/Game/DialogSystem/Blueprints/BFL_Dialogue.BFL_Dialogue_C",
+      "compiled": true
+    },
+    "/Game/DialogSystem/Blueprints/SG_DialogueMemory": {
+      "class": "/Game/DialogSystem/Blueprints/SG_DialogueMemory.SG_DialogueMemory_C",
+      "compiled": true
+    },
+    "/Game/DialogSystem/Blueprints/BP_DialogueSession": {
+      "class": "/Game/DialogSystem/Blueprints/BP_DialogueSession.BP_DialogueSession_C",
+      "compiled": true
+    },
+    "/Game/DialogSystem/UI/WBP_Dialogue": {
+      "class": "/Game/DialogSystem/UI/WBP_Dialogue.WBP_Dialogue_C",
+      "compiled": true
+    },
+    "/Game/Blueprints/Player/BP_FPCharacter": {
+      "class": "/Game/Blueprints/Player/BP_FPCharacter.BP_FPCharacter_C",
+      "compiled": true
+    },
+    "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController": {
+      "class": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController.BP_TrainingController_C",
+      "compiled": true
+    },
+    "/Game/Blueprints/Core/BP_TimeShuttleGameInstance": {
+      "class": "/Game/Blueprints/Core/BP_TimeShuttleGameInstance.BP_TimeShuttleGameInstance_C",
+      "compiled": true
+    },
+    "/Game/DialogSystem/Blueprints/BPI_DialogueMemory": {
+      "class": "/Game/DialogSystem/Blueprints/BPI_DialogueMemory.BPI_DialogueMemory_C",
+      "compiled": true
+    }
+  },
+  "referencers": {
+    "/Script/TimeShuttleDialog": [],
+    "/Script/TSVFXEditor": [],
+    "/Script/TSDialogEditor": [],
+    "/Game/DialogSystem/Blueprints/BP_DialogueGameInstance": []
+  },
+  "authoring_helpers_loaded": false
+}
