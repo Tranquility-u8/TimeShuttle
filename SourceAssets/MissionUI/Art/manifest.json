@@ -1,0 +1,28 @@
+{
+  "palette": {
+    "blue": "#2AA9FF",
+    "black": "#05090F"
+  },
+  "design_size": [
+    1920,
+    1080
+  ],
+  "panel_width": 480,
+  "header_height": 48,
+  "row_height": 64,
+  "right_margin": 68,
+  "top_margin": 72,
+  "checkbox": 24,
+  "marker": 36,
+  "source": "Original geometric assets created for Time Shuttler; geometry matched to supplied tutorial reference; no extracted game textures.",
+  "files": [
+    "T_MissionAccent.png",
+    "T_MissionActive.png",
+    "T_MissionChecked.png",
+    "T_MissionFailed.png",
+    "T_MissionFlash.png",
+    "T_MissionHeader.png",
+    "T_MissionMarker.png",
+    "T_MissionUnchecked.png"
+  ]
+}

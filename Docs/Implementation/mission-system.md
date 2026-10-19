@@ -19,3 +19,7 @@ The Chinese authoring manual accompanies this implementation. Tests and preserva
 Open `/Game/DialogSystem/Tests/L_DialogueVerification`, start PIE, then use the editor Python console to execute `Scripts/Validation/MissionSystem/run.py` and call `run('generic')`. Wait until `Saved/Agent/DialogueBlueprint/MissionFlow/runtime-generic-cold.json` reports passed/failed. Call `run('edges')` for the boundary suite. Do not run the two suites simultaneously. These scripts require the built-in Python Editor Script plugin and the checked-in Blueprint test fixtures; they do not require the temporary authoring plugins. Stop PIE after the checks.
 
 Training verification uses actual dialogue, Q input and physical projectiles, plus explicitly recorded objective/hit/damage fixtures for later stages. It is not a manual weapon-aim playthrough. Network, split-screen and full Cook/package acceptance are outside this verification.
+
+## Mission HUD update (2026-10-19)
+
+The training objective panel now uses a reusable Blueprint presenter and page/step DataTables. See [mission-ui.md](mission-ui.md) for field contracts, animation behavior, source artwork and the scoped test results. The original 86 task components remain; the legacy controller no longer creates WBP_TrainingObjective.
