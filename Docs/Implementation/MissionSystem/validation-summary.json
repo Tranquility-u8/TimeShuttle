@@ -1,0 +1,34 @@
+{
+  "passed": true,
+  "test_checks": {
+    "runtime-generic-pass1.json": 29,
+    "runtime-edges.json": 15,
+    "runtime-training-pass1.json": 20,
+    "runtime-training-edges.json": 6,
+    "runtime-generic-cold.json": 29,
+    "runtime-edges-cold.json": 15,
+    "cold-training.json": 5
+  },
+  "cold_compiled_blueprints": 73,
+  "cold_runtime_errors": 0,
+  "cold_blueprint_errors": 0,
+  "cold_blueprint_warnings": 0,
+  "ordinary_editor_without_temporary_authoring_plugins": true,
+  "memory_enabled": false,
+  "persistence_enabled": false,
+  "format_graphs": 110,
+  "semantic_comparison_graphs": 170,
+  "original_map_actors_unchanged": 189,
+  "unchanged_controller_graphs": 80,
+  "limitations": [
+    "Training later stages use explicit pickup/reload/kill/hit/damage fixtures; not manual aiming acceptance.",
+    "Death/respawn boundary check injects player state; not a full death-animation test.",
+    "No network, split-screen or full Cook/package acceptance."
+  ],
+  "recovered_authoring_issues": [
+    "Enum raw-byte comparison literal normalization",
+    "Deferred cinematic cleanup and natural OnStop/OnFinished ordering",
+    "Slate formatting callback re-entry guarded",
+    "Temporary generated build receipt retired; ordinary engine receipt used"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "done": [
+    [
+      "/Game/MissionSystem/Blueprints/AC_PlayerControlLocks",
+      "RefreshLocks"
+    ],
+    [
+      "/Game/MissionSystem/Blueprints/BP_MissionFlow",
+      "ValidateFlow"
+    ],
+    [
+      "/Game/MissionSystem/Blueprints/BP_MissionFlow",
+      "StartFlow"
+    ],
+    [
+      "/Game/MissionSystem/Blueprints/BP_MissionFlow",
+      "StartPendingTask"
+    ],
+    [
+      "/Game/MissionSystem/Blueprints/BP_MissionFlow",
+      "TickFlow"
+    ],
+    [
+      "/Game/MissionSystem/Blueprints/Tasks/AC_Task_Cutscene",
+      "ExecuteTask"
+    ],
+    [
+      "/Game/MissionSystem/Blueprints/Tasks/AC_Task_Dialogue",
+      "ExecuteTask"
+    ],
+    [
+      "/Game/Environment/TrainingRoom/Mission/BP_TrainingMission",
+      "BeforeFlowTick"
+    ],
+    [
+      "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_StageSetup",
+      "ExecuteTask"
+    ],
+    [
+      "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_WaitTargets",
+      "UpdateTask"
+    ]
+  ]
+}

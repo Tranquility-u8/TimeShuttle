@@ -1,5 +1,7 @@
 # 当前项目架构
 
+- MissionSystem Blueprint refactor (2026-10-18, LEVEL-002/P-008/P-058/P-106): BP_TrainingMission now authors 86 task components across eight checkpoints; removed 31 hardcoded Level Blueprint stage functions. Dialogue, owned control locks, role-bound Cutscenes, signals, background joins and failure/retry routes are extensible Blueprint tasks. 70 functional checks pass, followed by 44 ordinary-editor cold regression checks and five training startup checks; 73 Blueprints cold-compile without Blueprint warnings/errors. Preserved 189 original scene actors, 80 unrelated controller graphs and existing save files. Memory/persistence remain off. Later training objectives use disclosed fixtures; no manual aim, network or Cook acceptance. See [implementation](../Implementation/mission-system.md) and [validation](../Implementation/MissionSystem/validation.zh-CN.md).
+
 仓库与 Unreal 5.6 实际资产核对日期：2026-10-10。本文描述实现入口；设计目标仍以 `design-snapshot.md` 和对应 Drive 来源为准。本次未刷新 Drive。
 
 ## 目录职责

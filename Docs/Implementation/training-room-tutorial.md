@@ -1,5 +1,9 @@
 # Training Room tutorial implementation
 
+Current flow orchestration is now in BP_TrainingMission task components; the historical Level Blueprint stage chain below is superseded. The fixed-layout merge repair is retained and the migrated eight-stage flow has passed the automated acceptance described in [MissionSystem implementation](mission-system.md) and [validation](MissionSystem/validation.zh-CN.md). Later objectives use explicitly disclosed fixtures; manual aim/feel acceptance remains separate.
+
+Post-merge recovery (TECH-004): the controller was rebuilt after merge 4760bc2 committed LFS conflict text. Dialogue refactoring and fixed-layout behavior are now combined; three relevant Blueprints compile cleanly. The gameplay results below predate this merge repair; fresh PIE acceptance is pending the user. See [repair evidence and checklist](TrainingMergeRepair20261018.md).
+
 ## Fixed editor-authored layout — 2026-10-18
 
 `BP_TrainingController.SetLayout` no longer selects orientation from the player's side of the room. The automatic reflection branch, `MirrorShootingLayout` function and `bLayoutMirrored` variable are removed. `PrepareRetry` no longer performs an inverse reflection. Every stage retains the transforms captured from its editor-placed actors; normal visual reset restores that same cache without rewriting it. Historical mirrored-layout validation below describes the superseded behavior.

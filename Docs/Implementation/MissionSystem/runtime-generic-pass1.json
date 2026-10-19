@@ -1,0 +1,152 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "Derived Blueprint override executes through base task API",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Sequential steps complete exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Invalid configuration is rejected before executing any task",
+      "passed": true,
+      "detail": "NextStep points to an unknown StepId."
+    },
+    {
+      "name": "Duplicate configuration is rejected before executing any task",
+      "passed": true,
+      "detail": "Duplicate StepId."
+    },
+    {
+      "name": "Background task join waits for actual completion",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Join continuation executes once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Timeout follows configured failure route",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Releasing one lock preserves another movement lock",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Released look/gameplay lock restores only those inputs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Normal completion releases all owned locks",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Cancelling preserves an unrelated movement lock",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Cancel does not leak its own lock",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Destroying flow owner releases locks",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Pause suspends task elapsed time",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Task timers are independent of bullet time",
+      "passed": true,
+      "detail": "1.0310000000026776"
+    },
+    {
+      "name": "Dialogue step owns its exact request",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Dialogue completion advances once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Cancelled dialogue never advances to success",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Restart rebinds callbacks without duplicate completion",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Invalid dialogue data fails visibly",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Cutscene applies configured look and movement locks",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Cutscene suppresses combat through player input gate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Camera-cut track changes the view target",
+      "passed": true,
+      "detail": "<Object '/Game/DialogSystem/Tests/UEDPIE_0_L_DialogueVerification.L_DialogueVerification:PersistentLevel.Cine Camera Actor_0' (0x0000020E81599A00) Class 'CineCameraActor'>"
+    },
+    {
+      "name": "Cutscene completion restores camera and input",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Cutscene completion destroys its temporary sequence actor",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Early sequence stop does not advance",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Interrupted sequence restores camera and locks",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Missing sequence fails without locking player",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Dialogue persistent memory remains disabled",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "started": 1792375971.1631143,
+  "ended": 1792375982.5856752
+}

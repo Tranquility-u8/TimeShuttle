@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "Saved training blueprint loads all 86 task components",
+      "passed": true
+    },
+    {
+      "name": "First checkpoint starts in ordinary editor",
+      "passed": true
+    },
+    {
+      "name": "Training plays configured opening dialogue after real trigger entry",
+      "passed": true
+    },
+    {
+      "name": "Common Game Instance remains selected with memory disabled",
+      "passed": true
+    },
+    {
+      "name": "Cancelling training releases its dialogue and movement controls",
+      "passed": true
+    }
+  ],
+  "method": "Cold ordinary editor; real training startup and dialogue, fixture teleport into first trigger, then cancellation cleanup."
+}

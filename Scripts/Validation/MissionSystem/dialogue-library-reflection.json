@@ -1,0 +1,359 @@
+{
+  "functions": [
+    {
+      "name": "RememberDialogue",
+      "pure": false,
+      "params": [
+        {
+          "name": "ConversationId",
+          "type": "FName",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "__WorldContext",
+          "type": "UObject*",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "ReturnValue",
+          "type": "bool",
+          "out": true,
+          "return": true
+        }
+      ]
+    },
+    {
+      "name": "HasRememberedDialogue",
+      "pure": false,
+      "params": [
+        {
+          "name": "ConversationId",
+          "type": "FName",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "__WorldContext",
+          "type": "UObject*",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "ReturnValue",
+          "type": "bool",
+          "out": true,
+          "return": true
+        }
+      ]
+    },
+    {
+      "name": "EnableDialogueMemory",
+      "pure": false,
+      "params": [
+        {
+          "name": "bEnabled",
+          "type": "bool",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "__WorldContext",
+          "type": "UObject*",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "ReturnValue",
+          "type": "bool",
+          "out": true,
+          "return": true
+        }
+      ]
+    },
+    {
+      "name": "ResolveDialogueMemory",
+      "pure": false,
+      "params": [
+        {
+          "name": "__WorldContext",
+          "type": "UObject*",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "ReturnValue",
+          "type": "UObject*",
+          "out": true,
+          "return": true
+        }
+      ]
+    },
+    {
+      "name": "ReadConversation",
+      "pure": false,
+      "params": [
+        {
+          "name": "Conversation",
+          "type": "FDataTableRowHandle",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "__WorldContext",
+          "type": "UObject*",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "ReturnValue",
+          "type": "bool",
+          "out": true,
+          "return": true
+        },
+        {
+          "name": "Data",
+          "type": "FS_DialogueConversation",
+          "out": true,
+          "return": false
+        },
+        {
+          "name": "Error",
+          "type": "FString",
+          "out": true,
+          "return": false
+        }
+      ]
+    },
+    {
+      "name": "ReadLine",
+      "pure": false,
+      "params": [
+        {
+          "name": "Line",
+          "type": "FDataTableRowHandle",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "__WorldContext",
+          "type": "UObject*",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "ReturnValue",
+          "type": "bool",
+          "out": true,
+          "return": true
+        },
+        {
+          "name": "Data",
+          "type": "FS_DialogueLine",
+          "out": true,
+          "return": false
+        },
+        {
+          "name": "Error",
+          "type": "FString",
+          "out": true,
+          "return": false
+        }
+      ]
+    },
+    {
+      "name": "ValidateConversation",
+      "pure": false,
+      "params": [
+        {
+          "name": "Conversation",
+          "type": "FDataTableRowHandle",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "__WorldContext",
+          "type": "UObject*",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "ReturnValue",
+          "type": "bool",
+          "out": true,
+          "return": true
+        },
+        {
+          "name": "Error",
+          "type": "FString",
+          "out": true,
+          "return": false
+        }
+      ]
+    },
+    {
+      "name": "LoadPlayerMemory",
+      "pure": false,
+      "params": [
+        {
+          "name": "Player",
+          "type": "AActor*",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "SlotName",
+          "type": "FString",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "UserIndex",
+          "type": "int32",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "__WorldContext",
+          "type": "UObject*",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "ReturnValue",
+          "type": "bool",
+          "out": true,
+          "return": true
+        }
+      ]
+    },
+    {
+      "name": "SavePlayerMemory",
+      "pure": false,
+      "params": [
+        {
+          "name": "Player",
+          "type": "AActor*",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "SlotName",
+          "type": "FString",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "UserIndex",
+          "type": "int32",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "bPrimarySaveSucceeded",
+          "type": "bool",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "__WorldContext",
+          "type": "UObject*",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "ReturnValue",
+          "type": "bool",
+          "out": true,
+          "return": true
+        }
+      ]
+    },
+    {
+      "name": "PlayerDied",
+      "pure": false,
+      "params": [
+        {
+          "name": "Player",
+          "type": "AActor*",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "__WorldContext",
+          "type": "UObject*",
+          "out": false,
+          "return": false
+        }
+      ]
+    },
+    {
+      "name": "AllowGameplayInput",
+      "pure": true,
+      "params": [
+        {
+          "name": "Player",
+          "type": "AActor*",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "ActionName",
+          "type": "FName",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "__WorldContext",
+          "type": "UObject*",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "ReturnValue",
+          "type": "bool",
+          "out": true,
+          "return": true
+        }
+      ]
+    },
+    {
+      "name": "FindDialogueManager",
+      "pure": true,
+      "params": [
+        {
+          "name": "Player",
+          "type": "AActor*",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "__WorldContext",
+          "type": "UObject*",
+          "out": false,
+          "return": false
+        },
+        {
+          "name": "ReturnValue",
+          "type": "UAC_DialogueManager_C*",
+          "out": true,
+          "return": true
+        }
+      ]
+    },
+    {
+      "name": "ExecuteUbergraph",
+      "pure": false,
+      "params": [
+        {
+          "name": "EntryPoint",
+          "type": "int32",
+          "out": false,
+          "return": false
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

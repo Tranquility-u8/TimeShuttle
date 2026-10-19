@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "started": 1792377403.7816408,
+  "checks": [
+    {
+      "name": "Configured plank failure restarts its checkpoint",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Failed exercise is not recorded as completed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Retry restores player health",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Training waits for respawn after player death",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Death leaves no mission movement or look lock",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Respawn returns to the configured checkpoint",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "steps": [],
+  "method": "Checkpoint jump and player death-state injection exercise the real Blueprint failure/retry lifecycle; this is not a death-animation or combat-input test.",
+  "ended": 1792377406.705771
+}

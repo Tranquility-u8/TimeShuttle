@@ -1,0 +1,22 @@
+{
+  "format_semantics_passed": true,
+  "graphs_compared": 170,
+  "graph_differences": [],
+  "controller_changed_graphs": [
+    "PrepareRetry",
+    "BeginStage1EnergyIntro",
+    "BeginEnergyCostLesson",
+    "BeginEnergyRecoveryLesson"
+  ],
+  "controller_unrelated_graphs_preserved": true,
+  "controller_preserved_count": 80,
+  "map_original_actor_count": 189,
+  "map_changed_original_actors": [],
+  "map_added_actors": [
+    "BP_TrainingMission_C_0"
+  ],
+  "save_game_differences": [],
+  "level_graphs": [
+    "EventGraph"
+  ]
+}

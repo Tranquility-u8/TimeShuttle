@@ -1,0 +1,482 @@
+{
+  "status": "passed",
+  "started": 1792376410.451775,
+  "checks": [
+    {
+      "name": "Training runner owns all configured task components",
+      "passed": true,
+      "detail": "86"
+    },
+    {
+      "name": "Stage 1 reached its configured checkpoint",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Training dialogue interruption stops progression and releases movement",
+      "passed": true,
+      "detail": "Dialogue was interrupted or cancelled."
+    },
+    {
+      "name": "Training failure presents retry instructions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Stage 2 reached its configured checkpoint",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Stage 5 reached its configured checkpoint",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Manual retry preserves earlier completed exercises",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Manual retry restores health and configured checkpoint",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Stage 6 reached its configured checkpoint",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Stage 7 reached its configured checkpoint",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Stage 9 reached its configured checkpoint",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Stage 11 reached its configured checkpoint",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Stage 12 reached its configured checkpoint",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "All eight authored gameplay stages completed",
+      "passed": true,
+      "detail": "[1, 2, 5, 6, 7, 9, 11, 12]"
+    },
+    {
+      "name": "All completed exercises are recorded",
+      "passed": true,
+      "detail": "{1: 'Guided; gun=0; rock=0; temporal=false', 2: 'Guided; gun=0; rock=0; temporal=false', 5: 'Guided; gun=4; rock=0; temporal=false', 6: 'Guided; gun=1; rock=0; temporal=false', 7: 'Independent; gun=1; rock=0; temporal=true', 9: 'Guided; gun=0; rock=3; temporal=false', 11: 'Independent; gun=0; rock=0; temporal=false', 12: 'Independent; gun=0; rock=0; temporal=false'}"
+    },
+    {
+      "name": "Training completion opens exit state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Training end leaves movement and look usable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Dialogue has ended and released presentation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Whole-flow reset returns to the first checkpoint",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Whole-flow reset clears completion records",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "steps": [
+    {
+      "at": 0.0,
+      "step": "S1_00_Checkpoint",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 0.032,
+      "step": "S1_01_SetTutorialFlags",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 0.11,
+      "step": "S1_02_SetTutorialMovement",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 0.141,
+      "step": "S1_04_WaitPlayerInTrigger",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 1.438,
+      "step": "S1_06_S1_1",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 1.5,
+      "step": "S1_01_SetTutorialFlags",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 1.532,
+      "step": "S1_03_SetObjective",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 1.563,
+      "step": "S1_04_WaitPlayerInTrigger",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 1.625,
+      "step": "S1_06_S1_1",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 10.125,
+      "step": "S1_07_BeginStage1EnergyIntro",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 10.157,
+      "step": "S1_08_S1_Energy",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 16.688,
+      "step": "S1_10_SetTutorialFlags",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 16.719,
+      "step": "S1_13_WaitTimeMode",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 16.782,
+      "step": "S1_15_Join",
+      "mode": 1,
+      "health": 2.0
+    },
+    {
+      "at": 21.75,
+      "step": "S1_16_S1_AfterQ",
+      "mode": 1,
+      "health": 2.0
+    },
+    {
+      "at": 28.094,
+      "step": "S1_17_SetTutorialMovement",
+      "mode": 1,
+      "health": 2.0
+    },
+    {
+      "at": 28.125,
+      "step": "S1_19_WaitPlayerInSafeZone",
+      "mode": 1,
+      "health": 2.0
+    },
+    {
+      "at": 28.188,
+      "step": "S1_21_SetObjective",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 28.219,
+      "step": "S1_22_WaitRocksLanded",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 29.282,
+      "step": "S1_24_S1_3",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 36.922,
+      "step": "S2_01_SetTutorialFlags",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 36.985,
+      "step": "S2_02_SetTutorialMovement",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 37.016,
+      "step": "S2_03_SetObjective",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 37.047,
+      "step": "S2_04_WaitReady",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 38.313,
+      "step": "S2_05_StartGuidedQTE",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 38.344,
+      "step": "S2_06_WaitShotReady",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 40.516,
+      "step": "S2_07_FireGuidedShot",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 40.547,
+      "step": "S2_08_WaitQTE",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 40.797,
+      "step": "S2_09_BeginGuidedSidestep",
+      "mode": 1,
+      "health": 2.0
+    },
+    {
+      "at": 40.828,
+      "step": "S2_10_WaitGuidedSafe",
+      "mode": 1,
+      "health": 2.0
+    },
+    {
+      "at": 40.86,
+      "step": "S2_12_S2_EnergyCost",
+      "mode": 1,
+      "health": 2.0
+    },
+    {
+      "at": 47.891,
+      "step": "S2_14_WaitEnergyDemo",
+      "mode": 1,
+      "health": 2.0
+    },
+    {
+      "at": 49.907,
+      "step": "S2_16_WaitTimeMode",
+      "mode": 1,
+      "health": 2.0
+    },
+    {
+      "at": 49.938,
+      "step": "S2_17_SetTutorialFlags",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 49.985,
+      "step": "S2_19_WaitBulletPassed",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 50.235,
+      "step": "S2_20_BeginEnergyRecoveryLesson",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 50.266,
+      "step": "S2_22_WaitRecovery",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 52.282,
+      "step": "S2_23_Join",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 55.282,
+      "step": "S3_00_Checkpoint",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 55.36,
+      "step": "S3_01_EnableSupply",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 55.391,
+      "step": "S3_03_SetObjective",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 55.422,
+      "step": "S3_04_WaitTargets",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 58.125,
+      "step": "S4_Static_01_EnableSupply",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 58.203,
+      "step": "S4_Static_02_StartTargets",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 58.235,
+      "step": "S4_Static_04_WaitTargets",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 58.407,
+      "step": "S4_Moving_00_Checkpoint",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 58.485,
+      "step": "S4_Moving_01_EnableSupply",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 58.516,
+      "step": "S4_Moving_03_SetObjective",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 58.547,
+      "step": "S4_Moving_04_WaitTargets",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 58.703,
+      "step": "S5_00_Checkpoint",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 58.797,
+      "step": "S5_01_EnableSupply",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 58.828,
+      "step": "S5_03_StartPairedPlank",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 58.86,
+      "step": "S5_05_WaitPlank",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 63.282,
+      "step": "S7A_01_EnableSupply",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 63.36,
+      "step": "S7A_02_RefillCombatResources",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 63.391,
+      "step": "S7A_03_StartCombat",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 63.422,
+      "step": "S7A_05_WaitEnemiesCleared",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 66.219,
+      "step": "S7B_01_EnableSupply",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 66.313,
+      "step": "S7B_02_StartRockMechanism",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 66.375,
+      "step": "S7B_03_BeginFinalCombat",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 66.407,
+      "step": "S7B_05_WaitEnemiesCleared",
+      "mode": 0,
+      "health": 2.0
+    },
+    {
+      "at": 68.657,
+      "step": "S7B_07_FinishTutorial",
+      "mode": 0,
+      "health": 2.0
+    }
+  ],
+  "method": "Real training level; real dialogue playback, Q input, rock/QTE geometry and bullet movement. Later range objectives use injected pickup/reload observations and KillTarget callbacks; plank uses actual hit callbacks; combat uses applied damage. Not a manual weapon-aim playthrough.",
+  "ended": 1792376479.4622314
+}
