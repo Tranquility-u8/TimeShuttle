@@ -134,6 +134,10 @@ S3 为四个固定的敌人骨骼模型，每人一个胸部弱点；S4 收为�
 
 ## 维护入口
 
+2026-10-19 shared AI target selection: `AIC_Enemy_Base.IsEligibleAttackTarget` filters sight/damage candidates and final attack assignment. Hidden actors and unregistered non-player Pawns are excluded; the possessed player remains eligible without `BPI_EnemyAI`, and explicit combatants keep the original team comparison. This fixes enemies aiming at hidden range Characters instead of the player, without changing layout or mesh rotation. See [AI implementation and verification](../Implementation/EnemyAIBehaviorMigration.md#shared-attack-target-eligibility--2026-10-19).
+
+2026-10-19 tutorial spawn facing: S7A/S7B retain fixed editor-authored spawn positions, but `BP_TrainingController.ResolveCombatSpawnFacing` supplies upright player-facing world yaw to deferred spawning on first entry and retry. This supersedes the 2026-10-18 proxy-rotation rule for these native enemies; stage-layout mirroring remains removed. See [tutorial implementation](../Implementation/training-room-tutorial.md#2026-10-19-final-combat-initial-facing).
+
 - 实验室新版白盒：`/Game/Maps/Map_LabV39`，独立于旧 `Map_LabBridge`；建筑资源在 `Environment/LabV39`，桥接身份与旧图分离。使用 `GM_FP` 和现有角色，初始门禁为静态阻挡，尚未接入剧情解锁。2026-10-02 的构建、碰撞及角色通行证据见 [LabV39Whitebox.md](../Implementation/LabV39Whitebox.md)。默认启动地图仍为 `Map_Test`。
 
 - 命名：[asset-naming.md](asset-naming.md)。

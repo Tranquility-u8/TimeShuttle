@@ -92,6 +92,8 @@ Last repo/editor observation: **2026-10-10** (melee/ranged EnemyAITutorial behav
 
 ## Known verification boundaries
 
+- Shared AI target eligibility (2026-10-19): fixed hidden/passive tutorial Pawns being mistaken for player-team combatants. Controller and both native NPCs compile cleanly; ten helper-free eligibility checks pass. Tutorial and ordinary-map PIE show player-aligned focus with zero sampled position error; an isolated native Shooter shot reduces player health 2 → 1. All maps were not individually replayed. See [AI verification](../Implementation/EnemyAIBehaviorMigration.md#shared-attack-target-eligibility--2026-10-19).
+
 - No packaged-build, network replication or large-enemy-count certification is implied.
 - Pose rewind does not replay animation notifies, sound/VFX or curves, nor resume an interrupted montage at its exact historical time. Projectile history remains a separate system.
 - Area Stop/Bullet Time stages 1–7 establish player state, energy, input exclusion, HUD, global time scaling with player/current-weapon compensation, a 12-shot suspended-projectile loop, current pickup interaction and generic rigid-body behavior. Special-case interactable matrices, audiovisual effects, packaged builds, networking and broader stress certification are not yet established.

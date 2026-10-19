@@ -38,7 +38,21 @@ Cold-load compilation of the blackboard, behavior tree, both new tasks, decorato
 - Ranged keeps the imported rifle model, animation and behavior-tree timing, but its shot endpoint spawns `/Game/Blueprints/AI/Shooter/Projectiles/BP_ShooterProjectile_Bullet`. Time Shuttler therefore remains authoritative for projectile collision and player damage.
 - Melee keeps the imported attack choice, montage/notify timing and team filters. Its four terminal damage submissions use generic Unreal `ApplyDamage`, preserving the player's existing two-hit and invulnerability pipeline.
 
-## Patrol routes
+## Shared attack-target eligibility — 2026-10-19
+
+The apparent 90-degree aim offset was reproduced as a target-identity error: native enemies selected hidden `BP_TrainingTarget` Characters instead of the possessed player. The original team comparison sent `GetTeamNumber` to actors without `BPI_EnemyAI`; their default response was team zero, making passive training pawns appear hostile. Focus and projectiles followed those actors' real positions. No world/local-coordinate conversion or mesh-yaw compensation was needed.
+
+`AIC_Enemy_Base.IsEligibleAttackTarget` now rejects invalid and hidden actors. Actors without the combat interface must be player-controlled Pawns; explicit combat-interface actors retain the existing team comparison. Sight and damage perception filter candidates before recording/assigning them, and `SetStateAsAttacking` guards the resolved new/previous target before the original validity/death checks and Blackboard write. This applies to both production NPC classes through their shared controller. Passive range objectives continue to use their own tutorial damage path.
+
+The controller and both native NPC Blueprints compiled with zero errors/warnings. Ten eligibility checks passed again after restarting without the editing helper, covering the possessed player without the AI interface, null/noncombat actors, friendly NPCs, nine hidden training pawns, a visible unregistered dummy, hidden-player exclusion, sight-list pollution, damage perception and final assignment. Local layout/comments were reviewed in the editor; formatting preserved all graph semantics and thirteen unrelated controller graphs.
+
+Warm tutorial PIE recorded 164 frames, 308 player-focus observations with zero world-position error, nine native projectiles and no unexpected attack targets. Helper-free cold `Map_Test` PIE recorded 164 frames, 129 player-focus observations with zero position error, six native projectiles and only player/null attack targets. A separate close-range fixture stopped AI movement and invoked the native Shooter `Attack(player)` interface: its real projectile reduced player health from 2 to 1; damage was not injected. The initial natural-fire observation did not produce damage within its observation window, so it is not counted as a natural hit pass. Fixtures changed only transient PIE state; map layouts, NPC meshes, projectile assets and mission flow were not saved or modified.
+
+Helper-free cold tutorial PIE additionally recorded 163 frames, 265 player-focus observations with zero position error, twelve native projectiles and no unexpected targets. The cold log had no Blueprint runtime/Accessed None errors; one Python observer delegate-binding error was replaced with health polling and is not a gameplay error. Final PIE was stopped, the training map remained open, and no content/map packages were dirty.
+
+Local reproduction/export/validation evidence and pre-change package backup are under ignored `Saved/Agent/EnemyTargetDirection`. This is a shared-controller repair verified in representative maps, not a claim that every map or packaged build was individually played through.
+
+## Patrol routes (placed instances)
 
 `Map_Test` contains two imported `BP_PatrolRoute` actors, one bound to each formal enemy. Each route is a closed four-point loop. Reload inspection confirmed that both bindings persist, both enemies use the imported controller, and placed actors auto-possess correctly.
 
