@@ -1,0 +1,194 @@
+{
+  "task": "20261017-tutorial-energy-dialogue",
+  "cold_without_helper": true,
+  "checks": [
+    {
+      "name": "opening remains free with gauge hidden",
+      "passed": true
+    },
+    {
+      "name": "rock-area trigger acquires movement lock",
+      "passed": true
+    },
+    {
+      "name": "energy intro before falling/Q instruction",
+      "passed": true
+    },
+    {
+      "name": "intro finishes before rocks and Q prompt",
+      "passed": true
+    },
+    {
+      "name": "gauge attention pulse restores original scale",
+      "passed": true
+    },
+    {
+      "name": "S1 accepts Q before follow-up",
+      "passed": true
+    },
+    {
+      "name": "S1 after-Q dialogue retained and movement unlocks",
+      "passed": true
+    },
+    {
+      "name": "S1 safety resumes time and enters S2",
+      "passed": true
+    },
+    {
+      "name": "single live shot creates Q prompt",
+      "passed": true
+    },
+    {
+      "name": "cost dialogue starts only after real clearance",
+      "passed": true
+    },
+    {
+      "name": "reading and early Q do not consume or resume time",
+      "passed": true
+    },
+    {
+      "name": "bounded demonstration uses actual saved drain",
+      "passed": true,
+      "energy": 39.99868594110012,
+      "seconds": 2.0
+    },
+    {
+      "name": "indefinite second Q wait remains stopped with zero drain",
+      "passed": true
+    },
+    {
+      "name": "recovery explanation waits for actual safe pass",
+      "passed": true
+    },
+    {
+      "name": "recovery is visible before Stage3 refill",
+      "passed": true
+    },
+    {
+      "name": "Stage3 restores drain, input and gauge size",
+      "passed": true
+    },
+    {
+      "name": "cost fixture holds protected dialogue",
+      "passed": true
+    },
+    {
+      "name": "whole reset cancels dialogue and restores all energy/UI locks",
+      "passed": true
+    },
+    {
+      "name": "drain fixture actually spends energy",
+      "passed": true
+    },
+    {
+      "name": "reset during demo clears exemption and restores native drain/time",
+      "passed": true
+    },
+    {
+      "name": "reset during recovery cancels dialogue and releases movement",
+      "passed": true
+    },
+    {
+      "name": "fresh S2 still has exactly one shooter",
+      "passed": true
+    },
+    {
+      "name": "S2 retry has one shooter, full resources and cleared lesson latch",
+      "passed": true
+    }
+  ],
+  "dialogue": [
+    {
+      "t": 10.312999999994645,
+      "step": 1,
+      "phase": 8,
+      "row": [
+        "TSS1_Energy",
+        0,
+        "Look at the gauge on your left. It shows your device's remaining energy. For this training, energy is protected."
+      ]
+    },
+    {
+      "t": 43.469000000011874,
+      "step": 2,
+      "phase": 4,
+      "row": [
+        "TSS2_EnergyCost",
+        0,
+        "Outside training, time control continuously consumes energy. Watch the gauge now. Then press Q again when prompted to restore time."
+      ]
+    },
+    {
+      "t": 55.79700000002049,
+      "step": 2,
+      "phase": 8,
+      "row": [
+        "TSS2_EnergyRecovery",
+        0,
+        "With time control off, energy recharges automatically. Release it in time, and save energy for your next move."
+      ]
+    }
+  ],
+  "energy_demo": {
+    "observed_saved_drain": 30.0,
+    "seconds": 2.0,
+    "start": 99.49999902397394,
+    "end": 39.99868594110012,
+    "recovery_start": 52.598632015287876
+  },
+  "compile": {
+    "training": "errors=0 warnings=0 status=3",
+    "level": "errors=0 warnings=0 status=3",
+    "hud": "errors=0 warnings=0 status=3"
+  },
+  "graph_layout_audit": [
+    {
+      "asset": "training",
+      "graphs": 82,
+      "identical": true
+    },
+    {
+      "asset": "level",
+      "graphs": 32,
+      "identical": true
+    },
+    {
+      "asset": "hud",
+      "graphs": 13,
+      "identical": true
+    }
+  ],
+  "saved": {
+    "packages": [
+      "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "/Game/UI/Widgets/UI_Hud",
+      "/Game/Maps/Map_TrainingRoom",
+      "/Game/Data_Dialog/DT_DialogueConversations",
+      "/Game/Data_Dialog/DT_TutorialEnergy"
+    ],
+    "dirty_after": []
+  },
+  "ability_asset_unchanged": true,
+  "editor": {
+    "dirty": [],
+    "helper_loaded": false,
+    "pie_stopped": true,
+    "map": "/Game/Maps/Map_TrainingRoom.Map_TrainingRoom"
+  },
+  "methods": [
+    "S1 uses mapped Enhanced Input movement/Q and waits for real dialogue completion.",
+    "S2 sends mapped movement against the actual bullet path; first/second time toggles call the original ToggleTimeAbility after opening the tutorial input gate, without physical keyboard simulation.",
+    "Energy demonstration uses the current saved drain and actual ability ticking; energy recovery uses the unchanged native recovery rate.",
+    "Interruption fixtures call public teaching helpers and PrepareRetry/EnterExercise for cost, drain, recovery and repeated S2 spawn cleanup."
+  ],
+  "limits": [
+    "New English Omen lines are text-only; no new voice recordings.",
+    "No complete hands-on tutorial beyond Stage3, packaged or network verification.",
+    "Native window screenshot interface was unavailable; Blueprint readability has structured exports and a manual local layout pass, without a successful screenshot review."
+  ],
+  "rework": [
+    "HUD belongs to the player; corrected the new presentation reference before compiling.",
+    "Corrected PrepareRetry parameter name before final compile.",
+    "The legacy forced-stop top-up initially held energy at 100; the final code exempts only the bounded demonstration."
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "source": "Saved/Agent/LabR17/presentation_result.json",
+  "source_sha256": "110e5478d44ea7c522610ee8b3df6324063bbf2728fe68bd34e3d86039e50907",
+  "note": "The presentation helper call deliberately has compiled=false. Root compiled/saved afterward; post_compile_status and post_compile_semantic_unchanged report that subsequent step. This summary retains scalar results and errors, omitting duplicate full graph snapshots.",
+  "results": [
+    {
+      "applied": true,
+      "compiled": false,
+      "saved": true,
+      "asset": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor.BP_LabRoomDoor",
+      "validated_node_count": 192,
+      "changed_node_count": 182,
+      "semantic_unchanged": true,
+      "ok": true,
+      "post_compile_status": 3,
+      "post_compile_semantic_unchanged": true,
+      "errors": []
+    },
+    {
+      "applied": true,
+      "compiled": false,
+      "saved": true,
+      "asset": "/Game/Characters/Omen/Blueprints/BP_OmenObserver.BP_OmenObserver",
+      "validated_node_count": 6,
+      "changed_node_count": 6,
+      "semantic_unchanged": true,
+      "ok": true,
+      "post_compile_status": 3,
+      "post_compile_semantic_unchanged": true,
+      "errors": []
+    }
+  ]
+}

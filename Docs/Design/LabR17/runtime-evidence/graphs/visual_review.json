@@ -1,0 +1,163 @@
+{
+  "date": "2026-10-17",
+  "capture_report_sha256": "0e7d571a14b9fa806bd73c17cfc099b6f7e692fd2249d381d221d2e15ec293fa",
+  "graph_count": 10,
+  "selected_image_count": 17,
+  "scope": "Visual sampling of current native captures: every graph has at least one 100% tile or 1:1 overview. No observed node-body overlap in sampled views; intent comments are present. Shared data wires may still cross. This review does not substitute for full functional tests.",
+  "all_source_hashes_unchanged": true,
+  "images": [
+    {
+      "asset": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "graph": "ConfigureDoor",
+      "path": "BP_LabRoomDoor_ConfigureDoor_tile_01_01.png",
+      "kind": "native_100_percent_tile",
+      "zoom": 1,
+      "sha256": "83d9714c4e789aa1fa1d7883fea6cc44219f9f98d61debd0c3f3a7e2b9e53c96",
+      "visually_reviewed": true
+    },
+    {
+      "asset": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "graph": "ApplyDoorPose",
+      "path": "BP_LabRoomDoor_ApplyDoorPose_tile_01_01.png",
+      "kind": "native_100_percent_tile",
+      "zoom": 1,
+      "sha256": "c887ee190b7375ba0dd6bcceadc1eb185cda06979e393a0b82d2c76359d4806a",
+      "visually_reviewed": true
+    },
+    {
+      "asset": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "graph": "WakeDoor",
+      "path": "BP_LabRoomDoor_WakeDoor.png",
+      "kind": "overview_native_zoom",
+      "zoom": 1,
+      "sha256": "576ed0df7a4c91ff58dc56db534892b03aac00bac73b66d9c674e977cb1d8927",
+      "visually_reviewed": true
+    },
+    {
+      "asset": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "graph": "SetDoorOpen",
+      "path": "BP_LabRoomDoor_SetDoorOpen.png",
+      "kind": "overview_native_zoom",
+      "zoom": 1,
+      "sha256": "6c1bdca961e00739a77791150be60a06b091dee2b2156ac9e797f9cb16128824",
+      "visually_reviewed": true
+    },
+    {
+      "asset": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "graph": "ShowDoorPrompt",
+      "path": "BP_LabRoomDoor_ShowDoorPrompt_tile_01_01.png",
+      "kind": "native_100_percent_tile",
+      "zoom": 1,
+      "sha256": "d3fcc0c833bb2e8bdde2a0c5523e6dcd49c9f502eae67c5d367754dff114efc5",
+      "visually_reviewed": true
+    },
+    {
+      "asset": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "graph": "DoorwayOccupied",
+      "path": "BP_LabRoomDoor_DoorwayOccupied.png",
+      "kind": "overview_native_zoom",
+      "zoom": 1,
+      "sha256": "a7f6e8afb6e78712520902fbf30b3e73512b75315231396363340e3c76fcf0c3",
+      "visually_reviewed": true
+    },
+    {
+      "asset": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "graph": "CheckAutomaticDoor",
+      "path": "BP_LabRoomDoor_CheckAutomaticDoor_tile_01_01.png",
+      "kind": "native_100_percent_tile",
+      "zoom": 1,
+      "sha256": "ca1cb9251cc540623ef6d7fa63d1a2572dc2d0ffef5c52e475b21ef54f9ebecc",
+      "visually_reviewed": true
+    },
+    {
+      "asset": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "graph": "UserConstructionScript",
+      "path": "BP_LabRoomDoor_UserConstructionScript.png",
+      "kind": "overview_native_zoom",
+      "zoom": 1,
+      "sha256": "dcbbeaaae9613f8f7dc13d6064730f7239ed109b6ae2f013246494efdd61f3cc",
+      "visually_reviewed": true
+    },
+    {
+      "asset": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "graph": "EventGraph",
+      "path": "BP_LabRoomDoor_EventGraph_tile_02_01.png",
+      "kind": "native_100_percent_tile",
+      "zoom": 1,
+      "sha256": "b1242d79fbd9c663e2380f8b20920b2ac60364e350d6e75e85ded658b6fe6c6f",
+      "visually_reviewed": true
+    },
+    {
+      "asset": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "graph": "EventGraph",
+      "path": "BP_LabRoomDoor_EventGraph_tile_03_02.png",
+      "kind": "native_100_percent_tile",
+      "zoom": 1,
+      "sha256": "6165d9415e1f60ffa62fbb1ab0ec68542a756a07cd10ae13a6adb4083fb04861",
+      "visually_reviewed": true
+    },
+    {
+      "asset": "/Game/Characters/Omen/Blueprints/BP_OmenObserver",
+      "graph": "EventGraph",
+      "path": "BP_OmenObserver_EventGraph_tile_01_01.png",
+      "kind": "native_100_percent_tile",
+      "zoom": 1,
+      "sha256": "1d0cdc601ce76d0f1eb57bb9c77076a93ac55cd4cc5365aebc791113a7f849c3",
+      "visually_reviewed": true
+    },
+    {
+      "asset": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "graph": "ConfigureDoor",
+      "path": "BP_LabRoomDoor_ConfigureDoor.png",
+      "kind": "overview_native_zoom",
+      "zoom": 0.17499999701976776,
+      "sha256": "fb730105eb906431c5f170b8c4f623ca9dad64fc416c018db3f73c61308f5f12",
+      "visually_reviewed": true
+    },
+    {
+      "asset": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "graph": "ApplyDoorPose",
+      "path": "BP_LabRoomDoor_ApplyDoorPose.png",
+      "kind": "overview_native_zoom",
+      "zoom": 0.375,
+      "sha256": "b1aa8d250d9c73570e664484ab92b75f3736e96a0a788e50d64d49699f9a800c",
+      "visually_reviewed": true
+    },
+    {
+      "asset": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "graph": "EventGraph",
+      "path": "BP_LabRoomDoor_EventGraph.png",
+      "kind": "overview_native_zoom",
+      "zoom": 0.22499999403953552,
+      "sha256": "669487d4fd7193a0d1c320ccd7948c7a8bdd8954dc9e839b9886236bad9eae6d",
+      "visually_reviewed": true
+    },
+    {
+      "asset": "/Game/Characters/Omen/Blueprints/BP_OmenObserver",
+      "graph": "EventGraph",
+      "path": "BP_OmenObserver_EventGraph.png",
+      "kind": "overview_native_zoom",
+      "zoom": 0.25,
+      "sha256": "32a41e677e441ae9738b2d832d9bca7bdea8d5f81f59fcd3436e0813195e8d16",
+      "visually_reviewed": true
+    },
+    {
+      "asset": "/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor",
+      "graph": "EventGraph",
+      "path": "BP_LabRoomDoor_EventGraph_tile_01_01.png",
+      "kind": "native_100_percent_tile",
+      "zoom": 1,
+      "sha256": "e95b9eff5b85d77812af10ff4c021f56248ac3a16cbe9f4e42dcbe50ec0314c1",
+      "visually_reviewed": true
+    },
+    {
+      "asset": "/Game/Characters/Omen/Blueprints/BP_OmenObserver",
+      "graph": "EventGraph",
+      "path": "BP_OmenObserver_EventGraph_tile_02_03.png",
+      "kind": "native_100_percent_tile",
+      "zoom": 1,
+      "sha256": "311db0d97849799b7936232bf005c90e2a3f5f3cd4d0821188062ea94befed50",
+      "visually_reviewed": true
+    }
+  ]
+}

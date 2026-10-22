@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "direct_dependencies": {
+    "/Game/DialogSystem/Blueprints/BPI_DialogueMemory": [],
+    "/Game/DialogSystem/Blueprints/BFL_Dialogue": [
+      "/Engine/EditorBlueprintResources/StandardMacros",
+      "/Game/DialogSystem/Blueprints/AC_DialogueManager",
+      "/Game/DialogSystem/Types/ENUM_DialogueEndReason",
+      "/Game/DialogSystem/Types/S_DialogueLine",
+      "/Game/DialogSystem/Types/S_DialogueConversation",
+      "/Game/DialogSystem/Blueprints/BPI_DialogueMemory"
+    ],
+    "/Game/DialogSystem/Blueprints/AC_DialogueManager": [
+      "/Script/UMGEditor",
+      "/Script/UMG",
+      "/Game/Blueprints/Player/BP_FPCharacter",
+      "/Game/Blueprints/Components/Player/AC_TimeAbility",
+      "/Engine/EditorBlueprintResources/StandardMacros",
+      "/Game/Blueprints/Interactables/BP_Item_Base",
+      "/Script/EnhancedInput",
+      "/Game/TimeReverseSystem/Blueprints/ReverseSystem/Controller/BP_ReverseSystemController",
+      "/Game/DialogSystem/Types/ENUM_DialogueTrigger",
+      "/Game/DialogSystem/Types/ENUM_DialogueRequestResult",
+      "/Game/DialogSystem/Types/ENUM_DialogueEndReason",
+      "/Game/DialogSystem/Blueprints/BFL_Dialogue",
+      "/Game/DialogSystem/Types/S_DialogueLine",
+      "/Game/DialogSystem/UI/WBP_Dialogue",
+      "/Game/DialogSystem/Types/S_DialogueConversation",
+      "/Game/DialogSystem/Types/ENUM_DialogueState",
+      "/Game/DialogSystem/Input/IMC_Dialogue",
+      "/Game/DialogSystem/Input/IA_DialogueToggleAuto",
+      "/Game/DialogSystem/Input/IA_DialogueNext",
+      "/Game/DialogSystem/Blueprints/BP_DialogueSession",
+      "/Game/Blueprints/Components/Player/AC_Interaction"
+    ]
+  },
+  "gi_referencers": [],
+  "memory_default": false,
+  "component_default": false,
+  "project_gi_preserved": true,
+  "dirty_content": [],
+  "dirty_maps": []
+}

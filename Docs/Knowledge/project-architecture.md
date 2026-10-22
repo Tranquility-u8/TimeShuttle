@@ -1,5 +1,9 @@
 # 当前项目架构
 
+- Mission HUD (2026-10-19, LEVEL-002/P-106): AC_MissionObjectives and AC_TrainingObjectives drive ordinary UMG widgets from 8 page rows and 17 StepId bindings. English blue/black title/list UI replaces creation of WBP_TrainingObjective. Runtime is Blueprint-only; existing 86 flow tasks, level layout, Game Instance and disabled memory/persistence remain. Validation: 30 visible-window UI, 31 final training and 20 cold state assertions; 77 cold Blueprint compiles; three viewport sizes. Hidden embedded cold animation timing was not counted as passed. See [HUD implementation](../Implementation/mission-ui.md) and local-only evidence at `LocalTests/MissionUI/Docs/Implementation/MissionUI/validation.json`.
+
+- MissionSystem Blueprint refactor (2026-10-18, LEVEL-002/P-008/P-058/P-106): BP_TrainingMission now authors 86 task components across eight checkpoints; removed 31 hardcoded Level Blueprint stage functions. Dialogue, owned control locks, role-bound Cutscenes, signals, background joins and failure/retry routes are extensible Blueprint tasks. 70 functional checks pass, followed by 44 ordinary-editor cold regression checks and five training startup checks; 73 Blueprints cold-compile without Blueprint warnings/errors. Preserved 189 original scene actors, 80 unrelated controller graphs and existing save files. Memory/persistence remain off. Later training objectives use disclosed fixtures; no manual aim, network or Cook acceptance. See [implementation](../Implementation/mission-system.md) and [validation](../Implementation/MissionSystem/validation.zh-CN.md).
+
 仓库与 Unreal 5.6 实际资产核对日期：2026-10-10。本文描述实现入口；设计目标仍以 `design-snapshot.md` 和对应 Drive 来源为准。本次未刷新 Drive。
 
 ## 目录职责
@@ -35,19 +39,20 @@
 
 - 编辑器启动地图、游戏默认地图：`/Game/Maps/Map_Test`。
 - **Map_Test 自身的 GameMode Override 是 `/Game/Blueprints/GameModes/GM_FP`**；玩家为 `/Game/Blueprints/Player/BP_FPCharacter`。配置中的全局 fallback 仍是 `/Game/FirstPerson/Blueprints/BP_FirstPersonGameMode`，不能混为一谈。
-- 输入：`/Game/Input/IMC_Player`；Q 对应 `/Game/Input/Actions/IA_Reverse`，T 对应 `/Game/Input/Actions/IA_TimeAbility`。玩家负责输入和启动全局反转，AI 不实现玩家输入。
+- 输入（2026-10-15）：`/Game/Input/IMC_Player` 的 Q 对应 `/Game/Input/Actions/IA_TimeAbility`；用户已移除该映射上下文中的 `IA_Reverse` 绑定。右键对应 `IA_Aim`。玩家负责输入，AI 不实现玩家输入。
 - 蹲起（2026-10-15）：`BP_FPCharacter.IA_Crouch` 的 Started 调用 `ToggleCrouch`，C 键按一次下蹲、再按一次站起，释放不改变姿态；切换读取原生 `bWantsToCrouch`，与冲刺/复活保持同步。CharacterMovement 管理碰撞与低顶重试，`UpdateCrouchView` 在 Mesh 更新后、SpringArm 更新前按实际时间平滑并校正视点。站立/蹲姿视点为胶囊底部上方 160/95 cm，蹲姿胶囊高 110 cm、速度 205 cm/s。快跑/冲刺先检查完整站立空间，复活恢复站起请求；Shooter 用 `GetActorEyesViewPoint` 瞄准。参数、教程低掩体验证与边界见 [FPS 蹲起](../Implementation/fps-crouch.md)。
 - 近战：`/Game/Blueprints/AI/Melee/BP_MeleeNPC` → `/Game/EnemyAITutorial/Enemies/AI/AIC_Enemy_Base` → `BT_Enemy_Melee`。巡逻读取关卡中的 `BP_PatrolRoute`，攻击、动画、剑与行为树依赖均来自迁入资源。
 - 远程：`/Game/Blueprints/AI/Shooter/BP_ShooterNPC` → 同一 `AIC_Enemy_Base` → `BT_Enemy_Ranged`。巡逻、感知、选位、枪械模型、动画与开火节奏来自迁入资源；开火终点改为生成 TimeShuttle 的 `BP_ShooterProjectile_Bullet`，继续沿用本项目命中与伤害判定。战术掩体复用 `EQS_FindCover` 和独立 `CoverLocation`；`BTT_ReserveAndMoveToCover` 以 275 uu 互斥半径管理分布式预约/占用并处理失败、Abort、死亡/回溯释放，`BTT_CoverPeekBurst` 依据目标方向选择左右 140 uu 侧身、短点射并归位后进入四秒冷却。Shooter 的 RVO 继续负责移动过程中的局部避让。
 - 听觉：玩家枪械在 `BP_Item_Base.Fire_HitScan` 起点以武器 Actor 位置上报 `Gunshot` 听觉事件（近战分支静音）。共享 `AIC_Enemy_Base` 的 Hearing 范围为 2000 uu、刺激保留 5 秒；仅听到枪声时把该位置写入 `PointOfInterest` 并进入 Investigating，不会绕过视线直接设置 `AttackTarget`。近战与远程行为树复用同一调查分支。
 - 玩家武器数据：`PDA_Item` / `PDA_ProceduralAnimValues` 是蓝图类；`Data/Weapons/Player/**/DA_*AnimationValues` 是实例，并非 DataTable。
+- 敌人血条（2026-10-15）：`GM_FP` 的 `bShowEnemyHealthBars`（编辑器显示 `Show Enemy Health Bars`）默认开启。共享 `BP_Enemy_Base.RefreshHealthBarVisibility` 在血条初始化后及 Tick 读取当前 GameMode，仅在可见性变化时更新组件；同时要求敌人未死亡。现有及后来生成的近战/远程敌人均遵循该设置，时停中可切换。详见 [本次参数与修复记录](../Implementation/time-controls-health-bars.md)。
 - 存档：`Blueprints/SaveSystem` 中的 `SG_Character` / `SG_SaveSlots`。本地 `Saved/SaveGames` 不进 Git，测试前后需保护真实存档。
 
 ## 时间能力核心入口
 
-`/Game/Blueprints/Components/Player/AC_TimeAbility` 挂载在 `BP_FPCharacter` 上，负责 0–100 能量、Normal / FullStop / BulletTime 三态、均匀消耗恢复及零能量退出。当前 `ModeIndex` 映射为 0 / 1 / 2，阈值 70 归入 FullStop。组件和玩家现有回溯输入共同形成双向互斥门禁。
+`/Game/Blueprints/Components/Player/AC_TimeAbility` 挂载在 `BP_FPCharacter` 上，负责 0–100 能量、Normal / FullStop / BulletTime 三态、均匀消耗恢复及零能量退出。当前 `ModeIndex` 映射为 0 / 1 / 2，阈值 **30** 归入 FullStop；`RecoveryPerSecond=20`，`DrainPerSecond=15`，按现实时间计量。组件和玩家现有回溯逻辑共同形成双向互斥门禁。
 
-`AC_TimeAbility` 在 `FullStop` 使用全局时间倍率 0.01，并用倒数补偿玩家和当前武器；在 `BulletTime` 将能量 70→0 映射为世界倍率 0.2→1.0。`/Game/UI/Widgets/UI_Hud.SetTimeAbilityStatus` 接收能量百分比和模式索引，更新画面左侧的竖向进度条、100% / 70% / 0% 阈值、当前百分比、模式文字与颜色区域；`SetTemporalProjectileStatus` 在 FullStop 显示时间弹丸数量、12 发上限及满额提示。详细范围和验证见 [TimeAbilityCore.md](../Implementation/TimeAbilityCore.md)。
+`AC_TimeAbility` 在 `FullStop` 使用全局时间倍率 0.01，并用倒数补偿玩家和当前武器；在 `BulletTime` 将能量 30→0 映射为世界倍率 0.2→1.0。`/Game/UI/Widgets/UI_Hud.SetTimeAbilityStatus` 接收能量百分比和模式索引，更新画面左侧的竖向进度条、100% / 30% / 0% 阈值、当前百分比、模式文字与颜色区域；`SetTemporalProjectileStatus` 在 FullStop 显示时间弹丸数量、12 发上限及满额提示。`AC_ProceduralAnimation` 的手部姿态过渡速率乘玩家 CustomTimeDilation，位置/旋转弹簧读取组件 Tick 的 DeltaSeconds，使时停中的瞄准进入/退出保持响应。详细范围和验证见 [TimeAbilityCore.md](../Implementation/TimeAbilityCore.md)。
 
 ## 时间停止视觉层（2026-10-03）
 
@@ -107,23 +112,31 @@ Shooter 的迁入步枪与行为树保留原有开火节奏，但射击终点生
 
 同日普通射击扩展：`BP_Item_Base.Fire_HitScan` 的 UseTemporalProjectile=false 分支经 `SpawnHitscanTrail(ShotHit)` 生成 `/Game/VFX/BulletTrail/BP_HitscanTrail`，随后继续原即时伤害链。后者是独立原生 Actor 子类（不是 BP_TimeBullet），持有同一个 AC_BulletTrail；记录真实命中点/TraceEnd，按世界 DeltaSeconds 以默认5000cm/s推进、钳制终点、保持0.04游戏秒后清理。无碰撞/伤害、不计时停弹数量，FullStop 原路径保留。Normal/BulletTime 的样式入口是 BP_HitscanTrail.BulletTrail，FullStop 的是 BP_TimeBullet.BulletTrail；两模板可分别覆盖。新增42项指定PIE检查通过，旧图除单次视觉调用外语义保持；详见上述实现文档。
 
-## DialogSystem（2026-10-12）
+## DialogSystem（2026-10-18）
 
-`/Game/DialogSystem` 保存逐句/整段 DataTable、可编辑 WBP_Dialogue、独立 Enhanced Input 与三个触发入口。`Plugins/TimeShuttleDialog` 为 UE5.6 原生 Runtime 模块，提供行结构、DialogueManager 状态机、2D语音完成回调、玩家控制锁和 GameInstance 级 DialogMemory；无需编辑器制作辅助工具运行。
+`/Game/DialogSystem` 现为完整普通蓝图运行系统。AC_DialogueManager（ActorComponent）负责状态、优先级、语音完成和锁定清理；BP_DialogueSession 负责异步预加载及输入；BFL_Dialogue 提供查找、数据校验、输入门禁、死亡及存档接口；WBP_Dialogue 为可编辑 UMG。Types 中的两种 S_ 结构体与四种 ENUM_ 替代原生类型。TimeShuttleDialog 插件已从工程移除，无运行时制作工具依赖。
 
-BP_FPCharacter 的 DialogueManager 使用 AC_DialogueManager 项目适配子类；按下/持续输入经过 AllowGameplayInput，释放路径保留，死亡与显式主存档接入静态通知。碰撞 Trigger、继承 BP_Interaction_Base 的 NPC（现有 F 互动）和 Story 请求共享该管理器。新加玩法输入也须接门禁，禁止 ClearAllMappings 或 ResetIgnoreMoveInput 破坏其他系统状态。
+BP_FPCharacter 的 DialogueManager 组件及全部既有调用已迁移；原七张对白表内容逐字段保持，现有对白位于 Data_Dialog 与 Tutorial/Dialogue。碰撞、NPC 互动及 Story 仍共享唯一管理器。任务/Cutscene 通过开始、句事件及带结束原因的结束事件接入；仅 Completed 表示成功。训练关卡的阶段编排未在本轮重构。
 
-跨关卡/磁盘记忆默认 false，侧车为原槽名加 `_Dialogue`，未开启自动存档/启动读档。正式台词表为空待填写，Tests 独立。84项指定运行检查、6个蓝图编译保存、插件三个目标构建及视觉证据见 [dialog-system.md](../Implementation/dialog-system.md)；不代表完整游戏已打包验收。
+最新解耦：对话管理器和函数库通过 `/Game/DialogSystem/Blueprints/BPI_DialogueMemory` 访问可选记忆，具体 GI 类直接引用为零。服务缺失或关闭时正常播放并保留局部一次性记录，显式存读失败安全返回；持久化仍关闭。本轮 基础 59/59、跨关卡/训练接入 15/15、默认原生 GI 无记忆服务 21/21、接口开关 11/11 通过，独立冷加载12蓝图通过，见 [记忆解耦](../Implementation/DialogSystem/MemoryDecouple20261018/README.md)。
+
+GameInstanceClass 为 `/Game/Blueprints/Core/BP_TimeShuttleGameInstance`，直接继承 Engine.GameInstance，是项目通用入口；对话记忆作为 `Dialogue|Memory` 分类的一项功能，未来其他项目级服务另行加入。改名后冷进程59项基础＋15项跨关卡/训练接入回归通过，旧类路径引用为零；持久化默认 false，SG_DialogueMemory 侧车槽为原槽名加 `_Dialogue`，自动保存/读档仍未开启。旧原生存档需一次性转换，本机已备份并转换 QA 旧槽。验证：57 基础＋28 边界＋15 跨关卡/训练接入均通过；无辅助插件进程冷加载/编译 11 个运行蓝图，旧模块和两种制作模块引用为零。证据、恢复点及范围见 [dialog-system.md](../Implementation/dialog-system.md)，不代表全游戏打包或 S1–S7 完整通关复测。
 
 ## Training Room tutorial（2026-10-14）
 
+2026-10-17（体验修复）：S1 开场自由行走，进入落石区域才触发对话并锁移动；落石预演中显示能量条与 Q 引导，玩家成功按 Q 后才播放 “In this state / Now, move” 的后续对话；结束后解锁移动，不耗能到安全区并自动恢复时间。S2 为单段（内部 step 2 → S3 的 step 5）：原 `BP_ShooterNPC` 真实动画开一枪 → Q 图标 → 第一次 Q 时停 → 玩家移出实际弹道 → 系统锁移动并提示再次 Q → 第二次 Q 恢复 → 确认真实弹丸经过且未受伤后进入 S3。`AC_TimeAbility.PollGuidedQInput` 在教学窗口单独处理物理 Q 边沿，普通 QTE 保留原 T 显示/超时；`SetTutorialMovement` 按拥有状态边沿管理锁，重试不叠加。旧静态射手保留在隐藏的 `LegacyS2` 分组。细节与验证见 [教程实施记录](../Implementation/training-room-tutorial.md)。
+
 `/Game/Maps/Map_TrainingRoom` 的 Level Blueprint 拥有 S1～S7 的 Enter/Check 图表、CurrentStep/Phase 和阶段调度。原 `TimeShuttleTraining` 插件已移除。普通 `BP_TrainingController` 提供供弹、时间/位置观察及真实目标/战斗机制，不自行选择下一阶段；`AC_TrainingVisual` 处理独立Dissolve和碰撞，`WBP_TrainingObjective` 显示提示，`BPI_TrainingShot` / `BFL_TrainingImpact` 接入真实武器。资产均在 `/Game/Environment/TrainingRoom/Tutorial`；控制器的16组并行材质数组必须同时检查 CDO 与已放置实例覆盖。
 
-每对象独立 MID 的 TS_PlanePosition 驱动原 MF_PlaneMask；S3～S7A 公共桌与供弹连续保留，S7B 才撤除。共享接入点仅为 BP_Item_Base.ResolveShotDamage、BP_TimeBullet 的两种实际命中处理，以及 AC_TimeAbility 的 S1 演示锁。未登记目标走原伤害链；阶段/检查点记录仅在关卡实例内，不写教学存档。Backspace 重试当前小段，长按 Home 重置全教程。
+每对象独立 MID 的 TS_PlanePosition 驱动原 MF_PlaneMask；S3～S5 公共桌与供弹连续保留，进入 S7A 近战预览时撤除。S5 常态射击连接体即可完成落石击杀，随后直接进入 S7A；旧 S6/可选入口重定向 S7A。S7A 出生点固定在实验室正前方；2026-10-18 已移除自动射击布局镜像，所有阶段使用编辑器摆放的固定初始变换。S7 敌人定位代理仅保留出生变换，已移除废弃静态机器人网格。共享接入点为 BP_Item_Base.ResolveShotDamage、BP_TimeBullet 的两种实际命中处理，以及 AC_TimeAbility / UI_Hud 的教学输入门控、能量条显隐与 T 提示等待模式。未登记目标走原伤害链；阶段/检查点记录仅在关卡实例内，不写教学存档。Backspace 重试当前小段，长按 Home 重置全教程。
 
-S7 使用原有近战/远程 NPC 及伤害系统，动态导航支持变动掩体。完整冷启动真实输入通关、死亡重试、原地换场、实际离场和重置证据见 [training-room-tutorial.md](../Implementation/training-room-tutorial.md)。本次不改变默认启动地图或其他实验室的完成状态。
+S3 为四个固定的敌人骨骼模型，每人一个胸部弱点；S4 收为一个有左右行走动画的弱点敌人（step 6 → 9）。S7 使用原有近战/远程 NPC 及伤害系统，动态导航支持变动掩体。S7B 按提供的平面图布置四高四低掩体和中央悬石机关；首次自行到 P 后才补满生命/能量、12 发弹匣及 24 发备弹并生成敌人，死亡重试回 P 面向场内。机关落点下方可通行，真实连接体命中后落石可伤害范围内的真实敌人。完整冷启动真实输入通关、死亡重试、原地换场、实际离场和重置证据见 [training-room-tutorial.md](../Implementation/training-room-tutorial.md)。本次不改变默认启动地图或其他实验室的完成状态。
 
 ## 维护入口
+
+2026-10-19 shared AI target selection: `AIC_Enemy_Base.IsEligibleAttackTarget` filters sight/damage candidates and final attack assignment. Hidden actors and unregistered non-player Pawns are excluded; the possessed player remains eligible without `BPI_EnemyAI`, and explicit combatants keep the original team comparison. This fixes enemies aiming at hidden range Characters instead of the player, without changing layout or mesh rotation. See [AI implementation and verification](../Implementation/EnemyAIBehaviorMigration.md#shared-attack-target-eligibility--2026-10-19).
+
+2026-10-19 tutorial spawn facing: S7A/S7B retain fixed editor-authored spawn positions, but `BP_TrainingController.ResolveCombatSpawnFacing` supplies upright player-facing world yaw to deferred spawning on first entry and retry. This supersedes the 2026-10-18 proxy-rotation rule for these native enemies; stage-layout mirroring remains removed. See [tutorial implementation](../Implementation/training-room-tutorial.md#2026-10-19-final-combat-initial-facing).
 
 - 实验室新版白盒：`/Game/Maps/Map_LabV39`，独立于旧 `Map_LabBridge`；建筑资源在 `Environment/LabV39`，桥接身份与旧图分离。使用 `GM_FP` 和现有角色，初始门禁为静态阻挡，尚未接入剧情解锁。2026-10-02 的构建、碰撞及角色通行证据见 [LabV39Whitebox.md](../Implementation/LabV39Whitebox.md)。默认启动地图仍为 `Map_Test`。
 
@@ -132,3 +145,19 @@ S7 使用原有近战/远程 NPC 及伤害系统，动态导航支持变动掩�
 - 协作与授权：仓库根 `AGENTS.md` 为唯一规则源；skills 只路由工作流程。
 - 工具状态：[../MCP/SOP.md](../MCP/SOP.md)。没有已选定的 UE MCP 服务；发现本次实际工具后再选择编辑器 Python、Unreal-aware helper 或 GUI。
 - 改动落地后更新受影响事实及证据日期，不能用本地架构核对冒充 Drive 来源刷新。
+
+2026-10-17 tutorial target follow-up: `Environment/TrainingRoom/Tutorial/BP_TrainingTarget` is a passive Character with ShooterNPC mesh/materials, the original `AC_EnemyWeakPoints`, and the standard health-read interface backed by tutorial visual life state. Internal steps 5 → 6 → 7 → 9 teach ordinary static kills, static native weak-point hits, moving native weak-point stop-shot/resume, then the rock. `BP_TrainingController.StartTargets` selects actors and enables native presentation; `ResolveTrainingShot` asks the original resolver instead of checking a synthetic tutorial sphere tag. Production NPC and weapon defaults are unchanged. See [tutorial implementation](../Implementation/training-room-tutorial.md).
+
+2026-10-17 range/plank revision: `BP_TrainingTarget` is the no-weakpoint body/rock-victim base with 100 health and hit/death animation state. `BP_TrainingWeakTarget` adds native weak points; both use controller-owned visual references. `BS_TrainingStrafe` blends local signed velocity through idle while keeping facing stable. `BP_TrainingController` owns support timing and slab geometry; it sets `PlankRetryRequested` and the Level Blueprint alone calls `EnterExercise` for retries, avoiding a private map reference. Final combat begins directly in `Enter_S7B`. Original production NPC, weapon and time-ability assets remain unchanged by this follow-up.
+
+2026-10-17 visibility/contact repair: `BP_TrainingTarget.UpdateRangeTarget` applies the FullStop marker gate to both stationary and walking weak-point lessons. The final-arena rock footprint is unchanged; link base Z615 overlaps rock top Z620, stem bottom Z682 overlaps link top Z685, with link/stem aligned at Y−998. Native damage resolution remains unchanged.
+
+2026-10-17 container/health follow-up: `Map_TrainingRoom.EnterExercise` invokes controller `RestoreStageHealth` before either routing branch, restoring Health/LastPlayerHealth to the current native full value 2. The final falling actor keeps its stable ID but uses `Stages/Meshes/SM_TS_SuspendedContainer`; user-adjusted root `(0,-1100,490)` is retained. Link/stem share Y−958 and overlap the container top at Z640. Final landing damage uses the revised 450×300 cm footprint plus capsule allowance.
+
+2026-10-17 energy teaching: S1 phase 8 introduces the gauge before the falling-rock/Q preview. S2 adds protected cost dialogue, a bounded real-drain demonstration, the existing second-Q wait, then a safe-pass recovery explanation before Stage3. `DT_TutorialEnergy` supplies three replayable text-only conversations through the existing registry. Controller `EnergyDrainDemoActive` narrowly exempts the demonstration from the existing forced-stop top-up; cleanup clears it and restores gauge scale and saved rates. `UI_Hud.SetTutorialEnergyFocus` implements the short gauge-size pulse. Native time-ability input and rates are unchanged; see [tutorial implementation](../Implementation/training-room-tutorial.md).
+
+2026-10-18 tutorial supply/death: `BP_TrainingAmmoPickup` subclasses native `BP_Item_Pickup`; `BP_TrainingController.UpdateNativeAmmoSupply` owns four native pickups and cooldowns using the retained slot transforms. Native interaction owns F focus and ADD AMMO (reserve comes from ItemData.MaxAmmo). `BP_TrainingTarget.BeginRangeRagdoll` matches `BP_Enemy_Base.Die` mesh physics death; ResetRangeRagdoll restores the live mesh and MaintainRangeHiddenPhysics stops hidden corpse simulation. Production NPC/pickup assets are unchanged. See [tutorial implementation](../Implementation/training-room-tutorial.md).
+
+2026-10-18 combat reveal follow-up: `AC_TrainingVisual.HandleNativeDeath` owns the tutorial-only 2.2-game-second corpse hold/fade boundary, and `PreserveRagdollCollision` protects visible bodies from the generic actor-collision gate. `BP_TrainingController.RefreshWorldRevealRange` caches stage union bounds after layout selection; `AddVisual` assigns that interval to late native spawns. Thirteen tutorial material parents use `MF_TutorialWorldZReveal`, preserving the original Dissolve source and production materials. See [tutorial implementation](../Implementation/training-room-tutorial.md).
+
+2026-10-18 fixed layout: `BP_TrainingController` no longer has `MirrorShootingLayout` or `bLayoutMirrored`. `SetLayout` selects stage visuals without player-position-based transform rewriting, and `PrepareRetry` restores the original visual cache without an inverse reflection. `UpdateCombat` uses the placed spawn-proxy rotation, retaining the existing capsule-height offset and later normal AI movement/turning. See [tutorial implementation](../Implementation/training-room-tutorial.md).

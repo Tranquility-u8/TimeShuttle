@@ -1,0 +1,153 @@
+{
+  "date": "2026-10-18",
+  "scope": "Native tutorial ammunition interaction and normal enemy physics death",
+  "runtime": {
+    "cold_editor_without_authoring_helper": true,
+    "checks": [
+      {
+        "name": "ammo waits for pistol and old placeholders have no mesh",
+        "passed": true
+      },
+      {
+        "name": "four real native ammo pickups spawn",
+        "passed": true
+      },
+      {
+        "name": "native interaction widget displays F",
+        "passed": true,
+        "texts": [
+          [
+            "Hint",
+            "ADD AMMO"
+          ],
+          [
+            "ItemName",
+            "Pistol"
+          ],
+          [
+            "TextBlock_0",
+            "F"
+          ]
+        ]
+      },
+      {
+        "name": "real aim creates native ADD AMMO prompt",
+        "passed": true,
+        "hint": "ADD AMMO"
+      },
+      {
+        "name": "native interact adds reserve only and consumes pickup",
+        "passed": true,
+        "reserve": 24,
+        "before": 0
+      },
+      {
+        "name": "tutorial observes native ammo acquisition",
+        "passed": true
+      },
+      {
+        "name": "native reload still fills the magazine using existing ammo policy",
+        "passed": true,
+        "magazine": 12,
+        "reserve": 24
+      },
+      {
+        "name": "consumed slot refreshes once after cooldown",
+        "passed": true
+      },
+      {
+        "name": "body target uses real AI physics death",
+        "passed": true
+      },
+      {
+        "name": "ragdoll settles and target death counts once",
+        "passed": true
+      },
+      {
+        "name": "retry restores live target pose and collision",
+        "passed": true
+      },
+      {
+        "name": "stopped weakpoint shots defer damage",
+        "passed": true
+      },
+      {
+        "name": "real weakpoint hits trigger inherited AI physics death",
+        "passed": true
+      },
+      {
+        "name": "melee preview removes ammo pickups and table supply",
+        "passed": true
+      },
+      {
+        "name": "hidden target bodies stop physics after fade",
+        "passed": true
+      }
+    ],
+    "passed": 15,
+    "method": "Scoped PIE fixtures with real aim-driven native focus, mapped interaction/reload, production body shots and FullStop weak-point shots"
+  },
+  "compile": {
+    "training": "errors=0 warnings=0 status=3",
+    "target": "errors=0 warnings=0 status=3",
+    "weakTarget": "errors=0 warnings=0 status=3",
+    "ammo": "errors=0 warnings=0 status=3",
+    "level": "errors=0 warnings=0 status=3"
+  },
+  "layout": [
+    {
+      "asset": "training",
+      "graphs": 84,
+      "identical": true
+    },
+    {
+      "asset": "target",
+      "graphs": 12,
+      "identical": true
+    },
+    {
+      "asset": "weakTarget",
+      "graphs": 2,
+      "identical": true
+    },
+    {
+      "asset": "ammo",
+      "graphs": 2,
+      "identical": true
+    },
+    {
+      "asset": "level",
+      "graphs": 32,
+      "identical": true
+    }
+  ],
+  "saved_map_reload": {
+    "slots_persisted_empty": true,
+    "count": 4
+  },
+  "final_editor": {
+    "pie_stopped": true,
+    "dirty_content": [],
+    "dirty_maps": [],
+    "authoring_helper_loaded": false,
+    "death_graph_visual_review": "BeginRangeRagdoll structured comment, ordered execution and separate data rows reviewed in editor; no overlaps",
+    "native_widget_visual_review": "PISTOL / F / ADD AMMO reviewed in PIE",
+    "performance_setting_restored": true
+  },
+  "log": {
+    "blueprint_runtime_script_python_errors": 0,
+    "scope": "Final cold-editor process"
+  },
+  "source_contract": {
+    "pickup": "/Game/Blueprints/Interactables/BP_Item_Pickup; matching weapon ADD AMMO reads ItemData.MaxAmmo",
+    "death": "/Game/EnemyAITutorial/Enemies/BP_Enemy_Base.Die; mesh QueryAndPhysics and SimulatePhysics",
+    "visual": "/Game/Weapons/Player/WeaponAnims/Rifle/Weapon/SM_RifleMag"
+  },
+  "limitations": [
+    "No full hands-on tutorial playthrough",
+    "No packaged or network verification",
+    "Native reload/reserve policy preserved"
+  ],
+  "rework_count": 3,
+  "rework": "Array type API adaptation, native reserve-field correction, explicit placed-component map dirty/save correction; fixture corrections tracked separately"
+}

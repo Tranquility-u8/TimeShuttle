@@ -1,0 +1,193 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "voice request with reentrant listener accepted",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "conversation-start reentry rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "async line-start reentry rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "each natural line emits one matching end",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "one natural conversation end",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "conversation-end reentry rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "cancel does not forge natural line end",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "interrupted once remains playable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "text reading freezes during pause",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "paused request refused",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "text does not catch up paused wall time",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "physical Enter plus Space advance once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "held keys do not repeat",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "physical P toggles exactly once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "invalid config rejected EmptyId",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "invalid config rejected BadPriority",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "invalid config rejected NoLines",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "invalid config rejected DuplicateA",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "invalid config rejected BlankText",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "missing row rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "wrong row structure rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "missing voice cancels and unlocks",
+      "passed": true,
+      "detail": "SoundWave could not be loaded."
+    },
+    {
+      "name": "looping voice watchdog cancels and releases",
+      "passed": true,
+      "detail": "Dialogue audio did not finish."
+    },
+    {
+      "name": "death during loading cannot resurrect dialogue",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "source destruction does not cancel dialogue",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "converted legacy save loads after plugin removal",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "primary save failure does not write dialogue",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dialogue UI screenshot captured",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "started": 1792342505.2351513,
+  "events": [
+    "ConversationStarted: TEST_AutoVoice",
+    "LineStarted: TEST_AutoVoice / VoiceA",
+    "LineEnded: TEST_AutoVoice / VoiceA",
+    "LineStarted: TEST_AutoVoice / VoiceB",
+    "LineEnded: TEST_AutoVoice / VoiceB",
+    "LineStarted: TEST_AutoVoice / TextB",
+    "LineEnded: TEST_AutoVoice / TextB",
+    "ConversationEnded: TEST_AutoVoice",
+    "ConversationStarted: TEST_Locked",
+    "LineStarted: TEST_Locked / LongText",
+    "ConversationEnded: TEST_Locked",
+    "ConversationStarted: TEST_Once",
+    "LineStarted: TEST_Once / TextB",
+    "ConversationEnded: TEST_Once",
+    "ConversationStarted: TEST_Once",
+    "LineStarted: TEST_Once / TextB",
+    "ConversationEnded: TEST_Once",
+    "ConversationStarted: TEST_TextOnly",
+    "LineStarted: TEST_TextOnly / TextA",
+    "ConversationEnded: TEST_TextOnly",
+    "ConversationStarted: TEST_TextOnly",
+    "LineStarted: TEST_TextOnly / TextA",
+    "LineEnded: TEST_TextOnly / TextA",
+    "LineStarted: TEST_TextOnly / TextB",
+    "ConversationEnded: TEST_TextOnly",
+    "DialogueError: EmptyId",
+    "DialogueError: BadPriority",
+    "DialogueError: NoLines",
+    "DialogueError: DuplicateA",
+    "DialogueError: BlankText",
+    "DialogueError: DoesNotExist",
+    "DialogueError: VoiceA",
+    "ConversationStarted: EDGE_MissingVoice",
+    "ConversationEnded: EDGE_MissingVoice",
+    "DialogueError: EDGE_MissingVoice",
+    "ConversationStarted: EDGE_LoopingVoice",
+    "LineStarted: EDGE_LoopingVoice / LoopingVoice",
+    "ConversationEnded: EDGE_LoopingVoice",
+    "DialogueError: EDGE_LoopingVoice",
+    "ConversationStarted: TEST_ManualVoice",
+    "ConversationEnded: TEST_ManualVoice",
+    "ConversationStarted: TEST_Locked",
+    "LineStarted: TEST_Locked / LongText",
+    "ConversationEnded: TEST_Locked"
+  ],
+  "ended": 1792342528.8341744
+}

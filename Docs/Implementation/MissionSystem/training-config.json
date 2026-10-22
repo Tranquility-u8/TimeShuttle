@@ -1,0 +1,844 @@
+[
+  {
+    "name": "S1_00_Checkpoint",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_StageSetup.AC_Training_StageSetup_C",
+    "properties": {
+      "StepId": "S1_00_Checkpoint",
+      "ExerciseNumber": "1",
+      "MainGroup": "S1",
+      "SharedTable": "false",
+      "RetryOnDamage": "false",
+      "bCheckpoint": "true",
+      "NextStep": "S1_01_SetTutorialFlags"
+    }
+  },
+  {
+    "name": "S1_01_SetTutorialFlags",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_SetTutorialFlags.AC_Training_SetTutorialFlags_C",
+    "properties": {
+      "StepId": "S1_01_SetTutorialFlags",
+      "InputLocked": "true",
+      "HideEnergy": "true",
+      "WaitQTE": "false",
+      "NextStep": "S1_02_SetTutorialMovement"
+    }
+  },
+  {
+    "name": "S1_02_SetTutorialMovement",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_SetTutorialMovement.AC_Training_SetTutorialMovement_C",
+    "properties": {
+      "StepId": "S1_02_SetTutorialMovement",
+      "Locked": "false",
+      "NextStep": "S1_03_SetObjective"
+    }
+  },
+  {
+    "name": "S1_03_SetObjective",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_SetObjective.AC_Training_SetObjective_C",
+    "properties": {
+      "StepId": "S1_03_SetObjective",
+      "Title": "STAGE 1 | Approach the rocks",
+      "Objective": "Walk beneath the falling rocks ahead.",
+      "NextStep": "S1_04_WaitPlayerInTrigger"
+    }
+  },
+  {
+    "name": "S1_04_WaitPlayerInTrigger",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_WaitPlayerInTrigger.AC_Training_WaitPlayerInTrigger_C",
+    "properties": {
+      "StepId": "S1_04_WaitPlayerInTrigger",
+      "NextStep": "S1_05_SetTutorialMovement"
+    }
+  },
+  {
+    "name": "S1_05_SetTutorialMovement",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_SetTutorialMovement.AC_Training_SetTutorialMovement_C",
+    "properties": {
+      "StepId": "S1_05_SetTutorialMovement",
+      "Locked": "true",
+      "NextStep": "S1_06_S1_1"
+    }
+  },
+  {
+    "name": "S1_06_S1_1",
+    "class": "/Game/MissionSystem/Blueprints/Tasks/AC_Task_Dialogue.AC_Task_Dialogue_C",
+    "properties": {
+      "StepId": "S1_06_S1_1",
+      "Conversation": "(DataTable=\"/Game/Data_Dialog/DT_DialogueConversations.DT_DialogueConversations\",RowName=\"Tutorial_S1_1\")",
+      "Trigger": "Story",
+      "bBackground": "false",
+      "NextStep": "S1_07_BeginStage1EnergyIntro"
+    }
+  },
+  {
+    "name": "S1_07_BeginStage1EnergyIntro",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_BeginStage1EnergyIntro.AC_Training_BeginStage1EnergyIntro_C",
+    "properties": {
+      "StepId": "S1_07_BeginStage1EnergyIntro",
+      "NextStep": "S1_08_S1_Energy"
+    }
+  },
+  {
+    "name": "S1_08_S1_Energy",
+    "class": "/Game/MissionSystem/Blueprints/Tasks/AC_Task_Dialogue.AC_Task_Dialogue_C",
+    "properties": {
+      "StepId": "S1_08_S1_Energy",
+      "Conversation": "(DataTable=\"/Game/Data_Dialog/DT_DialogueConversations.DT_DialogueConversations\",RowName=\"Tutorial_S1_Energy\")",
+      "Trigger": "Story",
+      "bBackground": "false",
+      "NextStep": "S1_09_StartFallingRocks"
+    }
+  },
+  {
+    "name": "S1_09_StartFallingRocks",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_StartFallingRocks.AC_Training_StartFallingRocks_C",
+    "properties": {
+      "StepId": "S1_09_StartFallingRocks",
+      "NextStep": "S1_10_SetTutorialFlags"
+    }
+  },
+  {
+    "name": "S1_10_SetTutorialFlags",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_SetTutorialFlags.AC_Training_SetTutorialFlags_C",
+    "properties": {
+      "StepId": "S1_10_SetTutorialFlags",
+      "InputLocked": "false",
+      "HideEnergy": "false",
+      "WaitQTE": "false",
+      "NextStep": "S1_11_SetObjective"
+    }
+  },
+  {
+    "name": "S1_11_SetObjective",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_SetObjective.AC_Training_SetObjective_C",
+    "properties": {
+      "StepId": "S1_11_SetObjective",
+      "Title": "STAGE 1 | Stop the falling rocks",
+      "Objective": "Press Q to activate time stop. The next instructions begin after you stop time.",
+      "NextStep": "S1_12_S1_2"
+    }
+  },
+  {
+    "name": "S1_12_S1_2",
+    "class": "/Game/MissionSystem/Blueprints/Tasks/AC_Task_Dialogue.AC_Task_Dialogue_C",
+    "properties": {
+      "StepId": "S1_12_S1_2",
+      "Conversation": "(DataTable=\"/Game/Data_Dialog/DT_DialogueConversations.DT_DialogueConversations\",RowName=\"Tutorial_S1_2\")",
+      "Trigger": "Story",
+      "bBackground": "true",
+      "NextStep": "S1_13_WaitTimeMode"
+    }
+  },
+  {
+    "name": "S1_13_WaitTimeMode",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_WaitTimeMode.AC_Training_WaitTimeMode_C",
+    "properties": {
+      "StepId": "S1_13_WaitTimeMode",
+      "RequiredMode": "1",
+      "NextStep": "S1_14_HoldIntroTimeStop"
+    }
+  },
+  {
+    "name": "S1_14_HoldIntroTimeStop",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_HoldIntroTimeStop.AC_Training_HoldIntroTimeStop_C",
+    "properties": {
+      "StepId": "S1_14_HoldIntroTimeStop",
+      "bHold": "true",
+      "NextStep": "S1_15_Join"
+    }
+  },
+  {
+    "name": "S1_15_Join",
+    "class": "/Game/MissionSystem/Blueprints/Tasks/AC_Task_WaitForTask.AC_Task_WaitForTask_C",
+    "properties": {
+      "StepId": "S1_15_Join",
+      "WaitForStep": "S1_12_S1_2",
+      "NextStep": "S1_16_S1_AfterQ"
+    }
+  },
+  {
+    "name": "S1_16_S1_AfterQ",
+    "class": "/Game/MissionSystem/Blueprints/Tasks/AC_Task_Dialogue.AC_Task_Dialogue_C",
+    "properties": {
+      "StepId": "S1_16_S1_AfterQ",
+      "Conversation": "(DataTable=\"/Game/Data_Dialog/DT_DialogueConversations.DT_DialogueConversations\",RowName=\"Tutorial_S1_AfterQ\")",
+      "Trigger": "Story",
+      "bBackground": "false",
+      "NextStep": "S1_17_SetTutorialMovement"
+    }
+  },
+  {
+    "name": "S1_17_SetTutorialMovement",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_SetTutorialMovement.AC_Training_SetTutorialMovement_C",
+    "properties": {
+      "StepId": "S1_17_SetTutorialMovement",
+      "Locked": "false",
+      "NextStep": "S1_18_SetObjective"
+    }
+  },
+  {
+    "name": "S1_18_SetObjective",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_SetObjective.AC_Training_SetObjective_C",
+    "properties": {
+      "StepId": "S1_18_SetObjective",
+      "Title": "STAGE 1 | Reach safety",
+      "Objective": "Time is stopped. Move to the cyan safe zone ahead; this lesson uses no energy.",
+      "NextStep": "S1_19_WaitPlayerInSafeZone"
+    }
+  },
+  {
+    "name": "S1_19_WaitPlayerInSafeZone",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_WaitPlayerInSafeZone.AC_Training_WaitPlayerInSafeZone_C",
+    "properties": {
+      "StepId": "S1_19_WaitPlayerInSafeZone",
+      "NextStep": "S1_20_HoldIntroTimeStop"
+    }
+  },
+  {
+    "name": "S1_20_HoldIntroTimeStop",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_HoldIntroTimeStop.AC_Training_HoldIntroTimeStop_C",
+    "properties": {
+      "StepId": "S1_20_HoldIntroTimeStop",
+      "bHold": "false",
+      "NextStep": "S1_21_SetObjective"
+    }
+  },
+  {
+    "name": "S1_21_SetObjective",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_SetObjective.AC_Training_SetObjective_C",
+    "properties": {
+      "StepId": "S1_21_SetObjective",
+      "Title": "STAGE 1 | Safe",
+      "Objective": "You are safe. Watch the rocks land, then listen to Omen.",
+      "NextStep": "S1_22_WaitRocksLanded"
+    }
+  },
+  {
+    "name": "S1_22_WaitRocksLanded",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_WaitRocksLanded.AC_Training_WaitRocksLanded_C",
+    "properties": {
+      "StepId": "S1_22_WaitRocksLanded",
+      "NextStep": "S1_23_SetTutorialMovement"
+    }
+  },
+  {
+    "name": "S1_23_SetTutorialMovement",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_SetTutorialMovement.AC_Training_SetTutorialMovement_C",
+    "properties": {
+      "StepId": "S1_23_SetTutorialMovement",
+      "Locked": "true",
+      "NextStep": "S1_24_S1_3"
+    }
+  },
+  {
+    "name": "S1_24_S1_3",
+    "class": "/Game/MissionSystem/Blueprints/Tasks/AC_Task_Dialogue.AC_Task_Dialogue_C",
+    "properties": {
+      "StepId": "S1_24_S1_3",
+      "Conversation": "(DataTable=\"/Game/Data_Dialog/DT_DialogueConversations.DT_DialogueConversations\",RowName=\"Tutorial_S1_3\")",
+      "Trigger": "Story",
+      "bBackground": "false",
+      "NextStep": "S2_00_Checkpoint"
+    }
+  },
+  {
+    "name": "S2_00_Checkpoint",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_StageSetup.AC_Training_StageSetup_C",
+    "properties": {
+      "StepId": "S2_00_Checkpoint",
+      "ExerciseNumber": "2",
+      "MainGroup": "S2",
+      "SharedTable": "false",
+      "RetryOnDamage": "true",
+      "bCheckpoint": "true",
+      "NextStep": "S2_01_SetTutorialFlags"
+    }
+  },
+  {
+    "name": "S2_01_SetTutorialFlags",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_SetTutorialFlags.AC_Training_SetTutorialFlags_C",
+    "properties": {
+      "StepId": "S2_01_SetTutorialFlags",
+      "InputLocked": "true",
+      "HideEnergy": "false",
+      "WaitQTE": "true",
+      "NextStep": "S2_02_SetTutorialMovement"
+    }
+  },
+  {
+    "name": "S2_02_SetTutorialMovement",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_SetTutorialMovement.AC_Training_SetTutorialMovement_C",
+    "properties": {
+      "StepId": "S2_02_SetTutorialMovement",
+      "Locked": "true",
+      "NextStep": "S2_03_SetObjective"
+    }
+  },
+  {
+    "name": "S2_03_SetObjective",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_SetObjective.AC_Training_SetObjective_C",
+    "properties": {
+      "StepId": "S2_03_SetObjective",
+      "Title": "STAGE 2 | Stop the incoming shot",
+      "Objective": "Watch the enemy. When the Q icon appears, press Q to stop time, then move out of the bullet path.",
+      "NextStep": "S2_04_WaitReady"
+    }
+  },
+  {
+    "name": "S2_04_WaitReady",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_WaitReady.AC_Training_WaitReady_C",
+    "properties": {
+      "StepId": "S2_04_WaitReady",
+      "NextStep": "S2_05_StartGuidedQTE"
+    }
+  },
+  {
+    "name": "S2_05_StartGuidedQTE",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_StartGuidedQTE.AC_Training_StartGuidedQTE_C",
+    "properties": {
+      "StepId": "S2_05_StartGuidedQTE",
+      "NextStep": "S2_06_WaitShotReady"
+    }
+  },
+  {
+    "name": "S2_06_WaitShotReady",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_WaitShotReady.AC_Training_WaitShotReady_C",
+    "properties": {
+      "StepId": "S2_06_WaitShotReady",
+      "NextStep": "S2_07_FireGuidedShot"
+    }
+  },
+  {
+    "name": "S2_07_FireGuidedShot",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_FireGuidedShot.AC_Training_FireGuidedShot_C",
+    "properties": {
+      "StepId": "S2_07_FireGuidedShot",
+      "NextStep": "S2_08_WaitQTE"
+    }
+  },
+  {
+    "name": "S2_08_WaitQTE",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_WaitQTE.AC_Training_WaitQTE_C",
+    "properties": {
+      "StepId": "S2_08_WaitQTE",
+      "NextStep": "S2_09_BeginGuidedSidestep"
+    }
+  },
+  {
+    "name": "S2_09_BeginGuidedSidestep",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_BeginGuidedSidestep.AC_Training_BeginGuidedSidestep_C",
+    "properties": {
+      "StepId": "S2_09_BeginGuidedSidestep",
+      "NextStep": "S2_10_WaitGuidedSafe"
+    }
+  },
+  {
+    "name": "S2_10_WaitGuidedSafe",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_WaitGuidedSafe.AC_Training_WaitGuidedSafe_C",
+    "properties": {
+      "StepId": "S2_10_WaitGuidedSafe",
+      "NextStep": "S2_11_BeginEnergyCostLesson"
+    }
+  },
+  {
+    "name": "S2_11_BeginEnergyCostLesson",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_BeginEnergyCostLesson.AC_Training_BeginEnergyCostLesson_C",
+    "properties": {
+      "StepId": "S2_11_BeginEnergyCostLesson",
+      "NextStep": "S2_12_S2_EnergyCost"
+    }
+  },
+  {
+    "name": "S2_12_S2_EnergyCost",
+    "class": "/Game/MissionSystem/Blueprints/Tasks/AC_Task_Dialogue.AC_Task_Dialogue_C",
+    "properties": {
+      "StepId": "S2_12_S2_EnergyCost",
+      "Conversation": "(DataTable=\"/Game/Data_Dialog/DT_DialogueConversations.DT_DialogueConversations\",RowName=\"Tutorial_S2_EnergyCost\")",
+      "Trigger": "Story",
+      "bBackground": "false",
+      "NextStep": "S2_13_BeginEnergyDrainDemo"
+    }
+  },
+  {
+    "name": "S2_13_BeginEnergyDrainDemo",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_BeginEnergyDrainDemo.AC_Training_BeginEnergyDrainDemo_C",
+    "properties": {
+      "StepId": "S2_13_BeginEnergyDrainDemo",
+      "NextStep": "S2_14_WaitEnergyDemo"
+    }
+  },
+  {
+    "name": "S2_14_WaitEnergyDemo",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_WaitEnergyDemo.AC_Training_WaitEnergyDemo_C",
+    "properties": {
+      "StepId": "S2_14_WaitEnergyDemo",
+      "NextStep": "S2_15_EndEnergyDrainDemo"
+    }
+  },
+  {
+    "name": "S2_15_EndEnergyDrainDemo",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_EndEnergyDrainDemo.AC_Training_EndEnergyDrainDemo_C",
+    "properties": {
+      "StepId": "S2_15_EndEnergyDrainDemo",
+      "NextStep": "S2_16_WaitTimeMode"
+    }
+  },
+  {
+    "name": "S2_16_WaitTimeMode",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_WaitTimeMode.AC_Training_WaitTimeMode_C",
+    "properties": {
+      "StepId": "S2_16_WaitTimeMode",
+      "RequiredMode": "0",
+      "NextStep": "S2_17_SetTutorialFlags"
+    }
+  },
+  {
+    "name": "S2_17_SetTutorialFlags",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_SetTutorialFlags.AC_Training_SetTutorialFlags_C",
+    "properties": {
+      "StepId": "S2_17_SetTutorialFlags",
+      "InputLocked": "true",
+      "HideEnergy": "false",
+      "WaitQTE": "false",
+      "NextStep": "S2_18_SetObjective"
+    }
+  },
+  {
+    "name": "S2_18_SetObjective",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_SetObjective.AC_Training_SetObjective_C",
+    "properties": {
+      "StepId": "S2_18_SetObjective",
+      "Title": "STAGE 2 | Let the bullet pass",
+      "Objective": "Time is normal. Stay clear while the bullet passes.",
+      "NextStep": "S2_19_WaitBulletPassed"
+    }
+  },
+  {
+    "name": "S2_19_WaitBulletPassed",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_WaitBulletPassed.AC_Training_WaitBulletPassed_C",
+    "properties": {
+      "StepId": "S2_19_WaitBulletPassed",
+      "NextStep": "S2_20_BeginEnergyRecoveryLesson"
+    }
+  },
+  {
+    "name": "S2_20_BeginEnergyRecoveryLesson",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_BeginEnergyRecoveryLesson.AC_Training_BeginEnergyRecoveryLesson_C",
+    "properties": {
+      "StepId": "S2_20_BeginEnergyRecoveryLesson",
+      "NextStep": "S2_21_S2_EnergyRecovery"
+    }
+  },
+  {
+    "name": "S2_21_S2_EnergyRecovery",
+    "class": "/Game/MissionSystem/Blueprints/Tasks/AC_Task_Dialogue.AC_Task_Dialogue_C",
+    "properties": {
+      "StepId": "S2_21_S2_EnergyRecovery",
+      "Conversation": "(DataTable=\"/Game/Data_Dialog/DT_DialogueConversations.DT_DialogueConversations\",RowName=\"Tutorial_S2_EnergyRecovery\")",
+      "Trigger": "Story",
+      "bBackground": "true",
+      "NextStep": "S2_22_WaitRecovery"
+    }
+  },
+  {
+    "name": "S2_22_WaitRecovery",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_WaitRecovery.AC_Training_WaitRecovery_C",
+    "properties": {
+      "StepId": "S2_22_WaitRecovery",
+      "MinimumSeconds": "2",
+      "NextStep": "S2_23_Join"
+    }
+  },
+  {
+    "name": "S2_23_Join",
+    "class": "/Game/MissionSystem/Blueprints/Tasks/AC_Task_WaitForTask.AC_Task_WaitForTask_C",
+    "properties": {
+      "StepId": "S2_23_Join",
+      "WaitForStep": "S2_21_S2_EnergyRecovery",
+      "NextStep": "S2_24_FinishEnergyRecoveryLesson"
+    }
+  },
+  {
+    "name": "S2_24_FinishEnergyRecoveryLesson",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_FinishEnergyRecoveryLesson.AC_Training_FinishEnergyRecoveryLesson_C",
+    "properties": {
+      "StepId": "S2_24_FinishEnergyRecoveryLesson",
+      "NextStep": "S3_00_Checkpoint"
+    }
+  },
+  {
+    "name": "S3_00_Checkpoint",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_StageSetup.AC_Training_StageSetup_C",
+    "properties": {
+      "StepId": "S3_00_Checkpoint",
+      "ExerciseNumber": "5",
+      "MainGroup": "S3",
+      "SharedTable": "true",
+      "RetryOnDamage": "false",
+      "bCheckpoint": "true",
+      "NextStep": "S3_01_EnableSupply"
+    }
+  },
+  {
+    "name": "S3_01_EnableSupply",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_EnableSupply.AC_Training_EnableSupply_C",
+    "properties": {
+      "StepId": "S3_01_EnableSupply",
+      "bEnabled": "true",
+      "bRequireEmptyPistol": "true",
+      "NextStep": "S3_02_StartTargets"
+    }
+  },
+  {
+    "name": "S3_02_StartTargets",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_StartTargets.AC_Training_StartTargets_C",
+    "properties": {
+      "StepId": "S3_02_StartTargets",
+      "Group": "S3",
+      "ArmorMode": "0",
+      "SequentialIndex": "0",
+      "bMove": "false",
+      "NextStep": "S3_03_SetObjective"
+    }
+  },
+  {
+    "name": "S3_03_SetObjective",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_SetObjective.AC_Training_SetObjective_C",
+    "properties": {
+      "StepId": "S3_03_SetObjective",
+      "Title": "STAGE 3 | Pick up, reload, shoot",
+      "Objective": "F: pick up the pistol and ammo. R: reload. Defeat all four stationary enemies with ordinary body hits. Watch their reactions and death; no weak point is required.",
+      "NextStep": "S3_04_WaitTargets"
+    }
+  },
+  {
+    "name": "S3_04_WaitTargets",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_WaitTargets.AC_Training_WaitTargets_C",
+    "properties": {
+      "StepId": "S3_04_WaitTargets",
+      "RequiredKills": "4",
+      "RequireHasPistol": "true",
+      "RequirePickedAmmo": "true",
+      "RequireReloaded": "true",
+      "ProgressHintKills": "2",
+      "HintTitle": "STAGE 3 | Finish the remaining targets",
+      "HintText": "Clear the remaining targets. Empty ammo slots refill automatically.",
+      "NextStep": "S4_Static_00_Checkpoint"
+    }
+  },
+  {
+    "name": "S4_Static_00_Checkpoint",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_StageSetup.AC_Training_StageSetup_C",
+    "properties": {
+      "StepId": "S4_Static_00_Checkpoint",
+      "ExerciseNumber": "6",
+      "MainGroup": "S4",
+      "SharedTable": "true",
+      "RetryOnDamage": "false",
+      "bCheckpoint": "true",
+      "NextStep": "S4_Static_01_EnableSupply"
+    }
+  },
+  {
+    "name": "S4_Static_01_EnableSupply",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_EnableSupply.AC_Training_EnableSupply_C",
+    "properties": {
+      "StepId": "S4_Static_01_EnableSupply",
+      "bEnabled": "true",
+      "bRequireEmptyPistol": "false",
+      "NextStep": "S4_Static_02_StartTargets"
+    }
+  },
+  {
+    "name": "S4_Static_02_StartTargets",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_StartTargets.AC_Training_StartTargets_C",
+    "properties": {
+      "StepId": "S4_Static_02_StartTargets",
+      "Group": "S4",
+      "ArmorMode": "1",
+      "SequentialIndex": "2",
+      "bMove": "false",
+      "NextStep": "S4_Static_03_SetObjective"
+    }
+  },
+  {
+    "name": "S4_Static_03_SetObjective",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_SetObjective.AC_Training_SetObjective_C",
+    "properties": {
+      "StepId": "S4_Static_03_SetObjective",
+      "Title": "STAGE 4 | Stationary weak point",
+      "Objective": "Press Q to stop time and reveal the enemy weak point. Aim at its attached reticle, shoot, then press Q again to release your shots. Body hits do not count.",
+      "NextStep": "S4_Static_04_WaitTargets"
+    }
+  },
+  {
+    "name": "S4_Static_04_WaitTargets",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_WaitTargets.AC_Training_WaitTargets_C",
+    "properties": {
+      "StepId": "S4_Static_04_WaitTargets",
+      "RequiredKills": "1",
+      "NextStep": "S4_Moving_00_Checkpoint"
+    }
+  },
+  {
+    "name": "S4_Moving_00_Checkpoint",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_StageSetup.AC_Training_StageSetup_C",
+    "properties": {
+      "StepId": "S4_Moving_00_Checkpoint",
+      "ExerciseNumber": "7",
+      "MainGroup": "S4",
+      "SharedTable": "true",
+      "RetryOnDamage": "false",
+      "bCheckpoint": "true",
+      "NextStep": "S4_Moving_01_EnableSupply"
+    }
+  },
+  {
+    "name": "S4_Moving_01_EnableSupply",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_EnableSupply.AC_Training_EnableSupply_C",
+    "properties": {
+      "StepId": "S4_Moving_01_EnableSupply",
+      "bEnabled": "true",
+      "bRequireEmptyPistol": "false",
+      "NextStep": "S4_Moving_02_StartTargets"
+    }
+  },
+  {
+    "name": "S4_Moving_02_StartTargets",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_StartTargets.AC_Training_StartTargets_C",
+    "properties": {
+      "StepId": "S4_Moving_02_StartTargets",
+      "Group": "S4",
+      "ArmorMode": "1",
+      "SequentialIndex": "1",
+      "bMove": "true",
+      "NextStep": "S4_Moving_03_SetObjective"
+    }
+  },
+  {
+    "name": "S4_Moving_03_SetObjective",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_SetObjective.AC_Training_SetObjective_C",
+    "properties": {
+      "StepId": "S4_Moving_03_SetObjective",
+      "Title": "STAGE 4 | Moving weak point",
+      "Objective": "The enemy walks left and right. Press Q to stop time, shoot the reticle attached to its body, then press Q again to resume.",
+      "NextStep": "S4_Moving_04_WaitTargets"
+    }
+  },
+  {
+    "name": "S4_Moving_04_WaitTargets",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_WaitTargets.AC_Training_WaitTargets_C",
+    "properties": {
+      "StepId": "S4_Moving_04_WaitTargets",
+      "RequiredKills": "1",
+      "RequireStopShot": "true",
+      "RequireManuallyResumed": "true",
+      "NextStep": "S5_00_Checkpoint"
+    }
+  },
+  {
+    "name": "S5_00_Checkpoint",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_StageSetup.AC_Training_StageSetup_C",
+    "properties": {
+      "StepId": "S5_00_Checkpoint",
+      "ExerciseNumber": "9",
+      "MainGroup": "S5",
+      "SharedTable": "true",
+      "RetryOnDamage": "false",
+      "bCheckpoint": "true",
+      "NextStep": "S5_01_EnableSupply"
+    }
+  },
+  {
+    "name": "S5_01_EnableSupply",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_EnableSupply.AC_Training_EnableSupply_C",
+    "properties": {
+      "StepId": "S5_01_EnableSupply",
+      "bEnabled": "true",
+      "bRequireEmptyPistol": "false",
+      "NextStep": "S5_02_StartTargets"
+    }
+  },
+  {
+    "name": "S5_02_StartTargets",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_StartTargets.AC_Training_StartTargets_C",
+    "properties": {
+      "StepId": "S5_02_StartTargets",
+      "Group": "S5",
+      "ArmorMode": "2",
+      "SequentialIndex": "0",
+      "bMove": "false",
+      "NextStep": "S5_03_StartPairedPlank"
+    }
+  },
+  {
+    "name": "S5_03_StartPairedPlank",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_StartPairedPlank.AC_Training_StartPairedPlank_C",
+    "properties": {
+      "StepId": "S5_03_StartPairedPlank",
+      "NextStep": "S5_04_SetObjective"
+    }
+  },
+  {
+    "name": "S5_04_SetObjective",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_SetObjective.AC_Training_SetObjective_C",
+    "properties": {
+      "StepId": "S5_04_SetObjective",
+      "Title": "STAGE 5 | Two supports, one strike",
+      "Objective": "Q: stop time. Shoot BOTH orange supports, then Q: release the bullets together. One flat strike must defeat all 3 enemies. Tilted drops retry after 5s.",
+      "NextStep": "S5_05_WaitPlank"
+    }
+  },
+  {
+    "name": "S5_05_WaitPlank",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_WaitPlank.AC_Training_WaitPlank_C",
+    "properties": {
+      "StepId": "S5_05_WaitPlank",
+      "RequiredKills": "3",
+      "FailureStep": "Recovery_RetryCheckpoint",
+      "NextStep": "S7A_00_Checkpoint"
+    }
+  },
+  {
+    "name": "S7A_00_Checkpoint",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_StageSetup.AC_Training_StageSetup_C",
+    "properties": {
+      "StepId": "S7A_00_Checkpoint",
+      "ExerciseNumber": "11",
+      "MainGroup": "S7A",
+      "SharedTable": "false",
+      "RetryOnDamage": "false",
+      "bCheckpoint": "true",
+      "NextStep": "S7A_01_EnableSupply"
+    }
+  },
+  {
+    "name": "S7A_01_EnableSupply",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_EnableSupply.AC_Training_EnableSupply_C",
+    "properties": {
+      "StepId": "S7A_01_EnableSupply",
+      "bEnabled": "false",
+      "bRequireEmptyPistol": "false",
+      "NextStep": "S7A_02_RefillCombatResources"
+    }
+  },
+  {
+    "name": "S7A_02_RefillCombatResources",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_RefillCombatResources.AC_Training_RefillCombatResources_C",
+    "properties": {
+      "StepId": "S7A_02_RefillCombatResources",
+      "NextStep": "S7A_03_StartCombat"
+    }
+  },
+  {
+    "name": "S7A_03_StartCombat",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_StartCombat.AC_Training_StartCombat_C",
+    "properties": {
+      "StepId": "S7A_03_StartCombat",
+      "bPreview": "true",
+      "NextStep": "S7A_04_SetObjective"
+    }
+  },
+  {
+    "name": "S7A_04_SetObjective",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_SetObjective.AC_Training_SetObjective_C",
+    "properties": {
+      "StepId": "S7A_04_SetObjective",
+      "Title": "STAGE 7A | Melee preview",
+      "Objective": "A melee enemy appears at the front of the laboratory. Keep your distance and defeat it.",
+      "NextStep": "S7A_05_WaitEnemiesCleared"
+    }
+  },
+  {
+    "name": "S7A_05_WaitEnemiesCleared",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_WaitEnemiesCleared.AC_Training_WaitEnemiesCleared_C",
+    "properties": {
+      "StepId": "S7A_05_WaitEnemiesCleared",
+      "NextStep": "S7B_00_Checkpoint"
+    }
+  },
+  {
+    "name": "S7B_00_Checkpoint",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_StageSetup.AC_Training_StageSetup_C",
+    "properties": {
+      "StepId": "S7B_00_Checkpoint",
+      "ExerciseNumber": "12",
+      "MainGroup": "S7B",
+      "SharedTable": "false",
+      "RetryOnDamage": "false",
+      "bCheckpoint": "true",
+      "NextStep": "S7B_01_EnableSupply"
+    }
+  },
+  {
+    "name": "S7B_01_EnableSupply",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_EnableSupply.AC_Training_EnableSupply_C",
+    "properties": {
+      "StepId": "S7B_01_EnableSupply",
+      "bEnabled": "false",
+      "bRequireEmptyPistol": "false",
+      "NextStep": "S7B_02_StartRockMechanism"
+    }
+  },
+  {
+    "name": "S7B_02_StartRockMechanism",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_StartRockMechanism.AC_Training_StartRockMechanism_C",
+    "properties": {
+      "StepId": "S7B_02_StartRockMechanism",
+      "Group": "S7B",
+      "bMovingRock": "false",
+      "NextStep": "S7B_03_BeginFinalCombat"
+    }
+  },
+  {
+    "name": "S7B_03_BeginFinalCombat",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_BeginFinalCombat.AC_Training_BeginFinalCombat_C",
+    "properties": {
+      "StepId": "S7B_03_BeginFinalCombat",
+      "NextStep": "S7B_04_SetObjective"
+    }
+  },
+  {
+    "name": "S7B_04_SetObjective",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_SetObjective.AC_Training_SetObjective_C",
+    "properties": {
+      "StepId": "S7B_04_SetObjective",
+      "Title": "FINAL STAGE | Combat test",
+      "Objective": "Defeat all four enemies. Use cover and time control. Shoot the suspended container link to drop it on enemies below.",
+      "NextStep": "S7B_05_WaitEnemiesCleared"
+    }
+  },
+  {
+    "name": "S7B_05_WaitEnemiesCleared",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_WaitEnemiesCleared.AC_Training_WaitEnemiesCleared_C",
+    "properties": {
+      "StepId": "S7B_05_WaitEnemiesCleared",
+      "NextStep": "S7B_06_RecordCompletion"
+    }
+  },
+  {
+    "name": "S7B_06_RecordCompletion",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_RecordCompletion.AC_Training_RecordCompletion_C",
+    "properties": {
+      "StepId": "S7B_06_RecordCompletion",
+      "Exercise": "12",
+      "NextStep": "S7B_07_FinishTutorial"
+    }
+  },
+  {
+    "name": "S7B_07_FinishTutorial",
+    "class": "/Game/Environment/TrainingRoom/Mission/Tasks/AC_Training_FinishTutorial.AC_Training_FinishTutorial_C",
+    "properties": {
+      "StepId": "S7B_07_FinishTutorial",
+      "NextStep": "None"
+    }
+  },
+  {
+    "name": "Recovery_RetryCheckpoint",
+    "class": "/Game/MissionSystem/Blueprints/Tasks/AC_Task_RetryCheckpoint.AC_Task_RetryCheckpoint_C",
+    "properties": {
+      "StepId": "Recovery_RetryCheckpoint",
+      "RestartWholeFlow": "False"
+    }
+  }
+]

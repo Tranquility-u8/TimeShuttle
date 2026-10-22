@@ -1,0 +1,18 @@
+{
+  "geometry_unchanged": true,
+  "geometry_sha256": "ae19133c9448e61e2afea88d99c67afe8946a9990ec590634bba19bcdf23a2d9",
+  "svg_nontext_unchanged": {
+    "01_优化总览.svg": true,
+    "02_可达下层A.svg": true,
+    "03_可达上层B.svg": true,
+    "04_流程开放与首幕路线.svg": true,
+    "05_研究翼空间序列.svg": true,
+    "06_生活与记录侧翼.svg": true,
+    "07_空间感知与视觉引导.svg": true,
+    "08_训练室接入详图.svg": true,
+    "09_完整布局整合评估.svg": true,
+    "10_西侧连通走廊与研究前厅.svg": true,
+    "11_观察区墙门调整.svg": true,
+    "12_下层西翼简化.svg": true
+  }
+}

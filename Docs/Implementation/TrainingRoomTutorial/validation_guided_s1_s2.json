@@ -1,0 +1,159 @@
+{
+  "task": "20261017-tutorial-s1-s2",
+  "verified_date": "2026-10-17",
+  "engine": "UE 5.6.1",
+  "map": "/Game/Maps/Map_TrainingRoom",
+  "outcome": "passed",
+  "cold_run_without_authoring_helper": true,
+  "cold_final_stage": 3,
+  "cold_stage3_ready": true,
+  "cold_final_world_scale": 1.0,
+  "compile": {
+    "level": "errors=0 warnings=0 status=3",
+    "training": "errors=0 warnings=0 status=3",
+    "time": "errors=0 warnings=0 status=3",
+    "hud": "errors=0 warnings=0 status=3"
+  },
+  "checks": [
+    {
+      "name": "Q blocked before dialogue ends",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "opening movement locked",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "opening gauge hidden",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "waiting for Q has normal time",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "waiting Q reveals gauge",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "movement stays locked until Q",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no automatic time stop while waiting",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Q activates full stop and unlocks",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "three real seconds consume no energy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "safe zone restores normal time",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "merged stage2 entered",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "single live bullet opened existing QTE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "QTE waits beyond normal timeout",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "QTE world frozen",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "T completes directly into Stage3",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Stage3 normal time and movement",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "tutorial QTE mode cleaned",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Backspace repeats merged Stage2",
+      "passed": true
+    },
+    {
+      "name": "retry restores full health and energy",
+      "passed": true
+    },
+    {
+      "name": "one active tutorial shooter after retry",
+      "passed": true
+    },
+    {
+      "name": "looking away still receives guided prompt",
+      "passed": true
+    },
+    {
+      "name": "normal QTE timeout retained outside guided mode",
+      "passed": true
+    },
+    {
+      "name": "whole reset restores opening lock, hidden gauge and normal time",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "initial_gauge_always_hidden": true,
+    "q_wait_stays_locked_in_normal_time": true,
+    "crossing_energy_range": [
+      100.0,
+      100.0
+    ],
+    "arrival_dialogue_movement_locked": true
+  },
+  "manual_input_checks": [
+    {
+      "name": "wrong R retains T prompt",
+      "passed": true,
+      "run": "initial PIE"
+    },
+    {
+      "name": "Q cannot dismiss guided T prompt",
+      "passed": true,
+      "run": "cold PIE"
+    }
+  ],
+  "fixture_limits": [
+    "Main progression uses injected Enhanced Input Q and movement, with real keyboard T; it does not write progression or damage counters.",
+    "Retry/offscreen/reset tests use explicit stage entry; ordinary expiry test sets an already-expired window to exercise the unchanged expiry branch.",
+    "Full S3-S7 completion, packaging and long-duration testing were not rerun."
+  ],
+  "final_editor": {
+    "dirty": [],
+    "map": "/Game/Maps/Map_TrainingRoom.Map_TrainingRoom",
+    "pie_stopped": true
+  }
+}

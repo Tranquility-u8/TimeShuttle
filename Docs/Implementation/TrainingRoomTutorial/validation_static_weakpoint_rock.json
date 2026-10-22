@@ -1,0 +1,66 @@
+{
+  "task": "20261017-static-weakpoint-final-rock-fix",
+  "cold_without_helper": true,
+  "checks": [
+    {
+      "name": "static weakpoint hidden in Normal",
+      "passed": true
+    },
+    {
+      "name": "static native weakpoint visible in FullStop",
+      "passed": true
+    },
+    {
+      "name": "static weakpoint hides again on resume",
+      "passed": true
+    },
+    {
+      "name": "static weakpoint remains hidden in BulletTime",
+      "passed": true
+    },
+    {
+      "name": "final arena spawns immediately",
+      "passed": true
+    },
+    {
+      "name": "connected link remains shootable and releases rock",
+      "passed": true,
+      "broken": true,
+      "landed": true
+    }
+  ],
+  "geometry": {
+    "rockTop": 620.0,
+    "rockFront": -990.0,
+    "linkBottom": 615.0,
+    "linkTop": 685.0,
+    "stemBottom": 682.0,
+    "stemTop": 800.0,
+    "alignedXY": true,
+    "linkEmbedsRock": true,
+    "stemOverlapsLink": true
+  },
+  "compiles": {
+    "target": "errors=0 warnings=0 status=3",
+    "weakTarget": "errors=0 warnings=0 status=3",
+    "level": "errors=0 warnings=0 status=3"
+  },
+  "saved": [
+    "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingTarget",
+    "/Game/Maps/Map_TrainingRoom"
+  ],
+  "editor": {
+    "dirty": [],
+    "helper_loaded": false,
+    "pie_stopped": true
+  },
+  "method": "Scoped PIE: real native marker arrays and actual ability toggle; pickup-equipped pistol BeginFire/StopFire against link; combat AI paused for the shot fixture. Saved geometry inspected after cold restart.",
+  "limits": [
+    "No continuous tutorial playthrough",
+    "Window screenshot interface unavailable; geometric contact verified from editor bounds, visual appearance not independently reviewed."
+  ],
+  "fixture_notes": [
+    "First BulletTime sample was taken on the state-transition frame; retest samples after 0.3 seconds.",
+    "An initial editor actor enumeration during PIE returned no actors; geometry was correctly rechecked after stopping PIE."
+  ]
+}

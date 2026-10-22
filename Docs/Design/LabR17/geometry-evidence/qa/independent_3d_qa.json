@@ -1,0 +1,291 @@
+{
+  "revision": "R17 independent exported-architecture 3D audit",
+  "checks": {
+    "source_plan_hash_matches": true,
+    "exact_duplicate_faces_absent": true,
+    "nonidentical_horizontal_coplanar_overlap_absent": true,
+    "training_net_20x34p7x8_clear": true,
+    "control_net_40x42_clear": true,
+    "duct_net_2p1x1p5x1p4_clear": true,
+    "former_lower_E4_open_clear": true,
+    "A_omen_route_clear": true,
+    "A_return_route_clear": true,
+    "B_TIME_route_clear": true,
+    "B_UP_CITY_route_clear": true,
+    "B_TRAIN_route_clear": true,
+    "A_MAIN_ENTRY_route_clear": true,
+    "L01_S_route_clear": true,
+    "G-WEST-MAIN_full_height_aperture_clear": true,
+    "R17-L01-S_full_height_aperture_clear": true,
+    "TR-CONNECT-PREP_full_height_aperture_clear": true,
+    "TR-CONNECT-TRAIN_full_height_aperture_clear": true,
+    "TR-ENTRY_full_height_aperture_clear": true,
+    "C0_full_height_aperture_clear": true,
+    "upper_E4_original_void_preserved": true,
+    "B_court_void_preserved": true,
+    "control_void_preserved": true,
+    "A_floor_supported": true,
+    "B_floor_supported": true,
+    "training_floor_supported": true,
+    "duct_platforms_supported": true,
+    "jump_blocks_reach_documented_height": true,
+    "refreshed_manifest_architecture_bounds_match": true,
+    "POD1_shifted_prop_042_approach_clear": true
+  },
+  "passed": true,
+  "failed": [],
+  "source_plan_sha256": "ae19133c9448e61e2afea88d99c67afe8946a9990ec590634bba19bcdf23a2d9",
+  "architecture_meshes_sha256": "35a35a39cd5bd9e4d6c8ed22a6c453b7eb73c390577cdda3968c24c7c053d37d",
+  "architecture_script_sha256": "af9fdd1e0bc3fcdab4614badb12742d7c0d65ab83e010b17c7adc841e9cec12f",
+  "method": "Reconstruct each exported mesh height section from oriented boundary faces; inspect supported floor and free-space volumes. Does not run the generator or call UE.",
+  "exported_parts": 32,
+  "exact_duplicate_faces": 0,
+  "horizontal_coplanar_overlap": [],
+  "clearance_results": {
+    "training_net_20x34p7x8": [],
+    "control_net_40x42": [],
+    "duct_net_2p1x1p5x1p4": [],
+    "former_lower_E4_open": []
+  },
+  "route_results": [
+    {
+      "name": "A_omen",
+      "radius_m": 0.45,
+      "height_range_m": [
+        0.05,
+        1.85
+      ],
+      "intrusions": []
+    },
+    {
+      "name": "A_return",
+      "radius_m": 0.45,
+      "height_range_m": [
+        0.05,
+        1.85
+      ],
+      "intrusions": []
+    },
+    {
+      "name": "B_TIME",
+      "radius_m": 0.45,
+      "height_range_m": [
+        5.45,
+        7.25
+      ],
+      "intrusions": []
+    },
+    {
+      "name": "B_UP_CITY",
+      "radius_m": 0.45,
+      "height_range_m": [
+        5.45,
+        7.25
+      ],
+      "intrusions": []
+    },
+    {
+      "name": "B_TRAIN",
+      "radius_m": 0.45,
+      "height_range_m": [
+        5.45,
+        7.25
+      ],
+      "intrusions": []
+    },
+    {
+      "name": "A_MAIN_ENTRY",
+      "radius_m": 0.45,
+      "height_range_m": [
+        0.05,
+        1.85
+      ],
+      "intrusions": []
+    },
+    {
+      "name": "L01_S",
+      "radius_m": 0.45,
+      "height_range_m": [
+        0.05,
+        1.85
+      ],
+      "intrusions": []
+    }
+  ],
+  "door_results": [
+    {
+      "id": "G-WEST-MAIN",
+      "base_m": 0,
+      "height_m": 3.4,
+      "intrusions": []
+    },
+    {
+      "id": "R17-L01-S",
+      "base_m": 0,
+      "height_m": 3.4,
+      "intrusions": []
+    },
+    {
+      "id": "TR-CONNECT-PREP",
+      "base_m": 5.4,
+      "height_m": 2.2,
+      "intrusions": []
+    },
+    {
+      "id": "TR-CONNECT-TRAIN",
+      "base_m": 5.4,
+      "height_m": 2.2,
+      "intrusions": []
+    },
+    {
+      "id": "TR-ENTRY",
+      "base_m": 5.4,
+      "height_m": 3.8,
+      "intrusions": []
+    },
+    {
+      "id": "C0",
+      "base_m": 0,
+      "height_m": 4.8,
+      "intrusions": []
+    }
+  ],
+  "floor_support": {
+    "A": {
+      "raw_boundary_difference_m2": 0.0001597402010794845,
+      "boundary_tolerance_m": 2e-05,
+      "unsupported_beyond_tolerance_m2": 0.0
+    },
+    "B": {
+      "raw_boundary_difference_m2": 0.00014874801166714143,
+      "boundary_tolerance_m": 2e-05,
+      "unsupported_beyond_tolerance_m2": 0.0
+    }
+  },
+  "refreshed_manifest": {
+    "sha256": "c3584cab697229d3dc118eb403ff3918beca4ce4b42c3a51fdcd7199a1b9d3db",
+    "revision": 2,
+    "bounds_errors": [],
+    "POD1_prop_042_bounds_m": [
+      85.09999695,
+      -13.00000019,
+      85.79999695,
+      -10.100000190000001
+    ],
+    "POD1_approach_overlap_m2": 0.0
+  },
+  "upper_E4_original_void_m2": 23.379581250000015,
+  "upper_E4_void_filled_by_slab_m2": 5.5480064986568174e-15,
+  "source_z_fighting_evidence": {
+    "original_source_sha256": "383600722b1b405acb8abeb4d847fe65944a9864c0ab64e935b7f2b07a0e799d",
+    "coincident_upward_surface_pairs_at_5p4m": 162,
+    "coincident_upward_surface_pairs_at_0m": 0,
+    "Floor_B_overlapping_upward_surface_area_m2": 1133.4639037576314,
+    "overlap_not_covered_by_source_upper_solids_at_5p40001m_m2": 812.8744910168623,
+    "largest_pairs": [
+      {
+        "z_m": 5.4,
+        "parts": [
+          "Floor_B",
+          "Scenic_Solid_Base"
+        ],
+        "area_m2": 381.3599999999999
+      },
+      {
+        "z_m": 5.4,
+        "parts": [
+          "Floor_B",
+          "Walls_A_000"
+        ],
+        "area_m2": 196.19776230586325
+      },
+      {
+        "z_m": 5.4,
+        "parts": [
+          "Floor_B",
+          "Walls_A_020"
+        ],
+        "area_m2": 152.0198494966001
+      },
+      {
+        "z_m": 5.4,
+        "parts": [
+          "Floor_B",
+          "Control_Walls_01"
+        ],
+        "area_m2": 73.0128000000002
+      },
+      {
+        "z_m": 5.4,
+        "parts": [
+          "Floor_B",
+          "Walls_A_026"
+        ],
+        "area_m2": 55.16427197499999
+      },
+      {
+        "z_m": 5.4,
+        "parts": [
+          "Floor_B",
+          "Walls_A_013"
+        ],
+        "area_m2": 37.90492038749997
+      },
+      {
+        "z_m": 5.4,
+        "parts": [
+          "Floor_B",
+          "Walls_A_002"
+        ],
+        "area_m2": 15.416051249999997
+      },
+      {
+        "z_m": 5.4,
+        "parts": [
+          "Floor_B",
+          "Walls_A_021"
+        ],
+        "area_m2": 15.02749461439998
+      },
+      {
+        "z_m": 5.4,
+        "parts": [
+          "Walls_A_000",
+          "Ground_Wing_Ceiling_Infill"
+        ],
+        "area_m2": 12.729937499999997
+      },
+      {
+        "z_m": 5.4,
+        "parts": [
+          "Floor_B",
+          "Walls_A_007"
+        ],
+        "area_m2": 12.388583224999916
+      },
+      {
+        "z_m": 5.4,
+        "parts": [
+          "Floor_B",
+          "Walls_A_027"
+        ],
+        "area_m2": 11.716583024999998
+      },
+      {
+        "z_m": 5.4,
+        "parts": [
+          "Floor_B",
+          "Walls_A_030"
+        ],
+        "area_m2": 10.262999999999902
+      }
+    ],
+    "interpretation": "Strong geometric evidence for z-fighting at B-floor height, especially lower wall caps. This diagnoses source overlap; the exact pixels in a user screenshot were not reproduced in this audit."
+  },
+  "cleanup_record_found": true,
+  "cleanup_reported_old_actors_removed": 925,
+  "limitations": [
+    "No UE calls or mesh import performed. Physics traces, character movement, UV/lightmap behavior and retained-scene collision require separate engine verification.",
+    "Retained stairs, facade, Omen and other old actors are outside the new architecture mesh payload. Cleanup state was not independently queried in UE."
+  ]
+}

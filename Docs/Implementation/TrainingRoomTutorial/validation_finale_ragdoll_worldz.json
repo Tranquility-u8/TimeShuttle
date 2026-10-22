@@ -1,0 +1,336 @@
+{
+  "date": "2026-10-18",
+  "scope": "Last two tutorial combat stages ragdoll and shared world-Z material reveal",
+  "runtime": {
+    "cold_editor_without_authoring_helper": true,
+    "finale_checks": [
+      {
+        "name": "preview spawns one native melee",
+        "passed": true
+      },
+      {
+        "name": "preview one shared world range",
+        "passed": true,
+        "range": [
+          0.0,
+          800.0
+        ],
+        "actors": 1
+      },
+      {
+        "name": "preview world-space plane follows shared range",
+        "passed": true,
+        "plane": 818.0
+      },
+      {
+        "name": "preview native death ragdoll",
+        "passed": true
+      },
+      {
+        "name": "preview corpse collision kept and capsule disabled",
+        "passed": true
+      },
+      {
+        "name": "preview holds corpse before fade or stage advance",
+        "passed": true
+      },
+      {
+        "name": "preview body physically falls",
+        "passed": true,
+        "fromZ": 82.96663480215338,
+        "toZ": 14.421913329441026
+      },
+      {
+        "name": "preview body stays above floor",
+        "passed": true
+      },
+      {
+        "name": "preview retry fresh live enemy",
+        "passed": true,
+        "enemies": [
+          [
+            "BP_MeleeNPC_C_5",
+            false,
+            true
+          ]
+        ]
+      },
+      {
+        "name": "final spawns four native enemies on entry",
+        "passed": true
+      },
+      {
+        "name": "final one shared world range",
+        "passed": true,
+        "range": [
+          0.0,
+          800.0
+        ],
+        "actors": 19
+      },
+      {
+        "name": "final world-space plane follows shared range",
+        "passed": true,
+        "plane": 818.0
+      },
+      {
+        "name": "final ranged native death ragdoll",
+        "passed": true
+      },
+      {
+        "name": "final visible corpse keeps floor collision",
+        "passed": true
+      },
+      {
+        "name": "final delays corpse fade",
+        "passed": true
+      },
+      {
+        "name": "final corpse fades after hold",
+        "passed": true
+      },
+      {
+        "name": "final hidden corpse physics stopped",
+        "passed": true
+      },
+      {
+        "name": "death counted once",
+        "passed": true
+      },
+      {
+        "name": "final melee native death ragdoll",
+        "passed": true
+      },
+      {
+        "name": "final retry four live enemies without duplicates",
+        "passed": true
+      },
+      {
+        "name": "final retry one shared world range",
+        "passed": true,
+        "range": [
+          0.0,
+          800.0
+        ],
+        "actors": 19
+      },
+      {
+        "name": "final retry world-space plane follows shared range",
+        "passed": true,
+        "plane": 818.0
+      }
+    ],
+    "ammo_target_regression_checks": [
+      {
+        "name": "ammo waits for pistol and old placeholders have no mesh",
+        "passed": true
+      },
+      {
+        "name": "four real native ammo pickups spawn",
+        "passed": true
+      },
+      {
+        "name": "native interaction widget displays F",
+        "passed": true,
+        "texts": [
+          [
+            "Hint",
+            "ADD AMMO"
+          ],
+          [
+            "ItemName",
+            "Pistol"
+          ],
+          [
+            "TextBlock_0",
+            "F"
+          ]
+        ]
+      },
+      {
+        "name": "real aim creates native ADD AMMO prompt",
+        "passed": true,
+        "hint": "ADD AMMO"
+      },
+      {
+        "name": "native interact adds reserve only and consumes pickup",
+        "passed": true,
+        "reserve": 24,
+        "before": 0
+      },
+      {
+        "name": "tutorial observes native ammo acquisition",
+        "passed": true
+      },
+      {
+        "name": "native reload still fills the magazine using existing ammo policy",
+        "passed": true,
+        "magazine": 12,
+        "reserve": 24
+      },
+      {
+        "name": "consumed slot refreshes once after cooldown",
+        "passed": true
+      },
+      {
+        "name": "body target uses real AI physics death",
+        "passed": true
+      },
+      {
+        "name": "ragdoll settles and target death counts once",
+        "passed": true
+      },
+      {
+        "name": "retry restores live target pose and collision",
+        "passed": true
+      },
+      {
+        "name": "stopped weakpoint shots defer damage",
+        "passed": true
+      },
+      {
+        "name": "real weakpoint hits trigger inherited AI physics death",
+        "passed": true
+      },
+      {
+        "name": "melee preview removes ammo pickups and table supply",
+        "passed": true
+      },
+      {
+        "name": "hidden target bodies stop physics after fade",
+        "passed": true
+      }
+    ],
+    "passed": 37,
+    "method": "Explicit EnterExercise fixtures; native NPC lethal deaths use production ApplyDamage(1000), not injected goal counters. Ammo/target regression uses mapped interaction/reload, actual body shots and queued native weak-point shots. Timings wait for actual reveal readiness and game-time corpse age."
+  },
+  "compile": {
+    "training": "errors=0 warnings=0 status=3",
+    "visual": "errors=0 warnings=0 status=3"
+  },
+  "layout_audit": [
+    {
+      "asset": "training",
+      "graphs": 85,
+      "semantics_unchanged": true
+    },
+    {
+      "asset": "visual",
+      "graphs": 7,
+      "semantics_unchanged": true
+    }
+  ],
+  "materials": {
+    "parents": [
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_TS_TrainingAmber_97cc13.M_TD_M_TS_TrainingAmber_97cc13",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_TS_TrainingCyan_f08cdd.M_TD_M_TS_TrainingCyan_f08cdd",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_TS_TrainingWeakpoint_fdcef4.M_TD_M_TS_TrainingWeakpoint_fdcef4",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_TS_TrainingRock_a5b4ad.M_TD_M_TS_TrainingRock_a5b4ad",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_TS_TrainingDarkMetal_f47483.M_TD_M_TS_TrainingDarkMetal_f47483",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_TS_TrainingWhite_687970.M_TD_M_TS_TrainingWhite_687970",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_TS_TrainingRubber_561c67.M_TD_M_TS_TrainingRubber_561c67",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_Weapon_a75e88.M_TD_M_Weapon_a75e88",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_WorldGridMaterial_6c4d4a.M_TD_WorldGridMaterial_6c4d4a",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_Mannequin_2e1248.M_TD_M_Mannequin_2e1248",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_Widget3DPassThrough_fb2db7.M_TD_Widget3DPassThrough_fb2db7",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_Weapon_db0737.M_TD_M_Weapon_db0737",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_Sight_121402.M_TD_M_Sight_121402"
+    ],
+    "function": "/Game/Environment/TrainingRoom/Tutorial/Materials/MF_TutorialWorldZReveal.MF_TutorialWorldZReveal",
+    "axis": "absolute world Z excluding shader offsets",
+    "redirected": [
+      [
+        "MaterialExpressionMultiply_0",
+        "A"
+      ]
+    ]
+  },
+  "saved": {
+    "packages": [
+      "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "/Game/Environment/TrainingRoom/Tutorial/AC_TrainingVisual",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_TS_TrainingAmber_97cc13",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_TS_TrainingCyan_f08cdd",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_TS_TrainingDarkMetal_f47483",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_TS_TrainingRock_a5b4ad",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_TS_TrainingRubber_561c67",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_TS_TrainingWeakpoint_fdcef4",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_TS_TrainingWhite_687970",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_WorldGridMaterial_6c4d4a",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_Mannequin_2e1248",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_Sight_121402",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_Weapon_a75e88",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_Weapon_db0737",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_Widget3DPassThrough_fb2db7",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/MF_TutorialWorldZReveal",
+      "/Game/Maps/Map_TrainingRoom"
+    ],
+    "dirty_after": []
+  },
+  "final_editor": {
+    "pie_stopped": true,
+    "helper_loaded": false,
+    "saved_map_reloaded": true,
+    "material_parents_verified": [
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_TS_TrainingAmber_97cc13.M_TD_M_TS_TrainingAmber_97cc13",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_TS_TrainingCyan_f08cdd.M_TD_M_TS_TrainingCyan_f08cdd",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_TS_TrainingWeakpoint_fdcef4.M_TD_M_TS_TrainingWeakpoint_fdcef4",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_TS_TrainingRock_a5b4ad.M_TD_M_TS_TrainingRock_a5b4ad",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_TS_TrainingDarkMetal_f47483.M_TD_M_TS_TrainingDarkMetal_f47483",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_TS_TrainingWhite_687970.M_TD_M_TS_TrainingWhite_687970",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_TS_TrainingRubber_561c67.M_TD_M_TS_TrainingRubber_561c67",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_Weapon_a75e88.M_TD_M_Weapon_a75e88",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_WorldGridMaterial_6c4d4a.M_TD_WorldGridMaterial_6c4d4a",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_Mannequin_2e1248.M_TD_M_Mannequin_2e1248",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_Widget3DPassThrough_fb2db7.M_TD_Widget3DPassThrough_fb2db7",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_Weapon_db0737.M_TD_M_Weapon_db0737",
+      "/Game/Environment/TrainingRoom/Tutorial/Materials/M_TD_M_Sight_121402.M_TD_M_Sight_121402"
+    ],
+    "dirty_content": [],
+    "dirty_maps": [],
+    "performance_restored": true,
+    "temporary_pie_cubes_destroyed": true,
+    "blueprint_visual_review": "PreserveRagdollCollision: structured comment, ordered branch flow and separated data nodes reviewed at readable zoom",
+    "shader_visual_review": "Two transient PIE cubes, one rotated 90 degrees: both clipped at the same horizontal world-Z=200 edge"
+  },
+  "visual_fixture": {
+    "transient_pie_only": true,
+    "plane_z": 200,
+    "fixtures": [
+      {
+        "rotation": "<Struct 'Rotator' (0x00000286FDA7D410) {pitch: 0.000000, yaw: 0.000000, roll: 0.000000}>",
+        "scale": "<Struct 'Vector' (0x00000286FDA7D410) {x: 2.000000, y: 2.000000, z: 4.000000}>",
+        "position": "<Struct 'Vector' (0x00000286FDA7D410) {x: -150.000000, y: -250.000000, z: 200.000000}>"
+      },
+      {
+        "rotation": "<Struct 'Rotator' (0x00000286FDA7D410) {pitch: 0.000000, yaw: 90.000000, roll: 0.000000}>",
+        "scale": "<Struct 'Vector' (0x00000286FDA7D410) {x: 2.000000, y: 4.000000, z: 2.000000}>",
+        "position": "<Struct 'Vector' (0x00000286FDA7D410) {x: 150.000000, y: -250.000000, z: 200.000000}>"
+      }
+    ]
+  },
+  "log": {
+    "blueprint_runtime_script_errors": 0,
+    "material_compile_failures": 0,
+    "observation_python_errors": 2,
+    "observation_error_cause": "Visual fixture used unexposed GameplayStatics spawn and PlayerController console methods; corrected to native Summon via SystemLibrary. Transient PIE fixtures only.",
+    "preexisting_warnings": "Native additive animation/SingleNodeInstance warnings remain; packaged animation behavior was not certified."
+  },
+  "unchanged_sources": [
+    "Native MeleeNPC/ShooterNPC and BP_Enemy_Base",
+    "Original MF_PlaneMask and production material parents",
+    "Previous ammo/target implementation retained"
+  ],
+  "limitations": [
+    "No full hands-on tutorial playthrough",
+    "No packaged or network verification",
+    "NPC lethal fixture uses generic production damage; it is not a manual combat-skill test"
+  ],
+  "fixture_corrections": [
+    "Wait for actual collision-ready enemies instead of a fixed wall-clock delay",
+    "Use actual game-time corpse age rather than wall-clock time",
+    "Do not reset live NPC visual state solely to sample a shader midpoint",
+    "Supply the existing native weak-point class path to the reused regression fixture"
+  ],
+  "product_rework_count": 0
+}

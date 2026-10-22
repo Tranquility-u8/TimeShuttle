@@ -1,0 +1,82 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "Unmatched objective signal is ignored",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Matching objective signal is accepted",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Objective signal advances once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Retry task can restart its own flow without stale continuation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Same token in two flows remains independently owned",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Last owner release restores movement",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "MissingTag fails with a useful reason",
+      "passed": true,
+      "detail": "A sequence binding tag does not exist in the assigned asset."
+    },
+    {
+      "name": "MissingTag failure leaves no movement lock",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "MissingRole fails with a useful reason",
+      "passed": true,
+      "detail": "A sequence binding role has no actor."
+    },
+    {
+      "name": "MissingRole failure leaves no movement lock",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Sequence tag resolves the configured Player role",
+      "passed": true,
+      "detail": "[\"<Object '/Game/DialogSystem/Tests/UEDPIE_0_L_DialogueVerification.L_DialogueVerification:PersistentLevel.BP_FPCharacter_C_0' (0x000001B349E9E000) Class 'BP_FPCharacter_C'>\"]"
+    },
+    {
+      "name": "Pause holds a live Cutscene instead of completing it",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Destroying a cinematic flow restores camera and controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Existing player death hook cancels active mission flow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Death hook releases cinematic controls",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "started": 1792377051.1936707,
+  "ended": 1792377055.2828941
+}

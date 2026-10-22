@@ -1,0 +1,641 @@
+{
+  "passed": true,
+  "checks": 93,
+  "failures": [],
+  "rows": [
+    {
+      "name": "door_RES-I15.35",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_RES-I5.35",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_RES-U-3.65",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_RES-U-9.65",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_RES-SERV",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_RES-ACT",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_RES-STORE",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_RES-QUIET",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_LS39-DOOR-1",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_LS39-DOOR-2",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_LS39-DOOR-3",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_LS39-DOOR-4",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_L01-HALL",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_R02-N",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_RES-N",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_RES-M",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_RES-EXT-DINING",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_RES-EXT-LOUNGE",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_QW1",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_QW2",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_upper_E4_upper",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_C0",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_N-KITCHEN",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_N-PANTRY",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_N-QUIET-READ",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_N-H01-N",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_N-H01-S",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_N-H02-N",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_N-H02-S",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_WG-ASSEMBLY",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_EG-ENTRY",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_EG-WORK",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_WU-NORTH",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_WU-PREP",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_WU-DISCUSS",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_GW38-OVERHAUL",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_GW38-STORAGE",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_GW38-EXISTING-STORE",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_GW38-EXISTING-REPAIR",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_RW38-RING-ENTRY",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_RW38-PREP-N",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_RW38-ARCHIVE",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_RW39-CONTROL-CHAMBER",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_RW39-ANALYSIS",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_RW39-CALIBRATION",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_RW39-RECORDS",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_RW39-REVIEW",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_RW39-SEALED-RECORDS",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_RW39-RECORDS-FORWARD",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_RW39-ARCHIVE-LINK",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_E39-A-ENTRY",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_E39-A-END",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_E39-POD1",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_E39-POD2",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_E39-POD3",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_E39-POD4",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_E39-EG02",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_E39-EG04",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_E39-EG05",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_E39-EG06",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_E39-EG09",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_E39-EG03",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_TR-ENTRY",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_TR-CONNECT-PREP",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_TR-CONNECT-TRAIN",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_R9-TIME-EXIT",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_R9-WEST-SHARED",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_R10-UP-NORTH",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_R10-COMMONS-NORTH",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_R10-COMMONS-WEST",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_R10-EQUIPMENT",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_R13-U01",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_R13-U02",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_R16-CORE-E",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_R16-CORE-S",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_R16-PREP-N",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_G-WEST-MAIN",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "door_R17-L01-S",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "old_north_door_closed",
+      "expected_blocked": true,
+      "passed": true,
+      "blocked": true,
+      "initial_overlap": false,
+      "location_cm": [
+        -2932.6362311840057,
+        -1800.0,
+        100.0
+      ],
+      "actor": "SM_LabR17_Structure_02"
+    },
+    {
+      "name": "old_south_door_closed",
+      "expected_blocked": true,
+      "passed": true,
+      "blocked": true,
+      "initial_overlap": false,
+      "location_cm": [
+        -2932.635986804962,
+        700.0,
+        100.0
+      ],
+      "actor": "SM_LabR17_Structure_02"
+    },
+    {
+      "name": "E4_removed_east_west",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "E4_removed_north_south",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "duct_crouch_pass",
+      "expected_blocked": false,
+      "passed": true,
+      "blocked": false
+    },
+    {
+      "name": "duct_standing_block",
+      "expected_blocked": true,
+      "passed": true,
+      "blocked": true,
+      "initial_overlap": false,
+      "location_cm": [
+        -3799.8766463994975,
+        -2670.0,
+        874.0
+      ],
+      "actor": "SM_LabR17_Structure_18"
+    },
+    {
+      "name": "duct_ground_wall",
+      "expected_blocked": true,
+      "passed": true,
+      "blocked": true,
+      "initial_overlap": false,
+      "location_cm": [
+        -3847.5002250075345,
+        -2670.0,
+        640.0
+      ],
+      "actor": "SM_LabR17_Structure_11"
+    },
+    {
+      "name": "floor_A_public",
+      "passed": true,
+      "blocked": true,
+      "initial_overlap": false,
+      "location_cm": [
+        -3400.0,
+        -270.0,
+        1.7881393432617188e-06
+      ],
+      "actor": "SM_LabR17_Structure_00"
+    },
+    {
+      "name": "floor_A_E4",
+      "passed": true,
+      "blocked": true,
+      "initial_overlap": false,
+      "location_cm": [
+        -4000.0,
+        630.0,
+        1.7881393432617188e-06
+      ],
+      "actor": "SM_LabR17_Structure_00"
+    },
+    {
+      "name": "floor_B_TIME",
+      "passed": true,
+      "blocked": true,
+      "initial_overlap": false,
+      "location_cm": [
+        -3100.0,
+        -2000.0,
+        540.0000196695328
+      ],
+      "actor": "SM_LabR17_Structure_08"
+    },
+    {
+      "name": "floor_B_UP",
+      "passed": true,
+      "blocked": true,
+      "initial_overlap": false,
+      "location_cm": [
+        -4700.0,
+        -2000.0,
+        540.0000196695328
+      ],
+      "actor": "SM_LabR17_Structure_08"
+    },
+    {
+      "name": "floor_B_training",
+      "passed": true,
+      "blocked": true,
+      "initial_overlap": false,
+      "location_cm": [
+        3600.0,
+        2500.0,
+        540.0000196695328
+      ],
+      "actor": "SM_LabR17_Structure_08"
+    },
+    {
+      "name": "floor_B_prep",
+      "passed": true,
+      "blocked": true,
+      "initial_overlap": false,
+      "location_cm": [
+        3400.0,
+        -100.0,
+        540.0000196695328
+      ],
+      "actor": "SM_LabR17_Structure_08"
+    },
+    {
+      "name": "floor_B_corridor",
+      "passed": true,
+      "blocked": true,
+      "initial_overlap": false,
+      "location_cm": [
+        -6500.0,
+        500.0,
+        540.0000196695328
+      ],
+      "actor": "SM_LabR17_Structure_08"
+    },
+    {
+      "name": "training_ceiling_8m",
+      "passed": true,
+      "blocked": true,
+      "initial_overlap": false,
+      "location_cm": [
+        3600.0,
+        2500.0,
+        1340.000033378601
+      ],
+      "actor": "SM_LabR17_Structure_24"
+    }
+  ]
+}

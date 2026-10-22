@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "jobs": [
+    {
+      "path": "/Game/Blueprints/Core/BP_TimeShuttleGameInstance.BP_TimeShuttleGameInstance",
+      "graph": "LoadMemory",
+      "nodes": [
+        "K2Node_CallFunction_17"
+      ]
+    },
+    {
+      "path": "/Game/DialogSystem/Blueprints/AC_DialogueManager.AC_DialogueManager",
+      "graph": "RequestDialogue",
+      "nodes": [
+        "K2Node_CallFunction_85",
+        "K2Node_DynamicCast_13",
+        "K2Node_CallFunction_87",
+        "K2Node_DynamicCast_14",
+        "K2Node_CallFunction_88"
+      ]
+    },
+    {
+      "path": "/Game/DialogSystem/Blueprints/AC_DialogueManager.AC_DialogueManager",
+      "graph": "Finish",
+      "nodes": [
+        "K2Node_CallFunction_33",
+        "K2Node_DynamicCast_4",
+        "K2Node_CallFunction_35",
+        "K2Node_DynamicCast_5",
+        "K2Node_CallFunction_36"
+      ]
+    },
+    {
+      "path": "/Game/DialogSystem/Blueprints/AC_DialogueManager.AC_DialogueManager",
+      "graph": "InitializeDialogue",
+      "nodes": [
+        "K2Node_CallFunction_13",
+        "K2Node_DynamicCast_4",
+        "K2Node_CallFunction_15",
+        "K2Node_DynamicCast_5",
+        "K2Node_CallFunction_16"
+      ]
+    },
+    {
+      "path": "/Game/DialogSystem/Blueprints/BFL_Dialogue.BFL_Dialogue",
+      "graph": "SavePlayerMemory",
+      "nodes": [
+        "K2Node_CallFunction_9",
+        "K2Node_DynamicCast_2",
+        "K2Node_CallFunction_11"
+      ]
+    },
+    {
+      "path": "/Game/DialogSystem/Blueprints/BFL_Dialogue.BFL_Dialogue",
+      "graph": "LoadPlayerMemory",
+      "nodes": [
+        "K2Node_CallFunction_21",
+        "K2Node_DynamicCast_2",
+        "K2Node_CallFunction_23"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "name": "blueprint GameInstance survives level travel",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "enabled completion history survives travel",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "travel stops old audio",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "travel removes old widget",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "new player starts idle and unlocked",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no orphan dialogue sessions after travel",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "disabled persistent memory stays disabled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "default local once record does not cross maps",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "training room owns blueprint dialogue manager",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "training defaults keep memory disabled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "training controller is present",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "training controller initialized",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "training dialogue starts through migrated calls",
+      "passed": true,
+      "detail": "{'active': 'TSS1_Energy', 'completed': 0, 'error': '', 'state': '<NUM_DialogueState.READING_TEXT: 3>'}"
+    },
+    {
+      "name": "training stage-one dialogue completes without dialogue error",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "training screenshot captured",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "started": 1792346567.9981852,
+  "training_state": {
+    "active": "TSS1_Energy",
+    "completed": 0,
+    "error": "",
+    "state": "<NUM_DialogueState.READING_TEXT: 3>"
+  },
+  "ended": 1792346579.0588548
+}

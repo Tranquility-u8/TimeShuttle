@@ -1,0 +1,113 @@
+{
+  "started": 1792366493.687549,
+  "checks": [
+    {
+      "name": "actual native GameInstance without memory interface",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "missing service resolves None",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "enabling missing memory returns false",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "missing completion query returns false",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "missing completion write returns false",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "missing service cannot save",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "missing service cannot load",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "missing service leaves player component memory disabled",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "voice starts without custom GI",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "voice cannot be skipped",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "voice automatic completion without memory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "manual text starts without memory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "manual text completion without memory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local once starts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "local once record survives without memory service",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "locked dialogue accepted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "movement lock without custom GI",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "cleanup releases movement lock",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "story trigger without custom GI",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no dialogue errors without service",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no missing-service save created",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "samples": [],
+  "status": "passed",
+  "ended": 1792366502.4886498
+}

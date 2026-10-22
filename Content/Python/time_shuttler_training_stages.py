@@ -2,17 +2,16 @@
 import unreal
 
 STAGES={
-    'S1':'01  Entry to center / frozen rocks',
-    'S2':'02A-B  Manual time control / front shooter',
-    'S2C':'02C  Front and side shooters',
-    'S3':'03  Pickup, reload and basic shooting',
-    'S4':'04  Moving armored targets',
-    'S5':'05  Suspended rock and breakable link',
-    'S6':'06  Combined shooting exercise',
-    'S7A':'07A  Melee preview / table retained',
-    'S7B':'07B  Combat / table removed',
+    'S1':'01  Rock-area Q lesson / safe zone',
+    'S2':'02  Stop, sidestep, resume with Q / enemy appears in Play',
+    'S3':'03  Stationary enemies / ordinary body-hit kills',
+    'S4':'04A  Stationary enemy / native weak point',
+    'S4Moving':'04B  Walking enemy / native weak point',
+    'S5':'05  One plank / two supports / three kills',
+    'S7A':'07A  Melee preview / front spawn / no table',
+    'S7B':'07B  Immediate combat / eight covers / suspended container',
 }
-SHARED={'S3','S4','S5','S6','S7A'}
+SHARED={'S3','S4','S4Moving','S5'}
 
 def _actors():
     world=unreal.get_editor_subsystem(unreal.UnrealEditorSubsystem).get_editor_world()
@@ -26,8 +25,7 @@ def show_stage(stage):
     """Set a review/PIE starting layout; never moves the player or the editor camera."""
     if stage not in STAGES:raise ValueError(stage)
     actors=_actors()
-    active={stage}
-    if stage=='S2C':active.add('S2')
+    active={'S4' if stage=='S4Moving' else stage}
     if stage in SHARED:active.add('SharedShooting')
     layers=unreal.get_editor_subsystem(unreal.LayersSubsystem)
     groups=set()
@@ -38,6 +36,9 @@ def show_stage(stage):
             group=next(t[8:] for t in tags if t.startswith('TSStage:'))
             groups.add(group)
             on=group in active
+            if group=='S4' and on:
+                wanted='S4_MovingArmorTarget_1_Layout' if stage=='S4Moving' else 'S4_StaticWeakpointTarget_2'
+                on=('TSId:'+wanted) in tags
             a.modify()
             a.set_actor_hidden_in_game(not on)
             a.set_actor_enable_collision(on and 'TSCollision:none' not in tags)

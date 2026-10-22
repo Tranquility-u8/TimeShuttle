@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "compiled": {
+    "/Game/DialogSystem/Blueprints/BPI_DialogueMemory": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "/Game/Blueprints/Core/BP_TimeShuttleGameInstance": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "/Game/DialogSystem/Blueprints/BFL_Dialogue": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "/Game/DialogSystem/Blueprints/AC_DialogueManager": {
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  "captures": [
+    "..\\..\\..\\..\\..\\UE5Project\\TimeShuttle\\Saved\\Agent\\DialogueBlueprint\\MemoryDecouple\\layout_SetDialogueMemoryEnabled.png",
+    "..\\..\\..\\..\\..\\UE5Project\\TimeShuttle\\Saved\\Agent\\DialogueBlueprint\\MemoryDecouple\\layout_IsDialogueMemoryEnabled.png",
+    "..\\..\\..\\..\\..\\UE5Project\\TimeShuttle\\Saved\\Agent\\DialogueBlueprint\\MemoryDecouple\\layout_HasDialogueCompleted.png",
+    "..\\..\\..\\..\\..\\UE5Project\\TimeShuttle\\Saved\\Agent\\DialogueBlueprint\\MemoryDecouple\\layout_RememberDialogueCompleted.png",
+    "..\\..\\..\\..\\..\\UE5Project\\TimeShuttle\\Saved\\Agent\\DialogueBlueprint\\MemoryDecouple\\layout_SaveDialogueMemory.png",
+    "..\\..\\..\\..\\..\\UE5Project\\TimeShuttle\\Saved\\Agent\\DialogueBlueprint\\MemoryDecouple\\layout_LoadDialogueMemory.png",
+    "..\\..\\..\\..\\..\\UE5Project\\TimeShuttle\\Saved\\Agent\\DialogueBlueprint\\MemoryDecouple\\layout_ResolveDialogueMemory.png",
+    "..\\..\\..\\..\\..\\UE5Project\\TimeShuttle\\Saved\\Agent\\DialogueBlueprint\\MemoryDecouple\\layout_EnableDialogueMemory.png",
+    "..\\..\\..\\..\\..\\UE5Project\\TimeShuttle\\Saved\\Agent\\DialogueBlueprint\\MemoryDecouple\\layout_HasRememberedDialogue.png",
+    "..\\..\\..\\..\\..\\UE5Project\\TimeShuttle\\Saved\\Agent\\DialogueBlueprint\\MemoryDecouple\\layout_RememberDialogue.png",
+    "..\\..\\..\\..\\..\\UE5Project\\TimeShuttle\\Saved\\Agent\\DialogueBlueprint\\MemoryDecouple\\layout_SavePlayerMemory.png",
+    "..\\..\\..\\..\\..\\UE5Project\\TimeShuttle\\Saved\\Agent\\DialogueBlueprint\\MemoryDecouple\\layout_LoadPlayerMemory.png",
+    "..\\..\\..\\..\\..\\UE5Project\\TimeShuttle\\Saved\\Agent\\DialogueBlueprint\\MemoryDecouple\\layout_InitializeDialogue.png",
+    "..\\..\\..\\..\\..\\UE5Project\\TimeShuttle\\Saved\\Agent\\DialogueBlueprint\\MemoryDecouple\\layout_Finish.png",
+    "..\\..\\..\\..\\..\\UE5Project\\TimeShuttle\\Saved\\Agent\\DialogueBlueprint\\MemoryDecouple\\layout_RequestDialogue.png"
+  ]
+}

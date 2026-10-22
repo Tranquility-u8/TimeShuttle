@@ -1,0 +1,9 @@
+{
+  "/Game/Data_Dialog/DT_DialogueConversations": true,
+  "/Game/Data_Dialog/DT_TS1_01": true,
+  "/Game/Data_Dialog/DT_TS1_02": true,
+  "/Game/Data_Dialog/DT_TutorialEnergy": true,
+  "/Game/DialogSystem/Tests/DT_TestConversations": true,
+  "/Game/DialogSystem/Tests/DT_TestLines": true,
+  "/Game/Environment/TrainingRoom/Tutorial/Dialogue/DT_TutorialArrival": true
+}

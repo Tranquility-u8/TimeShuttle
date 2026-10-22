@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-17",
+  "task": "20261017-tutorial-late-stages",
+  "engine": "UE 5.6.1",
+  "scope": "Explicit late-stage entry fixtures with a production equipped pistol BeginFire shot. Not a complete S1-to-finish playthrough.",
+  "cold_editor_without_authoring_helper": true,
+  "checks": [
+    {
+      "name": "uncollected pistol is removed with the table",
+      "passed": true
+    },
+    {
+      "name": "real normal-time weapon shot severs Stage5 link",
+      "passed": true
+    },
+    {
+      "name": "rock kills three and advances directly to melee preview",
+      "passed": true
+    },
+    {
+      "name": "one real melee enemy spawns at fixed room front",
+      "passed": true
+    },
+    {
+      "name": "melee preview withdraws table, displays and supply",
+      "passed": true
+    },
+    {
+      "name": "equipped player weapon is preserved",
+      "passed": true
+    },
+    {
+      "name": "deprecated robot meshes absent throughout final-stage fade",
+      "passed": true
+    },
+    {
+      "name": "final stage still spawns four real enemies",
+      "passed": true
+    },
+    {
+      "name": "melee retry keeps room-front spawn and no shared table",
+      "passed": true
+    },
+    {
+      "name": "removed Your solution entry redirects to melee preview",
+      "passed": true
+    },
+    {
+      "name": "removed optional branch redirects safely",
+      "passed": true
+    },
+    {
+      "name": "repeated normal entry still spawns real melee enemy",
+      "passed": true
+    }
+  ],
+  "normal_shot": {
+    "ammo_before": 60,
+    "ammo_after": 59,
+    "world_time_dilation": 1,
+    "link_broken": true
+  },
+  "melee_spawn_floor_cm": [
+    0,
+    -1836.25,
+    0
+  ],
+  "final_fade_observations": {
+    "samples": 232,
+    "deprecated_robot_meshes": 0
+  },
+  "compile": {
+    "level": "0 errors, 0 warnings",
+    "controller": "0 errors, 0 warnings"
+  },
+  "format_semantics": "Initial 118 graphs and follow-up 59 controller graphs unchanged by formatting",
+  "reentry_repair": "Spawn selection no longer depends on consumed proxy dissolve wanted/dead state.",
+  "validation_fixture_corrections": "Corrected exact connector tag and ignored destroyed pickup visual records; neither required gameplay changes."
+}

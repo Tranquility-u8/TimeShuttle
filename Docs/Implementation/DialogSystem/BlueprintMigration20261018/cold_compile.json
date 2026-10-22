@@ -1,0 +1,45 @@
+{
+  "blueprints": {
+    "/Game/DialogSystem/Blueprints/AC_DialogueManager": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "/Game/DialogSystem/UI/WBP_Dialogue": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "/Game/DialogSystem/Blueprints/BFL_Dialogue": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "/Game/DialogSystem/Blueprints/BP_DialogueGameInstance": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "/Game/DialogSystem/Blueprints/SG_DialogueMemory": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "/Game/DialogSystem/Blueprints/BP_DialogueSession": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "/Game/DialogSystem/Blueprints/AC_DialogueParticipant": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "/Game/DialogSystem/Blueprints/BP_DialogueTrigger": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "/Game/Blueprints/Player/BP_FPCharacter": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController": {
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  "old_plugin_referencers": []
+}

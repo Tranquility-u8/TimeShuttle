@@ -1,147 +1,135 @@
-# DialogSystem 使用与实现说明
+# DialogSystem 蓝图对话系统
 
-日期：2026-10-12。任务 ID：P-008（对白播放）、P-058（对白 UI）、GPD-026（交互）。
+更新：2026-10-18。UE 5.6.1，单机本地玩家。任务 ID：P-008 / P-058 / GPD-026。
 
-状态：完整功能已实现并通过本轮 UE 编辑器与 PIE 验证，资产已保存。运行环境为 UE 5.6.1、单机本地玩家。正式剧情台词尚未提供，因此正式表为空；Tests 内的台词、语音和地图仅供验证。
+完整对话运行逻辑现由普通蓝图实现。`TimeShuttleDialog` 运行插件已从项目目录和 `.uproject` 移除，行结构与枚举也已迁到内容资产。玩家、NPC、触发器、现有训练控制器及七张对白表已迁移。原对白表逻辑内容、路径和行名保持一致。
 
-## 已确认并实现的规则
+本次范围是替换对话底层并保留现有接入；训练关卡的 Enter/Check、Phase/NextStep 和阶段编排尚未改为通用任务执行器。后续任务、角色锁定与 Cutscene 编排应以对话事件接入，不能把本次交付当作整个任务系统重构完成。
 
-- 支持碰撞空气盒、现有 NPC 互动接口、剧情强制三种入口；全部由玩家唯一的 DialogueManager 管理，无回答选项。
-- 角色初始化默认自动。P 切换模式，Enter / 空格在手动模式下进入下一句；切换状态在同一角色生命周期内保留。没有跳过整段的玩家入口。
-- 有配音时，自动和手动都必须等真实声音完成。自动在完成后推进；手动等待按键。按住键不会连续跳句，同一帧的多次 Next 请求只处理一次。
-- 无 SoundWave 的句子只显示文字：自动等待 TextOnlyDuration，手动可立即继续。非空但加载失败、循环或无效的声音资源属于配置错误，会取消并发出错误事件，不能伪装成正常完成。
-- 字幕为底部姓名＋整句文字，自动换行，无打字机、选项或头像。所有声音为 2D，不因离开 NPC 变小声。
-- 整段配置 bLockPlayerMovement。锁定时保留转视角、对话控制和暂停菜单；阻止移动、跳跃、开火、互动、换枪、时间能力等输入，并清理已经启动的连射、互动、滑行及时间能力。自由移动版本保留其他游戏操作，空格在对话中专用于下一句。
-- 离开碰撞区、离开或销毁 NPC 不会取消已经开始的对话。只有一个活动对话。
-- Priority 为 1–3，1 最高；Story 请求的有效优先级强制为 1。新请求必须严格高于当前段才能打断；同级、低级或当前同一段返回 Busy，不排队，不自动恢复被打断的段。
-- 暂停菜单暂停声音和计时，恢复后继续；死亡取消；关卡切换清理声音、UI 和本组件的输入状态。时停/子弹时间不改语速，也不延长纯文字阅读时间。回溯不回退本组件的台词索引或完成记录。
-- 跨关卡及存档记忆已实现，但默认关闭；没有重新开启项目此前禁用的自动存档/自动读档。
+## 改动计划与完成顺序
 
-## 资产与代码入口
+1. 盘点原插件、资产引用、玩家与训练室调用；定向备份。
+2. 创建蓝图结构体/枚举、完整状态机、语音及输入会话、UMG、触发器与记忆模块。
+3. 保留原数据与外部行为，迁移玩家/NPC/训练调用及工程 GameInstance 配置。
+4. 确认原生引用为零后移走旧插件，以新进程冷启动验证。
+5. 完成 PIE 功能与边界回归、真实跨关卡和训练室接入，整理图表，更新独立 Word 使用手册。
 
-| 路径 | 用途 |
+## 蓝图职责与扩展入口
+
+除项目通用 Game Instance 位于 `/Game/Blueprints/Core/` 外，下列对话运行资产都在 `/Game/DialogSystem/`，没有自定义 C++ 运行父类。
+
+| 资产 | 基类与职责 |
 |---|---|
-| `/Game/DialogSystem/Data/DT_DialogueLines` | 正式逐句表，行类型 DialogLineRow |
-| `/Game/DialogSystem/Data/DT_DialogueConversations` | 正式整段表，行类型 DialogConversationRow |
-| `/Game/DialogSystem/Blueprints/AC_DialogueManager` | 原生运行组件的项目适配子类，已挂载 BP_FPCharacter |
-| `/Game/DialogSystem/Blueprints/BP_DialogueTrigger` | 可调整盒体范围的空气碰撞触发器 |
-| `/Game/DialogSystem/Blueprints/BP_DialogueNPC` | 继承 BP_Interaction_Base，接入 BPI_Interaction；可再派生并添加 NPC 模型 |
-| `/Game/DialogSystem/Blueprints/AC_DialogueParticipant` | 已有 NPC/剧情 Actor 可添加的请求组件 |
-| `/Game/DialogSystem/UI/WBP_Dialogue` | 可编辑 UMG 布局；姓名、正文、状态文字及安全区 |
-| `/Game/DialogSystem/Input/IMC_Dialogue` | P、Enter、SpaceBar 的独立输入上下文 |
-| `/Game/DialogSystem/Tests/L_DialogueVerification` | 独立验证地图，使用现有 GM_FP 与时间回溯管理器 |
-| `Plugins/TimeShuttleDialog/Source/TimeShuttleDialog/` | UE5.6 C++ 生命周期、语音、输入、数据行结构和记忆；全部提供 Blueprint 接口 |
+| `Blueprints/AC_DialogueManager` | ActorComponent；26 个函数完成请求、优先级、状态、逐句推进、语音结束、控制锁与清理。原项目控制锁适配保留在 EventGraph。 |
+| `Blueprints/BP_DialogueSession` | Actor；每段独立的异步声音预加载与 Enhanced Input 事件；带请求代次校验，结束后销毁。 |
+| `Blueprints/BFL_Dialogue` | BlueprintFunctionLibrary；查找管理器、读取/校验表、玩法输入门禁、死亡与显式存档接口。 |
+| `/Game/Blueprints/Core/BP_TimeShuttleGameInstance` | 项目通用 GameInstance；对话记忆作为 `Dialogue|Memory` 分类内的一项功能，持久化默认关闭。 |
+| `Blueprints/BPI_DialogueMemory` | 可选记忆接口；服务缺失或关闭时不阻止播放。 |
+| `Blueprints/SG_DialogueMemory` | SaveGame；版本 1 的已完成 ID 集合。 |
+| `Blueprints/AC_DialogueParticipant` | ActorComponent；已有 NPC/剧情 Actor 的可复用请求入口。 |
+| `Blueprints/BP_DialogueTrigger` | Actor；Box 组件的玩家碰撞入口及剧情请求入口。 |
+| `Blueprints/BP_DialogueNPC` | 保留 BP_Interaction_Base 与现有 F 互动接口，可派生角色外观。 |
+| `UI/WBP_Dialogue` | UserWidget；Designer 可编辑姓名、整句正文与模式状态，ShowLine/ShowStatus 蓝图更新文本。 |
+| `Types/S_DialogueLine`、`S_DialogueConversation` | 蓝图结构体；逐句与整段表结构。 |
+| `Types/ENUM_DialogueTrigger/State/EndReason/RequestResult` | 四个蓝图枚举，可在蓝图分支和事件中使用。 |
 
-原生插件已在 TimeShuttle.uproject 启用。新机器需要对应 UE5.6 C++ 工具链构建模块；本机已构建。行结构和枚举是原生反射类型，在 DataTable/蓝图编辑器中直接可选，不另造功能重复的 S_/ENUM_ 资产。编辑器自动化辅助工具仅用于本次制作与验证，不是游戏运行依赖。
+`BP_FPCharacter.DialogueManager` 的组件模板保留 WidgetClass、IMC_Dialogue 和两项 InputAction 配置。工程 `GameInstanceClass` 保留 BP_TimeShuttleGameInstance。对话播放通过 BPI_DialogueMemory 访问可选记忆服务，不依赖该具体类；更换 GI 或不实现接口时仍可播放，仅缺少跨关卡/磁盘记忆。当前通用 Game Instance 直接继承 Engine.GameInstance，没有继承旧的对话专用蓝图；未来项目级功能可作为其他分类加入。
 
-## 填写 DataTable
+新增剧情效果可绑定 `OnConversationStarted`、`OnLineStarted`、`OnLineEnded`、`OnConversationEnded`、`OnDialogueError`。句事件传递 `LineEventId`，任务/演出只在结束原因是 `Completed` 时按成功处理。取消、死亡和优先级打断不能视为任务完成。新增管理器行为可直接编辑或派生蓝图，字幕布局在 Designer 编辑；不要把具体任务条件写入播放状态机。
 
-先在逐句表添加行，再在整段表的 Lines 数组按播放顺序引用这些行；不依赖 DataTable 显示排序。
+## 保持的行为规则
 
-| DialogLineRow 字段 | 类型／默认值 | 说明 |
+- 碰撞盒、NPC 互动、Story 三种入口共用玩家的一个管理器，没有玩家回答选项。
+- 初始自动播放，P 切换自动/手动。Enter 与 Space 在手动模式下前进；有声音必须等待真实 AudioFinished。没有玩家跳过整段入口。同帧多次 Next 合并，按住不会重复跳句。
+- 无 SoundWave 为正常纯文字。自动按 TextOnlyDuration 计时，手动可立即前进；PostLineDelay 只作用于自动模式。语音不以阅读秒数估计结束。
+- 2D 声音与底部姓名＋整句字幕，不随距离衰减，没有逐字效果。离开或销毁触发来源不取消当前对话。
+- Priority 为 1–3，1 最高；Story 有效优先级为 1。只有严格更高优先级能打断。同级、低级和同一段请求返回 Busy，不排队、不恢复被打断段。
+- bLockPlayerMovement 为真时阻止移动、跳跃、开火、互动、换枪、时间能力，并停止已经启动的相关动作；转视角、对话控制及暂停仍可用。自由移动对话保留玩法操作，Space 在对话期间专用于下一句。
+- 暂停菜单同时暂停声音与阅读计时；恢复不补算暂停时间。时停/子弹时间不改变语速或阅读时间。死亡取消，关卡切换清理声音、UI、独立输入会话和自己拥有的移动锁；保留其他系统的锁，不使用 ClearAllMappings/ResetIgnoreMoveInput。
+- BeginPlay/EndPlay、加载代次与状态转换保护阻止过期回调复活已取消对话。异步预加载超时 30 秒；丢失语音报 InvalidData。循环或异常播放在资源时长加 10 秒后取消并报 AudioFailed；纯蓝图不依赖受保护的 SoundWave.bLooping 属性预检。
+- OnLineEnded 在实际前进离开当前句时发出，手动等待期间不提前发，取消不补发。转换回调内再请求返回 ReentrantRequest；需要衔接时安排到下一 Tick。CancelDialogue 不接受 Completed 原因。
+
+## 数据与触发用法
+
+当前整段表：`/Game/Data_Dialog/DT_DialogueConversations`。现有逐句表包括 `DT_TS1_01`、`DT_TS1_02`、`DT_TutorialEnergy` 及训练目录中的 `DT_TutorialArrival`。不要再使用旧文档中已不存在的 DialogSystem/Data 路径。
+
+| S_DialogueLine 字段 | 类型 / 默认值 | 说明 |
 |---|---|---|
-| SpeakerId | Name | 可选的稳定说话者标识 |
-| SpeakerName | Text | 必填，字幕姓名，可本地化 |
-| DialogueText | Text | 必填，完整字幕，可本地化 |
-| VoiceWave | Soft SoundWave | 可空；非空则异步预加载整段的语音 |
-| TextOnlyDuration | Float，3 秒 | 无配音的自动阅读时间，至少 0.1 秒 |
-| PostLineDelay | Float，0 秒 | 自动模式的句后停顿；有配音时从声音完成后开始计时。手动模式不增加这个等待 |
-| LineEventId | Name | 可选的剧情事件标识，随句开始/自然结束事件发出 |
+| SpeakerId | Name | 可选稳定说话者标识。 |
+| SpeakerName | Text | 必填，支持本地化。 |
+| DialogueText | Text | 必填，整句正文与自动换行。 |
+| VoiceWave | Soft SoundWave | 可空；整段开始前异步预加载。 |
+| TextOnlyDuration | Float / 3 | 纯文字自动阅读秒数，至少 0.1。 |
+| PostLineDelay | Float / 0 | 自动句后停顿，非负。 |
+| LineEventId | Name | 句开始和自然前进事件携带的剧情标识。 |
 
-| DialogConversationRow 字段 | 类型／默认值 | 说明 |
+| S_DialogueConversation 字段 | 类型 / 默认值 | 说明 |
 |---|---|---|
-| ConversationId | Name | 必填的稳定整段 ID；用于事件和一次性记录，不随表行重排变化。不同表也应保持项目内唯一 |
-| Lines | DataTableRowHandle 数组 | 有序逐句引用，可复用台词 |
-| Priority | Int，3 | 1 最高、3 最低；运行时也验证范围 |
-| bLockPlayerMovement | Bool，false | 整段是否限制为仅转视角 |
-| bPlayOnce | Bool，false | 自然完成后禁止重复；取消、死亡、优先级打断均不计完成 |
+| ConversationId | Name | 非空、稳定且项目内唯一。 |
+| Lines | DataTableRowHandle 数组 | 逐句表与行名，数组顺序就是播放顺序。 |
+| Priority | Int / 3 | 1–3。 |
+| bLockPlayerMovement | Bool / false | 整段控制限制。 |
+| bPlayOnce | Bool / false | 自然完成后记录；取消不消耗完成资格。 |
 
-ValidateConversation 可供制作工具/蓝图预检；RequestDialogue 也会验证空表、错行类型、缺行、空姓名/正文、非法时间和同表重复 ID。声音加载超时及异常播放会通过 OnDialogueError 返回 LastError。
+剧情调用：`Get Player Pawn → BFL_Dialogue.FindDialogueManager → Is Valid → RequestDialogue`。Conversation 输入 `Make Data Table Row Handle`（整段表＋整段 RowName）；Trigger=Story；Source=发起事件的 Actor。RowName 与 ConversationId 都须正确填写，它们不是同一个字段。
 
-## 三种接入方式
+返回值：Accepted / Busy / AlreadyCompleted / InvalidData / PlayerUnavailable / ReentrantRequest。Accepted 表示请求被接收，异步加载仍可能失败；以实际句开始和结束事件作为后续依据。查看 LastError 定位数据错误。
 
-1. **碰撞盒**：把 BP_DialogueTrigger 放进关卡；设置 Conversation 的 DataTable 与 RowName；在 TriggerBox 调整 Box Extent。仅本地玩家 Pawn 可触发。Busy 不消耗一次性标记，离开后重新进入可重试。
-2. **NPC**：把 BP_DialogueNPC 或其子类放进关卡并配置 Conversation，沿用现有 InteractionArea、UI_Interaction 与玩家互动键 F（也保留现有手柄映射）。对于已有 NPC，添加 AC_DialogueParticipant，并从它原有的互动事件调用 Interact(Player)，避免另写一套抢占按键的距离轮询。
-3. **剧情**：取得玩家 DialogueManager，调用 RequestDialogue(Conversation, Story, SourceActor)；或调用触发器/参与组件的 TriggerStory(Player)。根据返回值区分 Accepted、Busy、AlreadyCompleted、InvalidData、PlayerUnavailable、ReentrantRequest。
+碰撞触发放置 BP_DialogueTrigger，配置 Conversation 和 Box 范围。NPC 放置 BP_DialogueNPC 派生类并配置 Conversation；已有 NPC 可添加 AC_DialogueParticipant，再从原互动事件调用 Interact(Player)。初始化前的请求须先确认 Pawn 与管理器有效，不用固定短 Delay 猜测加载时间。
 
-监听 OnConversationStarted、OnLineStarted、OnLineEnded、OnConversationEnded、OnDialogueError 接剧情。OnConversationEnded 带结束原因与来源；只有 Reason=Completed 才按剧情完成处理。中途取消不补发句自然结束。回调中需要衔接另一段时放到下一 Tick 请求，避免正在状态转换时重入。
+## 存档与迁移
 
-CancelDialogue 是剧情/生命周期接口，没有绑定玩家跳过键。不要用 Stop Voice 充当 Next：停止音频也可能触发 UE 的 OnAudioFinished。
+跨关卡/存档记忆仍默认关闭，项目原有自动存档/自动读档未开启。关闭时 bPlayOnce 只在当前玩家组件生命周期内记录。以后显式打开组件的 Enable Persistent Memory，或调用 BFL_Dialogue.EnableDialogueMemory(true)；当前不启用。
 
-## UI 与输入扩展
+主存档成功后调用 BFL_Dialogue.SavePlayerMemory，bPrimarySaveSucceeded 必须传真实结果；读档使用 LoadPlayerMemory。对话侧车槽为原槽名加 `_Dialogue`。主存档失败不写侧车，缺少侧车按空记录读取，异常版本返回失败。读档取消当前播放、清空角色局部记录，不恢复半句进度。
 
-WBP_Dialogue 提供可编辑 Widget Tree。保留 SpeakerLabel、DialogueLabel、StatusLabel 三个 TextBlock 名字可继续使用原生更新；样式默认值在父类 Dialogue|Style 分类。UI 不抢键盘焦点，整个 Widget 不参与命中测试。字幕上移留出原 HUD 的弹药区域。
+旧原生 `DialogMemorySave` 的磁盘文件不能靠 ClassRedirect 自动变成蓝图 SaveGame。本机仅发现一个本次 QA 旧格式槽，已先备份再一次性转换；完成集合与版本逐字段相等，并在旧插件移除的游戏进程重新读取通过。其他机器带来的旧格式存档仍需同样转换，不能声称可以直接加载。转换进程临时加载备份的旧插件，仅用于读取旧文件；游戏与正式工程不再依赖它。转换脚本与备份位于下述本地证据目录，未恢复任何自动保存功能。
 
-Manager 只添加/移除自己的 IMC，不 ClearAllMappings。输入组件由 PlayerController 持有并推入输入栈，避免 Pawn 的自动枚举造成重复分发。BP_FPCharacter 的按下/持续输入路径有门禁，释放路径保留；以后新增 Gameplay Input 时也接入 AllowGameplayInput。移动锁使用成对的 SetIgnoreMoveInput，不用 ResetIgnoreMoveInput，也不会强行恢复 Walking。
+## 项目通用 Game Instance 后续调整（2026-10-18）
 
-## 一次性记忆：已实现，默认关闭
+按用户要求，将对话专用 Game Instance 通过 UE 资产改名/移动迁为 `/Game/Blueprints/Core/BP_TimeShuttleGameInstance`，更新 DefaultEngine.ini、AC_DialogueManager、BFL_Dialogue 及实际引用者；旧类路径引用为零。对话的七个记忆函数和两个状态变量归入 `Dialogue|Memory`，保留公开函数签名、SaveGame 类和版本，不引入第二套存档。资产默认与玩家组件的持久化开关均为 false，未启用自动保存或加载。
 
-- bPlayOnce 的本角色生命周期记录可使用；只有自然完成才写入。
-- 跨关卡与磁盘持久化开关为 AC_DialogueManager 的 Enable Persistent Memory，当前 false。也可由游戏初始化逻辑取得 DialogMemory 子系统并显式 SetMemoryEnabled(true)，运行时启用会跨关卡保留。
-- 启用后，DialogMemory 在 GameInstance 中保留完成 ID。BP_FPCharacter 现有显式成功存档和成功读档路径已接 SavePlayerMemory / LoadPlayerMemory。
-- 对话记录使用“原游戏槽名 + `_Dialogue`”的独立 SaveGame，不覆盖原存档结构。主存档失败则不写对话记录；旧存档没有侧车时清空旧的完成集合，正常作为无记录读取。坏存档/版本不符返回 false。
-- 读档先取消活动对话并清空本角色一次性记录，再按已启用的持久化策略读取。未做播放到半句的存档恢复：读取后处于 Idle，而不是重新播放旧音频。
-- 测试仅使用独立的 DialogSystem_QA_20261012 槽。正式自动存档和自动读档仍保持原有关闭状态。
+重启编辑器后，59/59 基础检查（含实际 Game Instance 类与默认关闭断言）、15/15 真实跨关卡及训练室阶段对白检查通过；显式开启仅发生于测试实例，完成后关闭。无制作工具的独立 UE 进程加载/编译11个蓝图并核对旧类及原插件/辅助模块引用为零。48张受影响图表忽略类名、路径和布局后语义相同，六处改名节点做了局部布局检查。此次没有再修改播放规则，也没有重跑上一轮28项边界检查或全游戏打包。
 
-## 验证与恢复点
+本轮最终报告见 [ProjectGameInstance20261018](DialogSystem/ProjectGameInstance20261018/)，完整日志、截图和本轮恢复点在 `Saved/Agent/DialogueBlueprint/ProjectGameInstance/`。最初的 BlueprintMigration20261018 证据保持原样，代表改名之前的版本。独立 Word 手册同步新路径，九页渲染已核对。
 
-最终验证结果见本文件后续“交付证据”及本地 `Saved/Agent/DialogSystem/` 报告。编译成功、文件存在、PIE 行为、键位注入和目视截图分别记录，不能互相替代。测试语音是本机离线合成的两条测试声音，不是正式剧情配音。
+## 可选记忆接口解耦（2026-10-18）
 
-范围：DialogSystem 新资产、TimeShuttleDialog 插件、TimeShuttle.uproject 插件启用项、BP_FPCharacter 对话组件/输入门禁/死亡/显式存档接入，以及本说明与共享知识记录。原有 VFX、训练室等改动不属于本任务。
+最新实现保留通用 GI，解除 AC_DialogueManager/BFL_Dialogue 对其具体类型的直接引用。通过 BPI_DialogueMemory 提供六个记忆操作；BFL_Dialogue 负责接口发现、有效性和启用检查。缺失/关闭的服务不影响对话、局部一次性记录与清理；显式存读返回 false，LoadPlayerMemory 仍按原契约取消播放并清除局部记录。原有 GI 函数和存档格式保持，持久化默认 false。
 
-玩家原始资产有定向备份 `Saved/Agent/DialogSystem/Backup/BP_FPCharacter.uasset`，初始图表导出为 player_before.json。仅在确认没有后续玩家改动后才可按工程规则恢复，不直接覆盖新的用户工作。
+本轮 基础 59/59、跨关卡/训练接入 15/15、默认原生 GI 无记忆服务 21/21、接口开关 11/11 全通过；4 个改动蓝图编译零错误零警告，无工具冷加载 12 个运行蓝图通过。43 张无关图表保持，15 张实现图表整理注释。详见 [本轮证据](DialogSystem/MemoryDecouple20261018/README.md)。以下表格保留迁移阶段历史结果，不混作本轮重测。
 
-## 网络调查与参考选择
+## 验证证据与范围
 
-所有链接于本轮打开或搜索核查。仅阅读可访问文本，不声称完整观看视频或运行示例工程。
+可随工程共享的最终报告与字幕截图位于 [BlueprintMigration20261018](DialogSystem/BlueprintMigration20261018/)。完整本地证据目录：`Saved/Agent/DialogueBlueprint/`。测试均在 UE 5.6.1 实际编辑器/PIE 执行；输入由 PlayerController 或 Enhanced Input 注入，不冒充人工 OS 键盘试玩。
 
-| 资料 | 本轮核实内容 | 本项目采用方式与限制 |
-|---|---|---|
-| [Curtision：Designing a Data-Driven Dialogue System in Unreal Engine 5](https://curtision.com/2025/05/24/%F0%9F%8C%BF-designing-a-data-driven-dialogue-system-in-unreal-engine-5/) | 作者文章覆盖结构体、DataTable、管理器、UMG 与事件派发；示例含选择分支 | 参考数据与 UI 分离结构；文章是概念教程，未完整解决声音结束、清理与输入恢复，不直接照抄分支或可运行性声明 |
-| [Grogger：Blueprint Dialogue System](https://forums.unrealengine.com/t/blueprint-dialogue-system/29427) | 作者介绍 Blueprint/UMG、Actor Component、DataTable、线性/分支、语音与事件；附文档和视频教程入口 | 与工程蓝图路线接近，可参考组件边界；帖子标注 UE4 4.9–4.19，不能视为 UE5.6 已验证模板，视频入口访问失败 |
-| [NotYetGames/DlgSystem](https://github.com/NotYetGames/DlgSystem) | 源码仓库、MIT；作者 README 列 UE5.6/5.7/5.8 支持 | 主要生命周期参考；本轮没有下载、安装、编译该插件 |
-| [DlgSystem 使用手册](https://github.com/NotYetGames/DlgSystem/wiki/Dialogue-Manual) | 参与者接口、上下文、Speech Sequence、声音字段、开始/结束事件；UI 与序列化由游戏提供 | 参考线性序列、参与者和完成/取消边界，不照搬 Dialogue Asset 图编辑器替换用户要求的 DataTable |
-| [NotYetDlgSystemExample](https://github.com/NotYetGames/NotYetDlgSystemExample) | 实际示例仓库含 Content、Plugins、uproject、MIT；当前打开分支为 5.2，附逐步教程 | 可参考的完整示例工程；示例分支不是 5.6，不直接迁入项目，不把插件支持版本误写为示例版本 |
-| [steelx/DTDialogueSystem](https://github.com/steelx/DTDialogueSystem) | 当前可见仓库只有 README 与 gitignore，README 给三张表与 GameplayTag 流程 | 仅作为文档参考；未取得实现源码，不称其为可直接复刻的开源模板 |
-| [Epic UAudioComponent API](https://dev.epicgames.com/documentation/en-us/unreal-engine/API/Runtime/Engine/UAudioComponent) | 完成委托既可能来自自然结束，也可能来自 Stop | 实际推进必须有状态保护、取消顺序和过期回调防护；网页默认版本为5.8，另做本机5.6源码核查 |
-| [Epic Data Driven Gameplay](https://dev.epicgames.com/documentation/en-us/unreal-engine/data-driven-gameplay-elements-in-unreal-engine) | DataTable 与结构化数据工作流 | 用于字段、行引用和内容制作方式参考；网页默认版本为5.8 |
-
-结论：参考 DlgSystem 的生命周期/事件及上述 DataTable 教程，自行实现数据驱动的运行组件及可编辑蓝图内容层。未找到经本轮运行验证、能原样覆盖全部需求的现成模板，因此不能承诺整包迁移即可完成。
-
-本地采用 skills：项目 time-shuttler-context、ue5-change-gate，以及扩展库 ue-data-driven-design、ue-audio-and-metasounds（后两者标注5.8）。音频 Skill 中“SoundWave 不直接播放”的绝对表述与本机接口不符，不采用：5.6.1 SoundWave.h 中 USoundWave 继承 USoundBase；AudioComponent.h 的 SetSound 接受 USoundBase。
-
-本机5.6.1头文件证据：AudioComponent.h 449–451行说明 OnAudioFinished 包含 Stop，484行为 SetSound，578行为 Stop，586行为 SetPaused；SoundWave.h 416行为继承关系。这仅证明接口，不是当前游戏运行证据。
-
-## 交付证据
-
-2026-10-12 最终结果：**84 项指定运行检查通过，6 个受影响蓝图编译通过并成功保存**。逐项结果保存在 [verification.json](DialogSystem/verification.json)。最后检查没有未保存的内容或关卡包；持久化默认值为 false，独立 QA 存档已删除。
-
-| 验证组 | 结果与范围 |
+| 检查 | 结果与证据 |
 |---|---|
-| 冷启动后核心回归 | 57 项通过：实际声音完成、自动/手动、文字时长、暂停、0.01/0.2 世界倍率、输入锁、优先级、碰撞、NPC 接口、一次性与清理 |
-| 跨关卡／存档 | 9 项通过：OpenLevel 重新加载验证地图产生新 World/Pawn，已完成 ID 保留；切图释放输入锁；侧车保存/加载、旧存档无侧车清空记录；测试结束关闭记忆 |
-| 实际键位与项目系统 | 17 项通过：P/Enter/Space 映射、项目 FullStop 保持语速、锁定时结束已有时间能力、W/T 被挡而视角保留、Escape 打开原暂停菜单、无效行拒绝、真实角色死亡分支取消 |
-| NPC 完整交互链 | 1 项通过：面向实际 InteractionArea，向 PlayerController 注入 F 按下/释放，经原 AC_Interaction 触发 TEST_NPC |
-| 原生构建 | UnrealEditor Development、UnrealGame Development、UnrealGame Shipping 插件目标构建成功；后两项不代表完整游戏已 Cook/打包或运行 |
-| 蓝图与布局 | BP_FPCharacter、Manager、Participant、Trigger、NPC、Widget 均 UpToDate、0 编译错误、保存返回 true；Blueprint Assist 整理后补充注释并目视复核 |
+| 基础行为 | 57/57，插件移除后冷进程再次通过；runtime_tests.json。实际语音结束、自动/手动、输入映射、纯文字、优先级、移动锁、暂停、时间膨胀、碰撞、NPC 接口、死亡和记忆开关/保存读取。 |
+| 边界行为 | 28/28；edge_tests.json。事件重入、开始/结束次数、取消语义、真实 Enter/Space/P 输入、同帧去重、无效表/行/ID/语音、循环音频超时、加载期死亡、来源销毁、旧存档转换后读取、主存档失败与字幕截图。 |
+| 真实跨关卡及训练接入 | 15/15；travel_tests.json。真实 OpenLevel 保留启用的 GI 记录、清掉旧音频/字幕/Session/移动锁，关闭记忆时局部记录不跨地图；加载 Map_TrainingRoom，等待既有一秒初始化，通过现有 BeginStage1EnergyIntro 阶段入口播放 TSS1_Energy 并自然完成。未据此声称本轮重跑完整 S1–S7 通关。 |
+| 冷加载与依赖 | cold_compile.json：10 个核心/玩家/训练蓝图 0 错误、0 警告，旧模块引用为零。另以不加载两套临时制作工具的独立 UE 进程编译 11 个运行蓝图并核对三种模块引用，见 ordinary_cold_load.json / ordinary_cold_load_final.log。 |
+| 数据保留 | 原七张表 JSON 规范化逐字段相等；checkpoint.json 与 final_table_equality.json。 |
+| 图表可维护性 | 60 张图表经 Blueprint Assist 整理并添加职责注释；70 张图表整理前后语义对比一致，包含默认值与穿过 reroute 后的真实连接；format_result.json、format_semantics.json 与 graph_*.png。 |
+| 存档转换 | legacy_save_conversion.json，原始文件备份及 SHA-256、转换后记录数与逐字段校验。 |
 
-测试方法边界：按键由 PlayerController / Enhanced Input 注入，不冒充人工 OS 键盘试玩。死亡测试将 PIE 实例设为可受伤、剩余一次命中并清除测试保护时间，再调用真实 ApplyDamage；未改正式角色默认血量或无敌设置。存档读写测试使用独立 QA 槽，主存档蓝图接入另经图表审计。
+本轮发现并修复了重设父类后玩家组件模板缺失 Widget/InputAction 引用、异步加载完成时的回调重入保护等迁移问题。测试脚本的失效 Python 对象引用、训练室初始化时序和 UE 受保护属性探测异常与最终通过报告分开保留；这些不属于最终运行错误。
 
-玩家 21 张原有图表审计：原有功能节点位置不变；穿过新增门禁/通知与 reroute 后，原有连接端点保持；3 个未连接的输出 Key 引脚由空值序列化为 None，实际 Caps Lock 等按键事件没有改键。新增节点在原有空白处独立成组，未全图重排。
+原动画重复 DefaultSlot、既有 VFX 加载提示等非本模块日志不等同于本轮新增问题。不宣称全工程零警告；没有完整 Cook/打包、全分辨率及全部正式关卡验收。本次功能测试使用独立 QA 存档与测试数据，不改正式进度。
 
-日志没有宣称全工程零警告：无效行测试会主动产生预期的 DialogSystem 错误；原暂停菜单仍记录 Non-Focusable Widget 焦点错误，原动画蓝图有重复 DefaultSlot 警告，本轮未修改这两个系统。早期测试夹具、工具 API 探测及编辑器辅助构建错误已与最终通过结果分开记录。
+## 保存范围与恢复
 
-目视证据：[游戏字幕](DialogSystem/dialogue-ui.png)、[NPC 接入](DialogSystem/npc-layout.png)、[锁定适配](DialogSystem/manager-layout.png)、[输入门禁](DialogSystem/player-input-layout.png)、[死亡清理](DialogSystem/player-death-layout.png)、[显式存档](DialogSystem/player-save-layout.png)。
+项目改动包含 DialogSystem 蓝图/类型/测试资产、七张原对白表的行结构迁移、BP_FPCharacter、BP_TrainingController 调用类型、DefaultEngine.ini、TimeShuttle.uproject 及旧插件删除。没有更改训练关卡阶段规则，没有替换别的项目系统。
 
-本轮未做：完整游戏 Cook/打包运行、所有正式关卡与分辨率的视觉验收、正式剧情台词/配音制作。系统功能已完成；这些内容与发布阶段验证不能由测试台词替代。
+原内容/配置/插件在 `Saved/Agent/DialogueBlueprint/Backup/`；移走的旧插件在 `Saved/Agent/DialogueBlueprint/RemovedPlugin/`。这些是本机忽略跟踪的恢复材料，不能代替 Git 提交。切分支/协作时应把上述关联资产与插件删除作为完整的一组保留；不要只合并 BP 而遗漏 Types、表结构或工程配置。恢复前检查是否存在后续人工编辑，禁止直接覆盖较新的用户工作。
 
-## 开始制作正式对话
+独立 Word 手册位于文档工作区 `开发文档/对话系统/DialogSystem 对话系统使用说明.docx`，已更新为本版并通过九页渲染检查。2026-10-12 原生实现说明保留在本地 Backup/Docs，仅供历史参考，其原生类型、空表路径和 84 项旧测试数字不代表当前蓝图版本。
 
-1. 打开 `/Game/DialogSystem/Data/DT_DialogueLines`，添加姓名、正文和可选 SoundWave；没有声音时设置 TextOnlyDuration。
-2. 在 `DT_DialogueConversations` 新建唯一 ConversationId，按顺序填写 Lines；设置 Priority、Lock Player Movement 和 Play Once。
-3. 碰撞触发放置 BP_DialogueTrigger，NPC 使用 BP_DialogueNPC 子类或 Participant 接入现有互动，分别指定刚建立的整段行。剧情通过 RequestDialogue 的 Story 入口调用。
-4. 可先打开 `/Game/DialogSystem/Tests/L_DialogueVerification` 运行，测试表已提供声音、纯文字、锁定和优先级样例。NPC 继承的是交互基类，需要按项目角色另加外观模型。
-5. 玩家初始自动；P 切换手动，语音结束后 Enter/空格继续。持久化保持关闭，等需要正式接入一次性存档时再显式开启。
+## 设计参考
 
-新机器若缺少原生模块二进制，需要使用匹配的 UE5.6 与 C++ 工具链构建 TimeShuttleDialog 插件。编辑器制作辅助 DLL 位于本机临时目录，不应加入项目依赖或分发。
+原调查参考了 Grogger Blueprint Dialogue System 的组件/UMG/表驱动结构，以及 NotYetGames DlgSystem 的参与者、语音及结束事件边界；没有安装它们。旧示例的引擎版本不能代替本项目 UE 5.6.1 验证。
 
+- https://forums.unrealengine.com/t/blueprint-dialogue-system/29427
+- https://github.com/NotYetGames/DlgSystem
+- https://github.com/NotYetGames/DlgSystem/wiki/Dialogue-Manual
+- https://dev.epicgames.com/documentation/en-us/unreal-engine/blueprint-communication-usage-in-unreal-engine?application_version=5.6

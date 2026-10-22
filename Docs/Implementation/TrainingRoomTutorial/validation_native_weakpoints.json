@@ -1,0 +1,176 @@
+{
+  "task": "20261017-tutorial-native-weakpoints",
+  "engine": "UE 5.6.1",
+  "authoring_helper_in_cold_editor": false,
+  "checks": [
+    {
+      "name": "first wave has four enemies and no weakpoint component or tutorial sphere",
+      "passed": true
+    },
+    {
+      "name": "ordinary body hit kills enemy 1",
+      "passed": true
+    },
+    {
+      "name": "ordinary body hit kills enemy 2",
+      "passed": true
+    },
+    {
+      "name": "ordinary body hit kills enemy 3",
+      "passed": true
+    },
+    {
+      "name": "ordinary body hit kills enemy 4",
+      "passed": true
+    },
+    {
+      "name": "explicit entry after verified body kills reaches stationary step 6",
+      "passed": true,
+      "step": 6
+    },
+    {
+      "name": "only stationary native enemy selected",
+      "passed": true
+    },
+    {
+      "name": "one native chest point uses actual skeleton attachment",
+      "passed": true
+    },
+    {
+      "name": "native reticle enabled without synthetic yellow-ball components",
+      "passed": true
+    },
+    {
+      "name": "stationary body hit is rejected and enemy remains still",
+      "passed": true
+    },
+    {
+      "name": "actual native weakpoint shot advances to moving step 7",
+      "passed": true,
+      "step": 7
+    },
+    {
+      "name": "only moving native enemy selected",
+      "passed": true
+    },
+    {
+      "name": "moving enemy travels left and right",
+      "passed": true
+    },
+    {
+      "name": "weakpoint stays bound to animated character mesh",
+      "passed": true
+    },
+    {
+      "name": "time stop holds movement and animation",
+      "passed": true
+    },
+    {
+      "name": "time bullet does not kill while suspended",
+      "passed": true
+    },
+    {
+      "name": "released native weakpoint shot completes moving lesson and reaches rock step 9",
+      "passed": true,
+      "step": 9
+    },
+    {
+      "name": "stationary retry restores one living target",
+      "passed": true
+    },
+    {
+      "name": "retry keeps exactly five native hit anchors and five reticles",
+      "passed": true
+    },
+    {
+      "name": "moving retry restores selected moving enemy",
+      "passed": true
+    },
+    {
+      "name": "normal time restored after retries",
+      "passed": true
+    }
+  ],
+  "opposite_side_entry": {
+    "phase": "result",
+    "at": 210775.734,
+    "mirrored": true,
+    "yaw": -90.00000000000001,
+    "health": 100.0,
+    "step": 7,
+    "passed": true
+  },
+  "compile": {
+    "level": "errors=0 warnings=0 status=3",
+    "training": "errors=0 warnings=0 status=3",
+    "target": "errors=0 warnings=0 status=3"
+  },
+  "formatting_initial": {
+    "training": {
+      "graphs_compared": 63,
+      "functional_differences": []
+    },
+    "target": {
+      "graphs_compared": 5,
+      "functional_differences": []
+    },
+    "level": {
+      "graphs_compared": 32,
+      "functional_differences": []
+    }
+  },
+  "formatting_visibility_fix": {
+    "training": [],
+    "target": []
+  },
+  "saved": {
+    "saved": [
+      "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingTarget.BP_TrainingTarget",
+      "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController.BP_TrainingController",
+      "/Game/Maps/Map_TrainingRoom"
+    ],
+    "preserved": {
+      "Blueprints/Components/Player/AC_TimeAbility.uasset": true,
+      "UI/Widgets/UI_Hud.uasset": true
+    },
+    "dirty": []
+  },
+  "methods": [
+    "Production equipped pistol BeginFire/StopFire with normal weapon spread; native bone-bound AC_EnemyWeakPoints components.",
+    "Explicit stage-entry and pawn-position fixtures; actual time ability ToggleTimeAbility and time-bullet release.",
+    "Original S3 pickup/reload prerequisites were isolated in the first functional run by setting observation flags; cold rerun enters step 6 explicitly after four verified body kills. S4A to S4B to S5 progression is automatic.",
+    "Opposite-side entry checks original layout mirroring, native health/visibility and real weak-point shooting."
+  ],
+  "limits": [
+    "Scoped PIE checks, not a continuous full-tutorial playthrough, physical mouse/Q-key feel, packaged build or network test.",
+    "Existing pistol additive animation warnings remain; task Blueprints compile with zero errors and zero warnings."
+  ],
+  "rework": "Final visibility check found AC_TrainingVisual belongs to the controller; bind that existing reference before enabling native presentation.",
+  "visibility_lifecycle": {
+    "dead_static_health": 0.0,
+    "dead_static_marker_visible": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "dead_static_cores_visible": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "living_moving_health": 100.0,
+    "visual_reference_bound": true,
+    "passed": true
+  },
+  "final_editor": {
+    "dirty": [],
+    "map": "/Game/Maps/Map_TrainingRoom.Map_TrainingRoom",
+    "pie_stopped": true,
+    "helper_loaded": false
+  },
+  "scoped_runtime_errors": 0
+}

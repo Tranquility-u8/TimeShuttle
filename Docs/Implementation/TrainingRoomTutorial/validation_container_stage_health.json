@@ -1,0 +1,226 @@
+{
+  "task": "20261017-tutorial-container-heal",
+  "cold_without_helper": true,
+  "checks": [
+    {
+      "name": "stage entry heals 1 retry=False",
+      "passed": true,
+      "before": 1.0,
+      "health": 2.0
+    },
+    {
+      "name": "stage entry heals 1 retry=True",
+      "passed": true,
+      "before": 1.0,
+      "health": 2.0
+    },
+    {
+      "name": "stage entry heals 2 retry=False",
+      "passed": true,
+      "before": 1.0,
+      "health": 2.0
+    },
+    {
+      "name": "stage entry heals 2 retry=True",
+      "passed": true,
+      "before": 1.0,
+      "health": 2.0
+    },
+    {
+      "name": "stage entry heals 5 retry=False",
+      "passed": true,
+      "before": 1.0,
+      "health": 2.0
+    },
+    {
+      "name": "stage entry heals 5 retry=True",
+      "passed": true,
+      "before": 1.0,
+      "health": 2.0
+    },
+    {
+      "name": "stage entry heals 6 retry=False",
+      "passed": true,
+      "before": 1.0,
+      "health": 2.0
+    },
+    {
+      "name": "stage entry heals 6 retry=True",
+      "passed": true,
+      "before": 1.0,
+      "health": 2.0
+    },
+    {
+      "name": "stage entry heals 7 retry=False",
+      "passed": true,
+      "before": 1.0,
+      "health": 2.0
+    },
+    {
+      "name": "stage entry heals 7 retry=True",
+      "passed": true,
+      "before": 1.0,
+      "health": 2.0
+    },
+    {
+      "name": "stage entry heals 9 retry=False",
+      "passed": true,
+      "before": 1.0,
+      "health": 2.0
+    },
+    {
+      "name": "stage entry heals 9 retry=True",
+      "passed": true,
+      "before": 1.0,
+      "health": 2.0
+    },
+    {
+      "name": "stage entry heals 11 retry=False",
+      "passed": true,
+      "before": 1.0,
+      "health": 2.0
+    },
+    {
+      "name": "stage entry heals 11 retry=True",
+      "passed": true,
+      "before": 1.0,
+      "health": 2.0
+    },
+    {
+      "name": "stage entry heals 12 retry=False",
+      "passed": true,
+      "before": 1.0,
+      "health": 2.0
+    },
+    {
+      "name": "stage entry heals 12 retry=True",
+      "passed": true,
+      "before": 1.0,
+      "health": 2.0
+    },
+    {
+      "name": "stage entry heals 13 retry=False",
+      "passed": true,
+      "before": 1.0,
+      "health": 2.0
+    },
+    {
+      "name": "stage entry heals 13 retry=True",
+      "passed": true,
+      "before": 1.0,
+      "health": 2.0
+    },
+    {
+      "name": "stage health is not continuous invulnerability",
+      "passed": true,
+      "health": 1.0
+    },
+    {
+      "name": "final first entry full health",
+      "passed": true
+    },
+    {
+      "name": "final spawns four enemies immediately",
+      "passed": true
+    },
+    {
+      "name": "container fully revealed through native stage visuals",
+      "passed": true,
+      "visibility": 1.0
+    },
+    {
+      "name": "merged container replaces stone",
+      "passed": true
+    },
+    {
+      "name": "container link and stem overlap at both contacts",
+      "passed": true
+    },
+    {
+      "name": "real pistol link hit releases container",
+      "passed": true
+    },
+    {
+      "name": "container rests on floor",
+      "passed": true,
+      "bottom": 3.0
+    },
+    {
+      "name": "container kills enemy under footprint",
+      "passed": true
+    },
+    {
+      "name": "outside footprint enemy survives",
+      "passed": true
+    },
+    {
+      "name": "retry restores health and suspended container",
+      "passed": true
+    }
+  ],
+  "geometry": {
+    "container_asset": "/Game/Environment/TrainingRoom/Stages/Meshes/SM_TS_SuspendedContainer.SM_TS_SuspendedContainer",
+    "root": [
+      0,
+      -1100.0,
+      490.0
+    ],
+    "bounds_center": [
+      0.1999969482421875,
+      -1100.0,
+      565.0
+    ],
+    "bounds_extent": [
+      225.1999969482422,
+      150.0,
+      75.0
+    ],
+    "containerTop": 640.0,
+    "linkBottom": 635.0,
+    "linkTop": 705.0,
+    "stemBottom": 702.0,
+    "stemTop": 800
+  },
+  "compile": {
+    "controller": "errors=0 warnings=0 status=3",
+    "level": "errors=0 warnings=0 status=3"
+  },
+  "layout_audit": [
+    {
+      "asset": "training",
+      "graphs": 73,
+      "identical": true
+    },
+    {
+      "asset": "level",
+      "graphs": 32,
+      "identical": true
+    }
+  ],
+  "saved": [
+    "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+    "/Game/Maps/Map_TrainingRoom",
+    "/Game/Environment/TrainingRoom/Stages/Meshes/SM_TS_SuspendedContainer"
+  ],
+  "editor": {
+    "dirty": [],
+    "helper_loaded": false,
+    "pie_stopped": true,
+    "temporary_capture_actors": 0
+  },
+  "methods": [
+    "Apply production damage before each normal/retry entry for active steps 1,2,5,6,7,9,11,12,13; confirm health and tutorial baseline return to 2.",
+    "Confirm normal in-stage damage still reduces health.",
+    "Pickup-equipped pistol BeginFire/StopFire shoots link; combat AI paused and actors placed inside/outside the box footprint for the landing damage test.",
+    "Inspect mesh, native dissolve reveal state, contact bounds, floor settlement, immediate spawning and retry restoration."
+  ],
+  "limits": [
+    "No continuous manual tutorial playthrough or packaged build.",
+    "Native window screenshot interface unavailable; attempted editor scene captures did not provide a useful view of the masked container. Contact verification uses actual bounds; final appearance lacks a successful visual review."
+  ],
+  "fixture_notes": [
+    "New Blueprint function compiled before placing its external call after the first placement attempt could not resolve it.",
+    "Health is instance-protected; initial fixture setter was replaced by real production damage. The native damage normalization reduces health by one for the fixture input, so the no-continuous-heal assertion checks a live value below full.",
+    "Temporary editor capture actors, light, materials and visibility overrides were restored and removed before the final targeted map save."
+  ]
+}

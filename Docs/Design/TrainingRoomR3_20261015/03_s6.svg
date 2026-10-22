@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="870" viewBox="0 0 1800 870"><rect width="100%" height="100%" fill="white"/>
+<text x="30" y="54" font-family="Microsoft YaHei, sans-serif" font-size="40" font-weight="700" fill="#18283A">S6  新建议：用时停安排两处射击，让吊重协调释放</text>
+<rect x="35" y="100" width="1065" height="510" fill="#F4F8FA" stroke="#CFDCE4" stroke-width="3"/>
+<text x="278.0" y="153" font-family="Microsoft YaHei, sans-serif" font-size="34" font-weight="700" fill="#147C57">成功：两处连接点在同一短窗口内解除</text>
+<line x1="170" y1="205" x2="970" y2="205" stroke="#576979" stroke-width="14"/>
+<line x1="300" y1="205" x2="300" y2="310" stroke="#A66800" stroke-width="7"/>
+<line x1="835" y1="205" x2="835" y2="310" stroke="#A66800" stroke-width="7"/>
+<circle cx="300" cy="260" r="30" fill="white" stroke="#A66800" stroke-width="4"/>
+<text x="289.46875" y="268" font-family="Microsoft YaHei, sans-serif" font-size="28" font-weight="700" fill="#A66800">A</text>
+<circle cx="835" cy="260" r="30" fill="white" stroke="#A66800" stroke-width="4"/>
+<text x="825.4296875" y="268" font-family="Microsoft YaHei, sans-serif" font-size="28" font-weight="700" fill="#A66800">B</text>
+<rect x="235" y="312" width="665" height="76" fill="#ADBECB" stroke="#576979" stroke-width="4"/>
+<text x="531.0" y="362" font-family="Microsoft YaHei, sans-serif" font-size="36" font-weight="700" fill="#18283A">吊重</text>
+<line x1="567" y1="400" x2="567" y2="483" stroke="#147C57" stroke-width="7"/>
+<polygon points="567,483 558.3006893177754,464.99105795294645 575.6993106822246,464.99105795294645" fill="#147C57"/>
+<circle cx="460" cy="542" r="28" fill="white" stroke="#C43E50" stroke-width="4"/>
+<text x="446.0" y="550" font-family="Microsoft YaHei, sans-serif" font-size="28" font-weight="700" fill="#C43E50">敌</text>
+<circle cx="567" cy="542" r="28" fill="white" stroke="#C43E50" stroke-width="4"/>
+<text x="553.0" y="550" font-family="Microsoft YaHei, sans-serif" font-size="28" font-weight="700" fill="#C43E50">敌</text>
+<circle cx="674" cy="542" r="28" fill="white" stroke="#C43E50" stroke-width="4"/>
+<text x="660.0" y="550" font-family="Microsoft YaHei, sans-serif" font-size="28" font-weight="700" fill="#C43E50">敌</text>
+<line x1="365" y1="580" x2="765" y2="580" stroke="#C43E50" stroke-width="3"/>
+<text x="80" y="460" font-family="Microsoft YaHei, sans-serif" font-size="30" font-weight="400" fill="#576979">落点内的</text>
+<text x="80" y="507" font-family="Microsoft YaHei, sans-serif" font-size="30" font-weight="400" fill="#576979">静止敌人</text>
+<line x1="240" y1="500" x2="292" y2="300" stroke="#007D95" stroke-width="4"/>
+<polygon points="292,300 295.88772921828877,319.61850049125223 279.04895187468753,315.2404183819159" fill="#007D95"/>
+<line x1="900" y1="500" x2="844" y2="300" stroke="#007D95" stroke-width="4"/>
+<polygon points="844,300 857.232872886138,314.9963687331071 840.478626519543,319.6875577157537" fill="#007D95"/>
+<text x="210" y="649" font-family="Microsoft YaHei, sans-serif" font-size="35" font-weight="700" fill="#007D95">Q 时停 → 短侧移、分别射击 A/B → Q 恢复</text>
+<text x="90" y="713" font-family="Microsoft YaHei, sans-serif" font-size="33" font-weight="400" fill="#576979">两发弹丸被暂存，恢复后近乎同时命中。用可见装置结果判断成功，</text>
+<text x="90" y="761" font-family="Microsoft YaHei, sans-serif" font-size="33" font-weight="400" fill="#576979">不增加“必须按过Q”的隐藏计数。</text>
+<rect x="1150" y="100" width="610" height="510" fill="#FFF8F2" stroke="#E6D7C9" stroke-width="3"/>
+<text x="1269.0" y="151" font-family="Microsoft YaHei, sans-serif" font-size="31" font-weight="700" fill="#A66800">失败：单侧先断，错过窗口</text>
+<line x1="1230" y1="205" x2="1680" y2="205" stroke="#576979" stroke-width="11"/>
+<line x1="1600" y1="205" x2="1600" y2="310" stroke="#A66800" stroke-width="7"/>
+<line x1="1250" y1="305" x2="1650" y2="420" stroke="#576979" stroke-width="45"/>
+<line x1="1420" y1="445" x2="1640" y2="500" stroke="#A66800" stroke-width="6"/>
+<polygon points="1640,500 1620.4188671838006,504.07176099916916 1624.6386526911976,487.1926189695804" fill="#A66800"/>
+<rect x="1580" y="510" width="140" height="40" fill="#DDC4AA" stroke="#A66800" stroke-width="4"/>
+<text x="1589.0" y="594" font-family="Microsoft YaHei, sans-serif" font-size="29" font-weight="400" fill="#A66800">承接托架</text>
+<circle cx="1330" cy="535" r="24" fill="white" stroke="#C43E50" stroke-width="4"/>
+<text x="1316.0" y="543" font-family="Microsoft YaHei, sans-serif" font-size="28" font-weight="700" fill="#C43E50">敌</text>
+<circle cx="1415" cy="535" r="24" fill="white" stroke="#C43E50" stroke-width="4"/>
+<text x="1401.0" y="543" font-family="Microsoft YaHei, sans-serif" font-size="28" font-weight="700" fill="#C43E50">敌</text>
+<circle cx="1500" cy="535" r="24" fill="white" stroke="#C43E50" stroke-width="4"/>
+<text x="1486.0" y="543" font-family="Microsoft YaHei, sans-serif" font-size="28" font-weight="700" fill="#C43E50">敌</text>
+<text x="1170" y="682" font-family="Microsoft YaHei, sans-serif" font-size="32" font-weight="400" fill="#576979">窗口内第二处仍可受击。失败后局部</text>
+<text x="1170" y="730" font-family="Microsoft YaHei, sans-serif" font-size="32" font-weight="400" fill="#576979">重置，玩家留在原地。</text>
+<text x="40" y="851" font-family="Microsoft YaHei, sans-serif" font-size="29" font-weight="400" fill="#576979">新机制示意，非已有功能；短窗口与正常能量是否适配，必须先做白盒。</text>
+</svg>

@@ -1,0 +1,307 @@
+{
+  "revision": "R17 targeted lower-west entry and E4 audit",
+  "source_json_sha256": "ae19133c9448e61e2afea88d99c67afe8946a9990ec590634bba19bcdf23a2d9",
+  "reference_R16_geometry_sha256": "cf8cb71afbcd79323787e9b861faed312db5d7e3cbffc9af9da964b764a142ad",
+  "checks": {
+    "wall_changes_confined_to_requested_locations": true,
+    "old_foyer_and_lower_E4_doors_removed": true,
+    "exactly_two_new_door_records": true,
+    "lower_E4_clear_of_walls": true,
+    "lower_E4_has_existing_continuous_floor": true,
+    "single_direct_public_foyer_door": true,
+    "L01_east_room_door_retained": true,
+    "training_unchanged": true,
+    "preparation_unchanged": true,
+    "passage_unchanged": true,
+    "retained_envelope_unchanged": true,
+    "retired_upper_area_unchanged": true,
+    "retired_roof_unchanged": true,
+    "retired_edge_unchanged": true,
+    "floor_upper_unchanged": true,
+    "floor_lower_unchanged": true,
+    "wallPolygons_unchanged": true,
+    "control_ground_wall_unchanged": true,
+    "control_upper_wall_unchanged": true,
+    "control_clear_unchanged": true,
+    "scenic_lower_unchanged": true,
+    "scenic_upper_unchanged": true,
+    "scenic_outer_lower_unchanged": true,
+    "scenic_outer_upper_unchanged": true,
+    "main_experiment_unchanged": true,
+    "shared_workspace_unchanged": true,
+    "new_local_B_slab_unchanged": true,
+    "duct_clear_unchanged": true,
+    "duct_outer_unchanged": true,
+    "duct_platforms_unchanged": true,
+    "duct_wall_housing_unchanged": true,
+    "duct_access_envelope_unchanged": true,
+    "commons_outer_unchanged": true,
+    "commons_unchanged": true,
+    "equipment_room_unchanged": true,
+    "wall_support_extensions_lower_unchanged": true,
+    "wall_support_extensions_upper_unchanged": true,
+    "training_scenic_joint_unchanged": true,
+    "research_court_unchanged": true,
+    "west_remodel_area_unchanged": true,
+    "west_through_corridor_unchanged": true,
+    "west_new_slab_unchanged": true,
+    "west_research_foyer_unchanged": true,
+    "west_cross_link_unchanged": true,
+    "e4_preserved_core_unchanged": true,
+    "former_wall_support_reclassified_unchanged": true,
+    "r14_removed_wall_unchanged": true,
+    "r15_red_wall_unchanged": true,
+    "r15_blue_open_unchanged": true,
+    "r15_old_yellow_band_unchanged": true,
+    "r15_new_yellow_band_unchanged": true,
+    "r16_remodel_area_unchanged": true,
+    "e4_lower_preserved_core_unchanged": true,
+    "r16_east_west_corridor_unchanged": true,
+    "r16_west_spine_unchanged": true,
+    "r16_south_corridor_unchanged": true,
+    "r16_new_partitions_unchanged": true,
+    "rooms_unchanged": true,
+    "room_shapes_unchanged": true,
+    "props_unchanged": true,
+    "stairs_unchanged": true,
+    "jump_blocks_unchanged": true,
+    "control_windows_unchanged": true,
+    "other_door_metadata_unchanged": true,
+    "G-WEST-N_wall_closed": true,
+    "G-WEST-S_wall_closed": true,
+    "G-WEST-MAIN_aperture_clear": true,
+    "G-WEST-MAIN_P3_permission": true,
+    "R17-L01-S_aperture_clear": true,
+    "R17-L01-S_P3_permission": true,
+    "remaining_lower_wall_support_under_solid_walls": true
+  },
+  "gate_cases": [
+    {
+      "radius_m": 0.35,
+      "main_open": false,
+      "L01_south_open": false,
+      "L01_east_open": false,
+      "checks": {
+        "west_access_matches_door_state": true,
+        "L01_access_matches_two_doors": true,
+        "lower_E4_space_open_to_foyer": true,
+        "west_spine_and_south_link_connected": true,
+        "no_scenic_access": true
+      },
+      "passed": true
+    },
+    {
+      "radius_m": 0.35,
+      "main_open": false,
+      "L01_south_open": false,
+      "L01_east_open": true,
+      "checks": {
+        "west_access_matches_door_state": true,
+        "L01_access_matches_two_doors": true,
+        "lower_E4_space_open_to_foyer": true,
+        "west_spine_and_south_link_connected": true,
+        "no_scenic_access": true
+      },
+      "passed": true
+    },
+    {
+      "radius_m": 0.35,
+      "main_open": false,
+      "L01_south_open": true,
+      "L01_east_open": false,
+      "checks": {
+        "west_access_matches_door_state": true,
+        "L01_access_matches_two_doors": true,
+        "lower_E4_space_open_to_foyer": true,
+        "west_spine_and_south_link_connected": true,
+        "no_scenic_access": true
+      },
+      "passed": true
+    },
+    {
+      "radius_m": 0.35,
+      "main_open": false,
+      "L01_south_open": true,
+      "L01_east_open": true,
+      "checks": {
+        "west_access_matches_door_state": true,
+        "L01_access_matches_two_doors": true,
+        "lower_E4_space_open_to_foyer": true,
+        "west_spine_and_south_link_connected": true,
+        "no_scenic_access": true
+      },
+      "passed": true
+    },
+    {
+      "radius_m": 0.35,
+      "main_open": true,
+      "L01_south_open": false,
+      "L01_east_open": false,
+      "checks": {
+        "west_access_matches_door_state": true,
+        "L01_access_matches_two_doors": true,
+        "lower_E4_space_open_to_foyer": true,
+        "west_spine_and_south_link_connected": true,
+        "no_scenic_access": true
+      },
+      "passed": true
+    },
+    {
+      "radius_m": 0.35,
+      "main_open": true,
+      "L01_south_open": false,
+      "L01_east_open": true,
+      "checks": {
+        "west_access_matches_door_state": true,
+        "L01_access_matches_two_doors": true,
+        "lower_E4_space_open_to_foyer": true,
+        "west_spine_and_south_link_connected": true,
+        "no_scenic_access": true
+      },
+      "passed": true
+    },
+    {
+      "radius_m": 0.35,
+      "main_open": true,
+      "L01_south_open": true,
+      "L01_east_open": false,
+      "checks": {
+        "west_access_matches_door_state": true,
+        "L01_access_matches_two_doors": true,
+        "lower_E4_space_open_to_foyer": true,
+        "west_spine_and_south_link_connected": true,
+        "no_scenic_access": true
+      },
+      "passed": true
+    },
+    {
+      "radius_m": 0.35,
+      "main_open": true,
+      "L01_south_open": true,
+      "L01_east_open": true,
+      "checks": {
+        "west_access_matches_door_state": true,
+        "L01_access_matches_two_doors": true,
+        "lower_E4_space_open_to_foyer": true,
+        "west_spine_and_south_link_connected": true,
+        "no_scenic_access": true
+      },
+      "passed": true
+    },
+    {
+      "radius_m": 0.45,
+      "main_open": false,
+      "L01_south_open": false,
+      "L01_east_open": false,
+      "checks": {
+        "west_access_matches_door_state": true,
+        "L01_access_matches_two_doors": true,
+        "lower_E4_space_open_to_foyer": true,
+        "west_spine_and_south_link_connected": true,
+        "no_scenic_access": true
+      },
+      "passed": true
+    },
+    {
+      "radius_m": 0.45,
+      "main_open": false,
+      "L01_south_open": false,
+      "L01_east_open": true,
+      "checks": {
+        "west_access_matches_door_state": true,
+        "L01_access_matches_two_doors": true,
+        "lower_E4_space_open_to_foyer": true,
+        "west_spine_and_south_link_connected": true,
+        "no_scenic_access": true
+      },
+      "passed": true
+    },
+    {
+      "radius_m": 0.45,
+      "main_open": false,
+      "L01_south_open": true,
+      "L01_east_open": false,
+      "checks": {
+        "west_access_matches_door_state": true,
+        "L01_access_matches_two_doors": true,
+        "lower_E4_space_open_to_foyer": true,
+        "west_spine_and_south_link_connected": true,
+        "no_scenic_access": true
+      },
+      "passed": true
+    },
+    {
+      "radius_m": 0.45,
+      "main_open": false,
+      "L01_south_open": true,
+      "L01_east_open": true,
+      "checks": {
+        "west_access_matches_door_state": true,
+        "L01_access_matches_two_doors": true,
+        "lower_E4_space_open_to_foyer": true,
+        "west_spine_and_south_link_connected": true,
+        "no_scenic_access": true
+      },
+      "passed": true
+    },
+    {
+      "radius_m": 0.45,
+      "main_open": true,
+      "L01_south_open": false,
+      "L01_east_open": false,
+      "checks": {
+        "west_access_matches_door_state": true,
+        "L01_access_matches_two_doors": true,
+        "lower_E4_space_open_to_foyer": true,
+        "west_spine_and_south_link_connected": true,
+        "no_scenic_access": true
+      },
+      "passed": true
+    },
+    {
+      "radius_m": 0.45,
+      "main_open": true,
+      "L01_south_open": false,
+      "L01_east_open": true,
+      "checks": {
+        "west_access_matches_door_state": true,
+        "L01_access_matches_two_doors": true,
+        "lower_E4_space_open_to_foyer": true,
+        "west_spine_and_south_link_connected": true,
+        "no_scenic_access": true
+      },
+      "passed": true
+    },
+    {
+      "radius_m": 0.45,
+      "main_open": true,
+      "L01_south_open": true,
+      "L01_east_open": false,
+      "checks": {
+        "west_access_matches_door_state": true,
+        "L01_access_matches_two_doors": true,
+        "lower_E4_space_open_to_foyer": true,
+        "west_spine_and_south_link_connected": true,
+        "no_scenic_access": true
+      },
+      "passed": true
+    },
+    {
+      "radius_m": 0.45,
+      "main_open": true,
+      "L01_south_open": true,
+      "L01_east_open": true,
+      "checks": {
+        "west_access_matches_door_state": true,
+        "L01_access_matches_two_doors": true,
+        "lower_E4_space_open_to_foyer": true,
+        "west_spine_and_south_link_connected": true,
+        "no_scenic_access": true
+      },
+      "passed": true
+    }
+  ],
+  "pass_2d_and_duct_geometry": true,
+  "failed_checks": [],
+  "note": "Only the direct foyer entry is reduced to one door. Existing L01 east door is retained; opening both L01 doors creates a deliberate room-through route. B E4 remains unchanged. UE implementation is handled separately."
+}

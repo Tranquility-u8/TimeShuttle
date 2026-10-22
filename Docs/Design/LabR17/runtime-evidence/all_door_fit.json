@@ -1,0 +1,475 @@
+{
+  "passed": true,
+  "error": null,
+  "doors": [
+    {
+      "door": "LabR17_Door_RES-I15.35",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_RES-I5.35",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_RES-U-3.65",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_RES-U-9.65",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_RES-SERV",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_RES-ACT",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_RES-STORE",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_RES-QUIET",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_LS39-DOOR-1",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_LS39-DOOR-2",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_LS39-DOOR-3",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_LS39-DOOR-4",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_L01-HALL",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_R02-N",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_RES-N",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_RES-M",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_RES-EXT-DINING",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_RES-EXT-LOUNGE",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_QW1",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_QW2",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_upper_E4_upper",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_C0",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_N-KITCHEN",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_N-PANTRY",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_N-QUIET-READ",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_N-H01-N",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_N-H01-S",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_N-H02-N",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_N-H02-S",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_WG-ASSEMBLY",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_EG-ENTRY",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_EG-WORK",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_WU-NORTH",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_WU-PREP",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_WU-DISCUSS",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_GW38-OVERHAUL",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_GW38-STORAGE",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_GW38-EXISTING-STORE",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_GW38-EXISTING-REPAIR",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_RW38-RING-ENTRY",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_RW38-PREP-N",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_RW38-ARCHIVE",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_RW39-CONTROL-CHAMBER",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_RW39-ANALYSIS",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_RW39-CALIBRATION",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_RW39-RECORDS",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_RW39-REVIEW",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_RW39-SEALED-RECORDS",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_RW39-RECORDS-FORWARD",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_RW39-ARCHIVE-LINK",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_E39-A-ENTRY",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_E39-A-END",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_E39-POD1",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_E39-POD2",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_E39-POD3",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_E39-POD4",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_E39-EG02",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_E39-EG04",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_E39-EG05",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_E39-EG06",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_E39-EG09",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_E39-EG03",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_TR-ENTRY",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_TR-CONNECT-PREP",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_TR-CONNECT-TRAIN",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_R9-TIME-EXIT",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_R9-WEST-SHARED",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_R10-UP-NORTH",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_R10-COMMONS-NORTH",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_R10-COMMONS-WEST",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_R10-EQUIPMENT",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_R13-U01",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_R13-U02",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_R16-CORE-E",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_R16-CORE-S",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_R16-PREP-N",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_G-WEST-MAIN",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    },
+    {
+      "door": "LabR17_Door_R17-L01-S",
+      "alpha": 1.0,
+      "clear": true,
+      "blocking_actor": null
+    }
+  ],
+  "scope": "Geometry fit in PIE, temporarily command doors open. Does not claim to test F input; see door_pie_qa.json for input evidence."
+}

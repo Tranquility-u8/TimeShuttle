@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "converted": [
+    {
+      "slot": "DialogSystem_QA_Legacy_20261018_Dialogue",
+      "records": 1,
+      "backup": "D:\\UE5Project\\TimeShuttle\\Saved\\Agent\\DialogueBlueprint\\Backup\\LegacySaves\\DialogSystem_QA_Legacy_20261018_Dialogue.sav",
+      "original_sha256": "b5d8b1635187fa75293f215881b0270b1be8b91056bcec4e313af1cd1413829f",
+      "new_sha256": "cb080a8cdddcd9b780976e37fd83fbb6a52f19f69d83c7f637d760f91f432883"
+    }
+  ]
+}

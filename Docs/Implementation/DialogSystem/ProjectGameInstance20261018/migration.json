@@ -1,0 +1,28 @@
+{
+  "compiled": {
+    "/Game/Blueprints/Core/BP_TimeShuttleGameInstance": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "/Game/DialogSystem/Blueprints/AC_DialogueManager": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "/Game/DialogSystem/Blueprints/BFL_Dialogue": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "/Game/Blueprints/Player/BP_FPCharacter": {
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  "old_refs": [],
+  "new_refs": [
+    "/Game/DialogSystem/Blueprints/AC_DialogueManager",
+    "/Game/DialogSystem/Blueprints/BFL_Dialogue"
+  ],
+  "default_memory_enabled": false,
+  "dirty": [],
+  "reference_snapshot": "After AssetRegistry save notifications completed"
+}
