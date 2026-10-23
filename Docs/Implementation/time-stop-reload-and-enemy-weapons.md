@@ -29,3 +29,21 @@
 四个蓝图编译均为 0 错误、0 警告，已定向保存。77 项 PIE 检查通过（自动武器 44、霰弹枪 19、教程死亡 14）；未改动的 32 张图表与修改前导出一致。布局证据与编译/保存结果见本地证据目录的 `*-layout.png`、`save-result.json`。
 
 Map_Test 的既有 `CAI_BP_Enemy` 近战敌人外部实例因父蓝图更新关联变脏，已备份并保存；位置、旋转、缩放与标签在最终编译前后保持一致。保存后编辑器没有剩余未保存包。本次改动尚未提交或推送。
+
+## 2026-10-23 射击与子弹回调报错修复
+
+后续实际试玩新增 `BP_ShooterProjectile_Bullet` 的 Sphere 已销毁访问错误。Sphere 是弹体网格组件，区别于独立的 CollisionComponent 球形碰撞组件。命中后物理释放和 Wiggle 更新/延迟回调现在先检查对应组件有效性；命中组件无效时也不再读取 Mobility。正常移动物体命中的物理释放保持有效。
+
+`BP_Item_Base.SelectShotComponent` 在查找弱点组件前增加执行流有效性检查，射空时保留空命中组件返回值；`Fire_HitScan` 不再对空 HitComp 生成附着贴花。避免使用不能保证短路求值的纯布尔 AND。
+
+手枪模型的 Empty、Fire、Reload、ReloadEmpty 四个 AnimSequence 原来设为 Local Space Additive，却由 Play Animation 单节点播放。现改为非叠加动画，未编辑骨骼关键帧或时长；普通与重型手枪的共享引用保持不变。手臂动画不在修改范围。
+
+证据目录：`Saved/Agent/ShotErrors20261023/`。44 项换弹/射击输入检查与 5 项命中边界检查通过；最后一轮 PIE 没有 Blueprint Runtime Error。边界检查使用真实射线 HitResult，并定向销毁弹体网格触发晚到回调；早期夹具误选了球形碰撞组件，修正并停用夹具弹丸移动后重跑，不把早期结果当成通过证据。正常命中保留物理释放，普通目标保持原命中组件，空目标安全返回。
+
+修改的两张蓝图及普通/重型手枪依赖蓝图编译为 0 错误、0 警告，九张未涉及的图表保持原样。已保存两张蓝图与四个动画资产，无剩余脏包，尚未提交。最终 PIE 仍有原有 DefaultSlot 重复与 Map_Test 导航网格警告；首次加载还记录原有后坐力曲线缺失。本次未修改这些独立内容，未进行打包版或完整教程人工验收。备份、布局截图、编译保存结果与分轮日志均在上述本地证据目录。
+
+## 2026-10-23 QTE 提示键运行时修正
+
+`UI_Hud.SetGuidedThreatKey` 的普通威胁分支曾将文字写为 T，覆盖控件默认的 Q。仅修改 WidgetTree 默认文字的首轮修复没有覆盖实际触发链；原因是运行时赋值，并非编译缓存。现普通和教程分支均使用 Q，与 IA_TimeAbility 绑定一致，同时更新原有注释。
+
+HUD 编译为 0 错误、0 警告，定向保存并重新加载后，在 Map_Test PIE 中生成实际 BP_ShooterProjectile_Bullet 朝玩家飞行，由生产威胁检测触发提示；运行时控件与画面均显示 Q。测试将玩家移至隔离位置并延长提示窗口以便截图，没有直接调用 HUD 显示函数。证据位于 `Saved/Agent/QTEKey20261023/real-threat-result.json` 和 `real-threat-q.png`。保存后无脏包；未进行打包版验收。
