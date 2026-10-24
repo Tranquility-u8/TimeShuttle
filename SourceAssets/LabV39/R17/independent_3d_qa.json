@@ -35,8 +35,8 @@
   "passed": true,
   "failed": [],
   "source_plan_sha256": "ae19133c9448e61e2afea88d99c67afe8946a9990ec590634bba19bcdf23a2d9",
-  "architecture_meshes_sha256": "35a35a39cd5bd9e4d6c8ed22a6c453b7eb73c390577cdda3968c24c7c053d37d",
-  "architecture_script_sha256": "af9fdd1e0bc3fcdab4614badb12742d7c0d65ab83e010b17c7adc841e9cec12f",
+  "architecture_meshes_sha256": "9452d6555ac88edc2561023ced5ccd0f1dfce5e042bb3f22b11f3bc4c13ef50b",
+  "architecture_script_sha256": "947d196651a490c5092233752261f8023c79d422e79ff479402a04b6645277ed",
   "method": "Reconstruct each exported mesh height section from oriented boundary faces; inspect supported floor and free-space volumes. Does not run the generator or call UE.",
   "exported_parts": 32,
   "exact_duplicate_faces": 0,
@@ -163,8 +163,8 @@
     }
   },
   "refreshed_manifest": {
-    "sha256": "c3584cab697229d3dc118eb403ff3918beca4ce4b42c3a51fdcd7199a1b9d3db",
-    "revision": 2,
+    "sha256": "838839f6933857093515391d20d999a7e8969b03caf4f8ee42dfd4bea29b881b",
+    "revision": 3,
     "bounds_errors": [],
     "POD1_prop_042_bounds_m": [
       85.09999695,

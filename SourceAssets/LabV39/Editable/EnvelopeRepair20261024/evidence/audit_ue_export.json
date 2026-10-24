@@ -1,0 +1,108 @@
+{
+  "passed": true,
+  "asset_count": 3,
+  "rows": [
+    {
+      "asset": "SM_LabEditable_B_B_walls_124",
+      "objects": [
+        {
+          "name": "SM_LabEditable_B_B_walls_124",
+          "vertex_count": 18,
+          "polygon_count": 32,
+          "scale": [
+            0.009999999776482582,
+            0.009999999776482582,
+            0.009999999776482582
+          ],
+          "matrix": "<Matrix 4x4 (0.0100, 0.0000, 0.0000, 0.0000)\n            (0.0000, 0.0100, 0.0000, 0.0000)\n            (0.0000, 0.0000, 0.0100, 0.0000)\n            (0.0000, 0.0000, 0.0000, 1.0000)>"
+        }
+      ],
+      "actual_unique_vertices": 18,
+      "expected_unique_vertices": 18,
+      "triangles": 32,
+      "signed_volume_m3": 188.24003923294688,
+      "bounds_m": [
+        -20.793067932128906,
+        -0.3000018298625946,
+        0.0,
+        20.793067932128906,
+        0.2999999523162842,
+        8.600000381469727
+      ],
+      "distance_from_source_mesh_m": 0.0,
+      "bad_edges": 0,
+      "bad_edge_orientation": 0,
+      "all_unit_faces_outward": null,
+      "custom_normal_min_agreement": 0.9999934589422869,
+      "passed": true
+    },
+    {
+      "asset": "SM_LabEditable_SlabUnit",
+      "objects": [
+        {
+          "name": "SM_LabEditable_SlabUnit",
+          "vertex_count": 8,
+          "polygon_count": 12,
+          "scale": [
+            0.009999999776482582,
+            0.009999999776482582,
+            0.009999999776482582
+          ],
+          "matrix": "<Matrix 4x4 (0.0100, 0.0000, 0.0000, 0.0000)\n            (0.0000, 0.0100, 0.0000, 0.0000)\n            (0.0000, 0.0000, 0.0100, 0.0000)\n            (0.0000, 0.0000, 0.0000, 1.0000)>"
+        }
+      ],
+      "actual_unique_vertices": 8,
+      "expected_unique_vertices": 8,
+      "triangles": 12,
+      "signed_volume_m3": 0.9999998807907177,
+      "bounds_m": [
+        -0.5,
+        -0.5,
+        -0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "distance_from_source_mesh_m": 0.0,
+      "bad_edges": 0,
+      "bad_edge_orientation": 0,
+      "all_unit_faces_outward": true,
+      "custom_normal_min_agreement": 1.0,
+      "passed": true
+    },
+    {
+      "asset": "SM_LabEditable_WallUnit",
+      "objects": [
+        {
+          "name": "SM_LabEditable_WallUnit",
+          "vertex_count": 8,
+          "polygon_count": 12,
+          "scale": [
+            0.009999999776482582,
+            0.009999999776482582,
+            0.009999999776482582
+          ],
+          "matrix": "<Matrix 4x4 (0.0100, 0.0000, 0.0000, 0.0000)\n            (0.0000, 0.0100, 0.0000, 0.0000)\n            (0.0000, 0.0000, 0.0100, 0.0000)\n            (0.0000, 0.0000, 0.0000, 1.0000)>"
+        }
+      ],
+      "actual_unique_vertices": 8,
+      "expected_unique_vertices": 8,
+      "triangles": 12,
+      "signed_volume_m3": 0.9999998807907177,
+      "bounds_m": [
+        -0.5,
+        -0.5,
+        -0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "distance_from_source_mesh_m": 0.0,
+      "bad_edges": 0,
+      "bad_edge_orientation": 0,
+      "all_unit_faces_outward": true,
+      "custom_normal_min_agreement": 1.0,
+      "passed": true
+    }
+  ]
+}

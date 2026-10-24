@@ -1,0 +1,906 @@
+{
+  "date": "2026-10-24",
+  "map": "/Game/Maps/Map_LabV39.Map_LabV39",
+  "source_architecture_sha256": "9452d6555ac88edc2561023ced5ccd0f1dfce5e042bb3f22b11f3bc4c13ef50b",
+  "source_plan_sha256": "ae19133c9448e61e2afea88d99c67afe8946a9990ec590634bba19bcdf23a2d9",
+  "mesh_audit_passed": true,
+  "import": {
+    "status": "saved",
+    "revision": 3,
+    "imported_meshes": 2,
+    "object_count": 734,
+    "warnings": []
+  },
+  "editor_collision": {
+    "world": "/Game/Maps/Map_LabV39.Map_LabV39",
+    "pie": false,
+    "passed": true,
+    "checks": 19,
+    "failures": [],
+    "rows": [
+      {
+        "name": "roof_-17_-5.5",
+        "passed": true,
+        "from_m": [
+          -17,
+          -5.5,
+          7
+        ],
+        "to_m": [
+          -17,
+          -5.5,
+          16
+        ],
+        "blocked": true,
+        "point_cm": [
+          -1700.0,
+          550.0,
+          1400.000011920929
+        ],
+        "actor": "StaticMeshActor_2080"
+      },
+      {
+        "name": "roof_-17_-8",
+        "passed": true,
+        "from_m": [
+          -17,
+          -8,
+          7
+        ],
+        "to_m": [
+          -17,
+          -8,
+          16
+        ],
+        "blocked": true,
+        "point_cm": [
+          -1700.0,
+          800.0,
+          1400.000011920929
+        ],
+        "actor": "StaticMeshActor_2080"
+      },
+      {
+        "name": "roof_-8_-5.5",
+        "passed": true,
+        "from_m": [
+          -8,
+          -5.5,
+          7
+        ],
+        "to_m": [
+          -8,
+          -5.5,
+          16
+        ],
+        "blocked": true,
+        "point_cm": [
+          -800.0,
+          550.0,
+          1400.000011920929
+        ],
+        "actor": "StaticMeshActor_2080"
+      },
+      {
+        "name": "roof_-8_-8",
+        "passed": true,
+        "from_m": [
+          -8,
+          -8,
+          7
+        ],
+        "to_m": [
+          -8,
+          -8,
+          16
+        ],
+        "blocked": true,
+        "point_cm": [
+          -800.0,
+          800.0,
+          1400.000011920929
+        ],
+        "actor": "StaticMeshActor_2080"
+      },
+      {
+        "name": "roof_0_-5.5",
+        "passed": true,
+        "from_m": [
+          0,
+          -5.5,
+          7
+        ],
+        "to_m": [
+          0,
+          -5.5,
+          16
+        ],
+        "blocked": true,
+        "point_cm": [
+          0.0,
+          550.0,
+          1400.000011920929
+        ],
+        "actor": "StaticMeshActor_2080"
+      },
+      {
+        "name": "roof_0_-8",
+        "passed": true,
+        "from_m": [
+          0,
+          -8,
+          7
+        ],
+        "to_m": [
+          0,
+          -8,
+          16
+        ],
+        "blocked": true,
+        "point_cm": [
+          0.0,
+          800.0,
+          1400.000011920929
+        ],
+        "actor": "StaticMeshActor_2080"
+      },
+      {
+        "name": "roof_8_-5.5",
+        "passed": true,
+        "from_m": [
+          8,
+          -5.5,
+          7
+        ],
+        "to_m": [
+          8,
+          -5.5,
+          16
+        ],
+        "blocked": true,
+        "point_cm": [
+          800.0,
+          550.0,
+          1400.000011920929
+        ],
+        "actor": "StaticMeshActor_2080"
+      },
+      {
+        "name": "roof_8_-8",
+        "passed": true,
+        "from_m": [
+          8,
+          -8,
+          7
+        ],
+        "to_m": [
+          8,
+          -8,
+          16
+        ],
+        "blocked": true,
+        "point_cm": [
+          800.0,
+          800.0,
+          1400.000011920929
+        ],
+        "actor": "StaticMeshActor_2080"
+      },
+      {
+        "name": "roof_17_-5.5",
+        "passed": true,
+        "from_m": [
+          17,
+          -5.5,
+          7
+        ],
+        "to_m": [
+          17,
+          -5.5,
+          16
+        ],
+        "blocked": true,
+        "point_cm": [
+          1700.0,
+          550.0,
+          1400.000011920929
+        ],
+        "actor": "StaticMeshActor_2080"
+      },
+      {
+        "name": "roof_17_-8",
+        "passed": true,
+        "from_m": [
+          17,
+          -8,
+          7
+        ],
+        "to_m": [
+          17,
+          -8,
+          16
+        ],
+        "blocked": true,
+        "point_cm": [
+          1700.0,
+          800.0,
+          1400.000011920929
+        ],
+        "actor": "StaticMeshActor_2080"
+      },
+      {
+        "name": "corridor_clear",
+        "passed": true,
+        "from_m": [
+          -17,
+          -7,
+          6.34
+        ],
+        "to_m": [
+          -5,
+          -7,
+          6.34
+        ],
+        "blocked": false
+      },
+      {
+        "name": "corridor_clear",
+        "passed": true,
+        "from_m": [
+          -5,
+          -7,
+          6.34
+        ],
+        "to_m": [
+          6,
+          -7,
+          6.34
+        ],
+        "blocked": false
+      },
+      {
+        "name": "corridor_clear",
+        "passed": true,
+        "from_m": [
+          6,
+          -7,
+          6.34
+        ],
+        "to_m": [
+          17,
+          -7,
+          6.34
+        ],
+        "blocked": false
+      },
+      {
+        "name": "B_floor",
+        "passed": true,
+        "from_m": [
+          0,
+          -7,
+          5.7
+        ],
+        "to_m": [
+          0,
+          -7,
+          5.1
+        ],
+        "blocked": true,
+        "point_cm": [
+          0.0,
+          700.0,
+          540.0000196695328
+        ],
+        "actor": "StaticMeshActor_2132"
+      },
+      {
+        "name": "hall_void_preserved",
+        "passed": true,
+        "from_m": [
+          0,
+          20,
+          5.7
+        ],
+        "to_m": [
+          0,
+          20,
+          5.1
+        ],
+        "blocked": false
+      },
+      {
+        "name": "omen_void_preserved",
+        "passed": true,
+        "from_m": [
+          0,
+          -25,
+          5.7
+        ],
+        "to_m": [
+          0,
+          -25,
+          5.1
+        ],
+        "blocked": false
+      },
+      {
+        "name": "duct_crouched",
+        "passed": true,
+        "from_m": [
+          -37.3,
+          26.7,
+          8.45
+        ],
+        "to_m": [
+          -41.75,
+          26.7,
+          8.45
+        ],
+        "blocked": false
+      },
+      {
+        "name": "duct_standing_blocked",
+        "passed": true,
+        "from_m": [
+          -37.3,
+          26.7,
+          8.74
+        ],
+        "to_m": [
+          -41.75,
+          26.7,
+          8.74
+        ],
+        "blocked": true,
+        "point_cm": [
+          -3799.8766463994975,
+          -2670.0,
+          874.0
+        ],
+        "actor": "StaticMeshActor_1820"
+      },
+      {
+        "name": "training_ceiling",
+        "passed": true,
+        "from_m": [
+          36,
+          -25,
+          12
+        ],
+        "to_m": [
+          36,
+          -25,
+          14
+        ],
+        "blocked": true,
+        "point_cm": [
+          3600.0,
+          2500.0,
+          1340.000033378601
+        ],
+        "actor": "StaticMeshActor_1752"
+      }
+    ]
+  },
+  "pie_collision": {
+    "world": "/Game/Maps/UEDPIE_0_Map_LabV39.Map_LabV39",
+    "pie": true,
+    "passed": true,
+    "checks": 19,
+    "failures": [],
+    "rows": [
+      {
+        "name": "roof_-17_-5.5",
+        "passed": true,
+        "from_m": [
+          -17,
+          -5.5,
+          7
+        ],
+        "to_m": [
+          -17,
+          -5.5,
+          16
+        ],
+        "blocked": true,
+        "point_cm": [
+          -1700.0,
+          550.0,
+          1400.000011920929
+        ],
+        "actor": "StaticMeshActor_2080"
+      },
+      {
+        "name": "roof_-17_-8",
+        "passed": true,
+        "from_m": [
+          -17,
+          -8,
+          7
+        ],
+        "to_m": [
+          -17,
+          -8,
+          16
+        ],
+        "blocked": true,
+        "point_cm": [
+          -1700.0,
+          800.0,
+          1400.000011920929
+        ],
+        "actor": "StaticMeshActor_2080"
+      },
+      {
+        "name": "roof_-8_-5.5",
+        "passed": true,
+        "from_m": [
+          -8,
+          -5.5,
+          7
+        ],
+        "to_m": [
+          -8,
+          -5.5,
+          16
+        ],
+        "blocked": true,
+        "point_cm": [
+          -800.0,
+          550.0,
+          1400.000011920929
+        ],
+        "actor": "StaticMeshActor_2080"
+      },
+      {
+        "name": "roof_-8_-8",
+        "passed": true,
+        "from_m": [
+          -8,
+          -8,
+          7
+        ],
+        "to_m": [
+          -8,
+          -8,
+          16
+        ],
+        "blocked": true,
+        "point_cm": [
+          -800.0,
+          800.0,
+          1400.000011920929
+        ],
+        "actor": "StaticMeshActor_2080"
+      },
+      {
+        "name": "roof_0_-5.5",
+        "passed": true,
+        "from_m": [
+          0,
+          -5.5,
+          7
+        ],
+        "to_m": [
+          0,
+          -5.5,
+          16
+        ],
+        "blocked": true,
+        "point_cm": [
+          0.0,
+          550.0,
+          1400.000011920929
+        ],
+        "actor": "StaticMeshActor_2080"
+      },
+      {
+        "name": "roof_0_-8",
+        "passed": true,
+        "from_m": [
+          0,
+          -8,
+          7
+        ],
+        "to_m": [
+          0,
+          -8,
+          16
+        ],
+        "blocked": true,
+        "point_cm": [
+          0.0,
+          800.0,
+          1400.000011920929
+        ],
+        "actor": "StaticMeshActor_2080"
+      },
+      {
+        "name": "roof_8_-5.5",
+        "passed": true,
+        "from_m": [
+          8,
+          -5.5,
+          7
+        ],
+        "to_m": [
+          8,
+          -5.5,
+          16
+        ],
+        "blocked": true,
+        "point_cm": [
+          800.0,
+          550.0,
+          1400.000011920929
+        ],
+        "actor": "StaticMeshActor_2080"
+      },
+      {
+        "name": "roof_8_-8",
+        "passed": true,
+        "from_m": [
+          8,
+          -8,
+          7
+        ],
+        "to_m": [
+          8,
+          -8,
+          16
+        ],
+        "blocked": true,
+        "point_cm": [
+          800.0,
+          800.0,
+          1400.000011920929
+        ],
+        "actor": "StaticMeshActor_2080"
+      },
+      {
+        "name": "roof_17_-5.5",
+        "passed": true,
+        "from_m": [
+          17,
+          -5.5,
+          7
+        ],
+        "to_m": [
+          17,
+          -5.5,
+          16
+        ],
+        "blocked": true,
+        "point_cm": [
+          1700.0,
+          550.0,
+          1400.000011920929
+        ],
+        "actor": "StaticMeshActor_2080"
+      },
+      {
+        "name": "roof_17_-8",
+        "passed": true,
+        "from_m": [
+          17,
+          -8,
+          7
+        ],
+        "to_m": [
+          17,
+          -8,
+          16
+        ],
+        "blocked": true,
+        "point_cm": [
+          1700.0,
+          800.0,
+          1400.000011920929
+        ],
+        "actor": "StaticMeshActor_2080"
+      },
+      {
+        "name": "corridor_clear",
+        "passed": true,
+        "from_m": [
+          -17,
+          -7,
+          6.34
+        ],
+        "to_m": [
+          -5,
+          -7,
+          6.34
+        ],
+        "blocked": false
+      },
+      {
+        "name": "corridor_clear",
+        "passed": true,
+        "from_m": [
+          -5,
+          -7,
+          6.34
+        ],
+        "to_m": [
+          6,
+          -7,
+          6.34
+        ],
+        "blocked": false
+      },
+      {
+        "name": "corridor_clear",
+        "passed": true,
+        "from_m": [
+          6,
+          -7,
+          6.34
+        ],
+        "to_m": [
+          17,
+          -7,
+          6.34
+        ],
+        "blocked": false
+      },
+      {
+        "name": "B_floor",
+        "passed": true,
+        "from_m": [
+          0,
+          -7,
+          5.7
+        ],
+        "to_m": [
+          0,
+          -7,
+          5.1
+        ],
+        "blocked": true,
+        "point_cm": [
+          0.0,
+          700.0,
+          540.0000196695328
+        ],
+        "actor": "StaticMeshActor_2132"
+      },
+      {
+        "name": "hall_void_preserved",
+        "passed": true,
+        "from_m": [
+          0,
+          20,
+          5.7
+        ],
+        "to_m": [
+          0,
+          20,
+          5.1
+        ],
+        "blocked": false
+      },
+      {
+        "name": "omen_void_preserved",
+        "passed": true,
+        "from_m": [
+          0,
+          -25,
+          5.7
+        ],
+        "to_m": [
+          0,
+          -25,
+          5.1
+        ],
+        "blocked": false
+      },
+      {
+        "name": "duct_crouched",
+        "passed": true,
+        "from_m": [
+          -37.3,
+          26.7,
+          8.45
+        ],
+        "to_m": [
+          -41.75,
+          26.7,
+          8.45
+        ],
+        "blocked": false
+      },
+      {
+        "name": "duct_standing_blocked",
+        "passed": true,
+        "from_m": [
+          -37.3,
+          26.7,
+          8.74
+        ],
+        "to_m": [
+          -41.75,
+          26.7,
+          8.74
+        ],
+        "blocked": true,
+        "point_cm": [
+          -3799.8766463994975,
+          -2670.0,
+          874.0
+        ],
+        "actor": "StaticMeshActor_1820"
+      },
+      {
+        "name": "training_ceiling",
+        "passed": true,
+        "from_m": [
+          36,
+          -25,
+          12
+        ],
+        "to_m": [
+          36,
+          -25,
+          14
+        ],
+        "blocked": true,
+        "point_cm": [
+          3600.0,
+          2500.0,
+          1340.000033378601
+        ],
+        "actor": "StaticMeshActor_1752"
+      }
+    ]
+  },
+  "actual_character_walk": {
+    "passed": true,
+    "error": null,
+    "player_class": "/Game/Blueprints/Player/BP_FPCharacter.BP_FPCharacter_C",
+    "elapsed_s": 8.547000000005937,
+    "final_cm": [
+      1581.7715726925728,
+      700.0,
+      630.1607018812366
+    ],
+    "capsule_cm": [
+      48.0,
+      88.0
+    ],
+    "samples": [
+      [
+        0.7,
+        -1600.0,
+        700.0,
+        630.1500163078308
+      ],
+      [
+        1.11,
+        -1471.860937036173,
+        700.0,
+        630.1500163078308
+      ],
+      [
+        1.52,
+        -1307.7504842793744,
+        700.0,
+        630.1500163078308
+      ],
+      [
+        1.92,
+        -1140.2272407173202,
+        700.0,
+        630.1500163078308
+      ],
+      [
+        2.33,
+        -972.7039574189428,
+        700.0,
+        630.1500163078308
+      ],
+      [
+        2.74,
+        -805.1805915912785,
+        700.0,
+        630.1500163078308
+      ],
+      [
+        3.14,
+        -641.0761283210554,
+        700.0,
+        630.1500163078308
+      ],
+      [
+        3.55,
+        -473.5530085529315,
+        700.0,
+        630.1500163078308
+      ],
+      [
+        3.95,
+        -306.0297237262339,
+        700.0,
+        630.1500163078308
+      ],
+      [
+        4.36,
+        -138.5063166339262,
+        700.0,
+        630.1500163078308
+      ],
+      [
+        4.77,
+        25.602166118229434,
+        700.0,
+        630.1500163078308
+      ],
+      [
+        5.17,
+        193.7201554574931,
+        700.0,
+        630.1607018812366
+      ],
+      [
+        5.58,
+        361.243275225617,
+        700.0,
+        630.1607018812366
+      ],
+      [
+        5.99,
+        528.7667235825681,
+        700.0,
+        630.1607018812366
+      ],
+      [
+        6.39,
+        692.8713091184013,
+        700.0,
+        630.1607018812366
+      ],
+      [
+        6.8,
+        860.3946352097423,
+        700.0,
+        630.1607018812366
+      ],
+      [
+        7.2,
+        1027.9178772434764,
+        700.0,
+        630.1607018812366
+      ],
+      [
+        7.61,
+        1192.0236120760446,
+        700.0,
+        630.1607018812366
+      ],
+      [
+        8.02,
+        1359.5470191683523,
+        700.0,
+        630.1607018812366
+      ],
+      [
+        8.42,
+        1527.0700976718329,
+        700.0,
+        630.1607018812366
+      ]
+    ],
+    "method": "Real CharacterMovement input along the repaired-roof corridor; teleport only to independent test start and restore afterwards."
+  },
+  "final": {
+    "map": "/Game/Maps/Map_LabV39.Map_LabV39",
+    "actors": 1955,
+    "actor_transforms_preserved": 1559,
+    "dirty_maps": [],
+    "dirty_assets": [],
+    "PIE_stopped": true,
+    "original_view_restored": true,
+    "temporary_driver_stopped": true
+  }
+}

@@ -1,8 +1,10 @@
 # 实验室 R17：地图、交互门与 Omen
 
-本次修改落在原地图 `/Game/Maps/Map_LabV39`。改造前完整地图另存为 `/Game/Maps/Map_LabV39_1`。本说明是本轮交付入口；旧 `Saved/Agent/LabR17/DELIVERY_DRAFT.md` 是实施过程草稿，不代表最终状态。
+本说明保留 2026-10-17 R17 实施与验证记录，地图为 `/Game/Maps/Map_LabV39`；当时的改造前地图为 `/Game/Maps/Map_LabV39_1`。旧 `Saved/Agent/LabR17/DELIVERY_DRAFT.md` 是过程草稿。
 
-## 本轮结果
+**2026-10-24 建筑编辑入口已调整：** 初次迁移为 821 个独立构件；随后修复北西外墙缺口和退役东翼多余高顶，当前为 791 个。后续由组员直接在 UE 修改实例。见[改墙、门洞和房间指南及验收](editable-architecture.md)、[独立构件初始源](../../../SourceAssets/LabV39/Editable/README.md)及[外围增量修复](../../../SourceAssets/LabV39/Editable/EnvelopeRepair20261024/README.md)。旧 32 个高度切片及旧 SceneBridge 同步方式属于历史流程；下文保留原始实施记录。
+
+## 2026-10-17 R17 原始实施结果
 
 - 下层西翼原红墙两处公共入口封闭，改为蓝标位置的一处 `G-WEST-MAIN`；L01 南墙增加绿色标记的门。下层 E4 小房间撤除，原位置留空。上层 E4 保留。
 - 最新上下层布局已导入；训练场保持 20 × 34.7 m、8 m 净高，整备室和 2 m 双门通道保留。四座楼梯、城市外景、外立面和 Omen 原模型保留。
@@ -23,7 +25,9 @@
 
 | 内容 | 位置 |
 |---|---|
-| 建筑与 Blender 源、SceneBridge 包 | [SourceAssets/LabV39/R17](../../../SourceAssets/LabV39/R17/README.md) |
+| 当前独立构件编辑指南 | [在 UE 改墙、门洞和房间](editable-architecture.md) |
+| 独立构件初始源 | [SourceAssets/LabV39/Editable](../../../SourceAssets/LabV39/Editable/README.md) |
+| 历史 R17 建筑与 Blender / SceneBridge 源 | [SourceAssets/LabV39/R17](../../../SourceAssets/LabV39/R17/README.md)，仅作追溯，不再同步覆盖手工编辑地图 |
 | 普通门 Blueprint | `/Game/Environment/LabR17/Blueprints/BP_LabRoomDoor` |
 | Omen 自动门 Blueprint | `/Game/Environment/LabR17/Blueprints/BP_LabOmenDoor` |
 | Omen 追踪 Blueprint | `/Game/Characters/Omen/Blueprints/BP_OmenObserver` |
@@ -35,9 +39,9 @@ Blueprint 继承项目已有交互体系，F 仍由 `IA_Interact` / `AC_Interact
 
 `Plugins/LabAuthoring` 是这次补充的编辑器生成/审核工具，游戏节点不引用它。日常打开地图和游玩不需要启用；只有重建蓝图时才需要相应 UE 5.6 编辑器编译环境。最终已将其默认启用关闭，避免组员打开项目时被要求编译辅助工具。
 
-SceneBridge 监听配置指向本项目 `SourceAssets/LabV39/R17/patch_bundle/manifest.json`，`auto_start=false`。手动同步使用 `/Game/Maps/Map_LabV39` 和 `/Game/Environment/LabV39/R17`。不要重新导入历史 `1002/LabWhitebox_v39/lab_bundle`，否则会重建已移除的旧墙。用户当前打开的 Blender 场景未被替换；新的可编辑 `.blend` 单独保存。
+历史 R17 曾通过 `SourceAssets/LabV39/R17/patch_bundle/manifest.json` 同步至 `/Game/Maps/Map_LabV39`。**该同步方法现已退役：禁止把旧 R17 或 `1002/LabWhitebox_v39/lab_bundle` 导回手工编辑地图。** 本机旧配置的 `manifest_path` 已清空，监听停止，自动启动关闭，并在重载后核验。后续 UE 实例为当前布局权威，Blender 只保留本轮迁移初始源，不自动反向同步。
 
-## 验证范围
+## 2026-10-17 原始验证范围
 
 | 验证 | 结果 |
 |---|---|
@@ -71,3 +75,7 @@ Omen 门开启中与全开：
 ## 几何处理依据
 
 旧模型在上层地坪高度检测到 162 组同向共面覆盖；新建筑不再为相交实体重复生成内部顶面。处理思路参考 Unreal 的 [Boolean 工具说明](https://dev.epicgames.com/documentation/en-us/unreal-engine/boolean-tool-in-unreal-engine?application_version=5.6)，以实体合并、外露面和正确门洞解决几何问题。门的组件与平滑开合组织参考 [Unreal 开门教程](https://dev.epicgames.com/documentation/en-us/unreal-engine/opening-doors-in-unreal-engine?application_version=5.6)，实际交互仍接入本项目现有接口。
+
+## 2026-10-24 屋顶修复
+
+已在原 Map_LabV39 修复主控室前方上层联络廊的屋顶缺口，仅更新两块相邻建筑网格；原平面布局、楼梯、风道和训练室净高保持。对应生成器、Blender源与SceneBridge包已同步至revision3。见[修复说明、验证与恢复方法](roof-repair-2026-10-24.md)。

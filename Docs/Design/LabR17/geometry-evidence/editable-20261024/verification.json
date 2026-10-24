@@ -1,0 +1,129 @@
+{
+  "migration_result": {
+    "new_modules": 821,
+    "removed_old_structure_instances": 32,
+    "preserved_actor_count": 1924,
+    "actor_count": 2745,
+    "bounds_verified": true,
+    "saved": false,
+    "old_sync_disconnected": true
+  },
+  "prototype_result": {
+    "prototype_actors": 46,
+    "target": "B_B_walls_082",
+    "one_wall_moved_and_scaled": true,
+    "neighbors_unchanged": true,
+    "restored": true
+  },
+  "collision_editor": {
+    "pie": false,
+    "passed": true,
+    "checks": 108,
+    "scope": "Geometry queries; door actors ignored here, real opened door fit is a separate PIE test."
+  },
+  "collision_pie": {
+    "pie": true,
+    "passed": true,
+    "checks": 108,
+    "scope": "Geometry queries; door actors ignored here, real opened door fit is a separate PIE test."
+  },
+  "all_door_fit": {
+    "passed": true,
+    "error": null,
+    "scope": "Geometry fit in PIE, temporarily command doors open. Does not claim to test F input; see door_pie_qa.json for input evidence."
+  },
+  "door_pie_qa": {
+    "done": true,
+    "error": null,
+    "passed": true,
+    "frame_based": true,
+    "input_evidence": "EnhancedInput IA_Interact and IA_TimeAbility. No direct door Interface/SetDoorOpen calls.",
+    "initial_dilation": 1.0,
+    "capsule_radius_cm": 48.0,
+    "capsule_half_height_cm": 88.0,
+    "elapsed_seconds": 27.937999999994645,
+    "current_step": null
+  },
+  "omen_pie_check": {
+    "ok": true,
+    "error": null,
+    "restore_error": null,
+    "checks": {
+      "outside_initial_recorded": true,
+      "outside_initial_state": true,
+      "inside_left_recorded": true,
+      "inside_left_state": true,
+      "inside_left_aligned_under_3_degrees": true,
+      "inside_right_recorded": true,
+      "inside_right_state": true,
+      "inside_right_aligned_under_3_degrees": true,
+      "short_exit_recorded": true,
+      "short_exit_state": true,
+      "reenter_during_return_recorded": true,
+      "reenter_during_return_state": true,
+      "reenter_during_return_aligned_under_3_degrees": true,
+      "outside_final_recorded": true,
+      "outside_final_state": true,
+      "returns_home_under_1_degree": true,
+      "inside_left_smooth_intermediate_samples": true,
+      "inside_right_smooth_intermediate_samples": true,
+      "outside_final_smooth_intermediate_samples": true,
+      "all_parts_keep_location_scale": true,
+      "child_parts_follow_parent": true
+    },
+    "scope": "PIE only, no editor assets/map saved; teleport setup tests activation/rotation, not navigation"
+  },
+  "walk_corridor_pie": {
+    "passed": true,
+    "error": null,
+    "player_class": "/Game/Blueprints/Player/BP_FPCharacter.BP_FPCharacter_C",
+    "elapsed_s": 8.546999999991385,
+    "method": "Real CharacterMovement input along the repaired-roof corridor; teleport only to independent test start and restore afterwards."
+  },
+  "stairs_pie": {
+    "index": 8,
+    "phase": "next",
+    "test_count": 8,
+    "filter": "stairs",
+    "radius_cm": 48.0,
+    "standing_half_height_cm": 88.0,
+    "player_class": "/Game/Blueprints/Player/BP_FPCharacter.BP_FPCharacter_C",
+    "started": 84751.796,
+    "last_sample": 84779.968,
+    "test_started": 84776.75,
+    "waypoint": 1,
+    "timeout": 19.4,
+    "done": true,
+    "error": null,
+    "all_passed": true,
+    "scope": "Real project CharacterMovement input in PIE. Teleport only between independent test routes; crawl turns are continuous walking.",
+    "map": "/Game/Maps/UEDPIE_0_Map_LabV39.Map_LabV39"
+  },
+  "pie_jump_duct_result": {
+    "done": true,
+    "error": null,
+    "all_passed": true,
+    "current_phase": "next",
+    "current_route": "UP_ground_jump4_and_crawl",
+    "scope": "Actual project CharacterMovement; only independent route starts/final restore teleport. No LaunchCharacter, no velocity injection, no modified jump tuning.",
+    "limits": "A failure can be an automated input timing issue; inspect recorded trajectory before concluding the layout is impossible."
+  },
+  "reload_result": {
+    "save_ok": true,
+    "reload_ok": true
+  },
+  "final_state": {
+    "map": "/Game/Maps/Map_LabV39.Map_LabV39",
+    "actor_count": 2745,
+    "editable_modules": 821,
+    "original_actors_preserved_after_reload": 1924,
+    "PIE_stopped": true,
+    "original_view_restored": true,
+    "background_throttle_restored": true,
+    "old_sync_disconnected": true,
+    "backup": "/Game/Maps/Backups/Map_LabV39_PreEditable20261024",
+    "temporary_driver_stopped": true
+  },
+  "scope": "Independent geometry, imported bounds, isolated move/scale sample, real runtime movement and interactions, then save/reload. Detailed transient traces retained under Saved/Agent/LabEditable20261024.",
+  "preexisting_issue": "AC_DialogueManager ShowLine Line pin compile error was logged before this task; dialogue asset unchanged."
+}

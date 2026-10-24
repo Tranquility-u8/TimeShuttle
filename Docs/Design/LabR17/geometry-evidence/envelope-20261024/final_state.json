@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "all_actors": 2715,
+  "architecture": 791,
+  "repair_instances": 19,
+  "original_retained_actors_unchanged": 2696,
+  "removed_planned_roofs": 49,
+  "dirty_maps": [],
+  "dirty_content": []
+}

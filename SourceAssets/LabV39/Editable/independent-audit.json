@@ -1,0 +1,795 @@
+{
+  "modules_sha256": "1a58376608a90b2973f77f4d3d0190cd8e1a08f6ffa06c8c057a306e660b273d",
+  "module_count": 821,
+  "passed": true,
+  "mesh_topology_failures": [],
+  "mesh_metadata_mismatches": [],
+  "local_world_transform_failures": [],
+  "sections": [
+    {
+      "z0": -0.45,
+      "z1": 0,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 0,
+      "actual_area_m2": 16588.6875337682,
+      "source_area_m2": 16588.687522577693
+    },
+    {
+      "z0": 0,
+      "z1": 0.9,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 9.094947017729282e-13,
+      "actual_area_m2": 1540.0608719957,
+      "source_area_m2": 1540.0608719956977
+    },
+    {
+      "z0": 0.9,
+      "z1": 3.3,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 0,
+      "actual_area_m2": 1508.1507670957008,
+      "source_area_m2": 1508.1507670957008
+    },
+    {
+      "z0": 3.3,
+      "z1": 3.4,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 2.9558577807620168e-12,
+      "actual_area_m2": 1515.6537670956977,
+      "source_area_m2": 1515.6537670957005
+    },
+    {
+      "z0": 3.4,
+      "z1": 3.5,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 0,
+      "actual_area_m2": 1584.956389275706,
+      "source_area_m2": 1584.9563892756903
+    },
+    {
+      "z0": 3.5,
+      "z1": 3.8,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 6.59383658785373e-12,
+      "actual_area_m2": 1609.3634941756943,
+      "source_area_m2": 1609.363494175688
+    },
+    {
+      "z0": 3.8,
+      "z1": 4.8,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 0,
+      "actual_area_m2": 1620.6358054957059,
+      "source_area_m2": 1620.6358054956902
+    },
+    {
+      "z0": 4.8,
+      "z1": 4.95,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 1.8189894035458565e-12,
+      "actual_area_m2": 1626.635805495699,
+      "source_area_m2": 1626.635805495691
+    },
+    {
+      "z0": 4.95,
+      "z1": 5.4,
+      "mesh_section_difference_m2": 1.0313850004731173e-05,
+      "module_overlap_m2": 1.3659446267411113e-06,
+      "actual_area_m2": 13245.454534831355,
+      "source_area_m2": 13245.45453541286
+    },
+    {
+      "z0": 5.4,
+      "z1": 6.0,
+      "mesh_section_difference_m2": 4.039499997741486e-07,
+      "module_overlap_m2": 3.410605131648481e-13,
+      "actual_area_m2": 935.0892302520497,
+      "source_area_m2": 935.0892297727529
+    },
+    {
+      "z0": 6.0,
+      "z1": 6.3,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 0,
+      "actual_area_m2": 930.769230072702,
+      "source_area_m2": 930.7692297727453
+    },
+    {
+      "z0": 6.3,
+      "z1": 6.6,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 0,
+      "actual_area_m2": 862.716030198752,
+      "source_area_m2": 862.7160304792529
+    },
+    {
+      "z0": 6.6,
+      "z1": 7.2,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 6.821210263296962e-13,
+      "actual_area_m2": 858.3960300497494,
+      "source_area_m2": 858.3960297727531
+    },
+    {
+      "z0": 7.2,
+      "z1": 7.6,
+      "mesh_section_difference_m2": 3.27899999904618e-07,
+      "module_overlap_m2": 2.7284841053187847e-12,
+      "actual_area_m2": 854.0760302395972,
+      "source_area_m2": 854.0760297727475
+    },
+    {
+      "z0": 7.6,
+      "z1": 7.8,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 0,
+      "actual_area_m2": 860.9184303656504,
+      "source_area_m2": 860.9184304792516
+    },
+    {
+      "z0": 7.8,
+      "z1": 8.8,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 6.821210263296962e-13,
+      "actual_area_m2": 848.0484299112493,
+      "source_area_m2": 848.0484297727489
+    },
+    {
+      "z0": 8.8,
+      "z1": 8.9,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 0,
+      "actual_area_m2": 884.3064970838013,
+      "source_area_m2": 884.3064970927521
+    },
+    {
+      "z0": 8.9,
+      "z1": 9.2,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 0,
+      "actual_area_m2": 909.0336971779509,
+      "source_area_m2": 909.0336970927544
+    },
+    {
+      "z0": 9.2,
+      "z1": 9.3,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 1.0231815394945443e-12,
+      "actual_area_m2": 917.407297272099,
+      "source_area_m2": 917.407297092745
+    },
+    {
+      "z0": 9.3,
+      "z1": 9.7,
+      "mesh_section_difference_m2": 6.123499998486523e-07,
+      "module_overlap_m2": 3.524291969370097e-12,
+      "actual_area_m2": 952.3296977050964,
+      "source_area_m2": 952.329697092749
+    },
+    {
+      "z0": 9.7,
+      "z1": 11.1,
+      "mesh_section_difference_m2": 2.3999999982184973e-07,
+      "module_overlap_m2": 3.410605131648481e-13,
+      "actual_area_m2": 960.7332973767495,
+      "source_area_m2": 960.7332977992476
+    },
+    {
+      "z0": 11.1,
+      "z1": 11.4,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 0,
+      "actual_area_m2": 1302.6732973857002,
+      "source_area_m2": 1302.673297092748
+    },
+    {
+      "z0": 11.4,
+      "z1": 12.3,
+      "mesh_section_difference_m2": 3.4564999985872404e-07,
+      "module_overlap_m2": 0,
+      "actual_area_m2": 960.7332976074504,
+      "source_area_m2": 960.7332970927475
+    },
+    {
+      "z0": 12.3,
+      "z1": 13.4,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 1.7053025658242404e-12,
+      "actual_area_m2": 931.3332973413482,
+      "source_area_m2": 931.3332970927481
+    },
+    {
+      "z0": 13.4,
+      "z1": 13.8,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 2.5011104298755527e-12,
+      "actual_area_m2": 1625.3332972880473,
+      "source_area_m2": 1625.333297092749
+    },
+    {
+      "z0": 13.8,
+      "z1": 14,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 7.958078640513122e-13,
+      "actual_area_m2": 864.2532974140989,
+      "source_area_m2": 864.2532970927466
+    },
+    {
+      "z0": 14,
+      "z1": 14.45,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 0,
+      "actual_area_m2": 13777.263061877,
+      "source_area_m2": 13777.263050686493
+    },
+    {
+      "z0": 14.45,
+      "z1": 15.3,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 0,
+      "actual_area_m2": 159.42600000000022,
+      "source_area_m2": 159.42600000000067
+    },
+    {
+      "z0": 15.3,
+      "z1": 17.1,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 0,
+      "actual_area_m2": 188.82600000000014,
+      "source_area_m2": 188.82599999999954
+    },
+    {
+      "z0": 17.1,
+      "z1": 17.4,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 0,
+      "actual_area_m2": 530.766000000001,
+      "source_area_m2": 530.7660000000001
+    },
+    {
+      "z0": 17.4,
+      "z1": 25,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 0,
+      "actual_area_m2": 125.25000000000023,
+      "source_area_m2": 125.25
+    },
+    {
+      "z0": 25,
+      "z1": 25.4,
+      "mesh_section_difference_m2": 0.0,
+      "module_overlap_m2": 0,
+      "actual_area_m2": 1805.25,
+      "source_area_m2": 1805.25
+    }
+  ],
+  "semantic_checks": [
+    {
+      "name": "RepairedCorridorRoof_(-17, -5.5)",
+      "passed": true
+    },
+    {
+      "name": "RepairedCorridorRoof_(-17, -8)",
+      "passed": true
+    },
+    {
+      "name": "RepairedCorridorRoof_(-8, -5.5)",
+      "passed": true
+    },
+    {
+      "name": "RepairedCorridorRoof_(-8, -8)",
+      "passed": true
+    },
+    {
+      "name": "RepairedCorridorRoof_(0, -5.5)",
+      "passed": true
+    },
+    {
+      "name": "RepairedCorridorRoof_(0, -8)",
+      "passed": true
+    },
+    {
+      "name": "RepairedCorridorRoof_(8, -5.5)",
+      "passed": true
+    },
+    {
+      "name": "RepairedCorridorRoof_(8, -8)",
+      "passed": true
+    },
+    {
+      "name": "RepairedCorridorRoof_(17, -5.5)",
+      "passed": true
+    },
+    {
+      "name": "RepairedCorridorRoof_(17, -8)",
+      "passed": true
+    },
+    {
+      "name": "HallBVoidPreserved",
+      "passed": true
+    },
+    {
+      "name": "OmenBVoidPreserved",
+      "passed": true
+    },
+    {
+      "name": "DuctClear",
+      "passed": true
+    },
+    {
+      "name": "DuctBelowIsSolid",
+      "passed": true
+    },
+    {
+      "name": "TrainingRoofElevation",
+      "passed": true
+    },
+    {
+      "name": "Opening_RES-I15.35",
+      "passed": true
+    },
+    {
+      "name": "Opening_RES-I5.35",
+      "passed": true
+    },
+    {
+      "name": "Opening_RES-U-3.65",
+      "passed": true
+    },
+    {
+      "name": "Opening_RES-U-9.65",
+      "passed": true
+    },
+    {
+      "name": "Opening_RES-SERV",
+      "passed": true
+    },
+    {
+      "name": "Opening_RES-ACT",
+      "passed": true
+    },
+    {
+      "name": "Opening_RES-STORE",
+      "passed": true
+    },
+    {
+      "name": "Opening_RES-QUIET",
+      "passed": true
+    },
+    {
+      "name": "Opening_LS39-DOOR-1",
+      "passed": true
+    },
+    {
+      "name": "Opening_LS39-DOOR-2",
+      "passed": true
+    },
+    {
+      "name": "Opening_LS39-DOOR-3",
+      "passed": true
+    },
+    {
+      "name": "Opening_LS39-DOOR-4",
+      "passed": true
+    },
+    {
+      "name": "Opening_L01-HALL",
+      "passed": true
+    },
+    {
+      "name": "Opening_R02-N",
+      "passed": true
+    },
+    {
+      "name": "Opening_RES-N",
+      "passed": true
+    },
+    {
+      "name": "Opening_RES-M",
+      "passed": true
+    },
+    {
+      "name": "Opening_RES-EXT-DINING",
+      "passed": true
+    },
+    {
+      "name": "Opening_RES-EXT-LOUNGE",
+      "passed": true
+    },
+    {
+      "name": "Opening_QW1",
+      "passed": true
+    },
+    {
+      "name": "Opening_QW2",
+      "passed": true
+    },
+    {
+      "name": "Opening_upper_E4_upper",
+      "passed": true
+    },
+    {
+      "name": "Opening_C0",
+      "passed": true
+    },
+    {
+      "name": "Opening_N-KITCHEN",
+      "passed": true
+    },
+    {
+      "name": "Opening_N-PANTRY",
+      "passed": true
+    },
+    {
+      "name": "Opening_N-QUIET-READ",
+      "passed": true
+    },
+    {
+      "name": "Opening_N-H01-N",
+      "passed": true
+    },
+    {
+      "name": "Opening_N-H01-S",
+      "passed": true
+    },
+    {
+      "name": "Opening_N-H02-N",
+      "passed": true
+    },
+    {
+      "name": "Opening_N-H02-S",
+      "passed": true
+    },
+    {
+      "name": "Opening_WG-ASSEMBLY",
+      "passed": true
+    },
+    {
+      "name": "Opening_EG-ENTRY",
+      "passed": true
+    },
+    {
+      "name": "Opening_EG-WORK",
+      "passed": true
+    },
+    {
+      "name": "Opening_WU-NORTH",
+      "passed": true
+    },
+    {
+      "name": "Opening_WU-PREP",
+      "passed": true
+    },
+    {
+      "name": "Opening_WU-DISCUSS",
+      "passed": true
+    },
+    {
+      "name": "Opening_GW38-OVERHAUL",
+      "passed": true
+    },
+    {
+      "name": "Opening_GW38-STORAGE",
+      "passed": true
+    },
+    {
+      "name": "Opening_GW38-EXISTING-STORE",
+      "passed": true
+    },
+    {
+      "name": "Opening_GW38-EXISTING-REPAIR",
+      "passed": true
+    },
+    {
+      "name": "Opening_RW38-RING-ENTRY",
+      "passed": true
+    },
+    {
+      "name": "Opening_RW38-PREP-N",
+      "passed": true
+    },
+    {
+      "name": "Opening_RW38-ARCHIVE",
+      "passed": true
+    },
+    {
+      "name": "Opening_RW39-CONTROL-CHAMBER",
+      "passed": true
+    },
+    {
+      "name": "Opening_RW39-ANALYSIS",
+      "passed": true
+    },
+    {
+      "name": "Opening_RW39-CALIBRATION",
+      "passed": true
+    },
+    {
+      "name": "Opening_RW39-RECORDS",
+      "passed": true
+    },
+    {
+      "name": "Opening_RW39-REVIEW",
+      "passed": true
+    },
+    {
+      "name": "Opening_RW39-SEALED-RECORDS",
+      "passed": true
+    },
+    {
+      "name": "Opening_RW39-RECORDS-FORWARD",
+      "passed": true
+    },
+    {
+      "name": "Opening_RW39-ARCHIVE-LINK",
+      "passed": true
+    },
+    {
+      "name": "Opening_E39-A-ENTRY",
+      "passed": true
+    },
+    {
+      "name": "Opening_E39-A-END",
+      "passed": true
+    },
+    {
+      "name": "Opening_E39-POD1",
+      "passed": true
+    },
+    {
+      "name": "Opening_E39-POD2",
+      "passed": true
+    },
+    {
+      "name": "Opening_E39-POD3",
+      "passed": true
+    },
+    {
+      "name": "Opening_E39-POD4",
+      "passed": true
+    },
+    {
+      "name": "Opening_E39-EG02",
+      "passed": true
+    },
+    {
+      "name": "Opening_E39-EG04",
+      "passed": true
+    },
+    {
+      "name": "Opening_E39-EG05",
+      "passed": true
+    },
+    {
+      "name": "Opening_E39-EG06",
+      "passed": true
+    },
+    {
+      "name": "Opening_E39-EG09",
+      "passed": true
+    },
+    {
+      "name": "Opening_E39-EG03",
+      "passed": true
+    },
+    {
+      "name": "Opening_TR-ENTRY",
+      "passed": true
+    },
+    {
+      "name": "Opening_TR-CONNECT-PREP",
+      "passed": true
+    },
+    {
+      "name": "Opening_TR-CONNECT-TRAIN",
+      "passed": true
+    },
+    {
+      "name": "Opening_R9-TIME-EXIT",
+      "passed": true
+    },
+    {
+      "name": "Opening_R9-WEST-SHARED",
+      "passed": true
+    },
+    {
+      "name": "Opening_R10-UP-NORTH",
+      "passed": true
+    },
+    {
+      "name": "Opening_R10-COMMONS-NORTH",
+      "passed": true
+    },
+    {
+      "name": "Opening_R10-COMMONS-WEST",
+      "passed": true
+    },
+    {
+      "name": "Opening_R10-EQUIPMENT",
+      "passed": true
+    },
+    {
+      "name": "Opening_R13-U01",
+      "passed": true
+    },
+    {
+      "name": "Opening_R13-U02",
+      "passed": true
+    },
+    {
+      "name": "Opening_R16-CORE-E",
+      "passed": true
+    },
+    {
+      "name": "Opening_R16-CORE-S",
+      "passed": true
+    },
+    {
+      "name": "Opening_R16-PREP-N",
+      "passed": true
+    },
+    {
+      "name": "Opening_G-WEST-MAIN",
+      "passed": true
+    },
+    {
+      "name": "Opening_R17-L01-S",
+      "passed": true
+    }
+  ],
+  "semantic_failures": [],
+  "total_module_signed_volume_m3": 37854.63079387721,
+  "longest_walls": [
+    {
+      "name": "SM_LabEditable_A_A_walls_005",
+      "rooms": [
+        "GW38B"
+      ],
+      "max_plan_extent_m": 64.1,
+      "min_plan_extent_m": 0.6000000000000014,
+      "height_m": 4.95,
+      "profile_count": 1
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_019",
+      "rooms": [
+        "GW38B"
+      ],
+      "max_plan_extent_m": 41.55,
+      "min_plan_extent_m": 0.6000000000000014,
+      "height_m": 4.95,
+      "profile_count": 1
+    },
+    {
+      "name": "SM_LabEditable_B_Training_walls_005",
+      "rooms": [
+        "TR02"
+      ],
+      "max_plan_extent_m": 34.7,
+      "min_plan_extent_m": 0.6000000000000014,
+      "height_m": 8.0,
+      "profile_count": 1
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_127",
+      "rooms": [],
+      "max_plan_extent_m": 30.820000000000004,
+      "min_plan_extent_m": 0.48749999999999716,
+      "height_m": 4.95,
+      "profile_count": 1
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_126",
+      "rooms": [],
+      "max_plan_extent_m": 30.620000000000005,
+      "min_plan_extent_m": 0.1875,
+      "height_m": 4.95,
+      "profile_count": 1
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_002",
+      "rooms": [
+        "GW38A"
+      ],
+      "max_plan_extent_m": 27.8,
+      "min_plan_extent_m": 0.6000000000000085,
+      "height_m": 4.95,
+      "profile_count": 1
+    },
+    {
+      "name": "SM_LabEditable_B_B_walls_122",
+      "rooms": [
+        "EP01"
+      ],
+      "max_plan_extent_m": 26.249000000000002,
+      "min_plan_extent_m": 0.5999999999999943,
+      "height_m": 8.6,
+      "profile_count": 1
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_001",
+      "rooms": [
+        "GW38B"
+      ],
+      "max_plan_extent_m": 24.6,
+      "min_plan_extent_m": 0.6000000000000085,
+      "height_m": 4.95,
+      "profile_count": 1
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_037",
+      "rooms": [
+        "R02",
+        "W04"
+      ],
+      "max_plan_extent_m": 24.49,
+      "min_plan_extent_m": 0.6749999999999972,
+      "height_m": 4.95,
+      "profile_count": 1
+    },
+    {
+      "name": "SM_LabEditable_B_B_walls_015",
+      "rooms": [
+        "WU01"
+      ],
+      "max_plan_extent_m": 22.099999999999994,
+      "min_plan_extent_m": 0.5999999999999979,
+      "height_m": 8.6,
+      "profile_count": 1
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_006",
+      "rooms": [
+        "GW38A",
+        "GW38B"
+      ],
+      "max_plan_extent_m": 21.94999999999999,
+      "min_plan_extent_m": 0.5999999999999979,
+      "height_m": 4.95,
+      "profile_count": 1
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_007",
+      "rooms": [
+        "GW38A"
+      ],
+      "max_plan_extent_m": 21.94999999999999,
+      "min_plan_extent_m": 0.6000000000000001,
+      "height_m": 4.95,
+      "profile_count": 1
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_009",
+      "rooms": [
+        "WG01"
+      ],
+      "max_plan_extent_m": 21.737499999999997,
+      "min_plan_extent_m": 0.5999999999999979,
+      "height_m": 4.95,
+      "profile_count": 1
+    },
+    {
+      "name": "SM_LabEditable_B_Training_walls_001",
+      "rooms": [
+        "TR02"
+      ],
+      "max_plan_extent_m": 21.200000000000003,
+      "min_plan_extent_m": 0.6000000000000014,
+      "height_m": 8.0,
+      "profile_count": 1
+    },
+    {
+      "name": "SM_LabEditable_B_B_walls_085",
+      "rooms": [
+        "TIME"
+      ],
+      "max_plan_extent_m": 20.9375,
+      "min_plan_extent_m": 0.6000000000000014,
+      "height_m": 8.6,
+      "profile_count": 1
+    }
+  ],
+  "thin_walls": [],
+  "short_wall_fragments": [],
+  "elapsed_seconds": 4.5
+}

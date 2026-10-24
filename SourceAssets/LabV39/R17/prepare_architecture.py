@@ -83,7 +83,11 @@ vol('Scenic lower base',sc0,0,5.4)
 vol('Scenic outer lower',so0,0,5.4)
 vol('Scenic outer upper',so1,5.4,17.4)
 for z in [11.4,17.4]:vol('Scenic slab',sc1,z-.3,z)
-roof=unary_union([f0,f1,w0,w1,court,geom('retired_roof')]).difference(control.buffer(5.3,join_style=2)).difference(trainenv)
+# Roof exclusions follow the actual tall control enclosure and scenic wing.
+# The former 5.3 m rectangular buffer also removed the south link corridor's
+# ceiling. Keep public_voids above unchanged: those are FLOOR openings.
+roof_exclusions=unary_union([control,cring,sc1,so1])
+roof=unary_union([f0,f1,w0,w1,court,geom('retired_roof')]).difference(roof_exclusions).difference(trainenv)
 vol('Main roof',roof,14,14.45)
 vol('Training roof',trainenv,13.4,13.8)
 platform=geom('duct_platforms')

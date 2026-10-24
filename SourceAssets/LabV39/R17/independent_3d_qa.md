@@ -3,7 +3,7 @@
 结果：通过。直接从导出的 architecture_meshes.json 重建高度截面；未执行生成器或 UE 调用。
 
 - 平面 SHA256：`ae19133c9448e61e2afea88d99c67afe8946a9990ec590634bba19bcdf23a2d9`
-- 三维网格 SHA256：`35a35a39cd5bd9e4d6c8ed22a6c453b7eb73c390577cdda3968c24c7c053d37d`
+- 三维网格 SHA256：`9452d6555ac88edc2561023ced5ccd0f1dfce5e042bb3f22b11f3bc4c13ef50b`
 
 ## 当前建筑
 

@@ -1,0 +1,676 @@
+{
+  "coordinate_system": "Blender metres; UE=(100*x,-100*y,100*z)",
+  "source_plan_sha256": "ae19133c9448e61e2afea88d99c67afe8946a9990ec590634bba19bcdf23a2d9",
+  "source_mesh_sha256": "9452d6555ac88edc2561023ced5ccd0f1dfce5e042bb3f22b11f3bc4c13ef50b",
+  "new_modules": [
+    {
+      "name": "NW_Exterior_West_South",
+      "status": "proposal_only_not_implemented",
+      "kind": "wall",
+      "floor": "B",
+      "z0": 5.4,
+      "z1": 14.0,
+      "bbox_world": [
+        -68.1125,
+        22.45,
+        5.4,
+        -67.5125,
+        29.604349999999997,
+        14.0
+      ],
+      "dimensions_world_m": [
+        0.5999999999999943,
+        7.154349999999997,
+        8.6
+      ],
+      "center_world_m": [
+        -67.8125,
+        26.027175,
+        9.7
+      ],
+      "location_ue_cm": [
+        -6781.25,
+        -2602.7174999999997,
+        970
+      ],
+      "footprint": [
+        {
+          "outer": [
+            [
+              -67.5125,
+              22.45
+            ],
+            [
+              -67.5125,
+              29.604349999999997
+            ],
+            [
+              -68.1125,
+              29.604349999999997
+            ],
+            [
+              -68.1125,
+              22.45
+            ],
+            [
+              -67.5125,
+              22.45
+            ]
+          ],
+          "holes": []
+        }
+      ],
+      "rectangular_bool": true,
+      "checks": {
+        "existing_upper_wall_overlap_m2": 0.0,
+        "existing_occupied_volume_at_7m_overlap_m2": 0.0,
+        "unsupported_at_5p2m_m2": 0.0,
+        "outside_main_roof_m2": 0.0,
+        "opening_route_radius_0p45_overlap_m2": 0.0
+      }
+    },
+    {
+      "name": "NW_Exterior_West_North",
+      "status": "proposal_only_not_implemented",
+      "kind": "wall",
+      "floor": "B",
+      "z0": 5.4,
+      "z1": 14.0,
+      "bbox_world": [
+        -68.1125,
+        29.604349999999997,
+        5.4,
+        -67.5125,
+        36.7587,
+        14.0
+      ],
+      "dimensions_world_m": [
+        0.5999999999999943,
+        7.154350000000001,
+        8.6
+      ],
+      "center_world_m": [
+        -67.8125,
+        33.18152499999999,
+        9.7
+      ],
+      "location_ue_cm": [
+        -6781.25,
+        -3318.1524999999992,
+        970
+      ],
+      "footprint": [
+        {
+          "outer": [
+            [
+              -67.5125,
+              29.604349999999997
+            ],
+            [
+              -67.5125,
+              36.7587
+            ],
+            [
+              -68.1125,
+              36.7587
+            ],
+            [
+              -68.1125,
+              29.604349999999997
+            ],
+            [
+              -67.5125,
+              29.604349999999997
+            ]
+          ],
+          "holes": []
+        }
+      ],
+      "rectangular_bool": true,
+      "checks": {
+        "existing_upper_wall_overlap_m2": 0.0,
+        "existing_occupied_volume_at_7m_overlap_m2": 0.0,
+        "unsupported_at_5p2m_m2": 0.0,
+        "outside_main_roof_m2": 0.0,
+        "opening_route_radius_0p45_overlap_m2": 0.0
+      }
+    },
+    {
+      "name": "NW_Exterior_North_West",
+      "status": "proposal_only_not_implemented",
+      "kind": "wall",
+      "floor": "B",
+      "z0": 5.4,
+      "z1": 14.0,
+      "bbox_world": [
+        -68.1125,
+        36.7587,
+        5.4,
+        -58.56104,
+        37.3587,
+        14.0
+      ],
+      "dimensions_world_m": [
+        9.551459999999999,
+        0.6000000000000014,
+        8.6
+      ],
+      "center_world_m": [
+        -63.33677,
+        37.0587,
+        9.7
+      ],
+      "location_ue_cm": [
+        -6333.677,
+        -3705.8700000000003,
+        970
+      ],
+      "footprint": [
+        {
+          "outer": [
+            [
+              -58.56104,
+              36.7587
+            ],
+            [
+              -58.56104,
+              37.3587
+            ],
+            [
+              -68.1125,
+              37.3587
+            ],
+            [
+              -68.1125,
+              36.7587
+            ],
+            [
+              -58.56104,
+              36.7587
+            ]
+          ],
+          "holes": []
+        }
+      ],
+      "rectangular_bool": true,
+      "checks": {
+        "existing_upper_wall_overlap_m2": 0.0,
+        "existing_occupied_volume_at_7m_overlap_m2": 0.0,
+        "unsupported_at_5p2m_m2": 0.0,
+        "outside_main_roof_m2": 0.0,
+        "opening_route_radius_0p45_overlap_m2": 0.0
+      }
+    },
+    {
+      "name": "NW_Exterior_North_GlassJoin",
+      "status": "proposal_only_not_implemented",
+      "kind": "wall",
+      "floor": "B",
+      "z0": 5.4,
+      "z1": 14.0,
+      "bbox_world": [
+        -58.56104,
+        36.7587,
+        5.4,
+        -49.00958,
+        37.3587,
+        14.0
+      ],
+      "dimensions_world_m": [
+        9.551459999999999,
+        0.6000000000000014,
+        8.6
+      ],
+      "center_world_m": [
+        -53.785309999999996,
+        37.0587,
+        9.7
+      ],
+      "location_ue_cm": [
+        -5378.531,
+        -3705.8700000000003,
+        970
+      ],
+      "footprint": [
+        {
+          "outer": [
+            [
+              -49.00958,
+              36.7587
+            ],
+            [
+              -49.00958,
+              37.3587
+            ],
+            [
+              -58.56104,
+              37.3587
+            ],
+            [
+              -58.56104,
+              36.7587
+            ],
+            [
+              -49.00958,
+              36.7587
+            ]
+          ],
+          "holes": []
+        }
+      ],
+      "rectangular_bool": true,
+      "checks": {
+        "existing_upper_wall_overlap_m2": 0.0,
+        "existing_occupied_volume_at_7m_overlap_m2": 0.0,
+        "unsupported_at_5p2m_m2": 0.0,
+        "outside_main_roof_m2": 0.0,
+        "opening_route_radius_0p45_overlap_m2": 0.0
+      }
+    }
+  ],
+  "new_solid_volume_m3": 172.40395919999952,
+  "new_modules_plan_overlap_m2": 0.0,
+  "UP_north_door": {
+    "id": "R10-UP-NORTH",
+    "x": -44.8,
+    "y": 30.15,
+    "z": 4.5,
+    "width": 3.2,
+    "depth": 1.4,
+    "height": 3.4,
+    "axis": "h",
+    "kind": "door",
+    "locked": false,
+    "phase": "P1",
+    "connects": [
+      "UP",
+      "NORTH-VIEW"
+    ],
+    "r9": true,
+    "r11_depth": 0.3,
+    "cut_depth_m": 1.4,
+    "depth_measurement": "Boolean aperture cutting extent; not a nominal wall gauge"
+  },
+  "protected_route_world_m": [
+    [
+      -47.625,
+      26.7
+    ],
+    [
+      -47.625,
+      28.7
+    ],
+    [
+      -44.8,
+      28.7
+    ],
+    [
+      -44.8,
+      37.0
+    ],
+    [
+      -37.0,
+      43.3
+    ],
+    [
+      -12.8,
+      43.3
+    ],
+    [
+      -12.8,
+      36.5
+    ],
+    [
+      -16.5,
+      36.5
+    ],
+    [
+      -16.5,
+      31.8
+    ],
+    [
+      -14.75,
+      31.8
+    ]
+  ],
+  "notes": [
+    "This is an exterior enclosure repair proposal. No rooms, floors, doors, or route changes are proposed.",
+    "North wall ends at the actual main-roof curve join x=-49.00958, west of the UP door at x=-44.8. Do not continue a solid wall across the north viewing route.",
+    "The final glass/contact seam should be visually checked against the retained live facade mesh; the source roof-edge intersection is used here.",
+    "scenic_upper/scenic_outer_upper name the southern Omen side bands; they are empty in this northern region and must not be stretched northward.",
+    "East/southeast observations lie along intentionally retired upper spaces. Either restore a closed background exterior shell under the retained high roof or revise that roof massing; do not restore deleted internal rooms automatically.",
+    "Straight-edge screening is not a complete facade audit: curved glass, lower-level openings, retained actors, and viewport visibility need separate live verification."
+  ],
+  "other_exterior_review_edges": [
+    {
+      "roof_edge_world_m": [
+        [
+          -68.1125,
+          22.45
+        ],
+        [
+          -68.1125,
+          36.625
+        ]
+      ],
+      "uncovered_length_m": 13.375,
+      "uncovered_wkt": "LINESTRING (-68.1125 23.25, -68.1125 36.625)",
+      "classification": "confirmed_NW_shell_omission"
+    },
+    {
+      "roof_edge_world_m": [
+        [
+          -68.1125,
+          37.3587
+        ],
+        [
+          -49.00958,
+          37.3587
+        ]
+      ],
+      "uncovered_length_m": 19.102919999999997,
+      "uncovered_wkt": "LINESTRING (-68.1125 37.3587, -49.00958 37.3587)",
+      "classification": "confirmed_NW_shell_omission"
+    },
+    {
+      "roof_edge_world_m": [
+        [
+          70.6125,
+          36.9
+        ],
+        [
+          70.6125,
+          22.45
+        ]
+      ],
+      "uncovered_length_m": 13.650000000000002,
+      "uncovered_wkt": "LINESTRING (70.6125 36.1, 70.6125 22.45)",
+      "classification": "retired_east_wing_high_roof_enclosure_review"
+    },
+    {
+      "roof_edge_world_m": [
+        [
+          70.6125,
+          22.45
+        ],
+        [
+          92.45,
+          22.45
+        ]
+      ],
+      "uncovered_length_m": 21.837500000000006,
+      "uncovered_wkt": "LINESTRING (70.6125 22.45, 92.45 22.45)",
+      "classification": "retired_east_wing_high_roof_enclosure_review"
+    },
+    {
+      "roof_edge_world_m": [
+        [
+          92.45,
+          22.45
+        ],
+        [
+          92.45,
+          0.001
+        ]
+      ],
+      "uncovered_length_m": 22.448999999999998,
+      "uncovered_wkt": "LINESTRING (92.45 22.45, 92.45 0.001)",
+      "classification": "retired_east_wing_high_roof_enclosure_review"
+    },
+    {
+      "roof_edge_world_m": [
+        [
+          92.3,
+          0.001
+        ],
+        [
+          92.3,
+          -4.001
+        ]
+      ],
+      "uncovered_length_m": 4.002000000000001,
+      "uncovered_wkt": "LINESTRING (92.3 0.001, 92.3 -4.001)",
+      "classification": "retired_east_wing_high_roof_enclosure_review"
+    },
+    {
+      "roof_edge_world_m": [
+        [
+          92.45,
+          -4.001
+        ],
+        [
+          92.45,
+          -8.649
+        ]
+      ],
+      "uncovered_length_m": 4.647999999999999,
+      "uncovered_wkt": "LINESTRING (92.45 -4.001, 92.45 -8.649)",
+      "classification": "retired_east_wing_high_roof_enclosure_review"
+    },
+    {
+      "roof_edge_world_m": [
+        [
+          92.3,
+          -8.649
+        ],
+        [
+          92.3,
+          -12.451
+        ]
+      ],
+      "uncovered_length_m": 3.8020000000000014,
+      "uncovered_wkt": "LINESTRING (92.3 -8.649, 92.3 -12.451)",
+      "classification": "retired_east_wing_high_roof_enclosure_review"
+    },
+    {
+      "roof_edge_world_m": [
+        [
+          92.45,
+          -12.451
+        ],
+        [
+          92.45,
+          -17.449
+        ]
+      ],
+      "uncovered_length_m": 4.998000000000001,
+      "uncovered_wkt": "LINESTRING (92.45 -12.451, 92.45 -17.449)",
+      "classification": "retired_east_wing_high_roof_enclosure_review"
+    },
+    {
+      "roof_edge_world_m": [
+        [
+          92.3,
+          -17.449
+        ],
+        [
+          92.3,
+          -21.251
+        ]
+      ],
+      "uncovered_length_m": 3.8019999999999996,
+      "uncovered_wkt": "LINESTRING (92.3 -17.449, 92.3 -21.251)",
+      "classification": "retired_east_wing_high_roof_enclosure_review"
+    },
+    {
+      "roof_edge_world_m": [
+        [
+          92.45,
+          -21.251
+        ],
+        [
+          92.45,
+          -26.249
+        ]
+      ],
+      "uncovered_length_m": 4.9979999999999976,
+      "uncovered_wkt": "LINESTRING (92.45 -21.251, 92.45 -26.249)",
+      "classification": "retired_east_wing_high_roof_enclosure_review"
+    },
+    {
+      "roof_edge_world_m": [
+        [
+          92.3,
+          -26.249
+        ],
+        [
+          92.3,
+          -30.051
+        ]
+      ],
+      "uncovered_length_m": 3.8019999999999996,
+      "uncovered_wkt": "LINESTRING (92.3 -26.249, 92.3 -30.051)",
+      "classification": "retired_east_wing_high_roof_enclosure_review"
+    },
+    {
+      "roof_edge_world_m": [
+        [
+          92.45,
+          -30.051
+        ],
+        [
+          92.45,
+          -35.949
+        ]
+      ],
+      "uncovered_length_m": 5.898,
+      "uncovered_wkt": "LINESTRING (92.45 -30.051, 92.45 -35.949)",
+      "classification": "retired_east_wing_high_roof_enclosure_review"
+    },
+    {
+      "roof_edge_world_m": [
+        [
+          92.3,
+          -35.949
+        ],
+        [
+          92.3,
+          -39.751
+        ]
+      ],
+      "uncovered_length_m": 3.8019999999999996,
+      "uncovered_wkt": "LINESTRING (92.3 -35.949, 92.3 -39.751)",
+      "classification": "retired_east_wing_high_roof_enclosure_review"
+    },
+    {
+      "roof_edge_world_m": [
+        [
+          92.45,
+          -39.751
+        ],
+        [
+          92.45,
+          -52.45
+        ]
+      ],
+      "uncovered_length_m": 12.699000000000005,
+      "uncovered_wkt": "LINESTRING (92.45 -39.751, 92.45 -52.45)",
+      "classification": "retired_east_wing_high_roof_enclosure_review"
+    },
+    {
+      "roof_edge_world_m": [
+        [
+          92.45,
+          -52.45
+        ],
+        [
+          86.501,
+          -52.45
+        ]
+      ],
+      "uncovered_length_m": 5.948999999999998,
+      "uncovered_wkt": "LINESTRING (92.45 -52.45, 86.501 -52.45)",
+      "classification": "retired_east_wing_high_roof_enclosure_review"
+    },
+    {
+      "roof_edge_world_m": [
+        [
+          86.501,
+          -52.3
+        ],
+        [
+          76.499,
+          -52.3
+        ]
+      ],
+      "uncovered_length_m": 10.00200000000001,
+      "uncovered_wkt": "LINESTRING (86.501 -52.3, 76.499 -52.3)",
+      "classification": "retired_east_wing_high_roof_enclosure_review"
+    },
+    {
+      "roof_edge_world_m": [
+        [
+          76.499,
+          -52.45
+        ],
+        [
+          69.75,
+          -52.45
+        ]
+      ],
+      "uncovered_length_m": 6.748999999999995,
+      "uncovered_wkt": "LINESTRING (76.499 -52.45, 69.75 -52.45)",
+      "classification": "retired_east_wing_high_roof_enclosure_review"
+    },
+    {
+      "roof_edge_world_m": [
+        [
+          69.75,
+          -52.45
+        ],
+        [
+          69.75,
+          -32.48
+        ]
+      ],
+      "uncovered_length_m": 19.970000000000006,
+      "uncovered_wkt": "LINESTRING (69.75 -52.45, 69.75 -32.48)",
+      "classification": "retired_east_wing_high_roof_enclosure_review"
+    },
+    {
+      "roof_edge_world_m": [
+        [
+          69.75,
+          -32.48
+        ],
+        [
+          58.1125,
+          -32.48
+        ]
+      ],
+      "uncovered_length_m": 11.637500000000003,
+      "uncovered_wkt": "LINESTRING (69.75 -32.48, 58.1125 -32.48)",
+      "classification": "retired_east_wing_high_roof_enclosure_review"
+    },
+    {
+      "roof_edge_world_m": [
+        [
+          58.1125,
+          -32.48
+        ],
+        [
+          58.1125,
+          -44.66
+        ]
+      ],
+      "uncovered_length_m": 12.18,
+      "uncovered_wkt": "LINESTRING (58.1125 -32.48, 58.1125 -44.66)",
+      "classification": "retired_east_wing_high_roof_enclosure_review"
+    },
+    {
+      "roof_edge_world_m": [
+        [
+          58.1125,
+          -44.66
+        ],
+        [
+          25.45,
+          -44.66
+        ]
+      ],
+      "uncovered_length_m": 31.862499999999997,
+      "uncovered_wkt": "LINESTRING (58.1125 -44.66, 26.25 -44.66)",
+      "classification": "retired_east_wing_high_roof_enclosure_review"
+    }
+  ]
+}

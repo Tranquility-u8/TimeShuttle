@@ -1,0 +1,142 @@
+{
+  "copies": [
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\envelope_patch.json",
+      "destination": "envelope_patch.json"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\roof_correction_plan.json",
+      "destination": "roof_correction_plan.json"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\roof_correction_modules.json",
+      "destination": "roof_correction_modules.json"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\roof_correction_mesh_audit.json",
+      "destination": "roof_correction_mesh_audit.json"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\LabRoofEnvelopeCorrection.blend",
+      "destination": "LabRoofEnvelopeCorrection.blend"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\build_roofs.py",
+      "destination": "build_roofs.py"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\plan_roof_correction.py",
+      "destination": "plan_roof_correction.py"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\verify_roof_correction.py",
+      "destination": "verify_roof_correction.py"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls\\envelope_nw_candidates.json",
+      "destination": "envelope_nw_candidates.json"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls\\glass_seam_evidence.json",
+      "destination": "glass_seam_evidence.json"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls\\northwest_enclosure_audit.md",
+      "destination": "northwest_enclosure_audit.md"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\apply_result.json",
+      "destination": "evidence/apply_result.json"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\roof_apply_result.json",
+      "destination": "evidence/roof_apply_result.json"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\audit_ue_export.json",
+      "destination": "evidence/audit_ue_export.json"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\northwest_before.jpg",
+      "destination": "evidence/northwest_before.jpg"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\northwest_preeditable.jpg",
+      "destination": "evidence/northwest_preeditable.jpg"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\northwest_after.jpg",
+      "destination": "evidence/northwest_after.jpg"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\roof_meshes\\SM_LabRoofCorrected_B_Main_roof_Hall_1_0_1_01.fbx",
+      "destination": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Hall_1_0_1_01.fbx"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\roof_meshes\\SM_LabRoofCorrected_B_Main_roof_Hall_1_1_0_01.fbx",
+      "destination": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Hall_1_1_0_01.fbx"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\roof_meshes\\SM_LabRoofCorrected_B_Main_roof_Hall_1_2_0_01.fbx",
+      "destination": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Hall_1_2_0_01.fbx"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\roof_meshes\\SM_LabRoofCorrected_B_Main_roof_Hall_1__1_0_01.fbx",
+      "destination": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Hall_1__1_0_01.fbx"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\roof_meshes\\SM_LabRoofCorrected_B_Main_roof_Hall_1__1_0_02.fbx",
+      "destination": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Hall_1__1_0_02.fbx"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\roof_meshes\\SM_LabRoofCorrected_B_Main_roof_Hall_2_2_0_01.fbx",
+      "destination": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Hall_2_2_0_01.fbx"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\roof_meshes\\SM_LabRoofCorrected_B_Main_roof_Hall_2__1_0_01.fbx",
+      "destination": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Hall_2__1_0_01.fbx"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\roof_meshes\\SM_LabRoofCorrected_B_Main_roof_Hall_3_2_0_01.fbx",
+      "destination": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Hall_3_2_0_01.fbx"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\roof_meshes\\SM_LabRoofCorrected_B_Main_roof_RG01_01.fbx",
+      "destination": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_RG01_01.fbx"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\roof_meshes\\SM_LabRoofCorrected_B_Main_roof_RG02_01.fbx",
+      "destination": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_RG02_01.fbx"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\roof_meshes\\SM_LabRoofCorrected_B_Main_roof_RG03_01.fbx",
+      "destination": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_RG03_01.fbx"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\roof_meshes\\SM_LabRoofCorrected_B_Main_roof_RG03_02.fbx",
+      "destination": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_RG03_02.fbx"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\roof_meshes\\SM_LabRoofCorrected_B_Main_roof_RG04_01.fbx",
+      "destination": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_RG04_01.fbx"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\roof_meshes\\SM_LabRoofCorrected_B_Main_roof_RG08_01.fbx",
+      "destination": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_RG08_01.fbx"
+    },
+    {
+      "source": "TimeShuttle\\Saved\\Agent\\LabMissingWalls20261024\\roof_meshes\\SM_LabRoofCorrected_B_Main_roof_Support_1__3_0_01.fbx",
+      "destination": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Support_1__3_0_01.fbx"
+    }
+  ],
+  "adapted_scripts": [
+    "build_roofs.py",
+    "plan_roof_correction.py",
+    "verify_roof_correction.py",
+    "module_mesh_audit_helpers.py"
+  ],
+  "notes": [
+    "Only this new source folder was written. Source evidence and scene assets were not modified.",
+    "roof_assets.json paths are relative; all 15 copied FBX SHA256 values match their original export records."
+  ]
+}
