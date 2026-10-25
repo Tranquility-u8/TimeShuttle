@@ -118,3 +118,16 @@ Folder or asset presence is not proof of production readiness. Before planning i
 ## 2026-10-18 对话记忆接口解耦
 
 基础 59/59、跨关卡/训练接入 15/15、默认原生 GI 无记忆服务 21/21、接口开关 11/11 通过。保留项目通用 GI，AC_DialogueManager/BFL_Dialogue 不再直接引用具体 GI 类；BPI_DialogueMemory 为可选接口，缺失/关闭时播放正常。持久化默认关闭，已保存。证据：[MemoryDecouple20261018](../Implementation/DialogSystem/MemoryDecouple20261018/README.md)。未做完整打包。
+
+### Main menu city camera scene — 2026-10-25
+
+`/Game/Maps/Map_MainMenu` now uses native-parent Blueprints GM_MainMenu, BP_MainMenuController and BP_MainMenuCameraRig with a CineCameraComponent. MainMenuScene was removed from Plugins and .uproject. The 68 saved actors comprise the original 67 plus one rig; original transforms are unchanged. Camera preview now follows real button hover through a reversible 1.2 s orbit; the earlier L path is retired (see the revision below). After repairing persisted CDO defaults, a fresh editor without MainMenuScene or TSVFXEditor passed 11 checks across 270 samples using built-in cross-frame L key simulation (not a claimed human keyboard test). All 62 city/character/endpoint transforms stayed fixed. No custom runtime dependency remains. UI/Niagara integration is implemented, and Win64 Development cold packaged camera/page/Quit/New Game regression passed. Final editor has no dirty packages and original saves are unchanged. Native UMG plus built-in Niagara needs no new runtime plugin. Pixel-identical art acceptance and Shipping/low-end validation remain open. See [implementation and evidence](../Implementation/main-menu-scene.md).
+
+
+### Main menu hover-camera revision — 2026-10-25
+
+Current Blueprint behavior supersedes the earlier L/dissolve flow: real mouse hover on New Game requests the front camera; OPTIONS/CREDITS/QUIT request side; empty space retains the last target. Keyboard/default focus does not request a camera, and the old L handler is a documented no-op. BeginNewGame keeps the empty-save-slot guard and locks menu input. If the rig is transitioning, phase 1 waits for OnViewSettled before CommitNewGame; if stable, commit immediately. There is no extra UI dissolve phase. TransitionSeconds remains editable on the level rig (1.2 s).
+
+Controller, Button and Root compile/save; 64 scope/default checks pass, formatting preserves 31 graphs, authoring/cold hover runs each pass 37 checks. Three actual mouse-click travels reach Map_TrainingRoom with BP_FPCharacter, no visible menu or FX remnants; 62 fixed scene transforms stay identical. Cold editor has no TSVFXEditor, MainMenuScene is absent, .uproject hash is unchanged this task. Original five saves restored byte-for-byte after archiving test metadata; final world Map_MainMenu, PIE ended, zero dirty packages. One outdated comment was corrected; a cold test obscured by the BA welcome page was retained and rerun with the game viewport active. No font tests or new packaged build this revision; earlier Development package evidence is historical.
+
+Canonical inspection record: `C:/Users/jason/Desktop/Capstone计划/开发文档/主界面/主界面UI.md`. Local scripts: `C:/Users/jason/Desktop/Capstone计划/tmp/main-menu-ui`; evidence: `Saved/Agent/MainMenuUI/hover_delivery_summary.json`. Runtime remains Blueprint/UMG/Niagara, without Python or custom runtime plugin dependencies.
