@@ -1,5 +1,7 @@
 # 当前项目架构
 
+- 贴边跳跃（2026-10-24）：`BP_FPCharacter.IA_Jump` 的安全翻越分支允许冲刺，装填时回退普通 Jump，避免近距离检测通过后吞掉输入。跳高、重力、空中控制、胶囊及 `AC_Vault` 安全检测保持。Map_Test 原有障碍物与临时边界测试见 [修复记录](../Implementation/close-obstacle-jump.md)。
+
 固定路径修订（2026-10-24，替代此前动态 Locator）：`WaypointRoles` 按顺序配置固定起点及中间点，`TargetRole` 是终点；不再寻路，也不按玩家移动重建或裁剪。玩家脚底仅用于任务终点到达判定。示例终端及交互任务已移除。详见 [mission guidance](../Implementation/mission-guidance.md)。
 
 - Mission ground guidance (2026-10-24): `/Game/MissionSystem/Guidance/AC_Task_GuideTo` extends the existing task lifecycle. `AC_GuidanceTarget` provides object-local endpoint/marker anchors; `BP_GuidancePath` renders pooled floor strips with a subtle cyan line and travelling double chevrons. Designer roles define the fixed start and intermediate points, followed by the final target; no NavMesh query or player-driven route rebuilding remains. `Map_GuidanceDemo` now starts EnterExit directly and uses five fixed positions; the terminal actor, GuideConsole component and terminal Blueprint were removed. The original training flow and default map remain unchanged. See [configuration and verification](../Implementation/mission-guidance.md).
