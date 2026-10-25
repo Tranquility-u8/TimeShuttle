@@ -1,0 +1,2 @@
+// Custom-expression source used to author the corresponding Guidance material.
+float2 p=(UV-.5)*2; float d=abs(p.x)+abs(p.y); float ring=1-smoothstep(.035,.075,abs(d-.65)); float inner=1-smoothstep(.12,.17,d); return float3(.015,.45,1)*(ring*4+inner*3);
