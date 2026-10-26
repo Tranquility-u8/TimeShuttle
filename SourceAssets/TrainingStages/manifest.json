@@ -167,7 +167,7 @@
       ],
       "purpose": "Solid modular supply barrier; two ends must seal against room walls.",
       "collision": "single box",
-      "sha256": "bbee48838c25e645e88572422e25ef1bfcbe60522af2b2df34d45dfa177aeb14"
+      "sha256": "ebe7fbb01ffbb882025ae76725492db15fc15e5124d7cec1daef1231a8ebe933"
     },
     {
       "name": "SM_TS_AmmoPack",

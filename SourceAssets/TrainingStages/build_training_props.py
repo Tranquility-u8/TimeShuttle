@@ -121,7 +121,8 @@ def finish(name, purpose, expected, collision='convex decomposition recommended'
 
 ASSETS=[]
 # 1. Solid modular supply counter. Full body blocks the player; no open table legs.
-box('ClosedCounter',(198,98,94),(0,0,47),WHITE,2)
+# The cabinet starts on top of the 6 cm plinth; overlapping side faces cause z-fighting.
+box('ClosedCounter',(198,98,88),(0,0,50),WHITE,2)
 box('Top',(200,100,9),(0,0,100.5),DARK,1.5)
 box('Foot',(198,98,6),(0,0,3),RUBBER,1)
 box('FrontInset',(176,1.2,64),(0,-49.2,47),DARK,.5)
