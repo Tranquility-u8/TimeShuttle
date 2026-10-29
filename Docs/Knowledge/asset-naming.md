@@ -32,6 +32,8 @@
 | Widget Blueprint | `WBP_` | `WBP_MeleeEnemyHealth` |
 | Input Action / Mapping Context | `IA_`、`IMC_` | `IA_Reverse`、`IMC_Player` |
 | Skeletal Mesh / Skeleton / Static Mesh | `SKM_`、`SK_`、`SM_` | 新资产按类型命名；Epic 和供应商资源保留来源名 |
+| Geometry Collection / Dataflow | `GC_`、`DF_` | 原生破裂资产，如第二实验室天花板；以真实资产类型为准 |
+| Level Variant Sets | `LVS_` | 如 `LVS_Chapter1Room2`，用于房间布局状态预览 |
 | Material / Instance / Function / Texture | `M_`、`MI_`、`MF_`、`T_` | 纹理后缀沿用其实际用途与打包通道，不凭名字改贴图设置 |
 | SoundWave / Cue、Niagara System | `SW_`、`SC_`、`NS_` | 新资源约定 |
 | Map | `Map_` | `Map_Test`、`Map_Menu` |
@@ -48,6 +50,8 @@
 不要通过继续添加例外来掩盖新资产不合规。新的例外须记录原因和范围。
 
 ## 安全改名流程
+
+2026-10-28：`/Game/Blueprints/Cinematics/` 存放 `BP_CinematicCameraRig`、`BP_CinematicFallingPropDriver`、`BP_CinematicTimeStopController` 和 `BP_CinematicLockedDoor`；`BP_Chapter1Room2Sequence` 组合本房间流程。`Ch1_R2_*` 是地图实例标签，不是资产前缀规则；模型替换通过实例引用完成。见 [演出复用说明](../Implementation/chapter1-room2-cinematic.md)。
 
 1. 确认提交恢复点和现有改动；读取真实资产类型，建立旧路径 → 新路径清单，检查目标重名和引用者。
 2. 使用 UE AssetTools / 编辑器 Rename 或 Move，禁止在文件管理器、Git 或脚本中直接移动 `.uasset` / `.umap`。地图和 World Partition 迁移另用引擎支持的专门流程。
