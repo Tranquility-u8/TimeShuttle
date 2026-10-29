@@ -1,0 +1,789 @@
+{
+  "pie": false,
+  "passed": true,
+  "checks": 108,
+  "failures": [],
+  "rows": [
+    {
+      "name": "door_frame_RES-I15.35",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_RES-I5.35",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_RES-U-3.65",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_RES-U-9.65",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_RES-SERV",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_RES-ACT",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_RES-STORE",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_RES-QUIET",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_LS39-DOOR-1",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_LS39-DOOR-2",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_LS39-DOOR-3",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_LS39-DOOR-4",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_L01-HALL",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_R02-N",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_RES-N",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_RES-M",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_RES-EXT-DINING",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_RES-EXT-LOUNGE",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_QW1",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_QW2",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_upper_E4_upper",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_C0",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_N-KITCHEN",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_N-PANTRY",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_N-QUIET-READ",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_N-H01-N",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_N-H01-S",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_N-H02-N",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_N-H02-S",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_WG-ASSEMBLY",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_EG-ENTRY",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_EG-WORK",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_WU-NORTH",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_WU-PREP",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_WU-DISCUSS",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_GW38-OVERHAUL",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_GW38-STORAGE",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_GW38-EXISTING-STORE",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_GW38-EXISTING-REPAIR",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_RW38-RING-ENTRY",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_RW38-PREP-N",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_RW38-ARCHIVE",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_RW39-CONTROL-CHAMBER",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_RW39-ANALYSIS",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_RW39-CALIBRATION",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_RW39-RECORDS",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_RW39-REVIEW",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_RW39-SEALED-RECORDS",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_RW39-RECORDS-FORWARD",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_RW39-ARCHIVE-LINK",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_E39-A-ENTRY",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_E39-A-END",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_E39-POD1",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_E39-POD2",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_E39-POD3",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_E39-POD4",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_E39-EG02",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_E39-EG04",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_E39-EG05",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_E39-EG06",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_E39-EG09",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_E39-EG03",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_TR-ENTRY",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_TR-CONNECT-PREP",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_TR-CONNECT-TRAIN",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_R9-TIME-EXIT",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_R9-WEST-SHARED",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_R10-UP-NORTH",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_R10-COMMONS-NORTH",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_R10-COMMONS-WEST",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_R10-EQUIPMENT",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_R13-U01",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_R13-U02",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_R16-CORE-E",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_R16-CORE-S",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_R16-PREP-N",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_G-WEST-MAIN",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "door_frame_R17-L01-S",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "repaired_roof_-17_-5.5",
+      "passed": true,
+      "expected_blocked": true,
+      "blocked": true,
+      "location_cm": [
+        -1700.0,
+        550.0,
+        1400.000011920929
+      ],
+      "actor": "B_Public_roof_254"
+    },
+    {
+      "name": "repaired_roof_-17_-8",
+      "passed": true,
+      "expected_blocked": true,
+      "blocked": true,
+      "location_cm": [
+        -1700.0,
+        800.0,
+        1400.000011920929
+      ],
+      "actor": "B_Public_roof_254"
+    },
+    {
+      "name": "repaired_roof_-8_-5.5",
+      "passed": true,
+      "expected_blocked": true,
+      "blocked": true,
+      "location_cm": [
+        -800.0,
+        550.0,
+        1400.000011920929
+      ],
+      "actor": "B_Public_roof_254"
+    },
+    {
+      "name": "repaired_roof_-8_-8",
+      "passed": true,
+      "expected_blocked": true,
+      "blocked": true,
+      "location_cm": [
+        -800.0,
+        800.0,
+        1400.000011920929
+      ],
+      "actor": "B_Public_roof_254"
+    },
+    {
+      "name": "repaired_roof_0_-5.5",
+      "passed": true,
+      "expected_blocked": true,
+      "blocked": true,
+      "location_cm": [
+        0.0,
+        550.0,
+        1400.000011920929
+      ],
+      "actor": "B_Public_roof_254"
+    },
+    {
+      "name": "repaired_roof_0_-8",
+      "passed": true,
+      "expected_blocked": true,
+      "blocked": true,
+      "location_cm": [
+        0.0,
+        800.0,
+        1400.000011920929
+      ],
+      "actor": "B_Public_roof_254"
+    },
+    {
+      "name": "repaired_roof_8_-5.5",
+      "passed": true,
+      "expected_blocked": true,
+      "blocked": true,
+      "location_cm": [
+        800.0,
+        550.0,
+        1400.000011920929
+      ],
+      "actor": "B_Public_roof_258"
+    },
+    {
+      "name": "repaired_roof_8_-8",
+      "passed": true,
+      "expected_blocked": true,
+      "blocked": true,
+      "location_cm": [
+        800.0,
+        800.0,
+        1400.000011920929
+      ],
+      "actor": "B_Public_roof_258"
+    },
+    {
+      "name": "repaired_roof_17_-5.5",
+      "passed": true,
+      "expected_blocked": true,
+      "blocked": true,
+      "location_cm": [
+        1700.0,
+        550.0,
+        1400.000011920929
+      ],
+      "actor": "B_Public_roof_258"
+    },
+    {
+      "name": "repaired_roof_17_-8",
+      "passed": true,
+      "expected_blocked": true,
+      "blocked": true,
+      "location_cm": [
+        1700.0,
+        800.0,
+        1400.000011920929
+      ],
+      "actor": "B_Public_roof_258"
+    },
+    {
+      "name": "corridor_clear",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "corridor_clear",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "corridor_clear",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "old_north_door_closed",
+      "passed": true,
+      "expected_blocked": true,
+      "blocked": true,
+      "location_cm": [
+        -2932.635998725891,
+        -1800.0,
+        100.0
+      ],
+      "actor": "A_Public_wall_392"
+    },
+    {
+      "name": "old_south_door_closed",
+      "passed": true,
+      "expected_blocked": true,
+      "blocked": true,
+      "location_cm": [
+        -2932.6355040073395,
+        700.0,
+        100.0
+      ],
+      "actor": "A_R02_special_wall_377"
+    },
+    {
+      "name": "E4_removed_east_west",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "E4_removed_north_south",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "duct_crouched",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "duct_standing_blocked",
+      "passed": true,
+      "expected_blocked": true,
+      "blocked": true,
+      "location_cm": [
+        -3799.8764806240792,
+        -2670.0,
+        874.0
+      ],
+      "actor": "B_Shared_TIME_UP_duct_header_314"
+    },
+    {
+      "name": "duct_ground_wall",
+      "passed": true,
+      "expected_blocked": true,
+      "blocked": true,
+      "location_cm": [
+        -3847.49999165535,
+        -2670.0,
+        640.0
+      ],
+      "actor": "B_Shared_TIME_UP_duct_sill_313"
+    },
+    {
+      "name": "floor_A_public",
+      "passed": true,
+      "expected_blocked": true,
+      "blocked": true,
+      "location_cm": [
+        -3400.0,
+        -270.0,
+        0.0
+      ],
+      "actor": "A_H01_floor_51"
+    },
+    {
+      "name": "floor_A_E4",
+      "passed": true,
+      "expected_blocked": true,
+      "blocked": true,
+      "location_cm": [
+        -4000.0,
+        630.0,
+        0.0
+      ],
+      "actor": "A_Shared_W02_R02_W04_floor_44"
+    },
+    {
+      "name": "floor_B_TIME",
+      "passed": true,
+      "expected_blocked": true,
+      "blocked": true,
+      "location_cm": [
+        -3100.0,
+        -2000.0,
+        540.0
+      ],
+      "actor": "B_TIME_floor_100"
+    },
+    {
+      "name": "floor_B_UP",
+      "passed": true,
+      "expected_blocked": true,
+      "blocked": true,
+      "location_cm": [
+        -4700.0,
+        -2000.0,
+        540.0
+      ],
+      "actor": "B_UP_floor_101"
+    },
+    {
+      "name": "floor_B_training",
+      "passed": true,
+      "expected_blocked": true,
+      "blocked": true,
+      "location_cm": [
+        3600.0,
+        2500.0,
+        540.0
+      ],
+      "actor": "B_TR02_floor_99"
+    },
+    {
+      "name": "floor_B_prep",
+      "passed": true,
+      "expected_blocked": true,
+      "blocked": true,
+      "location_cm": [
+        3400.0,
+        -100.0,
+        540.0
+      ],
+      "actor": "B_TR01_floor_98"
+    },
+    {
+      "name": "floor_B_corridor",
+      "passed": true,
+      "expected_blocked": true,
+      "blocked": true,
+      "location_cm": [
+        -6500.0,
+        500.0,
+        540.0
+      ],
+      "actor": "B_Shared_RW01_WU02_floor_123"
+    },
+    {
+      "name": "training_ceiling",
+      "passed": true,
+      "expected_blocked": true,
+      "blocked": true,
+      "location_cm": [
+        3600.0,
+        2500.0,
+        1339.9999976158142
+      ],
+      "actor": "B_TR02_roof_294"
+    },
+    {
+      "name": "hall_void_preserved",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    },
+    {
+      "name": "omen_void_preserved",
+      "passed": true,
+      "expected_blocked": false,
+      "blocked": false
+    }
+  ],
+  "scope": "Geometry queries; door actors ignored here, real opened door fit is a separate PIE test."
+}

@@ -1,0 +1,56 @@
+{
+  "walls": [
+    {
+      "zone": "NorthWest",
+      "bbox_m": [
+        -68.1125,
+        22.45,
+        5.4,
+        -67.5125,
+        29.604349999999997,
+        14.0
+      ],
+      "id": "NW_Exterior_West_South",
+      "label": "B_NW_Exterior_West_South"
+    },
+    {
+      "zone": "NorthWest",
+      "bbox_m": [
+        -68.1125,
+        29.604349999999997,
+        5.4,
+        -67.5125,
+        36.7587,
+        14.0
+      ],
+      "id": "NW_Exterior_West_North",
+      "label": "B_NW_Exterior_West_North"
+    },
+    {
+      "zone": "NorthWest",
+      "bbox_m": [
+        -68.1125,
+        36.7587,
+        5.4,
+        -58.56104,
+        37.3587,
+        14.0
+      ],
+      "id": "NW_Exterior_North_West",
+      "label": "B_NW_Exterior_North_West"
+    },
+    {
+      "zone": "NorthWest",
+      "bbox_m": [
+        -58.56104,
+        36.7587,
+        5.4,
+        -49.00958,
+        37.3587,
+        14.0
+      ],
+      "id": "NW_Exterior_North_GlassJoin",
+      "label": "B_NW_Exterior_North_GlassJoin"
+    }
+  ]
+}

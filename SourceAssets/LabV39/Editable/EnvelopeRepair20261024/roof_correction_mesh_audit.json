@@ -1,0 +1,148 @@
+{
+  "passed": true,
+  "replacement_count": 15,
+  "bad_meshes": [],
+  "actual_section_difference_m2": 0.0,
+  "newly_exposed_footprint_missing_lower_roof_m2": 0.0,
+  "actual_replacement_volume_m3": 269.897105247612,
+  "expected_replacement_volume_m3": 269.89710524761455,
+  "plan_sha256": "17269c6874ee7da7b1c1f71b1efe73c1072b148657380c653752bdb24f465b76",
+  "modules_sha256": "5e6219d5d5750800190a73847b725b3bcf962e72bdbf7d75205b8e6dfdb71a6d",
+  "rows": [
+    {
+      "name": "SM_LabRoofCorrected_B_Main_roof_RG03_01",
+      "signed_volume_m3": 10.918529099999697,
+      "unpaired_edges": 0,
+      "incorrect_edge_orientation": 0,
+      "duplicate_faces": 0,
+      "degenerate_triangles": 0,
+      "examples": []
+    },
+    {
+      "name": "SM_LabRoofCorrected_B_Main_roof_RG03_02",
+      "signed_volume_m3": 0.07034062500001692,
+      "unpaired_edges": 0,
+      "incorrect_edge_orientation": 0,
+      "duplicate_faces": 0,
+      "degenerate_triangles": 0,
+      "examples": []
+    },
+    {
+      "name": "SM_LabRoofCorrected_B_Main_roof_RG04_01",
+      "signed_volume_m3": 6.308999999999365,
+      "unpaired_edges": 0,
+      "incorrect_edge_orientation": 0,
+      "duplicate_faces": 0,
+      "degenerate_triangles": 0,
+      "examples": []
+    },
+    {
+      "name": "SM_LabRoofCorrected_B_Main_roof_RG08_01",
+      "signed_volume_m3": 0.09900022499992644,
+      "unpaired_edges": 0,
+      "incorrect_edge_orientation": 0,
+      "duplicate_faces": 0,
+      "degenerate_triangles": 0,
+      "examples": []
+    },
+    {
+      "name": "SM_LabRoofCorrected_B_Main_roof_RG01_01",
+      "signed_volume_m3": 8.339894135999897,
+      "unpaired_edges": 0,
+      "incorrect_edge_orientation": 0,
+      "duplicate_faces": 0,
+      "degenerate_triangles": 0,
+      "examples": []
+    },
+    {
+      "name": "SM_LabRoofCorrected_B_Main_roof_RG02_01",
+      "signed_volume_m3": 9.43794266400294,
+      "unpaired_edges": 0,
+      "incorrect_edge_orientation": 0,
+      "duplicate_faces": 0,
+      "degenerate_triangles": 0,
+      "examples": []
+    },
+    {
+      "name": "SM_LabRoofCorrected_B_Main_roof_Hall_1__1_0_01",
+      "signed_volume_m3": 8.511074775000047,
+      "unpaired_edges": 0,
+      "incorrect_edge_orientation": 0,
+      "duplicate_faces": 0,
+      "degenerate_triangles": 0,
+      "examples": []
+    },
+    {
+      "name": "SM_LabRoofCorrected_B_Main_roof_Hall_1__1_0_02",
+      "signed_volume_m3": 0.192824999999812,
+      "unpaired_edges": 0,
+      "incorrect_edge_orientation": 0,
+      "duplicate_faces": 0,
+      "degenerate_triangles": 0,
+      "examples": []
+    },
+    {
+      "name": "SM_LabRoofCorrected_B_Main_roof_Hall_1_0_1_01",
+      "signed_volume_m3": 17.190309374999877,
+      "unpaired_edges": 0,
+      "incorrect_edge_orientation": 0,
+      "duplicate_faces": 0,
+      "degenerate_triangles": 0,
+      "examples": []
+    },
+    {
+      "name": "SM_LabRoofCorrected_B_Main_roof_Hall_1_1_0_01",
+      "signed_volume_m3": 24.79358249999918,
+      "unpaired_edges": 0,
+      "incorrect_edge_orientation": 0,
+      "duplicate_faces": 0,
+      "degenerate_triangles": 0,
+      "examples": []
+    },
+    {
+      "name": "SM_LabRoofCorrected_B_Main_roof_Hall_1_2_0_01",
+      "signed_volume_m3": 122.81086898309232,
+      "unpaired_edges": 0,
+      "incorrect_edge_orientation": 0,
+      "duplicate_faces": 0,
+      "degenerate_triangles": 0,
+      "examples": []
+    },
+    {
+      "name": "SM_LabRoofCorrected_B_Main_roof_Hall_2__1_0_01",
+      "signed_volume_m3": 1.183499774999831,
+      "unpaired_edges": 0,
+      "incorrect_edge_orientation": 0,
+      "duplicate_faces": 0,
+      "degenerate_triangles": 0,
+      "examples": []
+    },
+    {
+      "name": "SM_LabRoofCorrected_B_Main_roof_Hall_2_2_0_01",
+      "signed_volume_m3": 56.454418827019566,
+      "unpaired_edges": 0,
+      "incorrect_edge_orientation": 0,
+      "duplicate_faces": 0,
+      "degenerate_triangles": 0,
+      "examples": []
+    },
+    {
+      "name": "SM_LabRoofCorrected_B_Main_roof_Hall_3_2_0_01",
+      "signed_volume_m3": 3.4290691874993584,
+      "unpaired_edges": 0,
+      "incorrect_edge_orientation": 0,
+      "duplicate_faces": 0,
+      "degenerate_triangles": 0,
+      "examples": []
+    },
+    {
+      "name": "SM_LabRoofCorrected_B_Main_roof_Support_1__3_0_01",
+      "signed_volume_m3": 0.1567500750001744,
+      "unpaired_edges": 0,
+      "incorrect_edge_orientation": 0,
+      "duplicate_faces": 0,
+      "degenerate_triangles": 0,
+      "examples": []
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "created": [
+    {
+      "id": "NW_Exterior_West_South",
+      "label": "B_NW_Exterior_West_South",
+      "bounds_error_m": 2.7291680382290906e-07
+    },
+    {
+      "id": "NW_Exterior_West_North",
+      "label": "B_NW_Exterior_West_North",
+      "bounds_error_m": 2.729168002701954e-07
+    },
+    {
+      "id": "NW_Exterior_North_West",
+      "label": "B_NW_Exterior_North_West",
+      "bounds_error_m": 3.6435928052469535e-07
+    },
+    {
+      "id": "NW_Exterior_North_GlassJoin",
+      "label": "B_NW_Exterior_North_GlassJoin",
+      "bounds_error_m": 3.6435928052469535e-07
+    }
+  ],
+  "count": 4
+}

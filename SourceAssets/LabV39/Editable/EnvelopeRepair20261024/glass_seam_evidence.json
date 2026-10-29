@@ -1,0 +1,23 @@
+{
+  "retained_actor_label": "FacadeMullion::074",
+  "source_manifest": "1002/LabWhitebox_v39/lab_bundle/manifest.json",
+  "center_world_m": [
+    -49.00887299,
+    37.41739273,
+    7.0
+  ],
+  "bbox_world_approx": [
+    -49.06887479,
+    37.32739253,
+    0,
+    -48.94887479,
+    37.50739253,
+    14
+  ],
+  "candidate_endpoint_world_m": [
+    -49.00958,
+    37.3587
+  ],
+  "description": "North-wall end overlaps a small concealed corner of the retained opaque mullion. This provides a closed joint without a coplanar glass overlay. Verify live actor transform was retained.",
+  "structure_overlap_checks_exclude_retained_facade": true
+}

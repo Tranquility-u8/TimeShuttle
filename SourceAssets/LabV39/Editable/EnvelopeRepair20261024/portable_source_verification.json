@@ -1,0 +1,19 @@
+{
+  "portable_plan_reproduces_identical_json": true,
+  "plan_and_modules_sha256": {
+    "roof_correction_plan.json": "17269c6874ee7da7b1c1f71b1efe73c1072b148657380c653752bdb24f465b76",
+    "roof_correction_modules.json": "5e6219d5d5750800190a73847b725b3bcf962e72bdbf7d75205b8e6dfdb71a6d"
+  },
+  "python_ast_passed": [
+    "build_roofs.py",
+    "module_mesh_audit_helpers.py",
+    "plan_roof_correction.py",
+    "verify_roof_correction.py"
+  ],
+  "fbx_count": 15,
+  "fbx_hashes_match": true,
+  "roof_mesh_audit_passed": true,
+  "blender_not_run": true,
+  "ue_not_called": true,
+  "full_blender_scene_synchronized": false
+}

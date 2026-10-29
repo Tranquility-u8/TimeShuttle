@@ -1,0 +1,193 @@
+{
+  "title": "LabV39 Editable envelope incremental repair source",
+  "file_count_excluding_this_manifest": 37,
+  "total_bytes_excluding_this_manifest": 1574202,
+  "fbx_count": 15,
+  "files": [
+    {
+      "path": "build_roofs.py",
+      "bytes": 1973,
+      "sha256": "e389f61037df318d4d059037029278f58437704f8e34b0cb0fa417e8eb248d37"
+    },
+    {
+      "path": "copy_sources.json",
+      "bytes": 6641,
+      "sha256": "b7d0ee5f98e0e934a5b253ffcd0dd743181854a440f0ef5335cfc6a27d5a2fa9"
+    },
+    {
+      "path": "envelope_nw_candidates.json",
+      "bytes": 16032,
+      "sha256": "85755cf3553c572ad160d01f627f8f32f2d55f2e205eb6e261bb3589dc88b23d"
+    },
+    {
+      "path": "envelope_patch.json",
+      "bytes": 1081,
+      "sha256": "9b80141b9d75312cb081e9bda6f5770e498a2b7a674d1170721bdf7f48b7b54f"
+    },
+    {
+      "path": "evidence/apply_result.json",
+      "bytes": 632,
+      "sha256": "a25de1ee13b25806dac57d8afa7aa0e43081769f3d838e884eb87c7eb3fee641"
+    },
+    {
+      "path": "evidence/audit_ue_export.json",
+      "bytes": 3255,
+      "sha256": "9473949fb62f01494260b9f749ec22e3027982ad6de69252f80a1dbe61e012da"
+    },
+    {
+      "path": "evidence/northwest_after.jpg",
+      "bytes": 292624,
+      "sha256": "9d10d78a92c00559d521e39f1473e5bb138a4ad6bf51a29598a4e932e9efaea6"
+    },
+    {
+      "path": "evidence/northwest_before.jpg",
+      "bytes": 287310,
+      "sha256": "017f66054fa1a42d5dbd037e12309ef12ade5584395fb7a006f27621a72d9d27"
+    },
+    {
+      "path": "evidence/northwest_preeditable.jpg",
+      "bytes": 310780,
+      "sha256": "c5d5651949fd5660453f9a49d471ed263d7c8c8efdf9a54abb7b737efc71ceb4"
+    },
+    {
+      "path": "evidence/roof_apply_result.json",
+      "bytes": 2835,
+      "sha256": "2afc4226600dc7c55f81241d7f8fcdf0a5b5ddfefe92b910d5d4d02ec7a73508"
+    },
+    {
+      "path": "glass_seam_evidence.json",
+      "bytes": 658,
+      "sha256": "0434de8991b50def2c1c6e06a60976a869f17421ccce8120f70547693f602322"
+    },
+    {
+      "path": "LabRoofEnvelopeCorrection.blend",
+      "bytes": 114192,
+      "sha256": "8cda86c62b2a692e41a93a5b7c04f4734bb2aad711ec5f39535a99e2feb0ceb6"
+    },
+    {
+      "path": "module_mesh_audit_helpers.py",
+      "bytes": 3225,
+      "sha256": "e37a935b68958128d31c68ce6dd543a27f05a9e8de72e44accaf3c0ba83f9231"
+    },
+    {
+      "path": "northwest_enclosure_audit.md",
+      "bytes": 1511,
+      "sha256": "dff786759ace810a623c34619fc5df824868e55dcdf73fbb28586859ca4b313d"
+    },
+    {
+      "path": "plan_roof_correction.py",
+      "bytes": 7808,
+      "sha256": "4597ff9b443a0752352eb3933af893ed50bd338e868e06d91903decc548e8425"
+    },
+    {
+      "path": "portable_source_verification.json",
+      "bytes": 639,
+      "sha256": "58c97a2bd1c0f6fa81ee33d192763ba2734c55533f6dc989606e8a1374cede2f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4264,
+      "sha256": "1175e30b8194fae147a251c79ed2a50bb885668bd233645e09b886187cd2c875"
+    },
+    {
+      "path": "roof_assets.json",
+      "bytes": 3425,
+      "sha256": "5e6ab38fdda71b73db7f43c9ef28b584ecc8784d0f7b5629435d92f7a62ef6ed"
+    },
+    {
+      "path": "roof_correction_mesh_audit.json",
+      "bytes": 4621,
+      "sha256": "8c73012381c96589465cf8657cc80b7b817b78b5d28432fc4238317af0ce6284"
+    },
+    {
+      "path": "roof_correction_modules.json",
+      "bytes": 183996,
+      "sha256": "5e6219d5d5750800190a73847b725b3bcf962e72bdbf7d75205b8e6dfdb71a6d"
+    },
+    {
+      "path": "roof_correction_plan.json",
+      "bytes": 79795,
+      "sha256": "17269c6874ee7da7b1c1f71b1efe73c1072b148657380c653752bdb24f465b76"
+    },
+    {
+      "path": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Hall_1_0_1_01.fbx",
+      "bytes": 17372,
+      "sha256": "a074919cdb80a54ef147a29b4e027b17c2936ca91942936aa6d5898dd559e8af"
+    },
+    {
+      "path": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Hall_1_1_0_01.fbx",
+      "bytes": 16668,
+      "sha256": "f7009683a8bb7d11ee787cf743ed2767352ca1ad1fba1deab6c7dba12adebb8f"
+    },
+    {
+      "path": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Hall_1_2_0_01.fbx",
+      "bytes": 17100,
+      "sha256": "6344cb4ef85f4f65c5a2b52c37567a00efc6d40381ab33207a6e7ac3cd951bd6"
+    },
+    {
+      "path": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Hall_1__1_0_01.fbx",
+      "bytes": 16012,
+      "sha256": "f8d6cafe437641cea70a48cec57e25afa6daa63b0fb13fbf44409398c0064732"
+    },
+    {
+      "path": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Hall_1__1_0_02.fbx",
+      "bytes": 15580,
+      "sha256": "3ac79e30ef8175bfe9b1d283a3f0add5336d5c7ad8ead3af4733444575d4687b"
+    },
+    {
+      "path": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Hall_2_2_0_01.fbx",
+      "bytes": 17484,
+      "sha256": "852d6c2fa30a28c0b46c3759a2506769e151b047d0b3b4aa56c7ab31ecb99915"
+    },
+    {
+      "path": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Hall_2__1_0_01.fbx",
+      "bytes": 15932,
+      "sha256": "4e3c92faa933a35904d8fd8e750526a3e5603bcbdabd7e8863884f30bb5acec2"
+    },
+    {
+      "path": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Hall_3_2_0_01.fbx",
+      "bytes": 15596,
+      "sha256": "b190715452cc404f851530ef1499e73f46448fd9f1c1892394645caaea23957c"
+    },
+    {
+      "path": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_RG01_01.fbx",
+      "bytes": 15964,
+      "sha256": "758037ee1c075b97d84103163a144f3411279c04ebf19123af2b9badb4c49033"
+    },
+    {
+      "path": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_RG02_01.fbx",
+      "bytes": 17260,
+      "sha256": "dcef4095582aa2cef563940b8da53b1836c9a4218539f6409b2f69ba50ed944a"
+    },
+    {
+      "path": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_RG03_01.fbx",
+      "bytes": 16940,
+      "sha256": "c0278fab2b3e625ee799919310f2ad21b311af85c1a2c2dc38cae54a5b4cd9ea"
+    },
+    {
+      "path": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_RG03_02.fbx",
+      "bytes": 15564,
+      "sha256": "a444ae1d3e5d5d43649e2c12e057887d1938abf1cc45b38855f0d2fdbf2cdb89"
+    },
+    {
+      "path": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_RG04_01.fbx",
+      "bytes": 15932,
+      "sha256": "849fdf9d509a1615aa5d8ddfdb0eba54297cb42d54adf93235da12c1835f2beb"
+    },
+    {
+      "path": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_RG08_01.fbx",
+      "bytes": 15564,
+      "sha256": "ce70d90d596bd2204d24713be368ce16ddb3c4c4d236da1868011b0f8e049835"
+    },
+    {
+      "path": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Support_1__3_0_01.fbx",
+      "bytes": 15580,
+      "sha256": "bdd8767f9691d10022d70defbaae46bef6c61dc3832e29d4017bec97469a4a8b"
+    },
+    {
+      "path": "verify_roof_correction.py",
+      "bytes": 2357,
+      "sha256": "d7885aba79d7a28729bd9c2b2bd41509ea1befec368f787aaf6e7b12488f4f33"
+    }
+  ]
+}

@@ -1,0 +1,1462 @@
+{
+  "passed": true,
+  "source_plan_sha256": "ae19133c9448e61e2afea88d99c67afe8946a9990ec590634bba19bcdf23a2d9",
+  "source_generator_sha256": "947d196651a490c5092233752261f8023c79d422e79ff479402a04b6645277ed",
+  "module_count": 821,
+  "types": {
+    "floor": 188,
+    "roof": 107,
+    "scenic_floor": 4,
+    "duct_platform": 2,
+    "jump_block": 8,
+    "scenic_base": 2,
+    "duct_jamb": 2,
+    "duct_sill": 1,
+    "duct_header": 1,
+    "door_header": 78,
+    "special_wall": 44,
+    "scenic_wall": 12,
+    "wall": 328,
+    "window_header": 22,
+    "window_sill": 22
+  },
+  "wall_prisms_scale_editable": 328,
+  "wall_modules_total": 372,
+  "rectangular_module_count": 544,
+  "group_partitions": [
+    {
+      "label": "A slab",
+      "parts": 97,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": -3.637978807091713e-12
+    },
+    {
+      "label": "B slab and lower roof consolidated",
+      "parts": 91,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": -9.094947017729282e-12
+    },
+    {
+      "label": "Control roof",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Main roof",
+      "parts": 105,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 5.4569682106375694e-12
+    },
+    {
+      "label": "Training roof",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Scenic slab 11.4",
+      "parts": 2,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Scenic slab 17.4",
+      "parts": 2,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Duct landing platforms",
+      "parts": 2,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Jump T1",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Jump U1",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Jump T2",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Jump U2",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Jump T3",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Jump U3",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Jump T4",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Jump U4",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Scenic lower base",
+      "parts": 2,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Duct jamb 0",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Duct jamb 1",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Duct lower panel",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Duct upper panel",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "C0 lintel",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Control enclosure",
+      "parts": 5,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 1.1368683772161603e-13
+    },
+    {
+      "label": "Scenic outer lower",
+      "parts": 6,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 2.842170943040401e-14
+    },
+    {
+      "label": "Scenic outer upper",
+      "parts": 6,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "A walls",
+      "parts": 225,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": -6.821210263296962e-13
+    },
+    {
+      "label": "B walls",
+      "parts": 138,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 1.1368683772161603e-13
+    },
+    {
+      "label": "Training walls",
+      "parts": 5,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 4.263256414560601e-14
+    },
+    {
+      "label": "Header RES-I15.35",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RES-I5.35",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RES-U-3.65",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RES-U-9.65",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RES-SERV",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RES-ACT",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RES-STORE",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RES-QUIET",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header LS39-DOOR-1",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header LS39-DOOR-2",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header LS39-DOOR-3",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header LS39-DOOR-4",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header L01-HALL",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header R02-N",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RES-N",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RES-M",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RES-EXT-DINING",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RES-EXT-LOUNGE",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header QW1",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header QW2",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header upper_E4_upper",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header N-KITCHEN",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header N-PANTRY",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header N-QUIET-READ",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header N-READ-GLASS",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Sill N-READ-GLASS",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header N-H01-N",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header N-H01-S",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header N-H01-VIEW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Sill N-H01-VIEW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header N-H02-N",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header N-H02-S",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header N-H02-VIEW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Sill N-H02-VIEW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header WG-ASSEMBLY",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header EG-ENTRY",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header EG-WORK",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header WU-NORTH",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header WU-PREP",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header WU-DISCUSS",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header GW38-OVERHAUL",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header GW38-STORAGE",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header GW38-EXISTING-STORE",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header GW38-EXISTING-REPAIR",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RW38-RING-ENTRY",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RW38-WORK-N",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Sill RW38-WORK-N",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RW38-PREP-N",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RW38-PREP-W",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Sill RW38-PREP-W",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RW38-ARCHIVE",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RW38-REVIEW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Sill RW38-REVIEW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RW39-CONTROL-GLASS",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Sill RW39-CONTROL-GLASS",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RW39-CONTROL-CHAMBER",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RW39-ANALYSIS",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RW39-CALIBRATION",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RW39-ANALYSIS-VIEW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Sill RW39-ANALYSIS-VIEW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RW39-RECORDS",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RW39-REVIEW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RW39-SEALED-RECORDS",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RW39-RECORDS-FORWARD",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RW39-ARCHIVE-LINK",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RW39-COURT-139",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Sill RW39-COURT-139",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RW39-COURT-140",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Sill RW39-COURT-140",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RW39-COURT-141",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Sill RW39-COURT-141",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header RW39-COURT-142",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Sill RW39-COURT-142",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header E39-A-ENTRY",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header E39-A-END",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header E39-A-END-WINDOW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Sill E39-A-END-WINDOW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header E39-POD1",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header E39-POD1-WINDOW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Sill E39-POD1-WINDOW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header E39-POD2",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header E39-POD2-WINDOW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Sill E39-POD2-WINDOW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header E39-POD3",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header E39-POD3-WINDOW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Sill E39-POD3-WINDOW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header E39-POD4",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header E39-POD4-WINDOW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Sill E39-POD4-WINDOW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header E39-EG02",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header E39-EG04",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header E39-EG05",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header E39-EG06",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header E39-EG09",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header E39-EG03",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header E39-EG03-WINDOW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Sill E39-EG03-WINDOW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header FIXED-LIFE-NORTH-VIEW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Sill FIXED-LIFE-NORTH-VIEW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header TR-ENTRY",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header TR-CONNECT-PREP",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header TR-CONNECT-TRAIN",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header R9-TIME-EXIT",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header R9-WEST-SHARED",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header R9-TIME-VIEW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Sill R9-TIME-VIEW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header R10-UP-NORTH",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header R10-COMMONS-NORTH",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header R10-COMMONS-WEST",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header R10-EQUIPMENT",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header R10-COMMONS-VIEW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Sill R10-COMMONS-VIEW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header R10-EQUIPMENT-VIEW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Sill R10-EQUIPMENT-VIEW",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header R13-U01",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header R13-U02",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header R16-CORE-E",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header R16-CORE-S",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header R16-PREP-N",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header G-WEST-MAIN",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    },
+    {
+      "label": "Header R17-L01-S",
+      "parts": 1,
+      "plan_difference_m2": 0.0,
+      "plan_overlap_m2": 0.0
+    }
+  ],
+  "height_interval_checks": [
+    {
+      "z_m": [
+        -0.45,
+        0
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 0
+    },
+    {
+      "z_m": [
+        0,
+        0.9
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 3.865352482534945e-12
+    },
+    {
+      "z_m": [
+        0.9,
+        3.3
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 6.366462912410498e-12
+    },
+    {
+      "z_m": [
+        3.3,
+        3.4
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 6.59383658785373e-12
+    },
+    {
+      "z_m": [
+        3.4,
+        3.5
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 2.2737367544323206e-12
+    },
+    {
+      "z_m": [
+        3.5,
+        3.8
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 6.59383658785373e-12
+    },
+    {
+      "z_m": [
+        3.8,
+        4.8
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 1.8189894035458565e-12
+    },
+    {
+      "z_m": [
+        4.8,
+        4.95
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 0
+    },
+    {
+      "z_m": [
+        4.95,
+        5.4
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 0
+    },
+    {
+      "z_m": [
+        5.4,
+        6.0
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 1.1368683772161603e-12
+    },
+    {
+      "z_m": [
+        6.0,
+        6.3
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 1.0231815394945443e-12
+    },
+    {
+      "z_m": [
+        6.3,
+        6.6
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 0
+    },
+    {
+      "z_m": [
+        6.6,
+        7.2
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 1.1368683772161603e-13
+    },
+    {
+      "z_m": [
+        7.2,
+        7.6
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 0
+    },
+    {
+      "z_m": [
+        7.6,
+        7.8
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 0
+    },
+    {
+      "z_m": [
+        7.8,
+        8.8
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 0
+    },
+    {
+      "z_m": [
+        8.8,
+        8.9
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 1.9326762412674725e-12
+    },
+    {
+      "z_m": [
+        8.9,
+        9.2
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 9.094947017729282e-13
+    },
+    {
+      "z_m": [
+        9.2,
+        9.3
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 0
+    },
+    {
+      "z_m": [
+        9.3,
+        9.7
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 0
+    },
+    {
+      "z_m": [
+        9.7,
+        11.1
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 0
+    },
+    {
+      "z_m": [
+        11.1,
+        11.4
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 0
+    },
+    {
+      "z_m": [
+        11.4,
+        12.3
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 0
+    },
+    {
+      "z_m": [
+        12.3,
+        13.4
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 0
+    },
+    {
+      "z_m": [
+        13.4,
+        13.8
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 0
+    },
+    {
+      "z_m": [
+        13.8,
+        14
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 0
+    },
+    {
+      "z_m": [
+        14,
+        14.45
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 1.6370904631912708e-11
+    },
+    {
+      "z_m": [
+        14.45,
+        15.3
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 0
+    },
+    {
+      "z_m": [
+        15.3,
+        17.1
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 0
+    },
+    {
+      "z_m": [
+        17.1,
+        17.4
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 0
+    },
+    {
+      "z_m": [
+        17.4,
+        25
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 0
+    },
+    {
+      "z_m": [
+        25,
+        25.4
+      ],
+      "symmetric_difference_m2": 0.0,
+      "overlap_m2": 0
+    }
+  ],
+  "mesh_failures": [],
+  "smallest_modules_by_plan_dimension": [
+    {
+      "name": "SM_LabEditable_B_Main_roof_Support_1__2_0",
+      "kind": "roof",
+      "dimensions_m": [
+        0.05000000000000071,
+        18.0,
+        0.4499999999999993
+      ]
+    },
+    {
+      "name": "SM_LabEditable_B_B_slab_and_lower_roof_consolidated_Support__4_2_1",
+      "kind": "floor",
+      "dimensions_m": [
+        0.14999999999999147,
+        1.0,
+        0.4500000000000002
+      ]
+    },
+    {
+      "name": "SM_LabEditable_B_B_slab_and_lower_roof_consolidated_Support_2__3_0",
+      "kind": "floor",
+      "dimensions_m": [
+        18.0,
+        0.14999999999999858,
+        0.4500000000000002
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_124",
+      "kind": "wall",
+      "dimensions_m": [
+        0.7666700000000013,
+        0.1802500000000009,
+        4.95
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_125",
+      "kind": "wall",
+      "dimensions_m": [
+        0.7666699999999995,
+        0.1802500000000009,
+        4.95
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_094",
+      "kind": "wall",
+      "dimensions_m": [
+        0.7796599999999998,
+        0.18233999999999995,
+        4.95
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_126",
+      "kind": "wall",
+      "dimensions_m": [
+        30.620000000000005,
+        0.1875,
+        4.95
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_143",
+      "kind": "wall",
+      "dimensions_m": [
+        2.7489999999999988,
+        0.1875,
+        4.95
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_144",
+      "kind": "wall",
+      "dimensions_m": [
+        2.7489999999999988,
+        0.1875,
+        4.95
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_145",
+      "kind": "wall",
+      "dimensions_m": [
+        2.7490000000000023,
+        0.1875,
+        4.95
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_146",
+      "kind": "wall",
+      "dimensions_m": [
+        2.7490000000000006,
+        0.1875,
+        4.95
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_147",
+      "kind": "wall",
+      "dimensions_m": [
+        2.769,
+        0.1875,
+        4.95
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_107",
+      "kind": "wall",
+      "dimensions_m": [
+        4.498999999999995,
+        0.20000000000000007,
+        4.95
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_032",
+      "kind": "wall",
+      "dimensions_m": [
+        0.5086999999999975,
+        0.20000000000000284,
+        4.95
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_103",
+      "kind": "wall",
+      "dimensions_m": [
+        0.7666699999999995,
+        0.2052499999999995,
+        4.95
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_104",
+      "kind": "wall",
+      "dimensions_m": [
+        0.7666700000000013,
+        0.2052499999999995,
+        4.95
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_108",
+      "kind": "wall",
+      "dimensions_m": [
+        0.7666699999999995,
+        0.2052499999999995,
+        4.95
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_109",
+      "kind": "wall",
+      "dimensions_m": [
+        0.7666700000000013,
+        0.2052499999999995,
+        4.95
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_120",
+      "kind": "wall",
+      "dimensions_m": [
+        0.7899999999999991,
+        0.2052499999999995,
+        4.95
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_122",
+      "kind": "wall",
+      "dimensions_m": [
+        0.7899999999999991,
+        0.2052499999999995,
+        4.95
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_130",
+      "kind": "wall",
+      "dimensions_m": [
+        0.7666600000000001,
+        0.2052499999999995,
+        4.95
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_138",
+      "kind": "wall",
+      "dimensions_m": [
+        0.7666600000000001,
+        0.2052499999999995,
+        4.95
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_140",
+      "kind": "special_wall",
+      "dimensions_m": [
+        2.9990000000000006,
+        0.21875,
+        4.95
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_084",
+      "kind": "special_wall",
+      "dimensions_m": [
+        6.169999999999995,
+        0.22363999999999962,
+        5.4
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_085",
+      "kind": "wall",
+      "dimensions_m": [
+        19.6,
+        0.22363999999999962,
+        4.95
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_086",
+      "kind": "wall",
+      "dimensions_m": [
+        9.790000000000001,
+        0.22363999999999962,
+        4.95
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_198",
+      "kind": "wall",
+      "dimensions_m": [
+        0.6000000000000014,
+        0.24899999999999523,
+        4.95
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_199",
+      "kind": "wall",
+      "dimensions_m": [
+        0.5999999999999999,
+        0.24899999999999523,
+        4.95
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_052",
+      "kind": "wall",
+      "dimensions_m": [
+        0.8218199999999989,
+        0.24899999999999878,
+        4.95
+      ]
+    },
+    {
+      "name": "SM_LabEditable_A_A_walls_053",
+      "kind": "wall",
+      "dimensions_m": [
+        0.8218199999999989,
+        0.24899999999999878,
+        4.95
+      ]
+    }
+  ],
+  "duration_seconds": 9.208930730819702,
+  "precision_m": 1e-05,
+  "notes": [
+    "Local verts are in metres. Rotate Z then add pivot; world_verts is provided to avoid coordinate ambiguity.",
+    "A/B floor slabs are generated only once; the underside of B flooring is the A ceiling.",
+    "Separate closed modules retain buried contact caps. They have no overlapping volume or exposed coplanar face area.",
+    "Only roof and floor residual circulation is tiled. Walls are complete semantic runs, not global height slices.",
+    "No UE or Blender calls; current R17 sources and map remain unchanged."
+  ]
+}

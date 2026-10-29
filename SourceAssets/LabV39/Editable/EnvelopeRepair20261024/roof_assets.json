@@ -1,0 +1,77 @@
+[
+  {
+    "name": "SM_LabRoofCorrected_B_Main_roof_RG03_01",
+    "fbx": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_RG03_01.fbx",
+    "sha256": "c0278fab2b3e625ee799919310f2ad21b311af85c1a2c2dc38cae54a5b4cd9ea"
+  },
+  {
+    "name": "SM_LabRoofCorrected_B_Main_roof_RG03_02",
+    "fbx": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_RG03_02.fbx",
+    "sha256": "a444ae1d3e5d5d43649e2c12e057887d1938abf1cc45b38855f0d2fdbf2cdb89"
+  },
+  {
+    "name": "SM_LabRoofCorrected_B_Main_roof_RG04_01",
+    "fbx": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_RG04_01.fbx",
+    "sha256": "849fdf9d509a1615aa5d8ddfdb0eba54297cb42d54adf93235da12c1835f2beb"
+  },
+  {
+    "name": "SM_LabRoofCorrected_B_Main_roof_RG08_01",
+    "fbx": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_RG08_01.fbx",
+    "sha256": "ce70d90d596bd2204d24713be368ce16ddb3c4c4d236da1868011b0f8e049835"
+  },
+  {
+    "name": "SM_LabRoofCorrected_B_Main_roof_RG01_01",
+    "fbx": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_RG01_01.fbx",
+    "sha256": "758037ee1c075b97d84103163a144f3411279c04ebf19123af2b9badb4c49033"
+  },
+  {
+    "name": "SM_LabRoofCorrected_B_Main_roof_RG02_01",
+    "fbx": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_RG02_01.fbx",
+    "sha256": "dcef4095582aa2cef563940b8da53b1836c9a4218539f6409b2f69ba50ed944a"
+  },
+  {
+    "name": "SM_LabRoofCorrected_B_Main_roof_Hall_1__1_0_01",
+    "fbx": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Hall_1__1_0_01.fbx",
+    "sha256": "f8d6cafe437641cea70a48cec57e25afa6daa63b0fb13fbf44409398c0064732"
+  },
+  {
+    "name": "SM_LabRoofCorrected_B_Main_roof_Hall_1__1_0_02",
+    "fbx": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Hall_1__1_0_02.fbx",
+    "sha256": "3ac79e30ef8175bfe9b1d283a3f0add5336d5c7ad8ead3af4733444575d4687b"
+  },
+  {
+    "name": "SM_LabRoofCorrected_B_Main_roof_Hall_1_0_1_01",
+    "fbx": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Hall_1_0_1_01.fbx",
+    "sha256": "a074919cdb80a54ef147a29b4e027b17c2936ca91942936aa6d5898dd559e8af"
+  },
+  {
+    "name": "SM_LabRoofCorrected_B_Main_roof_Hall_1_1_0_01",
+    "fbx": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Hall_1_1_0_01.fbx",
+    "sha256": "f7009683a8bb7d11ee787cf743ed2767352ca1ad1fba1deab6c7dba12adebb8f"
+  },
+  {
+    "name": "SM_LabRoofCorrected_B_Main_roof_Hall_1_2_0_01",
+    "fbx": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Hall_1_2_0_01.fbx",
+    "sha256": "6344cb4ef85f4f65c5a2b52c37567a00efc6d40381ab33207a6e7ac3cd951bd6"
+  },
+  {
+    "name": "SM_LabRoofCorrected_B_Main_roof_Hall_2__1_0_01",
+    "fbx": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Hall_2__1_0_01.fbx",
+    "sha256": "4e3c92faa933a35904d8fd8e750526a3e5603bcbdabd7e8863884f30bb5acec2"
+  },
+  {
+    "name": "SM_LabRoofCorrected_B_Main_roof_Hall_2_2_0_01",
+    "fbx": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Hall_2_2_0_01.fbx",
+    "sha256": "852d6c2fa30a28c0b46c3759a2506769e151b047d0b3b4aa56c7ab31ecb99915"
+  },
+  {
+    "name": "SM_LabRoofCorrected_B_Main_roof_Hall_3_2_0_01",
+    "fbx": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Hall_3_2_0_01.fbx",
+    "sha256": "b190715452cc404f851530ef1499e73f46448fd9f1c1892394645caaea23957c"
+  },
+  {
+    "name": "SM_LabRoofCorrected_B_Main_roof_Support_1__3_0_01",
+    "fbx": "roof_meshes/SM_LabRoofCorrected_B_Main_roof_Support_1__3_0_01.fbx",
+    "sha256": "bdd8767f9691d10022d70defbaae46bef6c61dc3832e29d4017bec97469a4a8b"
+  }
+]

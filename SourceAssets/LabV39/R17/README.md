@@ -1,5 +1,7 @@
 # Time Shuttler · LabV39 R17 建筑源
 
+**2026-10-24 起，本目录的全场高度切片仅作历史恢复源。** 当前 Map_LabV39 已使用 [Editable 独立构件](../Editable/README.md)，组员直接在 UE 编辑。不要将本目录旧 SceneBridge manifest 导入当前地图；本机旧同步入口已断开，避免重建高度切片并覆盖手工调整。下文记录原实施与屋顶修复过程。
+
 本目录是2026-10-17最终R17建筑源的维护副本，从 `Saved/Agent/LabR17` 复制；原Saved文件保持不动。当前工作地图为 `/Game/Maps/Map_LabV39`，改造前地图备份为 `/Game/Maps/Map_LabV39_1`。本包不包含完整关卡的楼梯、外立面、城市背景、Omen美术或运行时Blueprint；这些是地图中保留/另行管理的资产，不能把本包当成完整新地图导入。
 
 ## 文件
@@ -22,7 +24,7 @@
 - 导入参数 `asset_root` 使用 `/Game/Environment/LabV39/R17`。SceneBridge实际资产子目录为 `Scene_98b3cb261e7e7b5e`；不要把这一子目录再次当作asset_root造成多层目录。
 - 保留Scene ID：`97e4c34e52bd4d88a6fff48f872064a4`。
 - 保留Scope ID：`8249249e253c41a4aa0777bc8aa17814`，集合 `LAB_R17_PATCH`。
-- 当前manifest revision为2，734个网格对象；其中32个为合并建筑网格。不要重建随机ID或清空manifest历史后向同一地图重新导入。
+- 当前manifest revision为3（2026-10-24屋顶修复），734个网格对象；其中32个为合并建筑网格。不要重建随机ID或清空manifest历史后向同一地图重新导入。
 
 最终 `.blend` 保存时 `auto_sync=false`。复制不会改写其内部输出路径，UI中的输出目录可能仍是原 `Saved/Agent/LabR17/patch_bundle`；第一次从维护副本导出时，将输出目录明确设为本目录的 `patch_bundle`，同时保持上述身份与目标。现manifest的 `source_file` 也保留原Saved来源，后续正常导出才更新此元数据。
 
@@ -59,3 +61,9 @@ POD1第042件家具相对二维快照南移1.5m，实际bounds为 `[85.1,-13.0,8
 建筑独立QA与UE93项碰撞通过；四座楼梯上下8项、高管道双向蹲行2项、两侧地面起步四级跳台接穿管2条均使用真实项目角色通过。运行记录位于 `Saved/Agent/LabR17` 和工作区 `1002/LabWhitebox_v39/ue-pie-r17-*.json`，未将所有运行日志复制进源目录。Omen追踪已通过功能与左右截图检查；78扇门已放置并编译零错误，[32项真实EnhancedInput交互](../../../Docs/Design/LabR17/runtime-evidence/door_pie_qa.json)与[78扇全开胶囊净空](../../../Docs/Design/LabR17/runtime-evidence/all_door_fit.json)均通过。净空检查临时命令开门，独立于F绑定动作与时间能力的功能输入检查；剧情自动解锁未新增。完整图片和证据见[运行证据索引](../../../Docs/Design/LabR17/runtime-evidence/README.md)，可维护生成源见[门与Omen蓝图维护](runtime_authoring/README.md)。
 
 三维网格hash：`35a35a39cd5bd9e4d6c8ed22a6c453b7eb73c390577cdda3968c24c7c053d37d`。复制时manifest hash：`c3584cab697229d3dc118eb403ff3918beca4ce4b42c3a51fdcd7199a1b9d3db`。
+
+## 2026-10-24 屋顶缺口修复
+
+主屋顶原先按主控室外扩5.3m的矩形整体挖空，造成上层南侧联络廊顶部缺失。生成器改为按主控室真实外包、景观区及其外墙扣除；保留原楼板挑空规则。只更新 `SM_LabR17_Structure_25/26`，其他732个导出对象及所有变换不变。新屋顶实体增加231.868㎡，B层原198.9188685㎡高位漏顶归零。
+
+当前三维网格SHA256：`9452d6555ac88edc2561023ced5ccd0f1dfce5e042bb3f22b11f3bc4c13ef50b`；当前manifest SHA256：`838839f6933857093515391d20d999a7e8969b03caf4f8ee42dfd4bea29b881b`。上文旧hash为初次R17交付历史记录。维护源 `.blend`、FBX、manifest及生成器已同步。详见[屋顶修复与恢复方法](../../../Docs/Design/LabR17/roof-repair-2026-10-24.md)。
