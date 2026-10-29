@@ -1,5 +1,7 @@
 # Player melee combat
 
+2026-10-28 follow-up: Wingshing relaxed locomotion and holstering are synchronized into Dialogue. Fist attacks retain the original cadence with a real-time cooldown, use their authored IK targets without the extra left-hand copy, and return to the existing relaxed pose hold. See [final animation fix and verification](player-fist-time-animation-fix.md#wingshing-同步与最终修正). Damage behavior below is unchanged.
+
 Implemented and verified in Unreal Engine 5.6 on 2026-10-04. This record describes the current player-to-enemy melee path and the extension boundary for a later `MeleeNPC -> player` task. It is repository/editor evidence, not a Google Drive design refresh.
 
 ## Runtime path
