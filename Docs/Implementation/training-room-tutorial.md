@@ -1,5 +1,7 @@
 # Training Room tutorial implementation
 
+2026-10-28: [武器台下部共面闪烁、手枪贴合与移动弱点靶渐入时序修复](tutorial-table-contact-reveal-fix.md)。移动靶的位置和行走动画均等待自身完全渐入及场景 Ready；武器台桌面高度、原碰撞和其他关卡摆放保持。
+
 Current flow orchestration is now in BP_TrainingMission task components; the historical Level Blueprint stage chain below is superseded. The fixed-layout merge repair is retained and the migrated eight-stage flow has passed the automated acceptance described in [MissionSystem implementation](mission-system.md) and [validation](MissionSystem/validation.zh-CN.md). Later objectives use explicitly disclosed fixtures; manual aim/feel acceptance remains separate.
 
 Post-merge recovery (TECH-004): the controller was rebuilt after merge 4760bc2 committed LFS conflict text. Dialogue refactoring and fixed-layout behavior are now combined; three relevant Blueprints compile cleanly. The gameplay results below predate this merge repair; fresh PIE acceptance is pending the user. See [repair evidence and checklist](TrainingMergeRepair20261018.md).
