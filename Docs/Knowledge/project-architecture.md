@@ -1,7 +1,5 @@
 # 当前项目架构
 
-- Chapter 1 第二房间演出（2026-10-28）：`Map_LabV39` 的 `Ch1_R2_Sequence` 组合五个 `/Game/Blueprints/Cinematics/` 蓝图，提供入口看门、锁门交互、遮挡柜爆开、四块物理落板与危险区时停恢复。镜头、掉落物和原生时停调用独立封装；目标物体、焦点、时长与速度可在实例修改。复用原 `AC_TimeAbility`、`AC_PlayerControlLocks`，锁门只新增子类，未修改共享门父类。无制作插件的冷重载、输入触发及连续走出出口通过；替换模型后仍需复核碰撞和落点。见 [演出实现与验收边界](../Implementation/chapter1-room2-cinematic.md)。
-
 - Tutorial dialogue document migration (2026-10-22, P-008/LEVEL-002/P-106): BP_TrainingMission now configures 99 tasks across the existing eight checkpoints. This supersedes the earlier 86-task snapshots recorded below. Fifteen TD01-TD15 conversations contain twenty document lines with retained audio. Entry, valid-hit, defeated-enemy disappearance and actual melee-spawn gates replace old/missing calls. TD07 timing and TD10 enemy-disappearance wording follow explicit user confirmation. Old Energy/Arrival tables are removed after reference checks; two HUD timing bindings are synchronized. Final runtime 48/48, manual/cancel/retry/HUD 9/9, independent no-authoring-plugin cold checks 69/69 pass; four affected Blueprints compile cleanly. Map/controller/player/GI and disabled memory/persistence unchanged. Scripts and evidence are Git-ignored under LocalTests/TutorialDialogue20261022. Later combat uses native hit/damage fixtures, not a manual aiming playthrough. See [mission implementation](../Implementation/mission-system.md).
 
 - 贴边跳跃（2026-10-24）：`BP_FPCharacter.IA_Jump` 的安全翻越分支允许冲刺，装填时回退普通 Jump，避免近距离检测通过后吞掉输入。跳高、重力、空中控制、胶囊及 `AC_Vault` 安全检测保持。Map_Test 原有障碍物与临时边界测试见 [修复记录](../Implementation/close-obstacle-jump.md)。
