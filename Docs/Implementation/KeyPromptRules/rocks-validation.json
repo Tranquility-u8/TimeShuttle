@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "name": "player_owns_manager",
+      "passed": true
+    },
+    {
+      "name": "hud_created_by_blueprint",
+      "passed": true
+    },
+    {
+      "name": "ordinary_idle_hidden",
+      "passed": true
+    },
+    {
+      "name": "falling_starts_prompt",
+      "passed": true
+    },
+    {
+      "name": "falling_uses_table_Q",
+      "passed": true
+    },
+    {
+      "name": "falling_uses_table_TimeStop",
+      "passed": true
+    },
+    {
+      "name": "tutorial_is_request_source",
+      "passed": true
+    },
+    {
+      "name": "native_falling_capture",
+      "passed": true
+    },
+    {
+      "name": "real_Q_enters_FullStop",
+      "passed": true
+    },
+    {
+      "name": "successful_stop_hides_prompt",
+      "passed": true
+    },
+    {
+      "name": "time_stop_request_removed",
+      "passed": true
+    },
+    {
+      "name": "native_hidden_capture",
+      "passed": true
+    }
+  ],
+  "steps": [
+    "S1_06_S1_1",
+    "S1_07_BeginStage1EnergyIntro",
+    "S1_08_S1_Energy",
+    "S1_02_SetTutorialMovement",
+    "S1_03_SetObjective",
+    "S1_04_WaitPlayerInTrigger",
+    "S1_LockBeforeRocks",
+    "S1_09_StartFallingRocks",
+    "S1_10_SetTutorialFlags",
+    "S1_11_SetObjective",
+    "None",
+    "S1_13_WaitTimeMode",
+    "S1_14_HoldIntroTimeStop",
+    "S1_15_Join"
+  ],
+  "method": "Actual tutorial flow and cross-frame Q input; only player movement into the trigger is positioned by fixture.",
+  "passed": true
+}

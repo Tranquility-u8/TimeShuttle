@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "object_is_current",
+      "passed": true
+    },
+    {
+      "name": "equal_arrival_keeps_object",
+      "passed": true
+    },
+    {
+      "name": "text_refresh_keeps_current_source",
+      "passed": true
+    },
+    {
+      "name": "updated_text_applied",
+      "passed": true
+    },
+    {
+      "name": "unavailable_withdraws_only_its_source",
+      "passed": true
+    },
+    {
+      "name": "reenabled_equal_does_not_steal_current",
+      "passed": true
+    },
+    {
+      "name": "clearing_current_restores_object",
+      "passed": true
+    },
+    {
+      "name": "missing_row_clears_object",
+      "passed": true
+    },
+    {
+      "name": "empty_queue_hidden",
+      "passed": true
+    }
+  ],
+  "method": "Synchronous Blueprint API fixture for text refresh/availability/tie semantics. Physical ray was covered separately by general-validation."
+}

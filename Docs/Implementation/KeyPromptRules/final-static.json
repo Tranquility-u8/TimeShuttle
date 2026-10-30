@@ -1,0 +1,134 @@
+{
+  "compiles": [
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/Game/Blueprints/Interactables/BP_Item_Base",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_Interaction",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_TimeAbility",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/Game/Blueprints/Weapons/Player/WeaponBases/BP_Weapon_AutomaticBase",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/Game/Blueprints/Weapons/Player/WeaponBases/BP_Weapon_ShotgunBase",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/Game/Blueprints/Interactables/Interaction/AC_KeyPromptInfo",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/Game/Blueprints/Interfaces/BPI_KeyPrompt",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/Game/UI/Widgets/UI_Hud",
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "rows": [
+    {
+      "Name": "Interaction",
+      "KeyText": "NSLOCTEXT(\"DT_KeyPrompts [21735D34CDBD3BEE27FF90CD307CFDA3]\", \"Interaction_KeyText\", \"F\")",
+      "Description": "NSLOCTEXT(\"DT_KeyPrompts [21735D34CDBD3BEE27FF90CD307CFDA3]\", \"Interaction_Description\", \"Interact\")",
+      "Type": "Interaction",
+      "Priority": 3,
+      "ForceDisplay": false
+    },
+    {
+      "Name": "Reload",
+      "KeyText": "NSLOCTEXT(\"DT_KeyPrompts [21735D34CDBD3BEE27FF90CD307CFDA3]\", \"Reload_KeyText\", \"R\")",
+      "Description": "NSLOCTEXT(\"DT_KeyPrompts [21735D34CDBD3BEE27FF90CD307CFDA3]\", \"Reload_Description\", \"Reload\")",
+      "Type": "Reload",
+      "Priority": 4,
+      "ForceDisplay": false
+    },
+    {
+      "Name": "TimeStop",
+      "KeyText": "NSLOCTEXT(\"DT_KeyPrompts [21735D34CDBD3BEE27FF90CD307CFDA3]\", \"TimeStop_KeyText\", \"Q\")",
+      "Description": "NSLOCTEXT(\"DT_KeyPrompts [21735D34CDBD3BEE27FF90CD307CFDA3]\", \"TimeStop_Description\", \"Time Stop\")",
+      "Type": "QTETimeStop",
+      "Priority": 2,
+      "ForceDisplay": false
+    },
+    {
+      "Name": "TutorialFallingRocks",
+      "KeyText": "NSLOCTEXT(\"DT_KeyPrompts [21735D34CDBD3BEE27FF90CD307CFDA3]\", \"TutorialFallingRocks_KeyText\", \"Q\")",
+      "Description": "NSLOCTEXT(\"DT_KeyPrompts [21735D34CDBD3BEE27FF90CD307CFDA3]\", \"TutorialFallingRocks_Description\", \"Time Stop\")",
+      "Type": "Special",
+      "Priority": 1,
+      "ForceDisplay": true
+    },
+    {
+      "Name": "TalkToOmen",
+      "KeyText": "NSLOCTEXT(\"DT_KeyPrompts [21735D34CDBD3BEE27FF90CD307CFDA3]\", \"TalkToOmen_KeyText\", \"F\")",
+      "Description": "NSLOCTEXT(\"DT_KeyPrompts [21735D34CDBD3BEE27FF90CD307CFDA3]\", \"TalkToOmen_Description\", \"Talk to Omen\")",
+      "Type": "Interaction",
+      "Priority": 3,
+      "ForceDisplay": false
+    },
+    {
+      "Name": "OpenDoor",
+      "KeyText": "NSLOCTEXT(\"DT_KeyPrompts [21735D34CDBD3BEE27FF90CD307CFDA3]\", \"OpenDoor_KeyText\", \"F\")",
+      "Description": "NSLOCTEXT(\"DT_KeyPrompts [21735D34CDBD3BEE27FF90CD307CFDA3]\", \"OpenDoor_Description\", \"Open the door\")",
+      "Type": "Interaction",
+      "Priority": 3,
+      "ForceDisplay": false
+    }
+  ],
+  "saves": [
+    {
+      "file": "DialogSystem_QA_20261018_Blueprint_Dialogue.sav",
+      "unchanged": true
+    },
+    {
+      "file": "DialogSystem_QA_Legacy_20261018_Dialogue.sav",
+      "unchanged": true
+    },
+    {
+      "file": "MouseSettings.sav",
+      "unchanged": true
+    },
+    {
+      "file": "Saved.sav",
+      "unchanged": true
+    },
+    {
+      "file": "SLOTDATA.sav",
+      "unchanged": true
+    }
+  ],
+  "dirty_content": [],
+  "dirty_maps": [],
+  "test_fixture_removed": true
+}

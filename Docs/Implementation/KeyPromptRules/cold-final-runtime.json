@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "player_owns_manager",
+      "passed": true
+    },
+    {
+      "name": "one_widget",
+      "passed": true
+    },
+    {
+      "name": "initially_hidden",
+      "passed": true
+    },
+    {
+      "name": "normal_empty_ammo_event_shows_R",
+      "passed": true
+    },
+    {
+      "name": "reload_started_hides_before_fill",
+      "passed": true
+    },
+    {
+      "name": "reload_completed",
+      "passed": true
+    },
+    {
+      "name": "no_reserve_hidden",
+      "passed": true
+    },
+    {
+      "name": "equal_retains_current",
+      "passed": true
+    },
+    {
+      "name": "forced_special_wins",
+      "passed": true
+    },
+    {
+      "name": "withdraw_restores_other_source",
+      "passed": true
+    },
+    {
+      "name": "empty_focus_refresh_safe",
+      "passed": true
+    },
+    {
+      "name": "old_RELOAD_remains_collapsed",
+      "passed": true
+    }
+  ],
+  "method": "Final ordinary editor without authoring helper; native pistol pickup/SetAmmo events and Enhanced Input reload. Arbitration checks explicitly call the public Blueprint request API."
+}

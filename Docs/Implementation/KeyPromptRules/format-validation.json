@@ -1,0 +1,1111 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "UserConstructionScript",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "GetWeapon",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "CheckCanStand",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "AimDownSight",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "FindSlideDirection",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "CreateHUD",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "HudCrosshairTick",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "SocketOffset",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "ChangeWeaponSocket",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "UpdateCrouchView",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "ToggleCrouch",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "GetHandsRelaxed",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "ToggleHolster",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "NotifyKeyPromptAmmo",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "BeginSetup",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "CheckBeforeSwap",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "RunSprintTapControl",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "AkimboSelector",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "EventGraph",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "LOADSAVE",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "GetEquippedAnimset",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "Get Health",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "Get Combat Component",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "Is Dead?",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "Set Health",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "RequestMeleeAttack",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Interactables/BP_Item_Base",
+      "graph": "UserConstructionScript",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Interactables/BP_Item_Base",
+      "graph": "Fire_HitScan",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Interactables/BP_Item_Base",
+      "graph": "SetWeaponAmmoData",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Interactables/BP_Item_Base",
+      "graph": "SetAmmo",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Interactables/BP_Item_Base",
+      "graph": "Akimbo Spawner",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Interactables/BP_Item_Base",
+      "graph": "ResolveShotDamage",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Interactables/BP_Item_Base",
+      "graph": "SelectShotComponent",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Interactables/BP_Item_Base",
+      "graph": "SpawnHitscanTrail",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Interactables/BP_Item_Base",
+      "graph": "NotifyKeyPromptAmmo",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Interactables/BP_Item_Base",
+      "graph": "EventGraph",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_Interaction",
+      "graph": "Trace",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_Interaction",
+      "graph": "TraceInteractionArea",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_Interaction",
+      "graph": "StopInteraction",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_Interaction",
+      "graph": "RelayKeyPromptFocus",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_Interaction",
+      "graph": "GetRefs",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_Interaction",
+      "graph": "EventGraph",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_Interaction",
+      "graph": "TraceCal",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "UserConstructionScript",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "Feedback",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "GetPistol",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "FindVisual",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "FindId",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "AddVisual",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "SetAbilityNormal",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "HoldIntroTimeStop",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "ClearActionObservations",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "SetObjective",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "SetCheckpoint",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "StopThreats",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "SetLayout",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "UpdateVisuals",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "PrepareRetry",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "PlayConversation",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "InitializeRoom",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "FinishTutorial",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "StartDodgeRound",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "StartProjectileClearRound",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "StartIndependentProjectileClearRound",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "FireFrom",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "UpdateDodge",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "RequireEnergyRecovery",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "KillTarget",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "StartTargets",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "UpdateTargets",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "StartRockMechanism",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "StartFallingRocks",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "UpdateRocks",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "EnableSupply",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "UpdateSupply",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "RefillCombatResources",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "StartCombat",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "EnemyIsDead",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "UpdateCombat",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "PlayerDamaged",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "BindPlayerDamage",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "UnbindPlayerDamage",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "RecordCompletion",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "UpdateObservations",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "Present",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "TickTraining",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "CleanupTraining",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "CreateTrainingMarker",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "ClearTrainingMarkers",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "UpdateTrainingMarkers",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "SetTutorialMovement",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "SetTutorialFlags",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "StartGuidedQTE",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "FireGuidedShot",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "EnsureGuidedPrompt",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "CaptureGuidedShot",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "UpdateGuidedGeometry",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "BeginGuidedSidestep",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "PromptGuidedResume",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "BeginFinalCombat",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "ApplyFinalRockImpact",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "UpdateTrainingWalker",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "ConfigureNativeTarget",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "UpdateRangeEnemies",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "UpdateSmoothWalker",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "StartPairedPlank",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "HandlePlankShot",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "UpdatePairedPlank",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "PosePairedPlank",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "ApplyPairedPlankImpact",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "HideTrainingThreatPrompt",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "GetRangeLessonStatus",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "RestoreStageHealth",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "SetEnergyGaugeFocus",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "PulseEnergyGauge",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "UpdateEnergyGaugePulse",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "BeginStage1EnergyIntro",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "BeginEnergyCostLesson",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "BeginEnergyDrainDemo",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "EndEnergyDrainDemo",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "BeginEnergyRecoveryLesson",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "FinishEnergyRecoveryLesson",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "UpdateNativeAmmoSupply",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "ClearNativeAmmoSupply",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "RefreshWorldRevealRange",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "ResolveCombatSpawnFacing",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "SeatSupplyPistol",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "SetFallingRockPrompt",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "EventGraph",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "ResolveTrainingShot",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_TimeAbility",
+      "graph": "ToggleTimeAbility",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_TimeAbility",
+      "graph": "GetEnergyPercent",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_TimeAbility",
+      "graph": "UpdateTimeAbilityHUD",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_TimeAbility",
+      "graph": "ReleaseAllTemporalProjectiles",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_TimeAbility",
+      "graph": "ApplyTimeScale",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_TimeAbility",
+      "graph": "ApplyTimeState",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_TimeAbility",
+      "graph": "SetProjectileThreatHUD",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_TimeAbility",
+      "graph": "EvaluateProjectileThreat",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_TimeAbility",
+      "graph": "StartProjectileThreatWindow",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_TimeAbility",
+      "graph": "MaintainProjectileThreatWindow",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_TimeAbility",
+      "graph": "ScanProjectileThreats",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_TimeAbility",
+      "graph": "UpdateProjectileThreatQTE",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_TimeAbility",
+      "graph": "MaintainTutorialQTE",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_TimeAbility",
+      "graph": "PollGuidedQInput",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_TimeAbility",
+      "graph": "NotifyPromptTimeStopped",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_TimeAbility",
+      "graph": "EventGraph",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Weapons/Player/WeaponBases/BP_Weapon_AutomaticBase",
+      "graph": "UserConstructionScript",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Weapons/Player/WeaponBases/BP_Weapon_AutomaticBase",
+      "graph": "MaterialReload",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Weapons/Player/WeaponBases/BP_Weapon_AutomaticBase",
+      "graph": "EventGraph",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Weapons/Player/WeaponBases/BP_Weapon_ShotgunBase",
+      "graph": "UserConstructionScript",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Weapons/Player/WeaponBases/BP_Weapon_ShotgunBase",
+      "graph": "MaterialReload",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Weapons/Player/WeaponBases/BP_Weapon_ShotgunBase",
+      "graph": "EventGraph",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "InitializePrompt",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "RefreshDisplay",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "SubmitPrompt",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "ClearPrompt",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "RequestPrompt",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "ClearPromptType",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "SetReloadPrompt",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "UpdateReloadPrompt",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "HandleFocus",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "RefreshFocusedPrompt",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "EventGraph",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "PromptLifecycle",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Interactables/Interaction/AC_KeyPromptInfo",
+      "graph": "EventGraph",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Interactables/Interaction/AC_KeyPromptInfo",
+      "graph": "GetKeyPromptInfo",
+      "same_semantics": true
+    }
+  ],
+  "compiles": [
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/Game/Blueprints/Interactables/BP_Item_Base",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_Interaction",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_TimeAbility",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/Game/Blueprints/Weapons/Player/WeaponBases/BP_Weapon_AutomaticBase",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/Game/Blueprints/Weapons/Player/WeaponBases/BP_Weapon_ShotgunBase",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "path": "/Game/Blueprints/Interactables/Interaction/AC_KeyPromptInfo",
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "history": [
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "NotifyKeyPromptAmmo",
+      "full_graph": true,
+      "formatted": true,
+      "comments": 1
+    },
+    {
+      "path": "/Game/Blueprints/Player/BP_FPCharacter",
+      "graph": "EventGraph",
+      "full_graph": false,
+      "formatted": true,
+      "comments": 4
+    },
+    {
+      "path": "/Game/Blueprints/Interactables/BP_Item_Base",
+      "graph": "NotifyKeyPromptAmmo",
+      "full_graph": true,
+      "formatted": true,
+      "comments": 1
+    },
+    {
+      "path": "/Game/Blueprints/Interactables/BP_Item_Base",
+      "graph": "SetWeaponAmmoData",
+      "full_graph": false,
+      "formatted": true,
+      "comments": 3
+    },
+    {
+      "path": "/Game/Blueprints/Interactables/BP_Item_Base",
+      "graph": "SetAmmo",
+      "full_graph": false,
+      "formatted": true,
+      "comments": 1
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_Interaction",
+      "graph": "RelayKeyPromptFocus",
+      "full_graph": true,
+      "formatted": true,
+      "comments": 1
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_Interaction",
+      "graph": "Trace",
+      "full_graph": false,
+      "formatted": true,
+      "comments": 1
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "SetFallingRockPrompt",
+      "full_graph": true,
+      "formatted": true,
+      "comments": 1
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "StartFallingRocks",
+      "full_graph": false,
+      "formatted": true,
+      "comments": 1
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "StopThreats",
+      "full_graph": false,
+      "formatted": true,
+      "comments": 1
+    },
+    {
+      "path": "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "graph": "HoldIntroTimeStop",
+      "full_graph": false,
+      "formatted": true,
+      "comments": 1
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_TimeAbility",
+      "graph": "NotifyPromptTimeStopped",
+      "full_graph": true,
+      "formatted": true,
+      "comments": 1
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_TimeAbility",
+      "graph": "ToggleTimeAbility",
+      "full_graph": false,
+      "formatted": true,
+      "comments": 1
+    },
+    {
+      "path": "/Game/Blueprints/Weapons/Player/WeaponBases/BP_Weapon_AutomaticBase",
+      "graph": "EventGraph",
+      "full_graph": false,
+      "formatted": true,
+      "comments": 5
+    },
+    {
+      "path": "/Game/Blueprints/Weapons/Player/WeaponBases/BP_Weapon_ShotgunBase",
+      "graph": "EventGraph",
+      "full_graph": false,
+      "formatted": true,
+      "comments": 5
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "InitializePrompt",
+      "full_graph": true,
+      "formatted": true,
+      "comments": 1
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "RefreshDisplay",
+      "full_graph": true,
+      "formatted": true,
+      "comments": 1
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "SubmitPrompt",
+      "full_graph": true,
+      "formatted": true,
+      "comments": 1
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "ClearPrompt",
+      "full_graph": true,
+      "formatted": true,
+      "comments": 1
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "RequestPrompt",
+      "full_graph": true,
+      "formatted": true,
+      "comments": 1
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "ClearPromptType",
+      "full_graph": true,
+      "formatted": true,
+      "comments": 1
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "SetReloadPrompt",
+      "full_graph": true,
+      "formatted": true,
+      "comments": 1
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "UpdateReloadPrompt",
+      "full_graph": true,
+      "formatted": true,
+      "comments": 1
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "HandleFocus",
+      "full_graph": true,
+      "formatted": true,
+      "comments": 1
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "RefreshFocusedPrompt",
+      "full_graph": true,
+      "formatted": true,
+      "comments": 1
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "EventGraph",
+      "full_graph": true,
+      "formatted": true,
+      "comments": 1
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "PromptLifecycle",
+      "full_graph": true,
+      "formatted": true,
+      "comments": 1
+    },
+    {
+      "path": "/Game/Blueprints/Interactables/Interaction/AC_KeyPromptInfo",
+      "graph": "EventGraph",
+      "full_graph": true,
+      "formatted": true,
+      "comments": 1
+    },
+    {
+      "path": "/Game/Blueprints/Interactables/Interaction/AC_KeyPromptInfo",
+      "graph": "GetKeyPromptInfo",
+      "full_graph": true,
+      "formatted": true,
+      "comments": 1
+    }
+  ],
+  "normalization_note": "Engine refresh canonicalized three disconnected Key output defaults from empty to None; these output pins are never read. Input defaults, node semantics and all logical edges compared without other exclusions.",
+  "normalizations": [
+    {
+      "graph": "EventGraph",
+      "node": "K2Node_InputKey_0",
+      "field": "unused output Key default",
+      "before": "",
+      "after": "None"
+    },
+    {
+      "graph": "EventGraph",
+      "node": "K2Node_InputDebugKey_0",
+      "field": "unused output Key default",
+      "before": "",
+      "after": "None"
+    },
+    {
+      "graph": "EventGraph",
+      "node": "K2Node_InputKey_1",
+      "field": "unused output Key default",
+      "before": "",
+      "after": "None"
+    }
+  ]
+}

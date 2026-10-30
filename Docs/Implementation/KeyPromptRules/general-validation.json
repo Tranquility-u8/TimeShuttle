@@ -1,0 +1,141 @@
+{
+  "checks": [
+    {
+      "name": "ordinary_test_has_no_falling_tutorial",
+      "passed": true,
+      "detail": "None"
+    },
+    {
+      "name": "native_pistol_equipped",
+      "passed": true,
+      "detail": "None"
+    },
+    {
+      "name": "empty_mag_with_reserve_shows_R",
+      "passed": true,
+      "detail": "('R', 'Reload')"
+    },
+    {
+      "name": "reload-visible",
+      "passed": true,
+      "detail": "None"
+    },
+    {
+      "name": "reload_start_hides_R",
+      "passed": true,
+      "detail": "None"
+    },
+    {
+      "name": "hide_happens_before_ammo_loaded",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "name": "reload-start-hidden",
+      "passed": true,
+      "detail": "None"
+    },
+    {
+      "name": "native_reload_fills_mag",
+      "passed": true,
+      "detail": "None"
+    },
+    {
+      "name": "loaded_mag_stays_hidden",
+      "passed": true,
+      "detail": "None"
+    },
+    {
+      "name": "no_reserve_no_reload_prompt",
+      "passed": true,
+      "detail": "None"
+    },
+    {
+      "name": "nonempty_mag_no_prompt",
+      "passed": true,
+      "detail": "None"
+    },
+    {
+      "name": "real_last_shot_empty",
+      "passed": true,
+      "detail": "0"
+    },
+    {
+      "name": "real_last_shot_shows_reload",
+      "passed": true,
+      "detail": "None"
+    },
+    {
+      "name": "native_ray_detects_provider_actor",
+      "passed": true,
+      "detail": "None"
+    },
+    {
+      "name": "interaction_beats_reload",
+      "passed": true,
+      "detail": "('F', 'Talk to Omen')"
+    },
+    {
+      "name": "interaction-talk",
+      "passed": true,
+      "detail": "None"
+    },
+    {
+      "name": "object_text_override_is_used",
+      "passed": true,
+      "detail": "('F', 'Open the door')"
+    },
+    {
+      "name": "interaction-door",
+      "passed": true,
+      "detail": "None"
+    },
+    {
+      "name": "forced_special_beats_interaction",
+      "passed": true,
+      "detail": "None"
+    },
+    {
+      "name": "clearing_special_restores_interaction",
+      "passed": true,
+      "detail": "None"
+    },
+    {
+      "name": "equal_priority_retains_current_source",
+      "passed": true,
+      "detail": "None"
+    },
+    {
+      "name": "occlusion_restores_reload",
+      "passed": true,
+      "detail": "('R', 'Reload')"
+    },
+    {
+      "name": "uncovered_object_returns",
+      "passed": true,
+      "detail": "None"
+    },
+    {
+      "name": "destroyed_target_clears_interaction",
+      "passed": true,
+      "detail": "None"
+    },
+    {
+      "name": "all_requests_clear_hides_UI",
+      "passed": true,
+      "detail": "None"
+    },
+    {
+      "name": "legacy_RELOAD_stays_collapsed",
+      "passed": true,
+      "detail": "None"
+    },
+    {
+      "name": "one_player_prompt_widget",
+      "passed": true,
+      "detail": "None"
+    }
+  ],
+  "method": "Tutorial flow explicitly stopped to prove ordinary rules are independent. Native pickup equip entry, real R/fire input, native SetAmmo mutation events, actual existing interaction ray. Temporary cube/provider is a test fixture, not a placed NPC/door.",
+  "passed": true
+}

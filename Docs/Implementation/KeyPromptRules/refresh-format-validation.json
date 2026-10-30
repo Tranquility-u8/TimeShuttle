@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "InitializePrompt",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "RefreshDisplay",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "SubmitPrompt",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "ClearPrompt",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "RequestPrompt",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "ClearPromptType",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "SetReloadPrompt",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "UpdateReloadPrompt",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "HandleFocus",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "RefreshFocusedPrompt",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "EventGraph",
+      "same_semantics": true
+    },
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "PromptLifecycle",
+      "same_semantics": true
+    }
+  ],
+  "compiles": [
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "history": [
+    {
+      "path": "/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "graph": "RefreshFocusedPrompt",
+      "full_graph": true,
+      "formatted": true,
+      "comments": 1
+    }
+  ]
+}

@@ -325,3 +325,15 @@ Config/DefaultEngine.ini 可能需要新增弱点检测通道。通道设计在�
 4. 检查墙体遮挡和实际移动瞄准体验；三处肢体候选的不同姿态/角度仍需手动验收，不能用头胸测试代替全姿态认证。
 
 本次不推进任务 5；FullStop 实体时间弹仍走旧规则（任务 6），回溯不会恢复弱点耐久历史（任务 7）。不要把时间弹/回溯结果作为当前 3/4 的已完成承诺。训练靶和其他武器家族本轮仅保护原图表路径，完整行为回归留给任务 8。
+
+## 2026-10-29：第七阶段近战仅后颈伤害修复（待用户运行验收）
+
+- 用户授权懒人模式修复，随后明确由用户执行测试；本轮未进入 PIE。
+- AC_EnemyWeakPoints 新增 bRequireFrontWeakPoint（Weak Points / Selection，默认 true），EvaluateAssignment 改由它决定是否要求激活正面点。bWeakPointOnly 仅控制伤害过滤。
+- BP_MeleeNPC 组件覆盖 bRequireFrontWeakPoint=false，保留用户的 bWeakPointOnly=true、ActiveWeakPointCount=1、后颈黄色1个/红色0个以及 Candidates/插槽配置。
+- SelectWeakPointHitComponent 先检查初始化、命中组件、数组长度和每次访问的有效索引；Sphere 有效执行分支之后才读取位置/半径。ResolveWeakPointDamage 增加输入组件、运行等级索引、TierRules 索引和 Tier 资产保护，异常返回0。
+- 仅定向保存 AC_EnemyWeakPoints 与 BP_MeleeNPC；本轮组件编译0错误/0警告，关联近战/远程/父类均UpToDate。局部 Blueprint Assist 整理/说明、无关图语义及布局语义比对完成。
+- 没有修改 .uproject、训练地图、训练控制器、武器、远程配置或存档。临时作者工具已退出，普通编辑器打开 BP_MeleeNPC，PIE 停止。
+- 手动验收：第七阶段生成及重试无 No valid assignment、空数组或 Sphere 空引用错误；正面/背部普通部位不扣血；激活后颈按配置扣血；S7A/S7B 及时间能力结算、远程敌人回归待用户验证。不将编译成功作为运行验收。
+- 本地工作区详细记录：C:/Users/jason/Desktop/Capstone计划/开发文档/敌人弱点/第七阶段近战WeakPointOnly调查.md；证据与恢复点：该工作区 tmp/melee-weakpoint-diagnosis/。这是本机路径，不代表已同步团队。
+

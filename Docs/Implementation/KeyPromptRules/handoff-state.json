@@ -1,0 +1,30 @@
+{
+  "pie_stopped": true,
+  "map_restored": "/Game/Maps/Map_MainMenu",
+  "camera_restored": true,
+  "helper_loaded": false,
+  "dirty_content": [],
+  "dirty_maps": [],
+  "saves": [
+    {
+      "file": "DialogSystem_QA_20261018_Blueprint_Dialogue.sav",
+      "unchanged": true
+    },
+    {
+      "file": "DialogSystem_QA_Legacy_20261018_Dialogue.sav",
+      "unchanged": true
+    },
+    {
+      "file": "MouseSettings.sav",
+      "unchanged": true
+    },
+    {
+      "file": "Saved.sav",
+      "unchanged": true
+    },
+    {
+      "file": "SLOTDATA.sav",
+      "unchanged": true
+    }
+  ]
+}

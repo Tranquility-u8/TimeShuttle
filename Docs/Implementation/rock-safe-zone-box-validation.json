@@ -1,0 +1,734 @@
+{
+  "compiled_errors": 0,
+  "compiled_warnings": 0,
+  "format_checks": [
+    {
+      "graph": "UserConstructionScript",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "Feedback",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "GetPistol",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "FindVisual",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "FindId",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "AddVisual",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "SetAbilityNormal",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "HoldIntroTimeStop",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "ClearActionObservations",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "SetObjective",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "SetCheckpoint",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "StopThreats",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "SetLayout",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "UpdateVisuals",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "PrepareRetry",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "PlayConversation",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "InitializeRoom",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "FinishTutorial",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "StartDodgeRound",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "StartProjectileClearRound",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "StartIndependentProjectileClearRound",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "FireFrom",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "UpdateDodge",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "RequireEnergyRecovery",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "KillTarget",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "StartTargets",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "UpdateTargets",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "StartRockMechanism",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "StartFallingRocks",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "UpdateRocks",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "EnableSupply",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "UpdateSupply",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "RefillCombatResources",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "StartCombat",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "EnemyIsDead",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "UpdateCombat",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "PlayerDamaged",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "BindPlayerDamage",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "UnbindPlayerDamage",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "RecordCompletion",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "UpdateObservations",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "Present",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "TickTraining",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "CleanupTraining",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "CreateTrainingMarker",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "ClearTrainingMarkers",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "UpdateTrainingMarkers",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "SetTutorialMovement",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "SetTutorialFlags",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "StartGuidedQTE",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "FireGuidedShot",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "EnsureGuidedPrompt",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "CaptureGuidedShot",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "UpdateGuidedGeometry",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "BeginGuidedSidestep",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "PromptGuidedResume",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "BeginFinalCombat",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "ApplyFinalRockImpact",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "UpdateTrainingWalker",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "ConfigureNativeTarget",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "UpdateRangeEnemies",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "UpdateSmoothWalker",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "StartPairedPlank",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "HandlePlankShot",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "UpdatePairedPlank",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "PosePairedPlank",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "ApplyPairedPlankImpact",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "HideTrainingThreatPrompt",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "GetRangeLessonStatus",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "RestoreStageHealth",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "SetEnergyGaugeFocus",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "PulseEnergyGauge",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "UpdateEnergyGaugePulse",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "BeginStage1EnergyIntro",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "BeginEnergyCostLesson",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "BeginEnergyDrainDemo",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "EndEnergyDrainDemo",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "BeginEnergyRecoveryLesson",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "FinishEnergyRecoveryLesson",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "UpdateNativeAmmoSupply",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "ClearNativeAmmoSupply",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "RefreshWorldRevealRange",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "ResolveCombatSpawnFacing",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "SeatSupplyPistol",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "SetFallingRockPrompt",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "IsPlayerFullyInSafeZone",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "EventGraph",
+      "unchanged_by_format": true
+    },
+    {
+      "graph": "ResolveTrainingShot",
+      "unchanged_by_format": true
+    }
+  ],
+  "unchanged_existing_graphs": [
+    {
+      "graph": "UserConstructionScript",
+      "unchanged": true
+    },
+    {
+      "graph": "Feedback",
+      "unchanged": true
+    },
+    {
+      "graph": "GetPistol",
+      "unchanged": true
+    },
+    {
+      "graph": "FindVisual",
+      "unchanged": true
+    },
+    {
+      "graph": "FindId",
+      "unchanged": true
+    },
+    {
+      "graph": "AddVisual",
+      "unchanged": true
+    },
+    {
+      "graph": "SetAbilityNormal",
+      "unchanged": true
+    },
+    {
+      "graph": "HoldIntroTimeStop",
+      "unchanged": true
+    },
+    {
+      "graph": "ClearActionObservations",
+      "unchanged": true
+    },
+    {
+      "graph": "SetObjective",
+      "unchanged": true
+    },
+    {
+      "graph": "SetCheckpoint",
+      "unchanged": true
+    },
+    {
+      "graph": "StopThreats",
+      "unchanged": true
+    },
+    {
+      "graph": "SetLayout",
+      "unchanged": true
+    },
+    {
+      "graph": "UpdateVisuals",
+      "unchanged": true
+    },
+    {
+      "graph": "PrepareRetry",
+      "unchanged": true
+    },
+    {
+      "graph": "PlayConversation",
+      "unchanged": true
+    },
+    {
+      "graph": "InitializeRoom",
+      "unchanged": true
+    },
+    {
+      "graph": "FinishTutorial",
+      "unchanged": true
+    },
+    {
+      "graph": "StartDodgeRound",
+      "unchanged": true
+    },
+    {
+      "graph": "StartProjectileClearRound",
+      "unchanged": true
+    },
+    {
+      "graph": "StartIndependentProjectileClearRound",
+      "unchanged": true
+    },
+    {
+      "graph": "FireFrom",
+      "unchanged": true
+    },
+    {
+      "graph": "UpdateDodge",
+      "unchanged": true
+    },
+    {
+      "graph": "RequireEnergyRecovery",
+      "unchanged": true
+    },
+    {
+      "graph": "KillTarget",
+      "unchanged": true
+    },
+    {
+      "graph": "StartTargets",
+      "unchanged": true
+    },
+    {
+      "graph": "UpdateTargets",
+      "unchanged": true
+    },
+    {
+      "graph": "StartRockMechanism",
+      "unchanged": true
+    },
+    {
+      "graph": "StartFallingRocks",
+      "unchanged": true
+    },
+    {
+      "graph": "UpdateRocks",
+      "unchanged": true
+    },
+    {
+      "graph": "EnableSupply",
+      "unchanged": true
+    },
+    {
+      "graph": "UpdateSupply",
+      "unchanged": true
+    },
+    {
+      "graph": "RefillCombatResources",
+      "unchanged": true
+    },
+    {
+      "graph": "StartCombat",
+      "unchanged": true
+    },
+    {
+      "graph": "EnemyIsDead",
+      "unchanged": true
+    },
+    {
+      "graph": "UpdateCombat",
+      "unchanged": true
+    },
+    {
+      "graph": "PlayerDamaged",
+      "unchanged": true
+    },
+    {
+      "graph": "BindPlayerDamage",
+      "unchanged": true
+    },
+    {
+      "graph": "UnbindPlayerDamage",
+      "unchanged": true
+    },
+    {
+      "graph": "RecordCompletion",
+      "unchanged": true
+    },
+    {
+      "graph": "Present",
+      "unchanged": true
+    },
+    {
+      "graph": "TickTraining",
+      "unchanged": true
+    },
+    {
+      "graph": "CleanupTraining",
+      "unchanged": true
+    },
+    {
+      "graph": "CreateTrainingMarker",
+      "unchanged": true
+    },
+    {
+      "graph": "ClearTrainingMarkers",
+      "unchanged": true
+    },
+    {
+      "graph": "UpdateTrainingMarkers",
+      "unchanged": true
+    },
+    {
+      "graph": "SetTutorialMovement",
+      "unchanged": true
+    },
+    {
+      "graph": "SetTutorialFlags",
+      "unchanged": true
+    },
+    {
+      "graph": "StartGuidedQTE",
+      "unchanged": true
+    },
+    {
+      "graph": "FireGuidedShot",
+      "unchanged": true
+    },
+    {
+      "graph": "EnsureGuidedPrompt",
+      "unchanged": true
+    },
+    {
+      "graph": "CaptureGuidedShot",
+      "unchanged": true
+    },
+    {
+      "graph": "UpdateGuidedGeometry",
+      "unchanged": true
+    },
+    {
+      "graph": "BeginGuidedSidestep",
+      "unchanged": true
+    },
+    {
+      "graph": "PromptGuidedResume",
+      "unchanged": true
+    },
+    {
+      "graph": "BeginFinalCombat",
+      "unchanged": true
+    },
+    {
+      "graph": "ApplyFinalRockImpact",
+      "unchanged": true
+    },
+    {
+      "graph": "UpdateTrainingWalker",
+      "unchanged": true
+    },
+    {
+      "graph": "ConfigureNativeTarget",
+      "unchanged": true
+    },
+    {
+      "graph": "UpdateRangeEnemies",
+      "unchanged": true
+    },
+    {
+      "graph": "UpdateSmoothWalker",
+      "unchanged": true
+    },
+    {
+      "graph": "StartPairedPlank",
+      "unchanged": true
+    },
+    {
+      "graph": "HandlePlankShot",
+      "unchanged": true
+    },
+    {
+      "graph": "UpdatePairedPlank",
+      "unchanged": true
+    },
+    {
+      "graph": "PosePairedPlank",
+      "unchanged": true
+    },
+    {
+      "graph": "ApplyPairedPlankImpact",
+      "unchanged": true
+    },
+    {
+      "graph": "HideTrainingThreatPrompt",
+      "unchanged": true
+    },
+    {
+      "graph": "GetRangeLessonStatus",
+      "unchanged": true
+    },
+    {
+      "graph": "RestoreStageHealth",
+      "unchanged": true
+    },
+    {
+      "graph": "SetEnergyGaugeFocus",
+      "unchanged": true
+    },
+    {
+      "graph": "PulseEnergyGauge",
+      "unchanged": true
+    },
+    {
+      "graph": "UpdateEnergyGaugePulse",
+      "unchanged": true
+    },
+    {
+      "graph": "BeginStage1EnergyIntro",
+      "unchanged": true
+    },
+    {
+      "graph": "BeginEnergyCostLesson",
+      "unchanged": true
+    },
+    {
+      "graph": "BeginEnergyDrainDemo",
+      "unchanged": true
+    },
+    {
+      "graph": "EndEnergyDrainDemo",
+      "unchanged": true
+    },
+    {
+      "graph": "BeginEnergyRecoveryLesson",
+      "unchanged": true
+    },
+    {
+      "graph": "FinishEnergyRecoveryLesson",
+      "unchanged": true
+    },
+    {
+      "graph": "UpdateNativeAmmoSupply",
+      "unchanged": true
+    },
+    {
+      "graph": "ClearNativeAmmoSupply",
+      "unchanged": true
+    },
+    {
+      "graph": "RefreshWorldRevealRange",
+      "unchanged": true
+    },
+    {
+      "graph": "ResolveCombatSpawnFacing",
+      "unchanged": true
+    },
+    {
+      "graph": "SeatSupplyPistol",
+      "unchanged": true
+    },
+    {
+      "graph": "SetFallingRockPrompt",
+      "unchanged": true
+    },
+    {
+      "graph": "EventGraph",
+      "unchanged": true
+    },
+    {
+      "graph": "ResolveTrainingShot",
+      "unchanged": true
+    }
+  ],
+  "mission_unchanged": true,
+  "saves": [
+    {
+      "file": "DialogSystem_QA_20261018_Blueprint_Dialogue.sav",
+      "unchanged": true
+    },
+    {
+      "file": "DialogSystem_QA_Legacy_20261018_Dialogue.sav",
+      "unchanged": true
+    },
+    {
+      "file": "MouseSettings.sav",
+      "unchanged": true
+    },
+    {
+      "file": "Saved.sav",
+      "unchanged": true
+    },
+    {
+      "file": "SLOTDATA.sav",
+      "unchanged": true
+    }
+  ],
+  "saved": [
+    "/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+    "/Game/Maps/Map_TrainingRoom"
+  ],
+  "runtime_test": "Not run; user will test.",
+  "dirty_content": [],
+  "dirty_maps": []
+}

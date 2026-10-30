@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "helper_loaded": false,
+  "checks": [
+    {
+      "name": "cold_load:/Game/Blueprints/Player/BP_FPCharacter",
+      "passed": true
+    },
+    {
+      "name": "cold_load:/Game/Blueprints/Interactables/BP_Item_Base",
+      "passed": true
+    },
+    {
+      "name": "cold_load:/Game/Blueprints/Components/Player/AC_Interaction",
+      "passed": true
+    },
+    {
+      "name": "cold_load:/Game/Environment/TrainingRoom/Tutorial/BP_TrainingController",
+      "passed": true
+    },
+    {
+      "name": "cold_load:/Game/Blueprints/Components/Player/AC_TimeAbility",
+      "passed": true
+    },
+    {
+      "name": "cold_load:/Game/Blueprints/Weapons/Player/WeaponBases/BP_Weapon_AutomaticBase",
+      "passed": true
+    },
+    {
+      "name": "cold_load:/Game/Blueprints/Weapons/Player/WeaponBases/BP_Weapon_ShotgunBase",
+      "passed": true
+    },
+    {
+      "name": "cold_load:/Game/Blueprints/Components/Player/AC_KeyPrompt",
+      "passed": true
+    },
+    {
+      "name": "cold_load:/Game/Blueprints/Interactables/Interaction/AC_KeyPromptInfo",
+      "passed": true
+    },
+    {
+      "name": "cold_load:/Game/Blueprints/Interfaces/BPI_KeyPrompt",
+      "passed": true
+    },
+    {
+      "name": "cold_load:/Game/UI/Widgets/UI_Hud",
+      "passed": true
+    },
+    {
+      "name": "table_rows_preserved",
+      "passed": true
+    },
+    {
+      "name": "provider_really_implements_interface",
+      "passed": true
+    },
+    {
+      "name": "provider_default_row",
+      "passed": true
+    },
+    {
+      "name": "manager_tick_disabled",
+      "passed": true
+    },
+    {
+      "name": "provider_tick_disabled",
+      "passed": true
+    },
+    {
+      "name": "table_owned_by_player_component",
+      "passed": true
+    },
+    {
+      "name": "test_fixture_not_shipped",
+      "passed": true
+    },
+    {
+      "name": "old_reload_collapsed",
+      "passed": true
+    }
+  ]
+}
