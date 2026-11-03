@@ -1,5 +1,12 @@
 # Training Room tutorial implementation
 
+## 2026-11-03 — Stage 5 support hit window
+
+User requested a 1-second hit interval. In `BP_TrainingController.UpdatePairedPlank`, both the first-hit wait threshold (`K2Node_CallFunction_32.B`) and accepted impact gap (`K2Node_CallFunction_35.B`) changed from 0.12 to 1.0 real seconds. The existing graph comment was updated. Both impacts must still be temporal; duplicate-side and falling-state handling are unchanged. The slab now begins resolving its fall approximately one second after the first accepted hit.
+
+Saved the controller only. Blueprint compilation reported zero errors and zero warnings (three existing redundant-cast notes). Before/after graph comparison confirmed only the two intended pin defaults changed semantically; the edited nodes received a selective Blueprint Assist pass and editor visual review. Independent cold loading confirmed both saved values are 1.0; the other inspected assets, training map and configuration hashes remain unchanged. No PIE or gameplay tests were run, per the user's instruction to perform them personally. Playtest acceptance remains pending; the historical 0.12-second validation below does not validate the new window.
+
+
 2026-10-28: [武器台下部共面闪烁、手枪贴合与移动弱点靶渐入时序修复](tutorial-table-contact-reveal-fix.md)。移动靶的位置和行走动画均等待自身完全渐入及场景 Ready；武器台桌面高度、原碰撞和其他关卡摆放保持。
 
 Current flow orchestration is now in BP_TrainingMission task components; the historical Level Blueprint stage chain below is superseded. The fixed-layout merge repair is retained and the migrated eight-stage flow has passed the automated acceptance described in [MissionSystem implementation](mission-system.md) and [validation](MissionSystem/validation.zh-CN.md). Later objectives use explicitly disclosed fixtures; manual aim/feel acceptance remains separate.
