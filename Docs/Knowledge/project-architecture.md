@@ -97,6 +97,10 @@
 
 `BP_FPCharacter` 使用现有 `Health` 作为剩余受击次数，默认值为 2。`Event AnyDamage` 将任意正伤害统一折算为一次受击；它用 `Get Real Time Seconds` 和默认 0.9 秒的 `DamageInvulnerabilitySeconds` 去重，因此多帧近战检测和全局时间倍率 0.01 都不会在同一保护窗内连续扣除。第一次受击启用 `/Game/Characters/Player/Camera/Materials/M_PlayerDamageVignette`；该后处理以屏幕矩形边缘距离生成暗红遮罩，不再产生圆形镜片边界。`/Game/Input/Actions/IA_DebugPlayerInvincibility` 在 `IMC_Player` 映射 F6，切换玩家原生 `Can Be Damaged`：开启时所有 Unreal Damage 在进入 AnyDamage 前被拒绝，关闭时恢复，状态不写入存档。第二次独立受击把 Health 置为 0、设置 `IsPlayerDead`、退出时间能力并恢复世界时间，随后锁定输入与移动、清零速度并立刻回到缓存 checkpoint；0.65 秒淡出结束后再次确认 checkpoint 变换，再恢复控制器朝向、Health、伤害接收、Walking 和输入，并清除暗角及淡出状态。
 
+2026-11-06：`BP_FPCharacter` 新增受伤后 5 秒自然回满生命。`ResetHealthRecovery` 在原伤害门接受命中后重计；原 Tick 调用 `UpdateHealthRecovery`，按现实时间累计，实际 FullStop 期间暂停并持续刷新采样点，解除后只续计剩余时间。满血/死亡清零，恢复同时清除原受伤暗角和镜头淡色。详见 [生命恢复与验证边界](../Implementation/player-health-recovery.md)。
+
+同日暗角表现更新：`BPI_PlayerDamageFeedback.SetDamageVignette(Visible, Immediate) → Handled` 是统一调用入口。`BP_FPCharacter` 默认 0.25 秒渐入 / 0.45 秒渐出，以现实时间驱动、支持反向接续与同目标幂等；所有原受伤/回血/死亡/复活及教程重试入口均接入。暗角只由 `ApplyDamageVignetteWeight` 写入。旧受伤固定红色 Camera Fade 移除，死亡/复活淡出链保留；生命恢复的 FullStop 暂停规则不变。见 [调用和验证](../Implementation/player-damage-feedback.md)。
+
 Shooter 的迁入步枪与行为树保留原有开火节奏，但射击终点生成 `/Game/Blueprints/AI/Shooter/Projectiles/BP_ShooterProjectile_Bullet`，由其父类的通用 `ApplyDamage` 进入玩家现有 AnyDamage 链。Melee 保留迁入的攻击选择、Montage/Notify 与队伍过滤，但四个最终伤害提交点已改为通用 `ApplyDamage`，同样进入玩家的两次受击、无敌帧、暗角、死亡和复活流程。checkpoint 资产和存档格式均未修改。
 
 ## 敌人回溯边界
