@@ -1,0 +1,714 @@
+{
+  "date": "2026-11-07",
+  "engine": "UE 5.6.1",
+  "passed": 101,
+  "tests": {
+    "direct-tests": [
+      {
+        "name": "transfer (True, 0, 0, 12)",
+        "passed": true,
+        "result": [
+          12,
+          0
+        ],
+        "expected": [
+          12,
+          0
+        ]
+      },
+      {
+        "name": "transfer (True, 3, 7, 9)",
+        "passed": true,
+        "result": [
+          12,
+          7
+        ],
+        "expected": [
+          12,
+          7
+        ]
+      },
+      {
+        "name": "transfer (False, 0, 20, 12)",
+        "passed": true,
+        "result": [
+          12,
+          8
+        ],
+        "expected": [
+          12,
+          8
+        ]
+      },
+      {
+        "name": "transfer (False, 2, 3, 10)",
+        "passed": true,
+        "result": [
+          5,
+          0
+        ],
+        "expected": [
+          5,
+          0
+        ]
+      },
+      {
+        "name": "transfer (False, 0, 0, 12)",
+        "passed": true,
+        "result": [
+          0,
+          0
+        ],
+        "expected": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "transfer (False, 2, 7, -1)",
+        "passed": true,
+        "result": [
+          2,
+          7
+        ],
+        "expected": [
+          2,
+          7
+        ]
+      },
+      {
+        "name": "transfer (True, 2, 0, 1)",
+        "passed": true,
+        "result": [
+          3,
+          0
+        ],
+        "expected": [
+          3,
+          0
+        ]
+      },
+      {
+        "name": "R at zero reserve with debug enabled",
+        "passed": true,
+        "text": "R",
+        "visible": true
+      },
+      {
+        "name": "legacy API routes Q to shared widget",
+        "passed": true,
+        "source": "<Object '/Engine/Transient.UnrealEdEngine_0:BP_TimeShuttleGameInstance_C_0.UI_Hud_C_0' (0x000002B059FEAE00) Class 'UI_Hud_C'>",
+        "text": "Q"
+      },
+      {
+        "name": "legacy Q panel collapsed",
+        "passed": true
+      },
+      {
+        "name": "guided uses same Q content",
+        "passed": true
+      },
+      {
+        "name": "Q clears and restores R",
+        "passed": true
+      },
+      {
+        "name": "R hidden at zero reserve with debug disabled",
+        "passed": true
+      },
+      {
+        "name": "F renders in shared widget",
+        "passed": true
+      },
+      {
+        "name": "one prompt HUD instance",
+        "passed": true,
+        "count": 1
+      }
+    ],
+    "runtime-suite": [
+      {
+        "case": "pistol debug zero",
+        "name": "R follows effective reserve policy",
+        "passed": true,
+        "visible": true,
+        "key": "R"
+      },
+      {
+        "case": "pistol debug zero",
+        "name": "reload input accepts correct policy",
+        "passed": true,
+        "reloading": true
+      },
+      {
+        "case": "pistol debug zero",
+        "name": "R withdrawn while reloading / unavailable",
+        "passed": true
+      },
+      {
+        "case": "pistol debug zero",
+        "name": "reload finishes and transfers correct rounds",
+        "passed": true,
+        "actual": [
+          12,
+          0
+        ],
+        "expected": [
+          12,
+          0
+        ],
+        "elapsed": 1.907
+      },
+      {
+        "case": "pistol debug zero",
+        "name": "debug reload still consumes magazine when firing",
+        "passed": true,
+        "ammo": 11
+      },
+      {
+        "case": "pistol debug repeated",
+        "name": "R follows effective reserve policy",
+        "passed": true,
+        "visible": true,
+        "key": "R"
+      },
+      {
+        "case": "pistol debug repeated",
+        "name": "reload input accepts correct policy",
+        "passed": true,
+        "reloading": true
+      },
+      {
+        "case": "pistol debug repeated",
+        "name": "R withdrawn while reloading / unavailable",
+        "passed": true
+      },
+      {
+        "case": "pistol debug repeated",
+        "name": "reload finishes and transfers correct rounds",
+        "passed": true,
+        "actual": [
+          12,
+          0
+        ],
+        "expected": [
+          12,
+          0
+        ],
+        "elapsed": 1.906
+      },
+      {
+        "case": "pistol finite",
+        "name": "R follows effective reserve policy",
+        "passed": true,
+        "visible": false,
+        "key": "R"
+      },
+      {
+        "case": "pistol finite",
+        "name": "reload input accepts correct policy",
+        "passed": true,
+        "reloading": true
+      },
+      {
+        "case": "pistol finite",
+        "name": "R withdrawn while reloading / unavailable",
+        "passed": true
+      },
+      {
+        "case": "pistol finite",
+        "name": "reload finishes and transfers correct rounds",
+        "passed": true,
+        "actual": [
+          12,
+          41
+        ],
+        "expected": [
+          12,
+          41
+        ],
+        "elapsed": 1.968
+      },
+      {
+        "case": "pistol partial reserve",
+        "name": "R follows effective reserve policy",
+        "passed": true,
+        "visible": true,
+        "key": "R"
+      },
+      {
+        "case": "pistol partial reserve",
+        "name": "reload input accepts correct policy",
+        "passed": true,
+        "reloading": true
+      },
+      {
+        "case": "pistol partial reserve",
+        "name": "R withdrawn while reloading / unavailable",
+        "passed": true
+      },
+      {
+        "case": "pistol partial reserve",
+        "name": "reload finishes and transfers correct rounds",
+        "passed": true,
+        "actual": [
+          2,
+          0
+        ],
+        "expected": [
+          2,
+          0
+        ],
+        "elapsed": 1.907
+      },
+      {
+        "case": "pistol no reserve",
+        "name": "R follows effective reserve policy",
+        "passed": true,
+        "visible": false,
+        "key": "R"
+      },
+      {
+        "case": "pistol no reserve",
+        "name": "reload input accepts correct policy",
+        "passed": true,
+        "reloading": false
+      },
+      {
+        "case": "pistol no reserve",
+        "name": "R withdrawn while reloading / unavailable",
+        "passed": true
+      },
+      {
+        "case": "pistol no reserve",
+        "name": "reload finishes and transfers correct rounds",
+        "passed": true,
+        "actual": [
+          0,
+          0
+        ],
+        "expected": [
+          0,
+          0
+        ],
+        "elapsed": 0.422
+      },
+      {
+        "case": "pistol fullstop debug",
+        "name": "R follows effective reserve policy",
+        "passed": true,
+        "visible": true,
+        "key": "R"
+      },
+      {
+        "case": "pistol fullstop debug",
+        "name": "reload input accepts correct policy",
+        "passed": true,
+        "reloading": true
+      },
+      {
+        "case": "pistol fullstop debug",
+        "name": "R withdrawn while reloading / unavailable",
+        "passed": true
+      },
+      {
+        "case": "pistol fullstop debug",
+        "name": "reload finishes and transfers correct rounds",
+        "passed": true,
+        "actual": [
+          12,
+          0
+        ],
+        "expected": [
+          12,
+          0
+        ],
+        "elapsed": 1.906
+      },
+      {
+        "case": "shotgun debug zero",
+        "name": "native pickup equips shotgun",
+        "passed": true
+      },
+      {
+        "case": "shotgun debug zero",
+        "name": "new firearm reads test GameMode debug bool",
+        "passed": true
+      },
+      {
+        "case": "shotgun debug zero",
+        "name": "R follows effective reserve policy",
+        "passed": true,
+        "visible": true,
+        "key": "R"
+      },
+      {
+        "case": "shotgun debug zero",
+        "name": "reload input accepts correct policy",
+        "passed": true,
+        "reloading": true
+      },
+      {
+        "case": "shotgun debug zero",
+        "name": "R withdrawn while reloading / unavailable",
+        "passed": true
+      },
+      {
+        "case": "shotgun debug zero",
+        "name": "reload finishes and transfers correct rounds",
+        "passed": true,
+        "actual": [
+          9,
+          0
+        ],
+        "expected": [
+          9,
+          0
+        ],
+        "elapsed": 9.265
+      },
+      {
+        "case": "shotgun debug zero",
+        "name": "debug reload still consumes magazine when firing",
+        "passed": true,
+        "ammo": 8
+      },
+      {
+        "case": "shotgun finite",
+        "name": "R follows effective reserve policy",
+        "passed": true,
+        "visible": false,
+        "key": "R"
+      },
+      {
+        "case": "shotgun finite",
+        "name": "reload input accepts correct policy",
+        "passed": true,
+        "reloading": true
+      },
+      {
+        "case": "shotgun finite",
+        "name": "R withdrawn while reloading / unavailable",
+        "passed": true
+      },
+      {
+        "case": "shotgun finite",
+        "name": "reload finishes and transfers correct rounds",
+        "passed": true,
+        "actual": [
+          8,
+          0
+        ],
+        "expected": [
+          8,
+          0
+        ],
+        "elapsed": 1.719
+      },
+      {
+        "case": "shotgun no reserve",
+        "name": "R follows effective reserve policy",
+        "passed": true,
+        "visible": false,
+        "key": "R"
+      },
+      {
+        "case": "shotgun no reserve",
+        "name": "reload input accepts correct policy",
+        "passed": true,
+        "reloading": false
+      },
+      {
+        "case": "shotgun no reserve",
+        "name": "R withdrawn while reloading / unavailable",
+        "passed": true
+      },
+      {
+        "case": "shotgun no reserve",
+        "name": "reload finishes and transfers correct rounds",
+        "passed": true,
+        "actual": [
+          0,
+          0
+        ],
+        "expected": [
+          0,
+          0
+        ],
+        "elapsed": 0.422
+      },
+      {
+        "case": "shotgun fullstop debug",
+        "name": "R follows effective reserve policy",
+        "passed": true,
+        "visible": false,
+        "key": "R"
+      },
+      {
+        "case": "shotgun fullstop debug",
+        "name": "reload input accepts correct policy",
+        "passed": true,
+        "reloading": true
+      },
+      {
+        "case": "shotgun fullstop debug",
+        "name": "R withdrawn while reloading / unavailable",
+        "passed": true
+      },
+      {
+        "case": "shotgun fullstop debug",
+        "name": "reload finishes and transfers correct rounds",
+        "passed": true,
+        "actual": [
+          9,
+          0
+        ],
+        "expected": [
+          9,
+          0
+        ],
+        "elapsed": 1.719
+      }
+    ],
+    "qte-runtime": [
+      {
+        "name": "production threat detector shows shared Q",
+        "passed": true
+      },
+      {
+        "name": "legacy panel stays collapsed",
+        "passed": true
+      },
+      {
+        "name": "native Q action enters FullStop",
+        "passed": true
+      },
+      {
+        "name": "successful stop withdraws Q",
+        "passed": true
+      },
+      {
+        "name": "production threat detector shows shared Q",
+        "passed": true
+      },
+      {
+        "name": "legacy panel stays collapsed",
+        "passed": true
+      },
+      {
+        "name": "native threat window expires",
+        "passed": true
+      },
+      {
+        "name": "expiry withdraws Q and restores normal time",
+        "passed": true
+      }
+    ],
+    "tutorial-prompt-tests": [
+      {
+        "name": "tutorial uses shared base GameMode",
+        "passed": true
+      },
+      {
+        "name": "tutorial debug defaults finite",
+        "passed": true
+      },
+      {
+        "name": "tutorial uses same player class",
+        "passed": true
+      },
+      {
+        "name": "one shared prompt renderer",
+        "passed": true
+      },
+      {
+        "name": "guided QTE shares Q style and source",
+        "passed": true
+      },
+      {
+        "name": "legacy tutorial panel remains collapsed",
+        "passed": true
+      },
+      {
+        "name": "guided shooter has native controller",
+        "passed": true
+      },
+      {
+        "name": "physical guided Q enters FullStop",
+        "passed": true
+      },
+      {
+        "name": "guided success withdraws shared Q",
+        "passed": true
+      }
+    ],
+    "tutorial-finite-tests": [
+      {
+        "name": "forced teaching prompt outranks ordinary QTE",
+        "passed": true
+      },
+      {
+        "name": "clearing QTE preserves forced teaching source",
+        "passed": true
+      },
+      {
+        "name": "teaching source clears through shared API",
+        "passed": true
+      },
+      {
+        "name": "tutorial native ray shares F prompt",
+        "passed": true
+      },
+      {
+        "name": "native world-space old F is collapsed",
+        "passed": true,
+        "count": 1
+      },
+      {
+        "name": "native F action equips shared pistol",
+        "passed": true
+      },
+      {
+        "name": "tutorial firearm inherits finite debug configuration",
+        "passed": true
+      },
+      {
+        "name": "finite reserve shows shared R prompt",
+        "passed": true
+      },
+      {
+        "name": "native tutorial R action starts reload",
+        "passed": true
+      },
+      {
+        "name": "R withdrawn during tutorial reload",
+        "passed": true
+      },
+      {
+        "name": "tutorial reload consumes finite reserve through shared transfer",
+        "passed": true,
+        "ammo": 3,
+        "reserve": 0
+      }
+    ],
+    "cold-runtime": [
+      {
+        "name": "temporary helper absent",
+        "passed": true
+      },
+      {
+        "name": "saved test GameMode selected",
+        "passed": true
+      },
+      {
+        "name": "saved player class unchanged",
+        "passed": true
+      },
+      {
+        "name": "native firearm initialized without helper",
+        "passed": true
+      },
+      {
+        "name": "cold debug zero-reserve R hint",
+        "passed": true
+      },
+      {
+        "name": "cold Q bridge uses shared renderer",
+        "passed": true
+      },
+      {
+        "name": "cold old Q panel collapsed",
+        "passed": true
+      },
+      {
+        "name": "cold Q clear restores R",
+        "passed": true
+      },
+      {
+        "name": "cold shared pure policy callable",
+        "passed": true
+      },
+      {
+        "name": "cold native reload begins and hides R",
+        "passed": true
+      },
+      {
+        "name": "cold native debug reload fills magazine at zero reserve",
+        "passed": true
+      },
+      {
+        "name": "cold F row uses shared renderer",
+        "passed": true
+      },
+      {
+        "name": "cold prompt cleanup",
+        "passed": true
+      },
+      {
+        "name": "PIE stopped and task assets clean",
+        "passed": true
+      }
+    ]
+  },
+  "compile_reports": {
+    "GM_FP": "errors=0 warnings=0 status=3",
+    "BP_Item_Base": "errors=0 warnings=0 status=3",
+    "BP_Weapon_AutomaticBase": "errors=0 warnings=0 status=3",
+    "BP_Weapon_ShotgunBase": "errors=0 warnings=0 status=3",
+    "AN_ReloadShotgun": "errors=0 warnings=0 status=3",
+    "UI_Hud": "errors=0 warnings=0 status=3",
+    "UI_Interaction": "errors=0 warnings=0 status=3",
+    "AC_KeyPrompt": "errors=0 warnings=0 status=3",
+    "GM_FP_Test": "errors=0 warnings=0 status=3"
+  },
+  "layout_semantics": {
+    "BP_Item_Base": true,
+    "BP_Weapon_AutomaticBase": true,
+    "BP_Weapon_ShotgunBase": true,
+    "AC_KeyPrompt": true,
+    "UI_Hud": true,
+    "AN_ReloadShotgun": true
+  },
+  "unchanged_assets": {
+    "BP_FPCharacter": true,
+    "WBP_KeyPrompt": true,
+    "WBP_KeyPromptHUD": true,
+    "AC_TimeAbility": true,
+    "AC_Interaction": true,
+    "BP_TrainingController": true,
+    "BP_Item_Pickup": true
+  },
+  "final_state": {
+    "editor_world": "/Game/Maps/Map_Test.Map_Test",
+    "dirty_packages": [],
+    "pie_stopped": true,
+    "helper_absent": true,
+    "game_mode": "/Game/Blueprints/GameModes/GM_FP_Test.GM_FP_Test_C",
+    "test_debug": true,
+    "base_debug": false,
+    "restored_camera": true,
+    "play_mode": "PlayMode_InViewPort",
+    "player_vignette_seconds": [
+      0.3,
+      3.0
+    ]
+  },
+  "method_notes": [
+    "PIE native reload / interact action injection and production weapons; transient fixtures only.",
+    "Ordinary threat detection used a production enemy projectile; screenshot fixture extended its window without saving defaults. The separate input / expiry regression used the saved default duration.",
+    "Guided tutorial used native shooter / bullet and physical Q input after focusing the preview.",
+    "Cold verification ran without the temporary editor helper; the result writer was corrected and the 14 checks rerun."
+  ],
+  "output_log": {
+    "cold_blueprints_loaded": 9,
+    "cold_compile_errors": [],
+    "final_cold_runtime_errors": [],
+    "final_tutorial_runtime_errors": [],
+    "earlier_observations": [
+      "One PreviewScene.GetWorld editor-exit assertion after scoped assets had been saved. Subsequent editor shutdowns were clean.",
+      "Early direct-pickup fixture omitted native focus/widget initialization; corrected fixtures use delayed focus or the production interaction ray.",
+      "Cold result serialization initially referenced a destroyed PIE world; the writer was fixed and all 14 checks rerun.",
+      "Final editor-state observer initially ran before camera restoration; camera and original preview mode were subsequently restored and verified."
+    ]
+  }
+}

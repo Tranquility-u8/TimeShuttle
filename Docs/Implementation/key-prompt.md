@@ -1,5 +1,7 @@
 # Open-corner key prompt (P-106, PNG revision)
 
+2026-11-07: ordinary / guided QTE and native interaction fallback now join reload and forced tutorial prompts in the same renderer. The visual widgets remain unchanged. See [shared presentation and explicit reload debug configuration](shared-key-prompts-and-reload-debug.md).
+
 Current gameplay integration (2026-10-28): the player now owns AC_KeyPrompt and DT_KeyPrompts. Forced falling-rock, normal reload and configurable interaction prompts are integrated; the old RELOAD advice is retired. See [Blueprint rules and setup](key-prompt-rules.md) and [validation](KeyPromptRules/validation.md). The PNG revision history below describes the earlier visual-only verification scope.
 
 Updated 2026-10-28 in UE 5.6.1. Current implementation: two ordinary UMG Blueprint widgets plus four imported white-alpha PNG textures. No C++ plugin or runtime class was added.
