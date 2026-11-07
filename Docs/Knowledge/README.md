@@ -19,6 +19,8 @@ Latest tutorial design direction: [2026-10-15 R5 tutorial readback and unified 7
 
 Chapter 1 两房间当前手动白盒与 R17 历史生成布局分别维护。第二房间的可复用演出、原生时停接入、模型替换入口和验证边界见 [第二房间演出](../Implementation/chapter1-room2-cinematic.md)；原生破裂与初始碎块布置见 [天花板白盒](../Implementation/chapter1-room2-ceiling.md)。
 
+Chapter 1 的现场备份、逐块替换、同机位复拍和角色通行验收已整理为[房间美术制作工作流](../Implementation/chapter1-room-art-workflow.md)。[第二房间「时序校准室」美术规划](../Design/Chapter1/room2-environment-plan.md)附两台计时立柱的分工、原关卡四视角、动线图和验收标准。
+
 ## Authority and conflicts
 
 Mission path guidance: [setup and verification](../Implementation/mission-guidance.md). `Map_GuidanceDemo` now demonstrates a designer-authored fixed floor path with travelling arrows and a region objective. Fixed start/intermediate roles plus the final target determine geometry, independently of player position or NavMesh. The earlier terminal and GuideConsole interaction task were removed. It extends MissionFlow through a reusable task component; existing training task links and default maps are unchanged.
