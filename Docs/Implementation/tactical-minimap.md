@@ -27,6 +27,8 @@ Widget class defaults expose `MapRange` (2500 cm half-range), `MapSize` (224 log
 
 Terrain references are collected at widget construction. Moving existing meshes, including door leaves, are resampled. New streamed/spawned mesh components are not automatically registered in this first version; a new player/widget rebuilds the cache. Terrain uses conservative world-axis component bounds, so curved/rotated/irregular meshes are approximations rather than an exact floor-plan raster. Landscape-only terrain and instanced mesh per-instance outlines are not certified.
 
+The map panel is hidden by default. Enable **Show Map Panel** in the class defaults of `WBP_TacticalMinimap` to restore its terrain, labels and map markers. The incoming projectile arrows around the reticle use child widgets and stay available with either setting.
+
 The current threat integration covers the game's existing production enemy-projectile QTE. It does not introduce melee prediction, reveal every enemy, or infer falling-object/explosion danger regions. Those require explicit threat-source contracts rather than treating every nearby actor as dangerous.
 
 ## Verification and evidence
