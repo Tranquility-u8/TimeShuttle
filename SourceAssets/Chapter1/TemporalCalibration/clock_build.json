@@ -1,0 +1,51 @@
+{
+  "material_manifest": "material_manifest.json",
+  "meshes": [
+    {
+      "name": "SM_TC_ReferenceClock",
+      "face_yaw_ue": -60,
+      "pivot": "base center",
+      "triangles": 9186,
+      "dims_m": [
+        4.254,
+        4.9,
+        5.9
+      ],
+      "slots": [
+        "TC_Graphite",
+        "TC_Slate",
+        "TC_Seal",
+        "TC_Alloy",
+        "TC_Ceramic",
+        "TC_Optic",
+        "TC_Amber",
+        "TC_ReferenceFace",
+        "TC_LiveReadout",
+        "TC_Pilot",
+        "TC_Index"
+      ]
+    },
+    {
+      "name": "SM_TC_TestClock",
+      "face_yaw_ue": 0,
+      "pivot": "base center",
+      "triangles": 10038,
+      "dims_m": [
+        4.254,
+        4.9,
+        5.9
+      ],
+      "slots": [
+        "TC_Graphite",
+        "TC_Slate",
+        "TC_Seal",
+        "TC_Alloy",
+        "TC_Ceramic",
+        "TC_Optic",
+        "TC_Amber",
+        "TC_TestFace",
+        "TC_Index"
+      ]
+    }
+  ]
+}

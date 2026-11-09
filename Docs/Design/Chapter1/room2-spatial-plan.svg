@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1420 955" width="1420" height="955" role="img" aria-labelledby="title desc" font-family="'Microsoft YaHei','Noto Sans CJK SC','PingFang SC',sans-serif">
+  <title id="title">Time Shuttler · Chapter 1 时序校准室空间与动线</title>
+  <desc id="desc">时序校准室灾后、二次坍塌前的俯视图。东侧基准钟与西侧实验钟的位置取自 UE 立柱白盒。两条历史测试路线分别通向西侧锁门与北侧出口。</desc>
+  <rect x="0" y="0" width="1420" height="955" fill="#F9FAF5" stroke="none" stroke-width="1" />
+  <text x="62" y="49" fill="#28665B" font-size="17" font-weight="700" text-anchor="start" letter-spacing="2.0">TIME SHUTTLER</text>
+  <text x="280" y="49" fill="#54665E" font-size="15" font-weight="500" text-anchor="start" letter-spacing="1.5">CHAPTER  1     /     ROOM  02</text>
+  <line x1="62" y1="67" x2="1358" y2="67" stroke="#BFCBC1" stroke-width="1" />
+  <text x="60" y="123" fill="#20342F" font-size="44" font-weight="700" text-anchor="start">时序校准室 · 第二房间</text>
+  <text x="62" y="158" fill="#54665E" font-size="19" font-weight="400" text-anchor="start">爆炸前俯视图  /  东侧管口进入，西侧锁门触发，北侧出口脱离。</text>
+  <line x1="873" y1="203" x2="873" y2="842" stroke="#C6CFC5" stroke-width="1" />
+  <defs>
+    <pattern id="safety" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M-2 2L2 -2M0 8L8 0M6 10L10 6" stroke="#BD9581" stroke-width="1" opacity="0.44" />
+    </pattern>
+    <pattern id="rubble" width="7" height="7" patternUnits="userSpaceOnUse">
+      <path d="M0 2H7" stroke="#A4A89D" stroke-width="0.95" />
+    </pattern>
+    <clipPath id="room">
+      <rect x="142.071" y="222.58" width="659.2349999999999" height="589.77428" />
+    </clipPath>
+  </defs>
+  <rect x="142.07" y="222.58" width="659.23" height="589.77" fill="#F2F4ED" stroke="none" stroke-width="1" />
+  <line x1="219.82" y1="222.58" x2="219.82" y2="812.35" stroke="#DCE3D8" stroke-width="1" />
+  <line x1="361.82" y1="222.58" x2="361.82" y2="812.35" stroke="#DCE3D8" stroke-width="1" />
+  <line x1="503.82" y1="222.58" x2="503.82" y2="812.35" stroke="#DCE3D8" stroke-width="1" />
+  <line x1="645.82" y1="222.58" x2="645.82" y2="812.35" stroke="#DCE3D8" stroke-width="1" />
+  <line x1="787.82" y1="222.58" x2="787.82" y2="812.35" stroke="#DCE3D8" stroke-width="1" />
+  <line x1="142.07" y1="228.26" x2="801.31" y2="228.26" stroke="#DCE3D8" stroke-width="1" />
+  <line x1="142.07" y1="370.26" x2="801.31" y2="370.26" stroke="#DCE3D8" stroke-width="1" />
+  <line x1="142.07" y1="512.26" x2="801.31" y2="512.26" stroke="#DCE3D8" stroke-width="1" />
+  <line x1="142.07" y1="654.26" x2="801.31" y2="654.26" stroke="#DCE3D8" stroke-width="1" />
+  <line x1="142.07" y1="796.26" x2="801.31" y2="796.26" stroke="#DCE3D8" stroke-width="1" />
+  <rect x="106.22" y="614.5" width="238.56" height="215.84" fill="url(#safety)" stroke="#AB7F66" stroke-width="1.4" stroke-dasharray="3 5" clip-path="url(#room)" />
+  <rect x="410.1" y="631.54" width="59.64" height="76.68" fill="#DDD4BC" stroke="#AAA082" stroke-width="1.15">
+    <title>Blockout_Box40</title>
+  </rect>
+  <rect x="685.58" y="361.74" width="71" height="65.32" fill="#DDD4BC" stroke="#AAA082" stroke-width="1.15">
+    <title>Blockout_Box41</title>
+  </rect>
+  <rect x="393.06" y="236.78" width="71" height="65.32" fill="#DDD4BC" stroke="#AAA082" stroke-width="1.15">
+    <title>Blockout_Box42</title>
+  </rect>
+  <rect x="231.18" y="236.78" width="82.36" height="53.96" fill="#DDD4BC" stroke="#AAA082" stroke-width="1.15">
+    <title>Blockout_Box43</title>
+  </rect>
+  <rect x="151.66" y="307.78" width="53.96" height="82.36" fill="#DDD4BC" stroke="#AAA082" stroke-width="1.15">
+    <title>Blockout_Box46</title>
+  </rect>
+  <rect x="151.66" y="432.74" width="53.96" height="82.36" fill="#DDD4BC" stroke="#AAA082" stroke-width="1.15">
+    <title>Blockout_Box48</title>
+  </rect>
+  <rect x="151.66" y="552.02" width="53.96" height="82.36" fill="#DDD4BC" stroke="#AAA082" stroke-width="1.15">
+    <title>Blockout_Box50</title>
+  </rect>
+  <rect x="662.86" y="747.98" width="82.36" height="53.96" fill="#DDD4BC" stroke="#AAA082" stroke-width="1.15">
+    <title>Blockout_Box54</title>
+  </rect>
+  <rect x="552.1" y="747.98" width="82.36" height="53.96" fill="#DDD4BC" stroke="#AAA082" stroke-width="1.15">
+    <title>Blockout_Box58</title>
+  </rect>
+  <rect x="148.37" y="232.6" width="62.71" height="90.97" fill="#DDD4BC" stroke="#AAA082" stroke-width="1.15">
+    <title>Blockout_Box60</title>
+  </rect>
+  <polygon points="262.42,767.86 336.26,767.86 336.26,790.58 262.42,790.58" fill="#DDD4BC" stroke="#AAA082" stroke-width="1.15">
+    <title>Ch1_R2_ServiceUnit01</title>
+  </polygon>
+  <polygon points="242.01,573.32 250.1,543.15 269.3,548.29 288.5,553.44 280.42,583.61 261.21,578.47" fill="#DDD4BC" stroke="#AAA082" stroke-width="1.15">
+    <title>Ch1_R2_ServiceUnit02</title>
+  </polygon>
+  <polygon points="739.54,255.24 773.62,255.24 773.62,303.52 739.54,303.52" fill="#DDD4BC" stroke="#AAA082" stroke-width="1.15">
+    <title>Ch1_R2_ServiceUnit03</title>
+  </polygon>
+  <polygon points="620.26,547.76 680.52,582.55 680.52,652.13 620.26,686.92 560,652.13 560,582.55" fill="#E5DECA" stroke="#A29474" stroke-width="1.2">
+    <title>Blockout_Cylinder18</title>
+  </polygon>
+  <polygon points="350.46,366 410.72,400.79 410.72,470.37 350.46,505.16 290.2,470.37 290.2,400.79" fill="#E5DECA" stroke="#A29474" stroke-width="1.2">
+    <title>Blockout_Cylinder21</title>
+  </polygon>
+  <polygon points="620.26,579 653.46,598.17 653.46,636.51 620.26,655.68 587.05,636.51 587.05,598.17" fill="#E5DECA" stroke="#A29474" stroke-width="1.2">
+    <title>Blockout_Cylinder19</title>
+  </polygon>
+  <polygon points="350.46,397.24 383.66,416.41 383.66,454.75 350.46,473.92 317.25,454.75 317.25,416.41" fill="#E5DECA" stroke="#A29474" stroke-width="1.2">
+    <title>Blockout_Cylinder22</title>
+  </polygon>
+  <line x1="765.1" y1="475.52" x2="855.98" y2="475.51" stroke="#95998F" stroke-width="13.5" clip-path="url(#room)">
+    <title>Blockout_Tube · 管段轴线</title>
+  </line>
+  <line x1="765.1" y1="475.52" x2="855.98" y2="475.51" stroke="#BEC3B9" stroke-width="10.5" clip-path="url(#room)">
+    <title>Blockout_Tube · 管段轴线</title>
+  </line>
+  <line x1="765.1" y1="475.52" x2="855.98" y2="475.51" stroke="#777F75" stroke-width="0.9" stroke-dasharray="5 5" clip-path="url(#room)" />
+  <line x1="614.58" y1="475.52" x2="766.42" y2="475.51" stroke="#95998F" stroke-width="13.5" clip-path="url(#room)">
+    <title>Blockout_Tube8 · 管段轴线</title>
+  </line>
+  <line x1="614.58" y1="475.52" x2="766.42" y2="475.51" stroke="#BEC3B9" stroke-width="10.5" clip-path="url(#room)">
+    <title>Blockout_Tube8 · 管段轴线</title>
+  </line>
+  <line x1="614.58" y1="475.52" x2="766.42" y2="475.51" stroke="#777F75" stroke-width="0.9" stroke-dasharray="5 5" clip-path="url(#room)" />
+  <line x1="512.34" y1="501.08" x2="587.45" y2="473.73" stroke="#95998F" stroke-width="13.5" clip-path="url(#room)">
+    <title>Blockout_Tube9 · 管段轴线</title>
+  </line>
+  <line x1="512.34" y1="501.08" x2="587.45" y2="473.73" stroke="#BEC3B9" stroke-width="10.5" clip-path="url(#room)">
+    <title>Blockout_Tube9 · 管段轴线</title>
+  </line>
+  <line x1="512.34" y1="501.08" x2="587.45" y2="473.73" stroke="#777F75" stroke-width="0.9" stroke-dasharray="5 5" clip-path="url(#room)" />
+  <line x1="435.66" y1="762.36" x2="435.66" y2="853.24" stroke="#95998F" stroke-width="13.5" clip-path="url(#room)">
+    <title>Blockout_Tube10 · 管段轴线</title>
+  </line>
+  <line x1="435.66" y1="762.36" x2="435.66" y2="853.24" stroke="#BEC3B9" stroke-width="10.5" clip-path="url(#room)">
+    <title>Blockout_Tube10 · 管段轴线</title>
+  </line>
+  <line x1="435.66" y1="762.36" x2="435.66" y2="853.24" stroke="#777F75" stroke-width="0.9" stroke-dasharray="5 5" clip-path="url(#room)" />
+  <line x1="492.46" y1="495.4" x2="465.12" y2="570.51" stroke="#95998F" stroke-width="13.5" clip-path="url(#room)">
+    <title>Blockout_Tube11 · 管段轴线</title>
+  </line>
+  <line x1="492.46" y1="495.4" x2="465.12" y2="570.51" stroke="#BEC3B9" stroke-width="10.5" clip-path="url(#room)">
+    <title>Blockout_Tube11 · 管段轴线</title>
+  </line>
+  <line x1="492.46" y1="495.4" x2="465.12" y2="570.51" stroke="#777F75" stroke-width="0.9" stroke-dasharray="5 5" clip-path="url(#room)" />
+  <line x1="492.46" y1="634.56" x2="419.12" y2="721.96" stroke="#95998F" stroke-width="13.5" clip-path="url(#room)">
+    <title>Blockout_Tube12 · 管段轴线</title>
+  </line>
+  <line x1="492.46" y1="634.56" x2="419.12" y2="721.96" stroke="#BEC3B9" stroke-width="10.5" clip-path="url(#room)">
+    <title>Blockout_Tube12 · 管段轴线</title>
+  </line>
+  <line x1="492.46" y1="634.56" x2="419.12" y2="721.96" stroke="#777F75" stroke-width="0.9" stroke-dasharray="5 5" clip-path="url(#room)" />
+  <polygon points="486.37,572.64 487.17,570.12 522.67,458.27 533.24,424.98 537.2,412.49 539.28,411.41 545.5,408.2 571.06,419.78 579.74,423.71 585.38,427.05 594.88,432.69 596.31,433.54 596.86,434.51 596.92,434.61 597.88,441.15 601.32,464.68 604.1,483.62 574.78,508.48 495.76,575.45 494,576.94 493.48,576.72 492.69,576.4 492.56,576.34 492.1,576.07" fill="#DEDFD4" stroke="#9DA394" stroke-width="1.05" fill-opacity="0.85" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_AlreadyFallen_11</title>
+  </polygon>
+  <polygon points="486.37,572.64 487.17,570.12 522.67,458.27 533.24,424.98 537.2,412.49 539.28,411.41 545.5,408.2 571.06,419.78 579.74,423.71 585.38,427.05 594.88,432.69 596.31,433.54 596.86,434.51 596.92,434.61 597.88,441.15 601.32,464.68 604.1,483.62 574.78,508.48 495.76,575.45 494,576.94 493.48,576.72 492.69,576.4 492.56,576.34 492.1,576.07" fill="url(#rubble)" stroke="none" stroke-width="0" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_AlreadyFallen_11</title>
+  </polygon>
+  <polygon points="159.05,433.27 161.93,419.47 180.03,332.81 186.56,301.55 187.41,297.48 188.32,293.15 194.73,292.49 202.53,291.69 216.1,290.29 261.16,285.67 285.89,283.13 292.07,282.5 296.19,282.08 297.81,281.91 298.63,282.47 299.87,283.32 300.22,283.56 318.29,309.85 317.71,310.81 315.3,314.74 313.71,317.31 294.12,349.22 244.65,429.76 243.3,431.96 241.52,434.87 240.67,436.25 237.24,440.27 229.32,449.57 211.29,470.72 174.73,475.33 172.22,473.52 171.65,471.77 169.05,463.82 159.63,435.01" fill="#DEDFD4" stroke="#9DA394" stroke-width="1.05" fill-opacity="0.85" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_AlreadyFallen_14</title>
+  </polygon>
+  <polygon points="159.05,433.27 161.93,419.47 180.03,332.81 186.56,301.55 187.41,297.48 188.32,293.15 194.73,292.49 202.53,291.69 216.1,290.29 261.16,285.67 285.89,283.13 292.07,282.5 296.19,282.08 297.81,281.91 298.63,282.47 299.87,283.32 300.22,283.56 318.29,309.85 317.71,310.81 315.3,314.74 313.71,317.31 294.12,349.22 244.65,429.76 243.3,431.96 241.52,434.87 240.67,436.25 237.24,440.27 229.32,449.57 211.29,470.72 174.73,475.33 172.22,473.52 171.65,471.77 169.05,463.82 159.63,435.01" fill="url(#rubble)" stroke="none" stroke-width="0" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_AlreadyFallen_14</title>
+  </polygon>
+  <polygon points="162.03,357.76 182.27,311.07 187.53,311.41 293.93,363.96 293.51,368.19 285.32,452.09 279.85,508.16 279.14,515.4 278.11,525.96 276.81,525.83 273.75,525.51 272.46,525.38 270.03,524.92 258.38,522.69 239.05,519 233.53,517.95 232.29,515.18 226.98,503.28 195.65,433.09" fill="#DEDFD4" stroke="#9DA394" stroke-width="1.05" fill-opacity="0.85" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_AlreadyFallen_18</title>
+  </polygon>
+  <polygon points="162.03,357.76 182.27,311.07 187.53,311.41 293.93,363.96 293.51,368.19 285.32,452.09 279.85,508.16 279.14,515.4 278.11,525.96 276.81,525.83 273.75,525.51 272.46,525.38 270.03,524.92 258.38,522.69 239.05,519 233.53,517.95 232.29,515.18 226.98,503.28 195.65,433.09" fill="url(#rubble)" stroke="none" stroke-width="0" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_AlreadyFallen_18</title>
+  </polygon>
+  <polygon points="672.97,711.4 676.63,703.39 693.83,665.8 694.08,665.43 694.2,665.27 694.24,665.22 696.29,664.74 702.24,663.37 739.12,654.83 755.14,651.12 756.51,650.81 756.43,652.39 755.4,672.82 754.93,682.13 753.09,718.33 752.97,720.73 752.85,723.07 752.71,723.34 752.51,723.75 752.47,723.82 749.92,723.42 742.27,722.22" fill="#DEDFD4" stroke="#9DA394" stroke-width="1.05" fill-opacity="0.85" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_AlreadyFallen_26</title>
+  </polygon>
+  <polygon points="672.97,711.4 676.63,703.39 693.83,665.8 694.08,665.43 694.2,665.27 694.24,665.22 696.29,664.74 702.24,663.37 739.12,654.83 755.14,651.12 756.51,650.81 756.43,652.39 755.4,672.82 754.93,682.13 753.09,718.33 752.97,720.73 752.85,723.07 752.71,723.34 752.51,723.75 752.47,723.82 749.92,723.42 742.27,722.22" fill="url(#rubble)" stroke="none" stroke-width="0" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_AlreadyFallen_26</title>
+  </polygon>
+  <polygon points="347.36,793.66 347.56,784.27 347.63,781.23 348.02,763.38 353.44,760.86 388.69,744.46 422.04,728.94 424.4,727.84 430.05,725.21 441.7,738.82 457.65,757.45 459.07,759.1 458.9,759.16 458.55,759.26 347.63,793.58" fill="#DEDFD4" stroke="#9DA394" stroke-width="1.05" fill-opacity="0.85" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_AlreadyFallen_28</title>
+  </polygon>
+  <polygon points="347.36,793.66 347.56,784.27 347.63,781.23 348.02,763.38 353.44,760.86 388.69,744.46 422.04,728.94 424.4,727.84 430.05,725.21 441.7,738.82 457.65,757.45 459.07,759.1 458.9,759.16 458.55,759.26 347.63,793.58" fill="url(#rubble)" stroke="none" stroke-width="0" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_AlreadyFallen_28</title>
+  </polygon>
+  <polygon points="206.17,253.6 207.84,250.98 208.67,249.68 378.44,266.32 378.45,266.58 378.54,269.61 378.57,270.5 374.03,278.22 339.87,336.31 316.42,376.18 309.28,388.32 304.86,395.84 301.61,391.15 273.69,350.91 250.98,318.18 219.31,272.54 208.75,257.32" fill="#DEDFD4" stroke="#9DA394" stroke-width="1.05" fill-opacity="0.85" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_AlreadyFallen_31</title>
+  </polygon>
+  <polygon points="206.17,253.6 207.84,250.98 208.67,249.68 378.44,266.32 378.45,266.58 378.54,269.61 378.57,270.5 374.03,278.22 339.87,336.31 316.42,376.18 309.28,388.32 304.86,395.84 301.61,391.15 273.69,350.91 250.98,318.18 219.31,272.54 208.75,257.32" fill="url(#rubble)" stroke="none" stroke-width="0" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_AlreadyFallen_31</title>
+  </polygon>
+  <polygon points="229.07,562.1 229.18,561.93 229.73,561.13 232.54,557.06 235.29,553.06 237.09,552.96 246.23,552.49 247.55,552.42 249.31,552.33 249.33,552.33 249.37,552.34 249.47,552.36 249.39,552.7 246.37,565.91 245.99,567.57 245.91,567.91 244.83,567.54 243.25,567 234.92,564.14 229.69,562.33 229.19,562.16 229.16,562.15" fill="#DEDFD4" stroke="#9DA394" stroke-width="1.05" fill-opacity="0.85" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_Chip_01</title>
+  </polygon>
+  <polygon points="229.07,562.1 229.18,561.93 229.73,561.13 232.54,557.06 235.29,553.06 237.09,552.96 246.23,552.49 247.55,552.42 249.31,552.33 249.33,552.33 249.37,552.34 249.47,552.36 249.39,552.7 246.37,565.91 245.99,567.57 245.91,567.91 244.83,567.54 243.25,567 234.92,564.14 229.69,562.33 229.19,562.16 229.16,562.15" fill="url(#rubble)" stroke="none" stroke-width="0" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_Chip_01</title>
+  </polygon>
+  <polygon points="275.11,552.57 275.54,547.91 275.87,544.31 276.11,541.67 276.14,541.65 276.27,541.56 276.44,541.44 276.65,541.31 277.62,540.7 279.01,539.83 282.41,537.7 288.02,534.19 288.28,534.03 289.02,536.53 292.2,547.34 292.49,548.31 292.78,549.3 292.7,549.35 292.51,549.46 292.43,549.51 291.31,549.71 287.57,550.37 275.67,552.47" fill="#DEDFD4" stroke="#9DA394" stroke-width="1.05" fill-opacity="0.85" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_Chip_02</title>
+  </polygon>
+  <polygon points="275.11,552.57 275.54,547.91 275.87,544.31 276.11,541.67 276.14,541.65 276.27,541.56 276.44,541.44 276.65,541.31 277.62,540.7 279.01,539.83 282.41,537.7 288.02,534.19 288.28,534.03 289.02,536.53 292.2,547.34 292.49,548.31 292.78,549.3 292.7,549.35 292.51,549.46 292.43,549.51 291.31,549.71 287.57,550.37 275.67,552.47" fill="url(#rubble)" stroke="none" stroke-width="0" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_Chip_02</title>
+  </polygon>
+  <polygon points="290.88,574.48 291.36,573.97 293.11,572.14 298.39,566.61 298.99,566.61 299.05,566.61 299.3,566.64 311.92,568.15 312.79,568.25 311.81,570.67 307.21,582.02 306.82,582.98 306.67,582.97 306.31,582.95 306.16,582.94 303.71,581.59 301.87,580.57 292.72,575.5" fill="#DEDFD4" stroke="#9DA394" stroke-width="1.05" fill-opacity="0.85" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_Chip_03</title>
+  </polygon>
+  <polygon points="290.88,574.48 291.36,573.97 293.11,572.14 298.39,566.61 298.99,566.61 299.05,566.61 299.3,566.64 311.92,568.15 312.79,568.25 311.81,570.67 307.21,582.02 306.82,582.98 306.67,582.97 306.31,582.95 306.16,582.94 303.71,581.59 301.87,580.57 292.72,575.5" fill="url(#rubble)" stroke="none" stroke-width="0" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_Chip_03</title>
+  </polygon>
+  <polygon points="694.6,297.58 694.72,297.42 695.01,297.02 697.69,293.31 700.08,290.02 700.65,289.23 700.93,288.85 701.39,288.77 701.51,288.75 701.85,288.7 702.09,288.69 703.21,288.68 704.06,288.68 706.22,288.66 712.77,288.62 715.5,288.6 715.42,288.94 715.15,289.99 712.21,301.46 711.57,303.95 711.48,303.96 711.24,303.99 710.74,304.05 710.66,304.06 709.62,303.64 708.08,303.02 705.4,301.94 699.11,299.4 696.54,298.36" fill="#DEDFD4" stroke="#9DA394" stroke-width="1.05" fill-opacity="0.85" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_Chip_04</title>
+  </polygon>
+  <polygon points="694.6,297.58 694.72,297.42 695.01,297.02 697.69,293.31 700.08,290.02 700.65,289.23 700.93,288.85 701.39,288.77 701.51,288.75 701.85,288.7 702.09,288.69 703.21,288.68 704.06,288.68 706.22,288.66 712.77,288.62 715.5,288.6 715.42,288.94 715.15,289.99 712.21,301.46 711.57,303.95 711.48,303.96 711.24,303.99 710.74,304.05 710.66,304.06 709.62,303.64 708.08,303.02 705.4,301.94 699.11,299.4 696.54,298.36" fill="url(#rubble)" stroke="none" stroke-width="0" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_Chip_04</title>
+  </polygon>
+  <polygon points="732.98,295.82 733.05,295.73 733.55,295.11 733.73,294.9 735.38,293.48 738.14,291.11 743.91,286.16 744.07,286.47 744.3,286.94 745.72,289.79 747.7,293.74 750.5,299.36 750.81,299.97 750.96,300.28 750.79,300.48 750.36,300.96 750.26,301.08 750.19,301.17 749.14,301.51 744.03,303.17 738.49,304.97 733.92,306.45 733.82,305.31 733.02,296.29" fill="#DEDFD4" stroke="#9DA394" stroke-width="1.05" fill-opacity="0.85" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_Chip_05</title>
+  </polygon>
+  <polygon points="732.98,295.82 733.05,295.73 733.55,295.11 733.73,294.9 735.38,293.48 738.14,291.11 743.91,286.16 744.07,286.47 744.3,286.94 745.72,289.79 747.7,293.74 750.5,299.36 750.81,299.97 750.96,300.28 750.79,300.48 750.36,300.96 750.26,301.08 750.19,301.17 749.14,301.51 744.03,303.17 738.49,304.97 733.92,306.45 733.82,305.31 733.02,296.29" fill="url(#rubble)" stroke="none" stroke-width="0" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_Chip_05</title>
+  </polygon>
+  <polygon points="205.6,369.27 205.64,369.08 205.76,368.61 207.98,359.47 208.1,359.02 208.54,358.75 209.04,358.45 209.21,358.34 209.32,358.27 209.54,358.19 213.95,356.5 216.7,355.45 220.81,353.88 221.59,353.58 221.64,353.92 223.22,365.75 223.63,368.81 223.68,369.15 222.44,369.87 208.16,369.36 206.14,369.29" fill="#DEDFD4" stroke="#9DA394" stroke-width="1.05" fill-opacity="0.85" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_Chip_06</title>
+  </polygon>
+  <polygon points="205.6,369.27 205.64,369.08 205.76,368.61 207.98,359.47 208.1,359.02 208.54,358.75 209.04,358.45 209.21,358.34 209.32,358.27 209.54,358.19 213.95,356.5 216.7,355.45 220.81,353.88 221.59,353.58 221.64,353.92 223.22,365.75 223.63,368.81 223.68,369.15 222.44,369.87 208.16,369.36 206.14,369.29" fill="url(#rubble)" stroke="none" stroke-width="0" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_Chip_06</title>
+  </polygon>
+  <polygon points="600.38,331.92 725.34,331.92 725.34,351.8 600.38,351.8" fill="#5D6861" stroke="#435148" stroke-width="1.7">
+    <title>Ch1_R2_ExitShield_Body</title>
+  </polygon>
+  <polygon points="596.12,258.79 706.88,258.79 706.88,274.41 596.12,274.41" fill="#D7A083" stroke="#B36A45" stroke-width="1.7">
+    <title>Ch1_R2_BlastCabinet</title>
+  </polygon>
+  <polygon points="265.89,539.22 266.09,538.87 268.04,535.52 269.66,532.94 313.52,463.35 321.57,450.59 321.75,450.53 321.8,450.51 354.02,478.75 412.34,529.87 439.46,553.63 442.89,556.64 444.21,574.94 446.04,600.16 443.33,599.24 421.18,591.75 401.61,585.13 325.02,559.23 308.56,553.66 300.19,550.82 272.07,541.31 269.23,540.35" fill="none" stroke="#BB7962" stroke-width="1.3" stroke-dasharray="4 5" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_WillFall_15</title>
+  </polygon>
+  <polygon points="585.83,496.61 585.84,496.52 585.85,496.38 585.92,495.68 585.93,495.59 588.1,479.93 590.53,462.35 593.96,437.55 594.43,434.16 594.44,434.09 594.48,433.89 594.55,433.48 594.57,433.41 728.75,489.37 720.94,536.16 720.8,536.98 720.38,538.58 720.19,539.3 719.16,543.23 716.2,554.41 716.02,555.11 715.71,555.28 715.39,555.45 709.95,557.56 667.83,573.83 667.54,573.87 667.41,573.89 667.37,573.9 665.94,573.58 655.18,571.2 636.76,567.13 634.58,566.64 633.01,564.73 632.07,563.58 617.64,545.9 600.31,524.67 595.22,518.43 591.6,511.22 590.05,508.13 588.7,505.44 588.21,503.93" fill="none" stroke="#BB7962" stroke-width="1.3" stroke-dasharray="4 5" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_WillFall_20</title>
+  </polygon>
+  <polygon points="352.54,727.02 358.49,725.13 367.14,722.39 404,710.69 444.62,697.8 470.5,689.59 472.74,688.88 479.12,686.85 480.51,686.41 477.67,697.85 462.85,757.52 458.63,774.51 458.39,774.77 457.83,775.38 457.59,775.64 449.36,774.52 394.31,767.02 382.7,765.44 374.05,764.26 369.23,763.6 367.1,759.03 364.4,753.24 353.34,729.49 353.26,729.26" fill="none" stroke="#BB7962" stroke-width="1.3" stroke-dasharray="4 5" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_WillFall_21</title>
+  </polygon>
+  <polygon points="150.59,645.96 179.87,639.26 184.59,638.19 186.77,637.69 186.97,637.66 187.45,637.6 187.66,637.57 200.82,642.56 220.56,650.04 222.76,650.87 228.5,660.52 256.68,707.83 305.07,789.09 311.36,799.66 312.86,802.18 313.56,803.36 150.59,803.36" fill="none" stroke="#BB7962" stroke-width="1.3" stroke-dasharray="4 5" clip-path="url(#room)">
+    <title>Ch1_R2_Ceiling_WillFall_33</title>
+  </polygon>
+  <line x1="142.07" y1="222.58" x2="142.07" y2="716.71" stroke="#3A4A44" stroke-width="6.2" />
+  <line x1="142.07" y1="784.93" x2="142.07" y2="812.35" stroke="#3A4A44" stroke-width="6.2" />
+  <line x1="142.07" y1="222.58" x2="606.03" y2="222.58" stroke="#3A4A44" stroke-width="6.2" />
+  <line x1="696.97" y1="222.58" x2="801.31" y2="222.58" stroke="#3A4A44" stroke-width="6.2" />
+  <line x1="801.31" y1="222.58" x2="801.31" y2="441.26" stroke="#3A4A44" stroke-width="6.2" />
+  <line x1="801.31" y1="509.42" x2="801.31" y2="812.35" stroke="#3A4A44" stroke-width="6.2" />
+  <line x1="142.07" y1="812.35" x2="801.31" y2="812.35" stroke="#3A4A44" stroke-width="6.2" />
+  <polyline points="742.38,481.02 742.38,503.74 651.5,526.46 606.06,526.46 515.18,594.62 378.86,617.34 197.1,753.66" fill="none" stroke="#F9FAF5" stroke-width="6.0" stroke-linejoin="round" stroke-linecap="round" />
+  <polyline points="742.38,481.02 742.38,503.74 651.5,526.46 606.06,526.46 515.18,594.62 378.86,617.34 197.1,753.66" fill="none" stroke="#28665B" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="9 6" />
+  <polygon points="682.03,518.83 693.72,520.23 691.68,512.08" fill="#28665B" stroke="#28665B" stroke-width="0.5" />
+  <polygon points="265,702.73 276.32,699.49 271.28,692.77" fill="#28665B" stroke="#28665B" stroke-width="0.5" />
+  <polyline points="180.06,745.14 182.79,742.11 186.58,737.93 190.58,733.5 194.54,729.12 198.69,724.54 202.52,720.3 206.65,715.73 210.52,711.46 214.54,707.01 218.42,702.73 222.5,698.22 226.35,693.95 230.39,689.49 234.27,685.2 238.34,680.7 242.19,676.44 246.31,671.89 250.15,667.64 254.23,663.13 258.05,658.91 262.14,654.38 266,650.12 270.06,645.62 273.87,641.41 277.89,636.97 281.91,632.53 285.93,628.08 289.95,623.64 293.76,619.43 297.78,614.98 301.8,610.54 305.68,606.24 309.73,601.77 313.57,597.52 317.67,592.99 321.59,588.66 325.5,584.34 329.52,579.89 333.53,575.45 337.35,571.23 341.37,566.79 345.39,562.34 349.41,557.9 353.23,553.67 357.25,549.23 361.27,544.78 365.29,540.34 369.1,536.13 373.12,531.68 377.14,527.24 381.16,522.8 384.96,518.59 389,514.13 393.02,509.68 396.83,505.47 400.88,500.99 404.9,496.55 408.92,492.1 412.73,487.89 416.75,483.45 421.04,479.31 425.07,474.87 428.87,470.65 432.88,466.2 436.89,461.75 440.69,457.54 444.7,453.08 448.71,448.63 452.73,444.18 456.74,439.73 460.54,435.51 464.55,431.06 468.56,426.61 472.57,422.16 476.37,417.94 480.38,413.49 484.4,409.04 488.41,404.59 492.21,400.37 496.22,395.92 500.23,391.47 504.24,387.02 508.04,382.8 512.06,378.35 516.07,373.9 520.08,369.45 523.88,365.23 527.89,360.78 531.91,356.33 535.92,351.88 539.72,347.66 543.73,343.21 547.74,338.76 551.75,334.31 555.55,330.09 559.57,325.64 563.58,321.18 567.59,316.73 571.39,312.52 575.4,308.07 579.44,303.74 584.97,301.44 590.28,299.45 595.9,297.35 601.51,295.25 606.82,293.26 612.44,291.15 618.05,289.05 623.66,286.95 629.28,284.85 634.59,282.87 640.2,280.77 644.93,279 644.93,279 644.93,279 644.93,279 644.93,279 644.93,279 644.93,279 644.93,279 644.93,279 644.93,279 644.93,279 644.93,279 644.93,279 644.93,278.26 644.93,272.85 644.93,266.86 644.93,260.86 644.93,254.87 644.93,249.2 644.93,243.2 644.93,237.21 644.93,231.22 644.93,225.54 644.93,219.55 644.93,213.56 644.93,207.57" fill="none" stroke="#F9FAF5" stroke-width="6.0" stroke-linejoin="round" stroke-linecap="round" />
+  <polyline points="180.06,745.14 182.79,742.11 186.58,737.93 190.58,733.5 194.54,729.12 198.69,724.54 202.52,720.3 206.65,715.73 210.52,711.46 214.54,707.01 218.42,702.73 222.5,698.22 226.35,693.95 230.39,689.49 234.27,685.2 238.34,680.7 242.19,676.44 246.31,671.89 250.15,667.64 254.23,663.13 258.05,658.91 262.14,654.38 266,650.12 270.06,645.62 273.87,641.41 277.89,636.97 281.91,632.53 285.93,628.08 289.95,623.64 293.76,619.43 297.78,614.98 301.8,610.54 305.68,606.24 309.73,601.77 313.57,597.52 317.67,592.99 321.59,588.66 325.5,584.34 329.52,579.89 333.53,575.45 337.35,571.23 341.37,566.79 345.39,562.34 349.41,557.9 353.23,553.67 357.25,549.23 361.27,544.78 365.29,540.34 369.1,536.13 373.12,531.68 377.14,527.24 381.16,522.8 384.96,518.59 389,514.13 393.02,509.68 396.83,505.47 400.88,500.99 404.9,496.55 408.92,492.1 412.73,487.89 416.75,483.45 421.04,479.31 425.07,474.87 428.87,470.65 432.88,466.2 436.89,461.75 440.69,457.54 444.7,453.08 448.71,448.63 452.73,444.18 456.74,439.73 460.54,435.51 464.55,431.06 468.56,426.61 472.57,422.16 476.37,417.94 480.38,413.49 484.4,409.04 488.41,404.59 492.21,400.37 496.22,395.92 500.23,391.47 504.24,387.02 508.04,382.8 512.06,378.35 516.07,373.9 520.08,369.45 523.88,365.23 527.89,360.78 531.91,356.33 535.92,351.88 539.72,347.66 543.73,343.21 547.74,338.76 551.75,334.31 555.55,330.09 559.57,325.64 563.58,321.18 567.59,316.73 571.39,312.52 575.4,308.07 579.44,303.74 584.97,301.44 590.28,299.45 595.9,297.35 601.51,295.25 606.82,293.26 612.44,291.15 618.05,289.05 623.66,286.95 629.28,284.85 634.59,282.87 640.2,280.77 644.93,279 644.93,279 644.93,279 644.93,279 644.93,279 644.93,279 644.93,279 644.93,279 644.93,279 644.93,279 644.93,279 644.93,279 644.93,279 644.93,278.26 644.93,272.85 644.93,266.86 644.93,260.86 644.93,254.87 644.93,249.2 644.93,243.2 644.93,237.21 644.93,231.22 644.93,225.54 644.93,219.55 644.93,213.56 644.93,207.57" fill="none" stroke="#A7402D" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round" />
+  <polygon points="281.21,633.3 270.72,638.64 276.95,644.27" fill="#A7402D" stroke="#A7402D" stroke-width="0.5" />
+  <polygon points="508.22,382.61 497.73,387.97 503.97,393.59" fill="#A7402D" stroke="#A7402D" stroke-width="0.5" />
+  <polygon points="644.93,220.49 640.73,231.49 649.13,231.49" fill="#A7402D" stroke="#A7402D" stroke-width="0.5" />
+  <circle cx="742.38" cy="481.02" r="4.1" fill="#F9FAF5" stroke="#28665B" stroke-width="1.6" />
+  <circle cx="696.94" cy="475.62" r="7" fill="#28665B" stroke="#F9FAF5" stroke-width="1.4" />
+  <line x1="142.07" y1="716.71" x2="142.07" y2="784.93" stroke="#28665B" stroke-width="1.5" stroke-dasharray="4 4" />
+  <line x1="606.03" y1="222.58" x2="696.97" y2="222.58" stroke="#A7402D" stroke-width="1.5" stroke-dasharray="4 4" />
+  <circle cx="657.29" cy="503.66" r="11" fill="#FFFCF5" stroke="#A7402D" stroke-width="1.45" />
+  <text x="657.29" y="507.96" fill="#A7402D" font-size="13" font-weight="700" text-anchor="middle">20</text>
+  <circle cx="355.96" cy="525.34" r="11" fill="#FFFCF5" stroke="#A7402D" stroke-width="1.45" />
+  <text x="355.96" y="529.64" fill="#A7402D" font-size="13" font-weight="700" text-anchor="middle">15</text>
+  <circle cx="416.53" cy="731.03" r="11" fill="#FFFCF5" stroke="#A7402D" stroke-width="1.45" />
+  <text x="416.53" y="735.33" fill="#A7402D" font-size="13" font-weight="700" text-anchor="middle">21</text>
+  <circle cx="232.08" cy="720.47" r="11" fill="#FFFCF5" stroke="#A7402D" stroke-width="1.45" />
+  <text x="232.08" y="724.77" fill="#A7402D" font-size="13" font-weight="700" text-anchor="middle">33</text>
+  <text x="651.5" y="205.58" fill="#A7402D" font-size="15" font-weight="600" text-anchor="middle" stroke="#F9FAF5" stroke-width="5" stroke-linejoin="round" paint-order="stroke fill">R10  北侧出口</text>
+  <text x="130.07" y="746.82" fill="#28665B" font-size="15" font-weight="600" text-anchor="end" stroke="#F9FAF5" stroke-width="5" stroke-linejoin="round" paint-order="stroke fill">R9  西门</text>
+  <text x="130.07" y="767.82" fill="#28665B" font-size="15" font-weight="600" text-anchor="end" stroke="#F9FAF5" stroke-width="5" stroke-linejoin="round" paint-order="stroke fill">锁门</text>
+  <text x="713.94" y="466.62" fill="#28665B" font-size="15" font-weight="600" text-anchor="start" stroke="#F9FAF5" stroke-width="5" stroke-linejoin="round" paint-order="stroke fill">管上落脚</text>
+  <text x="161.07" y="801.35" fill="#865237" font-size="15" font-weight="600" text-anchor="start" stroke="#F9FAF5" stroke-width="5" stroke-linejoin="round" paint-order="stroke fill">时停危险区</text>
+  <line x1="662.86" y1="341.86" x2="709.2" y2="357" stroke="#54665E" stroke-width="1.2" />
+  <circle cx="662.86" cy="341.86" r="2" fill="#54665E" stroke="none" stroke-width="1" />
+  <text x="714" y="361" fill="#54665E" font-size="15" font-weight="600" text-anchor="start" stroke="#F9FAF5" stroke-width="5" stroke-linejoin="round" paint-order="stroke fill">固定挡板</text>
+  <line x1="651.5" y1="266.6" x2="713.2" y2="263" stroke="#54665E" stroke-width="1.2" />
+  <circle cx="651.5" cy="266.6" r="2" fill="#54665E" stroke="none" stroke-width="1" />
+  <text x="718" y="267" fill="#54665E" font-size="15" font-weight="600" text-anchor="start" stroke="#F9FAF5" stroke-width="5" stroke-linejoin="round" paint-order="stroke fill">可动柜</text>
+  <text x="620.26" y="622.34" fill="#54665E" font-size="15" font-weight="600" text-anchor="middle" stroke="#F9FAF5" stroke-width="5" stroke-linejoin="round" paint-order="stroke fill">A 基准钟</text>
+  <text x="350.46" y="440.58" fill="#54665E" font-size="15" font-weight="600" text-anchor="middle" stroke="#F9FAF5" stroke-width="5" stroke-linejoin="round" paint-order="stroke fill">B 实验钟</text>
+  <text x="907" y="224" fill="#20342F" font-size="28" font-weight="700" text-anchor="start">房间演出顺序</text>
+  <line x1="908" y1="243" x2="1358" y2="243" stroke="#C9D1C5" stroke-width="1" />
+  <text x="908" y="280" fill="#20342F" font-size="20" font-weight="700" text-anchor="start">东侧管口  /  入场</text>
+  <text x="908" y="309" fill="#54665E" font-size="17" font-weight="400" text-anchor="start">落在管上，镜头带向西侧锁门。</text>
+  <text x="908" y="335" fill="#54665E" font-size="17" font-weight="400" text-anchor="start">固定挡板遮住从管口看向北门的视线。</text>
+  <text x="908" y="386" fill="#20342F" font-size="20" font-weight="700" text-anchor="start">西门与顶板  /  事故触发</text>
+  <text x="908" y="415" fill="#54665E" font-size="17" font-weight="400" text-anchor="start">交互锁门后回头，柜体被爆炸抛开。</text>
+  <text x="908" y="441" fill="#54665E" font-size="17" font-weight="400" text-anchor="start">顶板 20、15、21 依次脱落，33 在头顶。</text>
+  <text x="908" y="492" fill="#20342F" font-size="20" font-weight="700" text-anchor="start">北门  /  脱离</text>
+  <text x="908" y="521" fill="#54665E" font-size="17" font-weight="400" text-anchor="start">时停期间路线转向北门。离开危险区后，</text>
+  <text x="908" y="547" fill="#54665E" font-size="17" font-weight="400" text-anchor="start">落板与柜体恢复运动，玩家继续穿门。</text>
+  <line x1="908" y1="579" x2="1358" y2="579" stroke="#C9D1C5" stroke-width="1" />
+  <text x="908" y="621" fill="#28665B" font-size="25" font-weight="700" text-anchor="start">美术提案</text>
+  <text x="908" y="654" fill="#54665E" font-size="17" font-weight="400" text-anchor="start">两台钟共用六角外壳，读数窗标明各自用途。</text>
+  <text x="908" y="684" fill="#54665E" font-size="17" font-weight="400" text-anchor="start">将柜体的活动接缝与固定挡板的墙脚区分开。</text>
+  <text x="908" y="714" fill="#54665E" font-size="17" font-weight="400" text-anchor="start">西门保留清晰门禁，北门的亮色收在门洞内。</text>
+  <line x1="908" y1="741" x2="1358" y2="741" stroke="#C9D1C5" stroke-width="1" />
+  <text x="908" y="774" fill="#20342F" font-size="17" font-weight="700" text-anchor="start">图例</text>
+  <line x1="910" y1="799" x2="947" y2="799" stroke="#28665B" stroke-width="3.2" stroke-dasharray="8 5" />
+  <text x="958" y="805" fill="#20342F" font-size="15" font-weight="400" text-anchor="start">爆炸前 · 胶囊扫掠</text>
+  <line x1="1145" y1="799" x2="1182" y2="799" stroke="#A7402D" stroke-width="3.2" />
+  <text x="1193" y="805" fill="#20342F" font-size="15" font-weight="400" text-anchor="start">爆炸后 · 玩家轨迹</text>
+  <rect x="909" y="821" width="27" height="16" fill="url(#rubble)" stroke="#9DA394" stroke-width="1" />
+  <text x="948" y="835" fill="#20342F" font-size="15" font-weight="400" text-anchor="start">已落板</text>
+  <rect x="1047" y="821" width="27" height="16" fill="none" stroke="#BB7962" stroke-width="1.3" stroke-dasharray="4 3" />
+  <text x="1086" y="835" fill="#20342F" font-size="15" font-weight="400" text-anchor="start">将落顶板投影</text>
+  <rect x="1235" y="821" width="27" height="16" fill="url(#safety)" stroke="#AB7F66" stroke-width="1" />
+  <text x="1272" y="835" fill="#20342F" font-size="15" font-weight="400" text-anchor="start">危险区</text>
+  <line x1="142" y1="850" x2="284" y2="850" stroke="#3A4A44" stroke-width="2" />
+  <line x1="142" y1="845" x2="142" y2="855" stroke="#3A4A44" stroke-width="2" />
+  <line x1="284" y1="845" x2="284" y2="855" stroke="#3A4A44" stroke-width="2" />
+  <text x="298" y="855" fill="#54665E" font-size="15" font-weight="500" text-anchor="start">5 m</text>
+  <text x="801" y="854" fill="#54665E" font-size="15" font-weight="500" text-anchor="end">图上为北（UE −Y）</text>
+  <line x1="62" y1="877" x2="1358" y2="877" stroke="#BFCBC1" stroke-width="1" />
+  <text x="62" y="910" fill="#54665E" font-size="15" font-weight="400" text-anchor="start">几何与触发区取自 2026-11-07 的 Map_LabV39 编辑器场景。仅绘出主要设备、管段轴线与落板。顶板虚线表示开局投影。</text>
+  <text x="62" y="935" fill="#54665E" font-size="15" font-weight="400" text-anchor="start">路线取自 2026-10-28 的运行记录。空心绿点是地面扫掠起点，实心绿点是管上触发中心。当前版本的通行和视线待复测。</text>
+  <metadata>{"map": "/Game/Maps/Map_LabV39.Map_LabV39", "geometry_date": "2026-11-07", "routes_date": "2026-10-28", "route_sources": ["Saved/Agent/Chapter1Cinematic20261028/qa_current_pie_phase_0.json", "Saved/Agent/Chapter1Cinematic20261028/CameraFix/walk_to_exit_crouch.json"], "boxes": [{"name": "EntryBounds", "center": [-4320.0, -2129.0, 1070.0], "extent": [140.0, 145.0, 130.0]}, {"name": "DangerBounds", "center": [-5980.0, -1260.0, 850.0], "extent": [420.0, 380.0, 400.0]}], "units": "Unreal cm"}</metadata>
+</svg>

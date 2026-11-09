@@ -9,6 +9,12 @@
 - Visual direction: minimalist near-future realism; time-stop state trends gray-blue.
 - Production target: a polished vertical slice that demonstrates the full game's potential.
 
+### 室内美术基准
+
+2026-11-07 用户确认，后续室内沿用 Chapter 1 实验室的近未来美术方向。建筑和普通设备用低多边形大轮廓，细节集中在玩家需要辨认的关键设备。墙板色相和明度随房间用途与照明条件选择：第一房间采用压暗的暖灰，其他房间可使用正常亮度的浅色墙面。房间之间通过清晰的几何、材质和工作灯具保持一致。[第一房间 UE 实景与对照](../../../output/time-shuttler/ch1-room1-installed/index.html)
+
+Chapter 1 的前两个房间均处在灾难之后。第一房间的破坏集中在停机的粒子机器；第二房间用被压低的风管、旧落板、爆开的滤柜和随后坠落的顶板延续事故。后续室内的损坏程度随各场景的剧情与时间点确定。[第二房间的白盒与美术预览](../Design/Chapter1/room2-environment-plan.md)
+
 ## Team
 
 - Yitong Lu — gameplay programmer, narrative designer, producer.

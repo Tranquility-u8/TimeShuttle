@@ -1,5 +1,30 @@
 # Training Room tutorial implementation
 
+## 2026-11-05 — Physics-driven suspended slab (design S6, mission S5)
+
+The three targets stand 135 cm apart beneath a 400 × 150 × 24 cm plate. The plate starts 635 cm above the floor, 100 cm lower than in the previous layout. Each orange rope connects the ceiling bracket to the center of a short end of the plate. The rope measures 118 cm to the pin, with 106 cm exposed above the plate. The floor outline matches the new footprint.
+
+Both ordinary pistol fire and released time-stop bullets can sever the ropes. The first hit starts the existing one-second pairing window. If one rope survives, gravity swings the plate about that end's physical hinge. If both ropes break, the rigid body falls from its current pose. The controller sweeps between measured physics poses and counts the targets actually struck. Three kills advance the mission. An incomplete drop retries five seconds after landing. The HUD objective reads “Use the environment to kill all enemies” and shows progress out of three.
+
+In PIE, seven seconds after either single cut, the plate hung vertically and all three targets still had full health. Its lowest corner stayed at least 235 cm above the floor (rounded). Breaking the second rope after the swing released the upright plate. In a separate test, moving one target outside the footprint produced two deaths, a 2/3 count and a retry. Timely paired hits with all three targets in place advanced the mission.
+
+After reopening the saved map, the equipped pistol severed a single rope in normal time. Two ordinary hits 0.33 seconds apart killed all three targets and advanced to `Dialogue_TD12`. In FullStop, the pistol spawned a suspended projectile aimed at each rope. Resuming time released both, killed all three and reached the same dialogue. These tests entered the S5 checkpoint directly and used scripted camera aim. Calling the pistol pickup interaction from that fixture logged a missing interaction widget in `BP_Item_Pickup.CheckItemSlots`; weapon acquisition and firing completed.
+
+## 2026-11-04 — S6 suspended plank (mission stage S5)
+
+In `Map_TrainingRoom`, either orange support accepts ordinary pistol fire or a released time bullet. After the first cut, the plate stays level for the existing one-second pairing window. If the other support survives, the plate swings through 90° around that support and hangs there until it is shot or the player retries. The hanging plate cannot deal strike damage or start the retry timer.
+
+The hinges are 735 cm above the floor and 500 cm apart. The plate measures 540 × 170 × 28 cm. Its lowest corner stays above 214 cm throughout the swing, with the three placed target capsules reaching 178 cm. Cutting the remaining support releases the plate from its current position and angle. During that fall the controller sweeps the plate against the three active targets and counts their confirmed deaths. Three kills advance the mission in either firing mode. A landed miss still retries after five seconds.
+
+PIE verified both single cuts, waiting over seven seconds at full enemy health, a late second cut from vertical, checkpoint recovery, and three-kill advancement with ordinary and temporal contact fixtures. After reopening the saved map without authoring plugins, the production pistol severed one support in normal time without harming the targets. Two aimed ordinary shots 0.34 seconds apart killed all three and advanced to `Dialogue_TD12`. The temporal test supplied the impact flag at the weapon's training callback.
+
+## 2026-11-03 — Stage 5 support hit window
+
+User requested a 1-second hit interval. In `BP_TrainingController.UpdatePairedPlank`, both the first-hit wait threshold (`K2Node_CallFunction_32.B`) and accepted impact gap (`K2Node_CallFunction_35.B`) changed from 0.12 to 1.0 real seconds. The existing graph comment was updated. Both impacts must still be temporal; duplicate-side and falling-state handling are unchanged. The slab now begins resolving its fall approximately one second after the first accepted hit.
+
+Saved the controller only. Blueprint compilation reported zero errors and zero warnings (three existing redundant-cast notes). Before/after graph comparison confirmed only the two intended pin defaults changed semantically; the edited nodes received a selective Blueprint Assist pass and editor visual review. Independent cold loading confirmed both saved values are 1.0; the other inspected assets, training map and configuration hashes remain unchanged. No PIE or gameplay tests were run, per the user's instruction to perform them personally. Playtest acceptance remains pending; the historical 0.12-second validation below does not validate the new window.
+
+
 2026-10-28: [武器台下部共面闪烁、手枪贴合与移动弱点靶渐入时序修复](tutorial-table-contact-reveal-fix.md)。移动靶的位置和行走动画均等待自身完全渐入及场景 Ready；武器台桌面高度、原碰撞和其他关卡摆放保持。
 
 Current flow orchestration is now in BP_TrainingMission task components; the historical Level Blueprint stage chain below is superseded. The fixed-layout merge repair is retained and the migrated eight-stage flow has passed the automated acceptance described in [MissionSystem implementation](mission-system.md) and [validation](MissionSystem/validation.zh-CN.md). Later objectives use explicitly disclosed fixtures; manual aim/feel acceptance remains separate.
