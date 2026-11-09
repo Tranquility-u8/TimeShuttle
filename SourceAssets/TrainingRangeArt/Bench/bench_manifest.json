@@ -1,0 +1,99 @@
+{
+  "modules": {
+    "SM_TS_A3_BenchSupport": {
+      "bounds": [
+        [
+          -100.0,
+          -50.0,
+          -0.5
+        ],
+        [
+          100.0,
+          50.0,
+          105.0
+        ]
+      ],
+      "collision_source": "Original UE BodySetup",
+      "triangles": 428,
+      "triangles_by_slot": [
+        102,
+        146,
+        168,
+        12
+      ],
+      "material_slots": [
+        "M_TS_TrainingWhite",
+        "M_TS_TrainingDarkMetal",
+        "M_TS_TrainingRubber",
+        "M_TS_TrainingCyan"
+      ],
+      "uv": "UV0"
+    },
+    "SM_TS_A3_BenchSupportLit": {
+      "bounds": [
+        [
+          -100.0,
+          -50.0,
+          -0.5
+        ],
+        [
+          100.0,
+          50.0,
+          105.0
+        ]
+      ],
+      "collision_source": "Original UE BodySetup",
+      "triangles": 440,
+      "triangles_by_slot": [
+        102,
+        146,
+        180,
+        12
+      ],
+      "material_slots": [
+        "M_TS_TrainingWhite",
+        "M_TS_TrainingDarkMetal",
+        "M_TS_TrainingRubber",
+        "M_TS_TrainingCyan"
+      ],
+      "uv": "UV0"
+    }
+  },
+  "sequence": [
+    "SM_TS_A3_BenchSupport",
+    "SM_TS_A3_BenchSupportLit",
+    "SM_TS_A3_BenchSupport",
+    "SM_TS_A3_BenchSupportLit",
+    "SM_TS_A3_BenchSupport",
+    "SM_TS_A3_BenchSupport",
+    "SM_TS_A3_BenchSupportLit",
+    "SM_TS_A3_BenchSupport",
+    "SM_TS_A3_BenchSupportLit",
+    "SM_TS_A3_BenchSupport"
+  ],
+  "world_support_x_cm": [
+    -900,
+    -700,
+    -500,
+    -300,
+    -100,
+    100,
+    300,
+    500,
+    700,
+    900
+  ],
+  "world_light_x_cm": [
+    -700,
+    -300,
+    300,
+    700
+  ],
+  "pivot": [
+    0,
+    0,
+    0
+  ],
+  "source_front": "-Y",
+  "ue_player_side": "+Y"
+}
