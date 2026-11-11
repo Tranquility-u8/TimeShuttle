@@ -1,5 +1,11 @@
 # Training Room tutorial implementation
 
+## 2026-11-10 — Final combat cover ammunition
+
+At the start of S7B combat, the controller places one native pistol ammunition pickup on each of four 120 cm white half covers at the entrance, on the left and right flanks, and at the back of the room. The map markers carry `TSId:S7B_CoverAmmoSlot_1` through `_4`. F adds 24 reserve rounds. Each consumed pickup returns to its own marker after the training room’s five-second refill delay. Restarting the encounter clears the old pickups and pending refills before repopulating the four positions.
+
+The final checkpoint writes its pistol refill back to the equipped inventory slot before enabling pickups. The native F interaction reads this slot, so collecting ammunition preserves the rounds already loaded in the pistol.
+
 ## 2026-11-05 — Physics-driven suspended slab (design S6, mission S5)
 
 The three targets stand 135 cm apart beneath a 400 × 150 × 24 cm plate. The plate starts 635 cm above the floor, 100 cm lower than in the previous layout. Each orange rope connects the ceiling bracket to the center of a short end of the plate. The rope measures 118 cm to the pin, with 106 cm exposed above the plate. The floor outline matches the new footprint.
