@@ -1,0 +1,393 @@
+{
+  "assets": {
+    "SM_TR_Lo300": {
+      "source": "/Engine/BasicShapes/Cube.Cube",
+      "slots": [
+        "White",
+        "DarkMetal",
+        "Rubber"
+      ],
+      "bounds": [
+        [
+          -50.0,
+          -50.0,
+          -50.0
+        ],
+        [
+          50.0,
+          50.0,
+          50.0
+        ]
+      ],
+      "triangles": 596,
+      "sha256": "d648c65d8c223a1a8fb50fbe9500586bb95623ffbeaa96dc9aa0ab145c120fa5"
+    },
+    "SM_TR_Hi450": {
+      "source": "/Engine/BasicShapes/Cube.Cube",
+      "slots": [
+        "DarkMetal",
+        "Rubber"
+      ],
+      "bounds": [
+        [
+          -50.0,
+          -50.0,
+          -50.0
+        ],
+        [
+          50.0,
+          50.0,
+          50.0
+        ]
+      ],
+      "triangles": 596,
+      "sha256": "0469722da933c0119799c8bb491864a6b9ff54719109c878e3af30ba45b31711"
+    },
+    "SM_TR_Hi370Y": {
+      "source": "/Engine/BasicShapes/Cube.Cube",
+      "slots": [
+        "DarkMetal",
+        "Rubber"
+      ],
+      "bounds": [
+        [
+          -50.0,
+          -50.0,
+          -50.0
+        ],
+        [
+          50.0,
+          50.0,
+          50.0
+        ]
+      ],
+      "triangles": 596,
+      "sha256": "11620e3cf711d91308bafe873958a1eb0fb25d77bc7b5a3833bba66a9c5d2bf2"
+    },
+    "SM_TR_Lo220": {
+      "source": "/Engine/BasicShapes/Cube.Cube",
+      "slots": [
+        "White",
+        "DarkMetal",
+        "Rubber"
+      ],
+      "bounds": [
+        [
+          -50.0,
+          -50.0,
+          -50.0
+        ],
+        [
+          50.0,
+          50.0,
+          50.0
+        ]
+      ],
+      "triangles": 476,
+      "sha256": "a1e9b8c5a7010e3715cd73283ac7a4d1550de9c9051cf727d1cd995ed70557db"
+    },
+    "SM_TR_Lo270": {
+      "source": "/Engine/BasicShapes/Cube.Cube",
+      "slots": [
+        "White",
+        "DarkMetal",
+        "Rubber"
+      ],
+      "bounds": [
+        [
+          -50.0,
+          -50.0,
+          -50.0
+        ],
+        [
+          50.0,
+          50.0,
+          50.0
+        ]
+      ],
+      "triangles": 476,
+      "sha256": "43dead1b522d61d26f611f5d6691075074545644b4ee62d772b50c11a42fe126"
+    },
+    "SM_TR_Hi560Y": {
+      "source": "/Engine/BasicShapes/Cube.Cube",
+      "slots": [
+        "DarkMetal",
+        "Rubber"
+      ],
+      "bounds": [
+        [
+          -50.0,
+          -50.0,
+          -50.0
+        ],
+        [
+          50.0,
+          50.0,
+          50.0
+        ]
+      ],
+      "triangles": 596,
+      "sha256": "cfddffe7b88daa68dc56066c090947da4fd5f9e18638859b0ac0a6943c22e7d4"
+    },
+    "SM_TR_Hi390Y": {
+      "source": "/Engine/BasicShapes/Cube.Cube",
+      "slots": [
+        "DarkMetal",
+        "Rubber"
+      ],
+      "bounds": [
+        [
+          -50.0,
+          -50.0,
+          -50.0
+        ],
+        [
+          50.0,
+          50.0,
+          50.0
+        ]
+      ],
+      "triangles": 596,
+      "sha256": "6b97eed8634da2c1d11b3f8368629aff4fe3ff0d14d7fd08d9f34dc325b6a469"
+    },
+    "SM_TR_Wing560": {
+      "source": "/Engine/BasicShapes/Cube.Cube",
+      "slots": [
+        "White",
+        "DarkMetal",
+        "Rubber"
+      ],
+      "bounds": [
+        [
+          -50.0,
+          -50.0,
+          -50.0
+        ],
+        [
+          50.0,
+          50.0,
+          50.0
+        ]
+      ],
+      "triangles": 240,
+      "sha256": "cd4f941a5ca27cdc1e042141027d257e9995bfd2ec688cb005b0c53853db567f"
+    },
+    "SM_TR_Wing320Y": {
+      "source": "/Engine/BasicShapes/Cube.Cube",
+      "slots": [
+        "White",
+        "DarkMetal",
+        "Rubber"
+      ],
+      "bounds": [
+        [
+          -50.0,
+          -50.0,
+          -50.0
+        ],
+        [
+          50.0,
+          50.0,
+          50.0
+        ]
+      ],
+      "triangles": 180,
+      "sha256": "61130248fecbc7eda3a9c3fac6707c259c026945f4be34b02f5a6e620cc8080b"
+    },
+    "SM_TR_Wing120Y": {
+      "source": "/Engine/BasicShapes/Cube.Cube",
+      "slots": [
+        "White",
+        "DarkMetal",
+        "Rubber"
+      ],
+      "bounds": [
+        [
+          -50.0,
+          -50.0,
+          -50.0
+        ],
+        [
+          50.0,
+          50.0,
+          50.0
+        ]
+      ],
+      "triangles": 180,
+      "sha256": "84ac5156e98b56b1c23e8fb211d889cd8740caa3133d69d78f3e8d458e5c224c"
+    },
+    "SM_TR_Wing480": {
+      "source": "/Engine/BasicShapes/Cube.Cube",
+      "slots": [
+        "White",
+        "DarkMetal",
+        "Rubber"
+      ],
+      "bounds": [
+        [
+          -50.0,
+          -50.0,
+          -50.0
+        ],
+        [
+          50.0,
+          50.0,
+          50.0
+        ]
+      ],
+      "triangles": 180,
+      "sha256": "064a71e405b4395286c91a8922e4a9fee239c915b9a0dfb13bb973cc0fcd660a"
+    },
+    "SM_TR_SuspendedLoadCassette": {
+      "source": "/Game/Environment/TrainingRoom/Stages/Meshes/SM_TS_SuspendedContainer.SM_TS_SuspendedContainer",
+      "slots": [
+        "Amber",
+        "DarkMetal",
+        "White"
+      ],
+      "bounds": [
+        [
+          -225.0,
+          -150.0,
+          0.0
+        ],
+        [
+          225.4,
+          150.0,
+          150.0
+        ]
+      ],
+      "triangles": 3840,
+      "sha256": "9b2adff2972888c94575eab0123268582f891dab6d35e4af6f49b092a50bb63b"
+    },
+    "SM_TR_PairedImpactPlate": {
+      "source": "/Engine/BasicShapes/Cube.Cube",
+      "slots": [
+        "DarkMetal",
+        "Rubber"
+      ],
+      "bounds": [
+        [
+          -50.0,
+          -50.0,
+          -50.0
+        ],
+        [
+          50.0,
+          50.0,
+          50.0
+        ]
+      ],
+      "triangles": 356,
+      "sha256": "288fd713533e454e2d01a6192508c1a952f0a6dd4781d8acde05bea0d808b789"
+    },
+    "SM_TR_PairedLoadRail": {
+      "source": "/Engine/BasicShapes/Cube.Cube",
+      "slots": [
+        "DarkMetal",
+        "Rubber"
+      ],
+      "bounds": [
+        [
+          -50.0,
+          -50.0,
+          -50.0
+        ],
+        [
+          50.0,
+          50.0,
+          50.0
+        ]
+      ],
+      "triangles": 180,
+      "sha256": "2c3796335a1be4804e6fb0b0fdb43b59f205b8e3984c137bc2893fcc5f406df4"
+    },
+    "SM_TR_PairedCutCable": {
+      "source": "/Engine/BasicShapes/Cylinder.Cylinder",
+      "slots": [
+        "Amber",
+        "DarkMetal",
+        "Rubber"
+      ],
+      "bounds": [
+        [
+          -50.0,
+          -50.0,
+          -50.0
+        ],
+        [
+          50.0,
+          50.0,
+          50.0
+        ]
+      ],
+      "triangles": 3600,
+      "sha256": "7ac1e79ecf0d7ab7c4208b04e903869e37f7c187d55253211d82611adff60d95"
+    },
+    "SM_TR_PairedCeilingSocket": {
+      "source": "/Engine/BasicShapes/Cube.Cube",
+      "slots": [
+        "DarkMetal",
+        "Rubber"
+      ],
+      "bounds": [
+        [
+          -50.0,
+          -50.0,
+          -50.0
+        ],
+        [
+          50.0,
+          50.0,
+          50.0
+        ]
+      ],
+      "triangles": 152,
+      "sha256": "838925c808b8427dbfac3ff755c439c81ae8870fe27c4dd10007f0fea1c200cc"
+    },
+    "SM_TR_PairedCableFerrule": {
+      "source": "/Engine/BasicShapes/Cube.Cube",
+      "slots": [
+        "DarkMetal",
+        "Rubber"
+      ],
+      "bounds": [
+        [
+          -50.0,
+          -50.0,
+          -50.0
+        ],
+        [
+          50.0,
+          50.0,
+          50.0
+        ]
+      ],
+      "triangles": 152,
+      "sha256": "37dc74cfc3a25426e4d91ae698c4fe460edc843eccadb20a783456cdbc7435eb"
+    }
+  },
+  "targets": {
+    "S7B | L1 Low cover": "SM_TR_Lo300",
+    "S7B | H1 High cover": "SM_TR_Hi450",
+    "S7B | H2 High cover": "SM_TR_Hi370Y",
+    "S7B | L2 Low cover": "SM_TR_Lo220",
+    "S7B | L3 Low cover": "SM_TR_Lo270",
+    "S7B | H3 High cover": "SM_TR_Hi560Y",
+    "S7B | H4 High cover": "SM_TR_Hi390Y",
+    "S7B | L4 Low cover": "SM_TR_Wing560",
+    "S7B | L4 Low cover3": "SM_TR_Wing320Y",
+    "S7B | L3 Low cover2": "SM_TR_Wing120Y",
+    "S7B | L4 Low cover2": "SM_TR_Wing480",
+    "S7B | L3 Low cover3": "SM_TR_Wing120Y",
+    "S7B | Suspended cargo container": "SM_TR_SuspendedLoadCassette",
+    "S5 | FallingPlank": "SM_TR_PairedImpactPlate",
+    "S5 | GantryBeam": "SM_TR_PairedLoadRail",
+    "S5 | ShootableLink_A": "SM_TR_PairedCutCable",
+    "S5 | ShootableLink_B": "SM_TR_PairedCutCable",
+    "S5 | Hanger_A": "SM_TR_PairedCeilingSocket",
+    "S5 | Hanger_B": "SM_TR_PairedCeilingSocket",
+    "S5 | LinkArm_A": "SM_TR_PairedCableFerrule",
+    "S5 | LinkArm_B": "SM_TR_PairedCableFerrule"
+  }
+}

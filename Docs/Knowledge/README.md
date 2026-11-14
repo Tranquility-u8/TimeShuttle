@@ -13,11 +13,15 @@ This directory is the fast, reviewable knowledge layer for agents and teammates.
 7. `technical-references.md` — important official vendor references and their verification boundaries.
 8. `open-questions.md` — unresolved decisions that must not be guessed.
 
+Generic player HUD/action profiles: [player-mode-system.md](../Implementation/player-mode-system.md) documents Combat, Chapter1, SafeZone, seven DataTable permissions including DisableAttack, and targeted PIE verification.
+
 Task-specific implementation evidence lives in `Docs/Implementation/`. Current records include [EnemyAIBehaviorMigration.md](../Implementation/EnemyAIBehaviorMigration.md), [EnemyReverse.md](../Implementation/EnemyReverse.md), [EnemyDamagePipeline.md](../Implementation/EnemyDamagePipeline.md), [player-melee-combat.md](../Implementation/player-melee-combat.md), [TimeAbilityCore.md](../Implementation/TimeAbilityCore.md), [TimeProjectileBridge.md](../Implementation/TimeProjectileBridge.md), and the reusable [TimeAbilityLessons.md](../Implementation/TimeAbilityLessons.md).
 
 Latest tutorial design direction: [2026-10-15 R5 tutorial readback and unified 7B plan](../Design/training-room-tutorial-r5-readback-2026-10-15.md). First entry guides the player to P by waypoints without teleporting or forcing facing; only a death retry automatically resets position and facing. The introduction, flow, summary table, body, caption and diagram now consistently describe that rule. On first arrival, restore health/energy and the same pistol with a full magazine plus 24 reserve rounds, prepare the scene, then enable attacks; retries reposition first and perform the same preparation. Current rules use S2A/S2B, unified Q, time-stop-only weakpoint visibility with valid hits in any time state, guaranteed three-enemy environmental kills in S5, and three actual kills from the same slab impact in S6 without a break-interval gate. The 7B environmental-kill opportunity is not limited to one ranged enemy. This records design intent, not UE implementation or a Drive refresh. R2–R4 tutorial records are historical.
 
-Chapter 1 两房间当前手动白盒与 R17 历史生成布局分别维护。第二房间的可复用演出、原生时停接入、模型替换入口和验证边界见 [第二房间演出](../Implementation/chapter1-room2-cinematic.md)；原生破裂与初始碎块布置见 [天花板白盒](../Implementation/chapter1-room2-ceiling.md)。
+Chapter 1 两房间当前手动白盒与 R17 历史生成布局分别维护。[第一章事件 1–4](../Implementation/chapter1-event1.md) 记录从 PlayerStart 到主控室、领取调节器、训练关卡往返和控制台部署的对白、路线及任务衔接。第二房间的可复用演出、原生时停接入、模型替换入口和验证边界见 [第二房间演出](../Implementation/chapter1-room2-cinematic.md)；原生破裂与初始碎块布置见 [天花板白盒](../Implementation/chapter1-room2-ceiling.md)。
+
+Chapter 1 的现场备份、逐块替换、同机位复拍和角色通行验收已整理为[房间美术制作工作流](../Implementation/chapter1-room-art-workflow.md)。[第二房间「时序校准室」美术规划](../Design/Chapter1/room2-environment-plan.md)附两台计时立柱的分工、原关卡四视角、动线图和验收标准。
 
 ## Authority and conflicts
 

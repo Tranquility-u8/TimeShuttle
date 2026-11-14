@@ -1,5 +1,13 @@
 # 玩家与敌人子弹拖尾
 
+## 2026-11-11 训练室拖尾亮度调整
+
+用户要求保持训练室曝光不变，只恢复鲜红拖尾，禁止教学任务硬编码。共享 AC_BulletTrail 的 TrailIntensity 从1.5改为32，BP_HitscanTrail、BP_TimeBullet、BP_ShooterProjectile_Bullet 的 BulletTrail 模板同步编译保存。颜色仍为Linear RGB=(1,0.002,0.002)，宽1.8cm、最大650cm；M_BulletTrail图及其材质默认回退值未改，运行MID由现有组件RefreshTrail读取公开参数32。训练室EV100仍为5，地图、Controller和Mission文件哈希与本次修改前一致。
+
+PIE使用当前训练室曝光对照1.5/16/32/64四档，32呈现清晰鲜红，64开始偏浅。随后实际生成三类蓝图实例，核实其组件值与MID强度都为32，无运行时颜色/强度测试覆盖；仅暂停运动并固定视觉长度用于截图，不代表武器按键或完整教程回归。其他地图与全部时间状态外观尚未逐项评审。参数入口仍为各子弹蓝图的BulletTrail组件 → Bullet Trail → Trail Intensity；新接入共享组件也继承32。
+
+修改前后Blueprint文本导出在归一化编译生成GUID后相同，没有编辑图表节点、布局或任务逻辑。证据保存在文档工作区tmp/trail-intensity-fix-20261111，包含备份、对照图、runtime.json与范围哈希；首次校验因LinearColor内存地址变化误报，修正校验后通过，未作为游戏逻辑失败计入。以下10/03和10/12章节为历史记录。
+
 ## 2026-10-12 敌弹命中后拖尾残留修复
 
 用户反馈弹头消失后拖尾仍显示。核查确认敌弹父类命中后默认延迟6秒销毁Actor；子类命中后晃动、延迟并让Sphere模拟物理，而拖尾按Actor位置保留静止长度。初次接入仅依赖Actor最终销毁清理，没有处理命中后延迟销毁阶段。
@@ -33,7 +41,7 @@ UE 5.6 命令行编辑器编译状态为 `BS_UpToDate`，定向保存成功；�
 | Trail Color | 红色，Linear RGB=(1, 0.002, 0.002) | 点击色块使用颜色选择器；每枚子弹拥有独立动态材质 |
 | Trail Width | 1.8 cm | 靠近弹头处的直径；向后连续收尖，0 隐藏 |
 | Trail Length | 650 cm | 最大长度；随实际行进距离增长至此上限，0 隐藏 |
-| Trail Intensity | 1.5 | 发光颜色倍率；最终外观仍受曝光、色调映射和时停后处理影响 |
+| Trail Intensity | 32（2026-11-11调整；原1.5） | 发光颜色倍率；最终外观仍受曝光、色调映射和时停后处理影响 |
 | Stationary Length | 30 cm | 最小方向提示长度；新生成且尚未飞行的悬浮弹仍有短尾。设为 0 时只显示已行进的距离 |
 | Head Offset | 2 cm | 拖尾头端相对弹丸 Actor 原点向后偏移，避免包住弹头 |
 | Trail Enabled | true | 纯视觉开关，不改变子弹运动、碰撞或伤害 |
@@ -130,3 +138,4 @@ BP_HitscanTrail 是原生 Actor 的蓝图子类，包含 Scene 根节点和 AC_B
 验证夹具临时将玩家放到空中、暂停 AI、使用具有默认 Controller 的 ShooterNPC；为隔离身体伤害，把该实例胶囊设为 BlockAll、弱点球关闭，未命中用例暂时关闭目标碰撞，近墙用例恢复后在前方生成阻挡立方体。前三轮未通过来自夹具读取函数局部变量、目标碰撞和瞄准隔离问题；修正后重跑，不将其记为正式通过。截图 CameraComponent 查询也修正后重跑。制作工具曾遇到链接/布局路径及缓存目录权限问题，最终构建、保存和原编辑器运行均成功；项目未增加制作插件依赖。
 
 日志仍出现原有 AI 空 Controller、测试拾取 UI 空引用及 additive 动画警告；未观察到 BP_HitscanTrail / AC_BulletTrail / SpawnHitscanTrail 的运行错误。结束时退出 PIE，原存档 SHA256 恢复，无脏地图；用户已有未保存 AC_TimeStopOutline 保留，见[收尾状态](BulletTrail/NormalFire/final-state.json)。本轮没有修改地图、敌人、能力核心或正式计划状态。打包、网络、全部武器和峰值性能继续待验证。
+

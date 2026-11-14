@@ -1,5 +1,9 @@
 # Enemy AI behavior migration
 
+## Current ranged-combat follow-up — 2026-11-02
+
+The [readable ranged-combat implementation](ranged-readable-combat.md) supersedes the historical phase-one/two timing and automatic-exposure rules below. Ordinary attack recovery now stays in the shooting branch instead of falling through to random Evade. Cover uses threat-driven entry, an actual reachable return anchor, two bounded peek cycles and six-world-second cooldown. The shared controller defers its existing search callback while a cover slot is actively occupied, allowing the cycle to finish. Projectile, damage, weakpoint and rewind interfaces remain the existing project contracts. Six Blueprints compile cleanly; saved-version, helper-free cold checks pass. The linked record distinguishes actual verification from remaining manual-play limits.
+
 ## Outcome
 
 On 2026-10-10, the melee and ranged enemy behavior dependency closure from `EnemyAITutorial` was migrated into Time Shuttler under `/Game/EnemyAITutorial`. The stable gameplay entry paths remain:

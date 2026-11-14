@@ -42,7 +42,7 @@
 | TalkToOmen | F | Talk to Omen | Interaction | 3 | false |
 | OpenDoor | F | Open the door | Interaction | 3 | false |
 
-表中 `TimeStop` 是普通 QTE 调用方可使用的配置入口；本轮没有将所有旧 QTE 检测与旧提示迁入新系统，不将“存在一行数据”写成完成全部 QTE 接入。
+2026-11-07：普通及教学 QTE 已通过现有 `UI_Hud.SetProjectileThreatPrompt` 接入 `TimeStop` 行，共用同一个 Widget；检测、窗口及 Q 输入仍由原能力组件负责。旧 QTE 独立面板已停用。详见[统一提示与装填调试配置](shared-key-prompts-and-reload-debug.md)。
 
 ## 3. 优先级与生命周期
 
@@ -92,7 +92,7 @@ StopThreats（停止／取消／重置威胁）
 
 ## 5. 普通换弹
 
-实际条件：当前持有有效物品／武器，`AmmoCount <= 0`，`MaxAmmo > 0`，`Reloading == false`，玩家未死亡。这里沿用工程现有命名：`MaxAmmo` 是该武器的备用弹药数。
+实际条件：当前持有有效物品／武器，`AmmoCount <= 0`，`GetReloadAvailability.Available == true`，`Reloading == false`，玩家未死亡。2026-11-07 起统一可用性为 `DebugInfiniteReload || MaxAmmo > 0`，与两类枪的实际装填入口一致。这里沿用工程现有命名：`MaxAmmo` 是该武器的备用弹药数。
 
 通过原有状态变化事件更新：
 
@@ -121,6 +121,8 @@ StopThreats（停止／取消／重置威胁）
 另一种方式：在 Actor 的 Class Settings 中实现 `BPI_KeyPrompt`，实现 `GetKeyPromptInfo`，返回 `RowName`、`KeyText`、`Description`、`Available`。Actor 自身的接口优先于信息组件；动态开锁条件等可通过 Available 返回。条件在持续瞄准期间改变时，变化事件调用玩家 `RefreshFocusedPrompt()`，无需新增 Tick。
 
 `AC_Interaction.Trace` 复用原 `LineTraceSingle` 的 HitActor。没有新增第二条射线。遮挡物截断原射线后，旧目标提示会撤回；射线重新命中目标时重新提交。
+
+2026-11-07：无自定义提示提供者时，仅对解析后实现 `BPI_Interaction` 的原生目标回退到 F / Interact，覆盖已有拾取物。自定义提供者的 `Available=false` 不触发回退；原互动区域权限判断仍保留。旧 `UI_Interaction` 中独立的 F 字样已折叠，物品说明及长按进度保留。
 
 “Talk to Omen”和“Open the door”是已提供的行配置及运行时测试例子，不表示本轮批量修改了全部 NPC／门实例或实现了其对话、开门玩法。
 

@@ -133,3 +133,35 @@
 - https://github.com/NotYetGames/DlgSystem
 - https://github.com/NotYetGames/DlgSystem/wiki/Dialogue-Manual
 - https://dev.epicgames.com/documentation/en-us/unreal-engine/blueprint-communication-usage-in-unreal-engine?application_version=5.6
+
+## 逐句自定义停顿的编辑入口（2026-11-12复核）
+
+功能已经存在于每行 `S_DialogueLine.PostLineDelay`，无需新增变量或修改播放蓝图。以当前实验室章节为例，打开 `/Game/Data_Dialog/DT_OD04`，选择某行，在 Row Editor 中修改 **Post Line Delay**（秒），保存。该值属于当前句：第一行设2，表示第一句结束后再等2秒开始第二句。每行可以不同；0为不额外等待。需要分开控制的台词应各占一行，不会按单行文本的标点自动拆句。
+
+- 有VoiceWave：实际AudioFinished后等待PostLineDelay，再自动播放下一行。
+- 无VoiceWave：当前行总停留时间为TextOnlyDuration + PostLineDelay。例如3+2，约5秒后切换。
+- 适用于AUTO自动播放；P切换到Manual后保留原有按键推进规则。
+- 修改播放中的DataTable不会替换管理器已经读取的行快照，重新开始该段对话/Play后生效。最后一行的停顿也会延后该段完成事件。
+
+2026-11-12现有实现复核：前台PIE真实Tick计时，纯文字0.4秒+0停顿约0.402秒推进；0.4+1.5约1.910秒推进；约0.5秒测试音频的完成通知在0.552秒，下一行于1.559秒开始，即音频结束后约1.007秒。声音用引擎短音效作为临时播放夹具，未替换正式配音；后台编辑器节流时实测间隔更长，前台复测确认正常精度。本轮没有修改对白内容、表中参数、结构体或运行蓝图。证据为文档工作区tmp/dialogue-gap-20261112/runtime-verification.json及final.json。
+
+### 同名对白表与实际播放引用（2026-11-12修复前调查，现已由下节修复取代）
+
+实际章节实例Ch1_E1_Mission的对话任务使用 `/Game/Environment/LabV39/Chapter1/Event1/DT_Chapter1EscapeConversations`。当前OD01–OD04读取同目录下的同名逐句表；OD03Impact单独读取DT_OD03Impact。`/Game/Data_Dialog/DT_OD01–04` 另有一套数据，虽然被通用DT_DialogueConversations引用，但当前章节任务不使用该注册表。之前将Data_Dialog/DT_OD04直接作为实验室编辑入口的说明不完整，现已纠正；PostLineDelay能力与计时验证仍有效，但必须修改实际被引用的行。
+
+本次检查时，用户在Data_Dialog的OD01–04已填语音，章节Event1版本VoiceWave仍全部None。PIE自然OD02观察到ReadingText、LoadedWaves全None；临时改从通用注册表请求OD01后成功加载用户4项声音引用，首句AudioComponent Playing，组件/管理器/资产音量均1。没有修改任何资产来强行统一，两套OD03行数及演出标记不同，后续修复须保留章节拆分和LineEventId，不得直接按同名行批量替换。
+
+用户已将OD05–09从Chapter1/Control移动至Data_Dialog；当前章节注册表对这些表的引用已正确解析到新位置。OD05两行、OD06四行、OD08一行和OD09四行的VoiceWave仍为空，属于尚未配置语音。本次仅检查已填引用和实际加载链，未验收全部音频听感，也没有修改用户数据表。证据在文档工作区tmp/dialogue-voice-audit-20261112。
+
+
+### 当前统一入口：Data_Dialog（2026-11-12，20261112-dialogue-voice-reference-fix）
+
+已将实际章节 `DT_Chapter1EscapeConversations` 的全部44个行引用统一到 `/Game/Data_Dialog/DT_OD01` 至 `DT_OD09`。以后在这组表中编辑 DialogueText、VoiceWave 和 PostLineDelay；保存后重新开始该段或 Play。章节任务继续使用原有章节注册表，通用 DT_DialogueConversations 不变。Event1 旧逐句表没有删除，但已不再用于该章节注册表。
+
+- OD03Impact 只读取 Data_Dialog/DT_OD03 第1行 Ah!，保持惊叫独立触发。
+- 后续 OD03 读取同表第2、3、4行，采用用户当前填写的三句及其语音，避免再次播放惊叫。第4行出口台词补入 LineEventId=ExitSpotted；DT_OD06 第5行的 ExamineHand 标记保持。
+- 用户原有文本、角色、声音引用、时长和逐句间隔均保持；只保存章节注册表和 Data_Dialog/DT_OD03 两个资产。没有修改蓝图图表、任务顺序、角色或地图。
+
+开启音频的 Map_LabV39 PIE 验证：自然开场首句进入 PlayingVoice，完成后自动播放第二句；逐段使用真实章节注册表定向请求，已配置声音均可创建 Playing 音频组件且音量为1；OD03惊叫自然完成，出口标记可完成原出口任务。OD06检查左手标记仍驱动 Omen 靠近并在下一句回位；真实Aftermath任务启动OD04仍关闭7个逃离环境声、保留速度恢复状态，并在整段结束后成功完成。后续段落使用临时PIE状态及原生推进测试，不代表整章人工通关、逐句完整听感或打包验收。
+
+OD05仍有2行、OD06有4行、OD08有1行、OD09有4行 VoiceWave 为空；这些行继续纯文字播放，不能视为配音故障。测试已停止，内容包与地图无未保存修改；相关蓝图、角色和地图文件哈希与本次修复前状态一致。证据：文档工作区 tmp/dialogue-voice-fix-20261112/{plan,applied,runtime,regression,final}.json。

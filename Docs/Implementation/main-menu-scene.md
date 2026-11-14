@@ -15,7 +15,7 @@ Canonical inspection record: `C:/Users/jason/Desktop/Capstone计划/开发文档
 
 ## 使用与参数
 
-打开 `D:/UE5Project/TimeShuttle/TimeShuttle.uproject` 的 `/Game/Maps/Map_MainMenu`，Play 后鼠标悬停New Game切到正面，悬停其余按钮切回侧面，L入口已停用。过渡1.2秒，可中途反向；人物与建筑不换位。点击New Game时若过渡未完则等待真实完成回调，再进入Training Room；已稳定则立即提交，不再额外消散。
+打开 `D:/UE5Project/TimeShuttle/TimeShuttle.uproject` 的 `/Game/Maps/Map_MainMenu`，Play 后鼠标悬停New Game切到正面，悬停其余按钮切回侧面，L入口已停用。过渡1.2秒，可中途反向；人物与建筑不换位。点击New Game时若过渡未完则等待真实完成回调，再从 Map_LabV39 的 PlayerStart 开始第一章；已稳定则立即提交，不再额外消散。
 
 | 资产 | 作用与可编辑入口 |
 | --- | --- |

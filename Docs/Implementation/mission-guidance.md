@@ -41,3 +41,13 @@
 本机证据位于 `Saved/Agent/Guidance/`：`fixed-validation.json`（固定路线、无导航数据、位置无关、显式更新、边界与任务链），`fixed-layout-verification.json`（布局和语义），`fixed-terminal-removal.json`（终端清理），`fixed-delivery.json`（保存及编译）。历史的 dynamic route / F / locator 测试文件保留，不计入当前验收。
 
 修改前保存版本的定向恢复副本位于忽略跟踪的 `Saved/Agent/Guidance/FixedRecovery/`；资产修改和删除通过 Unreal 编辑器 API 执行。未提交或推送。未认证完整 Cook/打包、多人和正式关卡的全部设计路径。
+
+## Per-task path visibility (2026-11-11)
+
+Task `20261111-guidance-visibility`: every AC_Task_GuideTo now exposes **Guidance > Presentation > Show Path**, default true. In Map_LabV39 select Ch1_E1_Mission, then select the desired task component in Details and search Show Path. Uncheck it to hide that stage's ground line and arrows. Keep WaypointRoles and all objective/completion settings intact. The endpoint marker remains visible. All eight Chapter 1 tasks retain the enabled default.
+
+The Blueprint task passes ShowPath before StartGuidance and synchronizes it during its existing update. BP_GuidancePath.SetPathVisible updates pooled strip visibility only when the boolean changes; RenderSegment honors the same value during construction/rebuild. No marker, mission display, arrival or signal completion policy changed. Runtime changes apply on the next task update; permanent level settings must be edited outside PIE and saved.
+
+Only AC_Task_GuideTo and BP_GuidancePath were changed and saved. Both compile with zero errors/warnings. Four modified graphs were formatted/commented with semantics preserved. Targeted PIE passed 21 checks: all eight stages start hidden with visible markers; enable/disable/re-enable; hidden rebuild; wrong/correct signals; cleanup; hidden arrival completion; unchanged task configuration; actual MissionFlow progression from hidden LowPass to visible TubePath. Same-view screenshots confirm the ground visuals disappear. Fixtures directly started tasks, injected their normal signals and positioned the player; this is not a complete chapter playthrough. Five SaveGame hashes were unchanged and no dirty packages remained. Packaged/multiplayer testing was not performed.
+
+Local workspace evidence: tmp/guidance-visibility-20261111/{runtime.json,layout.json,final.json,path-on.png,path-off.png}. The first fixture used an unavailable Python capsule getter; the fixture was corrected and the full matrix rerun successfully without changing gameplay logic.
