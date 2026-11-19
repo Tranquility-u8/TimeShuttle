@@ -1,0 +1,60 @@
+{
+  "SM_HallGlassLinkFloorWest": {
+    "pivot_cm": [
+      -3000,
+      -3930,
+      0
+    ],
+    "slots": [
+      "Joint",
+      "Floor",
+      "FloorAlt"
+    ],
+    "triangles": 4634
+  },
+  "SM_HallGlassLinkWallWest": {
+    "pivot_cm": [
+      -3000,
+      -3930,
+      700
+    ],
+    "slots": [
+      "Joint",
+      "Graphite",
+      "Panel",
+      "WallCool",
+      "Alloy",
+      "Seal"
+    ],
+    "triangles": 2626
+  },
+  "SM_HallGlassLinkFloorEast": {
+    "pivot_cm": [
+      3000,
+      -3930,
+      0
+    ],
+    "slots": [
+      "Joint",
+      "Floor",
+      "FloorAlt"
+    ],
+    "triangles": 4580
+  },
+  "SM_HallGlassLinkWallEast": {
+    "pivot_cm": [
+      3000,
+      -3930,
+      700
+    ],
+    "slots": [
+      "Joint",
+      "Graphite",
+      "Panel",
+      "WallCool",
+      "Alloy",
+      "Seal"
+    ],
+    "triangles": 2634
+  }
+}

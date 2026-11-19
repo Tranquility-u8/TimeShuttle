@@ -1,0 +1,184 @@
+{
+  "units": "UE world centimetres",
+  "combine_meshes": true,
+  "material_slots": {
+    "TC_Alloy": "/Game/Environment/Chapter1/TemporalCalibration/Materials/MI_TC_Alloy",
+    "TC_Brushed": "/Game/Environment/Chapter1/TemporalCalibration/Materials/MI_TC_Brushed",
+    "TC_Ceramic": "/Game/Environment/Chapter1/TemporalCalibration/Materials/MI_TC_Ceramic",
+    "TC_Graphite": "/Game/Environment/Chapter1/TemporalCalibration/Materials/MI_TC_Graphite",
+    "TC_Index": "/Game/Environment/Chapter1/TemporalCalibration/Materials/MI_TC_Index",
+    "TC_Optic": "/Game/Environment/Chapter1/TemporalCalibration/Materials/MI_TC_Optic",
+    "TC_Pearl": "/Game/Environment/Chapter1/TemporalCalibration/Materials/MI_TC_Pearl",
+    "TC_Pilot": "/Game/Environment/Chapter1/TemporalCalibration/Materials/MI_TC_Pilot",
+    "TC_Seal": "/Game/Environment/Chapter1/TemporalCalibration/Materials/MI_TC_Seal",
+    "TC_Support": "/Game/Environment/Chapter1/TemporalCalibration/Materials/MI_TC_Support"
+  },
+  "models": {
+    "SM_CH_OmenClockFacade": {
+      "triangles": 5872,
+      "min_uv_det": 0.9999746680259705,
+      "bounds_cm": [
+        [
+          -1798.0,
+          -51.4,
+          1.0
+        ],
+        [
+          1798.0,
+          0.0,
+          858.0
+        ]
+      ],
+      "slots": [
+        "TC_Alloy",
+        "TC_Brushed",
+        "TC_Ceramic",
+        "TC_Graphite",
+        "TC_Index",
+        "TC_Optic",
+        "TC_Pearl",
+        "TC_Pilot",
+        "TC_Seal",
+        "TC_Support"
+      ],
+      "fbx": "SM_CH_OmenClockFacade.fbx",
+      "location": [
+        0,
+        925,
+        540
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "visible_only": true
+    },
+    "SM_CH_OmenBeam": {
+      "triangles": 420,
+      "min_uv_det": 0.9999998807907104,
+      "bounds_cm": [
+        [
+          -1899.0,
+          -22.4,
+          -33.8
+        ],
+        [
+          1899.0,
+          16.5,
+          29.7
+        ]
+      ],
+      "slots": [
+        "TC_Graphite",
+        "TC_Seal"
+      ],
+      "fbx": "SM_CH_OmenBeam.fbx",
+      "location": [
+        0,
+        400,
+        1370
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "visible_only": true
+    },
+    "SM_CH_ReceptionDesk": {
+      "triangles": 772,
+      "min_uv_det": 0.9999981017608661,
+      "bounds_cm": [
+        [
+          -300.0,
+          -59.0,
+          0.0
+        ],
+        [
+          300.0,
+          60.0,
+          104.3
+        ]
+      ],
+      "slots": [
+        "TC_Alloy",
+        "TC_Ceramic",
+        "TC_Graphite",
+        "TC_Optic",
+        "TC_Pilot",
+        "TC_Seal",
+        "TC_Support"
+      ],
+      "fbx": "SM_CH_ReceptionDesk.fbx",
+      "location": [
+        0,
+        -613.3,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "visible_only": true
+    },
+    "SM_CH_C0PortalTrim": {
+      "triangles": 552,
+      "min_uv_det": 0.9999928614124656,
+      "bounds_cm": [
+        [
+          -476.0,
+          -16.0,
+          0.5
+        ],
+        [
+          476.0,
+          -1.0,
+          535.0
+        ]
+      ],
+      "slots": [
+        "TC_Brushed",
+        "TC_Graphite",
+        "TC_Seal"
+      ],
+      "fbx": "SM_CH_C0PortalTrim.fbx",
+      "location": [
+        0,
+        925,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "visible_only": true
+    }
+  },
+  "original_visuals": {
+    "SM_CH_ReceptionDesk": "R17_Furniture_025_reception",
+    "SM_CH_OmenBeam": "HallRoofBeam::-4"
+  }
+}

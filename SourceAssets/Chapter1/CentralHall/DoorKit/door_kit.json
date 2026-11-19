@@ -1,0 +1,163 @@
+{
+  "material_slots": {
+    "TC_Brushed": "/Game/Environment/Chapter1/TemporalCalibration/Materials/MI_TC_Brushed",
+    "TC_Graphite": "/Game/Environment/Chapter1/TemporalCalibration/Materials/MI_TC_Graphite",
+    "TC_Pilot": "/Game/Environment/Chapter1/CentralHall/Environment/Materials/MI_HallStatusLens",
+    "TC_Seal": "/Game/Environment/Chapter1/TemporalCalibration/Materials/MI_TC_Seal",
+    "TC_Slate": "/Game/Environment/Chapter1/TemporalCalibration/Materials/MI_TC_Slate",
+    "TC_Support": "/Game/Environment/Chapter1/TemporalCalibration/Materials/MI_TC_Support",
+    "TC_Ceramic": "/Game/Environment/Chapter1/TemporalCalibration/Materials/MI_TC_Ceramic",
+    "TC_Alloy": "/Game/Environment/Chapter1/TemporalCalibration/Materials/MI_TC_Alloy",
+    "TC_Index": "/Game/Environment/Chapter1/TemporalCalibration/Materials/MI_TC_Index",
+    "TC_Optic": "/Game/Environment/Chapter1/TemporalCalibration/Materials/MI_TC_Optic"
+  },
+  "models": {
+    "SM_LabDoorLeafLeft": {
+      "triangles": 1462,
+      "min_uv_det": 0.9999998413222784,
+      "bounds_cm": [
+        [
+          -73.3212,
+          -49.3333,
+          -49.7059
+        ],
+        [
+          73.3212,
+          49.3333,
+          49.7059
+        ]
+      ],
+      "slots": [
+        "TC_Brushed",
+        "TC_Graphite",
+        "TC_Pilot",
+        "TC_Seal",
+        "TC_Slate",
+        "TC_Support"
+      ],
+      "fbx": "SM_LabDoorLeafLeft.fbx"
+    },
+    "SM_LabDoorLeafRight": {
+      "triangles": 1462,
+      "min_uv_det": 0.9999998413222784,
+      "bounds_cm": [
+        [
+          -73.3212,
+          -49.3333,
+          -49.7059
+        ],
+        [
+          73.3212,
+          49.3333,
+          49.7059
+        ]
+      ],
+      "slots": [
+        "TC_Brushed",
+        "TC_Graphite",
+        "TC_Pilot",
+        "TC_Seal",
+        "TC_Slate",
+        "TC_Support"
+      ],
+      "fbx": "SM_LabDoorLeafRight.fbx"
+    },
+    "SM_LabDoorPortal320": {
+      "triangles": 1204,
+      "min_uv_det": 0.9999969631317072,
+      "bounds_cm": [
+        [
+          -192.0,
+          -14.2,
+          0.7
+        ],
+        [
+          192.0,
+          -1.0,
+          410.0
+        ]
+      ],
+      "slots": [
+        "TC_Brushed",
+        "TC_Ceramic",
+        "TC_Graphite",
+        "TC_Seal",
+        "TC_Support"
+      ],
+      "fbx": "SM_LabDoorPortal320.fbx"
+    },
+    "SM_LabDoorOmenLeafLeft": {
+      "triangles": 536,
+      "min_uv_det": 0.9999998212546615,
+      "bounds_cm": [
+        [
+          -75.305,
+          -48.5,
+          -49.1667
+        ],
+        [
+          75.305,
+          49.75,
+          49.375
+        ]
+      ],
+      "slots": [
+        "TC_Brushed",
+        "TC_Graphite",
+        "TC_Seal",
+        "TC_Slate"
+      ],
+      "fbx": "SM_LabDoorOmenLeafLeft.fbx"
+    },
+    "SM_LabDoorOmenLeafRight": {
+      "triangles": 536,
+      "min_uv_det": 0.9999998212546615,
+      "bounds_cm": [
+        [
+          -75.305,
+          -49.75,
+          -49.1667
+        ],
+        [
+          75.305,
+          48.5,
+          49.375
+        ]
+      ],
+      "slots": [
+        "TC_Brushed",
+        "TC_Graphite",
+        "TC_Seal",
+        "TC_Slate"
+      ],
+      "fbx": "SM_LabDoorOmenLeafRight.fbx"
+    },
+    "SM_LabLiftFront160": {
+      "triangles": 1620,
+      "min_uv_det": 0.9999979775277552,
+      "bounds_cm": [
+        [
+          -91.0,
+          0.2,
+          0.5
+        ],
+        [
+          91.0,
+          12.4,
+          290.0
+        ]
+      ],
+      "slots": [
+        "TC_Alloy",
+        "TC_Brushed",
+        "TC_Ceramic",
+        "TC_Graphite",
+        "TC_Index",
+        "TC_Optic",
+        "TC_Seal",
+        "TC_Support"
+      ],
+      "fbx": "SM_LabLiftFront160.fbx"
+    }
+  }
+}
