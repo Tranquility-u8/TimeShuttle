@@ -54,10 +54,6 @@
 4. `prepare_door_placement.py`：从 R17 几何与建筑报告生成 `door_placement_plan.json`，检查来源哈希一致。
 5. `spawn_doors.py`：按门表放置实例，只替换带本任务管理标签且门编号匹配的门，不改其他原有内容；地图由执行者检查后保存。
 
-**门扇与门套的维护。** 工程内的建模源、FBX 和蓝图外观安装函数位于 [DoorKit](../../../../Chapter1/CentralHall/DoorKit/)。重建上述基础门规格后，再向 [prefab_art.py](../../../../Chapter1/CentralHall/DoorKit/prefab_art.py) 的 `install(meshes)` 传入已导入的门网格，按网格资产名索引。该步骤将 `ConfigureDoorAppearance` 接在基础门的 `ApplyDoorPose` 后，并为 C0 子类选用专用双叶。普通门与剧情锁门共用标准双叶。
-
-在具体关卡中，门框以 Actor 局部 X 为墙面法线，正反面距门轴的有符号厘米值分别填写在 `DoorFramePositiveCm` 与 `DoorFrameNegativeCm`。大厅 C0 负侧已有专用建筑门框，该实例关闭 `bShowDoorFrameNegative`。窗框、独立门牌和章节交互沿用既有资源。
-
 如果已在 UE 中手改实例，重新运行摆放脚本会按门表重建这些受管理实例。应先将需要保留的调整同步到来源数据或明确保留实例，避免用旧门表覆盖团队修改。不要同时运行多个编辑器写入、玩家输入或相机控制脚本。
 
 编辑工具在 `Plugins/LabAuthoring`，只包含 **Editor 模块**。生成的门是普通蓝图，运行节点来自原生 Engine 与项目已有交互体系，没有新增运行时 C++ 类依赖。
