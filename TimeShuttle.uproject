@@ -20,6 +20,10 @@
 			"Enabled": true
 		},
 		{
+			"Name": "TimeShuttleDebugMenu",
+			"Enabled": true
+		},
+		{
 			"Name": "SceneBridge",
 			"Enabled": true,
 			"TargetAllowList": [

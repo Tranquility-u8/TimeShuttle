@@ -1,0 +1,17 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Time Shuttler Debug Menu",
+	"Description": "In-game diagnostics and playtest controls for development builds.",
+	"Category": "Debugging",
+	"CanContainContent": false,
+	"Modules": [
+		{
+			"Name": "TimeShuttleDebugMenu",
+			"Type": "Runtime",
+			"LoadingPhase": "PostEngineInit",
+			"TargetConfigurationDenyList": ["Shipping", "Test"]
+		}
+	]
+}

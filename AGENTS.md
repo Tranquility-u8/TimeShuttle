@@ -99,6 +99,8 @@ An authorized Blueprint edit automatically dirtying its related level instances 
 
 ## Verification
 
+For new or changed main-story sequences, register each independently playable entry in the Story Jump menu when its initialization and continuation are ready. Reuse the map's native start, checkpoint or mission task and provide any prerequisite setup through its owning flow. Check fresh PIE arrival from another map, then exercise the entry's next real objective, interaction or travel gate. Record the point IDs and evidence. See [Story Jump authoring](Docs/Implementation/story-jump.md).
+
 For implementation, repair, migration and workflow-maintenance tasks, task metrics are a standard start/finish step: follow `Docs/Agent/workflow-metrics.md` and run `Scripts/Agent/Measure-AgentTask.ps1`. Ordinary Q&A is excluded. Start once per task, Pause before user waits or handoff, Resume when continuing, and Finish after validation with outcome/rework count and a one-line final summary. Reuse the TaskId across turns; do not duplicate records. Read only compact counters, never full session transcripts. Missing telemetry must not block work or become invented numbers. Compare a small batch of similar tasks before updating reusable workflow lessons; preserve required verification and user authorization.
 
 Run `powershell -ExecutionPolicy Bypass -File Scripts/Agent/Validate-AgentWorkflow.ps1` after changing agent workflow files. For UE changes, validation is task-specific and must be agreed at the approval gate; at minimum compile affected Blueprints, inspect the Output Log, exercise the changed path in PIE, and report evidence and known gaps.

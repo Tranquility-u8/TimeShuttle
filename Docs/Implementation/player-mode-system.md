@@ -20,7 +20,7 @@ ShowTimeEnergyUI controls both the left panel and the reticle energy arc. The sa
 
 ## Designer use
 
-Connect persistent Level Blueprint BeginPlay to `BFL_PlayerMode.SetLevelDefaultMode`, with Self as Context and the desired enum. Map_LabV39 selects Chapter1. Gameplay levels without an explicit override fall back to Combat on the next tick. Generic code does not inspect map names.
+Connect persistent Level Blueprint BeginPlay to `BFL_PlayerMode.SetLevelDefaultMode`, with Self as Context and the desired enum, for scenes with one fixed profile. Since 2026-11-21, Map_LabV39 instead calls `BFL_SceneSession.ApplyScenePlayerMode`: explicit main-story sessions select Chapter1; direct scene testing selects Combat. `SceneSession.PreviewMainStory` enables chapter preview for the next Play session. Gameplay levels without an explicit override fall back to Combat on the next tick. Generic code does not inspect map names. See [scene testing and main-story sessions](scene-session.md).
 
 Call `SetPlayerMode` from a trigger or mission to change mode at runtime. `ResetToLevelDefault` restores the level's configured mode. `GetCurrentMode` / `GetCurrentConfig` include Ready; permissions are closed before initialization. Subscribe to `OnPlayerModeChanged` for additional consumers.
 

@@ -1,5 +1,7 @@
 # 当前项目架构
 
+- 场景与主线入口分离（2026-11-21）：`Core/Session/BFL_SceneSession` 集中判定主线会话；LabV39 直接 Play / Play From Here 默认自由测试，`Session/SceneSession.PreviewMainStory` 可为下一次运行启用主线预览。主菜单新游戏显式传入 `MainStory?HideMinimap`，教学往返沿用 `ChapterTraining` / `ChapterReturn`。章节任务及第二房间导演按会话启动，Lab 玩家模式相应选择 Chapter1 / Combat；场景锚点和章节内部流程仍保留。见 [场景测试与主线会话](../Implementation/scene-session.md)。
+
 - Chapter 1 第二房间演出（2026-10-28）：`Map_LabV39` 的 `Ch1_R2_Sequence` 组合五个 `/Game/Blueprints/Cinematics/` 蓝图，提供入口看门、锁门交互、遮挡柜爆开、四块物理落板与危险区时停恢复。镜头、掉落物和原生时停调用独立封装；目标物体、焦点、时长与速度可在实例修改。复用原 `AC_TimeAbility`、`AC_PlayerControlLocks`，锁门只新增子类，未修改共享门父类。无制作插件的冷重载、输入触发及连续走出出口通过；替换模型后仍需复核碰撞和落点。见 [演出实现与验收边界](../Implementation/chapter1-room2-cinematic.md)。
 
 - Tutorial dialogue document migration (2026-10-22, P-008/LEVEL-002/P-106): BP_TrainingMission now configures 99 tasks across the existing eight checkpoints. This supersedes the earlier 86-task snapshots recorded below. Fifteen TD01-TD15 conversations contain twenty document lines with retained audio. Entry, valid-hit, defeated-enemy disappearance and actual melee-spawn gates replace old/missing calls. TD07 timing and TD10 enemy-disappearance wording follow explicit user confirmation. Old Energy/Arrival tables are removed after reference checks; two HUD timing bindings are synchronized. Final runtime 48/48, manual/cancel/retry/HUD 9/9, independent no-authoring-plugin cold checks 69/69 pass; four affected Blueprints compile cleanly. Map/controller/player/GI and disabled memory/persistence unchanged. Scripts and evidence are Git-ignored under LocalTests/TutorialDialogue20261022. Later combat uses native hit/damage fixtures, not a manual aiming playthrough. See [mission implementation](../Implementation/mission-system.md).
@@ -192,6 +194,12 @@ Controller, Button and Root compile/save; 64 scope/default checks pass, formatti
 
 Canonical inspection record: `C:/Users/jason/Desktop/Capstone计划/开发文档/主界面/主界面UI.md`. Local scripts: `C:/Users/jason/Desktop/Capstone计划/tmp/main-menu-ui`; evidence: `Saved/Agent/MainMenuUI/hover_delivery_summary.json`. Runtime remains Blueprint/UMG/Niagara, without Python or custom runtime plugin dependencies.
 
+
+## Gameplay debug menu
+
+`TimeShuttleDebugMenu` is a standalone Slate plugin for local development gameplay. With the game viewport focused, F10 opens the overlay. F10, Esc or Close dismisses it and returns control to the viewport. The simulation continues while the panel owns input. It shows the level, position, world speed, health, time energy, magazine and reserve ammo. Invulnerability uses the same pawn damage flag as F6. Refill writes the live `AC_TimeAbility.Energy` to `MaxEnergy`. Infinite Reload updates the equipped firearm's existing policy for that instance. The menu excludes Shipping and Test configurations. Disable the plugin in `TimeShuttle.uproject` and restart to remove the entry point.
+
+**Story Jump** reloads a configured map and initializes its native mission flow at a registered entry. The registry and optional preparation hook are described in [Story Jump authoring](../Implementation/story-jump.md).
 
 ## Player key prompt routing (verified 2026-10-28)
 
