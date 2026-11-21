@@ -1,5 +1,13 @@
 # Training Room tutorial implementation
 
+## 2026-11-21 — S5 bench button and three physical drop lights
+
+In `Map_TrainingRoom`, TD11 plays Omen’s original introduction to environmental kills. After the line ends and the layout is ready, the orange button on the weapon bench accepts F. The wall shows 3, 2, 1, then counts down three seconds. FullStop freezes the exercise clock. Each cable accepts one ordinary hit or a released temporal projectile and releases its own Chaos body above two targets. The third distinct cut locks success immediately. The mission leaves time for the last impact before TD12 and the melee lesson. A timeout restores the three lamps, three cables and six targets in place and rearms the button.
+
+The five new meshes and their Blender source are in `SourceAssets/TrainingRoom/DropLights`. The runtime actors are in `/Game/Environment/TrainingRoom/DropLights`. The in-use S5 paired-plank actors were removed from the map. Legacy layout groups remain available for visual review.
+
+Fresh S5 checkpoint PIE tests used the native F interaction, the equipped pistol and actual collision damage. They covered the TD11 gate, indefinite button wait, both clock phases, a single release and timeout, local retry, ordinary three-shot success, FullStop freeze, three suspended shots, six defeats and continuation through TD12 into S7A. Player placement and aim were scripted.
+
 ## 2026-11-10 — Final combat cover ammunition
 
 At the start of S7B combat, the controller places one native pistol ammunition pickup on each of four 120 cm white half covers at the entrance, on the left and right flanks, and at the back of the room. The map markers carry `TSId:S7B_CoverAmmoSlot_1` through `_4`. F adds 24 reserve rounds. Each consumed pickup returns to its own marker after the training room’s five-second refill delay. Restarting the encounter clears the old pickups and pending refills before repopulating the four positions.

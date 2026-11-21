@@ -7,7 +7,7 @@ STAGES={
     'S3':'03  Stationary enemies / ordinary body-hit kills',
     'S4':'04A  Stationary enemy / native weak point',
     'S4Moving':'04B  Walking enemy / native weak point',
-    'S5':'05  One plank / two supports / three kills',
+    'S5':'05  Bench start / three drop lights / three-second cable drill',
     'S7A':'07A  Melee preview / front spawn / no table',
     'S7B':'07B  Immediate combat / eight covers / suspended container',
 }
