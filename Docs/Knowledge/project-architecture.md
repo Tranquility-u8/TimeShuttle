@@ -195,6 +195,12 @@ Controller, Button and Root compile/save; 64 scope/default checks pass, formatti
 Canonical inspection record: `C:/Users/jason/Desktop/Capstone计划/开发文档/主界面/主界面UI.md`. Local scripts: `C:/Users/jason/Desktop/Capstone计划/tmp/main-menu-ui`; evidence: `Saved/Agent/MainMenuUI/hover_delivery_summary.json`. Runtime remains Blueprint/UMG/Niagara, without Python or custom runtime plugin dependencies.
 
 
+## Gameplay debug menu
+
+`TimeShuttleDebugMenu` is a standalone Slate plugin for local development gameplay. With the game viewport focused, F10 opens the overlay. F10, Esc or Close dismisses it and returns control to the viewport. The simulation continues while the panel owns input. It shows the level, position, world speed, health, time energy, magazine and reserve ammo. Invulnerability uses the same pawn damage flag as F6. Refill writes the live `AC_TimeAbility.Energy` to `MaxEnergy`. Infinite Reload updates the equipped firearm's existing policy for that instance. The menu excludes Shipping and Test configurations. Disable the plugin in `TimeShuttle.uproject` and restart to remove the entry point.
+
+**Story Jump** reloads a configured map and initializes its native mission flow at a registered entry. The registry and optional preparation hook are described in [Story Jump authoring](../Implementation/story-jump.md).
+
 ## Player key prompt routing (verified 2026-10-28)
 
 BP_FPCharacter owns AC_KeyPrompt, which references DT_KeyPrompts and creates one WBP_KeyPromptHUD. BPI_KeyPrompt/AC_KeyPromptInfo provide object data; AC_Interaction relays the existing Trace hit. Weapon/player state mutation events notify ordinary reload eligibility. BP_TrainingController alone submits the forced Special falling-rock row and clears its source on confirmed success/cancellation. Requests are keyed by source object, ordered by ForceDisplay then priority 1–5; ties retain the current source. No prompt Tick or extra trace. UI_Hud no longer polls the retired RELOAD advice. Since 2026-11-07, its existing projectile-threat API routes both ordinary and guided QTE to the same TimeStop row; native BPI_Interaction targets without a custom provider receive the shared F fallback, and UI_Interaction's old F glyph is collapsed. See [setup and public Blueprint APIs](../Implementation/key-prompt-rules.md) and [shared presentation / reload policy](../Implementation/shared-key-prompts-and-reload-debug.md).
