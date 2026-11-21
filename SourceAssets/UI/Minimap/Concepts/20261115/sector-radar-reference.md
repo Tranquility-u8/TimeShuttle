@@ -1,0 +1,15 @@
+# 半透明扇形环雷达参考
+
+2026-11-15，按用户补充的《全境封锁 2》风格截图生成的一张局内概念图。
+
+[查看完整样图](T_MinimapConcept_D_SectorRadar.png)
+
+- 左上角半透明烟灰圆盘，场景能透过底盘看到。
+- 雷达内部去除建筑、地形、网格、原有菱形接点与尾迹；保留中心白点和淡视野扇形。
+- 外围红色厚扇形环段表示威胁，环段之间以径向间隙分隔。
+- 范围标注采用参考图的 `Ø 40 m`，属于视觉示意；本轮未更改游戏范围参数。
+- 使用内置 ImageGen 合成，尚未实现为 UE 界面。场景和其余 HUD 沿用 A 版参考。
+
+## 最终生成提示词
+
+Use case: ui-mockup. Produce ONE full landscape in-game concept screenshot, high fidelity. Input image 1 is the EDIT TARGET: the Time Shuttler whitebox FPS gameplay mockup. Input image 2 is the user's EXACT MINIMAP STYLE REFERENCE; follow image 2 closely for the radar treatment, not the previous blue tactical map. Change ONLY the top-left minimap area in image 1. Preserve the arena, sky and clouds, camera, platform geometry, central red incoming-fire indicators, reticle, Q Time Stop prompt, lower-left TIME panel and lower-right HANDS exactly as in image 1. Replace its minimap completely with the simple semi-transparent circular RADAR from reference image 2, at the same top-left location and roughly same diameter. The circular disk is a light smoked neutral gray with a restrained cool tint and around 20-30% opacity; the actual scene sky and cloud patterns must remain clearly visible THROUGH it. The radar is a screen overlay, not an opaque panel or a cutout showing another scene. REMOVE ALL interior building footprints, floorplan lines, walls, blocks, terrain, grids, old diamonds and trails. NO building silhouettes or top-down architecture anywhere in the disk. Show only a very small white player dot at the disk center with a faint translucent forward view cone, leaving the interior extremely clean. THREATS MUST APPEAR AS BROAD RED ANNULAR SECTORS ON THE OUTER EDGE, matching the supplied reference: bold flat coral-vermilion curved bands with real filled thickness approximately 10-14 pixels at this output size, forming portions of a circular ring. These are short broad fan-shaped RING SECTORS bounded by two concentric circular arcs and straight radial ends, never solid pie wedges reaching the center, never thin strokes or small arrows. Draw three adjoining danger sectors across the upper/front and upper-right perimeter, separated by tiny clean radial gaps, like the chunky red warning crown in reference image 2. Red ring sectors strong opacity, with a much fainter translucent red wash only directly inward of their respective sector; no thick bloom. The rest of the rim nearly disappears: no cyan perimeter line, no double rim, no compass ticks or N E S W letters. Remove the old TACTICAL title and THREATS 03 footer. Keep only a tiny light gray 'Ø 40 m' at the radar's upper-left, matching the reference's minimal typography. No unrelated status icons, extra labels, illustrative arrows or decorative circuitry. Retain the project's restrained science-fiction identity through subtle material layering and precise antialiasing. Overall result is calm, minimalist, genuinely semi-transparent, with reference-matched thick red sector-ring warnings and NO map architecture. Full playable gameplay frame, no enlarged inset, no presentation board, no watermark.

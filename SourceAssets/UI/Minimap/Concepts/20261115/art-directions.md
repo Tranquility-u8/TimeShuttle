@@ -1,0 +1,42 @@
+# 小地图局内美术参考 · 2026-11-15
+
+这组三张图由内置 ImageGen 基于项目现有白盒实机截图合成，用于选择后续 UI 美术实现参考。它们是概念效果图，不是已经实现的 UE 渲染或运行验证证据。本轮只新增参考图片和本说明，没有修改 Unreal 资产。
+
+## 项目约束与参考基准
+
+- 对标《全境封锁 2》正式版圆形战术雷达的信息层次与完成度；保留 Time Shuttler 已有蓝色、近黑、白色的科技简约风格。
+- 项目配色依据 `Docs/Implementation/mission-ui.md`：蓝色 #2AA9FF、近黑 #05090F、白色；画面中的青色用于玩家及时间系统，橙红色用于危险。
+- 概念图基础场景来自 `Saved/Agent/ThreatArt/incoming-threats-gameplay00000.png`。B、C 以 A 为编辑参考，以尽量维持同一机位、背景、布局与威胁状态。
+- 全部采用左上角圆形地图、中心玩家、视野扇形、低对比地形、地图内来弹接点与外围危险弧。地形和逐颗来弹为本项目适配要求。
+- 能量条的缩小排版为整体协调示意。实施时须单独确定相关 HUD 的具体调整范围。
+- 生成图的地形、接点角度、颜色语义和倒计时/模式关系均属视觉示意，不能直接当作空间数据或判定规则。最终功能仍以真实世界坐标、原生 QTE 有效威胁集合和时间状态为准。
+
+## 三个方向
+
+| 方向 | 图片 | 主要视觉取舍 |
+| --- | --- | --- |
+| A · 战术玻璃 | [局内图](T_MinimapConcept_A_TacticalGlass.png) | 深蓝烟灰底盘、完整细边、克制的明暗层次，风格与现有 UI 较易统一。 |
+| B · 轻量投影 | [局内图](T_MinimapConcept_B_LightProjection.png) | 降低填充、断开边界、增加通透感；需要重点验证明亮和复杂背景中的对比。 |
+| C · 精密仪表 | [局内图](T_MinimapConcept_C_PrecisionInstrument.png) | 双层细边、少量方位刻度、较明显的危险弧，清晰度优先。 |
+
+建议将 A 的底盘和排版作为基础，吸收 C 的危险弧厚度及明暗分离。是否采用该组合仍由后续美术选择决定。
+
+## 后续实现的视觉验收重点
+
+在明亮天空、深色室内、复杂墙面三种背景中检查地图与标记的可读性；在普通、QTE、FullStop 三个状态下检查信息层级。常驻图形应保持安静，威胁出现时用局部弧段和接点建立注意力。检查实际游戏尺寸下的边缘抗锯齿、线宽、透明叠加、字体、DPI 与宽屏安全边距。最终接点和外围提示必须来自同一坐标投影与同一威胁集合，不能照搬概念图的示意角度。
+
+## 最终生成提示词
+
+工具：内置 ImageGen；背景不透明。A 的输入为项目白盒实机截图；B、C 的输入为生成的 A。以下保留本轮最终使用的英文提示词。
+
+### A · Tactical Glass
+
+Use case: ui-mockup, high fidelity in-game HUD art direction mockup. Input image 1 is the actual Time Shuttler FPS project screenshot and the EDIT TARGET. Create concept A 'Tactical Glass'. Preserve the exact whitebox arena, sky, camera, tiled platforms and scene lighting from the input. Output one full gameplay frame at the same landscape aspect, high resolution, no editor chrome or presentation board. The UI must feel shippable and as refined as The Division 2's restrained tactical radar, translated into this project's blue/near-black/white minimalist technology style. FOCUS is a compact CIRCULAR MINIMAP in the TOP LEFT, centered approx 180px,180px in a 1920-wide design, 260px diameter, left/top safe margin 40px. Replace the old square placeholder map entirely. Art direction A: a thin smoked navy transparent glass disk, extremely subtle soft inner shading, precise antialiased pale-blue hairline rim with a few functional interruptions, NO thick bezel, NO neon bloom. Inside draw a clearly authored, geometrically accurate-looking monochrome floorplan for the visible rectangular arena: perimeter walls, open walkways, right-side raised obstacles, using layered low-contrast filled footprints and crisp lighter wall lines. Make the map genuinely cartographic, no random decorative wiring. Center small white player chevron and a restrained cyan translucent camera cone. Exactly THREE small warm red-orange diamond incoming-projectile contacts with bright cores and tiny directional tails, three short red threat arc segments at corresponding bearings on the outer circumference; all three legible. Tiny N at upper edge, very sparse ticks. Small 'TACTICAL' above, '50 m' below left, 'THREATS 03' below right, in compact precise sans-serif. Keep quiet orange ONLY for current navigation waypoint, cyan for player/system and red for imminent danger. Coordinate surrounding HUD with current project style: replace the overly tall time energy panel with a compact slim vertical cyan energy gauge lower-left, label 'TIME', '100%', 'FULL STOP', restrained 30% threshold; retain the centered Q time-stop prompt and the three red incoming-fire indicators from reference, making them slightly smaller and clean, not dominant. Retain tiny 'HANDS' lower-right. UI quality comes from crisp edges, spacing, subtle opacity layering and disciplined hierarchy, not ornament. No large title, no logo, no watermark, no legends or explanatory callouts, no extraneous status cards, no bottom action bar. This must look like an actual playable FPS screenshot with a professionally composed HUD, with most screen area left for the game.
+
+### B · Light Projection
+
+Use case: ui-mockup. Asset: professional game UI art direction, concept B 'Light Projection', one complete in-game frame, wide 16:9 high resolution. Image 1 is the EDIT TARGET: keep the entire exact whitebox FPS scene, camera framing, lighting, central red incoming-fire arrows, reticle, Q Time Stop prompt, energy panel and lower-right HANDS unchanged. Change ONLY the TOP LEFT circular minimap's surface treatment and graphic styling, preserving its current size, position, three projectile locations, arena floorplan and labels. This is a second controlled art direction for Time Shuttler, inspired by The Division 2's disciplined radar but using the existing minimalist blue/white tech identity. Make it a refined LIGHTWEIGHT PROJECTED INTERFACE: the circle interior is almost transparent, with a very faint localized smoky gradient only behind map geometry; white/cool-grey terrain footprints have beautiful fine antialiased boundary lines, soft slightly offset depth shadows and lightly frosted surfaces. The outer boundary consists of a few sparse disconnected arcs, rather than a complete bezel; subtle precision ticks only at cardinal axes. A narrow understated cyan signal arc along a small upper-left portion acts as the project tech accent. White centered player chevron with broad very faint cyan view cone. Three compact vermilion diamonds with sharp luminous tiny centers and directional tails; three short red translucent threat wedges hug the edge, smoothly tapered with a bright fine leading edge, no garish glow. Keep a small outlined amber navigation waypoint visually different from threats only if the original has it; no extra contacts. Typography is exceptionally clean compact sans-serif, small 'TACTICAL' and N above, '50 m' and 'THREATS 03' beneath, aligned on a disciplined baseline with generous negative space. The goal is premium AAA in-game motion-graphics still, clear hierarchy and optical refinement, not a line-drawing placeholder and not decorative sci-fi greebles. The terrain must remain legible over the blue sky without a heavy filled circle. No title banner, no presentation captions, no logo, no watermark, no invented panels, no reframing of the scene. Most image area remains gameplay.
+
+### C · Precision Instrument
+
+Use case: ui-mockup. Asset: high-fidelity in-game HUD reference, concept C 'Precision Instrument'. Image 1 is EDIT TARGET. Keep the exact entire whitebox arena gameplay scene and camera, sky, tiled platform geometry, central incoming-fire arrows, reticle and Q Time Stop prompt, lower-left TIME energy gauge and HANDS text unchanged. Change ONLY the top-left minimap. Preserve its circular size and position, same arena perimeter and three incoming projectile locations. Make this art direction visibly distinct from the thin transparent-glass reference while still minimalist and consistent with the project blue/near-black/white HUD. A precisely machined DIGITAL INSTRUMENT, drawn as exceptionally crisp screen-space motion graphics: dark charcoal-navy disk with softly graduated matte translucency, a tight DOUBLE hairline rim separated by a narrow dark gap, short calibrated white minor ticks at 15-degree spacing, only N E S W letters at cardinal points; no thick metal casing. The floorplan becomes carefully drafted stepped relief: dark blue-gray arena floor, brighter thin perimeter walls with softened contact shadow, filled raised cover footprints on right with delicate lighter top edges and a subtle offset dark face suggesting height. Center white compact player chevron and a quiet cyan view cone, high optical clarity. Three incoming bullets are hot vermilion diamond cores with short tapered tails. OUTER DANGER SEGMENTS must be broad enough to read as serious warning rather than decorative red strokes: exactly THREE red-orange segmented curved ribbons, 5-7 pixels thick in this output, with crisp pale-hot inner edge, dark separation from the cyan system rim, tapered ends, extremely restrained internal glow. Cyan and white remain primary system colors; red reserved for danger. Add only tiny functional uppercase 'TACTICAL' above and '50 m' / 'THREATS 03' below, careful letterspacing and baseline alignment, no spurious text or analytics. The design should exhibit The Division 2-level rendering finish, material contrast and restraint, fully usable during combat, not a giant dashboard, not a toy sci-fi hologram. No explanatory captions, logo, title card, watermark, extra overlay panels or extra contacts. Output one full landscape gameplay frame, high resolution; most of the screen stays open for play.
