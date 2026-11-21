@@ -1,6 +1,6 @@
 # 第一章事件 1 · 逃离实验室
 
-打开 `/Game/Maps/Map_LabV39`，从关卡的 PlayerStart 开始 Play。章节实例是 `Chapter1/Event1/Ch1_E1_Mission`，对应资产在 `/Game/Environment/LabV39/Chapter1/Event1`。
+打开 `/Game/Maps/Map_LabV39`，选中 `Session/SceneSession` 并勾选 **Preview Main Story**，再从关卡的 PlayerStart 开始 Play；也可从主菜单新游戏进入。直接 Play / Play From Here 默认自由测试，不启动章节。测试完取消预览开关并重新 Play。章节实例是 `Chapter1/Event1/Ch1_E1_Mission`，对应资产在 `/Game/Environment/LabV39/Chapter1/Event1`。详见 [场景测试与主线会话](scene-session.md)。
 
 | 玩家动作 | 关卡响应 |
 | --- | --- |
