@@ -4,7 +4,7 @@
 
 | 玩家动作 | 关卡响应 |
 | --- | --- |
-| 在时间粒子实验室苏醒 | OD01 开始时实验室清晰可见。Kairos 在第 0.36 秒第一次闭眼，第 0.55 秒完全睁开。随后睁眼停留 3 秒，再快速连眨两下。后两次之间只睁眼停留 0.09 秒，第 4.08 秒完全睁开。字幕显示在眼睑之上，起身后接 OD02 并开放步行、观察、蹲伏和互动。 |
+| 在时间粒子实验室苏醒 | 主线 WakeLock 先铺纯黑遮罩。OD01 开始后，Kairos 从黑暗中慢慢睁眼，对焦途中眨眼两次。第二次睁稳后向左看实验设备，稍停后回正；默认在第 17.50 秒恢复清晰。字幕显示在眼睑之上，起身后接 OD02，允许步行、观察、蹲伏、互动和跳跃。OD02 默认 Auto 时空格跳跃；按 P 切至 Manual 后，空格与 Enter 翻句。 |
 | 蹲过左侧横管，沿斜面进入紫色管道 | Omen 交代目标后显示 “Leave the damaged laboratory”。两段固定路径分别指向矮洞另一侧和管道出口。低洞过线会被提前记录。 |
 | 出管落稳，走向西门 | 沿用第二房间已有的门特写。交还视角后显示 “Check the exit door”，与门交互后勾选此目标并触发坍塌。 |
 | 目睹落板和时停 | 惊叫由头顶落板触发。碎块冻结后播放 OD03；Kairos 说到出口时显示北门路线。玩家可以立即移动。 |
@@ -12,7 +12,21 @@
 
 **编辑入口**
 
-- `M_Chapter1WakeEyelids` 控制三次眨眼的弧度、闭合时间和开合幅度。`WakePresentation` 使用抬眼演出已有的 `WakeClock`，完成第三次眨眼、提前起身和结束关卡都会清理眼睑遮罩。
+- 在地图选中 `Ch1_E1_Mission`，在 Details 搜索 `Wake Presentation`。修改类默认值时打开 `BP_Chapter1EscapeMission → Class Defaults`。两个位置均可编辑下表参数。
+
+| 蓝图参数 | 默认值 | 调节效果 |
+| --- | --- | --- |
+| Initial Blur Strength | 26 | 初始模糊强度。0 可单独预览眨眼。 |
+| Focus Recovery Seconds | 17.50 秒 | 从 OD01 起算的恢复时间。0 表示立即清晰。 |
+| Focus Recovery Curve | 空 | 默认平滑缓入缓出。可指定 Curve Float，以 0–1 横轴表示恢复进度，纵轴 0 表示起始模糊，1 表示清晰。 |
+| First Blink Wait / Close / Hold / Open | 4.15 / 0.22 / 0.36 / 0.86 秒 | 从 OD01 到第一次闭眼的等待，以及闭合、闭住、睁开的时长。 |
+| Second Blink Wait / Close / Hold / Open | 1.05 / 0.16 / 0.20 / 0.56 秒 | 从第一次完全睁开到第二次动作的等待，以及第二次闭合、闭住、睁开的时长。 |
+| Wake Black Hold / First Open / Light Recovery | 0.85 / 1.65 / 3.95 秒 | 全黑保持、初次睁眼、黑幕渐退。后两项从全黑保持结束同时起算。 |
+| Wake Observe Delay / Look Left Degrees | 0.65 秒 / 20° | 第二次睁稳后等待，再相对当前朝向向左观察。 |
+| Wake Look Out / Hold / Back Seconds | 3.40 / 1.05 / 4.10 秒 | 左转、停留和回正。 |
+
+- 自带主线入口 `Ch1_Wake` 经 `WakeLock` 进入 `Wake` 对白任务。`WakePresentation` 复用抬眼的真实时间 `WakeClock`，同一帧更新 `WBP_Chapter1WakeEyelids` 的背景模糊和材质的 `EyeOpenness`。纯色 UMG 黑幕在眼睑材质准备期间也能遮住场景。原有非对称眼睑弧线与抬头演出继续生效。左顾只增减自己施加的偏航量，提前推进对白时回收剩余偏移。字幕位于控件之上。对焦、明暗、眼睑与观察全部完成、提前起身或离场时，移除整个控件并释放材质引用。
+- 空格归属使用对白管理器的通用 Auto / Manual 模式。Auto 使用 Auto Dialogue Input Context（IMC_DialogueJump）释放空格给角色；Manual 使用 Dialogue Input Context（IMC_Dialogue）接收空格、Enter 翻句。两种模式都通过 P 切换，章节任务和对白移动锁继续生效。
 - 台词、配音和句后停顿统一在 `/Game/Data_Dialog/DT_OD01` 至 `DT_OD09`。章节专用注册表 `Event1/DT_Chapter1EscapeConversations` 保持：OD03Impact读取DT_OD03第1行，后续OD03读取第2–4行。出口第4行保留ExitSpotted；OD06第5行保留ExamineHand。
 - `BP_Chapter1EscapeMission` 继承 MissionFlow。任务组件的 StepId 和 NextStep 决定顺序；目标文案和出现时机分别在 `DT_Chapter1EscapeObjectives`、`DT_Chapter1EscapeSteps`。`Handoff` 把主控室目标交给 `AtriumRoute`。
 - 四段引导使用 `AC_Task_GuideTo`。在地图实例的 Roles 中找到对应路径点，调整转折与落脚高度。实验室采用章节专用的箭头亮度和终点标记材质。管内点贴近管底，管口处应在角色第一人称视角复核。

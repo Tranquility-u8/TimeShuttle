@@ -44,7 +44,7 @@
 - 无 SoundWave 为正常纯文字。自动按 TextOnlyDuration 计时，手动可立即前进；PostLineDelay 只作用于自动模式。语音不以阅读秒数估计结束。
 - 2D 声音与底部姓名＋整句字幕，不随距离衰减，没有逐字效果。离开或销毁触发来源不取消当前对话。
 - Priority 为 1–3，1 最高；Story 有效优先级为 1。只有严格更高优先级能打断。同级、低级和同一段请求返回 Busy，不排队、不恢复被打断段。
-- bLockPlayerMovement 为真时阻止移动、跳跃、开火、互动、换枪、时间能力，并停止已经启动的相关动作；转视角、对话控制及暂停仍可用。自由移动对话保留玩法操作，Space 在对话期间专用于下一句。
+- bLockPlayerMovement 为真时阻止移动、跳跃、开火、互动、换枪、时间能力，并停止已经启动的相关动作；转视角、对话控制及暂停仍可用。对白管理器依据当前播放模式选择输入映射。默认 Auto 使用 Auto Dialogue Input Context（IMC_DialogueJump），释放 Space 给角色；Manual 使用 Dialogue Input Context（IMC_Dialogue），Space 与 Enter 请求下一句。P 当场切换两套映射。已按住的按键松开后才进入新模式的下一次操作。角色跳跃继续遵守任务动作锁和整段移动锁。会话结束时卸载实际安装的映射。
 - 暂停菜单同时暂停声音与阅读计时；恢复不补算暂停时间。时停/子弹时间不改变语速或阅读时间。死亡取消，关卡切换清理声音、UI、独立输入会话和自己拥有的移动锁；保留其他系统的锁，不使用 ClearAllMappings/ResetIgnoreMoveInput。
 - BeginPlay/EndPlay、加载代次与状态转换保护阻止过期回调复活已取消对话。异步预加载超时 30 秒；丢失语音报 InvalidData。循环或异常播放在资源时长加 10 秒后取消并报 AudioFailed；纯蓝图不依赖受保护的 SoundWave.bLooping 属性预检。
 - OnLineEnded 在实际前进离开当前句时发出，手动等待期间不提前发，取消不补发。转换回调内再请求返回 ReentrantRequest；需要衔接时安排到下一 Tick。CancelDialogue 不接受 Completed 原因。
